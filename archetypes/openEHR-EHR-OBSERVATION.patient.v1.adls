@@ -52,6 +52,26 @@ definition
                                             DV_TEXT[id35] 
                                         }
                                     }
+                                    ELEMENT[id36] matches {    -- District
+                                        value matches {
+                                            DV_TEXT[id37] 
+                                        }
+                                    }
+                                    ELEMENT[id38] matches {    -- State
+                                        value matches {
+                                            DV_TEXT[id39] 
+                                        }
+                                    }
+                                    ELEMENT[id40] matches {    -- Postal Code
+                                        value matches {
+                                            DV_TEXT[id41] 
+                                        }
+                                    }
+                                    ELEMENT[id42] matches {    -- Country
+                                        value matches {
+                                            DV_TEXT[id43] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -144,6 +164,22 @@ terminology
             ["id34"] = <
                 text = <"City">
                 description = <"Name of city, town etc">
+            >
+            ["id36"] = <
+                text = <"District">
+                description = <"District name (aka country)">
+            >
+            ["id38"] = <
+                text = <"State">
+                description = <"Sub-unit of country (abbreviations ok)">
+            >
+            ["id40"] = <
+                text = <"Postal Code">
+                description = <"Postal code for area">
+            >
+            ["id42"] = <
+                text = <"Country">
+                description = <"Country (eg. can be ISO 3166 2 or 3 letter code)">
             >
         >
     >
