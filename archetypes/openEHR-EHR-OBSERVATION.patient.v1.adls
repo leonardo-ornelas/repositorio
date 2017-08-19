@@ -76,6 +76,42 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id63] matches {    -- Person name
+                                        items matches {
+                                            ELEMENT[id64] matches {    -- Use
+                                                value matches {
+                                                    DV_CODED_TEXT[id65] matches {
+                                                        defining_code matches {[ac4]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id66] matches {    -- Full name
+                                                value matches {
+                                                    DV_TEXT[id67] 
+                                                }
+                                            }
+                                            ELEMENT[id68] matches {    -- Family
+                                                value matches {
+                                                    DV_TEXT[id69] 
+                                                }
+                                            }
+                                            ELEMENT[id70] matches {    -- Given
+                                                value matches {
+                                                    DV_TEXT[id71] 
+                                                }
+                                            }
+                                            ELEMENT[id72] matches {    -- Prefix
+                                                value matches {
+                                                    DV_TEXT[id73] 
+                                                }
+                                            }
+                                            ELEMENT[id74] matches {    -- Suffix
+                                                value matches {
+                                                    DV_TEXT[id75] 
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -189,6 +225,66 @@ terminology
                 text = <"Country">
                 description = <"Country (e.g. can be ISO 3166 2 or 3 letter code)">
             >
+            ["id63"] = <
+                text = <"Person name">
+                description = <"Name of a human - parts and usage">
+            >
+            ["id64"] = <
+                text = <"Use">
+                description = <"Identifies the purpose for this name">
+            >
+            ["at9"] = <
+                text = <"usual">
+                description = <"usual">
+            >
+            ["at10"] = <
+                text = <"official">
+                description = <"official">
+            >
+            ["at11"] = <
+                text = <"temp">
+                description = <"temp">
+            >
+            ["at12"] = <
+                text = <"nickname">
+                description = <"nickname">
+            >
+            ["at13"] = <
+                text = <"anonymous">
+                description = <"anonymous">
+            >
+            ["at14"] = <
+                text = <"old">
+                description = <"old">
+            >
+            ["at15"] = <
+                text = <"maiden">
+                description = <"maiden">
+            >
+            ["ac4"] = <
+                text = <"person name use">
+                description = <"person name use">
+            >
+            ["id66"] = <
+                text = <"Full name">
+                description = <"Text representation of the full name">
+            >
+            ["id68"] = <
+                text = <"Family">
+                description = <"Family name (often called 'Surname')">
+            >
+            ["id70"] = <
+                text = <"Given">
+                description = <"Given names (not always 'first'). Includes middle names">
+            >
+            ["id72"] = <
+                text = <"Prefix">
+                description = <"Parts that come before the name">
+            >
+            ["id74"] = <
+                text = <"Suffix">
+                description = <"Parts that come after the name">
+            >
         >
     >
     value_sets = <
@@ -199,6 +295,10 @@ terminology
         ["ac3"] = <
             id = <"ac3">
             members = <"at6", "at7", "at8">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at9", "at10", "at11", "at12", "at13", "at14", "at15">
         >
     >
 
