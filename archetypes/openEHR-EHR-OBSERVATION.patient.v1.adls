@@ -24,7 +24,7 @@ definition
                             ITEM_TREE[id4] matches {
                                 items matches {
                                     CLUSTER[id44] matches {    -- Address
-                                        items cardinality matches {0..*} matches {
+                                        items cardinality matches {0..*; unordered} matches {
                                             ELEMENT[id45] matches {    -- Use
                                                 value matches {
                                                     DV_CODED_TEXT[id46] matches {
@@ -77,7 +77,7 @@ definition
                                         }
                                     }
                                     CLUSTER[id63] matches {    -- HumanName
-                                        items cardinality matches {0..*} matches {
+                                        items cardinality matches {0..*; unordered} matches {
                                             ELEMENT[id64] matches {    -- Use
                                                 value matches {
                                                     DV_CODED_TEXT[id65] matches {
@@ -113,7 +113,7 @@ definition
                                         }
                                     }
                                     CLUSTER[id76] matches {    -- Identifier
-                                        items cardinality matches {0..*} matches {
+                                        items cardinality matches {0..*; unordered} matches {
                                             ELEMENT[id77] matches {    -- Use
                                                 value matches {
                                                     DV_CODED_TEXT[id78] matches {
@@ -129,6 +129,22 @@ definition
                                             ELEMENT[id81] matches {    -- Value
                                                 value matches {
                                                     DV_TEXT[id82] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id83] matches {    -- ContactPoint
+                                        items matches {
+                                            ELEMENT[id84] matches {    -- System
+                                                value matches {
+                                                    DV_CODED_TEXT[id85] matches {
+                                                        defining_code matches {[ac6]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id86] matches {    -- Value
+                                                value matches {
+                                                    DV_TEXT[id87] 
                                                 }
                                             }
                                         }
@@ -312,7 +328,7 @@ terminology
             >
             ["id77"] = <
                 text = <"Use">
-                description = <"Use">
+                description = <"The purpose of this identifier">
             >
             ["at16"] = <
                 text = <"usual">
@@ -342,6 +358,50 @@ terminology
                 text = <"Value">
                 description = <"The value that is unique">
             >
+            ["id83"] = <
+                text = <"ContactPoint">
+                description = <"A contact detail for the individual">
+            >
+            ["id84"] = <
+                text = <"System">
+                description = <"Telecommunications form for contact point">
+            >
+            ["at20"] = <
+                text = <"phone">
+                description = <"phone">
+            >
+            ["at21"] = <
+                text = <"fax">
+                description = <"fax">
+            >
+            ["at22"] = <
+                text = <"email">
+                description = <"email">
+            >
+            ["at23"] = <
+                text = <"pager">
+                description = <"pager">
+            >
+            ["at24"] = <
+                text = <"url">
+                description = <"url">
+            >
+            ["at25"] = <
+                text = <"sms">
+                description = <"sms">
+            >
+            ["at26"] = <
+                text = <"other">
+                description = <"other">
+            >
+            ["ac6"] = <
+                text = <"telecom system">
+                description = <"telecom system">
+            >
+            ["id86"] = <
+                text = <"Value">
+                description = <"The actual contact point details">
+            >
         >
     >
     value_sets = <
@@ -360,6 +420,10 @@ terminology
         ["ac5"] = <
             id = <"ac5">
             members = <"at16", "at17", "at18", "at19">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at20", "at21", "at22", "at23", "at24", "at25", "at26">
         >
     >
 
