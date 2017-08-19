@@ -19,7 +19,7 @@ definition
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Todos Eventos
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -81,8 +81,8 @@ terminology
                 description = <"Patient">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Todos Eventos">
+                description = <"Todos Eventos">
             >
             ["id9"] = <
                 text = <"District">
