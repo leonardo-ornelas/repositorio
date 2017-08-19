@@ -8,10 +8,11 @@ description
     copyright = <"Copyright (c) 2010 Ezvida Foundation">
     details = <
         ["pt-br"] = <
+            keywords = <"practitioner", "medico", "profissional">
             language = <[ISO_639-1::pt-br]>
             misuse = <"O recurso não deve ser utilizado para as pessoas envolvidas sem uma responsabilidade formal como indivíduos cuidando para amigos, parentes ou vizinhos. Estes podem ser registrados como contato de um paciente. Se executar alguma ação ou sendo referenciado por outro recurso, use o RelatedPerson recurso.">
-            purpose = <"Practitioner abrange todos os indivíduos que estão envolvidos no processo de cuidados de saúde e serviços relacionados à saúde, como parte de suas responsabilidades formais e este recurso é utilizado para atribuição de atividades e responsabilidades para estes indivíduos.">
-            use = <"Praticante executa diferentes papéis dentro das mesmas ou até mesmo diferentes organizações. Dependendo da jurisdição e personalizado, pode ser necessário para manter um Resource Practitioner específico para cada tal papel ou ter um único Practitioner com várias funções. O papel pode ser limitada a um período específico, após o qual a autorização para este papel termina. Note-se que a organização representada não precisa ser necessariamente o empregador (direta) de um médico.">
+            purpose = <"Uma pessoa que está direta ou indiretamente envolvido no fornecimento de cuidados de saúde.">
+            use = <"Practitioner abrange todos os indivíduos que estão envolvidos no processo de cuidados de saúde e serviços relacionados à saúde, como parte de suas responsabilidades formais e este recurso é utilizado para atribuição de atividades e responsabilidades para estes indivíduos.">
         >
     >
     lifecycle_state = <"release_candidate">
@@ -33,7 +34,9 @@ definition
                             ITEM_TREE[id4] 
                         }
                         state matches {
-                            ITEM_TREE[id5] 
+                            ITEM_TREE[id5] matches {
+                                items
+                            }
                         }
                     }
                 }
