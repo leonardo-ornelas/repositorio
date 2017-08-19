@@ -39,7 +39,7 @@ definition
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id49] matches {    -- Address (synthesised)
+                                            ELEMENT[id49] matches {    -- Text
                                                 value matches {
                                                     DV_TEXT[id50] 
                                                 }
@@ -76,7 +76,7 @@ definition
                                             }
                                         }
                                     }
-                                    CLUSTER[id63] matches {    -- Person name
+                                    CLUSTER[id63] matches {    -- HumanName
                                         items matches {
                                             ELEMENT[id64] matches {    -- Use
                                                 value matches {
@@ -85,7 +85,7 @@ definition
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id66] matches {    -- Full name
+                                            ELEMENT[id66] matches {    -- Text
                                                 value matches {
                                                     DV_TEXT[id67] 
                                                 }
@@ -198,7 +198,7 @@ terminology
                 description = <"The type of an address">
             >
             ["id49"] = <
-                text = <"Address (synthesised)">
+                text = <"Text">
                 description = <"Address (synthesised)">
             >
             ["id51"] = <
@@ -226,7 +226,7 @@ terminology
                 description = <"Country (e.g. can be ISO 3166 2 or 3 letter code)">
             >
             ["id63"] = <
-                text = <"Person name">
+                text = <"HumanName">
                 description = <"Name of a human - parts and usage">
             >
             ["id64"] = <
@@ -266,7 +266,7 @@ terminology
                 description = <"person name use">
             >
             ["id66"] = <
-                text = <"Full name">
+                text = <"Text">
                 description = <"Text representation of the full name">
             >
             ["id68"] = <
