@@ -221,8 +221,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Patient",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.patient.v1.adls",
-    "sha" : "d3fd0a9c8c4d622bfc9ee357e3dd612b346e033f",
-    "languages" : [ "en" ]
+    "sha" : "0c1c805686276ef76521bfacf641767025570120",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.respiration.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -237,5 +237,12 @@
     "path" : "archetypes/openEHR-EHR-SECTION.medication.v1.adls",
     "sha" : "d379bcf36aa1293b122d305a3daa87b3647ada0f",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.practitioner.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Profissional Médico",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.practitioner.v1.adls",
+    "sha" : "65729fc508fde55781f258d85767d0a181e2aa77",
+    "languages" : [ "pt-br", "en" ]
   } ]
 }
