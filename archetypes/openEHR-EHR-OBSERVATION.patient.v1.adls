@@ -458,8 +458,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Patient (en)">
-                description = <"*Patient (en)">
+                text = <"Paciente">
+                description = <"Paciente">
             >
             ["id3"] = <
                 text = <"*Todos Eventos (en)">
@@ -510,51 +510,51 @@ terminology
                 description = <"*address type (en)">
             >
             ["id44"] = <
-                text = <"*Address (en)">
+                text = <"Endereço">
                 description = <"*An address expressed using postal conventions (as opposed to GPS or other location definition formats) (en)">
             >
             ["id45"] = <
-                text = <"*Use (en)">
+                text = <"Uso">
                 description = <"*Purpose of this address (en)">
             >
             ["id47"] = <
-                text = <"*Type (en)">
+                text = <"Tipo">
                 description = <"*The type of an address (en)">
             >
             ["id49"] = <
-                text = <"*Text (en)">
+                text = <"Texto">
                 description = <"*Address (synthesised) (en)">
             >
             ["id51"] = <
-                text = <"*Line (en)">
+                text = <"Linha">
                 description = <"*Street name, number, direction & P.O. Box etc (en)">
             >
             ["id53"] = <
-                text = <"*City (en)">
+                text = <"Cidade">
                 description = <"*Name of city, town etc (en)">
             >
             ["id55"] = <
-                text = <"*District (en)">
+                text = <"Distrito">
                 description = <"*District name (aka county) (en)">
             >
             ["id57"] = <
-                text = <"*State (en)">
+                text = <"Estado">
                 description = <"*Sub-unit of country (abbreviations ok) (en)">
             >
             ["id59"] = <
-                text = <"*Postal code (en)">
+                text = <"CEP">
                 description = <"*Postal code for area (en)">
             >
             ["id61"] = <
-                text = <"*Country (en)">
+                text = <"Cidade">
                 description = <"*Country (e.g. can be ISO 3166 2 or 3 letter code) (en)">
             >
             ["id63"] = <
-                text = <"*HumanName (en)">
+                text = <"Nome">
                 description = <"*Name of a human - parts and usage (en)">
             >
             ["id64"] = <
-                text = <"*Use (en)">
+                text = <"Uso">
                 description = <"*Identifies the purpose for this name (en)">
             >
             ["at9"] = <
@@ -590,31 +590,31 @@ terminology
                 description = <"*person name use (en)">
             >
             ["id66"] = <
-                text = <"*Text (en)">
+                text = <"Texto">
                 description = <"*Text representation of the full name (en)">
             >
             ["id68"] = <
-                text = <"*Family (en)">
+                text = <"Família">
                 description = <"*Family name (often called 'Surname') (en)">
             >
             ["id70"] = <
-                text = <"*Given (en)">
+                text = <"Nome">
                 description = <"*Given names (not always 'first'). Includes middle names (en)">
             >
             ["id72"] = <
-                text = <"*Prefix (en)">
+                text = <"Prefixo">
                 description = <"*Parts that come before the name (en)">
             >
             ["id74"] = <
-                text = <"*Suffix (en)">
+                text = <"Sufixo">
                 description = <"*Parts that come after the name (en)">
             >
             ["id76"] = <
-                text = <"*Identifier (en)">
+                text = <"Documento">
                 description = <"*An identifier for computation (en)">
             >
             ["id77"] = <
-                text = <"*Use (en)">
+                text = <"Uso">
                 description = <"*The purpose of this identifier (en)">
             >
             ["at16"] = <
@@ -638,19 +638,19 @@ terminology
                 description = <"*identifier use (en)">
             >
             ["id79"] = <
-                text = <"*System (en)">
+                text = <"Sistema">
                 description = <"*The namespace for the identifier value (en)">
             >
             ["id81"] = <
-                text = <"*Value (en)">
+                text = <"Valor">
                 description = <"*The value that is unique (en)">
             >
             ["id83"] = <
-                text = <"*ContactPoint (en)">
+                text = <"Contato">
                 description = <"*A contact detail for the individual (en)">
             >
             ["id84"] = <
-                text = <"*System (en)">
+                text = <"Sistema">
                 description = <"*Telecommunications form for contact point (en)">
             >
             ["at20"] = <
@@ -686,11 +686,11 @@ terminology
                 description = <"*telecom system (en)">
             >
             ["id86"] = <
-                text = <"*Value (en)">
+                text = <"Valor">
                 description = <"*The actual contact point details (en)">
             >
             ["id88"] = <
-                text = <"*Use (en)">
+                text = <"Uso">
                 description = <"*The purpose of this contact point (en)">
             >
             ["at27"] = <
@@ -718,7 +718,7 @@ terminology
                 description = <"*contactpoint use (en)">
             >
             ["id90"] = <
-                text = <"*Rank (en)">
+                text = <"Classificação">
                 description = <"*Specify preferred order of use (en)">
             >
         >
