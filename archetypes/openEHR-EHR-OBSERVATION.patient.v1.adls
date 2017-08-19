@@ -106,15 +106,12 @@ terminology
             >
             ["ac1"] = <
                 text = <"State codes">
-                description = <"valid codes for state/territory/province">
+                description = <"State codes">
             >
             ["id24"] = <
                 text = <"State/territory/province identifier">
                 description = <"State/territory/province identifier">
             >
-            ["ac1"] = <
-                text = <"State codes">
-                description = <"State codes">
-            >
         >
     >
+
