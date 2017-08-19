@@ -1,0 +1,50 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.practitioner.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"O recurso não deve ser utilizado para as pessoas envolvidas sem uma responsabilidade formal como indivíduos cuidando para amigos, parentes ou vizinhos. Estes podem ser registrados como contato de um paciente. Se executar alguma ação ou sendo referenciado por outro recurso, use o RelatedPerson recurso.">
+            purpose = <"Practitioner abrange todos os indivíduos que estão envolvidos no processo de cuidados de saúde e serviços relacionados à saúde, como parte de suas responsabilidades formais e este recurso é utilizado para atribuição de atividades e responsabilidades para estes indivíduos.">
+            use = <"Praticante executa diferentes papéis dentro das mesmas ou até mesmo diferentes organizações. Dependendo da jurisdição e personalizado, pode ser necessário para manter um Resource Practitioner específico para cada tal papel ou ter um único Practitioner com várias funções. O papel pode ser limitada a um período específico, após o qual a autorização para este papel termina. Note-se que a organização representada não precisa ser necessariamente o empregador (direta) de um médico.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] matches {    -- Profissional Médico
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Todos Eventos
+                        data matches {
+                            ITEM_TREE[id4] 
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Profissional Médico">
+                description = <"Médico, profissional, prático">
+            >
+            ["id3"] = <
+                text = <"Todos Eventos">
+                description = <"Todos Eventos">
+            >
+        >
+    >
+
