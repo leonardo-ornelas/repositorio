@@ -6,6 +6,10 @@ language
     translations = <
         ["en"] = <
             accreditation = <"">
+            author = <
+                ["name"] = <"Ismael Queiroz">
+                ["organisation"] = <"Solutis Tecnologias">
+            >
             language = <[ISO_639-1::en]>
         >
     >
