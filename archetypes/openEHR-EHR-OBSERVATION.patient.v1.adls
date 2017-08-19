@@ -3,6 +3,12 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["en"] = <
             language = <[ISO_639-1::en]>
             purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -445,6 +454,272 @@ terminology
             ["id90"] = <
                 text = <"Rank">
                 description = <"Specify preferred order of use">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*Patient (en)">
+                description = <"*Patient (en)">
+            >
+            ["id3"] = <
+                text = <"*Todos Eventos (en)">
+                description = <"*Todos Eventos (en)">
+            >
+            ["ac1"] = <
+                text = <"*State codes (en)">
+                description = <"*State codes (en)">
+            >
+            ["at1"] = <
+                text = <"*home (en)">
+                description = <"*home (en)">
+            >
+            ["at2"] = <
+                text = <"*home (en)">
+                description = <"*home (en)">
+            >
+            ["at3"] = <
+                text = <"*work (en)">
+                description = <"*work (en)">
+            >
+            ["at4"] = <
+                text = <"*temp (en)">
+                description = <"*temp (en)">
+            >
+            ["at5"] = <
+                text = <"*old (en)">
+                description = <"*old (en)">
+            >
+            ["ac2"] = <
+                text = <"*address use (en)">
+                description = <"*address use (en)">
+            >
+            ["at6"] = <
+                text = <"*postal (en)">
+                description = <"*postal (en)">
+            >
+            ["at7"] = <
+                text = <"*physical (en)">
+                description = <"*physical (en)">
+            >
+            ["at8"] = <
+                text = <"*both (en)">
+                description = <"*both (en)">
+            >
+            ["ac3"] = <
+                text = <"*address type (en)">
+                description = <"*address type (en)">
+            >
+            ["id44"] = <
+                text = <"*Address (en)">
+                description = <"*An address expressed using postal conventions (as opposed to GPS or other location definition formats) (en)">
+            >
+            ["id45"] = <
+                text = <"*Use (en)">
+                description = <"*Purpose of this address (en)">
+            >
+            ["id47"] = <
+                text = <"*Type (en)">
+                description = <"*The type of an address (en)">
+            >
+            ["id49"] = <
+                text = <"*Text (en)">
+                description = <"*Address (synthesised) (en)">
+            >
+            ["id51"] = <
+                text = <"*Line (en)">
+                description = <"*Street name, number, direction & P.O. Box etc (en)">
+            >
+            ["id53"] = <
+                text = <"*City (en)">
+                description = <"*Name of city, town etc (en)">
+            >
+            ["id55"] = <
+                text = <"*District (en)">
+                description = <"*District name (aka county) (en)">
+            >
+            ["id57"] = <
+                text = <"*State (en)">
+                description = <"*Sub-unit of country (abbreviations ok) (en)">
+            >
+            ["id59"] = <
+                text = <"*Postal code (en)">
+                description = <"*Postal code for area (en)">
+            >
+            ["id61"] = <
+                text = <"*Country (en)">
+                description = <"*Country (e.g. can be ISO 3166 2 or 3 letter code) (en)">
+            >
+            ["id63"] = <
+                text = <"*HumanName (en)">
+                description = <"*Name of a human - parts and usage (en)">
+            >
+            ["id64"] = <
+                text = <"*Use (en)">
+                description = <"*Identifies the purpose for this name (en)">
+            >
+            ["at9"] = <
+                text = <"*usual (en)">
+                description = <"*usual (en)">
+            >
+            ["at10"] = <
+                text = <"*official (en)">
+                description = <"*official (en)">
+            >
+            ["at11"] = <
+                text = <"*temp (en)">
+                description = <"*temp (en)">
+            >
+            ["at12"] = <
+                text = <"*nickname (en)">
+                description = <"*nickname (en)">
+            >
+            ["at13"] = <
+                text = <"*anonymous (en)">
+                description = <"*anonymous (en)">
+            >
+            ["at14"] = <
+                text = <"*old (en)">
+                description = <"*old (en)">
+            >
+            ["at15"] = <
+                text = <"*maiden (en)">
+                description = <"*maiden (en)">
+            >
+            ["ac4"] = <
+                text = <"*person name use (en)">
+                description = <"*person name use (en)">
+            >
+            ["id66"] = <
+                text = <"*Text (en)">
+                description = <"*Text representation of the full name (en)">
+            >
+            ["id68"] = <
+                text = <"*Family (en)">
+                description = <"*Family name (often called 'Surname') (en)">
+            >
+            ["id70"] = <
+                text = <"*Given (en)">
+                description = <"*Given names (not always 'first'). Includes middle names (en)">
+            >
+            ["id72"] = <
+                text = <"*Prefix (en)">
+                description = <"*Parts that come before the name (en)">
+            >
+            ["id74"] = <
+                text = <"*Suffix (en)">
+                description = <"*Parts that come after the name (en)">
+            >
+            ["id76"] = <
+                text = <"*Identifier (en)">
+                description = <"*An identifier for computation (en)">
+            >
+            ["id77"] = <
+                text = <"*Use (en)">
+                description = <"*The purpose of this identifier (en)">
+            >
+            ["at16"] = <
+                text = <"*usual (en)">
+                description = <"*usual (en)">
+            >
+            ["at17"] = <
+                text = <"*official (en)">
+                description = <"*official (en)">
+            >
+            ["at18"] = <
+                text = <"*temp (en)">
+                description = <"*temp (en)">
+            >
+            ["at19"] = <
+                text = <"*secondary (en)">
+                description = <"*secondary (en)">
+            >
+            ["ac5"] = <
+                text = <"*identifier use (en)">
+                description = <"*identifier use (en)">
+            >
+            ["id79"] = <
+                text = <"*System (en)">
+                description = <"*The namespace for the identifier value (en)">
+            >
+            ["id81"] = <
+                text = <"*Value (en)">
+                description = <"*The value that is unique (en)">
+            >
+            ["id83"] = <
+                text = <"*ContactPoint (en)">
+                description = <"*A contact detail for the individual (en)">
+            >
+            ["id84"] = <
+                text = <"*System (en)">
+                description = <"*Telecommunications form for contact point (en)">
+            >
+            ["at20"] = <
+                text = <"*phone (en)">
+                description = <"*phone (en)">
+            >
+            ["at21"] = <
+                text = <"*fax (en)">
+                description = <"*fax (en)">
+            >
+            ["at22"] = <
+                text = <"*email (en)">
+                description = <"*email (en)">
+            >
+            ["at23"] = <
+                text = <"*pager (en)">
+                description = <"*pager (en)">
+            >
+            ["at24"] = <
+                text = <"*url (en)">
+                description = <"*url (en)">
+            >
+            ["at25"] = <
+                text = <"*sms (en)">
+                description = <"*sms (en)">
+            >
+            ["at26"] = <
+                text = <"*other (en)">
+                description = <"*other (en)">
+            >
+            ["ac6"] = <
+                text = <"*telecom system (en)">
+                description = <"*telecom system (en)">
+            >
+            ["id86"] = <
+                text = <"*Value (en)">
+                description = <"*The actual contact point details (en)">
+            >
+            ["id88"] = <
+                text = <"*Use (en)">
+                description = <"*The purpose of this contact point (en)">
+            >
+            ["at27"] = <
+                text = <"*home (en)">
+                description = <"*home (en)">
+            >
+            ["at28"] = <
+                text = <"*work (en)">
+                description = <"*work (en)">
+            >
+            ["at29"] = <
+                text = <"*temp (en)">
+                description = <"*temp (en)">
+            >
+            ["at30"] = <
+                text = <"*old (en)">
+                description = <"*old (en)">
+            >
+            ["at31"] = <
+                text = <"*mobile (en)">
+                description = <"*mobile (en)">
+            >
+            ["ac7"] = <
+                text = <"*contactpoint use (en)">
+                description = <"*contactpoint use (en)">
+            >
+            ["id90"] = <
+                text = <"*Rank (en)">
+                description = <"*Specify preferred order of use (en)">
             >
         >
     >
