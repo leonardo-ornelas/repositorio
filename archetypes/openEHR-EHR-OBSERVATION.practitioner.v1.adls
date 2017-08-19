@@ -5,7 +5,7 @@ language
     original_language = <[ISO_639-1::pt-br]>
     
 description
-    copyright = <"">
+    copyright = <"Copyright (c) 2010 Ezvida Foundation">
     details = <
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
@@ -14,7 +14,14 @@ description
             use = <"Praticante executa diferentes papéis dentro das mesmas ou até mesmo diferentes organizações. Dependendo da jurisdição e personalizado, pode ser necessário para manter um Resource Practitioner específico para cada tal papel ou ter um único Practitioner com várias funções. O papel pode ser limitada a um período específico, após o qual a autorização para este papel termina. Note-se que a organização representada não precisa ser necessariamente o empregador (direta) de um médico.">
         >
     >
-    lifecycle_state = <"unmanaged">
+    lifecycle_state = <"release_candidate">
+    original_author = <
+        ["name"] = <"Ismael Queiroz">
+        ["organisation"] = <"Solutis Tecnologia">
+        ["email"] = <"ismael.queiroz@solutis.com.br">
+        ["date"] = <"19/08/2017">
+    >
+    other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
 
 definition
     OBSERVATION[id1] matches {    -- Profissional Médico
