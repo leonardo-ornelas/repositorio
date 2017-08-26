@@ -244,5 +244,40 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.practitioner.v1.adls",
     "sha" : "65729fc508fde55781f258d85767d0a181e2aa77",
     "languages" : [ "pt-br", "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.device_details.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Device details",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.device_details.v1.adls",
+    "sha" : "a45897ab78ea7bf95a5781917cc62da23eef730a",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.dimensions.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Dimensions",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.dimensions.v1.adls",
+    "sha" : "6dbec465a8f000439466694e5981cebf4f2175df",
+    "languages" : [ "en", "de" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.environmental_conditions.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Environmental conditions",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.environmental_conditions.v1.adls",
+    "sha" : "cc61789d27197c5adeff998e72e981d8271780d3",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Level of exertion",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.level_of_exertion.v1.adls",
+    "sha" : "47de90c2853d81eea69234db61ef8dca77f23d55",
+    "languages" : [ "en", "ar-sy" ]
+  }, {
+    "id" : "openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0",
+    "rmType" : "ELEMENT",
+    "name" : "Last Normal Menstrual Period",
+    "path" : "archetypes/openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.adls",
+    "sha" : "fc90e689ceaca1c0680de8ccda5167fa52a55807",
+    "languages" : [ "en" ]
   } ]
 }
