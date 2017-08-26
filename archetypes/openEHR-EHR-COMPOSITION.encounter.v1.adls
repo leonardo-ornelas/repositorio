@@ -4,6 +4,12 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 language
     original_language = <[ISO_639-1::pt-br]>
     translations = <
+        ["en"] = <
+            author = <
+                ["name"] = <"Ismael Queiroz">
+            >
+            language = <[ISO_639-1::en]>
+        >
         ["sl"] = <
             author = <
                 ["name"] = <"Ismael Queiroz">
