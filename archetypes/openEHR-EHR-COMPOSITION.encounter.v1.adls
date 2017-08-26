@@ -66,10 +66,10 @@ description
 definition
     COMPOSITION[id1] matches {    -- Encounter
         content matches {
-			allow_archetype OBSERVATION[id8] occurrences matches {0..*} matches {	-- OBSERVATION
-				include
-					archetype_id/value matches {openEHR-EHR-OBSERVATION\.blood_pressure\.v1/}
-			}
+            allow_archetype OBSERVATION[id8] matches {	-- OBSERVATION
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+            }
         }
 
     }
