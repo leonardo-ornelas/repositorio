@@ -69,9 +69,7 @@ definition
 			}
 			ELEMENT[id17] matches {	-- Size
 				value matches {
-					DV_COUNT[id25] 
 					DV_QUANTITY[id26] 
-					DV_TEXT[id27] 
 				}
 			}
 			allow_archetype CLUSTER[id18] matches {	-- Dimensions
