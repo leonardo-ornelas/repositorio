@@ -120,12 +120,6 @@ definition
 			allow_archetype ITEM[id10] matches {	-- Additional Details
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
-				exclude
-					archetype_id/value matches {/.*/}
-			}
-			allow_archetype CLUSTER[id21] matches {	-- Components
-				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
 			}
 		}
 	}

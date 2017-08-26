@@ -37,10 +37,7 @@ definition
 		items matches {
 			ELEMENT[id2] occurrences matches {0..1} matches {	-- Organisation identifier
 				value matches {
-					DV_TEXT[id24] 
-					DV_IDENTIFIER[id25] matches {
-						issuer matches {/EUI-64/}
-					}
+					DV_TEXT[id24]
 				}
 			}
 			ELEMENT[id5] occurrences matches {0..1} matches {	-- Model
@@ -85,13 +82,11 @@ definition
 			}
 			ELEMENT[id12] occurrences matches {0..1} matches {	-- Sampling frequency
 				value matches {
-					DV_TEXT[id34] 
 					DV_QUANTITY[id35] 
 				}
 			}
 			ELEMENT[id13] occurrences matches {0..1} matches {	-- Range
 				value matches {
-					DV_TEXT[id36] 
 					DV_INTERVAL<DV_QUANTITY>[id37] matches {
 						upper matches {
 							DV_QUANTITY[id38] 
@@ -105,13 +100,11 @@ definition
 			ELEMENT[id14] occurrences matches {0..1} matches {	-- Accuracy
 				value matches {
 					DV_TEXT[id40] 
-					DV_QUANTITY[id41] 
 				}
 			}
 			ELEMENT[id15] occurrences matches {0..1} matches {	-- Resolution
 				value matches {
 					DV_TEXT[id42] 
-					DV_QUANTITY[id43] 
 				}
 			}
 			ELEMENT[id16] occurrences matches {0..1} matches {	-- Regulatory status
@@ -133,10 +126,6 @@ definition
 				value matches {
 					DV_DATE_TIME[id47] 
 				}
-			}
-			allow_archetype CLUSTER[id19] matches {	-- Serviced by
-				include
-					archetype_id/value matches {/.*/}
 			}
 			ELEMENT[id6] occurrences matches {0..1} matches {	-- Additional information
 				value matches {
