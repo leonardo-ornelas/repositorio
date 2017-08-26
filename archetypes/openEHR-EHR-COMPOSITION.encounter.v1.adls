@@ -64,14 +64,15 @@ description
     other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
 
 definition
-    COMPOSITION[id1] matches {    -- Encounter
+    COMPOSITION[id1] matches {    -- Encontro
         content matches {
-            allow_archetype OBSERVATION[id8] matches {	-- OBSERVATION
+            allow_archetype OBSERVATION[id8] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
             }
+            allow_archetype OBSERVATION[id9]
+            allow_archetype OBSERVATION[id10]
         }
-
     }
 
 terminology
@@ -97,7 +98,15 @@ terminology
             >
             ["id8"] = <
                 text = <"Blood Pressure">
-                description = <"Blood Pressure">
+                description = <"It is the blood pressure circulating in the walls of blood vessels. When used without further specification, \"blood pressure\" generally refers to pressure in large arteries of the systemic circulation.">
+            >
+            ["id9"] = <
+                text = <"Bdy Temperature">
+                description = <"Also known as normothermia or euthermia, is the typical temperature range found in humans. The normal human body temperature range is typically stated as 36.5–37.5 °C (97.7–99.5 °F).[7]">
+            >
+            ["id10"] = <
+                text = <"Body Weight">
+                description = <"is used  in medical sciences to refer to a person's mass or weight.">
             >
         >
         ["sl"] = <
@@ -115,7 +124,15 @@ terminology
             >
             ["id8"] = <
                 text = <"Presión Sanguínea">
-                description = <"Presión Sanguínea">
+                description = <"Es la presión de la sangre circulante en las paredes de los vasos sanguíneos. Cuando se usa sin más especificaciones, la \"presión sanguínea\" generalmente se refiere a la presión en grandes arterias de la circulación sistémica.">
+            >
+            ["id9"] = <
+                text = <"Temperatura corporal">
+                description = <"También conocida como normotermia o euthermia, es el rango de temperatura típico encontrado en los seres humanos. El rango normal de temperatura del cuerpo humano se indica típicamente como 36.5-37.5 ° C (97.7-99.5 ° F). [7]">
+            >
+            ["id10"] = <
+                text = <"Peso corporal">
+                description = <"Se utiliza en ciencias médicas para referirse a la masa o el peso de una persona.">
             >
         >
         ["pt-br"] = <
@@ -133,7 +150,15 @@ terminology
             >
             ["id8"] = <
                 text = <"Pressão Sanguínea">
-                description = <"Pressão Sanguínea">
+                description = <"É a pressão do sangue circulante nas paredes dos vasos sanguíneos. Quando usado sem mais especificações, a \"pressão sanguínea\" geralmente se refere à pressão em grandes artérias da circulação sistêmica.">
+            >
+            ["id9"] = <
+                text = <"Temperatura Corporal">
+                description = <"Também conhecido como normothermia ou euthermia, é a faixa de temperatura típica encontrada em humanos. A faixa de temperatura normal do corpo humano é tipicamente declarada como 36,5-37,5 ° C (97,7-99,5 ° F) (pt-br)">
+            >
+            ["id10"] = <
+                text = <"Peso Corporal">
+                description = <"É usado em ciências médicas para se referir à massa ou ao peso de uma pessoa. (pt-br)">
             >
         >
     >
