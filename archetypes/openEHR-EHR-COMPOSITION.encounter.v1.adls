@@ -70,11 +70,26 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
             }
-            allow_archetype OBSERVATION[id9]
-            allow_archetype OBSERVATION[id10]
-            allow_archetype OBSERVATION[id11]
-            allow_archetype OBSERVATION[id12]
-            allow_archetype OBSERVATION[id13]
+            allow_archetype OBSERVATION[id9] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id10] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id11] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id12] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_mass_index(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id13] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
+            }
         }
     }
 
