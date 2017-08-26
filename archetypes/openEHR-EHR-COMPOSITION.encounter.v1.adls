@@ -2,7 +2,7 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
     openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
-    original_language = <[ISO_639-1::en]>
+    original_language = <[ISO_639-1::pt-br]>
     translations = <
         ["sl"] = <
             author = <
@@ -60,8 +60,12 @@ description
 definition
     COMPOSITION[id1] matches {    -- Encounter
         content matches {
-            allow_archetype OBSERVATION[id8]
+			allow_archetype OBSERVATION[id8] occurrences matches {0..*} matches {	-- OBSERVATION
+				include
+					archetype_id/value matches {openEHR-EHR-OBSERVATION\.blood_pressure\.v1/}
+			}
         }
+
     }
 
 terminology
@@ -82,8 +86,8 @@ terminology
                 description = <"Local context detail.">
             >
             ["at1"] = <
-                text = <"event">
-                description = <"event">
+                text = <"Event">
+                description = <"Event">
             >
             ["id8"] = <
                 text = <"Blood Pressure">
@@ -100,8 +104,8 @@ terminology
                 description = <"Detalle del contexto local.">
             >
             ["at1"] = <
-                text = <"*event (en)">
-                description = <"*event (en)">
+                text = <"Event">
+                description = <"Event">
             >
             ["id8"] = <
                 text = <"Presión Sanguínea">
@@ -118,8 +122,8 @@ terminology
                 description = <"Detalhes do contexto local.">
             >
             ["at1"] = <
-                text = <"*event (en)">
-                description = <"*event (en)">
+                text = <"Evento">
+                description = <"Evento">
             >
             ["id8"] = <
                 text = <"Pressão Sanguínea">
