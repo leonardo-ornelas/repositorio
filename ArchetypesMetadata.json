@@ -91,11 +91,10 @@
     "sha" : "0dd9280ca15fb920a61e6b63093318a64fa461ab",
     "languages" : [ "en", "sl" ]
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.encounter.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v1.adls",
-    "sha" : "2ab4fea4190ae17ab4a85c41fe69ce49e435e1e0",
+    "sha" : "0b7200088f23b0c0d47ea4a4f6521bf9637bbdb7",
     "languages" : [ "en", "sl" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.report.v1.0.0",
