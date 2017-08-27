@@ -39,7 +39,7 @@
     "rmType" : "CLUSTER",
     "name" : "Device",
     "path" : "archetypes/openEHR-EHR-CLUSTER.device.v1.adls",
-    "sha" : "ae28081311b7e8d2e54391b6817a45087517a13b",
+    "sha" : "986b00d73d5a32794183414d984b9cc69f62a625",
     "languages" : [ "en", "sl" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.infusion_details.v1.0.0",
@@ -165,8 +165,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Blood Pressure",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.blood_pressure.v1.adls",
-    "sha" : "2c68d5d36137c17c27e4e59fdab015072053edd8",
-    "languages" : [ "en", "sl", "nl", "ja", "de", "zh-cn" ]
+    "sha" : "7d0a36cfe033db915c3f637104f5b292d12b460e",
+    "languages" : [ "en", "de", "zh-cn", "ar-sy", "es-ar", "fa", "ru", "ja", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -179,15 +179,15 @@
     "rmType" : "OBSERVATION",
     "name" : "Body temperature",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.body_temperature.v1.adls",
-    "sha" : "6eecd0a447d792a210e65938bbb8f0fac4898c4b",
-    "languages" : [ "en", "de", "sl" ]
+    "sha" : "6ab23d50eb3642f84560b50deb0027377338b8ad",
+    "languages" : [ "en", "de", "nb", "ar-sy", "es-ar", "fa", "ru", "es", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.body_weight.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Body weight",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.body_weight.v1.adls",
-    "sha" : "82cf4edba0997c82ae39fdc7da18560041d6f5d2",
-    "languages" : [ "en", "de", "nl", "sl" ]
+    "sha" : "05c2d1122d5a23f61b6b56a5369412306680fc22",
+    "languages" : [ "en", "de", "ar-sy", "fa", "ru", "es", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.height.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -249,7 +249,7 @@
     "rmType" : "CLUSTER",
     "name" : "Device details",
     "path" : "archetypes/openEHR-EHR-CLUSTER.device_details.v1.adls",
-    "sha" : "a45897ab78ea7bf95a5781917cc62da23eef730a",
+    "sha" : "a17c6284de327b869d818e262d71562d3b5c76e3",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.dimensions.v1.0.0",
@@ -278,6 +278,20 @@
     "name" : "Last Normal Menstrual Period",
     "path" : "archetypes/openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.adls",
     "sha" : "fc90e689ceaca1c0680de8ccda5167fa52a55807",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.ambient_oxygen.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Ambient oxygen",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.ambient_oxygen.v1.adls",
+    "sha" : "06a2b4bf3cd332b5b45242161209e11e675de9ef",
+    "languages" : [ "en", "de", "es-ar" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.waveform.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Waveform",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.waveform.v1.adls",
+    "sha" : "021317032dcae18f034296ec4d15c9990ca18706",
     "languages" : [ "en" ]
   } ]
 }
