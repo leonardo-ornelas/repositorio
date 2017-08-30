@@ -15,7 +15,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] matches {    -- teste
+    OBSERVATION[id1] matches {    -- teste observation
         data matches {
             HISTORY[id2] matches {
                 events matches {
@@ -41,8 +41,8 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1"] = <
-                text = <"teste">
-                description = <"teste">
+                text = <"teste observation">
+                description = <"teste observation">
             >
             ["id3"] = <
                 text = <"Any event">
