@@ -1,0 +1,33 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.teste.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1] matches {    -- teste
+        category matches {
+            DV_TEXT[id2] 
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"teste">
+                description = <"teste">
+            >
+        >
+    >
+
