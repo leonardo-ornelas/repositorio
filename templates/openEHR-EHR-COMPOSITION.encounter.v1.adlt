@@ -1,0 +1,695 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            author = <
+                ["name"] = <"Ismael Queiroz">
+            >
+            language = <[ISO_639-1::en]>
+        >
+        ["sl"] = <
+            author = <
+                ["name"] = <"Ismael Queiroz">
+            >
+            language = <[ISO_639-1::sl]>
+        >
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Ismael Queiroz">
+                ["organisation"] = <"Solutis Tecnologias">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"copyright (c) 2010 openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.">
+            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
+        >
+        ["sl"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::sl]>
+            misuse = <"">
+            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+">
+            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
+        >
+        ["pt-br"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Uma interação entre um paciente e um (s) profissional (es) de saúde com a finalidade de fornecer serviços de saúde ou avaliar o estado de saúde de um paciente.">
+            use = <"Um Encontro abrange o ciclo de vida da pré-admissão, o encontro atual (para encontros ambulatórios) e admissão, permanência e alta (para encontros de internação). Durante o encontro, o paciente pode passar de praticante para praticante e local para local.
+">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["organisation"] = <"Solutis Tecnologia">
+        ["name"] = <"Ismael Queiroz">
+        ["email"] = <"ismael.queiroz@solutis.com.br">
+        ["date"] = <"19/08/2017">
+    >
+    other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
+
+definition
+    COMPOSITION[id1.1] matches {    -- Encontro
+        content matches {
+            allow_archetype OBSERVATION[id8] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id9] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id10] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id11] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id12] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_mass_index(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id13] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-encounter-blood_pressure-001.v1.0.0]
+            use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-encounter-body_temperature-001.v1.0.0]
+            use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-encounter-body_weight-001.v1.0.0]
+            use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-encounter-height-001.v1.0.0]
+            use_archetype OBSERVATION[id12.1, openEHR-EHR-OBSERVATION.ovl-encounter-body_mass_index-001.v1.0.0]
+            use_archetype OBSERVATION[id13.1, openEHR-EHR-OBSERVATION.ovl-encounter-indirect_oximetry-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Encuentro">
+                description = <"Composición genérica de notas de progreso o encuentro">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encontro">
+                description = <"Composição genérica de notas de progresso ou de progresso">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-blood_pressure-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Blood Pressure
+        /data[id2]/events matches {
+            EVENT[id7] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id1054] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] matches {
+                        value matches {
+                            DV_QUANTITY[id1055] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1007] matches {
+                        value matches {
+                            DV_QUANTITY[id1056] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1008] matches {
+                        value matches {
+                            DV_QUANTITY[id1057] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                }
+                /state[id8]/items matches {
+                    ELEMENT[id9] matches {
+                        /value[id1059]/defining_code matches {[ac1; at1002]}
+                    }
+                    allow_archetype CLUSTER[id1031] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id1044] matches {
+                        /value[id1061]/defining_code matches {[ac2; at1045]}
+                    }
+                    ELEMENT[id1006] matches {
+                        value matches {
+                            DV_QUANTITY[id1062] matches {
+                                property matches {[at1056]}
+                                magnitude matches {|-90.0..90.0|}
+                                precision matches {|0|}
+                                units matches {"°"}
+                            }
+                        }
+                    }
+                }
+            }
+            INTERVAL_EVENT[id1043] matches {
+                /math_function[id1063]/defining_code matches {[at1057]}
+                /width[id1064]/value matches {PT24H}
+            }
+        }
+        /protocol[id12]/items matches {
+            ELEMENT[id14] matches {
+                /value[id1067]/defining_code matches {[ac3]}
+            }
+            CLUSTER[id1034] matches {
+                /items[id15]/value[id1068]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id1036] matches {
+                /value[id1070]/defining_code matches {[ac5]}
+            }
+            ELEMENT[id1011] matches {
+                /value[id1072]/defining_code matches {[ac6]}
+            }
+            allow_archetype CLUSTER[id1026] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Blood Pressure">
+                description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+            >
+        >
+        ["ja"] = <
+            ["id1.1"] = <
+                text = <"血圧">
+                description = <"全身の循環での動脈圧の代用として，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Blutdruck">
+                description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
+            >
+        >
+        ["zh-cn"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Bloeddruk">
+                description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"АД">
+                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
+">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"فشار خون">
+                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
+معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"ضغط الدم">
+                description = <"قياس موضعي لضغط الدم الشرياني و الذي يحل محل الضغط الشرياني في الدورة الدموية الجهازية. 
+و عادة ما يستخدم مصطلح \"ضغط الدم\" لللإشارة إلى قياس ضغط دم الشريان العضُدي في أعلى الذراع.">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Presión Arterial">
+                description = <"La medición local de la tensión arterial que deriva de la medida de la presión arterial en la circulación sistémica. Comúnmente el uso de 'presión arterial' se refiere a la medida de la presión de la arteria braquial por encima del pliegue del codo.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Pressão Arterial">
+                description = <"A medida local da pressão sanguínea arterial, a qual é uma substituta da pressão arterial na circulação arterial sistêmica. Mais comumente o uso do termo pressão arterial se refere à medida da pressão da artéria braquial no antebraço.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-body_temperature-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_temperature.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body temperature
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id61] matches {
+                        property matches {[at57]}
+                        [units, precision] matches {
+                            [{"°C"}, {|1|}], 
+                            [{"°F"}, {|1|}]
+                        }
+                    }
+                }
+                /state[id30]/items matches {
+                    ELEMENT[id31] matches {
+                        /value[id62]/defining_code matches {[ac1; at34]}
+                    }
+                    allow_archetype CLUSTER[id57] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.environmental_conditions\.v1/}
+                    }
+                    allow_archetype CLUSTER[id58] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion\.v1/}
+                    }
+                    allow_archetype ELEMENT[id59] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-ELEMENT\.last_normal_menstrual_period\.v1|openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
+                    }
+                }
+            }
+        }
+        /protocol[id21]/items matches {
+            ELEMENT[id22] matches {
+                /value[id64]/defining_code matches {[ac2]}
+            }
+            allow_archetype CLUSTER[id60] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body temperature">
+                description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpertemperatur">
+                description = <"Eine Messung der Körpertemperatur an einer bestimmten Stelle als Surrogat für den gesamten Körper der Person.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"O valor para a temperatura corporal, com valor médio equivalente para o corpo inteiro.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Температура тела">
+                description = <"Измерение температуры тела, которая является суррогатом температуры тела человека в целом.">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+        >
+        ["nb"] = <
+            ["id1.1"] = <
+                text = <"Kroppstemperatur">
+                description = <"Måling av kroppstemperatur som skal gjenspeile den faktiske kroppstemperaturen">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"درجة حرارة الجسم">
+                description = <"قياس لدرجة حرارة الجسم, و التي تحل كبديل لدرجة الحرارة الكلية لجسم الشخص">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"دمای بدن">
+                description = <"اندازه گیری دمای بدن که جایگزینی برای دمای کل بدن فرد است">
+            >
+        >
+        ["es"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-body_weight-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id27] matches {
+                        property matches {[at19]}
+                        [magnitude, units] matches {
+                            [{|0.0..1000.0|}, {"kg"}], 
+                            [{|0.0..2000.0|}, {"lb"}]
+                        }
+                    }
+                }
+                /state[id9]/items[id10]/value[id29]/defining_code matches {[ac1; at12]}
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Масса тела">
+                description = <"Измерение актуальной массы тела человека.">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"وزن بدن">
+                description = <"اندازه گیری وزن بدن فرد">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"وزن الجسم">
+                description = <"قياس وزن الجسم للشخص">
+            >
+        >
+        ["es"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"Medición del peso corporal de un individuo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-height-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.height.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Višina/dolžina
+        /data[id2]/events matches {
+            EVENT[id3] matches {
+                /data[id4]/items[id5]/value matches {
+                    DV_QUANTITY[id21] matches {
+                        property matches {[at22]}
+                        [magnitude, units] matches {
+                            [{|0.0..1000.0|}, {"cm"}], 
+                            [{|0.0..250.0|}, {"in"}]
+                        }
+                    }
+                }
+                /state[id14]/items[id15]/value[id23]/defining_code matches {[ac1; at17]}
+            }
+        }
+        /protocol[id8]/items matches {
+            allow_archetype CLUSTER[id12] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Višina/dolžina">
+                description = <"Višina/dolžina pacienta, izmerjena od vrha glave do podplatov na nogah">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lengte">
+                description = <"De lichaamslengte wordt gemeten vanaf de kruin van het hoofd tot en met de voetzool. In het engelse taaldomein wordt er verschil gemaakt tussen hoogte (height) en lengte (length), waarbij hoogte staande gemeten wordt en lengte liggend.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Height/Length">
+                description = <"Height, or body length, is measured from crown of head to sole of foot.  Height is measured with the individual in a standing position and body length in a recumbent position. ">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Height/Length(en)">
+                description = <"*Height, or body length, is measured from crown of head to sole of foot.  Height is measured with the individual in a standing position and body length in a recumbent position. (en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items[id7]/value[id14]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-encounter-indirect_oximetry-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.indirect_oximetry.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Oximetry(en)
+        /data[id2]/events matches {
+            POINT_EVENT[id3] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id59] matches {
+                        /value[id61]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id45] matches {
+                        value matches {
+                            DV_QUANTITY[id62] matches {
+                                property matches {[at71]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"ml/ml"}
+                            }
+                        }
+                    }
+                    ELEMENT[id40] matches {
+                        value matches {
+                            DV_QUANTITY[id66] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    ELEMENT[id41] matches {
+                        value matches {
+                            DV_QUANTITY[id68] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id55] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.waveform(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+                /state[id15]/items matches {
+                    allow_archetype CLUSTER[id35] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    allow_archetype CLUSTER[id16] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+        }
+        /protocol[id8]/items matches {
+            ELEMENT[id21] matches {
+                /value[id73]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id38] matches {
+                value matches {
+                    DV_QUANTITY[id75] matches {
+                        property matches {[at73]}
+                        magnitude matches {|0.0..100.0|}
+                        precision matches {|1|}
+                        units matches {"°C"}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id19] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Oximetry(en)">
+                description = <"*Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.(en)">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Posredna oksimetrija">
+                description = <"Metoda merjenja prisotnosti plnov kot so Spo2 in TCO2 na indirekten, posreden n-invazivni način">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Indirect oximetry">
+                description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means. ">
+            >
+        >
+    >
+
