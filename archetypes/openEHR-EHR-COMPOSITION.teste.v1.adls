@@ -15,7 +15,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    COMPOSITION[id1] matches {    -- teste
+    COMPOSITION[id1] matches {    -- teste composition
         category matches {
             DV_TEXT[id2] 
         }
@@ -25,8 +25,8 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1"] = <
-                text = <"teste">
-                description = <"teste">
+                text = <"teste composition">
+                description = <"teste composition">
             >
         >
     >
