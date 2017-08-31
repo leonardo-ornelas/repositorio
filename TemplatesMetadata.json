@@ -1,0 +1,9 @@
+{
+  "templates" : [ {
+    "id" : "openEHR-EHR-COMPOSITION.template_teste.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "teste composition",
+    "path" : "templates/openEHR-EHR-COMPOSITION.template_teste.v1.adlt",
+    "sha" : "ab9f29ce4347649520e248ae08964aba80112b8a"
+  } ]
+}
