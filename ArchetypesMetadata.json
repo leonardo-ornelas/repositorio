@@ -293,5 +293,26 @@
     "path" : "archetypes/openEHR-EHR-CLUSTER.waveform.v1.adls",
     "sha" : "021317032dcae18f034296ec4d15c9990ca18706",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.teste.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "teste composition",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.teste.v1.adls",
+    "sha" : "6d5ebd78b0ca79ffa98b694c27c3fed908a6c5fc",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.allergy.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Adverse Reaction - Allergy",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.allergy.v1.adls",
+    "sha" : "2f001a41399117be499236438b044659da6e4ef7",
+    "languages" : [ "en", "sl" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.teste.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "teste observation",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.teste.v1.adls",
+    "sha" : "86b6befbd17be1c44774d53155ab91c4df803d45",
+    "languages" : [ "en" ]
   } ]
 }
