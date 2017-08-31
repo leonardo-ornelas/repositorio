@@ -24,6 +24,7 @@ definition
         }
         content matches {
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-template_teste-teste-001.v1.0.0]
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-template_teste-teste-002.v1.0.0]
         }
     }
 
@@ -41,6 +42,27 @@ terminology
 ---------------------------------------------------------------------------------
 template_overlay
     openEHR-EHR-OBSERVATION.ovl-template_teste-teste-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.teste.v1.0.0
+
+definition
+    OBSERVATION[id1.1]     -- teste observation
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"teste observation">
+                description = <"teste observation">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-template_teste-teste-002.v1.0.0
 
 specialize
     openEHR-EHR-OBSERVATION.teste.v1.0.0
