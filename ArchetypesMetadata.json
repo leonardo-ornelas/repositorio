@@ -4,7 +4,7 @@
     "rmType" : "ACTION",
     "name" : "Imaging examination",
     "path" : "archetypes/openEHR-EHR-ACTION.imaging_exam.v1.adls",
-    "sha" : "cdf817a1aac254c8bc4c51923bcc82d6138dd07e",
+    "sha" : "fdc50ff3546e0bf0d3abf1b98643c07145eec5d8",
     "languages" : [ "en", "sl" ]
   }, {
     "id" : "openEHR-EHR-ACTION.medication.v1.0.0",
@@ -39,7 +39,7 @@
     "rmType" : "CLUSTER",
     "name" : "Device",
     "path" : "archetypes/openEHR-EHR-CLUSTER.device.v1.adls",
-    "sha" : "986b00d73d5a32794183414d984b9cc69f62a625",
+    "sha" : "eb54fc0eeaa83ee26f3ebb7586d25dc94d839dd6",
     "languages" : [ "en", "sl" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.infusion_details.v1.0.0",
@@ -314,5 +314,12 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.teste.v1.adls",
     "sha" : "86b6befbd17be1c44774d53155ab91c4df803d45",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-ADMIN_ENTRY.admission.v1.0.0",
+    "rmType" : "ADMIN_ENTRY",
+    "name" : "Patient admission",
+    "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission.v1.0.0.adls",
+    "sha" : "cf4298818c6efadebfa2e56c75d431818a009854",
+    "languages" : [ "en", "ar-sy" ]
   } ]
 }
