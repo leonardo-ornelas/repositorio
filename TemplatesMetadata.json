@@ -4,6 +4,24 @@
     "rmType" : "COMPOSITION",
     "name" : "teste composition",
     "path" : "templates/openEHR-EHR-COMPOSITION.template_teste.v1.adlt",
-    "sha" : "ab9f29ce4347649520e248ae08964aba80112b8a"
+    "sha" : "065e3a0fcf5a728c697f8307481265c381492259"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco_sesi_v1.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Dados Antropométricos",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_v1.v1.adlt",
+    "sha" : "7fa37195ac6a2f636711f29cbf55693c52e5559b"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.teste_v2.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.teste_v2.v1.adlt",
+    "sha" : "4a07e56066f9e0ddf749dcb3fdc3e69c67e23725"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.teste_v3.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.teste_v3.v1.adlt",
+    "sha" : "2e21c0509be382960ba42dcc5d9c20388b7f4b8c"
   } ]
 }
