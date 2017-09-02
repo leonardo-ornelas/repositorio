@@ -93,7 +93,10 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
-            allow_archetype ADMIN_ENTRY[id0.2]
+            allow_archetype ADMIN_ENTRY[id0.2] matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-ADMIN_ENTRY\.admission\.v1\.0\.0/}
+            }
         }
     }
 
