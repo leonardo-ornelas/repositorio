@@ -93,6 +93,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
+            allow_archetype ADMIN_ENTRY[id0.2]
         }
     }
 
@@ -103,17 +104,29 @@ terminology
                 text = <"Encounter">
                 description = <"Generic encounter or progress note composition">
             >
+            ["id0.2"] = <
+                text = <"Admission">
+                description = <"This admission ADMIN_ENTRY archetype was designed for representing the minimum admission data. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1.">
+            >
         >
         ["sl"] = <
             ["id1.1"] = <
                 text = <"Encuentro">
                 description = <"Composición genérica de notas de progreso o encuentro">
             >
+            ["id0.2"] = <
+                text = <"Admissão">
+                description = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Encontro">
                 description = <"Composição genérica de notas de progresso ou de progresso">
+            >
+            ["id0.2"] = <
+                text = <"Admissão">
+                description = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1.">
             >
         >
     >
