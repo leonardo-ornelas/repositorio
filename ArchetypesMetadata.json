@@ -321,5 +321,12 @@
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission.v1.adls",
     "sha" : "cf4298818c6efadebfa2e56c75d431818a009854",
     "languages" : [ "en", "ar-sy" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.encounter.v2.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v2.adls",
+    "sha" : "7cf196e6e102986d88cb365ad737730b6e209454",
+    "languages" : [ "pt-br", "en", "sl", "pt-br" ]
   } ]
 }
