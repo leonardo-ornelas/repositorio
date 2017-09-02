@@ -1,0 +1,1406 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ADMIN_ENTRY.admission.v1
+
+concept
+	[at0000]	-- *Patient admission(en) Admissão do paciente
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			author = <
+				["name"] = <"Mona Saleh">
+			>
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Chunlan Ma">
+		["email"] = <"chunlan.ma@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics">
+		["date"] = <"19/07/07">
+	>
+	details = <
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"هذا النموذج الخاص بإدخال المريض تم تصميمه لتمثيل الحد الأدنى من بيانات إدخال المريض.
+و هذا يستخدم التطبيق العياري في أستراليا و نيوزيلندة للمستوى الصحي السابع النسخة/الإصدار 2.4 (الجزء الأول:إدراة المريض), و الإصدار 2.3.1 من المستوى الصحي السابع.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© 2011 openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This admission ADMIN_ENTRY archetype was designed for representing the minimum admission data. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© 2011 openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"*This admission ADMIN_ENTRY archetype was designed for representing the minimum admission data. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1.(en)
+
+Esta admissão ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isso é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1. (Pt)">
+			use = <"*(en)">
+			misuse = <"*(en)">
+			copyright = <"*© 2011 openEHR Foundation(en)">
+		>
+	>
+	lifecycle_state = <"AuthorDraft">
+	other_contributors = <"Sistine Barretto", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"7D108513A0D790E7593D9C069C69DFA4">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {	-- *Patient admission(en) Admissão do paciente
+		data matches {
+			ITEM_TREE[at0001] matches {	-- *Tree(en)
+				items cardinality matches {2..*; unordered} matches {
+					ELEMENT[at0002] matches {	-- *Patient class(en) Classe do Paciente
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003, 	-- *Inpatient/overnight patient(en) Paciente internado durante a noite
+									at0004, 	-- *Same day patient(en) Paciente do dia
+									at0005, 	-- *Outpatient(en) Ambulatórial
+									at0006, 	-- *Emergency patient(en) Paciente de emergência
+									at0007, 	-- *Community client(en) Cliente Público
+									at0008, 	-- *Pre-admit(en) Pré admissão
+									at0009, 	-- *Commercial account(en) Conta comercial
+									at0010, 	-- *Not-applicable(en) Não se aplica
+									at0011]	-- *Unknown(en) Desconhecido
+								}
+							}
+						}
+					}
+					CLUSTER[at0073] occurrences matches {0..1} matches {	-- *Assigned patient location(en) Localização atribuída ao paciente
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0074] occurrences matches {0..1} matches {	-- *Point of care/Unit(en) Ponto/Unidade de cuidado
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0077] occurrences matches {0..1} matches {	-- *Ward(en) Enfermaria 
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0078] occurrences matches {0..1} matches {	-- *Room(en) Quarto
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0079] occurrences matches {0..1} matches {	-- *Bed(en) Cama
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0104] occurrences matches {0..1} matches {	-- *Facility(en) Facilidade
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0105] occurrences matches {0..1} matches {	-- *Namespace ID(en) Nome de identificação
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0106] occurrences matches {0..1} matches {	-- *Universal ID(en) Identificação universal
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0107] occurrences matches {0..1} matches {	-- *Universal ID type(en) Tipo de identificação universal
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0108, 	-- *DNS(en) DNS
+													at0109, 	-- *GUID(en) GUID
+													at0110, 	-- *HCD(en) HCD
+													at0111, 	-- *HL7(en) HL7
+													at0112, 	-- *ISO(en) ISO
+													at0113, 	-- *L, M, N(en) L,M,N
+													at0114, 	-- *Random(en) Random
+													at0115, 	-- *UUID(en) UUID
+													at0116, 	-- *x400(en) x400
+													at0118]	-- *x500(en) x500
+												}
+											}
+										}
+									}
+								}
+							}
+							ELEMENT[at0101] occurrences matches {0..1} matches {	-- *Building(en) Edificio
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0102] occurrences matches {0..1} matches {	-- *Floor(en) Andar
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0103] occurrences matches {0..1} matches {	-- *Location description(en) Descrição da localização
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0084] occurrences matches {0..1} matches {	-- *Address(en) Endereço
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0085] occurrences matches {0..1} matches {	-- *Street(en) Rua
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0086] occurrences matches {0..1} matches {	-- *City(en) Cidade
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0087] occurrences matches {0..1} matches {	-- *State/province(en) Estado/ Provincia 
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0088] occurrences matches {0..1} matches {	-- *Post code(en) Código postal
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0089] occurrences matches {0..1} matches {	-- *Country(en) País
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+							ELEMENT[at0081] occurrences matches {0..1} matches {	-- *Location type(en) Tipo de localização
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0082, 	-- *Clinic(en) Clinica
+											at0090, 	-- *Home(en) Casa
+											at0091, 	-- *Department(en) Departamento
+											at0092, 	-- *Nursing unit(en) Unidade de enfermagem
+											at0093]	-- *Provider's office(en) Escritório do Provedor 
+										}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {	-- *Admission type(en) Tipo de admissão
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014, 	-- *Accident(en) Acidente
+									at0015, 	-- *Emergency(en) Emergência
+									at0016, 	-- *Labour & Delivery(en) Trabalho de parto 
+									at0017, 	-- *Routine(en) Rotina
+									at0018, 	-- *Newborn(en) Recém nascido 
+									at0019, 	-- *Urgent(en) Urgente
+									at0020, 	-- *Elective(en) Eletivo
+									at0021, 	-- *Geriatric respite admission(en) Admissão de Geriatria
+									at0022]	-- *Statistical admission(en) Estatistica de admissão
+								}
+							}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {	-- *Pre-admit number(en) Número de pré admissão
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0094] occurrences matches {0..1} matches {	-- *Prior patient location(en) Localização anterior do paciente
+						items cardinality matches {1..*; unordered} matches {
+							CLUSTER[at0119] occurrences matches {0..1} matches {	-- *Facility(en) Instalação
+								items cardinality matches {1..*; unordered} matches {
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0104]/items[at0105]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Facility(en) Facilidade]/items[*Namespace ID(en) Nome de identificação]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0104]/items[at0106]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Facility(en) Facilidade]/items[*Universal ID(en) Identificação universal]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0104]/items[at0107]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Facility(en) Facilidade]/items[*Universal ID type(en) Tipo de identificação universal]
+								}
+							}
+							CLUSTER[at0095] occurrences matches {0..1} matches {	-- *Adress(en) Endereço
+								items cardinality matches {1..*; unordered} matches {
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0084]/items[at0085]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Address(en) Endereço]/items[*Street(en) Rua]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0084]/items[at0086]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Address(en) Endereço]/items[*City(en) Cidade]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0084]/items[at0087]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Address(en) Endereço]/items[*State/province(en) Estado/ Provincia ]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0084]/items[at0088]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Address(en) Endereço]/items[*Post code(en) Código postal]
+									use_node ELEMENT /data[at0001]/items[at0073]/items[at0084]/items[at0089]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Address(en) Endereço]/items[*Country(en) País]
+								}
+							}
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0074]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Point of care/Unit(en) Ponto/Unidade de cuidado]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0077]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Ward(en) Enfermaria ]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0078]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Room(en) Quarto]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0079]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Bed(en) Cama]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0101]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Building(en) Edificio]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0102]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Floor(en) Andar]
+							use_node ELEMENT /data[at0001]/items[at0073]/items[at0103]	-- /data[*Tree(en)]/items[*Assigned patient location(en) Localização atribuída ao paciente]/items[*Location description(en) Descrição da localização]
+						}
+					}
+					CLUSTER[at0098] occurrences matches {0..*} matches {	-- *Attending doctor(en) Médico assistencial
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0099] occurrences matches {0..1} matches {	-- *ID(en) Identificação
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0100] occurrences matches {0..1} matches {	-- *Family name(en) Nome da Família
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0120] occurrences matches {0..1} matches {	-- *Last name(en) Ultimo nome
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0025] occurrences matches {0..1} matches {	-- *Referring doctor(en) Médico referido
+						items cardinality matches {1..*; unordered} matches {
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0099]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*ID(en) Identificação]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0100]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Family name(en) Nome da Família]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0120]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Last name(en) Ultimo nome]
+						}
+					}
+					CLUSTER[at0121] occurrences matches {0..*} matches {	-- *Consulting doctor(en) Médico consultor
+						items cardinality matches {1..*; unordered} matches {
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0099]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*ID(en) Identificação]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0100]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Family name(en) Nome da Família]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0120]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Last name(en) Ultimo nome]
+						}
+					}
+					ELEMENT[at0041] occurrences matches {0..1} matches {	-- *Hospital service(en) Serviço hospitalar
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0049] occurrences matches {0..1} matches {	-- *Admit source(en) Origem da admissão
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0051] occurrences matches {0..1} matches {	-- *Admitting doctor(en) Admissão médica
+						items cardinality matches {1..*; unordered} matches {
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0099]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*ID(en) Identificação]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0100]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Family name(en) Nome da Família]
+							use_node ELEMENT /data[at0001]/items[at0098]/items[at0120]	-- /data[*Tree(en)]/items[*Attending doctor(en) Médico assistencial]/items[*Last name(en) Ultimo nome]
+						}
+					}
+					ELEMENT[at0061] occurrences matches {0..1} matches {	-- *Financial class(en) Classe financeira
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0062, 	-- *Australian Health Care Agreements(en) Acordo australiano de cuidados em saúde 
+									at0063, 	-- *Private health insurance(en) Seguro de saúde privado
+									at0064, 	-- *Self-funded(en) Autofinanciamento
+									at0065, 	-- *Worker's compensation(en) Compesação do trabalhador
+									at0122, 	-- *Motor vehicle third party personal claim(en) Reivindicação á terceiros ???? 
+									at0123, 	-- *Other compensation (e.g. public liability, common law, medical negligence)(en)  Outras compensações (por exemplo, responsabilidade pública, direito comum, negligência médica)
+									at0124, 	-- *Department of Veterans' Affairs(en) Departamento de assuntos de veteranos
+									at0125, 	-- *Department of Defence(en) Departamento de defesa
+									at0126, 	-- *Correctional facility(en) Instalação ??
+									at0127, 	-- *Other hospital or public authority (contracted care)(en) Outra autoridade pública hospitalar (Contrato de saúde)
+									at0128, 	-- *Reciprocal health care agreements (with other countries)(en) Acordo de cuidado em saúde reciproco ( com outros paises )
+									at0129, 	-- *Other(en) Outro
+									at0130]	-- *Not known(en) Ignorado
+								}
+							}
+						}
+					}
+					ELEMENT[at0066] occurrences matches {0..1} matches {	-- *Charge price indicator(en) Indicador de valor cobrado
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {[ac0001]}		-- *Any term that 'is a' 'Charge price indicator'(en)
+							}
+						}
+					}
+					ELEMENT[at0071] matches {	-- *Admit date/time(en) Admissão data/hora
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient admission">
+					description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Patient class">
+					description = <"Intended mode of treatement.">
+				>
+				["at0003"] = <
+					text = <"Inpatient/overnight patient">
+					description = <"Inpatient/overnight patient">
+				>
+				["at0004"] = <
+					text = <"Same day patient">
+					description = <"Same day patient">
+				>
+				["at0005"] = <
+					text = <"Outpatient">
+					description = <"Outpatient">
+				>
+				["at0006"] = <
+					text = <"Emergency patient">
+					description = <"Emergency patient">
+				>
+				["at0007"] = <
+					text = <"Community client">
+					description = <"Community client">
+				>
+				["at0008"] = <
+					text = <"Pre-admit">
+					description = <"Pre-admit">
+				>
+				["at0009"] = <
+					text = <"Commercial account">
+					description = <"Commercial account">
+				>
+				["at0010"] = <
+					text = <"Not-applicable">
+					description = <"Not-applicable">
+				>
+				["at0011"] = <
+					text = <"Unknown">
+					description = <"Unknown">
+				>
+				["at0013"] = <
+					text = <"Admission type">
+					description = <"The circumstance under which the patient will be admitted.">
+				>
+				["at0014"] = <
+					text = <"Accident">
+					description = <"Accident">
+				>
+				["at0015"] = <
+					text = <"Emergency">
+					description = <"Emergency">
+				>
+				["at0016"] = <
+					text = <"Labour & Delivery">
+					description = <"Labour & Delivery">
+				>
+				["at0017"] = <
+					text = <"Routine">
+					description = <"Routine">
+				>
+				["at0018"] = <
+					text = <"Newborn">
+					description = <"Newborn">
+				>
+				["at0019"] = <
+					text = <"Urgent">
+					description = <"Urgent">
+				>
+				["at0020"] = <
+					text = <"Elective">
+					description = <"Elective">
+				>
+				["at0021"] = <
+					text = <"Geriatric respite admission">
+					description = <"Geriatric respite admission">
+				>
+				["at0022"] = <
+					text = <"Statistical admission">
+					description = <"Statistical admission">
+				>
+				["at0023"] = <
+					text = <"Pre-admit number">
+					description = <"ID number of patient's pre-admission">
+				>
+				["at0025"] = <
+					text = <"Referring doctor">
+					description = <"Clinician who referred patient to the consulting doctor">
+				>
+				["at0041"] = <
+					text = <"Hospital service">
+					description = <"For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.">
+				>
+				["at0049"] = <
+					text = <"Admit source">
+					description = <"Refer to NHDD 000385 Mode of admission and
+NHDD 000150 Source of referral to public psychiatric hospital">
+				>
+				["at0051"] = <
+					text = <"Admitting doctor">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"Financial class">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"Australian Health Care Agreements">
+					description = <"Australian Health Care Agreements ">
+				>
+				["at0063"] = <
+					text = <"Private health insurance">
+					description = <"Private health insurance">
+				>
+				["at0064"] = <
+					text = <"Self-funded">
+					description = <"Self-funded">
+				>
+				["at0065"] = <
+					text = <"Worker's compensation">
+					description = <"Worker's compensation">
+				>
+				["at0066"] = <
+					text = <"Charge price indicator">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"Admit date/time">
+					description = <"Date/time the patient was admitted.">
+				>
+				["at0073"] = <
+					text = <"Assigned patient location">
+					description = <"Assigned patient location when the patient was admitted.">
+				>
+				["at0074"] = <
+					text = <"Point of care/Unit">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"Ward">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"Room">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"Bed">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"Location type">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"Clinic">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"Address">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"Street">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"City">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"State/province">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"Post code">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"Country">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"Home">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"Department">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"Nursing unit">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"Provider's office">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"Prior patient location">
+					description = <"The patient location prior admission">
+				>
+				["at0095"] = <
+					text = <"Adress">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"Attending doctor">
+					description = <"The attending doctor providing services to the
+patient">
+				>
+				["at0099"] = <
+					text = <"ID">
+					description = <"*">
+				>
+				["at0100"] = <
+					text = <"Family name">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"Building">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"Floor">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"Location description">
+					description = <"*">
+				>
+				["at0104"] = <
+					text = <"Facility">
+					description = <"*">
+				>
+				["at0105"] = <
+					text = <"Namespace ID">
+					description = <"*">
+				>
+				["at0106"] = <
+					text = <"Universal ID">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"Universal ID type">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"DNS">
+					description = <"*">
+				>
+				["at0109"] = <
+					text = <"GUID">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"HCD">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"HL7">
+					description = <"*">
+				>
+				["at0112"] = <
+					text = <"ISO">
+					description = <"*">
+				>
+				["at0113"] = <
+					text = <"L, M, N">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"Random">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"UUID">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"x400">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"x500">
+					description = <"*">
+				>
+				["at0119"] = <
+					text = <"Facility">
+					description = <"*">
+				>
+				["at0120"] = <
+					text = <"Last name">
+					description = <"*">
+				>
+				["at0121"] = <
+					text = <"Consulting doctor">
+					description = <"Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer">
+				>
+				["at0122"] = <
+					text = <"Motor vehicle third party personal claim">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"Other compensation (e.g. public liability, common law, medical negligence)">
+					description = <"*">
+				>
+				["at0124"] = <
+					text = <"Department of Veterans' Affairs">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"Department of Defence">
+					description = <"*">
+				>
+				["at0126"] = <
+					text = <"Correctional facility">
+					description = <"*">
+				>
+				["at0127"] = <
+					text = <"Other hospital or public authority (contracted care)">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"Reciprocal health care agreements (with other countries)">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"Other">
+					description = <"*">
+				>
+				["at0130"] = <
+					text = <"Not known">
+					description = <"*">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["at0000"] = <
+					text = <"إدخال المريض">
+					description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"درجة المريض">
+					description = <"أسلوب المعاملة المقصود">
+				>
+				["at0003"] = <
+					text = <"مريض داخلي/ليلي">
+					description = <"مريض داخلي/ليلي">
+				>
+				["at0004"] = <
+					text = <"مريض اليوم الواحد">
+					description = <"مريض اليوم الواحد">
+				>
+				["at0005"] = <
+					text = <"المريض الخارجي">
+					description = <"المريض الخارجي">
+				>
+				["at0006"] = <
+					text = <"مريض الطوارئ">
+					description = <"مريض الطوارئ">
+				>
+				["at0007"] = <
+					text = <"عميل مجتمعي">
+					description = <"عميل مجتمعي">
+				>
+				["at0008"] = <
+					text = <"ما قبل الإدخال">
+					description = <"ما قبل الإدخال">
+				>
+				["at0009"] = <
+					text = <"حساب تجاري">
+					description = <"حساب تجاري">
+				>
+				["at0010"] = <
+					text = <"غير قابل للتطبيق">
+					description = <"غير قابل للتطبيق">
+				>
+				["at0011"] = <
+					text = <"غير معروف">
+					description = <"غير معروف">
+				>
+				["at0013"] = <
+					text = <"نوع الإدخال">
+					description = <"الظروف التي يتم إدخال المريض تحتها">
+				>
+				["at0014"] = <
+					text = <"حادث">
+					description = <"حادث">
+				>
+				["at0015"] = <
+					text = <"طوارئ">
+					description = <"طوارئ">
+				>
+				["at0016"] = <
+					text = <"الولادة و الوضع">
+					description = <"الولادة و الوضع">
+				>
+				["at0017"] = <
+					text = <"روتيني/معتاد">
+					description = <"روتيني/معتاد">
+				>
+				["at0018"] = <
+					text = <"حديث الولادة">
+					description = <"حديث الولادة">
+				>
+				["at0019"] = <
+					text = <"عاجل">
+					description = <"عاجل">
+				>
+				["at0020"] = <
+					text = <"اختياري">
+					description = <"اختياري">
+				>
+				["at0021"] = <
+					text = <"إدخال المسنين للراحة">
+					description = <"إدخال المسنين للراحة">
+				>
+				["at0022"] = <
+					text = <"الإدخال الإحصائي">
+					description = <"الإدخال الإحصائي">
+				>
+				["at0023"] = <
+					text = <"رقم ما قبل الإدخال">
+					description = <"الرقم التعريفي للمريض ما قبل الإدخال">
+				>
+				["at0025"] = <
+					text = <"الطبيب صاحب الإحالة">
+					description = <"الطبيب الذي قام بإحالة المريض إلى الطبيب الاستشاري">
+				>
+				["at0041"] = <
+					text = <"خدمة المستشفى">
+					description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: 
+CARDO1">
+				>
+				["at0049"] = <
+					text = <"مصدر الإدخال">
+					description = <"برجاء الرجوع إلى طريق الإدخال في 
+NHDD 000385 
+و مصدر الإحالة إلى المستشفى النفسي العام
+NHDD 000150 ">
+				>
+				["at0051"] = <
+					text = <"الطبيب المسئول عن الإدخال">
+					description = <"*">
+				>
+				["at0061"] = <
+					text = <"الدرجة الاقتصادية">
+					description = <"*">
+				>
+				["at0062"] = <
+					text = <"الاتفاقات الأسترالية للرعاية الصحية">
+					description = <"الاتفاقات الأسترالية للرعاية الصحية">
+				>
+				["at0063"] = <
+					text = <"التأمين الصحي الخاص">
+					description = <"التأمين الصحي الخاص">
+				>
+				["at0064"] = <
+					text = <"مموَّل شخصيا">
+					description = <"مموَّل شخصيا">
+				>
+				["at0065"] = <
+					text = <"تعويضات العامل">
+					description = <"تعويضات العامل">
+				>
+				["at0066"] = <
+					text = <"مؤشر ثمن الرعاية">
+					description = <"*">
+				>
+				["at0071"] = <
+					text = <"وقت/ تاريخ الإدخال">
+					description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
+				>
+				["at0073"] = <
+					text = <"المكان المعَيَّن للمريض">
+					description = <"المكان الذي تم تعيينه للمريض عند إدخال المريض">
+				>
+				["at0074"] = <
+					text = <"نقطة تقديم الرعاية/الوحدة">
+					description = <"*">
+				>
+				["at0077"] = <
+					text = <"العنبر">
+					description = <"*">
+				>
+				["at0078"] = <
+					text = <"الغرفة/الحجرة">
+					description = <"*">
+				>
+				["at0079"] = <
+					text = <"السرير">
+					description = <"*">
+				>
+				["at0081"] = <
+					text = <"نوع الموقع">
+					description = <"*">
+				>
+				["at0082"] = <
+					text = <"عيادة">
+					description = <"*">
+				>
+				["at0084"] = <
+					text = <"العنوان">
+					description = <"*">
+				>
+				["at0085"] = <
+					text = <"الشارع">
+					description = <"*">
+				>
+				["at0086"] = <
+					text = <"المدينة">
+					description = <"*">
+				>
+				["at0087"] = <
+					text = <"الولاية/المقاطعة">
+					description = <"*">
+				>
+				["at0088"] = <
+					text = <"الرمز البريدي">
+					description = <"*">
+				>
+				["at0089"] = <
+					text = <"الدولة/البلد">
+					description = <"*">
+				>
+				["at0090"] = <
+					text = <"منزل">
+					description = <"*">
+				>
+				["at0091"] = <
+					text = <"القِسم">
+					description = <"*">
+				>
+				["at0092"] = <
+					text = <"وحدة تمريضية">
+					description = <"*">
+				>
+				["at0093"] = <
+					text = <"مكتب مُزَوِّد الخدمة">
+					description = <"*">
+				>
+				["at0094"] = <
+					text = <"المكان السابق للمريض">
+					description = <"المكان السابق للمريض">
+				>
+				["at0095"] = <
+					text = <"العنوان">
+					description = <"*">
+				>
+				["at0098"] = <
+					text = <"الطبيب الحاضر">
+					description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
+				>
+				["at0099"] = <
+					text = <"العتصر التعريفي">
+					description = <"*">
+				>
+				["at0100"] = <
+					text = <"اسم العائلة">
+					description = <"*">
+				>
+				["at0101"] = <
+					text = <"المبنى">
+					description = <"*">
+				>
+				["at0102"] = <
+					text = <"الطابق/الدور">
+					description = <"*">
+				>
+				["at0103"] = <
+					text = <"وصف الموقع">
+					description = <"*">
+				>
+				["at0104"] = <
+					text = <"المؤسسة">
+					description = <"*">
+				>
+				["at0105"] = <
+					text = <"العنصر التعريفي للمساحة">
+					description = <"*">
+				>
+				["at0106"] = <
+					text = <"العنصر التعريفي الشامل">
+					description = <"*">
+				>
+				["at0107"] = <
+					text = <"نوع العنصر التعريفي الشامل">
+					description = <"*">
+				>
+				["at0108"] = <
+					text = <"نظام تعريف المجال">
+					description = <"*">
+				>
+				["at0109"] = <
+					text = <"العنصر التعريفي الكوني الفريد">
+					description = <"*">
+				>
+				["at0110"] = <
+					text = <"HCD">
+					description = <"*">
+				>
+				["at0111"] = <
+					text = <"المستوى الصحي السابع">
+					description = <"*">
+				>
+				["at0112"] = <
+					text = <"منظمة المعايير الدولية">
+					description = <"*">
+				>
+				["at0113"] = <
+					text = <"L, M, N">
+					description = <"*">
+				>
+				["at0114"] = <
+					text = <"عشوائي">
+					description = <"*">
+				>
+				["at0115"] = <
+					text = <"العنصر التعريفي الكوني الفريد">
+					description = <"*">
+				>
+				["at0116"] = <
+					text = <"x400">
+					description = <"*">
+				>
+				["at0118"] = <
+					text = <"x500">
+					description = <"*">
+				>
+				["at0119"] = <
+					text = <"المؤسسة">
+					description = <"*">
+				>
+				["at0120"] = <
+					text = <"الاسم الأخير">
+					description = <"*">
+				>
+				["at0121"] = <
+					text = <"الطبيب الاستشاري">
+					description = <"الطبيب الاستشاري المسئول عن تقديم الرعاية للمريض, بنا قي ذلك الأخصائي الذي يعمل بأجر, و المسئول الطبي الزائر">
+				>
+				["at0122"] = <
+					text = <"المطالبة الشخصية الخاصة بالعربة من طرف ثالث">
+					description = <"*">
+				>
+				["at0123"] = <
+					text = <"التعويضات الأخرى - المسئولية العامة, القانون العمومي, الإهمال الطبي">
+					description = <"*">
+				>
+				["at0124"] = <
+					text = <"قسم شئون المحاربين القدامى">
+					description = <"*">
+				>
+				["at0125"] = <
+					text = <"إدارة الدفاع">
+					description = <"*">
+				>
+				["at0126"] = <
+					text = <"المؤسسة التصحيحية">
+					description = <"*">
+				>
+				["at0127"] = <
+					text = <"مستشفى أو قسم عام آخر - رعاية بالتعاقد">
+					description = <"*">
+				>
+				["at0128"] = <
+					text = <"اتفاقات الرعاية الصحية التبادلية - مع البلدان/الدول الأخرى">
+					description = <"*">
+				>
+				["at0129"] = <
+					text = <"أخرى">
+					description = <"*">
+				>
+				["at0130"] = <
+					text = <"غير معروف">
+					description = <"*">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Patient admission(en) Admissão do paciente">
+					description = <"*Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.(en) Usado apanas para admissão do paciente. Ele sinaliza o inicio da admissão do paciente para o cuidado. ">
+				>
+				["at0001"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Patient class(en) Classe do Paciente">
+					description = <"*Intended mode of treatement.(en) Modo de tratamento pretendido">
+				>
+				["at0003"] = <
+					text = <"*Inpatient/overnight patient(en) Paciente internado durante a noite">
+					description = <"*Inpatient/overnight patient(en) Paciente internado durante a noite">
+				>
+				["at0004"] = <
+					text = <"*Same day patient(en) Paciente do dia">
+					description = <"*Same day patient(en) Paciente do dia">
+				>
+				["at0005"] = <
+					text = <"*Outpatient(en) Ambulatórial">
+					description = <"*Outpatient(en) Ambulatorial">
+				>
+				["at0006"] = <
+					text = <"*Emergency patient(en) Paciente de emergência">
+					description = <"*Emergency patient(en) Paciente de emergência">
+				>
+				["at0007"] = <
+					text = <"*Community client(en) Cliente Público">
+					description = <"*Community client(en) Cliente Público">
+				>
+				["at0008"] = <
+					text = <"*Pre-admit(en) Pré admissão">
+					description = <"*Pre-admit(en) Pré admissão">
+				>
+				["at0009"] = <
+					text = <"*Commercial account(en) Conta comercial">
+					description = <"*Commercial account(en) Conta comercial">
+				>
+				["at0010"] = <
+					text = <"*Not-applicable(en) Não se aplica">
+					description = <"*Not-applicable(en) Não se aplica">
+				>
+				["at0011"] = <
+					text = <"*Unknown(en) Desconhecido">
+					description = <"*Unknown(en) Desconhecido">
+				>
+				["at0013"] = <
+					text = <"*Admission type(en) Tipo de admissão">
+					description = <"*The circumstance under which the patient will be admitted.(en) A circunstância sobre a qual o paciente será admitido ">
+				>
+				["at0014"] = <
+					text = <"*Accident(en) Acidente">
+					description = <"*Accident(en) Acidente">
+				>
+				["at0015"] = <
+					text = <"*Emergency(en) Emergência">
+					description = <"*Emergency(en) Emergência">
+				>
+				["at0016"] = <
+					text = <"*Labour & Delivery(en) Trabalho de parto ">
+					description = <"*Labour & Delivery(en) Trabalho de parto">
+				>
+				["at0017"] = <
+					text = <"*Routine(en) Rotina">
+					description = <"*Routine(en) Routine">
+				>
+				["at0018"] = <
+					text = <"*Newborn(en) Recém nascido ">
+					description = <"*Newborn(en) Recém Nascido">
+				>
+				["at0019"] = <
+					text = <"*Urgent(en) Urgente">
+					description = <"*Urgent(en) Urgente">
+				>
+				["at0020"] = <
+					text = <"*Elective(en) Eletivo">
+					description = <"*Elective(en) Eletivo">
+				>
+				["at0021"] = <
+					text = <"*Geriatric respite admission(en) Admissão de Geriatria">
+					description = <"*Geriatric respite admission(en) Admissão de Geriatria">
+				>
+				["at0022"] = <
+					text = <"*Statistical admission(en) Estatistica de admissão">
+					description = <"*Statistical admission(en) Estatistica de admissão">
+				>
+				["at0023"] = <
+					text = <"*Pre-admit number(en) Número de pré admissão">
+					description = <"*ID number of patient's pre-admission(en) número de identificação de pacientes de pré admissão">
+				>
+				["at0025"] = <
+					text = <"*Referring doctor(en) Médico referido">
+					description = <"*Clinician who referred patient to the consulting doctor(en)  Clínico que encaminhou o paciente para o médico consultor">
+				>
+				["at0041"] = <
+					text = <"*Hospital service(en) Serviço hospitalar">
+					description = <"*For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.(en) Para uso local, este campo possui o tipo de unidade organizacional ou unidade clínica, ex CARDO1.">
+				>
+				["at0049"] = <
+					text = <"*Admit source(en) Origem da admissão">
+					description = <"*Refer to NHDD 000385 Mode of admission and
+NHDD 000150 Source of referral to public psychiatric hospital(en) Consulte o NHDD 000385 Modo de admissão e NHDD 000150 Fonte de referência ao hospital psiquiatrico público">
+				>
+				["at0051"] = <
+					text = <"*Admitting doctor(en) Admissão médica">
+					description = <"**(en)">
+				>
+				["at0061"] = <
+					text = <"*Financial class(en) Classe financeira">
+					description = <"**(en)">
+				>
+				["at0062"] = <
+					text = <"*Australian Health Care Agreements(en) Acordo australiano de cuidados em saúde ">
+					description = <"*Australian Health Care Agreements (en) Acordo australiano de cuidados em saúde">
+				>
+				["at0063"] = <
+					text = <"*Private health insurance(en) Seguro de saúde privado">
+					description = <"*Private health insurance(en) Seguro de saúde privado">
+				>
+				["at0064"] = <
+					text = <"*Self-funded(en) Autofinanciamento">
+					description = <"*Self-funded(en) Autofinanciamento">
+				>
+				["at0065"] = <
+					text = <"*Worker's compensation(en) Compesação do trabalhador">
+					description = <"*Worker's compensation(en) Compensação do trabalhador">
+				>
+				["at0066"] = <
+					text = <"*Charge price indicator(en) Indicador de valor cobrado">
+					description = <"**(en)">
+				>
+				["at0071"] = <
+					text = <"*Admit date/time(en) Admissão data/hora">
+					description = <"*Date/time the patient was admitted.(en) Admissão data/hora">
+				>
+				["at0073"] = <
+					text = <"*Assigned patient location(en) Localização atribuída ao paciente">
+					description = <"Assigned patient location when the pacian was admitted. (en) Localização atribuída ao paciente quando o paciente foi admitido ">
+				>
+				["at0074"] = <
+					text = <"*Point of care/Unit(en) Ponto/Unidade de cuidado">
+					description = <"**(en)">
+				>
+				["at0077"] = <
+					text = <"*Ward(en) Enfermaria ">
+					description = <"**(en)">
+				>
+				["at0078"] = <
+					text = <"*Room(en) Quarto">
+					description = <"**(en)">
+				>
+				["at0079"] = <
+					text = <"*Bed(en) Cama">
+					description = <"**(en)">
+				>
+				["at0081"] = <
+					text = <"*Location type(en) Tipo de localização">
+					description = <"**(en)">
+				>
+				["at0082"] = <
+					text = <"*Clinic(en) Clinica">
+					description = <"**(en)">
+				>
+				["at0084"] = <
+					text = <"*Address(en) Endereço">
+					description = <"**(en)">
+				>
+				["at0085"] = <
+					text = <"*Street(en) Rua">
+					description = <"**(en)">
+				>
+				["at0086"] = <
+					text = <"*City(en) Cidade">
+					description = <"**(en)">
+				>
+				["at0087"] = <
+					text = <"*State/province(en) Estado/ Provincia ">
+					description = <"**(en)">
+				>
+				["at0088"] = <
+					text = <"*Post code(en) Código postal">
+					description = <"**(en)">
+				>
+				["at0089"] = <
+					text = <"*Country(en) País">
+					description = <"**(en)">
+				>
+				["at0090"] = <
+					text = <"*Home(en) Casa">
+					description = <"**(en)">
+				>
+				["at0091"] = <
+					text = <"*Department(en) Departamento">
+					description = <"**(en)">
+				>
+				["at0092"] = <
+					text = <"*Nursing unit(en) Unidade de enfermagem">
+					description = <"**(en)">
+				>
+				["at0093"] = <
+					text = <"*Provider's office(en) Escritório do Provedor ">
+					description = <"**(en)">
+				>
+				["at0094"] = <
+					text = <"*Prior patient location(en) Localização anterior do paciente">
+					description = <"*The patient location prior admission(en) A localização do paciente antes da admissão">
+				>
+				["at0095"] = <
+					text = <"*Adress(en) Endereço">
+					description = <"**(en)">
+				>
+				["at0098"] = <
+					text = <"*Attending doctor(en) Médico assistencial">
+					description = <"*The attending doctor providing services to the
+patient(en) Médico assistente que presta serviços ao paciente">
+				>
+				["at0099"] = <
+					text = <"*ID(en) Identificação">
+					description = <"**(en)">
+				>
+				["at0100"] = <
+					text = <"*Family name(en) Nome da Família">
+					description = <"**(en)">
+				>
+				["at0101"] = <
+					text = <"*Building(en) Edificio">
+					description = <"**(en)">
+				>
+				["at0102"] = <
+					text = <"*Floor(en) Andar">
+					description = <"**(en)">
+				>
+				["at0103"] = <
+					text = <"*Location description(en) Descrição da localização">
+					description = <"**(en)">
+				>
+				["at0104"] = <
+					text = <"*Facility(en) Facilidade">
+					description = <"**(en)">
+				>
+				["at0105"] = <
+					text = <"*Namespace ID(en) Nome de identificação">
+					description = <"**(en)">
+				>
+				["at0106"] = <
+					text = <"*Universal ID(en) Identificação universal">
+					description = <"**(en)">
+				>
+				["at0107"] = <
+					text = <"*Universal ID type(en) Tipo de identificação universal">
+					description = <"**(en)">
+				>
+				["at0108"] = <
+					text = <"*DNS(en) DNS">
+					description = <"**(en)">
+				>
+				["at0109"] = <
+					text = <"*GUID(en) GUID">
+					description = <"**(en)">
+				>
+				["at0110"] = <
+					text = <"*HCD(en) HCD">
+					description = <"**(en)">
+				>
+				["at0111"] = <
+					text = <"*HL7(en) HL7">
+					description = <"**(en)">
+				>
+				["at0112"] = <
+					text = <"*ISO(en) ISO">
+					description = <"**(en)">
+				>
+				["at0113"] = <
+					text = <"*L, M, N(en) L,M,N">
+					description = <"**(en)">
+				>
+				["at0114"] = <
+					text = <"*Random(en) Random">
+					description = <"**(en)">
+				>
+				["at0115"] = <
+					text = <"*UUID(en) UUID">
+					description = <"**(en)">
+				>
+				["at0116"] = <
+					text = <"*x400(en) x400">
+					description = <"**(en)">
+				>
+				["at0118"] = <
+					text = <"*x500(en) x500">
+					description = <"**(en)">
+				>
+				["at0119"] = <
+					text = <"*Facility(en) Instalação">
+					description = <"**(en)">
+				>
+				["at0120"] = <
+					text = <"*Last name(en) Ultimo nome">
+					description = <"**(en)">
+				>
+				["at0121"] = <
+					text = <"*Consulting doctor(en) Médico consultor">
+					description = <"*Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer(en)">
+				>
+				["at0122"] = <
+					text = <"*Motor vehicle third party personal claim(en) Reivindicação á terceiros ???? ">
+					description = <"**(en)">
+				>
+				["at0123"] = <
+					text = <"*Other compensation (e.g. public liability, common law, medical negligence)(en)  Outras compensações (por exemplo, responsabilidade pública, direito comum, negligência médica)">
+					description = <"**(en)">
+				>
+				["at0124"] = <
+					text = <"*Department of Veterans' Affairs(en) Departamento de assuntos de veteranos">
+					description = <"**(en)">
+				>
+				["at0125"] = <
+					text = <"*Department of Defence(en) Departamento de defesa">
+					description = <"**(en)">
+				>
+				["at0126"] = <
+					text = <"*Correctional facility(en) Instalação ??">
+					description = <"**(en)">
+				>
+				["at0127"] = <
+					text = <"*Other hospital or public authority (contracted care)(en) Outra autoridade pública hospitalar (Contrato de saúde)">
+					description = <"**(en)">
+				>
+				["at0128"] = <
+					text = <"*Reciprocal health care agreements (with other countries)(en) Acordo de cuidado em saúde reciproco ( com outros paises )">
+					description = <"**(en)">
+				>
+				["at0129"] = <
+					text = <"*Other(en) Outro">
+					description = <"**(en)">
+				>
+				["at0130"] = <
+					text = <"*Not known(en) Ignorado">
+					description = <"**(en)">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["en"] = <
+			items = <
+				["ac0001"] = <
+					text = <"Any term that 'is a' 'Charge price indicator'">
+					description = <"*">
+				>
+			>
+		>
+		["ar-sy"] = <
+			items = <
+				["ac0001"] = <
+					text = <"أي مصطلح مكافئ لمؤشر ثمن الرعاية">
+					description = <"*">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["ac0001"] = <
+					text = <"*Any term that 'is a' 'Charge price indicator'(en)">
+					description = <"**(en)">
+				>
+			>
+		>
+	>

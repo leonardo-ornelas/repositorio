@@ -1,0 +1,378 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-OBSERVATION.substance_use-tobacco.v1
+specialize
+	openEHR-EHR-OBSERVATION.substance_use.v1
+
+concept
+	[at0000.1]	-- *Tobacco Use(en) Uso do Tabaco 
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			author = <
+				["name"] = <"?">
+			>
+		>
+	>
+description
+	original_author = <
+		["name"] = <"Heather Leslie">
+		["email"] = <"heather.leslie@oceaninformatics.com">
+		["organisation"] = <"Ocean Informatics">
+		["date"] = <"6/05/2009">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"This is an archetype used to record details of the use of all common forms of tobacco. ">
+			use = <"Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
+Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
+A typical use would be to record usage in an tobacco usage diary.">
+			keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
+			misuse = <"Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.  ">
+			copyright = <"copyright (c) 2009 openEHR Foundation">
+		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"*This is an archetype used to record details of the use of all common forms of tobacco. (en)
+Este é um arquétipo usado para registrar detalhes sobre o uso de todas as formas comuns de tabaco">
+			use = <"*Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
+Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
+A typical use would be to record usage in an tobacco usage diary.(en)
+
+
+Use para registrar detalhes sobre o uso de todas as formas comuns de tabaco. Isso inclui o uso em um ponto específico no tempo, em intervalos de tempo e uso de funções matemáticas, como média ou mínima. Exemplo; consumo médio ao longo de uma semana.
+Outros tipos de tabaco não estão incluídos aqui, mas podem ser adicionados como uma revisão, conforme necessário, ou adicionados através de uma especialização para grupos com necessidades de opções adicionais.
+O uso típico seria registrar o uso em um diário de uso do tabaco.">
+			keywords = <"*substance(en)", "*addiction(en)", "*consumption(en)", "*use(en)", "*tobacco(en)", "*cigarette(en)", "*cigar(en)", "*smoking(en)", "*chewing(en)", "*pipe(en)", "Substância", "Vício", "Consumo", "Uso", "Tabaco", "Cigarro", "Charuto", "Fumado", "Mastigado", "Tubo">
+			misuse = <"*Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.  (en)
+Não deve ser usado para registrar detalhes persistentes e resumidos sobre o uso da substância - isso deve ser capturado usando o arquétipo de EVALUATION.substance_use_summary-tobacco archetype. ">
+			copyright = <"*copyright (c) 2009 openEHR Foundation(en)">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <"Sam Heard, Ocean Informatics, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"92BA10B43A05C259D1E0D4EBC8677323">
+	>
+
+definition
+	OBSERVATION[at0000.1] matches {	-- *Tobacco Use(en) Uso do Tabaco 
+		data matches {
+			HISTORY[at0001] matches {	-- *Event Series(en) Série de eventos 
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- *Any event(en) Qualquer evento 
+						data matches {
+							ITEM_TREE[at0003] matches {	-- *Tree(en)
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- *Substance(en) Substância 
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {[local::at0.2]}		-- *Tobacco(en) Tabaco
+											}
+										}
+									}
+									CLUSTER[at0010] occurrences matches {0..1} matches {	-- *Consumption details(en) Detalhes do consumo 
+										items cardinality matches {0..*; unordered} matches {
+											ELEMENT[at0011] occurrences matches {0..1} matches {	-- *Form(en) Forma
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0.3, 	-- *Cigarettes - manufactured(en) Cigarro fabricado
+															at0.4, 	-- *Cigarettes - roll-your-own(en) Cigarro feito á mão
+															at0.5, 	-- *Cigars(en) Charuto
+															at0.6]	-- *Pipe(en) Cachimbo
+														}
+													}
+												}
+											}
+											ELEMENT[at0018] occurrences matches {0..1} matches {	-- *Method of use(en) Método de uso
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0005] occurrences matches {0..1} matches {	-- *Frequency(en) Frequência 
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0006, 	-- *Daily use(en) Uso diário 
+															at0007, 	-- *Weekly use(en) Uso semanal
+															at0008, 	-- *Irregular use(en) Uso irregular
+															at0009]	-- *No use(en) Sem uso
+														}
+													}
+												}
+											}
+											ELEMENT[at0012] occurrences matches {0..*} matches {*}
+											ELEMENT[at0012.1] occurrences matches {0..*} matches {	-- *Number smoked(en) Número fumado 
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::382]>
+														list = <
+															["1"] = <
+																units = <"/h">
+															>
+															["2"] = <
+																units = <"/d">
+															>
+															["3"] = <
+																units = <"/wk">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0012.2] occurrences matches {0..*} matches {	-- *Grams of tobacco(en) Gramas de tabaco
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::347]>
+														list = <
+															["1"] = <
+																units = <"gm/d">
+															>
+															["2"] = <
+																units = <"gm/wk">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {	-- *Triggers(en) Gatilhos
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {	-- *Readiness for change(en) Disponibilidade para mudança
+										include
+											archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {	-- *Evidence of dependence(en) Evidencia para dependência 
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0.2"] = <
+					text = <"Tobacco">
+					description = <"Tobacco used">
+				>
+				["at0.3"] = <
+					text = <"Cigarettes - manufactured">
+					description = <"Commercial, manufactured cigarettes">
+				>
+				["at0.4"] = <
+					text = <"Cigarettes - roll-your-own">
+					description = <"Home-made, roll-your-own cigarettes">
+				>
+				["at0.5"] = <
+					text = <"Cigars">
+					description = <"Commercial cigars">
+				>
+				["at0.6"] = <
+					text = <"Pipe">
+					description = <"Tobacco smoked within a pipe">
+				>
+				["at0000"] = <
+					text = <"Substance Use">
+					description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. ">
+				>
+				["at0000.1"] = <
+					text = <"Tobacco Use">
+					description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Any event">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Substance">
+					description = <"Identification of substance ">
+				>
+				["at0005"] = <
+					text = <"Frequency">
+					description = <"Frequency of use of tobacco">
+				>
+				["at0006"] = <
+					text = <"Daily use">
+					description = <"Used every day">
+				>
+				["at0007"] = <
+					text = <"Weekly use">
+					description = <"Used at least weekly">
+				>
+				["at0008"] = <
+					text = <"Irregular use">
+					description = <"Used irregularly">
+				>
+				["at0009"] = <
+					text = <"No use">
+					description = <"Not used at all">
+				>
+				["at0010"] = <
+					text = <"Consumption details">
+					description = <"Details about the consumption of tobacco">
+				>
+				["at0011"] = <
+					text = <"Form">
+					description = <"Form of tobacco used">
+				>
+				["at0012"] = <
+					text = <"Amount">
+					description = <"Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates">
+				>
+				["at0012.1"] = <
+					text = <"Number smoked">
+					description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+				>
+				["at0012.2"] = <
+					text = <"Grams of tobacco">
+					description = <"Weight of tobacco consumed eg in a pipe">
+				>
+				["at0013"] = <
+					text = <"Triggers">
+					description = <"Identified triggers which stimulate or cause use">
+				>
+				["at0014"] = <
+					text = <"Readiness for change">
+					description = <"Details about the readiness to change use or consumption of tobacco">
+				>
+				["at0016"] = <
+					text = <"Evidence of dependence">
+					description = <"Description of any evidence of dependence on tobacco">
+				>
+				["at0018"] = <
+					text = <"Method of use">
+					description = <"Method of use or consumption of tobacco">
+				>
+			>
+		>
+		["pt-br"] = <
+			items = <
+				["at0.2"] = <
+					text = <"*Tobacco(en) Tabaco">
+					description = <"*Tobacco used(en) Uso de tabaco">
+				>
+				["at0.3"] = <
+					text = <"*Cigarettes - manufactured(en) Cigarro fabricado">
+					description = <"*Commercial, manufactured cigarettes(en) Cigarro fabricado, comercial">
+				>
+				["at0.4"] = <
+					text = <"*Cigarettes - roll-your-own(en) Cigarro feito á mão">
+					description = <"*Home-made, roll-your-own cigarettes(en) Cigarro feito á mão ">
+				>
+				["at0.5"] = <
+					text = <"*Cigars(en) Charuto">
+					description = <"*Commercial cigars(en) Charuto">
+				>
+				["at0.6"] = <
+					text = <"*Pipe(en) Cachimbo">
+					description = <"*Tobacco smoked within a pipe(en) Tabaco fumado dentro de um tubo">
+				>
+				["at0000"] = <
+					text = <"*Substance Use(en) Uso de substâncias ">
+					description = <"*Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. (en) Arquétipo genérico para registro do atual uso ou consumo  real de uma definida substância no atual momento, um tempo específico ou durante um período de tempo. ">
+				>
+				["at0000.1"] = <
+					text = <"*Tobacco Use(en) Uso do Tabaco ">
+					description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. (en) Arquétipo para registro do atual uso ou consumo de tabaco no presente tempo, específico tempo ou durante um período de tempo.">
+				>
+				["at0001"] = <
+					text = <"*Event Series(en) Série de eventos ">
+					description = <"*@ internal @(en)">
+				>
+				["at0002"] = <
+					text = <"*Any event(en) Qualquer evento ">
+					description = <"*Any event(en) Qualquer evento ">
+				>
+				["at0003"] = <
+					text = <"*Tree(en)">
+					description = <"*@ internal @(en)">
+				>
+				["at0004"] = <
+					text = <"*Substance(en) Substância ">
+					description = <"*Identification of substance (en) Identificação da substância ">
+				>
+				["at0005"] = <
+					text = <"*Frequency(en) Frequência ">
+					description = <"*Frequency of use of tobacco(en) Frequencia do uso de tabaco">
+				>
+				["at0006"] = <
+					text = <"*Daily use(en) Uso diário ">
+					description = <"*Used every day(en) Uso todos os dias">
+				>
+				["at0007"] = <
+					text = <"*Weekly use(en) Uso semanal">
+					description = <"*Used at least weekly(en) Usado ao menos semanal">
+				>
+				["at0008"] = <
+					text = <"*Irregular use(en) Uso irregular">
+					description = <"*Used irregularly(en) Usado irregulamente">
+				>
+				["at0009"] = <
+					text = <"*No use(en) Sem uso">
+					description = <"*Not used at all(en) Não utilizado em absoluto ">
+				>
+				["at0010"] = <
+					text = <"*Consumption details(en) Detalhes do consumo ">
+					description = <"*Details about the consumption of tobacco(en) Detalhes sobre o consumo de tabaco ">
+				>
+				["at0011"] = <
+					text = <"*Form(en) Forma">
+					description = <"*Form of tobacco used(en) Forma de uso do tabaco">
+				>
+				["at0012"] = <
+					text = <"*Amount(en) Quantidade ">
+					description = <"*Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates(en) Quantidade de consumo da substância. O tipo de dados pode ser ainda especificado em arquétipos ou modelos especializados">
+				>
+				["at0012.1"] = <
+					text = <"*Number smoked(en) Número fumado ">
+					description = <"*Number of units containing tobacco consumed eg cigarettes or cigars(en) Número de unidades contendo tabaco consumido, exemplo cigarros ou charutos">
+				>
+				["at0012.2"] = <
+					text = <"*Grams of tobacco(en) Gramas de tabaco">
+					description = <"*Weight of tobacco consumed eg in a pipe(en) Peso de tabaco consumido, por exemplo, em um tubo">
+				>
+				["at0013"] = <
+					text = <"*Triggers(en) Gatilhos">
+					description = <"*Identified triggers which stimulate or cause use(en) Gatilhos identificados que estimulam ou causam o uso">
+				>
+				["at0014"] = <
+					text = <"*Readiness for change(en) Disponibilidade para mudança">
+					description = <"*Details about the readiness to change use or consumption of tobacco(en) Detalhes sobre a disponibilidade para mudançado uso ou consumo de tabaco">
+				>
+				["at0016"] = <
+					text = <"*Evidence of dependence(en) Evidencia para dependência ">
+					description = <"*Description of any evidence of dependence on tobacco(en) Descrição de qualquer evidencia de dependência em tabaco">
+				>
+				["at0018"] = <
+					text = <"*Method of use(en) Método de uso">
+					description = <"*Method of use or consumption of tobacco(en) Método de uso ou consumo de tabaco ">
+				>
+			>
+		>
+	>
