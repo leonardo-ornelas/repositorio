@@ -1,7 +1,4 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
-    openEHR-EHR-COMPOSITION.encounter.v1.0.1
-
-specialize
     openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
@@ -67,7 +64,7 @@ description
     other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
 
 definition
-    COMPOSITION[id1.1] matches {    -- Encontro
+    COMPOSITION[id1] matches {    -- Encontro
         content matches {
             allow_archetype OBSERVATION[id8] matches { 
                 include
@@ -93,44 +90,129 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
-            allow_archetype ADMIN_ENTRY[id0.2] matches { 
-                include
-                    archetype_id/value matches {/openEHR\-EHR\-ADMIN_ENTRY\.admission\.v1\.0\.0/}
-            }
         }
     }
 
 terminology
+    term_bindings = <
+        ["openehr"] = <
+            ["at1"] = <http://openehr.org/id/433>
+        
+        >
+    >
     term_definitions = <
         ["en"] = <
-            ["id1.1"] = <
+            ["id1"] = <
                 text = <"Encounter">
                 description = <"Generic encounter or progress note composition">
             >
-            ["id0.2"] = <
-                text = <"Admissão (pt-br)">
-                description = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1.">
+            ["id3"] = <
+                text = <"Context detail">
+                description = <"Local context detail.">
+            >
+            ["at1"] = <
+                text = <"Event">
+                description = <"Event">
+            >
+            ["id8"] = <
+                text = <"Blood Pressure">
+                description = <"It is the blood pressure circulating in the walls of blood vessels. When used without further specification, \"blood pressure\" generally refers to pressure in large arteries of the systemic circulation.">
+            >
+            ["id9"] = <
+                text = <"Bdy Temperature">
+                description = <"Also known as normothermia or euthermia, is the typical temperature range found in humans. The normal human body temperature range is typically stated as 36.5–37.5 °C (97.7–99.5 °F).[7]">
+            >
+            ["id10"] = <
+                text = <"Body Weight">
+                description = <"is used  in medical sciences to refer to a person's mass or weight.">
+            >
+            ["id11"] = <
+                text = <"Height / Length">
+                description = <"It is the measure of the vertical distance, whether as \"high\" something or someone is, or how \"high\" is the position.">
+            >
+            ["id12"] = <
+                text = <"Body Mass Index">
+                description = <"The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.">
+            >
+            ["id13"] = <
+                text = <"Indirect Oximetry">
+                description = <"Indirect blood pressure measurement using a pulse oximeter">
             >
         >
         ["sl"] = <
-            ["id1.1"] = <
+            ["id1"] = <
                 text = <"Encuentro">
                 description = <"Composición genérica de notas de progreso o encuentro">
             >
-            ["id0.2"] = <
-                text = <"Admissão">
-                description = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1. (pt-br)">
+            ["id3"] = <
+                text = <"Detalle del contexto">
+                description = <"Detalle del contexto local.">
+            >
+            ["at1"] = <
+                text = <"Event">
+                description = <"Event">
+            >
+            ["id8"] = <
+                text = <"Presión Sanguínea">
+                description = <"Es la presión de la sangre circulante en las paredes de los vasos sanguíneos. Cuando se usa sin más especificaciones, la \"presión sanguínea\" generalmente se refiere a la presión en grandes arterias de la circulación sistémica.">
+            >
+            ["id9"] = <
+                text = <"Temperatura corporal">
+                description = <"También conocida como normotermia o euthermia, es el rango de temperatura típico encontrado en los seres humanos. El rango normal de temperatura del cuerpo humano se indica típicamente como 36.5-37.5 ° C (97.7-99.5 ° F). [7]">
+            >
+            ["id10"] = <
+                text = <"Peso corporal">
+                description = <"Se utiliza en ciencias médicas para referirse a la masa o el peso de una persona.">
+            >
+            ["id11"] = <
+                text = <"Altura / Longitud">
+                description = <"Es la medida de la distancia vertical, sea como \"alto\" algo o alguien es, o como \"alto\" es la posición.">
+            >
+            ["id12"] = <
+                text = <"Índice de Massa Corporal">
+                description = <"El índice de masa corporal (IMC) o índice Quetelet es un valor derivado de la masa (peso) y la altura de un individuo. El IMC se define como la masa corporal dividida por el cuadrado de la altura corporal, y se expresa universalmente en unidades de kg / m2, resultante de la masa en kilogramos y la altura en metros.">
+            >
+            ["id13"] = <
+                text = <"Oximetría indireta">
+                description = <"Medición indirecta de la presión arterial usando un oxímetro de pulso">
             >
         >
         ["pt-br"] = <
-            ["id1.1"] = <
+            ["id1"] = <
                 text = <"Encontro">
                 description = <"Composição genérica de notas de progresso ou de progresso">
             >
-            ["id0.2"] = <
-                text = <"Admissão">
-                description = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia de Nível de Saúde sete (HL7) Versão 2.4 (Parte 1: Administração do Paciente) e Nível de Saúde sete (HL7) Versão Padrão 2.3.1. (pt-br)">
+            ["id3"] = <
+                text = <"Contexto detalhado">
+                description = <"Detalhes do contexto local.">
+            >
+            ["at1"] = <
+                text = <"Evento">
+                description = <"Evento">
+            >
+            ["id8"] = <
+                text = <"Pressão Sanguínea">
+                description = <"É a pressão do sangue circulante nas paredes dos vasos sanguíneos. Quando usado sem mais especificações, a \"pressão sanguínea\" geralmente se refere à pressão em grandes artérias da circulação sistêmica.">
+            >
+            ["id9"] = <
+                text = <"Temperatura Corporal">
+                description = <"Também conhecido como normothermia ou euthermia, é a faixa de temperatura típica encontrada em humanos. A faixa de temperatura normal do corpo humano é tipicamente declarada como 36,5-37,5 ° C (97,7-99,5 ° F) (pt-br)">
+            >
+            ["id10"] = <
+                text = <"Peso Corporal">
+                description = <"É usado em ciências médicas para se referir à massa ou ao peso de uma pessoa. (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Altura / Comprimento">
+                description = <"É a medida da distância vertical, seja como \"alto\" algo ou alguém é, ou como \"alto\" é a posição">
+            >
+            ["id12"] = <
+                text = <"Índice de Massa Corporal">
+                description = <"O índice de massa corporal (IMC) ou o índice Quetelet é um valor derivado da massa (peso) e altura de um indivíduo. O IMC é definido como a massa corporal dividida pelo quadrado da altura do corpo e é universalmente expressa em unidades de kg / m2, resultante de massa em quilogramas e altura em metros.">
+            >
+            ["id13"] = <
+                text = <"Oximetría Indireta">
+                description = <"Medição indireta da pressão arterial usando um oxímetro de pulso">
             >
         >
     >
-
