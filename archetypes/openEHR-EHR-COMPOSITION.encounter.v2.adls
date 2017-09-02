@@ -67,7 +67,7 @@ description
     other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
 
 definition
-    COMPOSITION[id1.1] matches {    -- Encontro
+    COMPOSITION[id1.1] matches {    -- Atendimento
         content matches {
             allow_archetype OBSERVATION[id8] matches { 
                 include
@@ -124,7 +124,7 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Encontro">
+                text = <"Atendimento">
                 description = <"Composição genérica de notas de progresso ou de progresso">
             >
             ["id0.2"] = <
