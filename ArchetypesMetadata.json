@@ -324,9 +324,9 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.encounter.v2.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "Encontro",
+    "name" : "Atendimento",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v2.adls",
-    "sha" : "7cf196e6e102986d88cb365ad737730b6e209454",
+    "sha" : "474b4bf61600b856dc93dee86264a6a5539dc60c",
     "languages" : [ "pt-br", "en", "sl", "pt-br" ]
   } ]
 }
