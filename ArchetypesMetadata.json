@@ -314,5 +314,12 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.teste.v1.adls",
     "sha" : "86b6befbd17be1c44774d53155ab91c4df803d45",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.parent.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "parent",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.parent.v1.adls",
+    "sha" : "8a11aab68cefc9ab96e0a4bac087745ad91ba9d0",
+    "languages" : [ "en" ]
   } ]
 }
