@@ -130,7 +130,7 @@ specialize
 definition
     OBSERVATION[id1.1] matches {    -- Blood Pressure
         /data[id2]/events matches {
-            EVENT[id7] matches {
+            EVENT[id7.1] matches {    -- any event
                 /data[id4]/items matches {
                     ELEMENT[id5] matches {
                         value matches {
@@ -228,11 +228,19 @@ terminology
                 text = <"Blood Pressure">
                 description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
             >
+            ["id7.1"] = <
+                text = <"any event">
+                description = <"Default event">
+            >
         >
         ["ja"] = <
             ["id1.1"] = <
                 text = <"血圧">
                 description = <"全身の循環での動脈圧の代用として，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+            >
+            ["id7.1"] = <
+                text = <"血圧">
+                description = <"*Default event(en)">
             >
         >
         ["de"] = <
@@ -240,17 +248,29 @@ terminology
                 text = <"Blutdruck">
                 description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
             >
+            ["id7.1"] = <
+                text = <"any event">
+                description = <"Default event">
+            >
         >
         ["zh-cn"] = <
             ["id1.1"] = <
                 text = <"*Blood Pressure(en)">
                 description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
             >
+            ["id7.1"] = <
+                text = <"*any event(en)">
+                description = <"*Default event(en)">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
                 text = <"Bloeddruk">
                 description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+            >
+            ["id7.1"] = <
+                text = <"any event">
+                description = <"Default gebeurtenis">
             >
         >
         ["ru"] = <
@@ -259,12 +279,20 @@ terminology
                 description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
 ">
             >
+            ["id7.1"] = <
+                text = <"Любое событие">
+                description = <"*Default event(en)">
+            >
         >
         ["fa"] = <
             ["id1.1"] = <
                 text = <"فشار خون">
                 description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
 معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+            >
+            ["id7.1"] = <
+                text = <"هر رویداد">
+                description = <"رویداد پیش فرض">
             >
         >
         ["ar-sy"] = <
@@ -273,17 +301,29 @@ terminology
                 description = <"قياس موضعي لضغط الدم الشرياني و الذي يحل محل الضغط الشرياني في الدورة الدموية الجهازية. 
 و عادة ما يستخدم مصطلح \"ضغط الدم\" لللإشارة إلى قياس ضغط دم الشريان العضُدي في أعلى الذراع.">
             >
+            ["id7.1"] = <
+                text = <"إحدى الوقائع">
+                description = <"الواقعة التلقائية">
+            >
         >
         ["es-ar"] = <
             ["id1.1"] = <
                 text = <"Presión Arterial">
                 description = <"La medición local de la tensión arterial que deriva de la medida de la presión arterial en la circulación sistémica. Comúnmente el uso de 'presión arterial' se refiere a la medida de la presión de la arteria braquial por encima del pliegue del codo.">
             >
+            ["id7.1"] = <
+                text = <"cualquier evento">
+                description = <"Evento por defecto">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Pressão Arterial">
                 description = <"A medida local da pressão sanguínea arterial, a qual é uma substituta da pressão arterial na circulação arterial sistêmica. Mais comumente o uso do termo pressão arterial se refere à medida da pressão da artéria braquial no antebraço.">
+            >
+            ["id7.1"] = <
+                text = <"qualquer evento">
+                description = <"evento Default, padrão predeterminado">
             >
         >
     >
