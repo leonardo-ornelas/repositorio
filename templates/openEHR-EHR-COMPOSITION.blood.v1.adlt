@@ -73,6 +73,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-blood-blood_pressure-001.v1.0.0]
             allow_archetype OBSERVATION[id9] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
@@ -93,7 +94,6 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-blood-blood_pressure-001.v1.0.0]
         }
     }
 
