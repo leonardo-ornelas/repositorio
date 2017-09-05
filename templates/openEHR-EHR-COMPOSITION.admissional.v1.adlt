@@ -73,6 +73,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
             allow_archetype OBSERVATION[id9] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
@@ -81,6 +82,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
             allow_archetype OBSERVATION[id11] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
@@ -93,8 +95,6 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
-            use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
         }
     }
 
@@ -182,6 +182,7 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
                     }
+                    use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
                     ELEMENT[id1044] matches {
                         /value[id1061]/defining_code matches {[ac2; at1045]}
                     }
@@ -195,7 +196,6 @@ definition
                             }
                         }
                     }
-                    use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
                 }
             }
             INTERVAL_EVENT[id1043.1] matches {    -- 24 hour average 
@@ -479,11 +479,11 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
             allow_archetype ITEM[id10] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
             use_archetype CLUSTER[id10.1, openEHR-EHR-CLUSTER.ovl-admissional-device_details-001.v1.0.0]
         }
     }
