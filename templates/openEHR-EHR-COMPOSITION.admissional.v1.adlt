@@ -1,0 +1,120 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.admissional.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            author = <
+                ["name"] = <"Ismael Queiroz">
+            >
+            language = <[ISO_639-1::en]>
+        >
+        ["sl"] = <
+            author = <
+                ["name"] = <"Ismael Queiroz">
+            >
+            language = <[ISO_639-1::sl]>
+        >
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Ismael Queiroz">
+                ["organisation"] = <"Solutis Tecnologias">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"copyright (c) 2010 openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.">
+            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
+        >
+        ["sl"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::sl]>
+            misuse = <"">
+            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
+
+">
+            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
+        >
+        ["pt-br"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Uma interação entre um paciente e um (s) profissional (es) de saúde com a finalidade de fornecer serviços de saúde ou avaliar o estado de saúde de um paciente.">
+            use = <"Um Encontro abrange o ciclo de vida da pré-admissão, o encontro atual (para encontros ambulatórios) e admissão, permanência e alta (para encontros de internação). Durante o encontro, o paciente pode passar de praticante para praticante e local para local.
+">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["organisation"] = <"Solutis Tecnologia">
+        ["name"] = <"Ismael Queiroz">
+        ["email"] = <"ismael.queiroz@solutis.com.br">
+        ["date"] = <"19/08/2017">
+    >
+    other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
+
+definition
+    COMPOSITION[id1.1] matches {    -- Encontro
+        content matches {
+            allow_archetype OBSERVATION[id8] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id9] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id10] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id11] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id12] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_mass_index(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype OBSERVATION[id13] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Encuentro">
+                description = <"Composición genérica de notas de progreso o encuentro">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encontro">
+                description = <"Composição genérica de notas de progresso ou de progresso">
+            >
+        >
+    >
+
