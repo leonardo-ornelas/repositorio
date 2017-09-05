@@ -23,5 +23,17 @@
     "name" : "Encontro",
     "path" : "templates/openEHR-EHR-COMPOSITION.teste_v3.v1.adlt",
     "sha" : "2e21c0509be382960ba42dcc5d9c20388b7f4b8c"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.blood.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.blood.v1.adlt",
+    "sha" : "920e6354fa9bd4f3c3a4b1e159dc9da8d24bf67f"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.pressao_altura.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.pressao_altura.v1.adlt",
+    "sha" : "604c339d10df3ea186d868b99f084d2296135694"
   } ]
 }
