@@ -93,6 +93,8 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype OBSERVATION[id8.1, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
+            use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
         }
     }
 
@@ -114,6 +116,508 @@ terminology
             ["id1.1"] = <
                 text = <"Encontro">
                 description = <"Composição genérica de notas de progresso ou de progresso">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Blood Pressure
+        /data[id2]/events matches {
+            EVENT[id7] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id1054] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] matches {
+                        value matches {
+                            DV_QUANTITY[id1055] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1007] matches {
+                        value matches {
+                            DV_QUANTITY[id1056] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1008] matches {
+                        value matches {
+                            DV_QUANTITY[id1057] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                }
+                /state[id8]/items matches {
+                    ELEMENT[id9] matches {
+                        /value[id1059]/defining_code matches {[ac1; at1002]}
+                    }
+                    allow_archetype CLUSTER[id1031] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id1044] matches {
+                        /value[id1061]/defining_code matches {[ac2; at1045]}
+                    }
+                    ELEMENT[id1006] matches {
+                        value matches {
+                            DV_QUANTITY[id1062] matches {
+                                property matches {[at1056]}
+                                magnitude matches {|-90.0..90.0|}
+                                precision matches {|0|}
+                                units matches {"°"}
+                            }
+                        }
+                    }
+                    use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
+                }
+            }
+            INTERVAL_EVENT[id1043.1] matches {    -- 24 hour average 
+                /math_function[id1063]/defining_code matches {[at1057]}
+                /width[id1064]/value matches {PT24H}
+            }
+        }
+        /protocol[id12]/items matches {
+            ELEMENT[id14] matches {
+                /value[id1067]/defining_code matches {[ac3]}
+            }
+            CLUSTER[id1034] matches {
+                /items[id15]/value[id1068]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id1036] matches {
+                /value[id1070]/defining_code matches {[ac5]}
+            }
+            ELEMENT[id1011] matches {
+                /value[id1072]/defining_code matches {[ac6]}
+            }
+            allow_archetype CLUSTER[id1026] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Blood Pressure">
+                description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+            >
+            ["id1043.1"] = <
+                text = <"24 hour average ">
+                description = <"Estimate of the average blood pressure over a 24 hour period.">
+            >
+        >
+        ["ja"] = <
+            ["id1.1"] = <
+                text = <"血圧">
+                description = <"全身の循環での動脈圧の代用として，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+            >
+            ["id1043.1"] = <
+                text = <"24時間平均">
+                description = <"24時間にわたる推定平均血圧">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Blutdruck">
+                description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
+            >
+            ["id1043.1"] = <
+                text = <"24 Stunden Durchschnitt">
+                description = <"Schätzung des durchschnittlichen Blutdrucks über eine 24-stündigen Zeitraum.">
+            >
+        >
+        ["zh-cn"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period(en)">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Bloeddruk">
+                description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+            >
+            ["id1043.1"] = <
+                text = <"24 uur gemiddelde">
+                description = <"Inschatting van de gemiddelde bloeddruk over een periode van 24 uur">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"АД">
+                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
+">
+            >
+            ["id1043.1"] = <
+                text = <"Среднее за 24 часа">
+                description = <"Оценка среднего АД за период в 24 часа.">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"فشار خون">
+                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
+معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+            >
+            ["id1043.1"] = <
+                text = <"میانگین 24 ساعته">
+                description = <"برآورد میانگین فشار خون در دوره زمانی 24 ساعته">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"ضغط الدم">
+                description = <"قياس موضعي لضغط الدم الشرياني و الذي يحل محل الضغط الشرياني في الدورة الدموية الجهازية. 
+و عادة ما يستخدم مصطلح \"ضغط الدم\" لللإشارة إلى قياس ضغط دم الشريان العضُدي في أعلى الذراع.">
+            >
+            ["id1043.1"] = <
+                text = <"المتوسط خلال 24 ساعة">
+                description = <"تقدير متوسط ضغط الدم خلال فترة من 24 ساعة">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Presión Arterial">
+                description = <"La medición local de la tensión arterial que deriva de la medida de la presión arterial en la circulación sistémica. Comúnmente el uso de 'presión arterial' se refiere a la medida de la presión de la arteria braquial por encima del pliegue del codo.">
+            >
+            ["id1043.1"] = <
+                text = <"Promedio de 24 horas">
+                description = <"Estimativo de la media de la presión arterial sobre un período de 24 horas">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Pressão Arterial">
+                description = <"A medida local da pressão sanguínea arterial, a qual é uma substituta da pressão arterial na circulação arterial sistêmica. Mais comumente o uso do termo pressão arterial se refere à medida da pressão da artéria braquial no antebraço.">
+            >
+            ["id1043.1"] = <
+                text = <"Media de 24 horas">
+                description = <"Estimativa da pressão arterial média em um período de 24 horas.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Level of exertion
+        items matches {
+            CLUSTER[id11] matches {
+                items matches {
+                    ELEMENT[id12] matches {
+                        /value[id19]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id6] matches {
+                        value matches {
+                            DV_QUANTITY[id20] matches {
+                                property matches {[at17]}
+                                magnitude matches {|0.0..1000.0|}
+                                units matches {"J/min"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id10] matches {
+                /value[id21]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Level of exertion">
+                description = <"Record information about level of exertion.">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"مستوى المجهود">
+                description = <"لتسجيل معلومات حول مستوى المجهود">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id27] matches {
+                        property matches {[at19]}
+                        [magnitude, units] matches {
+                            [{|0.0..1000.0|}, {"kg"}], 
+                            [{|0.0..2000.0|}, {"lb"}]
+                        }
+                    }
+                }
+                /state[id9]/items[id10]/value[id29]/defining_code matches {[ac1; at12]}
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id21.1, openEHR-EHR-CLUSTER.ovl-admissional-device-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Масса тела">
+                description = <"Измерение актуальной массы тела человека.">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"وزن بدن">
+                description = <"اندازه گیری وزن بدن فرد">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"وزن الجسم">
+                description = <"قياس وزن الجسم للشخص">
+            >
+        >
+        ["es"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"Medición del peso corporal de un individuo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-device-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.device.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Device
+        items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype ITEM[id10] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
+            use_archetype CLUSTER[id10.1, openEHR-EHR-CLUSTER.ovl-admissional-device_details-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Device">
+                description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Naprava">
+                description = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.dimensions.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Ausmaße
+        items matches {
+            ELEMENT[id2] matches {
+                value matches {
+                    DV_QUANTITY[id8] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id3] matches {
+                value matches {
+                    DV_QUANTITY[id9] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id4] matches {
+                value matches {
+                    DV_QUANTITY[id10] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id5] matches {
+                value matches {
+                    DV_QUANTITY[id11] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "in", "ft"}
+                    }
+                }
+            }
+            ELEMENT[id6] matches {
+                value matches {
+                    DV_QUANTITY[id12] matches {
+                        property matches {[at2]}
+                        units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
+                    }
+                }
+            }
+            ELEMENT[id7] matches {
+                value matches {
+                    DV_QUANTITY[id13] matches {
+                        property matches {[at3]}
+                        units matches {"mm3", "ml", "in3", "cc", "ft3"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Ausmaße">
+                description = <"Die Ausmaße eines betrachteten Teils.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Dimensions">
+                description = <"The physical dimensions of a part examined.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-device_details-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.device_details.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Device details
+        items matches {
+            ELEMENT[id13.1] matches {    -- Range
+                value matches {
+                    DV_INTERVAL<DV_QUANTITY>[id37.1] matches {
+                        upper matches {
+                            DV_QUANTITY[id38.1] 
+                        }
+                        lower matches {
+                            DV_QUANTITY[id39.1] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Device details">
+                description = <"Additional details that relate to safety and quality issues for ongoing and repeated use of any device.">
+            >
+            ["id13.1"] = <
+                text = <"Range">
+                description = <"The range limits of the device.">
             >
         >
     >
