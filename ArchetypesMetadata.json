@@ -322,11 +322,18 @@
     "sha" : "cf4298818c6efadebfa2e56c75d431818a009854",
     "languages" : [ "en", "ar-sy" ]
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.encounter.v2.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Atendimento",
-    "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v2.adls",
-    "sha" : "474b4bf61600b856dc93dee86264a6a5539dc60c",
-    "languages" : [ "pt-br", "en", "sl", "pt-br" ]
+    "id" : "openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Tobacco Use",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0.adls",
+    "sha" : "6d3d5c61c02ac003d1c1abce0c92e6626840ae67",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.substance_use.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Substance Use",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use.v1.0.0.adls",
+    "sha" : "bea87d67ac977d707680e433cb53b7446cdda7ad",
+    "languages" : [ "en" ]
   } ]
 }
