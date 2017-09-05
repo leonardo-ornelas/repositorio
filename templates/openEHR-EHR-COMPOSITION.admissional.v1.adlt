@@ -326,6 +326,7 @@ terminology
             ["id1043.1"] = <
                 text = <"Media de 24 horas">
                 description = <"Estimativa da pressão arterial média em um período de 24 horas.">
+                comment = <"Estimativa da pressão arterial média em um período de 24 horas.">
             >
         >
     >
