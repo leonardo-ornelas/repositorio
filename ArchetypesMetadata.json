@@ -95,7 +95,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encontro",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v1.adls",
-    "sha" : "9f197203d78fef17b61a98674424fd95f04d8e3f",
+    "sha" : "96fcbde1a879f77ab3958347eb12d4e91fe472bd",
     "languages" : [ "pt-br", "en", "sl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.report.v1.0.0",
