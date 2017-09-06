@@ -180,6 +180,10 @@ definition
                     ELEMENT[id9] matches {
                         /value[id1059]/defining_code matches {[ac1; at1002]}
                     }
+                    allow_archetype CLUSTER[id1031] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
                     use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
                     ELEMENT[id1044] matches {
                         /value[id1061]/defining_code matches {[ac2; at1045]}
@@ -199,6 +203,12 @@ definition
             INTERVAL_EVENT[id1043.1] matches {    -- 24 hour average 
                 /math_function[id1063]/defining_code matches {[at1057]}
                 /width[id1064]/value matches {PT24H}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/data[id4]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/state[id8]
+                }
             }
         }
         /protocol[id12]/items matches {
@@ -213,6 +223,10 @@ definition
             }
             ELEMENT[id1011] matches {
                 /value[id1072]/defining_code matches {[ac6]}
+            }
+            allow_archetype CLUSTER[id1026] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
             }
         }
     }
