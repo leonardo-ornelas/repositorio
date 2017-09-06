@@ -614,5 +614,12 @@
     "path" : "archetypes/openEHR-EHR-SECTION.medication_order_list.v1.adls",
     "sha" : "5ee87f98a19760cf9178d1932b6c35f842635584",
     "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.exam.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Examination",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.exam.v1.adls",
+    "sha" : "5c7eb73d2a28ad089926a32d15eed8e9adada355",
+    "languages" : [ "en" ]
   } ]
 }
