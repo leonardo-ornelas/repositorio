@@ -86,6 +86,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-blood-height-001.v1.0.0]
             allow_archetype OBSERVATION[id12] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_mass_index(-a-zA-Z0-9_]+)*\.v1/}
@@ -94,7 +95,6 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-blood-height-001.v1.0.0]
         }
     }
 
