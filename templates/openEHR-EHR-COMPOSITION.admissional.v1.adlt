@@ -133,7 +133,7 @@ definition
         /data[id2]/events matches {
             EVENT[id7] matches {
                 /data[id4]/items matches {
-                    ELEMENT[id5.1] matches {    -- Systolic
+                    ELEMENT[id5.1] occurrences matches {1} matches {    -- Systolic
                         value matches {
                             DV_QUANTITY[id1054.1] matches {
                                 [units, magnitude, precision] matches {
@@ -390,12 +390,12 @@ specialize
 definition
     CLUSTER[id1.1] matches {    -- Level of exertion
         items matches {
-            CLUSTER[id11] matches {
+            CLUSTER[id11] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id12] matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
                         /value[id19]/defining_code matches {[ac1]}
                     }
-                    ELEMENT[id6] matches {
+                    ELEMENT[id6] occurrences matches {0..1} matches {
                         value matches {
                             DV_QUANTITY[id20] matches {
                                 property matches {[at17]}
@@ -406,7 +406,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id10] matches {
+            ELEMENT[id10] occurrences matches {0..1} matches {
                 /value[id21]/defining_code matches {[ac2]}
             }
         }
@@ -453,7 +453,7 @@ definition
             }
         }
         /protocol[id16]/items matches {
-            allow_archetype CLUSTER[id21] matches { 
+            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-[a-zA-Z0-9_]+)*\.v1/}
             }
@@ -564,7 +564,7 @@ specialize
 definition
     CLUSTER[id1.1] matches {    -- Ausmaße
         items matches {
-            ELEMENT[id2] matches {
+            ELEMENT[id2] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id8] matches {
                         property matches {[at1]}
@@ -572,7 +572,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id3] matches {
+            ELEMENT[id3] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id9] matches {
                         property matches {[at1]}
@@ -580,7 +580,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id4] matches {
+            ELEMENT[id4] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id10] matches {
                         property matches {[at1]}
@@ -588,7 +588,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id5] matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id11] matches {
                         property matches {[at1]}
@@ -596,7 +596,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id6] matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id12] matches {
                         property matches {[at2]}
@@ -604,7 +604,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id7] matches {
+            ELEMENT[id7] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id13] matches {
                         property matches {[at3]}
