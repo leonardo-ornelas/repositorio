@@ -49,12 +49,12 @@ Se ne uporablja za dokumentiranje različnosti diagnoz; za to se uporablja EVALU
         ["pt"] = <
             keywords = <"issue", "condition", "problem", "concern", "diagnosis", "criteria", "illness">
             language = <[ISO_639-1::pt]>
-            misuse = <"*Not to be used for recording the 'Reason for Encounter' or 'Presenting Complaint' - which is information captured early in the encounter, usually prior to full assessment and will be represented using a separate EVALUATION archetype.
-Not to be used for recording Differential Diagnoses - use the EVALUATION.differential diagnosis archetype. (en)">
-            purpose = <"*To record details about a problem or diagnosis by a clinician. (en)">
-            use = <"*Use to record detailed information about problems or diagnoses recognised by a clinician. There are many uses including: recording a diagnosis during an encounter; populating a Problem List or a Summary statement, such as a Discharge Summary.
+            misuse = <"Não deve ser usado para gravar a \"Razão da Consulta\" ou \"Apresentação da Reclamação\" - que é a informação capturada no início do encontro, geralmente antes da avaliação completa e será representada usando um arquétipo de AVALIAÇÃO separado.
+Não deve ser usado para gravação de Diagnósticos Diferenciais - use o artefato de diagnóstico diferencial EVOLUÇÃO.">
+            purpose = <"Para registrar detalhes sobre um problema ou diagnóstico por um clínico.">
+            use = <"Use para registrar informações detalhadas sobre problemas ou diagnósticos reconhecidos por um clínico. Existem muitos usos, incluindo: registrar um diagnóstico durante uma consulta; preencher uma lista de problemas ou uma declaração.
 
-Use to record all problems or diagnoses, including those with context-specific qualifiers such as past/present, primary/secondary, active/inactive etc. These qualifiers can be archetyped separately and included in the ‘Status’ slot, because their use varies in different settings. (en)">
+Use para gravar todos os problemas ou diagnósticos, incluindo aqueles com qualificadores específicos do contexto, como passado / presente, primário / secundário, ativo / inativo, etc. Esses qualificadores podem ser arquetípicos separadamente e incluídos no slot 'Status', porque seu uso varia em configurações diferentes.">
         >
     >
     lifecycle_state = <"unmanaged">
