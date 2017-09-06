@@ -1,717 +1,337 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
-    openEHR-EHR-ACTION.imaging_exam.v1.0.0
+	openEHR-EHR-ACTION.imaging_exam.v1.0.0
 
 language
-    original_language = <[ISO_639-1::en]>
-    translations = <
-        ["sl"] = <
-            author = <
-                ["name"] = <"?">
-            >
-            language = <[ISO_639-1::sl]>
-        >
-        ["pt"] = <
-            accreditation = <"">
-            author = <
-                ["nome"] = <"?">
-            >
-            language = <[ISO_639-1::pt]>
-        >
-    >
-    
+	original_language = <[ISO_639-1::en]>
+
 description
-    copyright = <"© openEHR Foundation">
-    details = <
-        ["en"] = <
-            keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
-            language = <[ISO_639-1::en]>
-            misuse = <"">
-            purpose = <"To record activity regarding the performance of imaging examinations.">
-            use = <"Use to record activity regarding the performance of imaging examinations.">
-        >
-        ["sl"] = <
-            keywords = <"*Radiology(en)", "*Ultrasound(en)", "*MRI(en)", "*CT(en)", "*scan(en)", "*tomography(en)">
-            language = <[ISO_639-1::sl]>
-            misuse = <"">
-            purpose = <"*To record activity regarding the performance of imaging examinations.(en)">
-            use = <"*Use to record activity regarding the performance of imaging examinations.(en)">
-        >
-        ["pt"] = <
-            keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
-            language = <[ISO_639-1::pt]>
-            misuse = <"">
-            purpose = <"Gravar atividade sobre o desempenho dos exames de imagem.">
-            use = <"Use para gravar atividade sobre o desempenho dos exames de imagem.">
-        >
-    >
-    lifecycle_state = <"unmanaged">
-    original_author = <
-        ["name"] = <"Sam Heard">
-        ["organisation"] = <"Ocean Informatics">
-        ["email"] = <"sam.heard@oceaninformatics.com">
-        ["date"] = <"2006-04-10">
-    >
-    other_contributors = <"Heather Leslie, Ocean Informatics, Australia">
+	lifecycle_state = <"unmanaged">
+	original_author = <
+		["name"] = <"Sam Heard">
+		["organisation"] = <"Ocean Informatics">
+		["email"] = <"sam.heard@oceaninformatics.com">
+		["date"] = <"17/04/2006">
+	>
+	copyright = <"© 2011 NEHTA">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record activity regarding the performance of imaging examinations.">
+			use = <"Use to record activity regarding the performance of imaging examinations.">
+			keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
+			misuse = <"">
+		>
+	>
+	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", ...>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"B0B81B487EFAE113C50A83795C834E0D">
+	>
 
 definition
-    ACTION[id1] matches {    -- Imaging examination
-        ism_transition matches {
-            ISM_TRANSITION[id3] matches {    -- Examination planned
-                current_state matches {
-                    DV_CODED_TEXT[id24] matches {
-                        defining_code matches {[at16]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id25] matches {
-                        defining_code matches {[at3]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id4] matches {    -- Examination requested
-                current_state matches {
-                    DV_CODED_TEXT[id26] matches {
-                        defining_code matches {[at16]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id27] matches {
-                        defining_code matches {[at4]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id10] matches {    -- Examination postponed
-                current_state matches {
-                    DV_CODED_TEXT[id28] matches {
-                        defining_code matches {[at17]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id29] matches {
-                        defining_code matches {[at10]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id12] matches {    -- Examination cancelled
-                current_state matches {
-                    DV_CODED_TEXT[id30] matches {
-                        defining_code matches {[at18]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id31] matches {
-                        defining_code matches {[at12]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id5] matches {    -- Appointment scheduled
-                current_state matches {
-                    DV_CODED_TEXT[id32] matches {
-                        defining_code matches {[at19]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id33] matches {
-                        defining_code matches {[at5]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id6] matches {    -- Appointment rescheduled
-                current_state matches {
-                    DV_CODED_TEXT[id34] matches {
-                        defining_code matches {[at19]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id35] matches {
-                        defining_code matches {[at6]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id9] matches {    -- Examination performed
-                current_state matches {
-                    DV_CODED_TEXT[id36] matches {
-                        defining_code matches {[at20]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id37] matches {
-                        defining_code matches {[at9]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id15] matches {    -- Failed attempt
-                current_state matches {
-                    DV_CODED_TEXT[id38] matches {
-                        defining_code matches {[at20]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id39] matches {
-                        defining_code matches {[at15]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id11] matches {    -- Examination suspended
-                current_state matches {
-                    DV_CODED_TEXT[id40] matches {
-                        defining_code matches {[at21]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id41] matches {
-                        defining_code matches {[at11]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id13] matches {    -- Examination aborted
-                current_state matches {
-                    DV_CODED_TEXT[id42] matches {
-                        defining_code matches {[at22]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id43] matches {
-                        defining_code matches {[at13]}
-                    }
-                }
-            }
-            ISM_TRANSITION[id8] matches {    -- Examination complete
-                current_state matches {
-                    DV_CODED_TEXT[id44] matches {
-                        defining_code matches {[at23]}
-                    }
-                }
-                careflow_step matches {
-                    DV_CODED_TEXT[id45] matches {
-                        defining_code matches {[at8]}
-                    }
-                }
-            }
-        }
-        description matches {
-            ITEM_TREE[id2] matches {
-                items matches {
-                    ELEMENT[id18] matches {    -- Examination name
-                        value matches {
-                            DV_TEXT[id46] 
-                        }
-                    }
-                    ELEMENT[id19] matches {    -- Description
-                        value matches {
-                            DV_TEXT[id47] 
-                        }
-                    }
-                    ELEMENT[id20] matches {    -- Reason
-                        value matches {
-                            DV_TEXT[id48] 
-                        }
-                    }
-                    allow_archetype CLUSTER[id23] matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
-                    }
-                    allow_archetype CLUSTER[id22] matches { 
-                        include
-                            archetype_id/value matches {/.*/}
-                    }
-                    ELEMENT[id21] matches {    -- Comment
-                        value matches {
-                            DV_TEXT[id49] 
-                        }
-                    }
-                }
-            }
-        }
-        protocol matches {
-            ITEM_TREE[id16] matches {
-                items matches {
-                    ELEMENT[id17] matches {    -- Start date/time
-                        value matches {
-                            DV_DATE_TIME[id50] 
-                        }
-                    }
-                }
-            }
-        }
-    }
+	ACTION[id1] matches {	-- Imaging examination
+		ism_transition matches {
+			ISM_TRANSITION[id24] matches {
+				current_state matches {
+					DV_CODED_TEXT[id25] matches {
+						defining_code matches {[at16]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id26] matches {
+						defining_code matches {[at3]}
+					}
+				}
+			}
+			ISM_TRANSITION[id27] matches {
+				current_state matches {
+					DV_CODED_TEXT[id28] matches {
+						defining_code matches {[at16]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id29] matches {
+						defining_code matches {[at4]}
+					}
+				}
+			}
+			ISM_TRANSITION[id30] matches {
+				current_state matches {
+					DV_CODED_TEXT[id31] matches {
+						defining_code matches {[at17]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id32] matches {
+						defining_code matches {[at10]}
+					}
+				}
+			}
+			ISM_TRANSITION[id33] matches {
+				current_state matches {
+					DV_CODED_TEXT[id34] matches {
+						defining_code matches {[at18]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id35] matches {
+						defining_code matches {[at12]}
+					}
+				}
+			}
+			ISM_TRANSITION[id36] matches {
+				current_state matches {
+					DV_CODED_TEXT[id37] matches {
+						defining_code matches {[at19]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id38] matches {
+						defining_code matches {[at5]}
+					}
+				}
+			}
+			ISM_TRANSITION[id39] matches {
+				current_state matches {
+					DV_CODED_TEXT[id40] matches {
+						defining_code matches {[at19]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id41] matches {
+						defining_code matches {[at6]}
+					}
+				}
+			}
+			ISM_TRANSITION[id42] matches {
+				current_state matches {
+					DV_CODED_TEXT[id43] matches {
+						defining_code matches {[at20]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id44] matches {
+						defining_code matches {[at9]}
+					}
+				}
+			}
+			ISM_TRANSITION[id45] matches {
+				current_state matches {
+					DV_CODED_TEXT[id46] matches {
+						defining_code matches {[at20]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id47] matches {
+						defining_code matches {[at15]}
+					}
+				}
+			}
+			ISM_TRANSITION[id48] matches {
+				current_state matches {
+					DV_CODED_TEXT[id49] matches {
+						defining_code matches {[at21]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id50] matches {
+						defining_code matches {[at11]}
+					}
+				}
+			}
+			ISM_TRANSITION[id51] matches {
+				current_state matches {
+					DV_CODED_TEXT[id52] matches {
+						defining_code matches {[at22]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id53] matches {
+						defining_code matches {[at13]}
+					}
+				}
+			}
+			ISM_TRANSITION[id54] matches {
+				current_state matches {
+					DV_CODED_TEXT[id55] matches {
+						defining_code matches {[at23]}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT[id56] matches {
+						defining_code matches {[at8]}
+					}
+				}
+			}
+		}
+		description matches {
+			ITEM_TREE[id2] matches {
+				items matches {
+					ELEMENT[id18] occurrences matches {0..1} matches {	-- Examination name
+						value matches {
+							DV_TEXT[id57] 
+						}
+					}
+					ELEMENT[id19] occurrences matches {0..1} matches {	-- Description
+						value matches {
+							DV_TEXT[id58] 
+						}
+					}
+					ELEMENT[id20] occurrences matches {0..1} matches {	-- Reason
+						value matches {
+							DV_TEXT[id59] 
+						}
+					}
+					allow_archetype CLUSTER[id23] matches {	-- Anatomical location
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+					}
+					allow_archetype CLUSTER[id22] matches {	-- Examination detail
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[id21] occurrences matches {0..1} matches {	-- Comment
+						value matches {
+							DV_TEXT[id60] 
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[id16] matches {
+				items matches {
+					ELEMENT[id17] occurrences matches {0..1} matches {	-- Start date/time
+						value matches {
+							DV_DATE_TIME[id61] 
+						}
+					}
+				}
+			}
+		}
+	}
 
 terminology
-    term_bindings = <
-        ["openehr"] = <
-            ["at16"] = <http://openehr.org/id/526>
-            ["at17"] = <http://openehr.org/id/527>
-            ["at18"] = <http://openehr.org/id/528>
-            ["at19"] = <http://openehr.org/id/529>
-            ["at20"] = <http://openehr.org/id/245>
-            ["at21"] = <http://openehr.org/id/530>
-            ["at22"] = <http://openehr.org/id/531>
-            ["at23"] = <http://openehr.org/id/532>
-        
-        >
-    >
-    term_definitions = <
-        ["en"] = <
-            ["id1"] = <
-                text = <"Imaging examination">
-                description = <"Clinical activity about performing an imaging examination.">
-            >
-            ["id3"] = <
-                text = <"Examination planned">
-                description = <"Imaging examination is planned.">
-            >
-            ["id4"] = <
-                text = <"Examination requested">
-                description = <"Imaging examination has been requested.">
-            >
-            ["id5"] = <
-                text = <"Appointment scheduled">
-                description = <"Imaging examination appointment has been made.">
-            >
-            ["id6"] = <
-                text = <"Appointment rescheduled">
-                description = <"Appointment for imaging examination has been rescheduled.">
-            >
-            ["id8"] = <
-                text = <"Examination complete">
-                description = <"The imaging examination has been performed and all associated activities completed.">
-            >
-            ["id9"] = <
-                text = <"Examination performed">
-                description = <"The examation was performed but related activities not completed.">
-            >
-            ["id10"] = <
-                text = <"Examination postponed">
-                description = <"The examination has been postponed.">
-            >
-            ["id11"] = <
-                text = <"Examination suspended">
-                description = <"The examination has been suspended.">
-            >
-            ["id12"] = <
-                text = <"Examination cancelled">
-                description = <"The planned examination has been cancelled prior to commencement.">
-            >
-            ["id13"] = <
-                text = <"Examination aborted">
-                description = <"The examination has been aborted.">
-            >
-            ["id15"] = <
-                text = <"Failed attempt">
-                description = <"The examation was commenced but not completed successfully.">
-            >
-            ["id17"] = <
-                text = <"Start date/time">
-                description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step.">
-            >
-            ["id18"] = <
-                text = <"Examination name">
-                description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
-            >
-            ["id19"] = <
-                text = <"Description">
-                description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
-            >
-            ["id20"] = <
-                text = <"Reason">
-                description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
-            >
-            ["id21"] = <
-                text = <"Comment">
-                description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
-            >
-            ["id22"] = <
-                text = <"Examination detail">
-                description = <"Structured information about the examination. Use to capture detailed, structured information about method & technique etc.">
-            >
-            ["id23"] = <
-                text = <"Anatomical location">
-                description = <"Structured information about the specific anatomical location of the examination.">
-            >
-            ["at3"] = <
-                text = <"Examination planned">
-                description = <"Imaging examination is planned.">
-            >
-            ["at4"] = <
-                text = <"Examination requested">
-                description = <"Imaging examination has been requested.">
-            >
-            ["at10"] = <
-                text = <"Examination postponed">
-                description = <"The examination has been postponed.">
-            >
-            ["at12"] = <
-                text = <"Examination cancelled">
-                description = <"The planned examination has been cancelled prior to commencement.">
-            >
-            ["at5"] = <
-                text = <"Appointment scheduled">
-                description = <"Imaging examination appointment has been made.">
-            >
-            ["at6"] = <
-                text = <"Appointment rescheduled">
-                description = <"Appointment for imaging examination has been rescheduled.">
-            >
-            ["at9"] = <
-                text = <"Examination performed">
-                description = <"The examation was performed but related activities not completed.">
-            >
-            ["at15"] = <
-                text = <"Failed attempt">
-                description = <"The examation was commenced but not completed successfully.">
-            >
-            ["at11"] = <
-                text = <"Examination suspended">
-                description = <"The examination has been suspended.">
-            >
-            ["at13"] = <
-                text = <"Examination aborted">
-                description = <"The examination has been aborted.">
-            >
-            ["at8"] = <
-                text = <"Examination complete">
-                description = <"The imaging examination has been performed and all associated activities completed.">
-            >
-            ["at16"] = <
-                text = <"planned">
-                description = <"planned">
-            >
-            ["at17"] = <
-                text = <"postponed">
-                description = <"postponed">
-            >
-            ["at18"] = <
-                text = <"cancelled">
-                description = <"cancelled">
-            >
-            ["at19"] = <
-                text = <"scheduled">
-                description = <"scheduled">
-            >
-            ["at20"] = <
-                text = <"active">
-                description = <"active">
-            >
-            ["at21"] = <
-                text = <"suspended">
-                description = <"suspended">
-            >
-            ["at22"] = <
-                text = <"aborted">
-                description = <"aborted">
-            >
-            ["at23"] = <
-                text = <"complete">
-                description = <"complete">
-            >
-        >
-        ["sl"] = <
-            ["id1"] = <
-                text = <"*Imaging examination(en)">
-                description = <"*Clinical activity about performing an imaging examination.(en)">
-            >
-            ["id3"] = <
-                text = <"*Examination planned(en)">
-                description = <"*Imaging examination is planned.(en)">
-            >
-            ["id4"] = <
-                text = <"*Examination requested(en)">
-                description = <"*Imaging examination has been requested.(en)">
-            >
-            ["id5"] = <
-                text = <"*Appointment scheduled(en)">
-                description = <"*Imaging examination appointment has been made.(en)">
-            >
-            ["id6"] = <
-                text = <"*Appointment rescheduled(en)">
-                description = <"*Appointment for imaging examination has been rescheduled.(en)">
-            >
-            ["id8"] = <
-                text = <"*Examination complete(en)">
-                description = <"*The imaging examination has been performed and all associated activities completed.(en)">
-            >
-            ["id9"] = <
-                text = <"*Examination performed(en)">
-                description = <"*The examation was performed but related activities not completed.(en)">
-            >
-            ["id10"] = <
-                text = <"*Examination postponed(en)">
-                description = <"*The examination has been postponed.(en)">
-            >
-            ["id11"] = <
-                text = <"*Examination suspended(en)">
-                description = <"*The examination has been suspended.(en)">
-            >
-            ["id12"] = <
-                text = <"*Examination cancelled(en)">
-                description = <"*The planned examination has been cancelled prior to commencement.(en)">
-            >
-            ["id13"] = <
-                text = <"*Examination aborted(en)">
-                description = <"*The examination has been aborted.(en)">
-            >
-            ["id15"] = <
-                text = <"*Failed attempt(en)">
-                description = <"*The examation was commenced but not completed successfully.(en)">
-            >
-            ["id17"] = <
-                text = <"*Start date/time(en)">
-                description = <"*The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step.(en)">
-            >
-            ["id18"] = <
-                text = <"Preiskava">
-                description = <"*The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.(en)">
-            >
-            ["id19"] = <
-                text = <"Opis">
-                description = <"*Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.(en)">
-            >
-            ["id20"] = <
-                text = <"Razlog">
-                description = <"*Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.(en)">
-            >
-            ["id21"] = <
-                text = <"Opombe">
-                description = <"*Additional narrative about the activity or care pathway step not captured in other fields.(en)">
-            >
-            ["id22"] = <
-                text = <"Podrobnosti pregleda">
-                description = <"*Structured information about the examination. Use to capture detailed, structured information about method & technique etc.(en)">
-            >
-            ["id23"] = <
-                text = <"Anatomska lokacija">
-                description = <"*Structured information about the specific anatomical location of the examination.(en)">
-            >
-            ["at3"] = <
-                text = <"*Examination planned(en)">
-                description = <"*Imaging examination is planned.(en)">
-            >
-            ["at4"] = <
-                text = <"*Examination requested(en)">
-                description = <"*Imaging examination has been requested.(en)">
-            >
-            ["at10"] = <
-                text = <"*Examination postponed(en)">
-                description = <"*The examination has been postponed.(en)">
-            >
-            ["at12"] = <
-                text = <"*Examination cancelled(en)">
-                description = <"*The planned examination has been cancelled prior to commencement.(en)">
-            >
-            ["at5"] = <
-                text = <"*Appointment scheduled(en)">
-                description = <"*Imaging examination appointment has been made.(en)">
-            >
-            ["at6"] = <
-                text = <"*Appointment rescheduled(en)">
-                description = <"*Appointment for imaging examination has been rescheduled.(en)">
-            >
-            ["at9"] = <
-                text = <"*Examination performed(en)">
-                description = <"*The examation was performed but related activities not completed.(en)">
-            >
-            ["at15"] = <
-                text = <"*Failed attempt(en)">
-                description = <"*The examation was commenced but not completed successfully.(en)">
-            >
-            ["at11"] = <
-                text = <"*Examination suspended(en)">
-                description = <"*The examination has been suspended.(en)">
-            >
-            ["at13"] = <
-                text = <"*Examination aborted(en)">
-                description = <"*The examination has been aborted.(en)">
-            >
-            ["at8"] = <
-                text = <"*Examination complete(en)">
-                description = <"*The imaging examination has been performed and all associated activities completed.(en)">
-            >
-            ["at16"] = <
-                text = <"*planned (en)">
-                description = <"*planned (en)">
-            >
-            ["at17"] = <
-                text = <"*postponed (en)">
-                description = <"*postponed (en)">
-            >
-            ["at18"] = <
-                text = <"*cancelled (en)">
-                description = <"*cancelled (en)">
-            >
-            ["at19"] = <
-                text = <"*scheduled (en)">
-                description = <"*scheduled (en)">
-            >
-            ["at20"] = <
-                text = <"*active (en)">
-                description = <"*active (en)">
-            >
-            ["at21"] = <
-                text = <"*suspended (en)">
-                description = <"*suspended (en)">
-            >
-            ["at22"] = <
-                text = <"*aborted (en)">
-                description = <"*aborted (en)">
-            >
-            ["at23"] = <
-                text = <"*complete (en)">
-                description = <"*complete (en)">
-            >
-        >
-        ["pt"] = <
-            ["id1"] = <
-                text = <"Análise de imagens">
-                description = <"Atividade clínica sobre a realização de um exame de imagem.">
-            >
-            ["id3"] = <
-                text = <"Exame planejado">
-                description = <"O exame de imagens está planejado.">
-            >
-            ["id4"] = <
-                text = <"Exame solicitado">
-                description = <"O exame de imagem foi solicitado.">
-            >
-            ["id5"] = <
-                text = <"Revisão agendada">
-                description = <"Revisão do exame de imagem foi feita.">
-            >
-            ["id6"] = <
-                text = <"Revisão reagendada">
-                description = <"A revisão do exame de imagem foi reagendada.">
-            >
-            ["id8"] = <
-                text = <"Exame completo">
-                description = <"O exame de imagem foi realizado e todas as atividades associadas foram concluídas.">
-            >
-            ["id9"] = <
-                text = <"Exame realizado">
-                description = <"A análise foi realizada, mas as atividades relacionadas não foram concluídas.">
-            >
-            ["id10"] = <
-                text = <"Exame adiado">
-                description = <"O exame foi adiado.">
-            >
-            ["id11"] = <
-                text = <"Exame suspenso">
-                description = <"O exame foi suspenso.">
-            >
-            ["id12"] = <
-                text = <"Exame cancelado">
-                description = <"O exame planejado foi cancelado antes do início.">
-            >
-            ["id13"] = <
-                text = <"Exame interrompido">
-                description = <"O exame foi abortado.">
-            >
-            ["id15"] = <
-                text = <"Tentativa com falha">
-                description = <"O exame foi iniciado, mas não foi concluído com sucesso.">
-            >
-            ["id17"] = <
-                text = <"Data / hora de início">
-                description = <"A data de início e / ou a hora do procedimento. Isso indicará a data / hora agendada quando gravada no passo de caminho de atendimento \"Compromisso programado\" ou a data / hora de início real na etapa \"Exame realizada\".">
-            >
-            ["id18"] = <
-                text = <"Nome do exame">
-                description = <"O nome do exame (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
-            >
-            ["id19"] = <
-                text = <"Descrição">
-                description = <"Descrição narrativa sobre o passo da atividade ou do caminho de atenção para o exame identificado, por exemplo, descrição sobre o desempenho e os achados do exame, a tentativa falhada ou o cancelamento do exame.">
-            >
-            ["id20"] = <
-                text = <"Razão/Motivo">
-                description = <"Razão pela qual a atividade ou o caminho de cuidado para o exame identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do exame.">
-            >
-            ["id21"] = <
-                text = <"Comentário">
-                description = <"Uma narrativa adicional sobre a etapa de atividade ou caminho de cuidado não capturada em outros campos.">
-            >
-            ["id22"] = <
-                text = <"Detalhes do exame">
-                description = <"Informação estruturada sobre o exame. Use para capturar informações detalhadas e estruturadas sobre método e técnica etc.">
-            >
-            ["id23"] = <
-                text = <"Localização anatômica">
-                description = <"Informação estruturada sobre a localização anatômica específica do exame.">
-            >
-            ["at3"] = <
-                text = <"Exame planejado">
-                description = <"O exame de imagens está planejado.">
-            >
-            ["at4"] = <
-                text = <"Exame solicitado">
-                description = <"O exame de imagem foi solicitado.">
-            >
-            ["at10"] = <
-                text = <"Exame adiado">
-                description = <"O exame foi adiado.">
-            >
-            ["at12"] = <
-                text = <"Exame cancelado">
-                description = <"O exame planejado foi cancelado.">
-            >
-            ["at5"] = <
-                text = <"Revisão agendada">
-                description = <"Revisão do exame de imagem foi agendada.">
-            >
-            ["at6"] = <
-                text = <"Revisão reagendada">
-                description = <"A revisão para o exame de imagem foi reagendada.">
-            >
-            ["at9"] = <
-                text = <"Exame realizado">
-                description = <"A análise foi realizada, mas as atividades relacionadas não foram concluídas.">
-            >
-            ["at15"] = <
-                text = <"Tentativa com falha">
-                description = <"O exame foi iniciado, mas não foi concluído com sucesso.">
-            >
-            ["at11"] = <
-                text = <"Exame suspenso">
-                description = <"O exame foi suspenso.">
-            >
-            ["at13"] = <
-                text = <"Exame abortado">
-                description = <"O exame foi abortado.">
-            >
-            ["at8"] = <
-                text = <"Exame completo">
-                description = <"O exame de imagem foi realizado e todas as atividades associadas foram concluídas.">
-            >
-            ["at16"] = <
-                text = <"planejado">
-                description = <"planejado">
-            >
-            ["at17"] = <
-                text = <"adiado">
-                description = <"adiado">
-            >
-            ["at18"] = <
-                text = <"cancelado">
-                description = <"cancelado">
-            >
-            ["at19"] = <
-                text = <"agendado">
-                description = <"agendado">
-            >
-            ["at20"] = <
-                text = <"ativo">
-                description = <"ativo">
-            >
-            ["at21"] = <
-                text = <"suspenso">
-                description = <"suspenso">
-            >
-            ["at22"] = <
-                text = <"abortado">
-                description = <"abortado">
-            >
-            ["at23"] = <
-                text = <"completo">
-                description = <"completo">
-            >
-        >
-    >
-
+	term_definitions = <
+		["en"] = <
+			["id1"] = <
+				text = <"Imaging examination">
+				description = <"Clinical activity about performing an imaging examination.">
+			>
+			["at3"] = <
+				text = <"Examination planned">
+				description = <"Imaging examination is planned.">
+			>
+			["at4"] = <
+				text = <"Examination requested">
+				description = <"Imaging examination has been requested.">
+			>
+			["at5"] = <
+				text = <"Appointment scheduled">
+				description = <"Imaging examination appointment has been made.">
+			>
+			["at6"] = <
+				text = <"Appointment rescheduled">
+				description = <"Appointment for imaging examination has been rescheduled.">
+			>
+			["at8"] = <
+				text = <"Examination complete">
+				description = <"The imaging examination has been performed and all associated activities completed.">
+			>
+			["at9"] = <
+				text = <"Examination performed">
+				description = <"The examation was performed but related activities not completed.">
+			>
+			["at10"] = <
+				text = <"Examination postponed">
+				description = <"The examination has been postponed.">
+			>
+			["at11"] = <
+				text = <"Examination suspended">
+				description = <"The examination has been suspended.">
+			>
+			["at12"] = <
+				text = <"Examination cancelled">
+				description = <"The planned examination has been cancelled prior to commencement.">
+			>
+			["at13"] = <
+				text = <"Examination aborted">
+				description = <"The examination has been aborted.">
+			>
+			["at15"] = <
+				text = <"Failed attempt">
+				description = <"The examation was commenced but not completed successfully.">
+			>
+			["id17"] = <
+				text = <"Start date/time">
+				description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step.">
+			>
+			["id18"] = <
+				text = <"Examination name">
+				description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+			>
+			["id19"] = <
+				text = <"Description">
+				description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
+			>
+			["id20"] = <
+				text = <"Reason">
+				description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
+			>
+			["id21"] = <
+				text = <"Comment">
+				description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+			>
+			["id22"] = <
+				text = <"Examination detail">
+				description = <"Structured information about the examination. Use to capture detailed, structured information about method & technique etc.">
+			>
+			["id23"] = <
+				text = <"Anatomical location">
+				description = <"Structured information about the specific anatomical location of the examination.">
+			>
+			["at16"] = <
+				text = <"planned">
+				description = <"planned">
+			>
+			["at17"] = <
+				text = <"postponed">
+				description = <"postponed">
+			>
+			["at18"] = <
+				text = <"cancelled">
+				description = <"cancelled">
+			>
+			["at19"] = <
+				text = <"scheduled">
+				description = <"scheduled">
+			>
+			["at20"] = <
+				text = <"active">
+				description = <"active">
+			>
+			["at21"] = <
+				text = <"suspended">
+				description = <"suspended">
+			>
+			["at22"] = <
+				text = <"aborted">
+				description = <"aborted">
+			>
+			["at23"] = <
+				text = <"complete">
+				description = <"complete">
+			>
+		>
+	>
+	term_bindings = <
+		["openehr"] = <
+			["at16"] = <http://openehr.org/id/526>
+			["at17"] = <http://openehr.org/id/527>
+			["at18"] = <http://openehr.org/id/528>
+			["at19"] = <http://openehr.org/id/529>
+			["at20"] = <http://openehr.org/id/245>
+			["at21"] = <http://openehr.org/id/530>
+			["at22"] = <http://openehr.org/id/531>
+			["at23"] = <http://openehr.org/id/532>
+		>
+	>
