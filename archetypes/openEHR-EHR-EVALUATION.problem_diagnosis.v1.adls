@@ -529,20 +529,20 @@ terminology
                 description = <"Slot para conter o intervalo de descritores para rótulos específicos de casos de contexto ou de uso ou aspectos relacionados ao fluxo de trabalho do processo de diagnóstico que podem não ser seguros para trocar entre sistemas ou usar em um ambiente compartilhado. Os exemplos incluem: ativo / inativo; primário secundário; preliminar / provisório / trabalhando / final.">
             >
             ["at78"] = <
-                text = <"*Risk (en)">
-                description = <"*Risk (en)">
+                text = <"Risco">
+                description = <"Risco">
             >
             ["at79"] = <
-                text = <"*Factor (en)">
-                description = <"*Factor (en)">
+                text = <"Fator">
+                description = <"Fator">
             >
             ["ac3"] = <
                 text = <"**New constraint(sl) (en)">
                 description = <"***(sl) (en)">
             >
             ["at80"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency (en)">
+                text = <"Freqüência">
+                description = <"Freqüência">
             >
             ["ac4"] = <
                 text = <"*Relationship type (synthesised) (en)">
