@@ -373,8 +373,7 @@ terminology
             >
             ["id50"] = <
                 text = <"Admit source">
-                description = <"Refer to NHDD 000385 Mode of admission and
-NHDD 000150 Source of referral to public psychiatric hospital">
+                description = <"Refer to NHDD 000385 Mode of admission andNHDD 000150 Source of referral to public psychiatric hospital">
             >
             ["id52"] = <
                 text = <"Admitting doctor">
@@ -486,8 +485,7 @@ NHDD 000150 Source of referral to public psychiatric hospital">
             >
             ["id99"] = <
                 text = <"Attending doctor">
-                description = <"The attending doctor providing services to the
-patient">
+                description = <"The attending doctor providing services to thepatient">
             >
             ["id100"] = <
                 text = <"ID">
@@ -829,15 +827,11 @@ patient">
             >
             ["id42"] = <
                 text = <"خدمة المستشفى">
-                description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: 
-CARDO1">
+                description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: CARDO1">
             >
             ["id50"] = <
                 text = <"مصدر الإدخال">
-                description = <"برجاء الرجوع إلى طريق الإدخال في 
-NHDD 000385 
-و مصدر الإحالة إلى المستشفى النفسي العام
-NHDD 000150 ">
+                description = <"برجاء الرجوع إلى طريق الإدخال في NHDD 000385 و مصدر الإحالة إلى المستشفى النفسي العامNHDD 000150">
             >
             ["id52"] = <
                 text = <"الطبيب المسئول عن الإدخال">
@@ -1198,12 +1192,12 @@ NHDD 000150 ">
         >
         ["pt"] = <
             ["id1"] = <
-                text = <"*Patient admission (en)">
-                description = <"*Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility. (en)">
+                text = <"Admissão do paciente">
+                description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
             >
             ["id3"] = <
-                text = <"*Patient class (en)">
-                description = <"*Intended mode of treatement. (en)">
+                text = <"Classe de paciente">
+                description = <"Modo de tratamento previsto.">
             >
             ["at4"] = <
                 text = <"*Inpatient/overnight patient (en)">
@@ -1242,8 +1236,8 @@ NHDD 000150 ">
                 description = <"*Unknown (en)">
             >
             ["id14"] = <
-                text = <"*Admission type (en)">
-                description = <"*The circumstance under which the patient will be admitted. (en)">
+                text = <"Tipo de entrada">
+                description = <"A circunstância sob a qual o paciente será admitido.">
             >
             ["at15"] = <
                 text = <"*Accident (en)">
@@ -1282,29 +1276,28 @@ NHDD 000150 ">
                 description = <"*Statistical admission (en)">
             >
             ["id24"] = <
-                text = <"*Pre-admit number (en)">
-                description = <"*ID number of patient's pre-admission (en)">
+                text = <"Número de pré-admissão">
+                description = <"Número de identificação da pré-admissão do paciente.">
             >
             ["id26"] = <
-                text = <"*Referring doctor (en)">
-                description = <"*Clinician who referred patient to the consulting doctor (en)">
+                text = <"Médico referente">
+                description = <"Clínico que encaminhou o paciente para o médico consultor.">
             >
             ["id42"] = <
-                text = <"*Hospital service (en)">
-                description = <"*For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1. (en)">
+                text = <"Serviço hospitalar">
+                description = <"Para uso local, este campo possui o tipo de unidade organizacional ou unidade clínica, e. CARDO1.">
             >
             ["id50"] = <
-                text = <"*Admit source (en)">
-                description = <"*Refer to NHDD 000385 Mode of admission and
-NHDD 000150 Source of referral to public psychiatric hospital (en)">
+                text = <"Admitir fonte">
+                description = <"Consulte o NHDD 000385 Modo de admissão e NHDD 000150 Fonte de referência para o hospital psiquiátrico público.">
             >
             ["id52"] = <
-                text = <"*Admitting doctor (en)">
-                description = <"** (en)">
+                text = <"Admitindo médico">
+                description = <"*">
             >
             ["id62"] = <
-                text = <"*Financial class (en)">
-                description = <"** (en)">
+                text = <"Classe financeira">
+                description = <"*">
             >
             ["at63"] = <
                 text = <"*Australian Health Care Agreements (en)">
@@ -1323,64 +1316,64 @@ NHDD 000150 Source of referral to public psychiatric hospital (en)">
                 description = <"*Worker's compensation (en)">
             >
             ["id67"] = <
-                text = <"*Charge price indicator (en)">
-                description = <"** (en)">
+                text = <"Indicador de preço de carga">
+                description = <"*">
             >
             ["id72"] = <
-                text = <"*Admit date/time (en)">
-                description = <"*Date/time the patient was admitted. (en)">
+                text = <"Data / hora de admissão">
+                description = <"Data / hora em que o paciente foi admitido.">
             >
             ["id74"] = <
-                text = <"*Assigned patient location (en)">
-                description = <"*Assigned patient location when the patient was admitted. (en)">
+                text = <"Local do paciente atribuído">
+                description = <"Localização do paciente atribuída quando o paciente foi admitido.">
             >
             ["id75"] = <
-                text = <"*Point of care/Unit (en)">
-                description = <"** (en)">
+                text = <"Ponto de atendimento / unidade">
+                description = <"*">
             >
             ["id78"] = <
-                text = <"*Ward (en)">
-                description = <"** (en)">
+                text = <"Enfermaria">
+                description = <"*">
             >
             ["id79"] = <
-                text = <"*Room (en)">
-                description = <"** (en)">
+                text = <"Quarto">
+                description = <"*">
             >
             ["id80"] = <
-                text = <"*Bed (en)">
-                description = <"** (en)">
+                text = <"Cama">
+                description = <"*">
             >
             ["id82"] = <
-                text = <"*Location type (en)">
-                description = <"** (en)">
+                text = <"Tipo de localização">
+                description = <"*">
             >
             ["at83"] = <
                 text = <"*Clinic (en)">
                 description = <"** (en)">
             >
             ["id85"] = <
-                text = <"*Address (en)">
-                description = <"** (en)">
+                text = <"Endereço">
+                description = <"*">
             >
             ["id86"] = <
-                text = <"*Street (en)">
-                description = <"** (en)">
+                text = <"Rua">
+                description = <"*">
             >
             ["id87"] = <
-                text = <"*City (en)">
-                description = <"** (en)">
+                text = <"Cidade">
+                description = <"*">
             >
             ["id88"] = <
-                text = <"*State/province (en)">
-                description = <"** (en)">
+                text = <"Estado/UF">
+                description = <"*">
             >
             ["id89"] = <
-                text = <"*Post code (en)">
-                description = <"** (en)">
+                text = <"CEP">
+                description = <"*">
             >
             ["id90"] = <
-                text = <"*Country (en)">
-                description = <"** (en)">
+                text = <"País">
+                description = <"*">
             >
             ["at91"] = <
                 text = <"*Home (en)">
@@ -1399,53 +1392,52 @@ NHDD 000150 Source of referral to public psychiatric hospital (en)">
                 description = <"** (en)">
             >
             ["id95"] = <
-                text = <"*Prior patient location (en)">
-                description = <"*The patient location prior admission (en)">
+                text = <"Localização anterior do paciente">
+                description = <"A localização do paciente antes da admissão.">
             >
             ["id96"] = <
-                text = <"*Adress (en)">
-                description = <"** (en)">
+                text = <"Endereço">
+                description = <"*">
             >
             ["id99"] = <
-                text = <"*Attending doctor (en)">
-                description = <"*The attending doctor providing services to the
-patient (en)">
+                text = <"Médico assistente">
+                description = <"O médico assistente que presta serviços ao paciente.">
             >
             ["id100"] = <
-                text = <"*ID (en)">
-                description = <"** (en)">
+                text = <"ID">
+                description = <"*">
             >
             ["id101"] = <
-                text = <"*Family name (en)">
-                description = <"** (en)">
+                text = <"Nome de família">
+                description = <"*">
             >
             ["id102"] = <
-                text = <"*Building (en)">
-                description = <"** (en)">
+                text = <"Construção">
+                description = <"*">
             >
             ["id103"] = <
-                text = <"*Floor (en)">
-                description = <"** (en)">
+                text = <"Chão/Piso">
+                description = <"*">
             >
             ["id104"] = <
-                text = <"*Location description (en)">
-                description = <"** (en)">
+                text = <"Descrição da localização">
+                description = <"*">
             >
             ["id105"] = <
-                text = <"*Facility (en)">
-                description = <"** (en)">
+                text = <"Instalação">
+                description = <"*">
             >
             ["id106"] = <
-                text = <"*Namespace ID (en)">
-                description = <"** (en)">
+                text = <"ID do Namespace">
+                description = <"*">
             >
             ["id107"] = <
-                text = <"*Universal ID (en)">
-                description = <"** (en)">
+                text = <"ID Universal">
+                description = <"*">
             >
             ["id108"] = <
-                text = <"*Universal ID type (en)">
-                description = <"** (en)">
+                text = <"Tipo do ID Universal">
+                description = <"*">
             >
             ["at109"] = <
                 text = <"*DNS (en)">
@@ -1488,16 +1480,16 @@ patient (en)">
                 description = <"** (en)">
             >
             ["id120"] = <
-                text = <"*Facility (en)">
-                description = <"** (en)">
+                text = <"Instalação">
+                description = <"*">
             >
             ["id121"] = <
-                text = <"*Last name (en)">
-                description = <"** (en)">
+                text = <"Último nome">
+                description = <"*">
             >
             ["id122"] = <
-                text = <"*Consulting doctor (en)">
-                description = <"*Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer (en)">
+                text = <"Consultoria médica">
+                description = <"Consultor responsável pelo atendimento do paciente, incluindo o especialista assalariado, médico visitante.">
             >
             ["at123"] = <
                 text = <"*Motor vehicle third party personal claim (en)">
