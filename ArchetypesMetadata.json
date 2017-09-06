@@ -354,14 +354,14 @@
     "rmType" : "CLUSTER",
     "name" : "Examination of the abdomen",
     "path" : "archetypes/openEHR-EHR-CLUSTER.exam-abdomen.v1.adls",
-    "sha" : "e29234c96320194a0c86f0e15b38f05f5e2716ff",
+    "sha" : "10b06eee0f19e545fa864a1dd3f043e3704a1b1b",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.exam-chest.v1.0.0",
     "rmType" : "CLUSTER",
     "name" : "Examination of the chest",
     "path" : "archetypes/openEHR-EHR-CLUSTER.exam-chest.v1.adls",
-    "sha" : "86aa841ee8b1a287d270cd84f73716152b5630d4",
+    "sha" : "6c2227929c63ff86038a6885a29755c66321009d",
     "languages" : [ "en" ]
   }, {
     "path" : "archetypes/openEHR-EHR-CLUSTER.lab-restricted_devices.v1.adls",
