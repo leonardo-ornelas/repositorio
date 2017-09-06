@@ -561,80 +561,80 @@ terminology
         >
         ["pt"] = <
             ["id1"] = <
-                text = <"*Imaging examination (en)">
-                description = <"*Clinical activity about performing an imaging examination. (en)">
+                text = <"Análise de imagens">
+                description = <"Atividade clínica sobre a realização de um exame de imagem.">
             >
             ["id3"] = <
-                text = <"*Examination planned (en)">
-                description = <"*Imaging examination is planned. (en)">
+                text = <"Exame planejado">
+                description = <"O exame de imagens está planejado.">
             >
             ["id4"] = <
-                text = <"*Examination requested (en)">
-                description = <"*Imaging examination has been requested. (en)">
+                text = <"Exame solicitado">
+                description = <"O exame de imagem foi solicitado.">
             >
             ["id5"] = <
-                text = <"*Appointment scheduled (en)">
-                description = <"*Imaging examination appointment has been made. (en)">
+                text = <"Revisão agendada">
+                description = <"Revisão do exame de imagem foi feita.">
             >
             ["id6"] = <
-                text = <"*Appointment rescheduled (en)">
-                description = <"*Appointment for imaging examination has been rescheduled. (en)">
+                text = <"Revisão reagendada">
+                description = <"A revisão do exame de imagem foi reagendada.">
             >
             ["id8"] = <
-                text = <"*Examination complete (en)">
-                description = <"*The imaging examination has been performed and all associated activities completed. (en)">
+                text = <"Exame completo">
+                description = <"O exame de imagem foi realizado e todas as atividades associadas foram concluídas.">
             >
             ["id9"] = <
-                text = <"*Examination performed (en)">
-                description = <"*The examation was performed but related activities not completed. (en)">
+                text = <"Exame realizado">
+                description = <"A análise foi realizada, mas as atividades relacionadas não foram concluídas.">
             >
             ["id10"] = <
-                text = <"*Examination postponed (en)">
-                description = <"*The examination has been postponed. (en)">
+                text = <"Exame adiado">
+                description = <"O exame foi adiado.">
             >
             ["id11"] = <
-                text = <"*Examination suspended (en)">
-                description = <"*The examination has been suspended. (en)">
+                text = <"Exame suspenso">
+                description = <"O exame foi suspenso.">
             >
             ["id12"] = <
-                text = <"*Examination cancelled (en)">
-                description = <"*The planned examination has been cancelled prior to commencement. (en)">
+                text = <"Exame cancelado">
+                description = <"O exame planejado foi cancelado antes do início.">
             >
             ["id13"] = <
-                text = <"*Examination aborted (en)">
-                description = <"*The examination has been aborted. (en)">
+                text = <"Exame interrompido">
+                description = <"O exame foi abortado.">
             >
             ["id15"] = <
-                text = <"*Failed attempt (en)">
-                description = <"*The examation was commenced but not completed successfully. (en)">
+                text = <"Tentativa com falha">
+                description = <"O exame foi iniciado, mas não foi concluído com sucesso.">
             >
             ["id17"] = <
-                text = <"*Start date/time (en)">
-                description = <"*The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step. (en)">
+                text = <"Data / hora de início">
+                description = <"A data de início e / ou a hora do procedimento. Isso indicará a data / hora agendada quando gravada no passo de caminho de atendimento \"Compromisso programado\" ou a data / hora de início real na etapa \"Exame realizada\".">
             >
             ["id18"] = <
-                text = <"*Examination name (en)">
-                description = <"*The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible. (en)">
+                text = <"Nome do exame">
+                description = <"O nome do exame (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
             >
             ["id19"] = <
-                text = <"*Description (en)">
-                description = <"*Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination. (en)">
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre o passo da atividade ou do caminho de atenção para o exame identificado, por exemplo, descrição sobre o desempenho e os achados do exame, a tentativa falhada ou o cancelamento do exame.">
             >
             ["id20"] = <
-                text = <"*Reason (en)">
-                description = <"*Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination. (en)">
+                text = <"Razão/Motivo">
+                description = <"Razão pela qual a atividade ou o caminho de cuidado para o exame identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do exame.">
             >
             ["id21"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about the activity or care pathway step not captured in other fields. (en)">
+                text = <"Comentário">
+                description = <"Uma narrativa adicional sobre a etapa de atividade ou caminho de cuidado não capturada em outros campos.">
             >
             ["id22"] = <
-                text = <"*Examination detail (en)">
-                description = <"*Structured information about the examination. Use to capture detailed, structured information about method & technique etc. (en)">
+                text = <"Detalhes do exame">
+                description = <"Informação estruturada sobre o exame. Use para capturar informações detalhadas e estruturadas sobre método e técnica etc.">
             >
             ["id23"] = <
-                text = <"*Anatomical location (en)">
-                description = <"*Structured information about the specific anatomical location of the examination. (en)">
+                text = <"Localização anatômica">
+                description = <"Informação estruturada sobre a localização anatômica específica do exame.">
             >
             ["at3"] = <
                 text = <"*Examination planned (en)">
