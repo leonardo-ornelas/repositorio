@@ -1508,24 +1508,24 @@ terminology
                 description = <"*">
             >
             ["at127"] = <
-                text = <"*Correctional facility (en)">
-                description = <"** (en)">
+                text = <"Instalação correcional">
+                description = <"*">
             >
             ["at128"] = <
-                text = <"*Other hospital or public authority (contracted care) (en)">
-                description = <"** (en)">
+                text = <"Outro hospital ou autoridade pública (cuidado contratado)">
+                description = <"*">
             >
             ["at129"] = <
-                text = <"*Reciprocal health care agreements (with other countries) (en)">
-                description = <"** (en)">
+                text = <"Acordos de cuidados de saúde recíprocos (com outros países)">
+                description = <"*">
             >
             ["at130"] = <
-                text = <"*Other (en)">
-                description = <"** (en)">
+                text = <"Outros">
+                description = <"*">
             >
             ["at131"] = <
-                text = <"*Not known (en)">
-                description = <"** (en)">
+                text = <"Desconhecido">
+                description = <"*">
             >
             ["ac2"] = <
                 text = <"*Any term that 'is a' 'Charge price indicator' (en)">
