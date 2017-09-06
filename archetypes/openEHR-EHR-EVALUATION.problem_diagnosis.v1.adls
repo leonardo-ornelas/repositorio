@@ -332,7 +332,7 @@ terminology
             >
             ["id10"] = <
                 text = <"Opis">
-                description = <"Opis kliničnih aspektov problema oz. diagnoze ">
+                description = <"Opis kliničnih aspektov problema oz. diagnoze">
             >
             ["id11"] = <
                 text = <"Datum začetka">
@@ -359,7 +359,7 @@ terminology
                 description = <"Število ponovitev">
             >
             ["id27"] = <
-                text = <"V povezavi ">
+                text = <"V povezavi">
                 description = <"*Further problems, diagnoses, procedures aotr events that related to th eproblem/diagnose(en)">
             >
             ["id29"] = <
@@ -437,96 +437,96 @@ terminology
         >
         ["pt"] = <
             ["id1"] = <
-                text = <"*Problem/Diagnosis (en)">
-                description = <"*Any health care condition which may impact on to mental, physical health of patient (en)">
+                text = <"Problema/Diagnóstico">
+                description = <"Qualquer condição de saúde que possa afetar a saúde mental e física do paciente.">
             >
             ["id3"] = <
-                text = <"*Problem/Diagnosis (en)">
-                description = <"*Identification of the problem or diagnoses. Should be used a coded text. (en)">
+                text = <"Problema / Diagnóstico">
+                description = <"Identificação do problema ou diagnósticos. Deve ser usado um texto codificado.">
             >
             ["id10"] = <
-                text = <"*Clinical description (en)">
-                description = <"*Narrative description or comments about clinical aspects of the problem/diagnoses (en)">
+                text = <"Descrição clínica">
+                description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema / diagnósticos.">
             >
             ["id11"] = <
-                text = <"*Date of onset (en)">
-                description = <"*Estimated date the problem/diagnoses began (en)">
+                text = <"Data do início">
+                description = <"Data estimada em que o problema / diagnóstico começou.">
             >
             ["id16"] = <
-                text = <"*Causative Agent (en)">
-                description = <"*The phenomenon, substance, or organisem that is considered to be cause (en)">
+                text = <"Agente Causador">
+                description = <"O fenômeno, substância ou organismo que é considerado causa.">
             >
             ["id19"] = <
-                text = <"*Occurrence Summary (en)">
-                description = <"*Summary information about occurrence or exacerbations. (en)">
+                text = <"Resumo da Ocorrência">
+                description = <"Informações resumidas sobre ocorrência ou exacerbações.">
             >
             ["id20"] = <
-                text = <"*Frequency (en)">
-                description = <"*The frequency of occurrences or excerbation of the problem/diagnoses (en)">
+                text = <"Freqüência">
+                description = <"A frequência de ocorrências ou exacerbação do problema / diagnóstico.">
             >
             ["id21"] = <
-                text = <"*Last occurrence (en)">
-                description = <"*The date of last occurrance or exacerbation (en)">
+                text = <"Última ocorrência">
+                description = <"A data da última ocorrência ou exacerbação.">
             >
             ["id26"] = <
-                text = <"*Number (en)">
-                description = <"*Cumulative number of occurrances or exacerbation (en)">
+                text = <"Número">
+                description = <"Número cumulativo de ocorrências ou exacerbação.">
             >
             ["id27"] = <
-                text = <"*Related items (en)">
-                description = <"*Further problems, diagnoses, procedures aotr events that related to th eproblem/diagnose (en)">
+                text = <"Itens relacionados">
+                description = <"Outros problemas, diagnósticos, procedimentos e eventos relacionados ao problema / diagnóstico.">
             >
             ["id29"] = <
-                text = <"*Related items (en)">
-                description = <"*Further problems, diagnoses, procedures aotr events that related to th eproblem/diagnose (en)">
+                text = <"Itens relacionados">
+                description = <"Outros problemas, diagnósticos, procedimentos e eventos relacionados ao problema / diagnóstico.">
             >
             ["id31"] = <
-                text = <"*Date of resolution/remission (en)">
-                description = <"*The date that problem/diagnose resolved or went to remission (en)">
+                text = <"Data da resolução / remissão">
+                description = <"A data em que o problema / diagnóstico foi resolvido ou foi para a remissão.">
             >
             ["id32"] = <
-                text = <"*Age at ressolution/remission (en)">
-                description = <"*The age of person at the time of ressolution (en)">
+                text = <"Idade na ressolução / remissão">
+                description = <"A idade da pessoa no momento da ressolução.">
             >
             ["id38"] = <
-                text = <"*Age of onset (en)">
-                description = <"*The age of the person when clinician assess the problem/diagnose (en)">
+                text = <"Idade do início">
+                description = <"A idade da pessoa quando o clínico avaliar o problema / diagnóstico.">
             >
             ["id45"] = <
-                text = <"*Anatomical location (en)">
-                description = <"*Slot to contain detailed and structured anatomical location details (en)">
+                text = <"Localização anatômica">
+                description = <"Slot para conter detalhes de localização anatômica detalhados e estruturados.">
             >
             ["id55"] = <
-                text = <"*Supporting Criteria (en)">
-                description = <"*The supporting criteria on which problem/diagnose based (en)">
+                text = <"Critérios de suporte">
+                description = <"Os critérios de suporte em que o problema / diagnóstico baseados.">
             >
             ["id56"] = <
-                text = <"*Clinical stage/Grade (en)">
-                description = <"*Clinical stage or grade of problem (en)">
+                text = <"Fase clínica / grau">
+                description = <"Estágio clínico ou grau de problema.">
             >
             ["id57"] = <
-                text = <"*Relationship type (en)">
-                description = <"*The type of relationship that this problem/diagnose has to the related itam (en)">
+                text = <"Tipo de relacionamento">
+                description = <"O tipo de relacionamento que esse problema / diagnóstico tem com o item relacionado.">
             >
             ["id70"] = <
-                text = <"*Comment (en)">
-                description = <"*Any comment about problem/diagnose (en)">
+                text = <"Comentário">
+                description = <"Qualquer comentário sobre problema / diagnóstico.">
             >
             ["id73"] = <
-                text = <"*Description (en)">
-                description = <"*Description (en)">
+                text = <"Descrição">
+                description = <"Descrição do problema.">
             >
             ["id74"] = <
-                text = <"*Link to previous occurrence (en)">
-                description = <"*Link to previous occurrence (en)">
+                text = <"Link para ocorrência anterior">
+                description = <"Link para ocorrência anterior.">
             >
             ["id76"] = <
-                text = <"*Link to supporting medical documentation (en)">
-                description = <"*Link to supporting mediacl documentation (en)">
+                text = <"Link para suporte de documentação médica">
+                description = <"Link para suporte de documentação médica.">
             >
             ["id77"] = <
-                text = <"*Status (en)">
-                description = <"*Slot to contain range of descriptors for context- or use-case specific labels or workflow-related aspects of the diagnostic process which may not be safe to exchange between systems or use in a shared environment. Examples include: active/inactive; primary/secondary; preliminary/provisional/working/final. (en)">
+                text = <"Status">
+                description = <"Slot para conter o intervalo de descritores para rótulos específicos de casos de contexto ou de uso ou aspectos relacionados ao fluxo de trabalho do processo de diagnóstico que podem não ser seguros para trocar entre sistemas ou usar em um ambiente compartilhado. Os exemplos incluem: ativo / inativo; primário secundário; preliminar / provisório / trabalhando / final.">
             >
             ["at78"] = <
                 text = <"*Risk (en)">
