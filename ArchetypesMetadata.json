@@ -151,8 +151,8 @@
     "rmType" : "EVALUATION",
     "name" : "Problem/Diagnosis",
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis.v1.adls",
-    "sha" : "74b5b23612795258b1d73a92bc3ba6bc1eea0f06",
-    "languages" : [ "en", "sl" ]
+    "sha" : "aae28a1d28aaa50377b3dc94334c9d4041eef9ce",
+    "languages" : [ "en", "sl", "pt" ]
   }, {
     "id" : "openEHR-EHR-INSTRUCTION.medication.v1.0.0",
     "rmType" : "INSTRUCTION",
