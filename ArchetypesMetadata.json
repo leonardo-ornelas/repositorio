@@ -336,27 +336,6 @@
     "sha" : "bea87d67ac977d707680e433cb53b7446cdda7ad",
     "languages" : [ "en" ]
   }, {
-    "id" : "CIMI-Core-INDIVISIBLE_ENTRY.body_height.v1.0.109",
-    "rmType" : "INDIVISIBLE_ENTRY",
-    "name" : "BodyHeight",
-    "path" : "archetypes/cimi-CORE-INDIVISIBLE_ENTRY.body_height.v1.adls",
-    "sha" : "79d1768c19e26ba734d3cb4b609314a77189e717",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "CIMI-Core-INDIVISIBLE_ENTRY.body_weight.v1.0.108",
-    "rmType" : "INDIVISIBLE_ENTRY",
-    "name" : "BodyWeight",
-    "path" : "archetypes/cimi-CORE-INDIVISIBLE_ENTRY.body_weight.v1.adls",
-    "sha" : "f1670168a729247867029c0509b3056f7e6b4384",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "CIMI-Core-INDIVISIBLE_ENTRY.t_body_weight.v1.0.0",
-    "rmType" : "INDIVISIBLE_ENTRY",
-    "name" : "Templatated body weight",
-    "path" : "archetypes/cimi-CORE-INDIVISIBLE_ENTRY.t_body_weight.v1.adls",
-    "sha" : "768f2e80a0d1f0086dda17928d1df08f79744296",
-    "languages" : [ "en" ]
-  }, {
     "id" : "openEHR-EHR-ACTION.medication.v1.0.0",
     "rmType" : "ACTION",
     "name" : "Medication action",
