@@ -29,5 +29,11 @@
     "name" : "Encontro",
     "path" : "templates/openEHR-EHR-COMPOSITION.testev4.v1.adlt",
     "sha" : "8a62d989b5c3612c2571d5d676b2da14dbe5cb3e"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.admissional.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Admissional",
+    "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
+    "sha" : "6e54b2ab7e1d11f45d2b19dbc709d6b4a665ac49"
   } ]
 }
