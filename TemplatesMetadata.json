@@ -28,7 +28,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encontro",
     "path" : "templates/openEHR-EHR-COMPOSITION.blood.v1.adlt",
-    "sha" : "920e6354fa9bd4f3c3a4b1e159dc9da8d24bf67f"
+    "sha" : "ef15b264de29a84dd4de6c832337aa04ab981b17"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.pressao_altura.v1.0.0",
     "rmType" : "COMPOSITION",
