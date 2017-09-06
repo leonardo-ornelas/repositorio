@@ -37,7 +37,9 @@ description
         >
         ["pt"] = <
             language = <[ISO_639-1::pt]>
-            purpose = <"*This admission ADMIN_ENTRY archetype was designed for representing the minimum admission data. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1. (en)">
+            misuse = <"">
+            purpose = <"Este arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia do HL7 Versão 2.4 (Parte 1: Administração do Paciente) e HL7 Versão Padrão 2.3.1.">
+            use = <"">
         >
     >
     lifecycle_state = <"unmanaged">
