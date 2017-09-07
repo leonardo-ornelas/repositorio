@@ -98,7 +98,20 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.6] occurrences matches {0..1}     -- How many days did you walk for at least 10 continuous minutes
+            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- How many days did you walk for at least 10 continuous minutes
+                value matches {
+                    DV_CODED_TEXT[id0.8] matches {
+                        defining_code matches {[ac0.3]}
+                    }
+                }
+            }
+            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Total time the worker walked each day.
+                value matches {
+                    DV_TIME[id0.10] matches {
+                        value matches {*}
+                    }
+                }
+            }
         }
     }
 
@@ -142,7 +155,7 @@ terminology
                 description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
             >
             ["ac0.3"] = <
-                text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+                text = <"How many days did you walk for at least 10 continuous minutes">
                 description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
             >
             ["at0.5"] = <
@@ -181,6 +194,42 @@ terminology
                 text = <"How many days did you walk for at least 10 continuous minutes">
                 description = <"On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise.">
             >
+            ["at0.12"] = <
+                text = <"None">
+                description = <"None">
+            >
+            ["at0.13"] = <
+                text = <"1 day">
+                description = <"1 day">
+            >
+            ["at0.14"] = <
+                text = <"2 days">
+                description = <"2 days">
+            >
+            ["at0.15"] = <
+                text = <"3 days">
+                description = <"3 days">
+            >
+            ["at0.16"] = <
+                text = <"4 days">
+                description = <"4 days">
+            >
+            ["at0.17"] = <
+                text = <"5 days">
+                description = <"5 days">
+            >
+            ["at0.18"] = <
+                text = <"6 days">
+                description = <"6 days">
+            >
+            ["at0.19"] = <
+                text = <"7 days">
+                description = <"7 days">
+            >
+            ["id0.9"] = <
+                text = <"Total time the worker walked each day.">
+                description = <"Total time the worker walked each day.">
+            >
         >
     >
     value_sets = <
@@ -194,7 +243,7 @@ terminology
         >
         ["ac0.3"] = <
             id = <"ac0.3">
-            members = <"at0.4">
+            members = <"at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17", "at0.18", "at0.19">
         >
         ["ac0.4"] = <
             id = <"ac0.4">
