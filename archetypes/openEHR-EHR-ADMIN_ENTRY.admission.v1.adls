@@ -1426,7 +1426,7 @@ terminology
                 description = <"*">
             >
             ["id105"] = <
-                text = <"Instituição">
+                text = <"Instalação">
                 description = <"*">
             >
             ["id106"] = <
@@ -1482,7 +1482,7 @@ terminology
                 description = <"*">
             >
             ["id120"] = <
-                text = <"Instituição">
+                text = <"Instalação">
                 description = <"*">
             >
             ["id121"] = <
