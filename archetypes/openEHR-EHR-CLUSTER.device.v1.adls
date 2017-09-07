@@ -273,8 +273,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Device (en)">
-                description = <"*Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means. (en)">
+                text = <"Dispositivo">
+                description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
             >
             ["id2"] = <
                 text = <"*Device name (en)">
