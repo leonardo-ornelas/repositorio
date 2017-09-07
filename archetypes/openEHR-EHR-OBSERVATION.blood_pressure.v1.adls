@@ -1304,7 +1304,7 @@ terminology
             >
             ["at1045"] = <
                 text = <"هشیار و بیدار">
-                description = <"فرد کاملا به هوش است ">
+                description = <"فرد کاملا به هوش است">
             >
             ["at1046"] = <
                 text = <"خوابیده">
@@ -2175,36 +2175,36 @@ terminology
                 description = <"O braço direito da pessoa.">
             >
             ["at27"] = <
-                text = <"*Left arm (en)">
-                description = <"*The left arm of the person. (en)">
+                text = <"Braço esquerdo">
+                description = <"O braço esquerdo da pessoa.">
             >
             ["at28"] = <
-                text = <"*Right thigh (en)">
-                description = <"*The right thigh of the person. (en)">
+                text = <"Coxa direita">
+                description = <"A coxa direita da pessoa.">
             >
             ["at29"] = <
-                text = <"*Left thigh (en)">
-                description = <"*The left thigh of the person. (en)">
+                text = <"Coxa esquerda">
+                description = <"A coxa esquerda da pessoa.">
             >
             ["id34"] = <
                 text = <"Comentário">
                 description = <"Comentário sobre a medição da pressão arterial.">
             >
             ["at1001"] = <
-                text = <"*Standing (en)">
-                description = <"*Standing at the time of blood pressure measurement. (en)">
+                text = <"Em pé">
+                description = <"Em pé no momento da medição da pressão sanguínea.">
             >
             ["at1002"] = <
-                text = <"*Sitting (en)">
-                description = <"*Sitting (for example on bed or chair) at the time of blood pressure measurement. (en)">
+                text = <"Sentado">
+                description = <"Sentado (por exemplo em cama ou cadeira) no momento da medição da pressão sanguínea.">
             >
             ["at1003"] = <
-                text = <"*Reclining (en)">
-                description = <"*Reclining at the time of blood pressure measurement. (en)">
+                text = <"Reclinado">
+                description = <"Reclinado no momento da medição da pressão sanguínea.">
             >
             ["at1004"] = <
-                text = <"*Lying (en)">
-                description = <"*Lying flat at the time of blood pressure measurement. (en)">
+                text = <"Deitada">
+                description = <"Deitada plana no momento da medição da pressão sanguínea.">
             >
             ["id1006"] = <
                 text = <"Inclinação">
@@ -2219,64 +2219,64 @@ terminology
                 description = <"A diferença entre a pressão sistólica e diastólica.">
             >
             ["at1009"] = <
-                text = <"*Small Adult (en)">
-                description = <"*A cuff used for a small adult - bladder approx 10cm x 24cm. (en)">
+                text = <"Adulto pequeno">
+                description = <"Um manguito usado para um pequeno adulto - bexiga aproximadamente 10cm x 24cm.">
             >
             ["at1010"] = <
-                text = <"*Paediatric/Child (en)">
-                description = <"*A cuff that is appropriate for a child or adult with a thin arm - bladder approx 8cm x 21cm. (en)">
+                text = <"Pediátrico / Criança">
+                description = <"Um manguito que é apropriado para uma criança ou um adulto com um braço fino - bexiga aproximadamente 8cm x 21cm.">
             >
             ["id1011"] = <
                 text = <"Ponto de extremidade diastólica">
                 description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
             >
             ["at1012"] = <
-                text = <"*Phase IV (en)">
-                description = <"*The fourth Korotkoff sound is identified as an abrupt muffling of sounds. (en)">
+                text = <"Fase IV">
+                description = <"O quarto som de Korotkoff é identificado como um abrupto amortecedor de sons.">
             >
             ["at1013"] = <
-                text = <"*Phase V (en)">
-                description = <"*The fifth Korotkoff sound is identified by absence of sounds as the cuff pressure drops below the diastolic blood pressure. (en)">
+                text = <"Fase V">
+                description = <"O quinto som de Korotkoff é identificado pela ausência de sons à medida que a pressão do manguito cai abaixo da pressão arterial diastólica.">
             >
             ["at1015"] = <
-                text = <"*Lying with tilt to left (en)">
-                description = <"*Lying flat with some lateral tilt, usually angled towards the left side.   Commonly required in the last trimester of pregnancy to relieve aortocaval compression. (en)">
+                text = <"Deitado com inclinação para esquerda">
+                description = <"Deitada plana com alguma inclinação lateral, geralmente inclinada para o lado esquerdo. Comumente requerido no último trimestre da gravidez para aliviar a compressão aortocaval.">
             >
             ["at1019"] = <
-                text = <"*Infant (en)">
-                description = <"*A cuff used for infants - bladder approx 5cm x 15cm. (en)">
+                text = <"Infantil">
+                description = <"Um manguito usado para bebês - bexiga aprox. 5cm x 15cm">
             >
             ["at1020"] = <
-                text = <"*Neonatal (en)">
-                description = <"*A cuff used for a neonate, assuming cuff is the appropriate size for maturity and birthweight of the neonate. (en)">
+                text = <"Neonatal">
+                description = <"Um manguito usado para um recém-nascido, assumindo manguito é o tamanho apropriado para a maturidade e peso ao nascer do neonato.">
             >
             ["at1021"] = <
-                text = <"*Right wrist (en)">
-                description = <"*The right wrist of the subject. (en)">
+                text = <"Pulso direito">
+                description = <"O pulso direito do assunto.">
             >
             ["at1022"] = <
-                text = <"*Left wrist (en)">
-                description = <"*The left wrist of the subject. (en)">
+                text = <"Pulso esquerdo">
+                description = <"O pulso esquerdo do assunto.">
             >
             ["id1026"] = <
                 text = <"Dispositivo">
                 description = <"Detalhes sobre esfigmomanômetro ou outro dispositivo usado para medir a pressão sanguínea.">
             >
             ["at1027"] = <
-                text = <"*Right ankle (en)">
-                description = <"*The right ankle of the subject. (en)">
+                text = <"Tornozelo direito">
+                description = <"O tornozelo direito do assunto.">
             >
             ["id1031"] = <
                 text = <"Esforço">
                 description = <"Detalhes sobre a atividade física realizada no momento da pressão arterial. Medição.">
             >
             ["at1032"] = <
-                text = <"*Left ankle (en)">
-                description = <"*The left ankle of the subject. (en)">
+                text = <"Tornozelo esquerdo">
+                description = <"O tornozelo esquerdo do assunto.">
             >
             ["at1033"] = <
-                text = <"*Finger (en)">
-                description = <"*A finger of the subject.  Identification of the finger can be recorded in 'Specific Location' data element, if required. (en)">
+                text = <"Dedo">
+                description = <"O dedo do assunto. A identificação do dedo pode ser registrada no elemento de dados \"Localização específica\", se necessário.">
             >
             ["id1034"] = <
                 text = <"Localização">
@@ -2291,24 +2291,24 @@ terminology
                 description = <"Método de medição da pressão sanguínea.">
             >
             ["at1037"] = <
-                text = <"*Auscultation (en)">
-                description = <"*Method of measuring blood pressure externally, using a stethoscope and Korotkoff sounds. (en)">
+                text = <"Auscultação">
+                description = <"Método de medição da pressão arterial externamente, usando um estetoscópio e sons de Korotkoff.">
             >
             ["at1038"] = <
-                text = <"*Palpation (en)">
-                description = <"*Method of measuring blood pressure externally, using palpation (usually of the brachial or radial arteries). (en)">
+                text = <"Palpação">
+                description = <"Método de medição da pressão arterial externamente, utilizando palpação (geralmente das artérias braquiais ou radiais).">
             >
             ["id1039"] = <
                 text = <"Fórmula de Pressão Arterial Média">
                 description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
             >
             ["at1040"] = <
-                text = <"*Machine (en)">
-                description = <"*Method of measuring blood pressure externally, using a blood pressure machine. (en)">
+                text = <"Máquina">
+                description = <"Método de medição da pressão arterial externamente, usando uma máquina de pressão sanguínea.">
             >
             ["at1041"] = <
-                text = <"*Invasive (en)">
-                description = <"*Method of measuring blood pressure internally ie involving penetration of the skin and measuring inside blood vessels. (en)">
+                text = <"Invasivo">
+                description = <"Método de medição da pressão arterial internamente, ou seja, envolvendo penetração da pele e medindo dentro dos vasos sanguíneos.">
             >
             ["id1043"] = <
                 text = <"Média de 24 horas">
@@ -2319,36 +2319,36 @@ terminology
                 description = <"Status do sono - suporta a interpretação dos registros de pressão arterial ambulatorial de 24 horas.">
             >
             ["at1045"] = <
-                text = <"*Alert & awake (en)">
-                description = <"*Subject is fully conscious. (en)">
+                text = <"Alerta e desperta">
+                description = <"O sujeito é totalmente consciente.">
             >
             ["at1046"] = <
-                text = <"*Sleeping (en)">
-                description = <"*Subject is in the natural state of bodily rest. (en)">
+                text = <"Adormecido">
+                description = <"O sujeito está no estado natural do descanso corporal.">
             >
             ["at1052"] = <
-                text = <"*Toe (en)">
-                description = <"*A toe of the subject.   Identification of the toe can be recorded in 'Specific Location' data element, if required. (en)">
+                text = <"Dedo do pé">
+                description = <"Um dedo do pé do sujeito. A identificação do dedo do pé pode ser registrada no elemento de dados \"Localização específica\", se necessário.">
             >
             ["id1053"] = <
                 text = <"Fatores de complicação">
                 description = <"Comente e registre outros fatores incidentais que podem estar contribuindo para a medição da pressão arterial. Por exemplo, nível de ansiedade ou \"síndrome do casaco branco\"; dor ou febre; mudanças na pressão atmosférica, etc.">
             >
             ["at1054"] = <
-                text = <"*Intra-arterial (en)">
-                description = <"*Invasive measurement via transducer access line within an artery. Location of the transducer can be recorded in 'Specific Location' data element, if required. (en)">
+                text = <"Intra-arterial">
+                description = <"Medição invasiva através da linha de acesso do transdutor dentro de uma artéria. A localização do transdutor pode ser registrada no elemento de dados \"Localização específica\", se necessário.">
             >
             ["at1055"] = <
-                text = <"*Pressure (en)">
-                description = <"*Pressure (en)">
+                text = <"Pressão">
+                description = <"Pressão">
             >
             ["at1056"] = <
-                text = <"*Angle, plane (en)">
-                description = <"*Angle, plane (en)">
+                text = <"Ângulo, plano">
+                description = <"Ângulo, plano">
             >
             ["at1057"] = <
-                text = <"*mean (en)">
-                description = <"*mean (en)">
+                text = <"significar">
+                description = <"significar">
             >
             ["ac1"] = <
                 text = <"*Position (synthesised) (en)">
