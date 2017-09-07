@@ -12,6 +12,15 @@ language
             >
             language = <[ISO_639-1::sl]>
         >
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organisation"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
     >
     
 description
@@ -35,6 +44,15 @@ For common use cases, it may be appropriate to specialise this archetype specifi
             use = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe. Uporaba termina naprava je odvisna od vsebine oz. namena uporabe.
 
 ">
+        >
+        ["pt-br"] = <
+            keywords = <"device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "physical", "object">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Not to be used to record products such as medications or vaccinations or similar, that are used for therapeutic or metabolic means.  (en)">
+            purpose = <"*To record the details of a physical object, product or device used in the broadest description of the provision of healthcare but without direct therapeutic or metabolic means. (en)">
+            use = <"*Use to record the details about any generic device that may be used either directly in a therapeutic or diagnostic manner or indirectly to support provision of healthcare. Use of the term device varies depending on context.  Within the Standards world, the term device tends to refer to mechanical or electronic devices that  support healthcare and require rigorous docuumentation regarding specifications, maintenance etc.  Within the terminology context the use of device is very broad, including any physical object that can be used in direct or indirect provision of clinical care.  Examples include ventilator circuits, peak flow meters, spirometers, eyeglasses and contact lenses, intravascular catheters, breast implants, prostheses, drain tubes and corn rings.
+This archetype is designed to provide the basis for a structured representation of any device, from a simple example of a brand of urinary dipstick with a current 'use by' date through to an implanted bionic ear that may require complex documentation re software, hardware, maintenance, calibration etc.
+For common use cases, it may be appropriate to specialise this archetype specifically eg intravascular catheter or urinary catheter. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -251,6 +269,72 @@ terminology
             ["id21"] = <
                 text = <"Sestavni deli">
                 description = <"*Information about the device sub-components.(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*Device (en)">
+                description = <"*Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means. (en)">
+            >
+            ["id2"] = <
+                text = <"*Device name (en)">
+                description = <"*Identification of the device.  This is very likely to be a coded field, including pre- or post-coordianted details. (en)">
+            >
+            ["id3"] = <
+                text = <"*Description (en)">
+                description = <"*Description of the device. (en)">
+            >
+            ["id4"] = <
+                text = <"*Type (en)">
+                description = <"*Type of device. (en)">
+            >
+            ["id5"] = <
+                text = <"*Manufacturer (en)">
+                description = <"*The name of the device manufacturer. (en)">
+            >
+            ["id6"] = <
+                text = <"*Date of manufacture (en)">
+                description = <"*Date the device was manufactured. (en)">
+            >
+            ["id7"] = <
+                text = <"*Batch number (en)">
+                description = <"*Manufacturer's batch number. (en)">
+            >
+            ["id8"] = <
+                text = <"*Date of expiry (en)">
+                description = <"*Date that the device/product is no longer fit for use. (en)">
+            >
+            ["id9"] = <
+                text = <"*Comment (en)">
+                description = <"*Comment about the device. (en)">
+            >
+            ["id10"] = <
+                text = <"*Additional Details (en)">
+                description = <"*Additional details to be noted about the device. (en)">
+            >
+            ["id14"] = <
+                text = <"*Safety feature (en)">
+                description = <"*Details about safety feature(s) of the device. (en)">
+            >
+            ["id15"] = <
+                text = <"*Type of feature (en)">
+                description = <"*Type of safety feature of the device. (en)">
+            >
+            ["id16"] = <
+                text = <"*Description (en)">
+                description = <"*Description of the safety feature of the device. (en)">
+            >
+            ["id17"] = <
+                text = <"*Size (en)">
+                description = <"*Size of device - a choice of value types is offered - count, quantity or text. (en)">
+            >
+            ["id18"] = <
+                text = <"*Dimensions (en)">
+                description = <"*Specific dimensions of the device. (en)">
+            >
+            ["id21"] = <
+                text = <"*Components (en)">
+                description = <"*Information about the device sub-components. (en)">
             >
         >
     >
