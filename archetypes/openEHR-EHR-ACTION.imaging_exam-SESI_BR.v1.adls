@@ -123,7 +123,7 @@ terminology
                 description = <"Irregular">
             >
             ["ac0.2"] = <
-                text = <"Irregular">
+                text = <"Regularly perform some type of physical activity at leisure">
                 description = <"Irregular">
             >
             ["id0.5"] = <
@@ -150,6 +150,26 @@ terminology
                 text = <"Irregular">
                 description = <"Irregular">
             >
+            ["at0.7"] = <
+                text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+                description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+            >
+            ["at0.8"] = <
+                text = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+                description = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+            >
+            ["at0.9"] = <
+                text = <"YES, 1 or 2 times a week.">
+                description = <"YES, 1 or 2 times a week.">
+            >
+            ["at0.10"] = <
+                text = <"YES, 3 or 4 times a week.">
+                description = <"YES, 3 or 4 times a week.">
+            >
+            ["at0.11"] = <
+                text = <"YES, 5 or more times per week.">
+                description = <"YES, 5 or more times per week.">
+            >
         >
     >
     value_sets = <
@@ -159,7 +179,7 @@ terminology
         >
         ["ac0.2"] = <
             id = <"ac0.2">
-            members = <"at0.3">
+            members = <"at0.7", "at0.8", "at0.9", "at0.10", "at0.11">
         >
         ["ac0.3"] = <
             id = <"ac0.3">
