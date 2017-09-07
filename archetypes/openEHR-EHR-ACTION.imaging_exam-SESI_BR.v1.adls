@@ -84,69 +84,6 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Physical activity for work
-                value matches {
-                    DV_CODED_TEXT[id0.3] matches {
-                        defining_code matches {[ac0.1]}
-                    }
-                }
-            }
-            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Regularly perform some type of physical activity at leisure
-                value matches {
-                    DV_CODED_TEXT[id0.7] matches {
-                        defining_code matches {[ac0.2]}
-                    }
-                }
-            }
-            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- How many days did you walk for at least 10 continuous minutes
-                value matches {
-                    DV_CODED_TEXT[id0.8] matches {
-                        defining_code matches {[ac0.3]}
-                    }
-                }
-            }
-            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Total time the worker walked each day.
-                value matches {
-                    DV_TIME[id0.10] matches {
-                        value matches {*}
-                    }
-                }
-            }
-            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- How many days of the last week did moderate activity.
-                value matches {
-                    DV_CODED_TEXT[id0.12] matches {
-                        defining_code matches {[ac0.4]}
-                    }
-                }
-            }
-            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Total time spent on moderate activity per day
-                value matches {
-                    DV_TIME[id0.14] matches {
-                        value matches {*}
-                    }
-                }
-            }
-            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- How many days in the last week have you carried out rigorous activities
-                value matches {
-                    DV_CODED_TEXT[id0.16] matches {
-                        defining_code matches {[ac0.5]}
-                    }
-                }
-            }
-            ELEMENT[id0.17] occurrences matches {0..1} matches {    -- Total time performing vigorous activities per day
-                value matches {
-                    DV_TIME[id0.18] matches {
-                        value matches {*}
-                    }
-                }
-            }
-            ELEMENT[id0.20] occurrences matches {0..1} matches {    -- Main type of physical activity practiced in their leisure time.
-                value matches {
-                    DV_CODED_TEXT[id0.21] matches {
-                        defining_code matches {[ac0.6]}
-                    }
-                }
-            }
         }
     }
 
@@ -156,10 +93,6 @@ terminology
             ["id1.1"] = <
                 text = <"Imaging examination">
                 description = <"Clinical activity about performing an imaging examination.">
-            >
-            ["id0.2"] = <
-                text = <"Physical activity for work">
-                description = <"Do physical activity for work">
             >
             ["at0.1"] = <
                 text = <"Regular">
@@ -180,10 +113,6 @@ terminology
             ["ac0.2"] = <
                 text = <"Regularly perform some type of physical activity at leisure">
                 description = <"Irregular">
-            >
-            ["id0.5"] = <
-                text = <"Regularly perform some type of physical activity at leisure">
-                description = <"Record regular physical activity at leisure">
             >
             ["at0.4"] = <
                 text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
@@ -225,10 +154,6 @@ terminology
                 text = <"YES, 5 or more times per week.">
                 description = <"YES, 5 or more times per week.">
             >
-            ["id0.6"] = <
-                text = <"How many days did you walk for at least 10 continuous minutes">
-                description = <"On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise.">
-            >
             ["at0.12"] = <
                 text = <"None">
                 description = <"None">
@@ -261,33 +186,9 @@ terminology
                 text = <"7 days">
                 description = <"7 days">
             >
-            ["id0.9"] = <
-                text = <"Total time the worker walked each day.">
-                description = <"Total time the worker walked each day.">
-            >
-            ["id0.11"] = <
-                text = <"How many days of the last week did moderate activity.">
-                description = <"On how many days of the last week did MODERATE activities for at least 10 continuous minutes or any activity that did moderate increase in your breathing or heartbeat.">
-            >
-            ["id0.13"] = <
-                text = <"Total time spent on moderate activity per day">
-                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total did you spend doing these activities per day.">
-            >
-            ["id0.15"] = <
-                text = <"How many days in the last week have you carried out rigorous activities">
-                description = <"On how many days of the last week have you performed EXCITING activities for at least 10 continuous minutes or any activity that has greatly increased your breathing or heart rate">
-            >
             ["ac0.5"] = <
                 text = <"How many days in the last week have you carried out rigorous activities">
                 description = <"How many days in the last week have you carried out rigorous activities">
-            >
-            ["id0.17"] = <
-                text = <"Total time performing vigorous activities per day">
-                description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
-            >
-            ["id0.20"] = <
-                text = <"Main type of physical activity practiced in their leisure time.">
-                description = <"What is the main type of physical activity practiced at your leisure.">
             >
             ["at0.20"] = <
                 text = <"Does not practice physical activities">
