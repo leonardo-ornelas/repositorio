@@ -2159,20 +2159,20 @@ terminology
                 description = <"Regiões comuns do corpo onde a pressão arterial é registrada.">
             >
             ["at16"] = <
-                text = <"*Adult Thigh (en)">
-                description = <"*A cuff used for an adult thigh - bladder approx 20cm x 42cm. (en)">
+                text = <"Coxa de adulto">
+                description = <"Um manguito usado para uma coxa adulta - bexiga de aproximadamente 20cm x 42cm.">
             >
             ["at17"] = <
-                text = <"*Large Adult (en)">
-                description = <"*A cuff for adults with larger arms - bladder approx 16cm x 38cm. (en)">
+                text = <"Adulto grande">
+                description = <"Um manguito para adultos com braços maiores - bexiga aprox. 16cm x 38cm.">
             >
             ["at18"] = <
-                text = <"*Adult (en)">
-                description = <"*A cuff that is standard for an adult - bladder approx 13cm x 30cm. (en)">
+                text = <"Adulto">
+                description = <"Um manguito que é padrão para um adulto - bexiga aprox. 13cm x 30cm.">
             >
             ["at26"] = <
-                text = <"*Right arm (en)">
-                description = <"*The right arm of the person. (en)">
+                text = <"Braço direito">
+                description = <"O braço direito da pessoa.">
             >
             ["at27"] = <
                 text = <"*Left arm (en)">
