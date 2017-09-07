@@ -112,6 +112,20 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- How many days of the last week did moderate activity.
+                value matches {
+                    DV_CODED_TEXT[id0.12] matches {
+                        defining_code matches {[ac0.4]}
+                    }
+                }
+            }
+            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Total time spent on moderate activity per day
+                value matches {
+                    DV_TIME[id0.14] matches {
+                        value matches {*}
+                    }
+                }
+            }
         }
     }
 
@@ -163,7 +177,7 @@ terminology
                 description = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
             >
             ["ac0.4"] = <
-                text = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+                text = <"How many days of the last week did moderate activity">
                 description = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
             >
             ["at0.6"] = <
@@ -230,6 +244,14 @@ terminology
                 text = <"Total time the worker walked each day.">
                 description = <"Total time the worker walked each day.">
             >
+            ["id0.11"] = <
+                text = <"How many days of the last week did moderate activity.">
+                description = <"On how many days of the last week did MODERATE activities for at least 10 continuous minutes or any activity that did moderate increase in your breathing or heartbeat.">
+            >
+            ["id0.13"] = <
+                text = <"Total time spent on moderate activity per day">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total did you spend doing these activities per day.">
+            >
         >
     >
     value_sets = <
@@ -247,7 +269,7 @@ terminology
         >
         ["ac0.4"] = <
             id = <"ac0.4">
-            members = <"at0.5">
+            members = <"at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17", "at0.18", "at0.19">
         >
     >
 
