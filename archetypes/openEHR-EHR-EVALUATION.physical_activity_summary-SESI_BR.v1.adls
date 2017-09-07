@@ -51,6 +51,34 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Total time walked a day
+                value matches {
+                    DV_TIME[id0.11] matches {
+                        value matches {*}
+                    }
+                }
+            }
+            ELEMENT[id0.12] occurrences matches {0..1} matches {    -- How many days in the last week did moderate activity
+                value matches {
+                    DV_CODED_TEXT[id0.13] matches {
+                        defining_code matches {[ac0.4]}
+                    }
+                }
+            }
+            ELEMENT[id0.14] occurrences matches {0..1} matches {    -- Total time spent doing moderate activities per day.
+                value matches {
+                    DV_TIME[id0.15] matches {
+                        value matches {*}
+                    }
+                }
+            }
+            ELEMENT[id0.16] occurrences matches {0..1} matches {    -- How many days in the last week did vigorous activities
+                value matches {
+                    DV_CODED_TEXT[id0.17] matches {
+                        defining_code matches {[ac0.5]}
+                    }
+                }
+            }
         }
     }
 
@@ -145,6 +173,30 @@ terminology
                 text = <"How many days did you walk for at least 10 continuous minutes">
                 description = <"How many days did you walk for at least 10 continuous minutes">
             >
+            ["id0.10"] = <
+                text = <"Total time walked a day">
+                description = <"On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day.">
+            >
+            ["id0.12"] = <
+                text = <"How many days in the last week did moderate activity">
+                description = <"Record how many days in the last week you performed moderate activity">
+            >
+            ["ac0.4"] = <
+                text = <"How many days in the last week you performed moderate activity">
+                description = <"How many days in the last week you performed moderate activity">
+            >
+            ["id0.14"] = <
+                text = <"Total time spent doing moderate activities per day.">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
+            >
+            ["id0.16"] = <
+                text = <"How many days in the last week did vigorous activities">
+                description = <"Record how many days in the last week you performed vigorous activities">
+            >
+            ["ac0.5"] = <
+                text = <"How many days in the last week did vigorous activities">
+                description = <"How many days in the last week did vigorous activities">
+            >
         >
     >
     value_sets = <
@@ -158,6 +210,14 @@ terminology
         >
         ["ac0.3"] = <
             id = <"ac0.3">
+            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+        >
+        ["ac0.4"] = <
+            id = <"ac0.4">
+            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+        >
+        ["ac0.5"] = <
+            id = <"ac0.5">
             members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
         >
     >
