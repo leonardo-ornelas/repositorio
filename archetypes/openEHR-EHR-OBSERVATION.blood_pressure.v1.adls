@@ -1108,16 +1108,15 @@ terminology
         ["fa"] = <
             ["id1"] = <
                 text = <"فشار خون">
-                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.
-معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
             >
             ["id2"] = <
                 text = <"تاریخچه">
-                description = <"گره ساختاری تاریخچه ">
+                description = <"گره ساختاری تاریخچه">
             >
             ["id5"] = <
                 text = <"سیستولیک">
-                description = <"اوج فشار خون وریدی کلی که در سیستولیک یا فاز انقباضی چرخه گردش خون اندازه گیری می شود ">
+                description = <"اوج فشار خون وریدی کلی که در سیستولیک یا فاز انقباضی چرخه گردش خون اندازه گیری می شود">
             >
             ["id6"] = <
                 text = <"دیاستولیک">
@@ -1129,11 +1128,11 @@ terminology
             >
             ["id9"] = <
                 text = <"موقعیت">
-                description = <"موقعیت فرد در زمان اندازه گیری ">
+                description = <"موقعیت فرد در زمان اندازه گیری">
             >
             ["id12"] = <
                 text = <"ساختار لیست">
-                description = <"ساختار لیست ">
+                description = <"ساختار لیست">
             >
             ["id14"] = <
                 text = <"اندازه کاف">
@@ -1253,7 +1252,7 @@ terminology
             >
             ["id1031"] = <
                 text = <"تقلا">
-                description = <"جزییاتی درباره فعالیت فیزیکی انجام شده در زمان اندازه گیری فشار خون ">
+                description = <"جزییاتی درباره فعالیت فیزیکی انجام شده در زمان اندازه گیری فشار خون">
             >
             ["at1032"] = <
                 text = <"*Left ankle(en)">
@@ -1301,7 +1300,7 @@ terminology
             >
             ["id1044"] = <
                 text = <"وضعیت خواب">
-                description = <"وضعیت خواب- به تفسیر ثبتهای صورت گرفته از فشار خون در خانه در طول 24 ساعت کمک می کند ">
+                description = <"وضعیت خواب- به تفسیر ثبتهای صورت گرفته از فشار خون در خانه در طول 24 ساعت کمک می کند">
             >
             ["at1045"] = <
                 text = <"هشیار و بیدار">
@@ -1317,7 +1316,7 @@ terminology
             >
             ["id1053"] = <
                 text = <"عوامل مبهم">
-                description = <"نظردهی و ثبت سایر عوامل ضمنی که ممکن است به اندازه گیری فشار خون کمک کنند . به عنوان مثال سطح اضطراب یا \"سندرم روپوش سفید\"، درد یا تب ، تغییرات فشار جوی و غیره ">
+                description = <"نظردهی و ثبت سایر عوامل ضمنی که ممکن است به اندازه گیری فشار خون کمک کنند . به عنوان مثال سطح اضطراب یا \"سندرم روپوش سفید\"، درد یا تب ، تغییرات فشار جوی و غیره">
             >
             ["at1054"] = <
                 text = <"*Intra-arterial(en)">
@@ -1871,8 +1870,7 @@ terminology
         ["ru"] = <
             ["id1"] = <
                 text = <"АД">
-                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.
-">
+                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.">
             >
             ["id2"] = <
                 text = <"*history(en)">
@@ -2125,40 +2123,40 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Blood Pressure (en)">
-                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm. (en)">
+                text = <"Pressão sanguínea">
+                description = <"A medida local da pressão arterial que é um substituto para a arterial, pressão na circulação sistêmica. Mais comumente, o uso do termo \"pressão sanguínea\" refere-se à medida da pressão da artéria braquial na parte superior do braço.">
             >
             ["id2"] = <
-                text = <"*History (en)">
-                description = <"*History structural node. (en)">
+                text = <"História">
+                description = <"Nó estrutural da história.">
             >
             ["id5"] = <
-                text = <"*Systolic (en)">
-                description = <"*Peak systemic arterial blood pressure  - measured in systolic or contraction phase of the heart cycle. (en)">
+                text = <"Sistólica">
+                description = <"Pressão arterial sistêmica máxima - medida na fase sistólica ou de contração do ciclo cardíaco.">
             >
             ["id6"] = <
-                text = <"*Diastolic (en)">
-                description = <"*Minimum systemic arterial blood pressure - measured in the diastolic or relaxation phase of the heart cycle. (en)">
+                text = <"Diastólica">
+                description = <"Pressão arterial sistêmica arterial mínima - medida na fase diastólica ou de relaxamento do ciclo cardíaco.">
             >
             ["id7"] = <
-                text = <"*Any event (en)">
-                description = <"*Default event. (en)">
+                text = <"Qualquer evento">
+                description = <"Evento padrão.">
             >
             ["id9"] = <
-                text = <"*Position (en)">
-                description = <"*The position of the subject at the time of measurement. (en)">
+                text = <"Posição">
+                description = <"A posição do sujeito no momento da medição.">
             >
             ["id12"] = <
-                text = <"*List structure (en)">
-                description = <"*List structure. (en)">
+                text = <"Estrutura da lista">
+                description = <"Estrutura da lista.">
             >
             ["id14"] = <
-                text = <"*Cuff size (en)">
-                description = <"*The size of the cuff used for blood pressure measurement. (en)">
+                text = <"Tamanho do punho">
+                description = <"O tamanho do punho usado para a medição da pressão arterial.">
             >
             ["id15"] = <
-                text = <"*Location of measurement (en)">
-                description = <"*Common body sites where blood pressure is recorded. (en)">
+                text = <"Localização da medida">
+                description = <"Regiões comuns do corpo onde a pressão arterial é registrada.">
             >
             ["at16"] = <
                 text = <"*Adult Thigh (en)">
@@ -2189,8 +2187,8 @@ terminology
                 description = <"*The left thigh of the person. (en)">
             >
             ["id34"] = <
-                text = <"*Comment (en)">
-                description = <"*Comment on blood pressure measurement. (en)">
+                text = <"Comentário">
+                description = <"Comentário sobre a medição da pressão arterial.">
             >
             ["at1001"] = <
                 text = <"*Standing (en)">
@@ -2209,16 +2207,16 @@ terminology
                 description = <"*Lying flat at the time of blood pressure measurement. (en)">
             >
             ["id1006"] = <
-                text = <"*Tilt (en)">
-                description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement. (en)">
+                text = <"Inclinação">
+                description = <"A inclinação craniocaudal da superfície em que a pessoa está no momento da medição.">
             >
             ["id1007"] = <
-                text = <"*Mean Arterial Pressure (en)">
-                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle. (en)">
+                text = <"Pressão arterial média">
+                description = <"A pressão arterial média que ocorre durante todo o curso do ciclo de contração e relaxamento cardíaco.">
             >
             ["id1008"] = <
-                text = <"*Pulse Pressure (en)">
-                description = <"*The difference between the systolic and diastolic pressure. (en)">
+                text = <"Diferença de pressão">
+                description = <"A diferença entre a pressão sistólica e diastólica.">
             >
             ["at1009"] = <
                 text = <"*Small Adult (en)">
@@ -2229,8 +2227,8 @@ terminology
                 description = <"*A cuff that is appropriate for a child or adult with a thin arm - bladder approx 8cm x 21cm. (en)">
             >
             ["id1011"] = <
-                text = <"*Diastolic endpoint (en)">
-                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method. (en)">
+                text = <"Ponto de extremidade diastólica">
+                description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
             >
             ["at1012"] = <
                 text = <"*Phase IV (en)">
@@ -2261,16 +2259,16 @@ terminology
                 description = <"*The left wrist of the subject. (en)">
             >
             ["id1026"] = <
-                text = <"*Device (en)">
-                description = <"*Details about sphygmomanometer or other device used to measure the blood pressure. (en)">
+                text = <"Dispositivo">
+                description = <"Detalhes sobre esfigmomanômetro ou outro dispositivo usado para medir a pressão sanguínea.">
             >
             ["at1027"] = <
                 text = <"*Right ankle (en)">
                 description = <"*The right ankle of the subject. (en)">
             >
             ["id1031"] = <
-                text = <"*Exertion (en)">
-                description = <"*Details about physical activity undertaken at the time of blood pressure.measurement. (en)">
+                text = <"Esforço">
+                description = <"Detalhes sobre a atividade física realizada no momento da pressão arterial. Medição.">
             >
             ["at1032"] = <
                 text = <"*Left ankle (en)">
@@ -2281,16 +2279,16 @@ terminology
                 description = <"*A finger of the subject.  Identification of the finger can be recorded in 'Specific Location' data element, if required. (en)">
             >
             ["id1034"] = <
-                text = <"*Location (en)">
-                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology. (en)">
+                text = <"Localização">
+                description = <"Localização do corpo onde a pressão arterial é medida. Use 'Localização da medida' para selecionar locais comuns. Use 'Local específico' para registrar detalhes mais específicos ou um local que não esteja no conjunto comum ou para se referir a uma terminologia externa.">
             >
             ["id1035"] = <
-                text = <"*Specific location (en)">
-                description = <"*Specific details about the body site where blood pressure is recorded. (en)">
+                text = <"Localização específica">
+                description = <"Detalhes específicos sobre o local do corpo onde a pressão arterial é registrada.">
             >
             ["id1036"] = <
-                text = <"*Method (en)">
-                description = <"*Method of measurement of blood pressure. (en)">
+                text = <"Método">
+                description = <"Método de medição da pressão sanguínea.">
             >
             ["at1037"] = <
                 text = <"*Auscultation (en)">
@@ -2301,8 +2299,8 @@ terminology
                 description = <"*Method of measuring blood pressure externally, using palpation (usually of the brachial or radial arteries). (en)">
             >
             ["id1039"] = <
-                text = <"*Mean Arterial Pressure Formula (en)">
-                description = <"*Formula used to calculate the MAP (if recorded in data). (en)">
+                text = <"Fórmula de Pressão Arterial Média">
+                description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
             >
             ["at1040"] = <
                 text = <"*Machine (en)">
@@ -2313,12 +2311,12 @@ terminology
                 description = <"*Method of measuring blood pressure internally ie involving penetration of the skin and measuring inside blood vessels. (en)">
             >
             ["id1043"] = <
-                text = <"*24 hour average (en)">
-                description = <"*Estimate of the average blood pressure over a 24 hour period. (en)">
+                text = <"Média de 24 horas">
+                description = <"Estimativa da pressão arterial média durante um período de 24 horas.">
             >
             ["id1044"] = <
-                text = <"*Sleep status (en)">
-                description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+                text = <"Status do sono">
+                description = <"Status do sono - suporta a interpretação dos registros de pressão arterial ambulatorial de 24 horas.">
             >
             ["at1045"] = <
                 text = <"*Alert & awake (en)">
@@ -2333,8 +2331,8 @@ terminology
                 description = <"*A toe of the subject.   Identification of the toe can be recorded in 'Specific Location' data element, if required. (en)">
             >
             ["id1053"] = <
-                text = <"*Confounding factors (en)">
-                description = <"*Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc. (en)">
+                text = <"Fatores de complicação">
+                description = <"Comente e registre outros fatores incidentais que podem estar contribuindo para a medição da pressão arterial. Por exemplo, nível de ansiedade ou \"síndrome do casaco branco\"; dor ou febre; mudanças na pressão atmosférica, etc.">
             >
             ["at1054"] = <
                 text = <"*Intra-arterial (en)">
