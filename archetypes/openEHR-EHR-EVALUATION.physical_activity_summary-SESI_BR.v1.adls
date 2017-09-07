@@ -1,0 +1,113 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.physical_activity_summary.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© 2010 NEHTA">
+    details = <
+        ["en"] = <
+            keywords = <"activity", "exercise", "physical", "fitness">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used to record diary-like observations of physical activity.">
+            purpose = <"To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual.">
+            use = <"Use to record a summary of physical activity.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Hugh Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"hugh.leslie@oceaninformatics.com">
+        ["date"] = <"17/12/2010">
+    >
+    other_contributors = <"Stephen Chu, NEHTA, Australia">
+
+definition
+    EVALUATION[id1.1] matches {    -- Physical Activity Summary
+        /data[id2]/items matches {
+            ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Physical activity practiced outside work
+                value matches {
+                    DV_CODED_TEXT[id0.5] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- Do some regular physical activity at your leisure
+                value matches {
+                    DV_CODED_TEXT[id0.7] matches {
+                        defining_code matches {[ac0.2]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id0.4"] = <
+                text = <"Physical activity practiced outside work">
+                description = <"Report physical activity practiced outside of work">
+            >
+            ["at0.1"] = <
+                text = <"Regular">
+                description = <"Regular">
+            >
+            ["at0.2"] = <
+                text = <"Irregular">
+                description = <"Irregular">
+            >
+            ["ac0.1"] = <
+                text = <"Physical activity practiced outside work">
+                description = <"Physical activity practiced outside work">
+            >
+            ["id0.6"] = <
+                text = <"Do some regular physical activity at your leisure">
+                description = <"Do some kind of physical activity at your leisure regulating, such as physical exercises (gymnastics, walking, running, sports, dancing or martial arts)">
+            >
+            ["at0.3"] = <
+                text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+                description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+            >
+            ["at0.4"] = <
+                text = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+                description = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+            >
+            ["at0.5"] = <
+                text = <"YES, 1 or 2 times a week.">
+                description = <"YES, 1 or 2 times a week.">
+            >
+            ["at0.6"] = <
+                text = <"YES, 3 or 4 times a week.">
+                description = <"YES, 3 or 4 times a week.">
+            >
+            ["at0.7"] = <
+                text = <"YES, 5 or more times per week.">
+                description = <"YES, 5 or more times per week.">
+            >
+            ["ac0.2"] = <
+                text = <"Do some regular physical activity at your leisure">
+                description = <"Do some regular physical activity at your leisure">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.3", "at0.4", "at0.5", "at0.6", "at0.7">
+        >
+    >
+
