@@ -91,7 +91,13 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.5] occurrences matches {0..1}     -- Regularly perform some type of physical activity at leisure
+            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Regularly perform some type of physical activity at leisure
+                value matches {
+                    DV_CODED_TEXT[id0.7] matches {
+                        defining_code matches {[ac0.2]}
+                    }
+                }
+            }
             ELEMENT[id0.6] occurrences matches {0..1}     -- How many days did you walk for at least 10 continuous minutes
         }
     }
