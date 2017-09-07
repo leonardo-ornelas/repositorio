@@ -1,0 +1,140 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.imaging_exam.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© 2011 NEHTA">
+    details = <
+        ["en"] = <
+            keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"To record activity regarding the performance of imaging examinations.">
+            use = <"Use to record activity regarding the performance of imaging examinations.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Sam Heard">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"sam.heard@oceaninformatics.com">
+        ["date"] = <"17/04/2006">
+    >
+    other_contributors = <"Heather Leslie, Ocean Informatics, Australia">
+
+definition
+    ACTION[id1.1] matches {    -- Imaging examination
+        ism_transition matches {
+            ISM_TRANSITION[id24] matches {
+                /current_state[id25]/defining_code matches {[at16]}
+                /careflow_step[id26]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id27] matches {
+                /current_state[id28]/defining_code matches {[at16]}
+                /careflow_step[id29]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id30] matches {
+                /current_state[id31]/defining_code matches {[at17]}
+                /careflow_step[id32]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id33] matches {
+                /current_state[id34]/defining_code matches {[at18]}
+                /careflow_step[id35]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id36] matches {
+                /current_state[id37]/defining_code matches {[at19]}
+                /careflow_step[id38]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id39] matches {
+                /current_state[id40]/defining_code matches {[at19]}
+                /careflow_step[id41]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id42] matches {
+                /current_state[id43]/defining_code matches {[at20]}
+                /careflow_step[id44]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id45] matches {
+                /current_state[id46]/defining_code matches {[at20]}
+                /careflow_step[id47]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id48] matches {
+                /current_state[id49]/defining_code matches {[at21]}
+                /careflow_step[id50]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id51] matches {
+                /current_state[id52]/defining_code matches {[at22]}
+                /careflow_step[id53]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id54] matches {
+                /current_state[id55]/defining_code matches {[at23]}
+                /careflow_step[id56]/defining_code matches {[at8]}
+            }
+        }
+        /description[id2]/items matches {
+            allow_archetype CLUSTER[id23] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id22] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Physical activity for work
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Imaging examination">
+                description = <"Clinical activity about performing an imaging examination.">
+            >
+            ["id0.2"] = <
+                text = <"Physical activity for work">
+                description = <"Do physical activity for work">
+            >
+            ["at0.1"] = <
+                text = <"Regular">
+                description = <"Regular">
+            >
+            ["at0.2"] = <
+                text = <"Irregular">
+                description = <"Irregular">
+            >
+            ["ac0.1"] = <
+                text = <"Regular">
+                description = <"Do physical activity for work">
+            >
+            ["at0.3"] = <
+                text = <"Irregular">
+                description = <"Irregular">
+            >
+            ["ac0.2"] = <
+                text = <"Irregular">
+                description = <"Irregular">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.3">
+        >
+    >
+
