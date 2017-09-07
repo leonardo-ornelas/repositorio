@@ -44,6 +44,13 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.8] occurrences matches {0..1} matches {    -- How many days did you walk for at least 10 continuous minutes
+                value matches {
+                    DV_CODED_TEXT[id0.9] matches {
+                        defining_code matches {[ac0.3]}
+                    }
+                }
+            }
         }
     }
 
@@ -98,6 +105,46 @@ terminology
                 text = <"Do some regular physical activity at your leisure">
                 description = <"Do some regular physical activity at your leisure">
             >
+            ["id0.8"] = <
+                text = <"How many days did you walk for at least 10 continuous minutes">
+                description = <"On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise.">
+            >
+            ["at0.8"] = <
+                text = <"None">
+                description = <"None">
+            >
+            ["at0.9"] = <
+                text = <"1 day">
+                description = <"1 day">
+            >
+            ["at0.10"] = <
+                text = <"2 days">
+                description = <"2 days">
+            >
+            ["at0.11"] = <
+                text = <"3 days">
+                description = <"3 days">
+            >
+            ["at0.12"] = <
+                text = <"4 days">
+                description = <"4 days">
+            >
+            ["at0.13"] = <
+                text = <"5 days">
+                description = <"5 days">
+            >
+            ["at0.14"] = <
+                text = <"6 days">
+                description = <"6 days">
+            >
+            ["at0.15"] = <
+                text = <"7 days">
+                description = <"7 days">
+            >
+            ["ac0.3"] = <
+                text = <"How many days did you walk for at least 10 continuous minutes">
+                description = <"How many days did you walk for at least 10 continuous minutes">
+            >
         >
     >
     value_sets = <
@@ -108,6 +155,10 @@ terminology
         ["ac0.2"] = <
             id = <"ac0.2">
             members = <"at0.3", "at0.4", "at0.5", "at0.6", "at0.7">
+        >
+        ["ac0.3"] = <
+            id = <"ac0.3">
+            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
         >
     >
 
