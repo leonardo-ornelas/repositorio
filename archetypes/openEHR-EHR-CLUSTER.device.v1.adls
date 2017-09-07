@@ -212,7 +212,7 @@ terminology
             >
             ["id2"] = <
                 text = <"ID">
-                description = <"ID naprave ">
+                description = <"ID naprave">
             >
             ["id3"] = <
                 text = <"Opis">
@@ -248,7 +248,7 @@ terminology
             >
             ["id14"] = <
                 text = <"Varnostna navodila">
-                description = <"Varnostna navodila ">
+                description = <"Varnostna navodila">
             >
             ["id15"] = <
                 text = <"Tip navodil">
@@ -277,64 +277,64 @@ terminology
                 description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
             >
             ["id2"] = <
-                text = <"*Device name (en)">
-                description = <"*Identification of the device.  This is very likely to be a coded field, including pre- or post-coordianted details. (en)">
+                text = <"Nome do dispositivo">
+                description = <"Identificação do dispositivo. É muito provável que seja um campo codificado, incluindo detalhes pré ou pós-coordenados.">
             >
             ["id3"] = <
-                text = <"*Description (en)">
-                description = <"*Description of the device. (en)">
+                text = <"Descrição">
+                description = <"Descrição do dispositivo.">
             >
             ["id4"] = <
-                text = <"*Type (en)">
-                description = <"*Type of device. (en)">
+                text = <"Tipo">
+                description = <"Tipo do dispositivo.">
             >
             ["id5"] = <
-                text = <"*Manufacturer (en)">
-                description = <"*The name of the device manufacturer. (en)">
+                text = <"Fabricante">
+                description = <"O nome do fabricante do dispositivo.">
             >
             ["id6"] = <
-                text = <"*Date of manufacture (en)">
-                description = <"*Date the device was manufactured. (en)">
+                text = <"Data de fabricação">
+                description = <"Data que o dispositivo foi fabricado.">
             >
             ["id7"] = <
-                text = <"*Batch number (en)">
-                description = <"*Manufacturer's batch number. (en)">
+                text = <"Número do lote">
+                description = <"Número do lote do fabricante.">
             >
             ["id8"] = <
-                text = <"*Date of expiry (en)">
-                description = <"*Date that the device/product is no longer fit for use. (en)">
+                text = <"Data de validade">
+                description = <"Data em que o dispositivo / produto já não é adequado para uso.">
             >
             ["id9"] = <
-                text = <"*Comment (en)">
-                description = <"*Comment about the device. (en)">
+                text = <"Comentário">
+                description = <"Comentários sobre o dispositivo.">
             >
             ["id10"] = <
-                text = <"*Additional Details (en)">
-                description = <"*Additional details to be noted about the device. (en)">
+                text = <"Detalhes adicionais">
+                description = <"Detalhes adicionais a serem observados sobre o dispositivo.">
             >
             ["id14"] = <
-                text = <"*Safety feature (en)">
-                description = <"*Details about safety feature(s) of the device. (en)">
+                text = <"Funcionalidade de segurança">
+                description = <"Detalhes sobre recursos de segurança do dispositivo.">
             >
             ["id15"] = <
-                text = <"*Type of feature (en)">
-                description = <"*Type of safety feature of the device. (en)">
+                text = <"Tipo de funcionalidade">
+                description = <"Tipo da funcionalidade de segurança do dispositivo.">
             >
             ["id16"] = <
-                text = <"*Description (en)">
-                description = <"*Description of the safety feature of the device. (en)">
+                text = <"Descrição">
+                description = <"Descrição da funcionalidade de segurança do dispositivo.">
             >
             ["id17"] = <
-                text = <"*Size (en)">
-                description = <"*Size of device - a choice of value types is offered - count, quantity or text. (en)">
+                text = <"Tamanho">
+                description = <"Tamanho do dispositivo - é oferecida uma escolha de tipos de valor - contagem, quantidade ou texto.">
             >
             ["id18"] = <
-                text = <"*Dimensions (en)">
-                description = <"*Specific dimensions of the device. (en)">
+                text = <"Dimensões">
+                description = <"Especifique as dimensões do dispositivo.">
             >
             ["id21"] = <
-                text = <"*Components (en)">
-                description = <"*Information about the device sub-components. (en)">
+                text = <"Componentes">
+                description = <"Informações sobre os subcomponentes do dispositivo.">
             >
         >
     >
