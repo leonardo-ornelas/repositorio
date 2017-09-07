@@ -67,7 +67,7 @@
     "rmType" : "CLUSTER",
     "name" : "Organisation",
     "path" : "archetypes/openEHR-EHR-CLUSTER.organisation.v1.adls",
-    "sha" : "c88c5529570d2214d6c5d5a25cfa7d031d7d0997",
+    "sha" : "03d16a0c4e936aefdc63746fd1bffa588c68a954",
     "languages" : [ "en", "de" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.problem_status.v1.0.0",
@@ -621,5 +621,47 @@
     "path" : "archetypes/openEHR-EHR-CLUSTER.exam.v1.adls",
     "sha" : "5c7eb73d2a28ad089926a32d15eed8e9adada355",
     "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.address.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Address",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.address.v1.adls",
+    "sha" : "c4d707cdbf28d8ba09a5b0b3ba244f2179c33eff",
+    "languages" : [ "en", "de" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.individual_professional.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Professional Individual demographics",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.individual_professional.v1.adls",
+    "sha" : "60416106764eb63a7a0d89b21ac3a6d1fe7c7c7d",
+    "languages" : [ "en", "de" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.person_name.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Person name",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.person_name.v1.adls",
+    "sha" : "c06de58dd63bf3e8be0694fe1bf61674f090e805",
+    "languages" : [ "en", "de", "ar-sy", "es-ar" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.professional_role.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Professional role",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.professional_role.v1.adls",
+    "sha" : "73286bff3c0dfa92f8db1e906666599651c498e6",
+    "languages" : [ "en", "de" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.telecom_details.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Telecom details",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.telecom_details.v1.adls",
+    "sha" : "1b77a562f7adac5872fa8e7436fd8fbf0e4e9004",
+    "languages" : [ "en", "de" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.atendimento.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.atendimento.v1.adls",
+    "sha" : "9641b408a59455dfde8a0522dbbb94aee3651238",
+    "languages" : [ "pt-br", "en", "sl", "pt-br" ]
   } ]
 }
