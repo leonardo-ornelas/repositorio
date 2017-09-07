@@ -2151,8 +2151,8 @@ terminology
                 description = <"Estrutura da lista.">
             >
             ["id14"] = <
-                text = <"Tamanho do punho">
-                description = <"O tamanho do punho usado para a medição da pressão arterial.">
+                text = <"Tamanho do manguito">
+                description = <"O tamanho do manguito usado para a medição da pressão arterial.">
             >
             ["id15"] = <
                 text = <"Localização da medida">
@@ -2252,11 +2252,11 @@ terminology
             >
             ["at1021"] = <
                 text = <"Pulso direito">
-                description = <"O pulso direito do assunto.">
+                description = <"O pulso direito do sujeito.">
             >
             ["at1022"] = <
                 text = <"Pulso esquerdo">
-                description = <"O pulso esquerdo do assunto.">
+                description = <"O pulso esquerdo do sujeito.">
             >
             ["id1026"] = <
                 text = <"Dispositivo">
@@ -2264,7 +2264,7 @@ terminology
             >
             ["at1027"] = <
                 text = <"Tornozelo direito">
-                description = <"O tornozelo direito do assunto.">
+                description = <"O tornozelo direito do sujeito.">
             >
             ["id1031"] = <
                 text = <"Esforço">
@@ -2272,11 +2272,11 @@ terminology
             >
             ["at1032"] = <
                 text = <"Tornozelo esquerdo">
-                description = <"O tornozelo esquerdo do assunto.">
+                description = <"O tornozelo esquerdo do sujeito.">
             >
             ["at1033"] = <
                 text = <"Dedo">
-                description = <"O dedo do assunto. A identificação do dedo pode ser registrada no elemento de dados \"Localização específica\", se necessário.">
+                description = <"O dedo do sujeito. A identificação do dedo pode ser registrada no elemento de dados \"Localização específica\", se necessário.">
             >
             ["id1034"] = <
                 text = <"Localização">
