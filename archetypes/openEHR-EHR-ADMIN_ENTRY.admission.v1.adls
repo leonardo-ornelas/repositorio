@@ -387,7 +387,7 @@ terminology
             >
             ["at63"] = <
                 text = <"Australian Health Care Agreements">
-                description = <"Australian Health Care Agreements ">
+                description = <"Australian Health Care Agreements">
             >
             ["at64"] = <
                 text = <"Private health insurance">
@@ -1202,80 +1202,80 @@ terminology
                 description = <"Modo de tratamento previsto.">
             >
             ["at4"] = <
-                text = <"*Inpatient/overnight patient (en)">
-                description = <"*Inpatient/overnight patient (en)">
+                text = <"Paciente hospitalizado / pernoite">
+                description = <"Paciente hospitalizado / pernoite">
             >
             ["at5"] = <
-                text = <"*Same day patient (en)">
-                description = <"*Same day patient (en)">
+                text = <"Paciente dia">
+                description = <"Paciente dia">
             >
             ["at6"] = <
-                text = <"*Outpatient (en)">
-                description = <"*Outpatient (en)">
+                text = <"Paciente Ambulatorial / Não residente">
+                description = <"Paciente Ambulatorial / Não residente">
             >
             ["at7"] = <
-                text = <"*Emergency patient (en)">
-                description = <"*Emergency patient (en)">
+                text = <"Paciente de emergência">
+                description = <"Paciente de emergência">
             >
             ["at8"] = <
-                text = <"*Community client (en)">
-                description = <"*Community client (en)">
+                text = <"Cliente da comunidade">
+                description = <"Cliente da comunidade">
             >
             ["at9"] = <
-                text = <"*Pre-admit (en)">
-                description = <"*Pre-admit (en)">
+                text = <"Pré-admitir">
+                description = <"Pré-admitir">
             >
             ["at10"] = <
-                text = <"*Commercial account (en)">
-                description = <"*Commercial account (en)">
+                text = <"Conta comercial">
+                description = <"Conta comercial">
             >
             ["at11"] = <
-                text = <"*Not-applicable (en)">
-                description = <"*Not-applicable (en)">
+                text = <"Não aplicável">
+                description = <"Não aplicável">
             >
             ["at12"] = <
-                text = <"*Unknown (en)">
-                description = <"*Unknown (en)">
+                text = <"Desconhecido">
+                description = <"Desconhecido">
             >
             ["id14"] = <
                 text = <"Tipo de admissão">
                 description = <"A circunstância sob a qual o paciente será admitido.">
             >
             ["at15"] = <
-                text = <"*Accident (en)">
-                description = <"*Accident (en)">
+                text = <"Acidente">
+                description = <"Acidente">
             >
             ["at16"] = <
-                text = <"*Emergency (en)">
-                description = <"*Emergency (en)">
+                text = <"Emergência">
+                description = <"Emergência">
             >
             ["at17"] = <
-                text = <"*Labour & Delivery (en)">
-                description = <"*Labour & Delivery (en)">
+                text = <"Trabalho e Entrega">
+                description = <"Trabalho e Entrega">
             >
             ["at18"] = <
-                text = <"*Routine (en)">
-                description = <"*Routine (en)">
+                text = <"Rotina">
+                description = <"Rotina">
             >
             ["at19"] = <
-                text = <"*Newborn (en)">
-                description = <"*Newborn (en)">
+                text = <"Recém nascido">
+                description = <"Recém nascido">
             >
             ["at20"] = <
-                text = <"*Urgent (en)">
-                description = <"*Urgent (en)">
+                text = <"Urgente">
+                description = <"Urgente">
             >
             ["at21"] = <
-                text = <"*Elective (en)">
-                description = <"*Elective (en)">
+                text = <"Eletivo">
+                description = <"Eletivo">
             >
             ["at22"] = <
-                text = <"*Geriatric respite admission (en)">
-                description = <"*Geriatric respite admission (en)">
+                text = <"Admissão de intervalo geriátrico">
+                description = <"Admissão de intervalo geriátrico">
             >
             ["at23"] = <
-                text = <"*Statistical admission (en)">
-                description = <"*Statistical admission (en)">
+                text = <"Estatística de admissão">
+                description = <"Estatística de admissão">
             >
             ["id24"] = <
                 text = <"Número de pré-admissão">
@@ -1302,20 +1302,20 @@ terminology
                 description = <"*">
             >
             ["at63"] = <
-                text = <"*Australian Health Care Agreements (en)">
-                description = <"*Australian Health Care Agreements  (en)">
+                text = <"Acordos Australianos de Saúde">
+                description = <"Acordos Australianos de Saúde">
             >
             ["at64"] = <
-                text = <"*Private health insurance (en)">
-                description = <"*Private health insurance (en)">
+                text = <"Seguro de saúde privado">
+                description = <"Seguro de saúde privado">
             >
             ["at65"] = <
-                text = <"*Self-funded (en)">
-                description = <"*Self-funded (en)">
+                text = <"Autofinanciado">
+                description = <"Autofinanciado">
             >
             ["at66"] = <
-                text = <"*Worker's compensation (en)">
-                description = <"*Worker's compensation (en)">
+                text = <"Compensação dos trabalhadores">
+                description = <"Compensação dos trabalhadores">
             >
             ["id67"] = <
                 text = <"Indicador de preço">
@@ -1350,8 +1350,8 @@ terminology
                 description = <"*">
             >
             ["at83"] = <
-                text = <"*Clinic (en)">
-                description = <"** (en)">
+                text = <"Clínica">
+                description = <"*">
             >
             ["id85"] = <
                 text = <"Endereço">
@@ -1378,20 +1378,20 @@ terminology
                 description = <"*">
             >
             ["at91"] = <
-                text = <"*Home (en)">
-                description = <"** (en)">
+                text = <"Lar">
+                description = <"*">
             >
             ["at92"] = <
-                text = <"*Department (en)">
-                description = <"** (en)">
+                text = <"Departamento">
+                description = <"*">
             >
             ["at93"] = <
-                text = <"*Nursing unit (en)">
-                description = <"** (en)">
+                text = <"Unidade de enfermagem">
+                description = <"*">
             >
             ["at94"] = <
-                text = <"*Provider's office (en)">
-                description = <"** (en)">
+                text = <"Escritório do provedor">
+                description = <"*">
             >
             ["id95"] = <
                 text = <"Localização anterior do paciente">
@@ -1442,44 +1442,44 @@ terminology
                 description = <"** (en)">
             >
             ["at109"] = <
-                text = <"*DNS (en)">
-                description = <"** (en)">
+                text = <"DNS">
+                description = <"*">
             >
             ["at110"] = <
-                text = <"*GUID (en)">
-                description = <"** (en)">
+                text = <"GUID">
+                description = <"*">
             >
             ["at111"] = <
-                text = <"*HCD (en)">
-                description = <"** (en)">
+                text = <"HCD">
+                description = <"*">
             >
             ["at112"] = <
-                text = <"*HL7 (en)">
-                description = <"** (en)">
+                text = <"HL7">
+                description = <"*">
             >
             ["at113"] = <
-                text = <"*ISO (en)">
-                description = <"** (en)">
+                text = <"ISO">
+                description = <"*">
             >
             ["at114"] = <
-                text = <"*L, M, N (en)">
-                description = <"** (en)">
+                text = <"L, M, N">
+                description = <"*">
             >
             ["at115"] = <
-                text = <"*Random (en)">
-                description = <"** (en)">
+                text = <"Aleatória">
+                description = <"*">
             >
             ["at116"] = <
-                text = <"*UUID (en)">
-                description = <"** (en)">
+                text = <"UUID">
+                description = <"*">
             >
             ["at117"] = <
-                text = <"*x400 (en)">
-                description = <"** (en)">
+                text = <"x400">
+                description = <"*">
             >
             ["at119"] = <
-                text = <"*x500 (en)">
-                description = <"** (en)">
+                text = <"x500">
+                description = <"*">
             >
             ["id120"] = <
                 text = <"*Facility (en)">
@@ -1494,40 +1494,40 @@ terminology
                 description = <"Consultor responsável pelo atendimento do paciente, incluindo especialista assalariado e médico visitante.">
             >
             ["at123"] = <
-                text = <"*Motor vehicle third party personal claim (en)">
-                description = <"** (en)">
+                text = <"Reclamação pessoal de terceiros de veículos a motor">
+                description = <"*">
             >
             ["at124"] = <
-                text = <"*Other compensation (e.g. public liability, common law, medical negligence) (en)">
-                description = <"** (en)">
+                text = <"Outras compensações (por exemplo, responsabilidade pública, direito comum, negligência médica)">
+                description = <"*">
             >
             ["at125"] = <
-                text = <"*Department of Veterans' Affairs (en)">
-                description = <"** (en)">
+                text = <"Departamento de Negócios de Veteranos">
+                description = <"*">
             >
             ["at126"] = <
-                text = <"*Department of Defence (en)">
-                description = <"** (en)">
+                text = <"Departamento de Defesa">
+                description = <"*">
             >
             ["at127"] = <
-                text = <"*Correctional facility (en)">
-                description = <"** (en)">
+                text = <"Instituição correcional">
+                description = <"*">
             >
             ["at128"] = <
-                text = <"*Other hospital or public authority (contracted care) (en)">
-                description = <"** (en)">
+                text = <"Outro hospital ou autoridade pública (atendimento contratado)">
+                description = <"*">
             >
             ["at129"] = <
-                text = <"*Reciprocal health care agreements (with other countries) (en)">
-                description = <"** (en)">
+                text = <"Acordos de cuidados de saúde recíprocos (com outros países)">
+                description = <"*">
             >
             ["at130"] = <
-                text = <"*Other (en)">
-                description = <"** (en)">
+                text = <"Outros">
+                description = <"*">
             >
             ["at131"] = <
-                text = <"*Not known (en)">
-                description = <"** (en)">
+                text = <"Não sabe">
+                description = <"*">
             >
             ["ac2"] = <
                 text = <"*Any term that 'is a' 'Charge price indicator' (en)">
