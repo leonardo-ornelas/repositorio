@@ -1426,20 +1426,20 @@ terminology
                 description = <"*">
             >
             ["id105"] = <
-                text = <"Instalação">
+                text = <"Instituição">
                 description = <"*">
             >
             ["id106"] = <
-                text = <"*Namespace ID (en)">
-                description = <"** (en)">
+                text = <"Código de Identificação do Namespace">
+                description = <"*">
             >
             ["id107"] = <
-                text = <"*Universal ID (en)">
-                description = <"** (en)">
+                text = <"Código de Identificação Universal">
+                description = <"*">
             >
             ["id108"] = <
-                text = <"*Universal ID type (en)">
-                description = <"** (en)">
+                text = <"Tipo do código de identificação universal">
+                description = <"*">
             >
             ["at109"] = <
                 text = <"DNS">
@@ -1482,8 +1482,8 @@ terminology
                 description = <"*">
             >
             ["id120"] = <
-                text = <"*Facility (en)">
-                description = <"** (en)">
+                text = <"Instituição">
+                description = <"*">
             >
             ["id121"] = <
                 text = <"Último nome">
