@@ -201,8 +201,7 @@ terminology
             >
             ["id56"] = <
                 text = <"Clinical stage/grade">
-                description = <"Clinical stage or grade of a problem/diagnosis.   
-Note: May include formal severity assessments.">
+                description = <"Clinical stage or grade of a problem/diagnosis.   Note: May include formal severity assessments.">
             >
             ["id57"] = <
                 text = <"Relationship type">
@@ -327,41 +326,40 @@ Note: May include formal severity assessments.">
                 description = <"A idade estimada ou real do indivíduo quando o clínico avalia que o problema / diagnóstico começou. Nota: Pode ser importante em situações em que as aproximações de idade com base nos cálculos não são suficientemente precisas, por exemplo, em lactentes com menos de um ano.">
             >
             ["id45"] = <
-                text = <"*Anatomical location (en)">
-                description = <"*Slot to contain detailed and structured anatomical location details. (en)">
+                text = <"Localização anatômica">
+                description = <"Slot deve conter detalhes detalhados e estruturados da localização anatômica.">
             >
             ["id55"] = <
-                text = <"*Diagnostic criteria (en)">
-                description = <"*The criteria on which the problem/diagnosis is based. (en)">
+                text = <"Critério de diagnóstico">
+                description = <"Os critérios em que o problema / diagnóstico se baseia.">
             >
             ["id56"] = <
-                text = <"*Clinical stage/grade (en)">
-                description = <"*Clinical stage or grade of a problem/diagnosis.   
-Note: May include formal severity assessments. (en)">
+                text = <"Estágio/grau clínico">
+                description = <"Estágio clínico ou grau de um problema / diagnóstico. Nota: pode incluir avaliações de gravidade formal.">
             >
             ["id57"] = <
-                text = <"*Relationship type (en)">
-                description = <"*The type of relationship that this problem/diagnosis has to the related item. (en)">
+                text = <"Tipo de relacionamento">
+                description = <"O tipo de relacionamento que este problema / diagnóstico tem com o item relacionado.">
             >
             ["id70"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about the problem or diagnosis not captured in other fields. (en)">
+                text = <"Comentário">
+                description = <"Narração adicional sobre o problema ou diagnóstico não capturado em outros campos.">
             >
             ["id73"] = <
-                text = <"*Description (en)">
-                description = <"*A narrative description, including outcomes and other key details, about occurrences or exacerbations of the problem/diagnosis. (en)">
+                text = <"Descrição">
+                description = <"Uma descrição narrativa, incluindo resultados e outros detalhes-chave, sobre ocorrências ou exacerbações do problema / diagnóstico.">
             >
             ["id74"] = <
-                text = <"*Link to occurrence details (en)">
-                description = <"*Link to further information about past occurrences or exacerbations of the problem/diagnosis that exist elsewhere in the health record. (en)">
+                text = <"Link de detalhes da ocorrência">
+                description = <"Vincule informações adicionais sobre ocorrências passadas ou exacerbações do problema / diagnóstico que existem em outro lugar no registro de saúde.">
             >
             ["id76"] = <
-                text = <"*Link to supporting clinical evidence (en)">
-                description = <"*Links to other relevant information, including pathology reports. (en)">
+                text = <"Link de suporte de evidência clínica">
+                description = <"Links para outras informações relevantes, incluindo relatórios de patologia.">
             >
             ["id77"] = <
-                text = <"*Status (en)">
-                description = <"*Descriptor for context- or use-case specific label or workflow-related aspect of the diagnostic process which may not be safe to exchange between systems or use in a shared environment. Examples include: active/inactive; primary/secondary; preliminary/provisional/working/final. (en)">
+                text = <"Status">
+                description = <"Descritor para o rótulo específico do caso de contexto ou de uso ou o aspecto relacionado ao fluxo de trabalho do processo de diagnóstico que pode não ser seguro para trocar entre sistemas ou usar em um ambiente compartilhado. Exemplos incluem: ativo / inativo; primário secundário; preliminar / provisório / trabalhando / final.">
             >
             ["at81"] = <
                 text = <"*Caused by (en)">
@@ -372,8 +370,8 @@ Note: May include formal severity assessments. (en)">
                 description = <"*This value identifies the sequence of events between the related items, but does not assert causality.  This can be used for sequelae or late effects.  Note: Where no causality or sequence of events is known, this relationship type should be left blank. (en)">
             >
             ["id83"] = <
-                text = <"*Severity (en)">
-                description = <"*A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician. Coding of the severity with a terminology is preferred, where possible. (en)">
+                text = <"Gravidade">
+                description = <"Uma avaliação subjetiva da gravidade do Problema / Diagnóstico conforme avaliado pelo clínico. A codificação da gravidade com uma terminologia é preferida, sempre que possível.">
             >
             ["at83"] = <
                 text = <"*Frequency (en)">
