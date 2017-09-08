@@ -51,7 +51,7 @@ Não deve ser usado para registrar procedimentos - use o arquétipo ACTION.Proce
 
 Não deve ser usado para registrar sintomas ou sinais - estes devem ser registrados como parte de uma história de paciente ou história. Um problema como \"Dor no peito\" pode se disfarçar como sintoma, no entanto, neste contexto, estamos gravando isso como um problema que a pessoa tem.">
             purpose = <"Para registrar detalhes sobre um problema ou diagnóstico por um clínico.">
-            use = <"Use para registrar informações detalhadas sobre problemas ou diagnósticos reconhecidos por um clínico. Há muitos usos, incluindo: gravar um diagnóstico durante uma consulta; preencher uma lista de problemas ou uma declaração resumida, como um sumário de alta.Use para gravar todos os problemas ou diagnósticos, incluindo aqueles com qualificadores específicos do contexto, como passado / presente, primário / secundário, ativo / inativo, etc. Esses qualificadores podem ser arquetípicos separados e incluídos no slot 'Status', porque seu uso varia de acordo com suas configurações.">
+            use = <"Use para registrar informações detalhadas sobre problemas ou diagnósticos reconhecidos por um clínico. Há muitos usos, incluindo: gravar um diagnóstico durante uma consulta; preencher uma lista de problemas ou uma anamnese, ou um sumário de alta.Use para gravar todos os problemas ou diagnósticos, incluindo aqueles com qualificadores específicos do contexto, como passado / presente, primário / secundário, ativo / inativo, etc. Esses qualificadores podem ser arquetípicos separados e incluídos no slot 'Status', porque seu uso varia de acordo com suas configurações.">
         >
     >
     lifecycle_state = <"unmanaged">
