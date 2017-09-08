@@ -38,6 +38,9 @@ It may be necessary to identify each Genetic Relative specifically and not just 
 definition
     EVALUATION[id1.1] matches {    -- Family History
         /data[id2]/items[id4]/items matches {
+            ELEMENT[id17] occurrences matches {0..1} matches {
+                /value[id32]/defining_code matches {[ac0.2]}
+            }
             ELEMENT[id24] occurrences matches {0..1} matches {
                 /value[id34]/value matches {True}
             }
@@ -89,12 +92,36 @@ terminology
                 text = <"Family illness">
                 description = <"Family illness">
             >
+            ["at0.4"] = <
+                text = <"Father">
+                description = <"Father">
+            >
+            ["at0.5"] = <
+                text = <"Mother">
+                description = <"Mother">
+            >
+            ["at0.6"] = <
+                text = <"Grandparents">
+                description = <"Grandparents">
+            >
+            ["at0.7"] = <
+                text = <"Brothers/Sisters">
+                description = <"Brothers/Sisters">
+            >
+            ["ac0.2"] = <
+                text = <"Relationship">
+                description = <"Relationship">
+            >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
             members = <"at0.1", "at0.2", "at0.3">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.4", "at0.5", "at0.6", "at0.7">
         >
     >
 
