@@ -258,16 +258,16 @@ terminology
                 description = <"Registre o tipo de diagnóstico">
             >
             ["at0.1"] = <
-                text = <"*Main (en)">
-                description = <"*Main (en)">
+                text = <"Principal">
+                description = <"Principal">
             >
             ["at0.2"] = <
-                text = <"*Secondary (en)">
-                description = <"*Secondary (en)">
+                text = <"Secundário">
+                description = <"Secundário">
             >
             ["at0.3"] = <
-                text = <"*associated cause (en)">
-                description = <"*associated cause (en)">
+                text = <"Causa associada">
+                description = <"Causa associada">
             >
             ["ac0.1"] = <
                 text = <"*Type (en)">
@@ -362,20 +362,20 @@ terminology
                 description = <"Descritor para o rótulo específico do caso de contexto ou de uso ou o aspecto relacionado ao fluxo de trabalho do processo de diagnóstico que pode não ser seguro para trocar entre sistemas ou usar em um ambiente compartilhado. Exemplos incluem: ativo / inativo; primário secundário; preliminar / provisório / trabalhando / final.">
             >
             ["at81"] = <
-                text = <"*Caused by (en)">
-                description = <"*This concept identifies the direct cause or causative agent of a Problem/Diagnosis.  The concept includes the idea of ‘complications’, ‘causative agent’ and ‘due to’.  Note: Where no causality or sequence of events is known, this relationship type should be left blank. (en)">
+                text = <"Causado por">
+                description = <"Este conceito identifica a causa direta ou o agente causador de um Problema / Diagnóstico. O conceito inclui a idéia de \"complicações\", \"agente causador\" e \"devido a\". Nota: Onde nenhuma causalidade ou sequência de eventos é conhecida, esse tipo de relacionamento deve ser deixado em branco.">
             >
             ["at82"] = <
-                text = <"*Following (en)">
-                description = <"*This value identifies the sequence of events between the related items, but does not assert causality.  This can be used for sequelae or late effects.  Note: Where no causality or sequence of events is known, this relationship type should be left blank. (en)">
+                text = <"Sequência de eventos">
+                description = <"Esse valor identifica a seqüência de eventos entre os itens relacionados, mas não afirma causalidade. Isso pode ser usado para seqüelas ou efeitos tardios. Nota: Onde nenhuma causalidade ou sequência de eventos é conhecida, esse tipo de relacionamento deve ser deixado em branco.">
             >
             ["id83"] = <
                 text = <"Gravidade">
                 description = <"Uma avaliação subjetiva da gravidade do Problema / Diagnóstico conforme avaliado pelo clínico. A codificação da gravidade com uma terminologia é preferida, sempre que possível.">
             >
             ["at83"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency (en)">
+                text = <"Frequência">
+                description = <"Frequência">
             >
             ["ac1"] = <
                 text = <"*Relationship type (synthesised) (en)">
