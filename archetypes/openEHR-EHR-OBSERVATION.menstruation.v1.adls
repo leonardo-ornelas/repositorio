@@ -96,13 +96,6 @@ definition
                                                             }
                                                         }
                                                     }
-                                                    ELEMENT[id50] occurrences matches {0..1} matches {    -- Date of last menstruation -DUM
-                                                        value matches {
-                                                            DV_DATE[id51] matches {
-                                                                value matches {*}
-                                                            }
-                                                        }
-                                                    }
                                                 }
                                             }
                                             CLUSTER[id6] occurrences matches {0..1} matches {    -- Typical Menstrual cycle
@@ -310,10 +303,6 @@ terminology
             ["ac1"] = <
                 text = <"Hormonal or intrauterine contraception (synthesised)">
                 description = <"Details of hormonal or intrauterine contraception (synthesised)">
-            >
-            ["id50"] = <
-                text = <"Date of last menstruation -DUM">
-                description = <"Record the date of last menstruation">
             >
         >
     >
