@@ -108,7 +108,7 @@ terminology
         ["en"] = <
             ["id1.1.1"] = <
                 text = <"Tobacco Use">
-                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
             >
             ["id0.0.2"] = <
                 text = <"Ex smoker">
@@ -225,7 +225,7 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
-                text = <"*Tobacco Use (en)">
+                text = <"Uso de tabaco">
                 description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.  (en)">
             >
             ["id0.0.2"] = <
