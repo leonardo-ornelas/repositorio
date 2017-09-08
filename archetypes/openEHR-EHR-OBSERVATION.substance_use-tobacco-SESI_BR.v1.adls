@@ -226,7 +226,7 @@ terminology
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Uso de tabaco">
-                description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.  (en)">
+                description = <"Arquétipo para registrar o uso ou o consumo real de um tabaco no momento presente, um tempo específico ou durante um período de tempo.">
             >
             ["id0.0.2"] = <
                 text = <"*Ex smoker (en)">
