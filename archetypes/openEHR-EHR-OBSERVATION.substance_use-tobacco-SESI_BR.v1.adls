@@ -136,7 +136,7 @@ terminology
             >
             ["id1.1"] = <
                 text = <"Tobacco Use">
-                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
             >
             ["id13.1"] = <
                 text = <"Number smoked">
@@ -160,7 +160,7 @@ terminology
             >
             ["id1"] = <
                 text = <"Substance Use">
-                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. ">
+                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.">
             >
             ["id3"] = <
                 text = <"Any event">
@@ -229,8 +229,8 @@ terminology
                 description = <"Arquétipo para registrar o uso ou o consumo real de um tabaco no momento presente, um tempo específico ou durante um período de tempo.">
             >
             ["id0.0.2"] = <
-                text = <"*Ex smoker (en)">
-                description = <"*Register for ex-smoker (en)">
+                text = <"Ex-fumante">
+                description = <"Cadastre-se no caso de ex-fumante.">
             >
             ["at0.2"] = <
                 text = <"*Tobacco (en)">
@@ -253,16 +253,16 @@ terminology
                 description = <"*Tobacco smoked within a pipe (en)">
             >
             ["id1.1"] = <
-                text = <"*Tobacco Use (en)">
-                description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.  (en)">
+                text = <"Uso de tabaco">
+                description = <"Arquétipo para registrar o uso ou o consumo real de um tabaco no momento presente, um tempo específico ou durante um período de tempo.">
             >
             ["id13.1"] = <
-                text = <"*Number smoked (en)">
-                description = <"*Number of units containing tobacco consumed eg cigarettes or cigars (en)">
+                text = <"Número de unidades de tabaco">
+                description = <"Número de unidades contendo tabaco consumido, por exemplo, cigarros ou charutos.">
             >
             ["id13.2"] = <
-                text = <"*Grams of tobacco (en)">
-                description = <"*Weight of tobacco consumed eg in a pipe (en)">
+                text = <"Gramas de tabaco">
+                description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
             >
             ["at0.7"] = <
                 text = <"*Frequency (en)">
@@ -277,8 +277,8 @@ terminology
                 description = <"*Form of tobacco used (synthesised) (en)">
             >
             ["id1"] = <
-                text = <"*Substance Use (en)">
-                description = <"*Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.  (en)">
+                text = <"Uso de substâncias">
+                description = <"Arquétipo genérico para registrar o uso ou consumo real de uma substância definida no momento atual, um tempo específico ou durante um período de tempo.">
             >
             ["id3"] = <
                 text = <"*Any event (en)">
