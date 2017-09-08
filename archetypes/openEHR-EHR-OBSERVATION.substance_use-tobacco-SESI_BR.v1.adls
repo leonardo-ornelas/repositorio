@@ -6,6 +6,17 @@ specialize
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© openEHR Foundation">
@@ -18,6 +29,15 @@ description
             use = <"Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
 Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
 A typical use would be to record usage in an tobacco usage diary.">
+        >
+        ["pt-br"] = <
+            keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.   (en)">
+            purpose = <"*This is an archetype used to record details of the use of all common forms of tobacco.  (en)">
+            use = <"*Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
+Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
+A typical use would be to record usage in an tobacco usage diary. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -32,15 +52,15 @@ A typical use would be to record usage in an tobacco usage diary.">
 definition
     OBSERVATION[id1.1.1] matches {    -- Tobacco Use
         /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id5] occurrences matches {0..1} matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {    -- Substance
                 /value[id20.1]/defining_code matches {[at0.2]}
             }
-            CLUSTER[id11] occurrences matches {0..1} matches {
+            CLUSTER[id11] occurrences matches {0..1} matches {    -- Consumption details
                 items matches {
-                    ELEMENT[id12] occurrences matches {0..1} matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Form
                         /value[id21.1]/defining_code matches {[ac0.1]}
                     }
-                    ELEMENT[id6] occurrences matches {0..1} matches {
+                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
                     }
                     ELEMENT[id0.0.2] occurrences matches {0..1} matches {    -- Ex smoker
@@ -52,10 +72,13 @@ definition
                     }
                 }
                 items matches {
-                    ELEMENT[id6] occurrences matches {0..1} matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Form
+                        /value[id21.1]/defining_code matches {[ac0.1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
                     }
-                    ELEMENT[id13.1] matches {
+                    ELEMENT[id13.1] matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1] matches {
                                 property matches {[at0.7]}
@@ -63,7 +86,7 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2] matches {
+                    ELEMENT[id13.2] matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.2] matches {
                                 property matches {[at0.8]}
@@ -90,6 +113,232 @@ terminology
             ["id0.0.2"] = <
                 text = <"Ex smoker">
                 description = <"Register for ex-smoker">
+            >
+            ["at0.2"] = <
+                text = <"Tobacco">
+                description = <"Tobacco used">
+            >
+            ["at0.3"] = <
+                text = <"Cigarettes - manufactured">
+                description = <"Commercial, manufactured cigarettes">
+            >
+            ["at0.4"] = <
+                text = <"Cigarettes - roll-your-own">
+                description = <"Home-made, roll-your-own cigarettes">
+            >
+            ["at0.5"] = <
+                text = <"Cigars">
+                description = <"Commercial cigars">
+            >
+            ["at0.6"] = <
+                text = <"Pipe">
+                description = <"Tobacco smoked within a pipe">
+            >
+            ["id1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
+            >
+            ["id13.1"] = <
+                text = <"Number smoked">
+                description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+            >
+            ["id13.2"] = <
+                text = <"Grams of tobacco">
+                description = <"Weight of tobacco consumed eg in a pipe">
+            >
+            ["at0.7"] = <
+                text = <"Frequency">
+                description = <"Frequency">
+            >
+            ["at0.8"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
+            ["ac0.1"] = <
+                text = <"Form (synthesised)">
+                description = <"Form of tobacco used (synthesised)">
+            >
+            ["id1"] = <
+                text = <"Substance Use">
+                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. ">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id5"] = <
+                text = <"Substance">
+                description = <"Identification of substance ">
+            >
+            ["id6"] = <
+                text = <"Frequency">
+                description = <"Frequency of use of substance">
+            >
+            ["at7"] = <
+                text = <"Daily use">
+                description = <"Used every day">
+            >
+            ["at8"] = <
+                text = <"Weekly use">
+                description = <"Used at least weekly">
+            >
+            ["at9"] = <
+                text = <"Irregular use">
+                description = <"Used irregularly">
+            >
+            ["at10"] = <
+                text = <"No use">
+                description = <"Not used at all">
+            >
+            ["id11"] = <
+                text = <"Consumption details">
+                description = <"Details about the consumption of the substance">
+            >
+            ["id12"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id13"] = <
+                text = <"Amount">
+                description = <"Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates">
+            >
+            ["id14"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause use">
+            >
+            ["id15"] = <
+                text = <"Readiness for change">
+                description = <"Details about the readiness to change use or consumption of substance">
+            >
+            ["id17"] = <
+                text = <"Evidence of dependence">
+                description = <"Description of any evidence of dependence on the substance">
+            >
+            ["id19"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["ac1"] = <
+                text = <"Frequency (synthesised)">
+                description = <"Frequency of use of substance (synthesised)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"*Tobacco Use (en)">
+                description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.  (en)">
+            >
+            ["id0.0.2"] = <
+                text = <"*Ex smoker (en)">
+                description = <"*Register for ex-smoker (en)">
+            >
+            ["at0.2"] = <
+                text = <"*Tobacco (en)">
+                description = <"*Tobacco used (en)">
+            >
+            ["at0.3"] = <
+                text = <"*Cigarettes - manufactured (en)">
+                description = <"*Commercial, manufactured cigarettes (en)">
+            >
+            ["at0.4"] = <
+                text = <"*Cigarettes - roll-your-own (en)">
+                description = <"*Home-made, roll-your-own cigarettes (en)">
+            >
+            ["at0.5"] = <
+                text = <"*Cigars (en)">
+                description = <"*Commercial cigars (en)">
+            >
+            ["at0.6"] = <
+                text = <"*Pipe (en)">
+                description = <"*Tobacco smoked within a pipe (en)">
+            >
+            ["id1.1"] = <
+                text = <"*Tobacco Use (en)">
+                description = <"*Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.  (en)">
+            >
+            ["id13.1"] = <
+                text = <"*Number smoked (en)">
+                description = <"*Number of units containing tobacco consumed eg cigarettes or cigars (en)">
+            >
+            ["id13.2"] = <
+                text = <"*Grams of tobacco (en)">
+                description = <"*Weight of tobacco consumed eg in a pipe (en)">
+            >
+            ["at0.7"] = <
+                text = <"*Frequency (en)">
+                description = <"*Frequency (en)">
+            >
+            ["at0.8"] = <
+                text = <"*Flow rate, mass (en)">
+                description = <"*Flow rate, mass (en)">
+            >
+            ["ac0.1"] = <
+                text = <"*Form (synthesised) (en)">
+                description = <"*Form of tobacco used (synthesised) (en)">
+            >
+            ["id1"] = <
+                text = <"*Substance Use (en)">
+                description = <"*Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.  (en)">
+            >
+            ["id3"] = <
+                text = <"*Any event (en)">
+                description = <"*Any event (en)">
+            >
+            ["id5"] = <
+                text = <"*Substance (en)">
+                description = <"*Identification of substance  (en)">
+            >
+            ["id6"] = <
+                text = <"*Frequency (en)">
+                description = <"*Frequency of use of substance (en)">
+            >
+            ["at7"] = <
+                text = <"*Daily use (en)">
+                description = <"*Used every day (en)">
+            >
+            ["at8"] = <
+                text = <"*Weekly use (en)">
+                description = <"*Used at least weekly (en)">
+            >
+            ["at9"] = <
+                text = <"*Irregular use (en)">
+                description = <"*Used irregularly (en)">
+            >
+            ["at10"] = <
+                text = <"*No use (en)">
+                description = <"*Not used at all (en)">
+            >
+            ["id11"] = <
+                text = <"*Consumption details (en)">
+                description = <"*Details about the consumption of the substance (en)">
+            >
+            ["id12"] = <
+                text = <"*Form (en)">
+                description = <"*Form of the substance used (en)">
+            >
+            ["id13"] = <
+                text = <"*Amount (en)">
+                description = <"*Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates (en)">
+            >
+            ["id14"] = <
+                text = <"*Triggers (en)">
+                description = <"*Identified triggers which stimulate or cause use (en)">
+            >
+            ["id15"] = <
+                text = <"*Readiness for change (en)">
+                description = <"*Details about the readiness to change use or consumption of substance (en)">
+            >
+            ["id17"] = <
+                text = <"*Evidence of dependence (en)">
+                description = <"*Description of any evidence of dependence on the substance (en)">
+            >
+            ["id19"] = <
+                text = <"*Method of use (en)">
+                description = <"*Method of use or consumption of the substance (en)">
+            >
+            ["ac1"] = <
+                text = <"*Frequency (synthesised) (en)">
+                description = <"*Frequency of use of substance (synthesised) (en)">
             >
         >
     >
