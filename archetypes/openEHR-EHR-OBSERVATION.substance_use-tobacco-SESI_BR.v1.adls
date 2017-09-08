@@ -168,7 +168,7 @@ terminology
             >
             ["id5"] = <
                 text = <"Substance">
-                description = <"Identification of substance ">
+                description = <"Identification of substance">
             >
             ["id6"] = <
                 text = <"Frequency">
@@ -281,16 +281,16 @@ terminology
                 description = <"Arquétipo genérico para registrar o uso ou consumo real de uma substância definida no momento atual, um tempo específico ou durante um período de tempo.">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event (en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id5"] = <
-                text = <"*Substance (en)">
-                description = <"*Identification of substance  (en)">
+                text = <"Substância">
+                description = <"Identificação da substância">
             >
             ["id6"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency of use of substance (en)">
+                text = <"Frequência">
+                description = <"Frequência do uso da substância.">
             >
             ["at7"] = <
                 text = <"*Daily use (en)">
@@ -309,32 +309,32 @@ terminology
                 description = <"*Not used at all (en)">
             >
             ["id11"] = <
-                text = <"*Consumption details (en)">
-                description = <"*Details about the consumption of the substance (en)">
+                text = <"Detalhes de consumo">
+                description = <"Detalhes sobre o consumo da substância.">
             >
             ["id12"] = <
-                text = <"*Form (en)">
-                description = <"*Form of the substance used (en)">
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
             >
             ["id13"] = <
-                text = <"*Amount (en)">
-                description = <"*Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates (en)">
+                text = <"Quantidade">
+                description = <"Quantidade de substância consumida. O tipo de dados pode ser especificado em arquétipos especializados ou em modelos.">
             >
             ["id14"] = <
-                text = <"*Triggers (en)">
-                description = <"*Identified triggers which stimulate or cause use (en)">
+                text = <"Gatilhos">
+                description = <"Identificadores de gatilhos que estimulam ou causam uso.">
             >
             ["id15"] = <
-                text = <"*Readiness for change (en)">
-                description = <"*Details about the readiness to change use or consumption of substance (en)">
+                text = <"Facilidade para mudança">
+                description = <"Detalhes sobre a facilidade para mudar o uso ou consumo de substância.">
             >
             ["id17"] = <
-                text = <"*Evidence of dependence (en)">
-                description = <"*Description of any evidence of dependence on the substance (en)">
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
             >
             ["id19"] = <
-                text = <"*Method of use (en)">
-                description = <"*Method of use or consumption of the substance (en)">
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
             >
             ["ac1"] = <
                 text = <"*Frequency (synthesised) (en)">
