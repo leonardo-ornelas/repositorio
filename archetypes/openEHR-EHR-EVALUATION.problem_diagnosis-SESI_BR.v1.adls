@@ -1,0 +1,124 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.problem_diagnosis.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© 2011 NEHTA">
+    details = <
+        ["en"] = <
+            keywords = <"issue", "condition", "problem", "concern", "diagnosis", "criteria", "illness", "disease", "disorder">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used to record 'Differential Diagnoses' - use the EVALUATION.differential diagnosis archetype.
+
+Not to be used to record 'Reason for Encounter' - use the EVALUATION.reason_for_encounter archetype.
+
+Not to be used to record 'Presenting Complaint' - which is information captured early in the encounter, usually prior to full assessment and will be represented using a separate EVALUATION archetype.
+
+Not to be used to record procedures - use the ACTION.Procedure_undertaken archetype.
+
+Not to be used to record symptoms or signs - these should be recorded as part of a patient story or history.  A problem such as 'Chest pain' may masquerade as a symptom, however in this context we are recording it as a problem the person has.">
+            purpose = <"To record details about a problem or diagnosis by a clinician.">
+            use = <"Use to record detailed information about problems or diagnoses recognised by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a Problem List or a Summary Statement, such as a Discharge Summary.
+
+Use to record all problems or diagnoses, including those with context-specific qualifiers such as past/present, primary/secondary, active/inactive etc. These qualifiers can be archetyped separately and included in the ‘Status’ slot, because their use varies in different settings.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Sam Heard">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"sam.heard@oceaninformatics.com">
+        ["date"] = <"23/04/2006">
+    >
+    other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "John Bennett, NEHTA, Australia", "Steve Bentley, NHS CfH, United Kingdom", "Ian Bull, ACT Health, Australia", "Sergio Carmona, Chile", "Rong Chen, Cambio Healthcare Systems, Sweden", "Stephen Chu, NEHTA, Australia (Editor)", "Ed Conley, Cardiff University, United Kingdom", "Matthew Cordell, NEHTA, Australia", "Paul Donaldson, Nursing Informatics Australia, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Peter Garcia-Webb, Australia", "Andrew Goodchild, NEHTA, Australia", "Anneke Goossen, Results4Care, Netherlands", "Heather Grain, Llewelyn Grain Consulting, Australia", "Trina Gregory, cpc, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Eugene Igras, IRIS Systems Inc, Canada", "Mary Kelaher, NEHTA, Australia", "Eizen Kimura, Ehime University, Japan", "Shinji Kobayashi, Ehime University, Japan", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia (Editor)", "Rohan Martin, Ambulance Victoria, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Jörg Niggeman, Compugroup, Germany", "Andrej Orel, Marand d.o.o., Slovenia", "Chris Pearce, Melbourne East GP Network, Australia", "Camilla Preeston, Royal Australian College of General Practitioners, Australia", "Margaret Prichard, NEHTA, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Cathy Richardson, NEHTA, Australia", "Robyn Richards, NEHTA - Clinical Terminology, Australia", "Thilo Schuler, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia", "Donna Truran, ACCTI-UoW, Australia", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+
+definition
+    EVALUATION[id1.1] matches {    -- Problem/Diagnosis
+        /data[id2]/items matches {
+            allow_archetype CLUSTER[id45] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            CLUSTER[id19] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id26] occurrences matches {0..1} matches {
+                        /value[id89]/magnitude matches {|>=1|}
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id90] matches {
+                                property matches {[at83]}
+                                units matches {"/min", "/h", "/d", "/wk", "/mo", "/yr"}
+                            }
+                        }
+                    }
+                }
+            }
+            CLUSTER[id27] matches {
+                /items[id57]/value[id95]/defining_code matches {[ac1]}
+            }
+            allow_archetype CLUSTER[id55] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            allow_archetype CLUSTER[id56] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Type
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+        }
+        /protocol[id75]/items matches {
+            allow_archetype CLUSTER[id77] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
+            >
+            ["id0.2"] = <
+                text = <"Type">
+                description = <"Record the type of diagnosis">
+            >
+            ["at0.1"] = <
+                text = <"Main">
+                description = <"Main">
+            >
+            ["at0.2"] = <
+                text = <"Secondary">
+                description = <"Secondary">
+            >
+            ["at0.3"] = <
+                text = <"associated cause">
+                description = <"associated cause">
+            >
+            ["ac0.1"] = <
+                text = <"Type">
+                description = <"Type">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3">
+        >
+    >
+
