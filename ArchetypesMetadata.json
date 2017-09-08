@@ -93,10 +93,10 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.encounter.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "Encontro",
+    "name" : "Encounter",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v1.adls",
-    "sha" : "96fcbde1a879f77ab3958347eb12d4e91fe472bd",
-    "languages" : [ "pt-br", "en", "sl", "pt-br" ]
+    "sha" : "a9dbf15c9933f160bfcd92f1433b4157e6e0095a",
+    "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.report.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -584,7 +584,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Consumption",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-alcohol.v1.adls",
-    "sha" : "0abb8cd1850446a6bd0816d1c90162036204a3ee",
+    "sha" : "201942aa06c559c3a1f1b64b8e336591749d2b15",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-caffeine.v1.0.0",
@@ -682,7 +682,28 @@
     "rmType" : "OBSERVATION",
     "name" : "Tobacco Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
-    "sha" : "0184eccda40f3bcb5ded59658c096c744976b4c6",
+    "sha" : "ac045cd721280e979eff725bd0282ae26a8c49e2",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.procedure.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "Procedure",
+    "path" : "archetypes/openEHR-EHR-ACTION.procedure.v1.adls",
+    "sha" : "558e9305476750bcc2583ad8db276167da98e2db",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.family_history-SESI-BR.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Family History",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.family_history-SESI-BR.v1.adls",
+    "sha" : "5818dc2ac1cfa7363de28bc7501edad0c43022d1",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Problem/Diagnosis",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
+    "sha" : "88f427161e8d76598db3dd5f9ebd7b8b4ecf2b9a",
     "languages" : [ "en" ]
   } ]
 }
