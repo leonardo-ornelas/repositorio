@@ -217,13 +217,6 @@
     "sha" : "b77eda6acb9aa06653a46e78cdc774a832068272",
     "languages" : [ "en" ]
   }, {
-    "id" : "openEHR-EHR-OBSERVATION.patient.v1.0.0",
-    "rmType" : "OBSERVATION",
-    "name" : "Patient",
-    "path" : "archetypes/openEHR-EHR-OBSERVATION.patient.v1.adls",
-    "sha" : "0c1c805686276ef76521bfacf641767025570120",
-    "languages" : [ "en", "pt-br" ]
-  }, {
     "id" : "openEHR-EHR-OBSERVATION.respiration.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Respirations",
@@ -237,13 +230,6 @@
     "path" : "archetypes/openEHR-EHR-SECTION.medication.v1.adls",
     "sha" : "d379bcf36aa1293b122d305a3daa87b3647ada0f",
     "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-OBSERVATION.practitioner.v1.0.0",
-    "rmType" : "OBSERVATION",
-    "name" : "Profissional Médico",
-    "path" : "archetypes/openEHR-EHR-OBSERVATION.practitioner.v1.adls",
-    "sha" : "65729fc508fde55781f258d85767d0a181e2aa77",
-    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.device_details.v1.0.0",
     "rmType" : "CLUSTER",
@@ -656,13 +642,6 @@
     "path" : "archetypes/openEHR-EHR-CLUSTER.telecom_details.v1.adls",
     "sha" : "1b77a562f7adac5872fa8e7436fd8fbf0e4e9004",
     "languages" : [ "en", "de" ]
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.atendimento.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encontro",
-    "path" : "archetypes/openEHR-EHR-COMPOSITION.atendimento.v1.adls",
-    "sha" : "9641b408a59455dfde8a0522dbbb94aee3651238",
-    "languages" : [ "pt-br", "en", "sl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.0.0",
     "rmType" : "ACTION",
