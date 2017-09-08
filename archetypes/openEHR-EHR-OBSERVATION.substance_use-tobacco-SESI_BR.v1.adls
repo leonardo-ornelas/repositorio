@@ -269,8 +269,8 @@ terminology
                 description = <"Frequência">
             >
             ["at0.8"] = <
-                text = <"*Flow rate, mass (en)">
-                description = <"*Flow rate, mass (en)">
+                text = <"Caudal, massa">
+                description = <"Caudal, massa">
             >
             ["ac0.1"] = <
                 text = <"*Form (synthesised) (en)">
@@ -293,20 +293,20 @@ terminology
                 description = <"Frequência do uso da substância.">
             >
             ["at7"] = <
-                text = <"*Daily use (en)">
-                description = <"*Used every day (en)">
+                text = <"Uso diário">
+                description = <"Usado todos os dias.">
             >
             ["at8"] = <
-                text = <"*Weekly use (en)">
-                description = <"*Used at least weekly (en)">
+                text = <"Uso semanal">
+                description = <"Usado pelo menos semanalmente">
             >
             ["at9"] = <
-                text = <"*Irregular use (en)">
-                description = <"*Used irregularly (en)">
+                text = <"Uso irregular">
+                description = <"Usado irregularmente">
             >
             ["at10"] = <
-                text = <"*No use (en)">
-                description = <"*Not used at all (en)">
+                text = <"Sem uso">
+                description = <"Não utilizado">
             >
             ["id11"] = <
                 text = <"Detalhes de consumo">
