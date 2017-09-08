@@ -39,8 +39,8 @@
     "rmType" : "CLUSTER",
     "name" : "Device",
     "path" : "archetypes/openEHR-EHR-CLUSTER.device.v1.adls",
-    "sha" : "eb54fc0eeaa83ee26f3ebb7586d25dc94d839dd6",
-    "languages" : [ "en", "sl" ]
+    "sha" : "85a208baaaa6580efab8e373c42d90be489483b7",
+    "languages" : [ "en", "sl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.infusion_details.v1.0.0",
     "rmType" : "CLUSTER",
@@ -165,8 +165,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Blood Pressure",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.blood_pressure.v1.adls",
-    "sha" : "05f7e1e280c70dfa641d510907e96ce68f8717fb",
-    "languages" : [ "en", "de", "zh-cn", "fa", "ru", "ja", "nl" ]
+    "sha" : "ddf3fe89339bd6afb7fb3fc1512c5371fb3be47c",
+    "languages" : [ "en", "de", "zh-cn", "fa", "ru", "ja", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -298,8 +298,8 @@
     "rmType" : "COMPOSITION",
     "name" : "teste composition",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.teste.v1.adls",
-    "sha" : "6d5ebd78b0ca79ffa98b694c27c3fed908a6c5fc",
-    "languages" : [ "en" ]
+    "sha" : "5777f01a024b130af2568adecc511e47d4db6096",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.allergy.v1.0.0",
     "rmType" : "EVALUATION",
@@ -319,8 +319,8 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Patient admission",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission.v1.adls",
-    "sha" : "cf4298818c6efadebfa2e56c75d431818a009854",
-    "languages" : [ "en", "ar-sy" ]
+    "sha" : "85fd0c3c66cf5434550601565775db5a5a953af5",
+    "languages" : [ "en", "ar-sy", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -663,5 +663,26 @@
     "path" : "archetypes/openEHR-EHR-COMPOSITION.atendimento.v1.adls",
     "sha" : "9641b408a59455dfde8a0522dbbb94aee3651238",
     "languages" : [ "pt-br", "en", "sl", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "Imaging examination",
+    "path" : "archetypes/openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.adls",
+    "sha" : "a702d71e4ad74647a1500c0977f8329a95dd7b14",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Physical Activity Summary",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.adls",
+    "sha" : "b1bff4701541ccdb816ac091e51bf29d97ec89aa",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Tobacco Use",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
+    "sha" : "0184eccda40f3bcb5ded59658c096c744976b4c6",
+    "languages" : [ "en" ]
   } ]
 }
