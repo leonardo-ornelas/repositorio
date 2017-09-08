@@ -50,10 +50,8 @@ Not to be used to record 'Presenting Complaint' - which is information captured 
 Not to be used to record procedures - use the ACTION.Procedure_undertaken archetype.
 
 Not to be used to record symptoms or signs - these should be recorded as part of a patient story or history.  A problem such as 'Chest pain' may masquerade as a symptom, however in this context we are recording it as a problem the person has. (en)">
-            purpose = <"*To record details about a problem or diagnosis by a clinician. (en)">
-            use = <"*Use to record detailed information about problems or diagnoses recognised by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a Problem List or a Summary Statement, such as a Discharge Summary.
-
-Use to record all problems or diagnoses, including those with context-specific qualifiers such as past/present, primary/secondary, active/inactive etc. These qualifiers can be archetyped separately and included in the ‘Status’ slot, because their use varies in different settings. (en)">
+            purpose = <"Para registrar detalhes sobre um problema ou diagnóstico por um clínico.">
+            use = <"Use para registrar informações detalhadas sobre problemas ou diagnósticos reconhecidos por um clínico. Há muitos usos, incluindo: gravar um diagnóstico durante uma consulta; preencher uma lista de problemas ou uma declaração resumida, como um sumário de alta.Use para gravar todos os problemas ou diagnósticos, incluindo aqueles com qualificadores específicos do contexto, como passado / presente, primário / secundário, ativo / inativo, etc. Esses qualificadores podem ser arquetípicos separados e incluídos no slot 'Status', porque seu uso varia de acordo com suas configurações.">
         >
     >
     lifecycle_state = <"unmanaged">
