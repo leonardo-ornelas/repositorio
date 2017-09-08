@@ -1,0 +1,71 @@
+archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.menstruation-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.menstruation.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"LMP", "menstruation">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"For recording information about menstruation">
+            use = <"Use history class to record maximum and minimum durations of bleeding - uses the menstruation cluster for details of a specific or typical cycle">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"20/03/2007">
+    >
+    other_contributors = <"Sam Heard">
+
+definition
+    OBSERVATION[id1.1] matches {    -- Menstruation
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items[id18]/items matches {
+                    CLUSTER[id33] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id32] occurrences matches {0..1} matches {
+                                /value[id46]/value matches {yyyy-??-??T??:??:??}
+                            }
+                            ELEMENT[id34] occurrences matches {0..1} matches {
+                                value matches {
+                                    DV_QUANTITY[id47] matches {
+                                        property matches {[at31]}
+                                        units matches {"a", "mo"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[id5] occurrences matches {0..1} matches {
+                        /items[id50]/value[id51]/value matches {*}
+                    }
+                    CLUSTER[id8] matches {
+                        /items[id36]/value[id48]/value matches {yyyy-??-??T??:??:??}
+                    }
+                }
+                /state[id23]/items[id24]/value[id49]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Menstruation">
+                description = <"Information about menstruation and menstrual cycles">
+            >
+        >
+    >
+
