@@ -33,11 +33,11 @@ A typical use would be to record usage in an tobacco usage diary.">
         ["pt-br"] = <
             keywords = <"substance", "addiction", "consumption", "use", "tobacco", "cigarette", "cigar", "smoking", "chewing", "pipe">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not to be used for recording persistent and summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary-tobacco archetype.   (en)">
-            purpose = <"*This is an archetype used to record details of the use of all common forms of tobacco.  (en)">
-            use = <"*Use to record details of the use of all common forms of tobacco.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
-Other types of tobacco use are not included here, but may be added added as a revision as required, or added via a specialisation for groups with need for additional choices.  
-A typical use would be to record usage in an tobacco usage diary. (en)">
+            misuse = <"Não deve ser usado para registrar detalhes persistentes e resumidos sobre o uso da substância - isso deve ser capturado usando o arquétipo de tabaco do EVALUATION.substance_use_summary.">
+            purpose = <"Este é um arquétipo usado para registrar detalhes sobre o uso de todas as formas comuns de tabaco.">
+            use = <"Use para registrar detalhes sobre o uso de todas as formas comuns de tabaco. Isso inclui o uso em ponto específico no tempo, em intervalos de tempo e uso de funções matemáticas, como média ou mínima, por exemplo, consumo médio ao longo de uma semana.
+Outros tipos de tabagismo não estão incluídos aqui, mas podem ser adicionados como uma revisão, conforme necessário, ou adicionados através de uma especialização para grupos com necessidade de opções adicionais.
+Um uso típico seria registrar o uso em um diário de uso do tabaco.">
         >
     >
     lifecycle_state = <"unmanaged">
