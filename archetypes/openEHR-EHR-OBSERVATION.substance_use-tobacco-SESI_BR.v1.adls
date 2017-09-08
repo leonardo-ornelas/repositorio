@@ -233,24 +233,24 @@ terminology
                 description = <"Cadastre-se no caso de ex-fumante.">
             >
             ["at0.2"] = <
-                text = <"*Tobacco (en)">
-                description = <"*Tobacco used (en)">
+                text = <"Tabaco">
+                description = <"Tabaco">
             >
             ["at0.3"] = <
-                text = <"*Cigarettes - manufactured (en)">
-                description = <"*Commercial, manufactured cigarettes (en)">
+                text = <"Cigarros - fabricados">
+                description = <"Comercial, cigarros fabricados">
             >
             ["at0.4"] = <
-                text = <"*Cigarettes - roll-your-own (en)">
-                description = <"*Home-made, roll-your-own cigarettes (en)">
+                text = <"Cigarros caseiros">
+                description = <"Cigarros caseiros, rolo próprio.">
             >
             ["at0.5"] = <
-                text = <"*Cigars (en)">
-                description = <"*Commercial cigars (en)">
+                text = <"Charutos">
+                description = <"Charutos comerciais">
             >
             ["at0.6"] = <
-                text = <"*Pipe (en)">
-                description = <"*Tobacco smoked within a pipe (en)">
+                text = <"Tabaco em tubo">
+                description = <"Tabaco fumado dentro de um tubo.">
             >
             ["id1.1"] = <
                 text = <"Uso de tabaco">
@@ -265,8 +265,8 @@ terminology
                 description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
             >
             ["at0.7"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency (en)">
+                text = <"Frequência">
+                description = <"Frequência">
             >
             ["at0.8"] = <
                 text = <"*Flow rate, mass (en)">
