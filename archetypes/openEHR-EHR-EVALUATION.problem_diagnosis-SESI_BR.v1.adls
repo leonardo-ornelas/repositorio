@@ -254,8 +254,8 @@ Note: May include formal severity assessments.">
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Problem/Diagnosis (en)">
-                description = <"*Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures. (en)">
+                text = <"Problema/Diagnóstico">
+                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
             >
             ["id0.2"] = <
                 text = <"*Type (en)">
