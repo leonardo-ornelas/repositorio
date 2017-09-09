@@ -6,6 +6,17 @@ specialize
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© 2010 NEHTA">
@@ -16,6 +27,13 @@ description
             misuse = <"Not to be used to record diary-like observations of physical activity.">
             purpose = <"To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual.">
             use = <"Use to record a summary of physical activity.">
+        >
+        ["pt-br"] = <
+            keywords = <"activity", "exercise", "physical", "fitness">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Not to be used to record diary-like observations of physical activity. (en)">
+            purpose = <"*To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual. (en)">
+            use = <"*Use to record a summary of physical activity. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -54,7 +72,7 @@ definition
             ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Total time walked a day
                 value matches {
                     DV_TIME[id0.11] matches {
-                        value matches {*}
+                        value
                     }
                 }
             }
@@ -68,7 +86,7 @@ definition
             ELEMENT[id0.14] occurrences matches {0..1} matches {    -- Total time spent doing moderate activities per day.
                 value matches {
                     DV_TIME[id0.15] matches {
-                        value matches {*}
+                        value
                     }
                 }
             }
@@ -82,7 +100,7 @@ definition
             ELEMENT[id0.18] occurrences matches {0..1} matches {    -- Total time performing vigorous activities per day
                 value matches {
                     DV_TIME[id0.20] matches {
-                        value matches {*}
+                        value
                     }
                 }
             }
@@ -278,6 +296,244 @@ terminology
             ["ac0.6"] = <
                 text = <"Main type of physical activity practiced in their leisure time.">
                 description = <"Main type of physical activity practiced in their leisure time.">
+            >
+            ["id1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id3"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id4"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id6"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id7"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
+            ["id8"] = <
+                text = <"Vigorous exercise/week">
+                description = <"Number of times per week of 20 min vigorous exercise.">
+            >
+            ["id9"] = <
+                text = <"Moderate exercise/week">
+                description = <"Number of times per week of 30 min moderate exercise.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"*Physical Activity Summary (en)">
+                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+            >
+            ["id0.4"] = <
+                text = <"*Physical activity practiced outside work (en)">
+                description = <"*Report physical activity practiced outside of work (en)">
+            >
+            ["at0.1"] = <
+                text = <"*Regular (en)">
+                description = <"*Regular (en)">
+            >
+            ["at0.2"] = <
+                text = <"*Irregular (en)">
+                description = <"*Irregular (en)">
+            >
+            ["ac0.1"] = <
+                text = <"*Physical activity practiced outside work (en)">
+                description = <"*Physical activity practiced outside work (en)">
+            >
+            ["id0.6"] = <
+                text = <"*Do some regular physical activity at your leisure (en)">
+                description = <"*Do some kind of physical activity at your leisure regulating, such as physical exercises (gymnastics, walking, running, sports, dancing or martial arts) (en)">
+            >
+            ["at0.3"] = <
+                text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.4"] = <
+                text = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.5"] = <
+                text = <"*YES, 1 or 2 times a week. (en)">
+                description = <"*YES, 1 or 2 times a week. (en)">
+            >
+            ["at0.6"] = <
+                text = <"*YES, 3 or 4 times a week. (en)">
+                description = <"*YES, 3 or 4 times a week. (en)">
+            >
+            ["at0.7"] = <
+                text = <"*YES, 5 or more times per week. (en)">
+                description = <"*YES, 5 or more times per week. (en)">
+            >
+            ["ac0.2"] = <
+                text = <"*Do some regular physical activity at your leisure (en)">
+                description = <"*Do some regular physical activity at your leisure (en)">
+            >
+            ["id0.8"] = <
+                text = <"*How many days did you walk for at least 10 continuous minutes (en)">
+                description = <"*On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise. (en)">
+            >
+            ["at0.8"] = <
+                text = <"*None (en)">
+                description = <"*None (en)">
+            >
+            ["at0.9"] = <
+                text = <"*1 day (en)">
+                description = <"*1 day (en)">
+            >
+            ["at0.10"] = <
+                text = <"*2 days (en)">
+                description = <"*2 days (en)">
+            >
+            ["at0.11"] = <
+                text = <"*3 days (en)">
+                description = <"*3 days (en)">
+            >
+            ["at0.12"] = <
+                text = <"*4 days (en)">
+                description = <"*4 days (en)">
+            >
+            ["at0.13"] = <
+                text = <"*5 days (en)">
+                description = <"*5 days (en)">
+            >
+            ["at0.14"] = <
+                text = <"*6 days (en)">
+                description = <"*6 days (en)">
+            >
+            ["at0.15"] = <
+                text = <"*7 days (en)">
+                description = <"*7 days (en)">
+            >
+            ["ac0.3"] = <
+                text = <"*How many days did you walk for at least 10 continuous minutes (en)">
+                description = <"*How many days did you walk for at least 10 continuous minutes (en)">
+            >
+            ["id0.10"] = <
+                text = <"*Total time walked a day (en)">
+                description = <"*On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day. (en)">
+            >
+            ["id0.12"] = <
+                text = <"*How many days in the last week did moderate activity (en)">
+                description = <"*Record how many days in the last week you performed moderate activity (en)">
+            >
+            ["ac0.4"] = <
+                text = <"*How many days in the last week you performed moderate activity (en)">
+                description = <"*How many days in the last week you performed moderate activity (en)">
+            >
+            ["id0.14"] = <
+                text = <"*Total time spent doing moderate activities per day. (en)">
+                description = <"*On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day. (en)">
+            >
+            ["id0.16"] = <
+                text = <"*How many days in the last week did vigorous activities (en)">
+                description = <"*Record how many days in the last week you performed vigorous activities (en)">
+            >
+            ["ac0.5"] = <
+                text = <"*How many days in the last week did vigorous activities (en)">
+                description = <"*How many days in the last week did vigorous activities (en)">
+            >
+            ["id0.18"] = <
+                text = <"*Total time performing vigorous activities per day (en)">
+                description = <"*On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day. (en)">
+            >
+            ["id0.21"] = <
+                text = <"*Main type of physical activity practiced in their leisure time. (en)">
+                description = <"*What is the main type of physical activity you practice at your leisure. (en)">
+            >
+            ["at0.16"] = <
+                text = <"*Not practice physical activity. (en)">
+                description = <"*Not practice physical activity. (en)">
+            >
+            ["at0.17"] = <
+                text = <"*Walking (en)">
+                description = <"*Walking (en)">
+            >
+            ["at0.18"] = <
+                text = <"*Sport (en)">
+                description = <"*Sport (en)">
+            >
+            ["at0.19"] = <
+                text = <"*Cycling (en)">
+                description = <"*Cycling (en)">
+            >
+            ["at0.20"] = <
+                text = <"*Racing (en)">
+                description = <"*Racing (en)">
+            >
+            ["at0.21"] = <
+                text = <"*Swimming / Hydrotherapy (en)">
+                description = <"*Swimming / Hydrotherapy (en)">
+            >
+            ["at0.22"] = <
+                text = <"*Fitness (en)">
+                description = <"*Fitness (en)">
+            >
+            ["at0.23"] = <
+                text = <"*Bodybuilding (en)">
+                description = <"*Bodybuilding (en)">
+            >
+            ["at0.24"] = <
+                text = <"*Dancing (en)">
+                description = <"*Dancing (en)">
+            >
+            ["at0.25"] = <
+                text = <"*Adventure sports (en)">
+                description = <"*Adventure sports (en)">
+            >
+            ["at0.26"] = <
+                text = <"*Yoga / Tai-chi-chuan (en)">
+                description = <"*Yoga / Tai-chi-chuan (en)">
+            >
+            ["at0.27"] = <
+                text = <"*Stretching (en)">
+                description = <"*Stretching (en)">
+            >
+            ["at0.28"] = <
+                text = <"*Martial Arts / Fights (en)">
+                description = <"*Martial Arts / Fights (en)">
+            >
+            ["at0.29"] = <
+                text = <"*Other physical activities (en)">
+                description = <"*Other physical activities (en)">
+            >
+            ["ac0.6"] = <
+                text = <"*Main type of physical activity practiced in their leisure time. (en)">
+                description = <"*Main type of physical activity practiced in their leisure time. (en)">
+            >
+            ["id1"] = <
+                text = <"*Physical Activity Summary (en)">
+                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+            >
+            ["id3"] = <
+                text = <"*Physical activity status (en)">
+                description = <"*A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible. (en)">
+            >
+            ["id4"] = <
+                text = <"*Physical activity note (en)">
+                description = <"*A more detailed description of the physical activity status of the individual. (en)">
+            >
+            ["id6"] = <
+                text = <"*Barriers to activity (en)">
+                description = <"*Identified barriers to the individual being involved in physical activity. (en)">
+            >
+            ["id7"] = <
+                text = <"*Enabling factors (en)">
+                description = <"*Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete. (en)">
+            >
+            ["id8"] = <
+                text = <"*Vigorous exercise/week (en)">
+                description = <"*Number of times per week of 20 min vigorous exercise. (en)">
+            >
+            ["id9"] = <
+                text = <"*Moderate exercise/week (en)">
+                description = <"*Number of times per week of 30 min moderate exercise. (en)">
             >
         >
     >
