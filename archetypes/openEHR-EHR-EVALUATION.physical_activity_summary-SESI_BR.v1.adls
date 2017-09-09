@@ -328,12 +328,12 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Physical Activity Summary (en)">
-                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
             >
             ["id0.4"] = <
-                text = <"*Physical activity practiced outside work (en)">
-                description = <"*Report physical activity practiced outside of work (en)">
+                text = <"Atividade física praticada fora do trabalho">
+                description = <"Informar atividade física praticada fora do trabalho.">
             >
             ["at0.1"] = <
                 text = <"*Regular (en)">
@@ -348,8 +348,8 @@ terminology
                 description = <"*Physical activity practiced outside work (en)">
             >
             ["id0.6"] = <
-                text = <"*Do some regular physical activity at your leisure (en)">
-                description = <"*Do some kind of physical activity at your leisure regulating, such as physical exercises (gymnastics, walking, running, sports, dancing or martial arts) (en)">
+                text = <"Pratica alguma atividade física regular ao seu lazer?">
+                description = <"Faz algum tipo de atividade física em seu lazer regulando, como exercícios físicos (ginástica, caminhada, corrida, esportes, dança ou artes marciais).">
             >
             ["at0.3"] = <
                 text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
@@ -376,8 +376,8 @@ terminology
                 description = <"*Do some regular physical activity at your leisure (en)">
             >
             ["id0.8"] = <
-                text = <"*How many days did you walk for at least 10 continuous minutes (en)">
-                description = <"*On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise. (en)">
+                text = <"Quantos dias da última semana você caminhou por pelo menos 10 minutos contínuos?">
+                description = <"Em quantos dias da última semana você caminhou por pelo menos 10 minutos contínuos em casa ou no trabalho, como forma de transporte para ir de um lugar para outro, por lazer, por prazer ou como forma de exercício.">
             >
             ["at0.8"] = <
                 text = <"*None (en)">
@@ -416,8 +416,8 @@ terminology
                 description = <"*How many days did you walk for at least 10 continuous minutes (en)">
             >
             ["id0.10"] = <
-                text = <"*Total time walked a day (en)">
-                description = <"*On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day. (en)">
+                text = <"Tempo total caminhado por dia">
+                description = <"Nos dias em que ele andou por pelo menos 10 minutos contínuos, quanto tempo no total, ele caminhou por dia.">
             >
             ["id0.12"] = <
                 text = <"*How many days in the last week did moderate activity (en)">
