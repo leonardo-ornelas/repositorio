@@ -298,12 +298,12 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Procedure (en)">
-                description = <"*A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes. (en)">
+                text = <"Procedimento">
+                description = <"Atividade clínica realizada para fins terapêuticos, de avaliação, de investigação, de triagem ou de diagnóstico.">
             >
             ["id0.2"] = <
-                text = <"*Historic (en)">
-                description = <"*Record history of interventions / surgeries (en)">
+                text = <"Histórico">
+                description = <"Registro histórico de intervenções / cirurgias">
             >
             ["at0.1"] = <
                 text = <"*Yes (en)">
@@ -322,32 +322,32 @@ terminology
                 description = <"*Historic (en)">
             >
             ["id1"] = <
-                text = <"*Procedure (en)">
-                description = <"*A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes. (en)">
+                text = <"Procedimento">
+                description = <"Atividade clínica realizada para fins terapêuticos, de avaliação, de investigação, de triagem ou de diagnóstico.">
             >
             ["id3"] = <
-                text = <"*Procedure name (en)">
-                description = <"*The name of the procedure (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible. (en)">
+                text = <"Nome do procedimento">
+                description = <"O nome do procedimento (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
             >
             ["id4"] = <
-                text = <"*Reason (en)">
-                description = <"*Reason that the activity or care pathway step for the identified procedure was carried out, for example, the reason for the cancellation or suspension of the procedure. (en)">
+                text = <"Razão">
+                description = <"Razão de que o passo da atividade ou do caminho de atendimento para o procedimento identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do procedimento.">
             >
             ["id5"] = <
-                text = <"*Description (en)">
-                description = <"*Narrative description about the activity or care pathway step for the identified procedure, for example description about the performance and findings from the the procedure, the failed attempt or the cancellation of the procedure. (en)">
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre a etapa de atividade ou caminho de cuidado para o procedimento identificado, por exemplo, descrição sobre o desempenho e os resultados do procedimento, a tentativa falhada ou o cancelamento do procedimento.">
             >
             ["id6"] = <
-                text = <"*Procedure detail (en)">
-                description = <"*Structured information about the procedure. Use to capture detailed, structured information about method & technique, equipment used & devices implanted and findings etc. (en)">
+                text = <"Detalhes do procedimento">
+                description = <"Informações estruturadas sobre o procedimento. Use para capturar informações detalhadas e estruturadas sobre método e técnica, equipamentos usados e dispositivos implantados e descobertas etc.">
             >
             ["id10"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about the activity or care pathway step not captured in other fields. (en)">
+                text = <"Comentário">
+                description = <"Uma narrativa adicional sobre o passo da atividade ou do caminho de cuidado não é capturada em outros campos.">
             >
             ["id11"] = <
-                text = <"*Multimedia (en)">
-                description = <"*Multimedia representation of the procedure undertaken, for example, a link to a video of the procedure performed or a drawing of the wound/surgery etc. (en)">
+                text = <"Multimídia">
+                description = <"Representação multimídia do procedimento realizado, por exemplo, um link para um vídeo do procedimento realizado ou um desenho da ferida / cirurgia, etc.">
             >
             ["at14"] = <
                 text = <"*Procedure planned (en)">
@@ -386,20 +386,20 @@ terminology
                 description = <"*The procedure has been aborted. (en)">
             >
             ["id31"] = <
-                text = <"*Start date/time (en)">
-                description = <"*The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the Scheduled care pathway step or the actual Start date/time in the Procedure performed step. (en)">
+                text = <"Data/hora de início">
+                description = <"A data de início e / ou a hora do procedimento. Isso indicará a data / hora agendada quando gravada na etapa de caminho do cuidado agendado ou na data / hora de início real na etapa procedimento executado.">
             >
             ["id32"] = <
-                text = <"*Duration (en)">
-                description = <"*Duration of the procedure, (especially for the Procedure performed pathway step). (en)">
+                text = <"Duração">
+                description = <"Duração do procedimento, (especialmente para o passo do percurso do procedimento realizado).">
             >
             ["id34"] = <
-                text = <"*Device (en)">
-                description = <"*Structured information about any device used during the procedure. (en)">
+                text = <"Dispositivo">
+                description = <"Informações estruturadas sobre qualquer dispositivo usado durante o procedimento.">
             >
             ["id35"] = <
-                text = <"*Anatomical location (en)">
-                description = <"*Structured information about the specific anatomical location of the procedure. (en)">
+                text = <"Localização anatômica">
+                description = <"Informações estruturadas sobre a localização anatômica específica do procedimento.">
             >
             ["at30"] = <
                 text = <"*planned (en)">
