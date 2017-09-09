@@ -306,16 +306,16 @@ terminology
                 description = <"Registro histórico de intervenções / cirurgias">
             >
             ["at0.1"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
+                text = <"Sim">
+                description = <"Sim">
             >
             ["at0.2"] = <
-                text = <"*No (en)">
-                description = <"*No (en)">
+                text = <"Não">
+                description = <"Não">
             >
             ["at0.3"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
+                text = <"Ignorado">
+                description = <"Ignorado">
             >
             ["ac0.1"] = <
                 text = <"*Historic (en)">
@@ -350,40 +350,40 @@ terminology
                 description = <"Representação multimídia do procedimento realizado, por exemplo, um link para um vídeo do procedimento realizado ou um desenho da ferida / cirurgia, etc.">
             >
             ["at14"] = <
-                text = <"*Procedure planned (en)">
-                description = <"*The procedure to be undertaken is planned. (en)">
+                text = <"Procedimento planejado">
+                description = <"O procedimento a ser realizado está planejado.">
             >
             ["at16"] = <
-                text = <"*Procedure scheduled (en)">
-                description = <"*The procedure has been scheduled. (en)">
+                text = <"Procedimento agendado">
+                description = <"O procedimento foi agendado.">
             >
             ["at18"] = <
-                text = <"*Procedure performed (en)">
-                description = <"*The procedure has been performed but more actions remain to be completed. (en)">
+                text = <"Procedimento executado">
+                description = <"O procedimento foi executado, mas ainda há mais ações a serem concluídas.">
             >
             ["at19"] = <
-                text = <"*Failed attempt (en)">
-                description = <"*The procedure has been commenced but not completed successfully. (en)">
+                text = <"Falha na tentativa">
+                description = <"O procedimento foi iniciado, mas não foi concluído com sucesso.">
             >
             ["at25"] = <
-                text = <"*Procedure completed (en)">
-                description = <"*The procedure has been performed and all associated actions completed. (en)">
+                text = <"Procedimento completo">
+                description = <"O procedimento foi executado e todas as ações associadas foram concluídas.">
             >
             ["at26"] = <
-                text = <"*Procedure postponed (en)">
-                description = <"*The procedure has been postponed. (en)">
+                text = <"Procedimento adiado">
+                description = <"O procedimento foi adiado.">
             >
             ["at27"] = <
-                text = <"*Procedure suspended (en)">
-                description = <"*The procedure has been suspended. (en)">
+                text = <"Procedimento suspenso">
+                description = <"O procedimento foi suspenso.">
             >
             ["at28"] = <
-                text = <"*Procedure cancelled (en)">
-                description = <"*The planned procedure has been cancelled prior to commencement. (en)">
+                text = <"Procedimento cancelado">
+                description = <"O procedimento planejado foi cancelado.">
             >
             ["at29"] = <
-                text = <"*Procedure aborted (en)">
-                description = <"*The procedure has been aborted. (en)">
+                text = <"Procedimento abortado">
+                description = <"O procedimento foi abortado.">
             >
             ["id31"] = <
                 text = <"Data/hora de início">
@@ -402,36 +402,36 @@ terminology
                 description = <"Informações estruturadas sobre a localização anatômica específica do procedimento.">
             >
             ["at30"] = <
-                text = <"*planned (en)">
-                description = <"*planned (en)">
+                text = <"planejado">
+                description = <"planejado">
             >
             ["at31"] = <
-                text = <"*postponed (en)">
-                description = <"*postponed (en)">
+                text = <"adiado">
+                description = <"adiado">
             >
             ["at32"] = <
-                text = <"*cancelled (en)">
-                description = <"*cancelled (en)">
+                text = <"cancelado">
+                description = <"cancelado">
             >
             ["at33"] = <
-                text = <"*scheduled (en)">
-                description = <"*scheduled (en)">
+                text = <"agendado">
+                description = <"agendado">
             >
             ["at34"] = <
-                text = <"*active (en)">
-                description = <"*active (en)">
+                text = <"ativo">
+                description = <"ativo">
             >
             ["at35"] = <
-                text = <"*suspended (en)">
-                description = <"*suspended (en)">
+                text = <"suspenso">
+                description = <"suspenso">
             >
             ["at36"] = <
-                text = <"*aborted (en)">
-                description = <"*aborted (en)">
+                text = <"abortado">
+                description = <"abortado">
             >
             ["at37"] = <
-                text = <"*complete (en)">
-                description = <"*complete (en)">
+                text = <"completo">
+                description = <"completo">
             >
         >
     >
