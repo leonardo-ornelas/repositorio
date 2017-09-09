@@ -213,12 +213,12 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Family History (en)">
-                description = <"*Summary information about the problems and/or diagnoses found in genetic relatives. (en)">
+                text = <"Histórico Familiar">
+                description = <"Resumo de informações sobre os problemas e / ou diagnósticos encontrados em parentes genéticos.">
             >
             ["id0.3"] = <
-                text = <"*Family illness (en)">
-                description = <"*Report disease in the family (en)">
+                text = <"Doença familiar">
+                description = <"Informar doença na família.">
             >
             ["at0.1"] = <
                 text = <"Sim">
@@ -257,76 +257,76 @@ terminology
                 description = <"*Relationship (en)">
             >
             ["id1"] = <
-                text = <"*Family History (en)">
-                description = <"*Summary information about the problems and/or diagnoses found in genetic relatives. (en)">
+                text = <"Histórico Familiar">
+                description = <"Resumo de informações sobre os problemas e / ou diagnósticos encontrados em parentes genéticos.">
             >
             ["id3"] = <
-                text = <"*Summary (en)">
-                description = <"*Textual description about the problems, diagnoses, and genetic markers found in genetic relatives. This field may be used to capture unstructured family history information recorded in clinical records. (en)">
+                text = <"Resumo/Sumário">
+                description = <"Descrição textual dos problemas, diagnósticos e marcadores genéticos encontrados em parentes genéticos. Este campo pode ser usado para capturar informações de história familiar não estruturada registradas em registros clínicos.">
             >
             ["id4"] = <
-                text = <"*Genetic relative (en)">
-                description = <"*Details about a specific genetic relative. (en)">
+                text = <"Parente genético">
+                description = <"Detalhes sobre o parente genético específico.">
             >
             ["id5"] = <
-                text = <"*Name (en)">
-                description = <"*Name of genetic relative. (en)">
+                text = <"Nome">
+                description = <"Nome do parente genético.">
             >
             ["id6"] = <
-                text = <"*Date of Birth (en)">
-                description = <"*Date of birth of the genetic relative. (en)">
+                text = <"Data de nascimento">
+                description = <"Data de nascimento do parente genético.">
             >
             ["id9"] = <
-                text = <"*Medical History (en)">
-                description = <"*Detail about problems or diagnoses for the genetic relative. (en)">
+                text = <"Histórico Médico">
+                description = <"Detalhes sobre os problemas/diagnósticos do parente genético.">
             >
             ["id10"] = <
-                text = <"*Problem/Diagnosis (en)">
-                description = <"*Identification of the genetic relative's problem or diagnosis. (en)">
+                text = <"Problema/Diagnóstico">
+                description = <"Identificação do problema ou diagnóstico do parente genético.">
             >
             ["id11"] = <
-                text = <"*Age at Onset (en)">
-                description = <"*Estimated or actual age of the genetic relative when the problem/diagnosis was clinically recognised. (en)">
+                text = <"Idade inicial">
+                description = <"Idade estimada ou real do parente genético quando o problema / diagnóstico foi clinicamente reconhecido.">
             >
             ["id12"] = <
-                text = <"*Age at Death (en)">
-                description = <"*Age of the genetic relative at death. (en)">
+                text = <"Idade da morte">
+                description = <"Idade do parente genético na morte.">
             >
             ["id13"] = <
-                text = <"*Clinical Description (en)">
-                description = <"*Narrative description or comments about clinical aspects of the genetic relative's problem/diagnosis. (en)">
+                text = <"Descrição clínica">
+                description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema / diagnóstico do parente genético.">
             >
             ["id15"] = <
-                text = <"*Cause of Death? (en)">
-                description = <"*True if the problem/diagnosis was a direct cause of death in this genetic relative. (en)">
+                text = <"Causa da morte?">
+                description = <"Verdadeiro se o problema / diagnóstico fosse uma causa direta de morte nesse parente genético.">
             >
             ["id17"] = <
-                text = <"*Relationship (en)">
-                description = <"*The relationship of the genetic relative to the individual. (en)">
+                text = <"Relação">
+                description = <"A relação do parente genético com o indivíduo.">
             >
             ["id21"] = <
-                text = <"*Alias (en)">
-                description = <"*An alias or label to uniquely identify a genetic relative, without using a personal name. (en)">
+                text = <"Alias">
+                description = <"Um alias ou rótulo para identificar de maneira exclusiva um parente genético, sem usar um nome pessoal.">
             >
             ["id23"] = <
-                text = <"*Marker Description (en)">
-                description = <"*Description of risk-related genetic markers identified in this genetic relative. (en)">
+                text = <"Descrição do marcador">
+                description = <"Descrição dos marcadores genéticos relacionados ao risco identificados neste parente genético.">
             >
             ["id24"] = <
-                text = <"*Deceased? (en)">
-                description = <"*Is the genetic relative is deceased? (en)">
+                text = <"Falecido?">
+                description = <"O parente genético é falecido?">
             >
             ["id25"] = <
-                text = <"*Genetic Markers (en)">
-                description = <"*Detailed genetic marker information for the genetic relative. (en)">
+                text = <"Marcadores genéticos">
+                description = <"Informação detalhada de marcador genético para o parente genético.">
             >
             ["id27"] = <
-                text = <"*Last updated (en)">
-                description = <"*Date that thisFamily History Summary was last updated. (en)">
+                text = <"Última atualização">
+                description = <"Data em que este Resumo do Histórico Familiar foi atualizado pela última vez.">
             >
             ["id28"] = <
-                text = <"*Genetic Marker Details (en)">
-                description = <"*Details about the relative's genetic markers. (en)">
+                text = <"Detalhes do marcador genético">
+                description = <"Detalhes sobre os marcadores genéticos do parente.">
             >
         >
     >
