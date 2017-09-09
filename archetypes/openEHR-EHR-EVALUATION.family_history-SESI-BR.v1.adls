@@ -39,17 +39,17 @@ It may be necessary to identify each Genetic Relative specifically and not just 
         ["pt-br"] = <
             keywords = <"family", "history", "health", "condition", "problem", "diagnosis", "genetic", "pedigree">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not to be used to record family health or social factors which may impart risk to the individual, but are not heritable or genetically based, for example, parental tobacco use. This information will be recorded using other archetypes.
+            misuse = <"Não deve ser usado para registrar fatores de saúde ou sociais da família que possam conferir risco ao indivíduo, mas não são herdáveis ou baseados geneticamente, por exemplo, o uso de tabaco parental. Essa informação será registrada usando outros arquétipos.
 
-Not to be used to record information about the risk of developing a condition due to a family history of a condition - use the EVALUATION.risk family of archetypes. (en)">
+Não deve ser usado para registrar informações sobre o risco de desenvolver uma condição devido a história familiar de uma condição - use a família de arquétipos EVALUATION.risk.">
             purpose = <"Para registrar informações sobre os problemas ou diagnósticos (conforme definido no arquétipo Problem/Diagnosis) encontrados em parentes genéticos.">
-            use = <"*Use to record a summary of information about problems or diagnoses found in genetic relatives. This information may be used as the basis for assessment of risk to the individual from potentially inheritable conditions or initiation of preventive health activities.
+            use = <"Use para registrar um resumo das informações sobre problemas ou diagnósticos encontrados em parentes genéticos. Esta informação pode ser usada como base para a avaliação do risco para o indivíduo de condições potencialmente herdáveis ​​ou iniciação de atividades preventivas de saúde.
 
-Additional detail about a genetic relative's specific problem or diagnosis can be captured using the EVALUATION.problem_diagnosis archetype and specifying the 'Subject of Care' as the relative.
+Os detalhes adicionais sobre o problema ou diagnóstico específico de um parente genético podem ser capturados usando o arquétipo EVALUATION.problem_diagnosis e especificando o 'Subject of Care' como o relativo.
 
-Use this archetype as the basis for a Family Pedigree chart of health problems/diagnoses.
+Utilize este arquétipo como base para um quadro de problemas / diagnósticos de saúde da família.
 
-It may be necessary to identify each Genetic Relative specifically and not just by the relationship to the patient. For example, while there will be only one maternal grandmother, there may be many female maternal cousins. This will ensure that a pedigree chart is accurate and allow for additional problems/diagnoses to be added, or existing records to be updated, for each identified genetic relative. If the record is private and will not be shared, for reasons of clarity it may be preferable to record the relative's name. If the record is to be shared, the genetic relative should be identified by a unique label or alias. (en)">
+Pode ser necessário identificar cada Relativo Genético especificamente e não apenas pela relação com o paciente. Por exemplo, enquanto houver apenas uma avó materna, pode haver muitos primos maternos femininos. Isso garantirá que um gráfico de pedigree seja exato e permita que outros problemas / diagnósticos sejam adicionados, ou registros existentes a serem atualizados, para cada parente genético identificado. Se o registro for privado e não será compartilhado, por razões de clareza, pode ser preferível registrar o nome do parente. Se o registro for compartilhado, o parente genético deve ser identificado por um rótulo ou alias únicos.">
         >
     >
     lifecycle_state = <"unmanaged">
