@@ -221,36 +221,36 @@ terminology
                 description = <"*Report disease in the family (en)">
             >
             ["at0.1"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
+                text = <"Sim">
+                description = <"Sim">
             >
             ["at0.2"] = <
-                text = <"*Not (en)">
-                description = <"*Not (en)">
+                text = <"Não">
+                description = <"Não">
             >
             ["at0.3"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
+                text = <"Ignorado">
+                description = <"Ignorado">
             >
             ["ac0.1"] = <
                 text = <"*Family illness (en)">
                 description = <"*Family illness (en)">
             >
             ["at0.4"] = <
-                text = <"*Father (en)">
-                description = <"*Father (en)">
+                text = <"Pai">
+                description = <"Pai">
             >
             ["at0.5"] = <
-                text = <"*Mother (en)">
-                description = <"*Mother (en)">
+                text = <"Mãe">
+                description = <"Mãe">
             >
             ["at0.6"] = <
-                text = <"*Grandparents (en)">
-                description = <"*Grandparents (en)">
+                text = <"Avós">
+                description = <"Avós">
             >
             ["at0.7"] = <
-                text = <"*Brothers/Sisters (en)">
-                description = <"*Brothers/Sisters (en)">
+                text = <"Irmãos/Irmãs">
+                description = <"Irmãos/Irmãs">
             >
             ["ac0.2"] = <
                 text = <"*Relationship (en)">
