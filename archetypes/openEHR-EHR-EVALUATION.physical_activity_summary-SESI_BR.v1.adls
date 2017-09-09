@@ -444,8 +444,8 @@ terminology
                 description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
             >
             ["id0.21"] = <
-                text = <"*Main type of physical activity practiced in their leisure time. (en)">
-                description = <"*What is the main type of physical activity you practice at your leisure. (en)">
+                text = <"Tipo da principal atividade física praticada nos momentos de lazer">
+                description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
             >
             ["at0.16"] = <
                 text = <"*Not practice physical activity. (en)">
@@ -508,32 +508,32 @@ terminology
                 description = <"*Main type of physical activity practiced in their leisure time. (en)">
             >
             ["id1"] = <
-                text = <"*Physical Activity Summary (en)">
-                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
             >
             ["id3"] = <
-                text = <"*Physical activity status (en)">
-                description = <"*A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible. (en)">
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
             >
             ["id4"] = <
-                text = <"*Physical activity note (en)">
-                description = <"*A more detailed description of the physical activity status of the individual. (en)">
+                text = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
             >
             ["id6"] = <
-                text = <"*Barriers to activity (en)">
-                description = <"*Identified barriers to the individual being involved in physical activity. (en)">
+                text = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
             >
             ["id7"] = <
-                text = <"*Enabling factors (en)">
-                description = <"*Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete. (en)">
+                text = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
             ["id8"] = <
-                text = <"*Vigorous exercise/week (en)">
-                description = <"*Number of times per week of 20 min vigorous exercise. (en)">
+                text = <"Exercício vigoroso por semana">
+                description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
             >
             ["id9"] = <
-                text = <"*Moderate exercise/week (en)">
-                description = <"*Number of times per week of 30 min moderate exercise. (en)">
+                text = <"Exercício moderado por semana">
+                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
             >
         >
     >
