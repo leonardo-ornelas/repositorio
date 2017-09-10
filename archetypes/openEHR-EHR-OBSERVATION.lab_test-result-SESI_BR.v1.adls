@@ -476,12 +476,12 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Laboratory test result (en)">
-                description = <"*Record the findings and interpretation of pathology tests performed on tissues and body fluids. (en)">
+                text = <"Resultado do teste de laboratório">
+                description = <"Registre os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais.">
             >
             ["id0.2"] = <
-                text = <"*Prostate-Specific Antigen (PSA) (en)">
-                description = <"*Record if performed in the last year (en)">
+                text = <"Prostate-Specific Antigen (PSA)">
+                description = <"Registrar se foi realizado no último ano.">
             >
             ["at0.1"] = <
                 text = <"*Yes (en)">
@@ -504,24 +504,24 @@ terminology
                 description = <"*PSA (en)">
             >
             ["id1"] = <
-                text = <"*Laboratory test result (en)">
-                description = <"*Record the findings and interpretation of pathology tests performed on tissues and body fluids. (en)">
+                text = <"Resultado do teste de laboratório">
+                description = <"Registre os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais.">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event. (en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
-                text = <"*Test result name (en)">
-                description = <"*Identification of the pathology test performed, sometimes including specimen type. Coding with a terminology, potientially a pre-coordinated term including specimen type, is preferred, where possible. May be coded with LOINC or Snomed-CT. A test result may be for a single analyte, or a group of items, including panel tests. (en)">
+                text = <"Nome do resultado do teste">
+                description = <"Identificação do teste de patologia realizado, às vezes incluindo o tipo de amostra. A codificação com uma terminologia, potencialmente, um termo pré-coordenado, incluindo o tipo de amostra, é preferível, sempre que possível. Pode ser codificado com LOINC ou Snomed-CT. Um resultado de teste pode ser para um único analito, ou um grupo de itens, incluindo testes de painel.">
             >
             ["id11"] = <
-                text = <"*Test result representation (en)">
-                description = <"*Rich text or other mutlimedia representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they must be semantically equivalent. (en)">
+                text = <"Representação do resultado do teste">
+                description = <"Texto rico ou outra representação multimídia de todo o resultado, conforme emitido pelo serviço de diagnóstico. Vários formatos são permitidos, mas devem ser semanticamente equivalentes.">
             >
             ["id18"] = <
-                text = <"*Receiving laboratory (en)">
-                description = <"*Demographic details of the laboratory with responsibility for the test. Details of secondary laboratories may also be included. (en)">
+                text = <"Laboratório responsável">
+                description = <"Detalhes demográficos do laboratório responsável pelo teste. Os detalhes dos laboratórios secundários também podem ser incluídos.">
             >
             ["at38"] = <
                 text = <"*Interim (en)">
@@ -540,76 +540,76 @@ terminology
                 description = <"*This is a correction which should completely replace any previous results. (en)">
             >
             ["id58"] = <
-                text = <"*Conclusion (en)">
-                description = <"*Concise and clinically contextualised narrative interpretation of the pathology test results. (en)">
+                text = <"Conclusão">
+                description = <"Interpretação narrativa concisa e clinicamente contextualizada dos resultados dos testes de patologia.">
             >
             ["id63"] = <
-                text = <"*Requester order identifier (en)">
-                description = <"*The local ID assigned to the order by the order requester. Equivalent to the Placer Order Identifier. (en)">
+                text = <"Identificador da ordem do solicitante">
+                description = <"O ID local atribuído à ordem pelo solicitante.">
             >
             ["id64"] = <
-                text = <"*Receiver order Identifier (en)">
-                description = <"*The local ID assigned to the test order by the order filler, usually by the (LIS) Laboratory Information System. Equivalent to the DICOM Accession Number and the Filler Order Identifier. (en)">
+                text = <"Identificador do pedido">
+                description = <"A identificação local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo sistema de informação de laboratório (LIS). Equivalente ao número de acesso DICOM e ao identificador de pedido de preenchimento.">
             >
             ["id66"] = <
-                text = <"*Specimen detail (en)">
-                description = <"*Details about the specimen if all individual test results are derived from the same specimen. If the specimen is sufficiently specified with a code in the Test result name, then this additional data is not required. If there are multiple specimens, these may be represented per 'Result group'. (en)">
+                text = <"Detalhes da amostra">
+                description = <"Detalhes sobre a amostragem se todos os resultados de testes individuais forem derivados da mesma amostra. Se a amostra for suficientemente especificada com um código no nome do resultado do teste, esses dados adicionais não são necessários. Se houver várias amostras, estes podem ser representados por 'Grupo de resultados'.">
             >
             ["id69"] = <
-                text = <"*Laboratory test result identifier (en)">
-                description = <"*The identifier given to the laboratory test result of a pathology investigation. (en)">
+                text = <"Identificador do resultado do teste de laboratório">
+                description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
             >
             ["id74"] = <
-                text = <"*Overall test result status (en)">
-                description = <"*The status of the pathology test result as a whole. (en)">
+                text = <"Status geral do resultado do teste">
+                description = <"O status do resultado do teste de patologia como um todo.">
             >
             ["at75"] = <
                 text = <"*Cancelled / Aborted (en)">
                 description = <"*The test was aborted and never completed. (en)">
             >
             ["id78"] = <
-                text = <"*Diagnostic service (en)">
-                description = <"*The diagnostic service that performs the examination e.g. biochemistry, haematology. Coding with a terminology is desirable, where possible. (en)">
+                text = <"Serviço de diagnóstico">
+                description = <"O serviço de diagnóstico que realiza o exame, e. bioquímica, hematologia. A codificação com uma terminologia é desejável, sempre que possível.">
             >
             ["at80"] = <
                 text = <"*Never performed (en)">
                 description = <"*The test was never performed. (en)">
             >
             ["id91"] = <
-                text = <"*Requester (en)">
-                description = <"*Details of the clinician or organisation requesting the laboratory test. (en)">
+                text = <"Solicitante">
+                description = <"Detalhes do clínico ou organização que solicita o teste de laboratório.">
             >
             ["id95"] = <
-                text = <"*Test request details (en)">
-                description = <"** (en)">
+                text = <"Detalhes da solicitação do teste">
+                description = <"*">
             >
             ["id96"] = <
-                text = <"*Result group (en)">
-                description = <"*A group of results. Results may be grouped by specimen, or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT, if possible. (en)">
+                text = <"Grupo de resultados">
+                description = <"Um grupo de resultados. Os resultados podem ser agrupados por amostras, ou por algum outro nome ou código para descrever o que une todos os resultados juntos. Se um nome ou código for usado, ele é fornecido por nomeação de tempo de execução do elemento 'Grupo de resultados' ou pode ser corrigido em um arquétipo ou modelo especializado. A codificação com uma terminologia, potencialmente um termo pré-coordenado, incluindo o tipo de amostra, é preferida, sempre que possível, pelo nome. Deveria ser codificado com LOINC ou SNOMED CT, se possível.">
             >
             ["id97"] = <
-                text = <"*Result (en)">
-                description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation. Results include whatever specific data items pathology labs report as part of the clinical service; it is not confined to measurements. The result is identified by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT. Examples include: glucose, haemoglobin, phenotype, titre, or scatterplot image. (en)">
+                text = <"Resultado">
+                description = <"Resultado detalhado específico, incluindo o valor do item de resultado e informações adicionais que podem ser úteis para a interpretação clínica. Os resultados incluem o que os laboratórios de patologia de itens de dados específicos relatam como parte do serviço clínico; não se limita às medidas. O resultado é identificado por re-nomeação de tempo de execução do elemento 'Grupo de resultados' ou pode ser corrigido em um arquétipo ou modelo especializado. A codificação com uma terminologia, potencialmente um termo pré-coordenado, incluindo o tipo de amostra, é preferida, sempre que possível, pelo nome. Deve ser codificado com LOINC ou SNOMED CT. Os exemplos incluem: imagem de glicose, hemoglobina, fenótipo, título ou imagem dispersa.">
             >
             ["id98"] = <
-                text = <"*Specimen detail (en)">
-                description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required. (en)">
+                text = <"Detalhes da amostra">
+                description = <"Detalhes sobre a amostra individual ao qual se referem esses resultados do teste \"Grupo de resultados\", onde o teste de espécimes múltiplos é necessário.">
             >
             ["id99"] = <
-                text = <"*Pathological diagnosis (en)">
-                description = <"*Single word, phrase or brief description representing the 'Conclusion'. Coding with a terminology is preferred, where possible. (en)">
+                text = <"Diagnóstico patológico">
+                description = <"Palavra única, frase ou breve descrição que representa a \"Conclusão\". A codificação com uma terminologia é preferida, sempre que possível.">
             >
             ["id100"] = <
-                text = <"*DateTime result issued (en)">
-                description = <"*The date and/or time that the result was issued for the recorded ‘Overall test result status’. (en)">
+                text = <"Data/hora da emissão do resultado">
+                description = <"A data e / ou a hora em que o resultado foi emitido para o 'Status do resultado do teste geral' gravado.">
             >
             ["id101"] = <
-                text = <"*Clinical information provided (en)">
-                description = <"*Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the test request. (en)">
+                text = <"Informação clínica disponibilizada">
+                description = <"Descrição da informação clínica disponível no momento da interpretação dos resultados, ou um link para a informação clínica original fornecida no pedido de teste.">
             >
             ["id102"] = <
-                text = <"*Test comment (en)">
-                description = <"*Additional narrative about the test not captured in other fields. (en)">
+                text = <"Comentário do teste">
+                description = <"Narração adicional sobre o teste não capturado em outros campos.">
             >
             ["id103"] = <
                 text = <"*Result comment (en)">
