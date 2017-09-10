@@ -574,20 +574,20 @@ terminology
                 description = <"Grave se você fez uma mamografia no último ano">
             >
             ["at0.34"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
+                text = <"Sim">
+                description = <"Sim">
             >
             ["at0.35"] = <
-                text = <"*Not (en)">
-                description = <"*Not (en)">
+                text = <"Não">
+                description = <"Não">
             >
             ["at0.36"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
+                text = <"Ignorado">
+                description = <"Ignorado">
             >
             ["at0.37"] = <
-                text = <"*Not applicable (en)">
-                description = <"*Not applicable (en)">
+                text = <"Não aplicável">
+                description = <"Não aplicável">
             >
             ["ac0.7"] = <
                 text = <"*Mammography (en)">
@@ -598,48 +598,48 @@ terminology
                 description = <"Atividade clínica sobre a realização de um exame de imagem.">
             >
             ["at3"] = <
-                text = <"*Examination planned (en)">
-                description = <"*Imaging examination is planned. (en)">
+                text = <"Exame planejado">
+                description = <"Exame de imagem foi planejado.">
             >
             ["at4"] = <
-                text = <"*Examination requested (en)">
-                description = <"*Imaging examination has been requested. (en)">
+                text = <"Exame solicitado">
+                description = <"Exame de imagem foi solicitado.">
             >
             ["at5"] = <
-                text = <"*Appointment scheduled (en)">
-                description = <"*Imaging examination appointment has been made. (en)">
+                text = <"Consulta agendada">
+                description = <"O agendamento da consulta do exame de imagem foi realizada.">
             >
             ["at6"] = <
-                text = <"*Appointment rescheduled (en)">
-                description = <"*Appointment for imaging examination has been rescheduled. (en)">
+                text = <"Consulta reagendada">
+                description = <"A consulta para o exame de imagem foi reagendada.">
             >
             ["at8"] = <
-                text = <"*Examination complete (en)">
-                description = <"*The imaging examination has been performed and all associated activities completed. (en)">
+                text = <"Exame completo">
+                description = <"O exame de imagem foi realizado e todas as atividades associadas foram concluídas.">
             >
             ["at9"] = <
-                text = <"*Examination performed (en)">
-                description = <"*The examation was performed but related activities not completed. (en)">
+                text = <"Exame realizado">
+                description = <"A avaliação foi realizada, mas as atividades relacionadas não foram concluídas.">
             >
             ["at10"] = <
-                text = <"*Examination postponed (en)">
-                description = <"*The examination has been postponed. (en)">
+                text = <"Exame adiado">
+                description = <"O exame foi adiado.">
             >
             ["at11"] = <
-                text = <"*Examination suspended (en)">
-                description = <"*The examination has been suspended. (en)">
+                text = <"Exame suspenso">
+                description = <"O exame foi suspenso.">
             >
             ["at12"] = <
-                text = <"*Examination cancelled (en)">
-                description = <"*The planned examination has been cancelled prior to commencement. (en)">
+                text = <"Exame cancelado">
+                description = <"O exame planejado foi cancelado.">
             >
             ["at13"] = <
-                text = <"*Examination aborted (en)">
-                description = <"*The examination has been aborted. (en)">
+                text = <"Exame abortado">
+                description = <"O exame foi abortado.">
             >
             ["at15"] = <
-                text = <"*Failed attempt (en)">
-                description = <"*The examation was commenced but not completed successfully. (en)">
+                text = <"Falha na tentativa">
+                description = <"O exame foi iniciado, mas não foi concluído com sucesso.">
             >
             ["id17"] = <
                 text = <"Data/hora de início">
@@ -670,36 +670,36 @@ terminology
                 description = <"Informação estruturada sobre a localização anatômica específica do exame.">
             >
             ["at16"] = <
-                text = <"*planned (en)">
-                description = <"*planned (en)">
+                text = <"planejado">
+                description = <"planejado">
             >
             ["at17"] = <
-                text = <"*postponed (en)">
-                description = <"*postponed (en)">
+                text = <"adiado">
+                description = <"adiado">
             >
             ["at18"] = <
-                text = <"*cancelled (en)">
-                description = <"*cancelled (en)">
+                text = <"cancelado">
+                description = <"cancelado">
             >
             ["at19"] = <
-                text = <"*scheduled (en)">
-                description = <"*scheduled (en)">
+                text = <"agendado">
+                description = <"agendado">
             >
             ["at20"] = <
-                text = <"*active (en)">
-                description = <"*active (en)">
+                text = <"ativo">
+                description = <"ativo">
             >
             ["at21"] = <
-                text = <"*suspended (en)">
-                description = <"*suspended (en)">
+                text = <"suspenso">
+                description = <"suspenso">
             >
             ["at22"] = <
-                text = <"*aborted (en)">
-                description = <"*aborted (en)">
+                text = <"abortado">
+                description = <"abortado">
             >
             ["at23"] = <
-                text = <"*complete (en)">
-                description = <"*complete (en)">
+                text = <"completo">
+                description = <"completo">
             >
         >
     >
