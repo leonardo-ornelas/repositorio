@@ -554,16 +554,16 @@ terminology
                 description = <"Yoga / Tai-chi-chuan">
             >
             ["at0.31"] = <
-                text = <"*Stretching (en)">
-                description = <"*Stretching (en)">
+                text = <"Alongamento">
+                description = <"Alongamento">
             >
             ["at0.32"] = <
-                text = <"*Martial Arts / Fights (en)">
-                description = <"*Martial Arts / Fights (en)">
+                text = <"Artes Marciais / Lutas">
+                description = <"Artes Marciais / Lutas">
             >
             ["at0.33"] = <
-                text = <"*Other physical activities (en)">
-                description = <"*Other physical activities (en)">
+                text = <"Outras atividades físicas">
+                description = <"Outras atividades físicas">
             >
             ["ac0.6"] = <
                 text = <"*Main type of physical activity practiced in their leisure time. (en)">
