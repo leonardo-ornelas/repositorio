@@ -31,8 +31,9 @@ description
         ["pt-br"] = <
             keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
             language = <[ISO_639-1::pt-br]>
-            purpose = <"*To record activity regarding the performance of imaging examinations. (en)">
-            use = <"*Use to record activity regarding the performance of imaging examinations. (en)">
+            misuse = <"">
+            purpose = <"Gravar atividade sobre o desempenho dos exames de imagem.">
+            use = <"Use para gravar a atividade sobre o desempenho dos exames de imagem.">
         >
     >
     lifecycle_state = <"unmanaged">
