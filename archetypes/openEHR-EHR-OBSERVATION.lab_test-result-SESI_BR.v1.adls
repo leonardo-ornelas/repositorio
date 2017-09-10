@@ -484,20 +484,20 @@ terminology
                 description = <"Registrar se foi realizado no último ano.">
             >
             ["at0.1"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
+                text = <"Sim">
+                description = <"Sim">
             >
             ["at0.2"] = <
-                text = <"*Not (en)">
-                description = <"*Not (en)">
+                text = <"Não">
+                description = <"Não">
             >
             ["at0.3"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
+                text = <"Ignorado">
+                description = <"Ignorado">
             >
             ["at0.4"] = <
-                text = <"*Not applicable (en)">
-                description = <"*Not applicable (en)">
+                text = <"Não aplicável">
+                description = <"Não aplicável">
             >
             ["ac0.1"] = <
                 text = <"*PSA (en)">
@@ -524,20 +524,20 @@ terminology
                 description = <"Detalhes demográficos do laboratório responsável pelo teste. Os detalhes dos laboratórios secundários também podem ser incluídos.">
             >
             ["at38"] = <
-                text = <"*Interim (en)">
-                description = <"*This is an initial or interim result - further updates are anticipated. (en)">
+                text = <"Provisório">
+                description = <"Este é um resultado inicial ou provisório - são antecipadas novas atualizações.">
             >
             ["at39"] = <
-                text = <"*Final (en)">
-                description = <"*This is the final result. No further alterations are anticipated. (en)">
+                text = <"Final">
+                description = <"Esse é o resultado final. Não são previstas novas alterações.">
             >
             ["at40"] = <
-                text = <"*Supplementary (en)">
-                description = <"*This is a supplementary result ehich should be appended to a previous result. (en)">
+                text = <"Suplementar">
+                description = <"Este é um resultado suplementar que deve ser anexado a um resultado anterior.">
             >
             ["at41"] = <
-                text = <"*Corrected / Amended (en)">
-                description = <"*This is a correction which should completely replace any previous results. (en)">
+                text = <"Corrigido/Modificado">
+                description = <"Esta é uma correção que deve substituir completamente os resultados anteriores.">
             >
             ["id58"] = <
                 text = <"Conclusão">
@@ -564,16 +564,16 @@ terminology
                 description = <"O status do resultado do teste de patologia como um todo.">
             >
             ["at75"] = <
-                text = <"*Cancelled / Aborted (en)">
-                description = <"*The test was aborted and never completed. (en)">
+                text = <"Cancelado/Abortado">
+                description = <"O teste foi abortado e nunca foi concluído.">
             >
             ["id78"] = <
                 text = <"Serviço de diagnóstico">
                 description = <"O serviço de diagnóstico que realiza o exame, e. bioquímica, hematologia. A codificação com uma terminologia é desejável, sempre que possível.">
             >
             ["at80"] = <
-                text = <"*Never performed (en)">
-                description = <"*The test was never performed. (en)">
+                text = <"Nunca realizado">
+                description = <"O teste nunca foi realizado.">
             >
             ["id91"] = <
                 text = <"Solicitante">
@@ -632,8 +632,8 @@ terminology
                 description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
             >
             ["at108"] = <
-                text = <"*Registered (en)">
-                description = <"*The tst has been registered by the laboratory but a result is not yet available. (en)">
+                text = <"Registrado">
+                description = <"O tst foi registrado pelo laboratório, mas um resultado ainda não está disponível.">
             >
             ["id109"] = <
                 text = <"Status do resultado">
