@@ -278,56 +278,56 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Menstruation (en)">
-                description = <"*Information about menstruation and menstrual cycles (en)">
+                text = <"Menstruação">
+                description = <"Informação sobre menstruação e ciclos menstruais">
             >
             ["id1"] = <
-                text = <"*Menstruation (en)">
-                description = <"*Information about menstruation and menstrual cycles (en)">
+                text = <"Menstruação">
+                description = <"Informação sobre menstruação e ciclos menstruais">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Timing event (en)">
+                text = <"Qualquer evento">
+                description = <"Evento de sincronização">
             >
             ["id5"] = <
-                text = <"*Last Normal Menstrual cycle (en)">
-                description = <"*Clinical information about the last normal menstrual cycle (en)">
+                text = <"Último ciclo menstrual normal">
+                description = <"Informações clínicas sobre o último ciclo menstrual normal">
             >
             ["id6"] = <
-                text = <"*Typical Menstrual cycle (en)">
-                description = <"*Clinical information about a typical menstrual cycle (en)">
+                text = <"Ciclo menstrual típico">
+                description = <"Informações clínicas sobre um ciclo menstrual típico">
             >
             ["id8"] = <
-                text = <"*Specific Menstrual cycle (en)">
-                description = <"*Clinical information about a specific menstrual cycle (en)">
+                text = <"Ciclo menstrual específico">
+                description = <"Informações clínicas sobre um ciclo menstrual específico">
             >
             ["id15"] = <
-                text = <"*Associated symptoms (en)">
-                description = <"*Symptoms associated with the last menstrual cycle (en)">
+                text = <"Sintomas associados">
+                description = <"Sintomas associados ao último ciclo menstrual">
             >
             ["id16"] = <
-                text = <"*Normal Statements (en)">
-                description = <"*Collection of normal statements about Menstrual History (en)">
+                text = <"Situações normais">
+                description = <"Coleção de situações normais sobre Histórico Menstrual">
             >
             ["id17"] = <
-                text = <"*Normal statement (en)">
-                description = <"*Normal statement about Menstrual History (en)">
+                text = <"Situação normal">
+                description = <"Situação normal sobre o histórico menstrual.">
             >
             ["id18"] = <
-                text = <"*Findings (en)">
-                description = <"*Findings associated with menstruation (en)">
+                text = <"Descobertas">
+                description = <"Descobertas associadas à menstruação">
             >
             ["id21"] = <
-                text = <"*Associated symptoms (en)">
-                description = <"*Symptoms associated with typical menstrual cycles (en)">
+                text = <"Sintomas associados">
+                description = <"Sintomas associados a ciclos menstruais típicos">
             >
             ["id22"] = <
-                text = <"*Associated symptoms (en)">
-                description = <"*Symptoms associated with this menstrual cycle (en)">
+                text = <"Sintomas associados">
+                description = <"Sintomas associados a este ciclo menstrual">
             >
             ["id24"] = <
-                text = <"*Hormonal or intrauterine contraception (en)">
-                description = <"*Details of hormonal or intrauterine contraception (en)">
+                text = <"Contracepção hormonal ou intra-uterina">
+                description = <"Detalhes da contracepção hormonal ou intra-uterina">
             >
             ["at25"] = <
                 text = <"*Combined oral (en)">
@@ -354,32 +354,32 @@ terminology
                 description = <"*Not using any hormonal or intrauterine contraception (en)">
             >
             ["id31"] = <
-                text = <"*Clinical description (en)">
-                description = <"** (en)">
+                text = <"Descrição clínica">
+                description = <"*">
             >
             ["id32"] = <
-                text = <"*Date (en)">
-                description = <"** (en)">
+                text = <"Data">
+                description = <"*">
             >
             ["id33"] = <
-                text = <"*Menarche (en)">
-                description = <"** (en)">
+                text = <"Menarca">
+                description = <"*">
             >
             ["id34"] = <
-                text = <"*Age at menarche (en)">
-                description = <"** (en)">
+                text = <"Idade da menarca">
+                description = <"*">
             >
             ["id35"] = <
-                text = <"*Onset of LNMP (en)">
-                description = <"*Onset of Last Normal Menstrual Period (en)">
+                text = <"Início de LNMP">
+                description = <"Início do último período menstrual normal">
             >
             ["id36"] = <
-                text = <"*Onset of menstrual period (en)">
-                description = <"** (en)">
+                text = <"Início do período menstrual">
+                description = <"*">
             >
             ["id37"] = <
-                text = <"*Element: Onset of LNMP (en)">
-                description = <"** (en)">
+                text = <"Elemento: início do LNMP">
+                description = <"*">
             >
             ["id38"] = <
                 text = <"*Cluster: Menstrual cycle (en)">
