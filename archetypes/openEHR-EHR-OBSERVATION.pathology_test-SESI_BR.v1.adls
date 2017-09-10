@@ -1,0 +1,140 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.pathology_test-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.pathology_test.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory", "anatomical", "chemical", "clinical", "immunopathology", "cytology", "histopathology", "test", "biopsy", "specimen", "forensic", "genetic">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used for reporting on non-pathology test results e.g. diagnostic imaging, ECG or respiratory function tests.
+
+Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+
+Not to be used to record an Autopsy report, although tests on some specimens that are taken at autopsy may be represented using this archetype.
+
+This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.
+
+This archetype has been designed to support clinical pathology and may not be appropriate for other kinds of pathology use.">
+            purpose = <"To record the findings and interpretation of pathology tests performed on tissues and body fluids. This is typically done in a laboratory but may be done in other environments such as at the point of care.">
+            use = <"Use to record any pathology test result, including the result of a test on a specimen taken as part of a composite procedure or operation.
+
+Multi-analyte panels can be represented using templates or specialised archetypes.
+ 
+More complex tests such as histopathology or microbiology should be represented using specialised archetypes where additional report content is required.
+
+Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Ian McNicoll">
+        ["organisation"] = <"Ocean Informatics, United Kingdom">
+        ["email"] = <"ian.mcnicoll@oceaninformatics.com">
+        ["date"] = <"2009-11-07">
+    >
+    original_publisher = <"National E-Health Transition Authority, Australia">
+    other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+
+definition
+    OBSERVATION[id1.1] matches {    -- Pathology Test Result
+        /data[id2]/events[id3]/data[id4]/items matches {
+            allow_archetype CLUSTER[id66] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id74] matches {
+                /value[id114]/defining_code matches {[ac1]}
+            }
+            CLUSTER[id96] matches {
+                items matches {
+                    CLUSTER[id97] matches {
+                        /items[id109]/value[id121]/defining_code matches {[ac2]}
+                    }
+                    allow_archetype CLUSTER[id98] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Pap Smear
+                        value matches {
+                            DV_CODED_TEXT[id0.3] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id11] matches {
+                /value[id124]/media_type matches {[ac3]}
+            }
+        }
+        /protocol[id5]/items matches {
+            allow_archetype CLUSTER[id18] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            CLUSTER[id95] matches {
+                items matches {
+                    allow_archetype CLUSTER[id91] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    allow_archetype CLUSTER[id36] matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id111] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Pathology Test Result">
+                description = <"The findings and interpretation of pathology tests performed on patient-related specimens.">
+            >
+            ["id0.2"] = <
+                text = <"Pap Smear">
+                description = <"Record if performed in the last year pap smear examination">
+            >
+            ["at0.1"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at0.2"] = <
+                text = <"Not">
+                description = <"Not">
+            >
+            ["at0.3"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at0.4"] = <
+                text = <"Not applicable">
+                description = <"Not applicable">
+            >
+            ["ac0.1"] = <
+                text = <"Pap Smear">
+                description = <"Pap Smear">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+    >
+
