@@ -330,28 +330,28 @@ terminology
                 description = <"Detalhes da contracepção hormonal ou intra-uterina">
             >
             ["at25"] = <
-                text = <"*Combined oral (en)">
-                description = <"*Oral hormonal containing oestrogen and progestogen (en)">
+                text = <"Oral combinado">
+                description = <"Estrogênio e progestagão hormonal oral">
             >
             ["at26"] = <
-                text = <"*Oral progesterone only (en)">
-                description = <"*Oral progesterone only (en)">
+                text = <"Apenas progesterona oral">
+                description = <"Apenas progesterona oral">
             >
             ["at27"] = <
-                text = <"*Progesterone injections or implant (en)">
-                description = <"*Using progesterone implant or injections (en)">
+                text = <"Injeções ou implante de progesterona">
+                description = <"Injeções ou implante de progesterona">
             >
             ["at28"] = <
-                text = <"*Non-hormonal intrauterine device (en)">
-                description = <"*A non hormonal intrauterine contraceptive device (en)">
+                text = <"Dispositivo intrauterino não hormonal">
+                description = <"Dispositivo intrauterino não hormonal">
             >
             ["at29"] = <
-                text = <"*Hormonal intrauterine device (en)">
-                description = <"*An intrauterine device with hormonal release (en)">
+                text = <"Dispositivo intra-uterino hormonal">
+                description = <"Um dispositivo intra-uterino com liberação hormonal">
             >
             ["at30"] = <
-                text = <"*No hormonal or intrauterine contraception (en)">
-                description = <"*Not using any hormonal or intrauterine contraception (en)">
+                text = <"Sem contracepção hormonal ou intra-uterina">
+                description = <"Não usar qualquer contracepção hormonal ou intra-uterina">
             >
             ["id31"] = <
                 text = <"Descrição clínica">
@@ -406,8 +406,8 @@ terminology
                 description = <"*">
             >
             ["at31"] = <
-                text = <"*Time (en)">
-                description = <"*Time (en)">
+                text = <"Tempo">
+                description = <"Tempo">
             >
             ["ac1"] = <
                 text = <"*Hormonal or intrauterine contraception (synthesised) (en)">
