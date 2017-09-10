@@ -348,20 +348,20 @@ terminology
                 description = <"Registrar se realizado no último ano exames de Papanicolaou">
             >
             ["at0.1"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
+                text = <"Sim">
+                description = <"Sim">
             >
             ["at0.2"] = <
-                text = <"*Not (en)">
-                description = <"*Not (en)">
+                text = <"Não">
+                description = <"Não">
             >
             ["at0.3"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
+                text = <"Ignorado">
+                description = <"Ignorado">
             >
             ["at0.4"] = <
-                text = <"*Not applicable (en)">
-                description = <"*Not applicable (en)">
+                text = <"Não aplicável">
+                description = <"Não aplicável">
             >
             ["ac0.1"] = <
                 text = <"*Pap Smear (en)">
@@ -392,24 +392,24 @@ terminology
                 description = <"O status da publicação de todo o resultado do teste de patologia.">
             >
             ["at108"] = <
-                text = <"*Registered (en)">
-                description = <"*No result yet available. (en)">
+                text = <"Registrado">
+                description = <"Nenhum resultado ainda está disponível.">
             >
             ["at38"] = <
-                text = <"*Interim (en)">
-                description = <"*This is an initial or interim result: data may be missing or verification not been performed. (en)">
+                text = <"Provisório">
+                description = <"Este é um resultado inicial ou provisório: os dados podem estar faltando ou a verificação não foi realizada.">
             >
             ["at39"] = <
-                text = <"*Final (en)">
-                description = <"*The result is complete and verified by the responsible pathologist. (en)">
+                text = <"Final">
+                description = <"O resultado é completo e verificado pelo patologista responsável.">
             >
             ["at41"] = <
-                text = <"*Amended (en)">
-                description = <"*The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist. (en)">
+                text = <"Modificado">
+                description = <"O resultado foi modificado após ser Final e é completo e verificado pelo patologista responsável.">
             >
             ["at75"] = <
-                text = <"*Cancelled/Aborted (en)">
-                description = <"*The result is unavailable because the test was not started or not completed. (en)">
+                text = <"Cancelado/Abortado">
+                description = <"O resultado não está disponível porque o teste não foi iniciado ou não foi concluído.">
             >
             ["id101"] = <
                 text = <"Informação clínica disponibilizada">
