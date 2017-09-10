@@ -464,40 +464,40 @@ terminology
                 description = <"A data e / ou a hora em que o resultado inteiro foi emitido para o 'Status do resultado do teste geral' registrado.">
             >
             ["id18"] = <
-                text = <"Laboratório de Recepção">
+                text = <"Laboratório">
                 description = <"Detalhes demográficos do laboratório responsável pelo teste de patologia.">
             >
             ["id95"] = <
-                text = <"*Test Request Details (en)">
-                description = <"*Details concerning a single pathology test requested. (en)">
+                text = <"Detalhes do resultado do teste">
+                description = <"Detalhes relativos a um único teste de patologia solicitado.">
             >
             ["id63"] = <
-                text = <"*Requester Order Identifier (en)">
-                description = <"*The local ID assigned to the order by the order requester. (en)">
+                text = <"Identificador da Ordem do Solicitante">
+                description = <"O ID local atribuído à ordem pelo solicitante da ordem.">
             >
             ["id107"] = <
-                text = <"*Test Requested Name (en)">
-                description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed. (en)">
+                text = <"Nome do teste solicitado">
+                description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
             >
             ["id91"] = <
-                text = <"*Requester (en)">
-                description = <"*Details of the clinician or organisation requesting the pathology test result. (en)">
+                text = <"Solicitante">
+                description = <"Detalhes do clínico ou organização que solicita o resultado do teste de patologia.">
             >
             ["id64"] = <
-                text = <"*Receiver Order Identifier (en)">
-                description = <"*The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS). (en)">
+                text = <"Identificador do pedido">
+                description = <"A identificação local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo Sistema de Informações do Laboratório (LIS).">
             >
             ["id69"] = <
-                text = <"*Laboratory Test Result Identifier (en)">
-                description = <"*The identifier given to the laboratory test result of a pathology investigation. (en)">
+                text = <"Identificador do resultado do teste de laboratório">
+                description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
             >
             ["id111"] = <
-                text = <"*Test Procedure (en)">
-                description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used. (en)">
+                text = <"Procedimento de teste">
+                description = <"Seguiram-se detalhes estruturados adicionais da metodologia de teste de patologia. Por exemplo, detalhes estruturados sobre o método de laboratório e a interpretação de dados utilizados.">
             >
             ["id36"] = <
-                text = <"*Copied Provider (en)">
-                description = <"*Details of the clinician or organisation who will receive a copy of the pathology test result. (en)">
+                text = <"Envio de cópia">
+                description = <"Detalhes do clínico ou organização que receberão uma cópia do resultado do teste de patologia.">
             >
             ["at109"] = <
                 text = <"*text/html (en)">
