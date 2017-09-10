@@ -45,23 +45,23 @@ Will normally be reported back to the requesting clinician as one component with
         ["pt-br"] = <
             keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory", "anatomical", "chemical", "clinical", "immunopathology", "cytology", "histopathology", "test", "biopsy", "specimen", "forensic", "genetic">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not to be used for reporting on non-pathology test results e.g. diagnostic imaging, ECG or respiratory function tests.
+            misuse = <"Não deve ser usado para relatar resultados de testes não-patológicos, e. diagnóstico por imagem, ECG ou testes de função respiratória.
 
-Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+Não deve ser usado para representar um relatório cumulativo completo. Este arquétipo de resultado de teste de patologia representa apenas um dos conjuntos de resultados que geralmente são vistos como verticais em um relatório de teste cumulativo. Um relatório cumulativo é uma visão que é construída a partir dos resultados representados por vários arquétipos de OBSERVATION.
 
-Not to be used to record an Autopsy report, although tests on some specimens that are taken at autopsy may be represented using this archetype.
+Não deve ser usado para gravar um relatório de Autopsia, embora testes em alguns espécimes que são retirados na autópsia podem ser representados usando este arquétipo.
 
-This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.
+Este arquétipo é adequado para a representação dos resultados dos testes de patologia geral, mas não destinado a cobrir relatórios sinopáticos completos. Para isso, são necessários arquétipos especializados adicionais para representar os dados.
 
-This archetype has been designed to support clinical pathology and may not be appropriate for other kinds of pathology use. (en)">
-            purpose = <"*To record the findings and interpretation of pathology tests performed on tissues and body fluids. This is typically done in a laboratory but may be done in other environments such as at the point of care. (en)">
-            use = <"*Use to record any pathology test result, including the result of a test on a specimen taken as part of a composite procedure or operation.
+Este arquétipo foi projetado para apoiar a patologia clínica e pode não ser apropriado para outros tipos de uso de patologia.">
+            purpose = <"Para registrar os achados e a interpretação dos testes de patologia realizados em tecidos e fluidos corporais. Isso geralmente é feito em um laboratório, mas pode ser feito em outros ambientes, como no ponto de atendimento.">
+            use = <"Use para registrar qualquer resultado do teste de patologia, incluindo o resultado de um teste em uma amostra tomada como parte de um procedimento ou operação composta.
 
-Multi-analyte panels can be represented using templates or specialised archetypes.
- 
-More complex tests such as histopathology or microbiology should be represented using specialised archetypes where additional report content is required.
+Os painéis de multi-analitos podem ser representados usando modelos ou arquétipos especializados.
 
-Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report. (en)">
+Testes mais complexos, como histopatologia ou microbiologia, devem ser representados usando arquétipos especializados em que o conteúdo do relatório adicional é necessário.
+
+Normalmente, será relatado de volta ao clínico solicitante como um componente no contexto de um relatório global baseado em COMPOSITION.">
         >
     >
     lifecycle_state = <"unmanaged">
