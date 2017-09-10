@@ -414,144 +414,144 @@ terminology
                 description = <"Atividade clínica sobre a realização de um exame de imagem.">
             >
             ["at0.1"] = <
-                text = <"*Regular (en)">
-                description = <"*Regular (en)">
+                text = <"Regular">
+                description = <"Regular">
             >
             ["at0.2"] = <
-                text = <"*Irregular (en)">
-                description = <"*Irregular (en)">
+                text = <"Irregular">
+                description = <"Irregular">
             >
             ["ac0.1"] = <
                 text = <"*Physical activity for work (en)">
                 description = <"*Do physical activity for work (en)">
             >
             ["at0.3"] = <
-                text = <"*Irregular (en)">
-                description = <"*Irregular (en)">
+                text = <"Irregular">
+                description = <"Irregular">
             >
             ["ac0.2"] = <
                 text = <"*Regularly perform some type of physical activity at leisure (en)">
                 description = <"*Irregular (en)">
             >
             ["at0.4"] = <
-                text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
-                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+                text = <"NÃO e eu não estou interessado em fazer atividades físicas em meu lazer no futuro próximo.">
+                description = <"NÃO e eu não estou interessado em fazer atividades físicas em meu lazer no futuro próximo.">
             >
             ["ac0.3"] = <
                 text = <"*How many days did you walk for at least 10 continuous minutes (en)">
                 description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
             >
             ["at0.5"] = <
-                text = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
-                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+                text = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+                description = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
             >
             ["ac0.4"] = <
                 text = <"*How many days of the last week did moderate activity (en)">
                 description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
             >
             ["at0.6"] = <
-                text = <"*Irregular (en)">
-                description = <"*Irregular (en)">
+                text = <"Irregular">
+                description = <"Irregular">
             >
             ["at0.7"] = <
-                text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
-                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+                text = <"NÃO e eu não estou interessado em fazer atividades físicas em meu lazer no futuro próximo.">
+                description = <"NÃO e eu não estou interessado em fazer atividades físicas em meu lazer no futuro próximo.">
             >
             ["at0.8"] = <
-                text = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
-                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+                text = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+                description = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
             >
             ["at0.9"] = <
-                text = <"*YES, 1 or 2 times a week. (en)">
-                description = <"*YES, 1 or 2 times a week. (en)">
+                text = <"SIM, 1 ou 2 vezes por semana.">
+                description = <"SIM, 1 ou 2 vezes por semana.">
             >
             ["at0.10"] = <
-                text = <"*YES, 3 or 4 times a week. (en)">
-                description = <"*YES, 3 or 4 times a week. (en)">
+                text = <"SIM, 3 ou 4 vezes por semana.">
+                description = <"SIM, 3 ou 4 vezes por semana.">
             >
             ["at0.11"] = <
-                text = <"*YES, 5 or more times per week. (en)">
-                description = <"*YES, 5 or more times per week. (en)">
+                text = <"SIM, 5 ou mais vezes por semana.">
+                description = <"SIM, 5 ou mais vezes por semana.">
             >
             ["at0.12"] = <
-                text = <"*None (en)">
-                description = <"*None (en)">
+                text = <"Nenhum">
+                description = <"Nenhum">
             >
             ["at0.13"] = <
-                text = <"*1 day (en)">
-                description = <"*1 day (en)">
+                text = <"1 dia">
+                description = <"1 dia">
             >
             ["at0.14"] = <
-                text = <"*2 days (en)">
-                description = <"*2 days (en)">
+                text = <"2 dias">
+                description = <"2 dias">
             >
             ["at0.15"] = <
-                text = <"*3 days (en)">
-                description = <"*3 days (en)">
+                text = <"3 dias">
+                description = <"3 dias">
             >
             ["at0.16"] = <
-                text = <"*4 days (en)">
-                description = <"*4 days (en)">
+                text = <"4 dias">
+                description = <"4 dias">
             >
             ["at0.17"] = <
-                text = <"*5 days (en)">
-                description = <"*5 days (en)">
+                text = <"5 dias">
+                description = <"5 dias">
             >
             ["at0.18"] = <
-                text = <"*6 days (en)">
-                description = <"*6 days (en)">
+                text = <"6 dias">
+                description = <"6 dias">
             >
             ["at0.19"] = <
-                text = <"*7 days (en)">
-                description = <"*7 days (en)">
+                text = <"7 dias">
+                description = <"7 dias">
             >
             ["ac0.5"] = <
                 text = <"*How many days in the last week have you carried out rigorous activities (en)">
                 description = <"*How many days in the last week have you carried out rigorous activities (en)">
             >
             ["at0.20"] = <
-                text = <"*Does not practice physical activities (en)">
-                description = <"*Does not practice physical activities (en)">
+                text = <"Não pratica atividades físicas">
+                description = <"Não pratica atividades físicas">
             >
             ["at0.21"] = <
-                text = <"*Walking (en)">
-                description = <"*Walking (en)">
+                text = <"Caminhada">
+                description = <"Caminhada">
             >
             ["at0.22"] = <
-                text = <"*Sport (en)">
-                description = <"*Sport (en)">
+                text = <"Esportes">
+                description = <"Esportes">
             >
             ["at0.23"] = <
-                text = <"*Cycling (en)">
-                description = <"*Cycling (en)">
+                text = <"Ciclismo">
+                description = <"Ciclismo">
             >
             ["at0.24"] = <
-                text = <"*Racing (en)">
-                description = <"*Racing (en)">
+                text = <"Corridas">
+                description = <"Corridas">
             >
             ["at0.25"] = <
-                text = <"*Swimming / Hydrotherapy (en)">
-                description = <"*Swimming / Hydrotherapy (en)">
+                text = <"Natação / Hidroterapia">
+                description = <"Natação / Hidroterapia">
             >
             ["at0.26"] = <
-                text = <"*Fitness (en)">
-                description = <"*Fitness (en)">
+                text = <"Ginástica">
+                description = <"Ginástica">
             >
             ["at0.27"] = <
-                text = <"*Bodybuilding (en)">
-                description = <"*Bodybuilding (en)">
+                text = <"Musculação">
+                description = <"Musculação">
             >
             ["at0.28"] = <
-                text = <"*Dancing (en)">
-                description = <"*Dancing (en)">
+                text = <"Dança">
+                description = <"Dança">
             >
             ["at0.29"] = <
-                text = <"*Adventure sports (en)">
-                description = <"*Adventure sports (en)">
+                text = <"Esportes radicais">
+                description = <"Esportes radicais">
             >
             ["at0.30"] = <
-                text = <"*Yoga / Tai-chi-chuan (en)">
-                description = <"*Yoga / Tai-chi-chuan (en)">
+                text = <"Yoga / Tai-chi-chuan">
+                description = <"Yoga / Tai-chi-chuan">
             >
             ["at0.31"] = <
                 text = <"*Stretching (en)">
