@@ -84,6 +84,13 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Mammography
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.7]}
+                    }
+                }
+            }
         }
     }
 
@@ -250,6 +257,30 @@ terminology
                 text = <"Main type of physical activity practiced in their leisure time.">
                 description = <"Main type of physical activity practiced in their leisure time.">
             >
+            ["id0.2"] = <
+                text = <"Mammography">
+                description = <"Record if you have had a mammogram in the last year">
+            >
+            ["at0.34"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at0.35"] = <
+                text = <"Not">
+                description = <"Not">
+            >
+            ["at0.36"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at0.37"] = <
+                text = <"Not applicable">
+                description = <"Not applicable">
+            >
+            ["ac0.7"] = <
+                text = <"Mammography">
+                description = <"Mammography">
+            >
         >
     >
     value_sets = <
@@ -276,6 +307,10 @@ terminology
         ["ac0.6"] = <
             id = <"ac0.6">
             members = <"at0.20", "at0.21", "at0.22", "at0.23", "at0.24", "at0.25", "at0.26", "at0.27", "at0.28", "at0.29", "at0.30", "at0.31", "at0.32", "at0.33">
+        >
+        ["ac0.7"] = <
+            id = <"ac0.7">
+            members = <"at0.34", "at0.35", "at0.36", "at0.37">
         >
     >
 
