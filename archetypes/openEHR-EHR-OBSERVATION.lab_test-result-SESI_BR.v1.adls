@@ -612,44 +612,44 @@ terminology
                 description = <"Narração adicional sobre o teste não capturado em outros campos.">
             >
             ["id103"] = <
-                text = <"*Result comment (en)">
-                description = <"*May include statements about significant, unexpected or unreliable. values, or information about the source of the value where this may be relevant to the interpretation of the result. (en)">
+                text = <"Comentário do resultado">
+                description = <"Pode incluir declarações sobre significativo, inesperado ou não confiável. valores ou informações sobre a origem do valor onde isso pode ser relevante para a interpretação do resultado.">
             >
             ["id104"] = <
-                text = <"*Reference range guidance (en)">
-                description = <"*Additional advice on the applicability of the reference range. (en)">
+                text = <"Guia de referência">
+                description = <"Conselhos adicionais sobre a aplicabilidade do intervalo de referência.">
             >
             ["id105"] = <
-                text = <"*Date of analysis (en)">
-                description = <"*The date that the analysis was performed. (en)">
+                text = <"Data da análise">
+                description = <"A data em que a análise foi realizada.">
             >
             ["id106"] = <
-                text = <"*Analysis method (en)">
-                description = <"** (en)">
+                text = <"Método de análise">
+                description = <"*">
             >
             ["id107"] = <
-                text = <"*Test requested name (en)">
-                description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed. (en)">
+                text = <"Nome do teste solicitado">
+                description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
             >
             ["at108"] = <
                 text = <"*Registered (en)">
                 description = <"*The tst has been registered by the laboratory but a result is not yet available. (en)">
             >
             ["id109"] = <
-                text = <"*Result status (en)">
-                description = <"*The status of the result value. (en)">
+                text = <"Status do resultado">
+                description = <"O status do valor do resultado.">
             >
             ["id111"] = <
-                text = <"*Test procedure (en)">
-                description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used. (en)">
+                text = <"Procedimento de teste">
+                description = <"Foram seguidos detalhes estruturados adicionais da metodologia de teste de patologia. Por exemplo, detalhes estruturados sobre o método de laboratório e a interpretação de dados utilizados.">
             >
             ["id112"] = <
-                text = <"*Date Time result issued (en)">
-                description = <"*The date and/or time that the result was issued for the recorded ‘Result status’. (en)">
+                text = <"Data/hora da emissão do resultado">
+                description = <"A data e / ou a hora em que o resultado foi emitido para o 'Status do resultado' registrado.">
             >
             ["id113"] = <
-                text = <"*Result value (en)">
-                description = <"** (en)">
+                text = <"Valor do resultado">
+                description = <"*">
             >
             ["ac1"] = <
                 text = <"*Overall test result status (synthesised) (en)">
