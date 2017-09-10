@@ -382,28 +382,28 @@ terminology
                 description = <"*">
             >
             ["id38"] = <
-                text = <"*Cluster: Menstrual cycle (en)">
-                description = <"** (en)">
+                text = <"Cluster: ciclo menstrual">
+                description = <"*">
             >
             ["id39"] = <
-                text = <"*Cluster: Associated symptoms (en)">
-                description = <"** (en)">
+                text = <"Cluster: Sintomas associados">
+                description = <"*">
             >
             ["id40"] = <
-                text = <"*Cluster: Typical Menstrual cycle (en)">
-                description = <"** (en)">
+                text = <"Cluster: ciclo menstrual típico">
+                description = <"*">
             >
             ["id41"] = <
-                text = <"*Cluster: associated symptoms (en)">
-                description = <"** (en)">
+                text = <"Cluster: sintomas associados">
+                description = <"*">
             >
             ["id42"] = <
-                text = <"*Cluster: Typical Menstrual cycle (en)">
-                description = <"** (en)">
+                text = <"Cluster: ciclo menstrual típico">
+                description = <"*">
             >
             ["id43"] = <
-                text = <"*Cluster: associated symptoms (en)">
-                description = <"** (en)">
+                text = <"Cluster: sintomas associados">
+                description = <"*">
             >
             ["at31"] = <
                 text = <"*Time (en)">
