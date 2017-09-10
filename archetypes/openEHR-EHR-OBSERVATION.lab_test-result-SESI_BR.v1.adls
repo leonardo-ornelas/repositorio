@@ -1,0 +1,144 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.lab_test-result.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"copyright (c) 2010 openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used for reporting on non-pathology test results e.g. diagnostic imaging, ECG or respiratory function tests.
+
+Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+
+This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.">
+            purpose = <"To record the findings and interpretation of pathology tests performed on tissues and body fluids. This is typically done in a laboratory but may be done in other environments such as at the point of care.">
+            use = <"Use to record any pathology test result, including the result of a test on a specimen taken as part of a composite procedure or operation.
+
+Multi-analyte panels can be represented using templates or specialised archetypes.
+
+More complex tests such as histopathology or microbiology should be represented using specialised archetypes where additional report content is required.
+
+Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Dr Ian McNicoll">
+        ["organisation"] = <"Ocean Informatics, United Kingdom">
+        ["email"] = <"ian.mcnicoll@oceaninformatics.com">
+        ["date"] = <"07/11/2009">
+    >
+    other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Koray Atalag, University of Auckland, New Zealand", "Grahame Grieve, Health Intersections Pyty Ltd, Australia">
+
+definition
+    OBSERVATION[id1.1] matches {    -- Laboratory test result
+        /data[id2]/events[id3]/data[id4]/items matches {
+            allow_archetype CLUSTER[id66] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen\.v1/}
+                exclude
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id74] matches {
+                /value[id116]/defining_code matches {[ac1]}
+            }
+            CLUSTER[id96] matches {
+                items matches {
+                    CLUSTER[id97] matches {
+                        items matches {
+                            ELEMENT[id109] occurrences matches {0..1} matches {
+                                /value[id123]/defining_code matches {[ac2]}
+                            }
+                            allow_archetype CLUSTER[id106] matches { 
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id98] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Prostate-Specific Antigen (PSA)
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+        }
+        /protocol[id5]/items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            CLUSTER[id95] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype CLUSTER[id91] matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id111] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Laboratory test result">
+                description = <"Record the findings and interpretation of pathology tests performed on tissues and body fluids.">
+            >
+            ["id0.2"] = <
+                text = <"Prostate-Specific Antigen (PSA)">
+                description = <"Record if performed in the last year">
+            >
+            ["at0.1"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at0.2"] = <
+                text = <"Not">
+                description = <"Not">
+            >
+            ["at0.3"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at0.4"] = <
+                text = <"Not applicable">
+                description = <"Not applicable">
+            >
+            ["ac0.1"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Laboratory test result(en)">
+                description = <"*Record the findings and interpretation of pathology tests performed on tissues and body fluids.(en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+    >
+
