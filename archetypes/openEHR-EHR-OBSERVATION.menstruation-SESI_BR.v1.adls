@@ -31,8 +31,9 @@ description
         ["pt-br"] = <
             keywords = <"LMP", "menstruation">
             language = <[ISO_639-1::pt-br]>
-            purpose = <"*For recording information about menstruation (en)">
-            use = <"*Use history class to record maximum and minimum durations of bleeding - uses the menstruation cluster for details of a specific or typical cycle (en)">
+            misuse = <"">
+            purpose = <"Para registrar informações sobre menstruação">
+            use = <"Use a classe de histórico para gravar durações máximas e mínimas de sangramento - usa o cluster de menstruação para detalhes de um ciclo específico ou típico">
         >
     >
     lifecycle_state = <"unmanaged">
