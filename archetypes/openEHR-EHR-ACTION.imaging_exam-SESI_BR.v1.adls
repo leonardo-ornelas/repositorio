@@ -6,6 +6,17 @@ specialize
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© 2011 NEHTA">
@@ -16,6 +27,12 @@ description
             misuse = <"">
             purpose = <"To record activity regarding the performance of imaging examinations.">
             use = <"Use to record activity regarding the performance of imaging examinations.">
+        >
+        ["pt-br"] = <
+            keywords = <"Radiology", "Ultrasound", "MRI", "CT", "scan", "tomography">
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"*To record activity regarding the performance of imaging examinations. (en)">
+            use = <"*Use to record activity regarding the performance of imaging examinations. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -280,6 +297,408 @@ terminology
             ["ac0.7"] = <
                 text = <"Mammography">
                 description = <"Mammography">
+            >
+            ["id1"] = <
+                text = <"Imaging examination">
+                description = <"Clinical activity about performing an imaging examination.">
+            >
+            ["at3"] = <
+                text = <"Examination planned">
+                description = <"Imaging examination is planned.">
+            >
+            ["at4"] = <
+                text = <"Examination requested">
+                description = <"Imaging examination has been requested.">
+            >
+            ["at5"] = <
+                text = <"Appointment scheduled">
+                description = <"Imaging examination appointment has been made.">
+            >
+            ["at6"] = <
+                text = <"Appointment rescheduled">
+                description = <"Appointment for imaging examination has been rescheduled.">
+            >
+            ["at8"] = <
+                text = <"Examination complete">
+                description = <"The imaging examination has been performed and all associated activities completed.">
+            >
+            ["at9"] = <
+                text = <"Examination performed">
+                description = <"The examation was performed but related activities not completed.">
+            >
+            ["at10"] = <
+                text = <"Examination postponed">
+                description = <"The examination has been postponed.">
+            >
+            ["at11"] = <
+                text = <"Examination suspended">
+                description = <"The examination has been suspended.">
+            >
+            ["at12"] = <
+                text = <"Examination cancelled">
+                description = <"The planned examination has been cancelled prior to commencement.">
+            >
+            ["at13"] = <
+                text = <"Examination aborted">
+                description = <"The examination has been aborted.">
+            >
+            ["at15"] = <
+                text = <"Failed attempt">
+                description = <"The examation was commenced but not completed successfully.">
+            >
+            ["id17"] = <
+                text = <"Start date/time">
+                description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step.">
+            >
+            ["id18"] = <
+                text = <"Examination name">
+                description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+            >
+            ["id19"] = <
+                text = <"Description">
+                description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
+            >
+            ["id20"] = <
+                text = <"Reason">
+                description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
+            >
+            ["id21"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+            >
+            ["id22"] = <
+                text = <"Examination detail">
+                description = <"Structured information about the examination. Use to capture detailed, structured information about method & technique etc.">
+            >
+            ["id23"] = <
+                text = <"Anatomical location">
+                description = <"Structured information about the specific anatomical location of the examination.">
+            >
+            ["at16"] = <
+                text = <"planned">
+                description = <"planned">
+            >
+            ["at17"] = <
+                text = <"postponed">
+                description = <"postponed">
+            >
+            ["at18"] = <
+                text = <"cancelled">
+                description = <"cancelled">
+            >
+            ["at19"] = <
+                text = <"scheduled">
+                description = <"scheduled">
+            >
+            ["at20"] = <
+                text = <"active">
+                description = <"active">
+            >
+            ["at21"] = <
+                text = <"suspended">
+                description = <"suspended">
+            >
+            ["at22"] = <
+                text = <"aborted">
+                description = <"aborted">
+            >
+            ["at23"] = <
+                text = <"complete">
+                description = <"complete">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"*Imaging examination (en)">
+                description = <"*Clinical activity about performing an imaging examination. (en)">
+            >
+            ["at0.1"] = <
+                text = <"*Regular (en)">
+                description = <"*Regular (en)">
+            >
+            ["at0.2"] = <
+                text = <"*Irregular (en)">
+                description = <"*Irregular (en)">
+            >
+            ["ac0.1"] = <
+                text = <"*Physical activity for work (en)">
+                description = <"*Do physical activity for work (en)">
+            >
+            ["at0.3"] = <
+                text = <"*Irregular (en)">
+                description = <"*Irregular (en)">
+            >
+            ["ac0.2"] = <
+                text = <"*Regularly perform some type of physical activity at leisure (en)">
+                description = <"*Irregular (en)">
+            >
+            ["at0.4"] = <
+                text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["ac0.3"] = <
+                text = <"*How many days did you walk for at least 10 continuous minutes (en)">
+                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.5"] = <
+                text = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["ac0.4"] = <
+                text = <"*How many days of the last week did moderate activity (en)">
+                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.6"] = <
+                text = <"*Irregular (en)">
+                description = <"*Irregular (en)">
+            >
+            ["at0.7"] = <
+                text = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO and I am not interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.8"] = <
+                text = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+                description = <"*NO, but I am interested in doing physical activities at my leisure in the near future. (en)">
+            >
+            ["at0.9"] = <
+                text = <"*YES, 1 or 2 times a week. (en)">
+                description = <"*YES, 1 or 2 times a week. (en)">
+            >
+            ["at0.10"] = <
+                text = <"*YES, 3 or 4 times a week. (en)">
+                description = <"*YES, 3 or 4 times a week. (en)">
+            >
+            ["at0.11"] = <
+                text = <"*YES, 5 or more times per week. (en)">
+                description = <"*YES, 5 or more times per week. (en)">
+            >
+            ["at0.12"] = <
+                text = <"*None (en)">
+                description = <"*None (en)">
+            >
+            ["at0.13"] = <
+                text = <"*1 day (en)">
+                description = <"*1 day (en)">
+            >
+            ["at0.14"] = <
+                text = <"*2 days (en)">
+                description = <"*2 days (en)">
+            >
+            ["at0.15"] = <
+                text = <"*3 days (en)">
+                description = <"*3 days (en)">
+            >
+            ["at0.16"] = <
+                text = <"*4 days (en)">
+                description = <"*4 days (en)">
+            >
+            ["at0.17"] = <
+                text = <"*5 days (en)">
+                description = <"*5 days (en)">
+            >
+            ["at0.18"] = <
+                text = <"*6 days (en)">
+                description = <"*6 days (en)">
+            >
+            ["at0.19"] = <
+                text = <"*7 days (en)">
+                description = <"*7 days (en)">
+            >
+            ["ac0.5"] = <
+                text = <"*How many days in the last week have you carried out rigorous activities (en)">
+                description = <"*How many days in the last week have you carried out rigorous activities (en)">
+            >
+            ["at0.20"] = <
+                text = <"*Does not practice physical activities (en)">
+                description = <"*Does not practice physical activities (en)">
+            >
+            ["at0.21"] = <
+                text = <"*Walking (en)">
+                description = <"*Walking (en)">
+            >
+            ["at0.22"] = <
+                text = <"*Sport (en)">
+                description = <"*Sport (en)">
+            >
+            ["at0.23"] = <
+                text = <"*Cycling (en)">
+                description = <"*Cycling (en)">
+            >
+            ["at0.24"] = <
+                text = <"*Racing (en)">
+                description = <"*Racing (en)">
+            >
+            ["at0.25"] = <
+                text = <"*Swimming / Hydrotherapy (en)">
+                description = <"*Swimming / Hydrotherapy (en)">
+            >
+            ["at0.26"] = <
+                text = <"*Fitness (en)">
+                description = <"*Fitness (en)">
+            >
+            ["at0.27"] = <
+                text = <"*Bodybuilding (en)">
+                description = <"*Bodybuilding (en)">
+            >
+            ["at0.28"] = <
+                text = <"*Dancing (en)">
+                description = <"*Dancing (en)">
+            >
+            ["at0.29"] = <
+                text = <"*Adventure sports (en)">
+                description = <"*Adventure sports (en)">
+            >
+            ["at0.30"] = <
+                text = <"*Yoga / Tai-chi-chuan (en)">
+                description = <"*Yoga / Tai-chi-chuan (en)">
+            >
+            ["at0.31"] = <
+                text = <"*Stretching (en)">
+                description = <"*Stretching (en)">
+            >
+            ["at0.32"] = <
+                text = <"*Martial Arts / Fights (en)">
+                description = <"*Martial Arts / Fights (en)">
+            >
+            ["at0.33"] = <
+                text = <"*Other physical activities (en)">
+                description = <"*Other physical activities (en)">
+            >
+            ["ac0.6"] = <
+                text = <"*Main type of physical activity practiced in their leisure time. (en)">
+                description = <"*Main type of physical activity practiced in their leisure time. (en)">
+            >
+            ["id0.2"] = <
+                text = <"*Mammography (en)">
+                description = <"*Record if you have had a mammogram in the last year (en)">
+            >
+            ["at0.34"] = <
+                text = <"*Yes (en)">
+                description = <"*Yes (en)">
+            >
+            ["at0.35"] = <
+                text = <"*Not (en)">
+                description = <"*Not (en)">
+            >
+            ["at0.36"] = <
+                text = <"*Ignored (en)">
+                description = <"*Ignored (en)">
+            >
+            ["at0.37"] = <
+                text = <"*Not applicable (en)">
+                description = <"*Not applicable (en)">
+            >
+            ["ac0.7"] = <
+                text = <"*Mammography (en)">
+                description = <"*Mammography (en)">
+            >
+            ["id1"] = <
+                text = <"*Imaging examination (en)">
+                description = <"*Clinical activity about performing an imaging examination. (en)">
+            >
+            ["at3"] = <
+                text = <"*Examination planned (en)">
+                description = <"*Imaging examination is planned. (en)">
+            >
+            ["at4"] = <
+                text = <"*Examination requested (en)">
+                description = <"*Imaging examination has been requested. (en)">
+            >
+            ["at5"] = <
+                text = <"*Appointment scheduled (en)">
+                description = <"*Imaging examination appointment has been made. (en)">
+            >
+            ["at6"] = <
+                text = <"*Appointment rescheduled (en)">
+                description = <"*Appointment for imaging examination has been rescheduled. (en)">
+            >
+            ["at8"] = <
+                text = <"*Examination complete (en)">
+                description = <"*The imaging examination has been performed and all associated activities completed. (en)">
+            >
+            ["at9"] = <
+                text = <"*Examination performed (en)">
+                description = <"*The examation was performed but related activities not completed. (en)">
+            >
+            ["at10"] = <
+                text = <"*Examination postponed (en)">
+                description = <"*The examination has been postponed. (en)">
+            >
+            ["at11"] = <
+                text = <"*Examination suspended (en)">
+                description = <"*The examination has been suspended. (en)">
+            >
+            ["at12"] = <
+                text = <"*Examination cancelled (en)">
+                description = <"*The planned examination has been cancelled prior to commencement. (en)">
+            >
+            ["at13"] = <
+                text = <"*Examination aborted (en)">
+                description = <"*The examination has been aborted. (en)">
+            >
+            ["at15"] = <
+                text = <"*Failed attempt (en)">
+                description = <"*The examation was commenced but not completed successfully. (en)">
+            >
+            ["id17"] = <
+                text = <"*Start date/time (en)">
+                description = <"*The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the 'Appointment scheduled' care pathway step or the actual Start date/time in the 'Examination performed' step. (en)">
+            >
+            ["id18"] = <
+                text = <"*Examination name (en)">
+                description = <"*The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible. (en)">
+            >
+            ["id19"] = <
+                text = <"*Description (en)">
+                description = <"*Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination. (en)">
+            >
+            ["id20"] = <
+                text = <"*Reason (en)">
+                description = <"*Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination. (en)">
+            >
+            ["id21"] = <
+                text = <"*Comment (en)">
+                description = <"*Additional narrative about the activity or care pathway step not captured in other fields. (en)">
+            >
+            ["id22"] = <
+                text = <"*Examination detail (en)">
+                description = <"*Structured information about the examination. Use to capture detailed, structured information about method & technique etc. (en)">
+            >
+            ["id23"] = <
+                text = <"*Anatomical location (en)">
+                description = <"*Structured information about the specific anatomical location of the examination. (en)">
+            >
+            ["at16"] = <
+                text = <"*planned (en)">
+                description = <"*planned (en)">
+            >
+            ["at17"] = <
+                text = <"*postponed (en)">
+                description = <"*postponed (en)">
+            >
+            ["at18"] = <
+                text = <"*cancelled (en)">
+                description = <"*cancelled (en)">
+            >
+            ["at19"] = <
+                text = <"*scheduled (en)">
+                description = <"*scheduled (en)">
+            >
+            ["at20"] = <
+                text = <"*active (en)">
+                description = <"*active (en)">
+            >
+            ["at21"] = <
+                text = <"*suspended (en)">
+                description = <"*suspended (en)">
+            >
+            ["at22"] = <
+                text = <"*aborted (en)">
+                description = <"*aborted (en)">
+            >
+            ["at23"] = <
+                text = <"*complete (en)">
+                description = <"*complete (en)">
             >
         >
     >
