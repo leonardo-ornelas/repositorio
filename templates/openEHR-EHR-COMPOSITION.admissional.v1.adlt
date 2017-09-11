@@ -49,7 +49,7 @@ description
     >
 
 definition
-    COMPOSITION[id1.1] matches {    -- Adimissional
+    COMPOSITION[id1.1] matches {    -- *Admission (en)
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
@@ -128,6 +128,8 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -135,6 +137,10 @@ definition
                     }
                     CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
@@ -172,6 +178,12 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id102]
                     use_node ELEMENT /data[id2]/items[id74]/items[id103]
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
@@ -183,6 +195,8 @@ definition
             }
             CLUSTER[id26] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -202,6 +216,8 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -209,6 +225,8 @@ definition
             }
             CLUSTER[id52] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -470,7 +488,7 @@ specialize
     openEHR-EHR-EVALUATION.allergy.v1.0.0
 
 definition
-    EVALUATION[id1.1.1] matches {    -- Adverse Reaction - Allergy
+    EVALUATION[id1.1.1] matches {    -- Adverse reaction allergy
         /data[id2]/items matches {
             ELEMENT[id5] occurrences matches {0..1} matches {
                 /value[id51]/value matches {True, False}
@@ -504,7 +522,7 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1.1"] = <
-                text = <"Adverse Reaction - Allergy">
+                text = <"Adverse reaction allergy">
                 description = <"A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, insect stings or a medication at therapeutic doses. The range of Adverse Reactions includes both Immune mediated reactions Types I-IV (including allergies and hypersensitivities) and Non-immune mediated reactions (including pseudoallergic reactions, side effects, intolerances, drug toxicities (eg Gentamycin), drug-drug interactions, food-drug interactions, drug-disease interactions and idiosyncratic reactions).">
             >
         >
