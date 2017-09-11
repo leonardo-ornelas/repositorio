@@ -17,6 +17,9 @@ language
         >
         ["en"] = <
             accreditation = <"">
+            author = <
+                ["name"] = <"Thomas Beale">
+            >
             language = <[ISO_639-1::en]>
         >
     >
