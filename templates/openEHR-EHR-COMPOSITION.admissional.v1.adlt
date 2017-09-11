@@ -61,21 +61,21 @@ terminology
                 description = <"Generic encounter or progress note composition.">
             >
             ["at1"] = <
-                text = <"event">
+                text = <"Events">
                 description = <"event">
             >
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Admission (en)">
+                text = <"Adimissional">
                 description = <"*Generic encounter or progress note composition. (en)">
             >
             ["id1"] = <
-                text = <"*Encounter (en)">
+                text = <"Atendimento">
                 description = <"*Generic encounter or progress note composition. (en)">
             >
             ["at1"] = <
-                text = <"*event (en)">
+                text = <"Eeventos">
                 description = <"*event (en)">
             >
         >
