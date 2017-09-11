@@ -521,7 +521,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Menstruation",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.menstruation.v1.adls",
-    "sha" : "4bd9e3a614c72d417bcd74f5df37a11a289343ea",
+    "sha" : "af7a1a90b506ecbe0b8ce317d880cfcfda1b503b",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.pathology_test-blood_glucose.v1.0.0",
@@ -647,42 +647,77 @@
     "rmType" : "ACTION",
     "name" : "Imaging examination",
     "path" : "archetypes/openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.adls",
-    "sha" : "a702d71e4ad74647a1500c0977f8329a95dd7b14",
-    "languages" : [ "en" ]
+    "sha" : "bc3b806eea14309b81d5349e9789b5ff83343bab",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0",
     "rmType" : "EVALUATION",
     "name" : "Physical Activity Summary",
     "path" : "archetypes/openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.adls",
-    "sha" : "b1bff4701541ccdb816ac091e51bf29d97ec89aa",
-    "languages" : [ "en" ]
+    "sha" : "7a139a5f887695f4100a305fb76efccbf253e7a3",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Tobacco Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
-    "sha" : "ac045cd721280e979eff725bd0282ae26a8c49e2",
+    "sha" : "3051fa0773cf51d78a1c0d46fe07d9c64190d4aa",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure.v1.0.0",
     "rmType" : "ACTION",
     "name" : "Procedure",
     "path" : "archetypes/openEHR-EHR-ACTION.procedure.v1.adls",
-    "sha" : "558e9305476750bcc2583ad8db276167da98e2db",
+    "sha" : "e9015e563ced93a5079211cab907c6778414f3a9",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.family_history-SESI-BR.v1.0.0",
     "rmType" : "EVALUATION",
     "name" : "Family History",
     "path" : "archetypes/openEHR-EHR-EVALUATION.family_history-SESI-BR.v1.adls",
-    "sha" : "5818dc2ac1cfa7363de28bc7501edad0c43022d1",
-    "languages" : [ "en" ]
+    "sha" : "fcb3fb5b0294736bcbf84712ebef58806c51e6c4",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
     "rmType" : "EVALUATION",
     "name" : "Problem/Diagnosis",
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
-    "sha" : "88f427161e8d76598db3dd5f9ebd7b8b4ecf2b9a",
-    "languages" : [ "en" ]
+    "sha" : "816415506070c2017f55efb6933096636511d4b9",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.procedure-SESI_BR.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "Procedure",
+    "path" : "archetypes/openEHR-EHR-ACTION.procedure-SESI_BR.v1.adls",
+    "sha" : "29b01bf24606b2db6b899ff8fe3165991e622455",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Body Weight",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.adls",
+    "sha" : "17737e8c2e491c39fdd7a64f2b70c8ff46c19a69",
+    "languages" : [ "en", "de", "ru", "nl", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Laboratory test result",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.adls",
+    "sha" : "ddff136e70032909e94cb50418535d56ebae7c41",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.menstruation-SESI_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Menstruation",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.menstruation-SESI_BR.v1.adls",
+    "sha" : "65dc23d25c2f44cf0789cbabf0e0169ef1877a01",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.pathology_test-SESI_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Pathology Test Result",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.pathology_test-SESI_BR.v1.adls",
+    "sha" : "798f239e12d60ae77790e0bb616174dd71a16aa8",
+    "languages" : [ "en", "pt-br" ]
   } ]
 }
