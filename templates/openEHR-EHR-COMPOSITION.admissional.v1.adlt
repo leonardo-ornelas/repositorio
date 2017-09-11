@@ -26,8 +26,9 @@ description
         ["pt-br"] = <
             keywords = <"progress", "note", "encounter">
             language = <[ISO_639-1::pt-br]>
-            purpose = <"*Record of encounter as a progress note. (en)">
-            use = <"*For use to record when a person and clinician interact. (en)">
+            misuse = <"">
+            purpose = <"O Exame Admissional é um exame médico singelo, porém obrigatório, requerido por empresas antes de consolidar a contratação de um empregado com carteira anotada.">
+            use = <"O Exame Admissional é indispensável para evidenciar o estado de saúde física e psíquica do funcionário para desempenhar a colocação a que será designado.">
         >
     >
     lifecycle_state = <"unmanaged">
