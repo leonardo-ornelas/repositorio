@@ -15,6 +15,10 @@ language
             >
             language = <[ISO_639-1::pt-br]>
         >
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
     >
     
 description
@@ -34,6 +38,12 @@ description
             purpose = <"O Exame Admissional é um exame médico singelo, porém obrigatório, requerido por empresas antes de consolidar a contratação de um empregado com carteira anotada.">
             use = <"O Exame Admissional é indispensável para evidenciar o estado de saúde física e psíquica do funcionário para desempenhar a colocação a que será designado.">
         >
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            purpose = <"*Record of encounter as a progress note. (en)">
+            use = <"*For use to record when a person and clinician interact. (en)">
+        >
     >
     lifecycle_state = <"unmanaged">
     original_author = <
@@ -43,7 +53,7 @@ description
     >
 
 definition
-    COMPOSITION[id1.1] matches {    -- Admission
+    COMPOSITION[id1.1] matches {    -- *Admission (en)
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
@@ -57,16 +67,16 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"Admission">
-                description = <"Generic encounter or progress note composition.">
+                text = <"*Admission (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
             >
             ["id1"] = <
-                text = <"Encounter">
-                description = <"Generic encounter or progress note composition.">
+                text = <"*Encounter (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
             >
             ["at1"] = <
-                text = <"Events">
-                description = <"event">
+                text = <"*Events (en)">
+                description = <"*event (en)">
             >
         >
         ["pt-br"] = <
