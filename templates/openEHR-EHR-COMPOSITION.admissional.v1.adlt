@@ -26,7 +26,7 @@ description
     >
 
 definition
-    COMPOSITION[id1.1] matches {    -- Encounter
+    COMPOSITION[id1.1] matches {    -- Admission
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
@@ -40,7 +40,7 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"Encounter">
+                text = <"Admission">
                 description = <"Generic encounter or progress note composition.">
             >
         >
@@ -77,6 +77,8 @@ definition
                 items matches {
                     CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -84,6 +86,10 @@ definition
                     }
                     CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -91,6 +97,12 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
@@ -102,6 +114,8 @@ definition
             }
             CLUSTER[id26] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -109,6 +123,8 @@ definition
             }
             CLUSTER[id122] matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -116,6 +132,8 @@ definition
             }
             CLUSTER[id52] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -214,6 +232,7 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
                     }
+                    use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
                     ELEMENT[id1044] occurrences matches {0..1} matches {
                         /value[id1061]/defining_code matches {[ac2; at1045]}
                     }
@@ -227,7 +246,6 @@ definition
                             }
                         }
                     }
-                    use_archetype CLUSTER[id1031.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-001.v1.0.0]
                 }
             }
             INTERVAL_EVENT[id1043] occurrences matches {0..1} matches {
@@ -521,15 +539,15 @@ definition
                 include
                     archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_amount\.v1\.0\.0/}
             }
+            use_archetype CLUSTER[id23.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0]
             allow_archetype CLUSTER[id28] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id28.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0]
             ELEMENT[id37] occurrences matches {0..1} matches {
                 /value[id107]/value matches {True, False}
             }
-            use_archetype CLUSTER[id28.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0]
-            use_archetype CLUSTER[id23.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0]
         }
         /protocol[id31]/items matches {
             ELEMENT[id41.1] occurrences matches {0..1} matches {    -- Expiry date
