@@ -6,6 +6,12 @@ specialize
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© openEHR">
@@ -16,6 +22,12 @@ description
             misuse = <"">
             purpose = <"Record of encounter as a progress note.">
             use = <"For use to record when a person and clinician interact.">
+        >
+        ["pt-br"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"*Record of encounter as a progress note. (en)">
+            use = <"*For use to record when a person and clinician interact. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -42,6 +54,28 @@ terminology
             ["id1.1"] = <
                 text = <"Admission">
                 description = <"Generic encounter or progress note composition.">
+            >
+            ["id1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition.">
+            >
+            ["at1"] = <
+                text = <"event">
+                description = <"event">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"*Admission (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["id1"] = <
+                text = <"*Encounter (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["at1"] = <
+                text = <"*event (en)">
+                description = <"*event (en)">
             >
         >
     >
