@@ -32,8 +32,8 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.admissional.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "Admission",
+    "name" : "Adimissional",
     "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
-    "sha" : "c21cc1fe83c075e45a59b19efb6d5241b9082cb5"
+    "sha" : "bdc64332ca375fe93d148b82727cc59af84c9713"
   } ]
 }
