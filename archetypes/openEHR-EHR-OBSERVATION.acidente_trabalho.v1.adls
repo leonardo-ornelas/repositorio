@@ -1,0 +1,145 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.acidente_trabalho.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- acidente_trabalho
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Após a última consulta sofreu acidente de trabalho?
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {1} matches {    -- Tipo de acidente
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {1} matches {    -- CID-10
+                                        value matches {
+                                            DV_TEXT[id16] 
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {1} matches {    -- Descrição do acidente
+                                        value matches {
+                                            DV_TEXT[id18] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"acidente_trabalho">
+                description = <"acidente_trabalho">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Após a última consulta sofreu acidente de trabalho?">
+                description = <"Após a última consulta sofreu acidente de trabalho?">
+            >
+            ["at1"] = <
+                text = <"não">
+                description = <"não">
+            >
+            ["at2"] = <
+                text = <"sim, sem afastamento">
+                description = <"sim, sem afastamento">
+            >
+            ["at3"] = <
+                text = <"sim. com afastamento menor que 15 dias">
+                description = <"sim. com afastamento menor que 15 dias">
+            >
+            ["at4"] = <
+                text = <"sim, com afastamento maior que 15 dias">
+                description = <"sim, com afastamento maior que 15 dias">
+            >
+            ["ac1"] = <
+                text = <"Acidente de trabalho">
+                description = <"Acidente de trabalho">
+            >
+            ["id8"] = <
+                text = <"Tipo de acidente">
+                description = <"Tipo de acidente">
+            >
+            ["at5"] = <
+                text = <"Típico">
+                description = <"Típico">
+            >
+            ["at6"] = <
+                text = <"Trajeto">
+                description = <"Trajeto">
+            >
+            ["at7"] = <
+                text = <"Doença ocupacional">
+                description = <"Doença ocupacional">
+            >
+            ["at8"] = <
+                text = <"Doença/nexo equipada (o)">
+                description = <"Doença/nexo equipada (o)">
+            >
+            ["ac2"] = <
+                text = <"Tipo de acidente">
+                description = <"Tipo de acidente">
+            >
+            ["ac3"] = <
+                text = <"ICD-1998">
+                description = <"ICD-1998">
+            >
+            ["id15"] = <
+                text = <"CID-10">
+                description = <"CID-10">
+            >
+            ["id17"] = <
+                text = <"Descrição do acidente">
+                description = <"Descrição do acidente">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at5", "at6", "at7", "at8">
+        >
+    >
+
