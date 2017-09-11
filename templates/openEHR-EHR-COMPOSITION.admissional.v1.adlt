@@ -5,7 +5,7 @@ specialize
     openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
-    original_language = <[ISO_639-1::en]>
+    original_language = <[ISO_639-1::pt-br]>
     translations = <
         ["pt-br"] = <
             accreditation = <"">
@@ -27,13 +27,6 @@ language
 description
     copyright = <"© openEHR">
     details = <
-        ["en"] = <
-            keywords = <"progress", "note", "encounter">
-            language = <[ISO_639-1::en]>
-            misuse = <"">
-            purpose = <"Record of encounter as a progress note.">
-            use = <"For use to record when a person and clinician interact.">
-        >
         ["pt-br"] = <
             keywords = <"progress", "note", "encounter">
             language = <[ISO_639-1::pt-br]>
@@ -68,20 +61,6 @@ definition
 
 terminology
     term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"*Admission (en)">
-                description = <"*Generic encounter or progress note composition. (en)">
-            >
-            ["id1"] = <
-                text = <"*Encounter (en)">
-                description = <"*Generic encounter or progress note composition. (en)">
-            >
-            ["at1"] = <
-                text = <"*Events (en)">
-                description = <"*event (en)">
-            >
-        >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Adimissional">
@@ -93,6 +72,20 @@ terminology
             >
             ["at1"] = <
                 text = <"Eeventos">
+                description = <"*event (en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Admission (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["id1"] = <
+                text = <"*Encounter (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["at1"] = <
+                text = <"*Events (en)">
                 description = <"*event (en)">
             >
         >
