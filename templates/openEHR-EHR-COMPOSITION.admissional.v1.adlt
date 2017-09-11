@@ -5,7 +5,7 @@ specialize
     openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
-    original_language = <[ISO_639-1::pt-br]>
+    original_language = <[ISO_639-1::en]>
     translations = <
         ["pt-br"] = <
             accreditation = <"">
