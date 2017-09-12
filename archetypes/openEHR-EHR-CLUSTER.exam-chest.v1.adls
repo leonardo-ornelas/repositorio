@@ -343,12 +343,12 @@ terminology
                 description = <"Achados sobre os gânglios linfáticos.">
             >
             ["id0.28"] = <
-                text = <"*Shape (en)">
-                description = <"*The shape of the chest. (en)">
+                text = <"Forma">
+                description = <"Forma do tórax">
             >
             ["id0.31"] = <
-                text = <"*Visible (en)">
-                description = <"*Apex beat is visible. (en)">
+                text = <"Visível">
+                description = <"Impulso apical visível.">
             >
             ["id0.32"] = <
                 text = <"*Palpation (en)">
