@@ -134,8 +134,8 @@ terminology
                 description = <"Irregular">
             >
             ["ac0.1"] = <
-                text = <"Physical activity practiced outside work">
-                description = <"Physical activity practiced outside work">
+                text = <"Atividade física praticada fora do trabalho">
+                description = <"Atividade física praticada fora do trabalho">
             >
             ["id0.6"] = <
                 text = <"Do some regular physical activity at your leisure">
@@ -344,8 +344,8 @@ terminology
                 description = <"Irregular">
             >
             ["ac0.1"] = <
-                text = <"*Physical activity practiced outside work (en)">
-                description = <"*Physical activity practiced outside work (en)">
+                text = <"Atividade física praticada fora do trabalho (en)">
+                description = <"Atividade física praticada fora do trabalho (en)">
             >
             ["id0.6"] = <
                 text = <"Pratica alguma atividade física regular em seu lazer.">
@@ -561,20 +561,6 @@ terminology
         ["ac0.6"] = <
             id = <"ac0.6">
             members = <"at0.16", "at0.17", "at0.18", "at0.19", "at0.20", "at0.21", "at0.22", "at0.23", "at0.24", "at0.25", "at0.26", "at0.27", "at0.28", "at0.29">
-        >
-    >
-
-
-annotations
-    items = <
-        ["pt-br"] = <
-            items = <
-                ["/data[id2]/items[id0.4]"] = <
-                    items = <
-                        ["name"] = <"Ihealth">
-                    >
-                >
-            >
         >
     >
 
