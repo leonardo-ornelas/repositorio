@@ -423,16 +423,16 @@ terminology
                 description = <"Descrição textual da parte examinada.">
             >
             ["id5"] = <
-                text = <"*Normal statements (en)">
-                description = <"*A group of statements about the normality of the examination. (en)">
+                text = <"Declarações normais">
+                description = <"Um grupo de declarações sobre a normalidade do exame.">
             >
             ["id6"] = <
                 text = <"*Normal statement (en)">
                 description = <"*A specific statement of normality. (en)">
             >
             ["id7"] = <
-                text = <"*Image (en)">
-                description = <"*Drawing or image of the area examined. (en)">
+                text = <"Imagem">
+                description = <"Desenho ou imagem da área examinada.">
             >
             ["id9"] = <
                 text = <"*Findings (en)">
