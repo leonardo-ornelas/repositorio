@@ -75,8 +75,8 @@ terminology
                 description = <"progress note composition. (en)Encontro genérico ou  composição da nota de progresso">
             >
             ["at1"] = <
-                text = <"*event (en)">
-                description = <"*event (en)">
+                text = <"evento">
+                description = <"evento">
             >
         >
     >
