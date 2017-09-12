@@ -263,8 +263,8 @@ terminology
         >
         ["pt-br"] = <
             ["id0.1"] = <
-                text = <"*Chest wall (en)">
-                description = <"*Findings about the chest wall. (en)">
+                text = <"Parede do tórax">
+                description = <"Achados sobre a parede do tórax.">
             >
             ["at0.10"] = <
                 text = <"*Diaphragmatic breathing (en)">
@@ -275,8 +275,8 @@ terminology
                 description = <"*Breathing using expansion of the chest wall. (en)">
             >
             ["id0.12"] = <
-                text = <"*Effort (en)">
-                description = <"*Effort required for breathing. (en)">
+                text = <"Esforço">
+                description = <"Esforço necessário para a respiração.">
             >
             ["at0.13"] = <
                 text = <"*Normal breathing effort (en)">
@@ -295,8 +295,8 @@ terminology
                 description = <"*Many signs of increased breathing effort. (en)">
             >
             ["id0.17"] = <
-                text = <"*Signs of increased effort (en)">
-                description = <"*Signs of increased respiratory effort. (en)">
+                text = <"Sinais de maior esforço.">
+                description = <"Sinais de aumento do esforço respiratório.">
             >
             ["id0.18"] = <
                 text = <"*Sign (en)">
