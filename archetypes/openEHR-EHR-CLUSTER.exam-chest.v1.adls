@@ -383,12 +383,12 @@ terminology
                 description = <"A traqueia está na posição da linha média.">
             >
             ["at0.6"] = <
-                text = <"*Deviated to the left (en)">
-                description = <"*The trachea is deviated to the left. (en)">
+                text = <"Desviado para a esquerda">
+                description = <"A traquéia é desviada para a esquerda.">
             >
             ["at0.7"] = <
-                text = <"*Deviated to the right (en)">
-                description = <"*The trachea is deviated to the right. (en)">
+                text = <"Desviado para a direita">
+                description = <"A traquéia é desviada para a direita.">
             >
             ["id0.8"] = <
                 text = <"Respiração">
