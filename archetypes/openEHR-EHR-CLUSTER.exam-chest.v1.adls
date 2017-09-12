@@ -435,12 +435,12 @@ terminology
                 description = <"Desenho ou imagem da área examinada.">
             >
             ["id9"] = <
-                text = <"*Findings (en)">
-                description = <"*Clinical findings. (en)">
+                text = <"Resultados">
+                description = <"Descobertas clínicas.">
             >
             ["id10"] = <
-                text = <"*Detail (en)">
-                description = <"*More focused examination findings. (en)">
+                text = <"Detalhes">
+                description = <"Resultados mais detalhados do exame.">
             >
             ["at1"] = <
                 text = <"*image/gif (en)">
