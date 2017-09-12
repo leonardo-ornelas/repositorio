@@ -71,8 +71,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Encounter (en)">
-                description = <"*Generic encounter or progress note composition. (en)">
+                text = <"Encontro">
+                description = <"progress note composition. (en)Encontro genérico ou  composição da nota de progresso">
             >
             ["at1"] = <
                 text = <"*event (en)">
