@@ -307,8 +307,8 @@ terminology
                 description = <"Descrição da respiração">
             >
             ["id0.2"] = <
-                text = <"*Description (en)">
-                description = <"*The contour of the chest wall. (en)">
+                text = <"Descrição">
+                description = <"O contorno da parede torácica.">
             >
             ["at0.20"] = <
                 text = <"*Intercostal recession (en)">
