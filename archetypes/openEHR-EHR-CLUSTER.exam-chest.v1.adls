@@ -415,12 +415,12 @@ terminology
                 description = <"*Use of accessory respiratory muscles. (synthesised) (en)">
             >
             ["id1"] = <
-                text = <"*Examination (en)">
-                description = <"*Basic examination cluster for describing findings on physical examination when there is no named focus of examination. (en)">
+                text = <"Exame">
+                description = <"Cluster de exame básico para descrever os achados no exame físico quando não há foco de exame nomeado.">
             >
             ["id3"] = <
-                text = <"*Clinical description (en)">
-                description = <"*Textural description of the part examined. (en)">
+                text = <"Descrição clínica">
+                description = <"Descrição textual da parte examinada.">
             >
             ["id5"] = <
                 text = <"*Normal statements (en)">
