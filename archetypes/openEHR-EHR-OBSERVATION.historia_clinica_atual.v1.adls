@@ -1,0 +1,80 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- historia_clinica_atual
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Ausência de queixas
+                                        value matches {
+                                            DV_BOOLEAN[id7] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Queixas
+                                        value matches {
+                                            DV_TEXT[id9] 
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- CIDs relacionados com o CMAN desta empresa
+                                        value matches {
+                                            DV_TEXT[id11] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"historia_clinica_atual">
+                description = <"historia_clinica_atual">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Ausência de queixas">
+                description = <"Registre se queixas no momento atual">
+            >
+            ["id8"] = <
+                text = <"Queixas">
+                description = <"Descreva as queixas no momento atual">
+            >
+            ["id10"] = <
+                text = <"CIDs relacionados com o CMAN desta empresa">
+                description = <"CIDs relacionados com o CMAN desta empresa">
+            >
+        >
+    >
+
