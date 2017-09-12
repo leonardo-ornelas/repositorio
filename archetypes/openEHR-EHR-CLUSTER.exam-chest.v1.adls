@@ -303,8 +303,8 @@ terminology
                 description = <"Uso de músculos respiratórios acessórios.">
             >
             ["id0.19"] = <
-                text = <"*Description (en)">
-                description = <"*Description of breathing. (en)">
+                text = <"Descrição">
+                description = <"Descrição da respiração">
             >
             ["id0.2"] = <
                 text = <"*Description (en)">
