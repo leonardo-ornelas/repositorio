@@ -399,8 +399,8 @@ terminology
                 description = <"Tipo de respiração">
             >
             ["id1.1"] = <
-                text = <"*Examination of the chest (en)">
-                description = <"*For recording findings on physical examination of the chest wall and lungs. (en)">
+                text = <"Exame do tórax">
+                description = <"Para registrar os achados no exame físico da parede torácica e dos pulmões.">
             >
             ["ac0.1"] = <
                 text = <"*Trachea (synthesised) (en)">
