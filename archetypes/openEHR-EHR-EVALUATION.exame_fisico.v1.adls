@@ -1,0 +1,113 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-EVALUATION.exame_fisico.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    EVALUATION[id1] occurrences matches {1} matches {    -- exame_fisico
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Detalhamento do exame físico
+                items matches {
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Região anatômica examinada
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Descrição
+                        value matches {
+                            DV_TEXT[id6] 
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Interpretação do achado no exame físico
+                        value matches {
+                            DV_CODED_TEXT[id8] matches {
+                                defining_code matches {[ac2]}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"exame_fisico">
+                description = <"exame_fisico">
+            >
+            ["id2"] = <
+                text = <"Detalhamento do exame físico">
+                description = <"Detalhamento do exame físico">
+            >
+            ["id3"] = <
+                text = <"Região anatômica examinada">
+                description = <"Registre a região anatômica examinada">
+            >
+            ["at1"] = <
+                text = <"Cabeça e pescoço">
+                description = <"Cabeça e pescoço">
+            >
+            ["at2"] = <
+                text = <"Membros">
+                description = <"Membros">
+            >
+            ["at3"] = <
+                text = <"Coluna">
+                description = <"Coluna">
+            >
+            ["ac1"] = <
+                text = <"Região anatômica">
+                description = <"Região anatômica">
+            >
+            ["id5"] = <
+                text = <"Descrição">
+                description = <"Descrição">
+            >
+            ["id7"] = <
+                text = <"Interpretação do achado no exame físico">
+                description = <"Palavra única, frase ou breve descrição que representa o significado clínico e dos achados do exame físico.">
+            >
+            ["at4"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at5"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at6"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac2"] = <
+                text = <"Interpretação">
+                description = <"Interpretação">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at4", "at5", "at6">
+        >
+    >
+
