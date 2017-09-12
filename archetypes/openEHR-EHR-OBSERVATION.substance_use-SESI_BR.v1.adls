@@ -31,13 +31,16 @@ Do not use this archetype for recording use or consumption histories for common 
 A typical use of this archetype will be related to a diary record of use or consumption of substances, especially those with addictive properties.  ">
         >
         ["pt-br"] = <
-            keywords = <"substance", "addiction", "consumption", "use">
+            keywords = <"substância", "vício", "consumo", "uso">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Do not use this archetype for recording summary details about the use of the substance - this should be captured using the EVALUATION.substance_use_summary archetype.  
-Do not use this archetype for recording use or consumption histories for common substances such as tobacco smoking and alcohol consumption.  As these are so commonly consumed, data should be recorded using detailed and specific specialisations of this archetype. (en)">
-            purpose = <"*This is a generic archetype used to record details of the use of any and all substances.  (en)">
-            use = <"*This is a generic archetype used to record details of the use of any and all substances that have not had specific specialisation archetypes created.  This includes use at specific point in time, over intervals of time, and use of mathematical functions such as average or minimum eg average consumption over a week.  
-A typical use of this archetype will be related to a diary record of use or consumption of substances, especially those with addictive properties.   (en)">
+            misuse = <"Não use esse arquétipo para registrar detalhes resumidos sobre o uso da substância - isso deve ser capturado usando o arquétipo  EVALUATION.substance_use_summary.
+Não use este arquétipo para registrar histórico de uso ou consumo de substâncias comuns, como fumo de tabaco e consumo de álcool. Como estes são comumente consumidos, os dados devem ser registrados usando especializações detalhadas e específicas deste arquétipo
+">
+            purpose = <"Este é um arquétipo genérico usado para registrar detalhes sobre o uso de todas e quaisquer substâncias
+">
+            use = <"Este é um arquétipo genérico usado para registrar detalhes sobre o uso de todas e quaisquer substâncias que não tenham arquétipos específicos. Isso inclui o uso em um ponto específico no tempo, em intervalos de tempo e uso de funções matemáticas, como média ou mínima, por exemplo, consumo médio ao longo de uma semana.
+Um uso típico deste arquétipo será relacionado a um registro diário de uso ou consumo de substâncias, especialmente aqueles com propriedades aditivas.
+">
         >
     >
     lifecycle_state = <"unmanaged">
