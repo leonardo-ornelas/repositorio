@@ -371,12 +371,12 @@ terminology
                 description = <"Achados detalhados da parede torácica.">
             >
             ["id0.38"] = <
-                text = <"*Lymph node detail (en)">
-                description = <"*Detailed lymph node findings. (en)">
+                text = <"Detalhe dos linfonodos">
+                description = <"Conclusões detalhadas dos linfonodos.">
             >
             ["id0.4"] = <
-                text = <"*Trachea (en)">
-                description = <"*The position of the trachea. (en)">
+                text = <"Traquéia">
+                description = <"A posição da traquéia.">
             >
             ["at0.5"] = <
                 text = <"*Midline (en)">
@@ -391,12 +391,12 @@ terminology
                 description = <"*The trachea is deviated to the right. (en)">
             >
             ["id0.8"] = <
-                text = <"*Breathing (en)">
-                description = <"*Findings about breathing. (en)">
+                text = <"Respiração">
+                description = <"Achados sobre a respiração.">
             >
             ["id0.9"] = <
-                text = <"*Type (en)">
-                description = <"*Type of breathing. (en)">
+                text = <"Tipo">
+                description = <"Tipo de respiração">
             >
             ["id1.1"] = <
                 text = <"*Examination of the chest (en)">
