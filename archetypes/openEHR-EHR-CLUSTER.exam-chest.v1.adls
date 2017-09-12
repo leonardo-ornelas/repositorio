@@ -427,8 +427,8 @@ terminology
                 description = <"Um grupo de declarações sobre a normalidade do exame.">
             >
             ["id6"] = <
-                text = <"*Normal statement (en)">
-                description = <"*A specific statement of normality. (en)">
+                text = <"Declaração normal">
+                description = <"Uma declaração específica de normalidade.">
             >
             ["id7"] = <
                 text = <"Imagem">
