@@ -1,0 +1,114 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- recomendacoes_educativo_preventivas_qualidade_vida
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Conclusão
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Data da conclusão
+                        value matches {
+                            DV_TEXT[id12] 
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Município
+                        value matches {
+                            DV_TEXT[id14] 
+                        }
+                    }
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Médico examinador
+                        value matches {
+                            DV_TEXT[id16] 
+                        }
+                    }
+                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Observações
+                        value matches {
+                            DV_TEXT[id19] 
+                        }
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Observações ASO
+                        value matches {
+                            DV_TEXT[id21] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"recomendacoes_educativo_preventivas_qualidade_vida">
+                description = <"recomendacoes_educativo_preventivas_qualidade_vida">
+            >
+            ["id3"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at1"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at2"] = <
+                text = <"Inapto">
+                description = <"Inapto">
+            >
+            ["at3"] = <
+                text = <"Exame não concluído">
+                description = <"Exame não concluído">
+            >
+            ["ac1"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["id11"] = <
+                text = <"Data da conclusão">
+                description = <"Data da conclusão">
+            >
+            ["id13"] = <
+                text = <"Município">
+                description = <"Município">
+            >
+            ["id15"] = <
+                text = <"Médico examinador">
+                description = <"Médico examinador">
+            >
+            ["id18"] = <
+                text = <"Observações">
+                description = <"Observações">
+            >
+            ["id20"] = <
+                text = <"Observações ASO">
+                description = <"Observações ASO">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+    >
+
