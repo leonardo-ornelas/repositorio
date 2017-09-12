@@ -319,20 +319,20 @@ terminology
                 description = <"*Drawing in of the sternum on inspiration. (en)">
             >
             ["at0.22"] = <
-                text = <"*Rib retraction (en)">
-                description = <"*Indrawing of the chest wall on inspiration. (en)">
+                text = <"Retração de costela">
+                description = <"Retração da parede do tórax na inspiração.">
             >
             ["at0.23"] = <
-                text = <"*Suprasternal recession (en)">
-                description = <"*Indrawing above the sternum on inspiration. (en)">
+                text = <"Recessão suprasternal">
+                description = <"Retração acima do esterno na inspiração.">
             >
             ["at0.24"] = <
                 text = <"*Subcostal recession (en)">
                 description = <"*Indrawing of the subcostal abdominal wall . (en)">
             >
             ["at0.25"] = <
-                text = <"*Using accessory muscles (en)">
-                description = <"*Use of accessory respiratory muscles during inspiration. (en)">
+                text = <"Músculos acessórios utilizados">
+                description = <"Uso de músculos respiratórios acessórios durante a inspiração.">
             >
             ["id0.26"] = <
                 text = <"Movimento paradoxical">
@@ -379,8 +379,8 @@ terminology
                 description = <"A posição da traquéia.">
             >
             ["at0.5"] = <
-                text = <"*Midline (en)">
-                description = <"*The trachea is in the midline position. (en)">
+                text = <"Linha média">
+                description = <"A traqueia está na posição da linha média.">
             >
             ["at0.6"] = <
                 text = <"*Deviated to the left (en)">
