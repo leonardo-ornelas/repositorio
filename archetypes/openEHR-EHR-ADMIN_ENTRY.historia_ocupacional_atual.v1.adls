@@ -15,7 +15,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- historia_ocupacional atual
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- historia_ocupacional_atual_SESI_BR
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
                 items matches {
@@ -82,7 +82,7 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"historia_ocupacional atual">
+                text = <"historia_ocupacional_atual_SESI_BR">
                 description = <"historia_ocupacional atual">
             >
             ["id3"] = <
