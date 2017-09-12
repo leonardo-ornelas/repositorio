@@ -31,7 +31,9 @@ description
         ["pt-br"] = <
             keywords = <"examination", "physical", "chest", "thorax", "lungs">
             language = <[ISO_639-1::pt-br]>
-            purpose = <"*A cluster for recording findings on physical examination of the chest. (en)">
+            misuse = <"">
+            purpose = <"Um cluster para registrar achados no exame físico do tórax.">
+            use = <"">
         >
     >
     lifecycle_state = <"unmanaged">
