@@ -335,12 +335,12 @@ terminology
                 description = <"*Use of accessory respiratory muscles during inspiration. (en)">
             >
             ["id0.26"] = <
-                text = <"*Paradoxical movement (flail chest) (en)">
-                description = <"*Any paradoxical movement of the chest wall during respiration. (en)">
+                text = <"Movimento paradoxical">
+                description = <"Qualquer movimento paradoxical da parede torácica durante a respiração">
             >
             ["id0.27"] = <
-                text = <"*Lymph nodes (en)">
-                description = <"*Findings about lymph nodes. (en)">
+                text = <"Linfonodos">
+                description = <"Achados sobre os gânglios linfáticos.">
             >
             ["id0.28"] = <
                 text = <"*Shape (en)">
