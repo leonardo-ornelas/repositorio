@@ -1,61 +1,83 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
-	openEHR-EHR-COMPOSITION.encounter.v1.0.0
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
-	original_language = <[ISO_639-1::en]>
-
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
 description
-	lifecycle_state = <"unmanaged">
-	original_author = <
-		["name"] = <"Thomas Beale">
-		["organisation"] = <"Ocean Informatics">
-		["date"] = <"2005-10-10">
-	>
-	copyright = <"© openEHR">
-	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"Record of encounter as a progress note.">
-			use = <"For use to record when a person and clinician interact.">
-			keywords = <"progress", "note", "encounter">
-			misuse = <"">
-		>
-	>
-	other_details = <
-		["MD5-CAM-1.0.1"] = <"9D8A461C75C5B7C4EFCFF7D424261387">
-	>
+    copyright = <"© openEHR">
+    details = <
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"Record of encounter as a progress note.">
+            use = <"For use to record when a person and clinician interact.">
+        >
+        ["pt-br"] = <
+            keywords = <"Progresso", "nota", "encontro">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Registro de encontro como nota de progresso.">
+            use = <"Usado para gravar uma interação entre uma pessoa e um clínico.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Thomas Beale">
+        ["organisation"] = <"Ocean Informatics">
+        ["date"] = <"2005-10-10">
+    >
 
 definition
-	COMPOSITION[id1] matches {	-- Encounter
-		category matches {
-			DV_CODED_TEXT[id3] matches {
-				defining_code matches {[at1]}
-			}
-		}
-		context matches {
-			EVENT_CONTEXT[id4] matches {
-				other_context matches {
-					ITEM_TREE[id2] 
-				}
-			}
-		}
-	}
+    COMPOSITION[id1] matches {    -- Encounter
+        category matches {
+            DV_CODED_TEXT[id3] matches {
+                defining_code matches {[at1]}
+            }
+        }
+        context matches {
+            EVENT_CONTEXT[id4] matches {
+                other_context matches {
+                    ITEM_TREE[id2] 
+                }
+            }
+        }
+    }
 
 terminology
-	term_definitions = <
-		["en"] = <
-			["id1"] = <
-				text = <"Encounter">
-				description = <"Generic encounter or progress note composition.">
-			>
-			["at1"] = <
-				text = <"event">
-				description = <"event">
-			>
-		>
-	>
-	term_bindings = <
-		["openehr"] = <
-			["at1"] = <http://openehr.org/id/433>
-		>
-	>
+    term_bindings = <
+        ["openehr"] = <
+            ["at1"] = <http://openehr.org/id/433>
+        
+        >
+    >
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition.">
+            >
+            ["at1"] = <
+                text = <"event">
+                description = <"event">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*Encounter (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["at1"] = <
+                text = <"*event (en)">
+                description = <"*event (en)">
+            >
+        >
+    >
+
