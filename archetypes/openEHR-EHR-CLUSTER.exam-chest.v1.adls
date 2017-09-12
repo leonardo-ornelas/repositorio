@@ -367,8 +367,8 @@ terminology
                 description = <"** (en)">
             >
             ["id0.37"] = <
-                text = <"*Chest wall detail (en)">
-                description = <"*Detailed chest wall findings. (en)">
+                text = <"Detalhe da parede do toráx">
+                description = <"Achados detalhados da parede torácica.">
             >
             ["id0.38"] = <
                 text = <"*Lymph node detail (en)">
