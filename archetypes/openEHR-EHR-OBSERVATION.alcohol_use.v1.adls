@@ -334,8 +334,8 @@ terminology
                 description = <"*Flow rate, mass (en)">
             >
             ["at3"] = <
-                text = <"significa">
-                description = <"significa">
+                text = <"intenção">
+                description = <"intenção">
             >
             ["at4"] = <
                 text = <"massa">
