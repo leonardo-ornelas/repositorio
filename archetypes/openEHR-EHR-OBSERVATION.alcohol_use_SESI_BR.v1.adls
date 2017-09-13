@@ -41,19 +41,18 @@ Binge drinking is not directly referred to in this archetype, yet this archetype
         ["pt-br"] = <
             keywords = <"alcohol", "beer", "wine", "spirits", "fortified", "consumption", "use", "abuse", "binge">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not to be used for recording persistent, summary details about alcohol consumption - this should be captured using the EVALUATION.alcohol_use_summary archetype.
+            misuse = <"Não deve ser usado para registrar detalhes resumidos sobre o consumo de álcool - isso deve ser capturado usando o arquétipo EVALUATION.alcohol_use_summary
 
-Not to be used to record information about consumption of other substances other than alcohol. (en)">
-            purpose = <"*To record details about the actual consumption of alcohol and related behaviour. (en)">
-            use = <"*Use to record details of the use of all forms of alcohol, including actual consumption and behaviour at a specific point in time and average consumption over intervals of time. 
-
-An alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.
-
-A record of typical alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.
-
-Data that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_use_summary archetype (recording the summary and persisting data).
-
-Binge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'. (en)">
+Não deve ser usado para registrar informações sobre o consumo de outras substâncias além do álcool
+">
+            purpose = <"Para registrar detalhes sobre o atual consumo de álcool e comportamento relacionado.
+">
+            use = <"Use para registrar detalhes sobre o uso de todas as formas de álcool, incluindo o atual consumo e comportamento reais em um ponto específico no tempo e consumo médio ao longo de intervalos de tempo.
+Um diário de consumo de álcool que pode ser acumulado ao longo do tempo, registrando o consumo de álcool em vários dias seqüenciais - registrando consumos reais usando o evento 'Dia especificado' para cada entrada diária.
+Um registro do consumo típico de álcool durante um período de tempo que pode ser registrando a quantidade de álcool consumida usando o evento \"Uso médio\" - uso médio durante um período de tempo especificado.
+Os dados que podem ser usados ​​para avaliar o risco de abuso ou dependência de álcool serão registrados usando dois arquétipos: este arquétipo OBSERVATION ( Registrando as observações / medições) e o arquétipo EVALUATION.alcohol_use_summary (Gravar o resumo e os dados persistentes)
+O consumo excessivo não é diretamente referido neste arquétipo, mas este arquétipo será um recurso chave usado para apoiar a identificação de compulsão através do registro preciso da quantidade e freqüência de bebidas, gatilhos e contexto social/cultural do consumo. A avaliação do \"Compulsão por bebidas\" pode ser registrada como parte de uma \"Lista de Problemas\"
+">
         >
     >
     lifecycle_state = <"unmanaged">
