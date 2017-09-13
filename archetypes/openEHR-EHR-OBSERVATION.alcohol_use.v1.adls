@@ -326,20 +326,20 @@ terminology
                 description = <"Detalhes sobre a disponibilidade de mudança no uso ou consumo de álcool">
             >
             ["at1"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency (en)">
+                text = <"Frequência">
+                description = <"Frequência">
             >
             ["at2"] = <
-                text = <"*Flow rate, mass (en)">
+                text = <"Fluxo, massa">
                 description = <"*Flow rate, mass (en)">
             >
             ["at3"] = <
-                text = <"*mean (en)">
-                description = <"*mean (en)">
+                text = <"significa">
+                description = <"significa">
             >
             ["at4"] = <
-                text = <"*Mass (en)">
-                description = <"*Mass (en)">
+                text = <"massa">
+                description = <"massa">
             >
         >
     >
