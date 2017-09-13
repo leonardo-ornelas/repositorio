@@ -47,6 +47,18 @@ definition
                                             DV_TEXT[id18] 
                                         }
                                     }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Afastamento nos últimos dois anos por mais de 15 dias
+                                        value matches {
+                                            DV_CODED_TEXT[id20] matches {
+                                                defining_code matches {[ac4]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id22] occurrences matches {0..1} matches {    -- Motivo do afastamento
+                                        value matches {
+                                            DV_TEXT[id23] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -130,6 +142,30 @@ terminology
                 text = <"Descrição do acidente">
                 description = <"Descrição do acidente">
             >
+            ["id19"] = <
+                text = <"Afastamento nos últimos dois anos por mais de 15 dias">
+                description = <"Afastamento nos últimos dois anos por mais de 15 dias">
+            >
+            ["at9"] = <
+                text = <"Sim">
+                description = <"Sim">
+            >
+            ["at10"] = <
+                text = <"Não">
+                description = <"Não">
+            >
+            ["at11"] = <
+                text = <"Ignorado">
+                description = <"Ignorado">
+            >
+            ["ac4"] = <
+                text = <"Afastamento nos últimos dois anos por mais de 15 dias">
+                description = <"Afastamento nos últimos dois anos por mais de 15 dias">
+            >
+            ["id22"] = <
+                text = <"Motivo do afastamento">
+                description = <"Motivo do afastamento">
+            >
         >
     >
     value_sets = <
@@ -140,6 +176,10 @@ terminology
         ["ac2"] = <
             id = <"ac2">
             members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at9", "at10", "at11">
         >
     >
 
