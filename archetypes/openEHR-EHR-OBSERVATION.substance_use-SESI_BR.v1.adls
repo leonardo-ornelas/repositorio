@@ -81,7 +81,7 @@ terminology
         ["en"] = <
             ["id1"] = <
                 text = <"Substance Use">
-                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. ">
+                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.">
             >
             ["id3"] = <
                 text = <"Any event">
@@ -89,7 +89,7 @@ terminology
             >
             ["id5"] = <
                 text = <"Substance">
-                description = <"Identification of substance ">
+                description = <"Identification of substance">
             >
             ["id6"] = <
                 text = <"Frequency">
@@ -145,7 +145,7 @@ terminology
             >
             ["id1.1"] = <
                 text = <"Substance Use">
-                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time. ">
+                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.">
             >
             ["id0.2"] = <
                 text = <"Frequency">
@@ -158,20 +158,20 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Substance Use (en)">
-                description = <"*Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.  (en)">
+                text = <"Uso de substâncias">
+                description = <"Arquétipo genérico para registro do atual uso ou consumo de definidas substâncias no momento atual, tempo específico ou durante um período de tempo">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event (en)">
+                text = <"Qualque evento">
+                description = <"Qualquer evento">
             >
             ["id5"] = <
-                text = <"*Substance (en)">
-                description = <"*Identification of substance  (en)">
+                text = <"Substância">
+                description = <"Identificação da substância">
             >
             ["id6"] = <
-                text = <"*Frequency (en)">
-                description = <"*Frequency of use of substance (en)">
+                text = <"Frequência">
+                description = <"Frequência de uso da substância">
             >
             ["at7"] = <
                 text = <"*Daily use (en)">
@@ -190,48 +190,48 @@ terminology
                 description = <"*Not used at all (en)">
             >
             ["id11"] = <
-                text = <"*Consumption details (en)">
-                description = <"*Details about the consumption of the substance (en)">
+                text = <"Detalhes do consumo">
+                description = <"Detalhes sobre o consumo da substância.">
             >
             ["id12"] = <
-                text = <"*Form (en)">
-                description = <"*Form of the substance used (en)">
+                text = <"Forma">
+                description = <"Forma de uso da substância">
             >
             ["id13"] = <
-                text = <"*Amount (en)">
-                description = <"*Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates (en)">
+                text = <"Quantidade">
+                description = <"Quantidade de substância consumida. O tipo de dados pode ser ainda especificado em arquétipos especializados ou em modelos.">
             >
             ["id14"] = <
-                text = <"*Triggers (en)">
-                description = <"*Identified triggers which stimulate or cause use (en)">
+                text = <"Gatilhos">
+                description = <"Gatilhos identificados que estimulam ou causam o uso">
             >
             ["id15"] = <
-                text = <"*Readiness for change (en)">
-                description = <"*Details about the readiness to change use or consumption of substance (en)">
+                text = <"Prontidão para mudança">
+                description = <"Detalhes sobre a prontidão para mudar o uso ou consumo de substância.">
             >
             ["id17"] = <
-                text = <"*Evidence of dependence (en)">
-                description = <"*Description of any evidence of dependence on the substance (en)">
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
             >
             ["id19"] = <
-                text = <"*Method of use (en)">
-                description = <"*Method of use or consumption of the substance (en)">
+                text = <"Método de uso">
+                description = <"Método de uso ou consumo da substância">
             >
             ["ac1"] = <
                 text = <"*Frequency (synthesised) (en)">
                 description = <"*Frequency of use of substance (synthesised) (en)">
             >
             ["id1.1"] = <
-                text = <"*Substance Use (en)">
-                description = <"*Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.  (en)">
+                text = <"Uso de Substâncias">
+                description = <"Arquétipo genérico para registrar o uso ou consumo real de uma substância definida no momento atual, um tempo específico ou durante um período de tempo.">
             >
             ["id0.2"] = <
-                text = <"*Frequency (en)">
-                description = <"*Record the frequency (en)">
+                text = <"Frequência">
+                description = <"Registre a frequência">
             >
             ["id0.4"] = <
-                text = <"*Type (en)">
-                description = <"*Record the type (en)">
+                text = <"Tipo">
+                description = <"Registre o tipo">
             >
         >
     >
