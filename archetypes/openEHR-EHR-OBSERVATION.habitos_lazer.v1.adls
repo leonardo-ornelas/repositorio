@@ -25,7 +25,16 @@ definition
                                 items matches {
                                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Atividades de lazer
                                         value matches {
-                                            DV_TEXT[id7] 
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Tipo de lazer
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac2]}
+                                            }
                                         }
                                     }
                                 }
@@ -55,6 +64,56 @@ terminology
                 text = <"Atividades de lazer">
                 description = <"Atividades de lazer">
             >
+            ["id8"] = <
+                text = <"Tipo de lazer">
+                description = <"Tipo de lazer">
+            >
+            ["at1"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at2"] = <
+                text = <"Esporadicamente">
+                description = <"Esporadicamente">
+            >
+            ["at3"] = <
+                text = <"Frequentemente">
+                description = <"Frequentemente">
+            >
+            ["ac1"] = <
+                text = <"Atividades de lazer">
+                description = <"Atividades de lazer">
+            >
+            ["at4"] = <
+                text = <"Atividade manual">
+                description = <"Atividade manual">
+            >
+            ["at5"] = <
+                text = <"Canto">
+                description = <"Canto">
+            >
+            ["at6"] = <
+                text = <"Instrumento musical">
+                description = <"Instrumento musical">
+            >
+            ["at7"] = <
+                text = <"Outros">
+                description = <"Outros">
+            >
+            ["ac2"] = <
+                text = <"Tipo de lazer">
+                description = <"Tipo de lazer">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at4", "at5", "at6", "at7">
         >
     >
 
