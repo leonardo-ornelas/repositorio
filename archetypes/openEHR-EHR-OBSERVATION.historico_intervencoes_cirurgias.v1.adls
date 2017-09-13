@@ -1,0 +1,84 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.historico_intervencoes_cirurgias.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- historico_intervencoes_cirurgias
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Histórico de intervenções e ou cirurgias
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"historico_intervencoes_cirurgias">
+                description = <"historico_intervencoes_cirurgias">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Histórico de intervenções e ou cirurgias">
+                description = <"Histórico de intervenções e ou cirurgias">
+            >
+            ["at1"] = <
+                text = <"Sim">
+                description = <"Sim">
+            >
+            ["at2"] = <
+                text = <"Não">
+                description = <"Não">
+            >
+            ["at3"] = <
+                text = <"Ignorado">
+                description = <"Ignorado">
+            >
+            ["ac1"] = <
+                text = <"Histórico de intervenções e ou cirurgias">
+                description = <"Histórico de intervenções e ou cirurgias">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+    >
+
