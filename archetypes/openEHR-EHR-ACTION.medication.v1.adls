@@ -384,7 +384,7 @@ terminology
         
         >
         ["icd10"] = <
-            ["ac2"] = <http://localhost:8000/api/v1/terminologies/codesystem/icd10/entities>
+            ["ac2"] = <http://cable.ezvida.net.br/api/v1/terminologies/codesystem/icd10/entities>
         
         >
     >
