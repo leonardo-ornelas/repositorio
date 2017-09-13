@@ -30,6 +30,11 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Intervenções e ou cirurgias
+                                        value matches {
+                                            DV_TEXT[id9] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -72,6 +77,10 @@ terminology
             ["ac1"] = <
                 text = <"Histórico de intervenções e ou cirurgias">
                 description = <"Histórico de intervenções e ou cirurgias">
+            >
+            ["id8"] = <
+                text = <"Intervenções e ou cirurgias">
+                description = <"Intervenções e ou cirurgias">
             >
         >
     >
