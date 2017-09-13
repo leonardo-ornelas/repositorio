@@ -262,68 +262,68 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Alcohol Use (en)">
-                description = <"*Details about use of all forms of alcohol at a specified point in time or over a specified period of time. (en)">
+                text = <"Uso de álcool">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*An unspecified event. (en)">
+                text = <"Qualquer evento">
+                description = <"Evento não especificado">
             >
             ["id6"] = <
-                text = <"*Consumption Details (en)">
-                description = <"*Details about the consumption of specific forms of alcohol. (en)">
+                text = <"Detalhes do consumo">
+                description = <"Detalhes sobre a forma de consumo específica de álcool">
             >
             ["id7"] = <
-                text = <"*Form (en)">
-                description = <"*Form of alcohol consumed. (en)">
+                text = <"Forma">
+                description = <"Forma de consumo de álcool">
             >
             ["id15"] = <
-                text = <"*Standard Drinks (en)">
-                description = <"*Number of standard drinks of alcohol consumed. (en)">
+                text = <"Dose padrão">
+                description = <"Número de doses padrão de álcool consumido">
             >
             ["id16"] = <
-                text = <"*Amount (en)">
-                description = <"*Amount of alcohol consumed. (en)">
+                text = <"Quantidade">
+                description = <"Quantidade de álcool consumida">
             >
             ["id17"] = <
-                text = <"*Grams Consumed (en)">
-                description = <"*Grams of alcohol consumed. (en)">
+                text = <"Consumo em gramas">
+                description = <"Consumo de álcool em gramas">
             >
             ["id18"] = <
-                text = <"*Triggers (en)">
-                description = <"*Identified triggers which stimulate or cause consumption of this form of alcohol. (en)">
+                text = <"Gatilhos">
+                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
             >
             ["id19"] = <
-                text = <"*Context (en)">
-                description = <"*Description about the social or cultural context that contributed to the consumption of this form of alcohol. (en)">
+                text = <"Contexto">
+                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
             >
             ["id20"] = <
-                text = <"*Behavioural Issues (en)">
-                description = <"*Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence. (en)">
+                text = <"Problemas comportamentais">
+                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
             >
             ["id22"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about the alcohol consumption not captured in other fields. (en)">
+                text = <"Comentário">
+                description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
             >
             ["id23"] = <
-                text = <"*Average Consumption Interval (en)">
-                description = <"*Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years. (en)">
+                text = <"Intervalo médio consumido">
+                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
             >
             ["id24"] = <
-                text = <"*Specified Day (en)">
-                description = <"*Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary. (en)">
+                text = <"Dia específico">
+                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
             >
             ["id26"] = <
-                text = <"*Standard Drink Definition (en)">
-                description = <"*Amount of alcohol defining a standard drink. (en)">
+                text = <"Definição de dose padrão">
+                description = <"Definição da quantidade de álcool na dose padrão">
             >
             ["id27"] = <
-                text = <"*Average Use Frequency (en)">
-                description = <"*Frequency of 'Average Use' per time interval. (en)">
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
             ["id28"] = <
-                text = <"*Readiness for Change (en)">
-                description = <"*Details about readiness to change use or consumption of alcohol. (en)">
+                text = <"Disponibilidade para mudança">
+                description = <"Detalhes sobre a disponibilidade de mudança no uso ou consumo de álcool">
             >
             ["at1"] = <
                 text = <"*Frequency (en)">
