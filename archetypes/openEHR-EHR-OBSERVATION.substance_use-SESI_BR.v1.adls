@@ -302,40 +302,40 @@ terminology
                 description = <"Informar substância psicoativas.">
             >
             ["at0.1"] = <
-                text = <"Opiate (en)">
-                description = <"Opiate (en)">
+                text = <"Opiácios">
+                description = <"Opiácios">
             >
             ["at0.2"] = <
-                text = <"Canabiodies (en)">
-                description = <"Canabiodies (en)">
+                text = <"Canabiodies">
+                description = <"Canabiodies">
             >
             ["at0.3"] = <
-                text = <"Sedatives and hypnotics (en)">
-                description = <"Sedatives and hypnotics (en)">
+                text = <"Sedativos e hipinóticos">
+                description = <"Sedativos e hipinóticos">
             >
             ["at0.4"] = <
-                text = <"Cocaine and Derivatives (en)">
-                description = <"Cocaine and Derivatives (en)">
+                text = <"Cocaína e Derivados">
+                description = <"Cocaína e Derivados">
             >
             ["at0.5"] = <
-                text = <"Other stimulants (en)">
-                description = <"Other stimulants (en)">
+                text = <"Outros estimulantes">
+                description = <"Outros estimulantes">
             >
             ["at0.6"] = <
-                text = <"Hallucinogens (en)">
-                description = <"Hallucinogens (en)">
+                text = <"Alucínogenos">
+                description = <"Alucínogenos">
             >
             ["at0.7"] = <
-                text = <"Solvents and volatiles (en)">
-                description = <"Solvents and volatiles (en)">
+                text = <"Solventes e voláteis">
+                description = <"Solventes e voláteis">
             >
             ["at0.8"] = <
-                text = <"Multiple drugs and use of other (en)">
-                description = <"Multiple drugs and use of other (en)">
+                text = <"Múltiplas drogas e uso de outras substâncias psicoativas">
+                description = <"Múltiplas drogas e uso de outras substâncias psicoativas">
             >
             ["at0.9"] = <
-                text = <"Psychoactive substances (en)">
-                description = <"Psychoactive substances (en)">
+                text = <"Substâncias psicoativas">
+                description = <"Substâncias psicoativas">
             >
             ["ac0.1"] = <
                 text = <"Psychoactive substance (en)">
