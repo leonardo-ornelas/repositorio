@@ -212,12 +212,44 @@ terminology
                 description = <"Psychoactive substances">
             >
             ["ac0.1"] = <
-                text = <"Psychoactive substance">
-                description = <"Psychoactive substance">
+                text = <"Substâncias psicoativas">
+                description = <"Substâncias psicoativas">
             >
             ["id0.8"] = <
                 text = <"Name of the psychoactive substance">
                 description = <"Name of the psychoactive substance">
+            >
+            ["at0.10"] = <
+                text = <"Opiácios">
+                description = <"Opiácios">
+            >
+            ["at0.11"] = <
+                text = <"Canabiodies">
+                description = <"Canabiodies">
+            >
+            ["at0.12"] = <
+                text = <"Sedativos e hipinóticos">
+                description = <"Sedativos e hipinóticos">
+            >
+            ["at0.13"] = <
+                text = <"Cocaína e derivados">
+                description = <"Cocaína e derivados">
+            >
+            ["at0.14"] = <
+                text = <"Outros estimulantes">
+                description = <"Outros estimulantes">
+            >
+            ["at0.15"] = <
+                text = <"Alucínogenos">
+                description = <"Alucínogenos">
+            >
+            ["at0.16"] = <
+                text = <"Solventes e voláteis">
+                description = <"Solventes e voláteis">
+            >
+            ["at0.17"] = <
+                text = <"Múltiplas drogas e uso de outras substâncias psicoativas">
+                description = <"Múltiplas drogas e uso de outras substâncias psicoativas">
             >
         >
         ["pt-br"] = <
@@ -338,19 +370,51 @@ terminology
                 description = <"Substâncias psicoativas">
             >
             ["ac0.1"] = <
-                text = <"Psychoactive substance (en)">
-                description = <"Psychoactive substance (en)">
+                text = <"Substâncias psicoativas (en)">
+                description = <"Substâncias psicoativas (en)">
             >
             ["id0.8"] = <
                 text = <"Nome da substância psicoativa">
                 description = <"Nome da substância psicoativa">
+            >
+            ["at0.10"] = <
+                text = <"Opiácios (en)">
+                description = <"Opiácios (en)">
+            >
+            ["at0.11"] = <
+                text = <"Canabiodies (en)">
+                description = <"Canabiodies (en)">
+            >
+            ["at0.12"] = <
+                text = <"Sedativos e hipinóticos (en)">
+                description = <"Sedativos e hipinóticos (en)">
+            >
+            ["at0.13"] = <
+                text = <"Cocaína e derivados (en)">
+                description = <"Cocaína e derivados (en)">
+            >
+            ["at0.14"] = <
+                text = <"Outros estimulantes (en)">
+                description = <"Outros estimulantes (en)">
+            >
+            ["at0.15"] = <
+                text = <"Alucínogenos (en)">
+                description = <"Alucínogenos (en)">
+            >
+            ["at0.16"] = <
+                text = <"Solventes e voláteis (en)">
+                description = <"Solventes e voláteis (en)">
+            >
+            ["at0.17"] = <
+                text = <"Múltiplas drogas e uso de outras substâncias psicoativas (en)">
+                description = <"Múltiplas drogas e uso de outras substâncias psicoativas (en)">
             >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
-            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5", "at0.6", "at0.7", "at0.8", "at0.9">
+            members = <"at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17">
         >
     >
 
