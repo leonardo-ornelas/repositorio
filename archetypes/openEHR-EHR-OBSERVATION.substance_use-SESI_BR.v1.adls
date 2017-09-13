@@ -54,23 +54,39 @@ Um uso típico deste arquétipo será relacionado a um registro diário de uso o
 
 definition
     OBSERVATION[id1.1] matches {    -- Substance Use
-        /data[id2]/events[id3]/data[id4]/items[id11]/items matches {
-            ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
-                /value[id23]/defining_code matches {[ac1]}
-            }
-            ELEMENT[id13] occurrences matches {0..1} matches {    -- Amount
-                value matches {
-                    DV_QUANTITY[id0.6] 
+        /data[id2]/events[id3]/data[id4]/items matches {
+            CLUSTER[id11] occurrences matches {0..1} matches {    -- Consumption details
+                items matches {
+                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Amount
+                        value matches {
+                            DV_QUANTITY[id0.6] 
+                        }
+                    }
+                    ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Frequency
+                        value matches {
+                            DV_TEXT[id0.3] 
+                        }
+                    }
+                    ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Type
+                        value matches {
+                            DV_TEXT[id0.5] 
+                        }
+                    }
                 }
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Frequency
+            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Psychoactive substance
                 value matches {
-                    DV_TEXT[id0.3] 
+                    DV_CODED_TEXT[id0.9] matches {
+                        defining_code matches {[ac0.1]}
+                    }
                 }
             }
-            ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Type
+            ELEMENT[id0.8] occurrences matches {0..1} matches {    -- Name of the psychoactive substance
                 value matches {
-                    DV_TEXT[id0.5] 
+                    DV_TEXT[id0.10] 
                 }
             }
         }
@@ -155,6 +171,54 @@ terminology
                 text = <"Type">
                 description = <"Record the type">
             >
+            ["id0.7"] = <
+                text = <"Psychoactive substance">
+                description = <"Report psychoactive substances">
+            >
+            ["at0.1"] = <
+                text = <"Opiate">
+                description = <"Opiate">
+            >
+            ["at0.2"] = <
+                text = <"Canabiodies">
+                description = <"Canabiodies">
+            >
+            ["at0.3"] = <
+                text = <"Sedatives and hypnotics">
+                description = <"Sedatives and hypnotics">
+            >
+            ["at0.4"] = <
+                text = <"Cocaine and Derivatives">
+                description = <"Cocaine and Derivatives">
+            >
+            ["at0.5"] = <
+                text = <"Other stimulants">
+                description = <"Other stimulants">
+            >
+            ["at0.6"] = <
+                text = <"Hallucinogens">
+                description = <"Hallucinogens">
+            >
+            ["at0.7"] = <
+                text = <"Solvents and volatiles">
+                description = <"Solvents and volatiles">
+            >
+            ["at0.8"] = <
+                text = <"Multiple drugs and use of other">
+                description = <"Multiple drugs and use of other">
+            >
+            ["at0.9"] = <
+                text = <"Psychoactive substances">
+                description = <"Psychoactive substances">
+            >
+            ["ac0.1"] = <
+                text = <"Psychoactive substance">
+                description = <"Psychoactive substance">
+            >
+            ["id0.8"] = <
+                text = <"Name of the psychoactive substance">
+                description = <"Name of the psychoactive substance">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -233,6 +297,60 @@ terminology
                 text = <"Tipo">
                 description = <"Registre o tipo">
             >
+            ["id0.7"] = <
+                text = <"Substâncias psicoativas">
+                description = <"Informar substância psicoativas.">
+            >
+            ["at0.1"] = <
+                text = <"Opiate (en)">
+                description = <"Opiate (en)">
+            >
+            ["at0.2"] = <
+                text = <"Canabiodies (en)">
+                description = <"Canabiodies (en)">
+            >
+            ["at0.3"] = <
+                text = <"Sedatives and hypnotics (en)">
+                description = <"Sedatives and hypnotics (en)">
+            >
+            ["at0.4"] = <
+                text = <"Cocaine and Derivatives (en)">
+                description = <"Cocaine and Derivatives (en)">
+            >
+            ["at0.5"] = <
+                text = <"Other stimulants (en)">
+                description = <"Other stimulants (en)">
+            >
+            ["at0.6"] = <
+                text = <"Hallucinogens (en)">
+                description = <"Hallucinogens (en)">
+            >
+            ["at0.7"] = <
+                text = <"Solvents and volatiles (en)">
+                description = <"Solvents and volatiles (en)">
+            >
+            ["at0.8"] = <
+                text = <"Multiple drugs and use of other (en)">
+                description = <"Multiple drugs and use of other (en)">
+            >
+            ["at0.9"] = <
+                text = <"Psychoactive substances (en)">
+                description = <"Psychoactive substances (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Psychoactive substance (en)">
+                description = <"Psychoactive substance (en)">
+            >
+            ["id0.8"] = <
+                text = <"Name of the psychoactive substance (en)">
+                description = <"Name of the psychoactive substance (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5", "at0.6", "at0.7", "at0.8", "at0.9">
         >
     >
 
