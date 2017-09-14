@@ -673,26 +673,45 @@ definition
             EVENT[id3] occurrences matches {0..1} matches {
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {
-                        /items[id16]/items matches {
-                            ELEMENT[id15] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id7.1] occurrences matches {1} matches {    -- Form
                                 value matches {
-                                    DV_QUANTITY[id30] matches {
-                                        property matches {[at1]}
-                                        units matches {"/h", "/d", "/wk", "/mo"}
+                                    DV_TEXT[id29.1] 
+                                }
+                            }
+                            CLUSTER[id16] occurrences matches {0..1} matches {
+                                items cardinality matches {1; unordered} matches {
+                                    ELEMENT[id15] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_QUANTITY[id30] matches {
+                                                property matches {[at1]}
+                                                units matches {"/h", "/d", "/wk", "/mo"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17.1] occurrences matches {0} matches {    -- Grams Consumed
+                                        value matches {
+                                            DV_QUANTITY[id31.1] matches {
+                                                property matches {[at2]}
+                                                units matches {"gm/d", "gm/wk"}
+                                            }
+                                        }
                                     }
                                 }
                             }
-                            ELEMENT[id17] occurrences matches {0..1} matches {
+                            ELEMENT[id18.1] occurrences matches {0} matches {    -- Triggers
                                 value matches {
-                                    DV_QUANTITY[id31] matches {
-                                        property matches {[at2]}
-                                        units matches {"gm/d", "gm/wk"}
-                                    }
+                                    DV_TEXT[id32.1] 
+                                }
+                            }
+                            ELEMENT[id19.1] occurrences matches {0} matches {    -- Context
+                                value matches {
+                                    DV_TEXT[id33.1] 
                                 }
                             }
                         }
                     }
-                    allow_archetype CLUSTER[id28] matches { 
+                    allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
                     }
@@ -737,11 +756,43 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
+            ["id18.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
+            >
+            ["id17.1"] = <
+                text = <"Grams Consumed">
+                description = <"Grams of alcohol consumed.">
+            >
+            ["id19.1"] = <
+                text = <"Context">
+                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
+            >
+            ["id7.1"] = <
+                text = <"Form">
+                description = <"Form of alcohol consumed.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+            ["id18.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
+            >
+            ["id17.1"] = <
+                text = <"Consumo em gramas">
+                description = <"Consumo de álcool em gramas">
+            >
+            ["id19.1"] = <
+                text = <"Contexto">
+                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
+            >
+            ["id7.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo de álcool">
             >
         >
     >
