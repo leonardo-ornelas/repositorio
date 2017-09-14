@@ -34,6 +34,12 @@
     "rmType" : "COMPOSITION",
     "name" : "*Admission (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
-    "sha" : "681ce417cf7c5cfcd2b9f95c6893e5afb84b052b"
+    "sha" : "73154385342e302a28f952f91ea7bb8e0f6e6ae1"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
+    "sha" : "71d2173c7a3def880d2a1a932240fa42e46a9ab9"
   } ]
 }
