@@ -789,5 +789,12 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-SESI_BR.v1.adls",
     "sha" : "dbc3106d9c2fa484fa6907b2854754a71b3048e2",
     "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.adhoc.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Adhoc Heading",
+    "path" : "archetypes/openEHR-EHR-SECTION.adhoc.v1.adls",
+    "sha" : "e2b5e49e9df39501a62511c5f64a4012b2f57d49",
+    "languages" : [ "en" ]
   } ]
 }
