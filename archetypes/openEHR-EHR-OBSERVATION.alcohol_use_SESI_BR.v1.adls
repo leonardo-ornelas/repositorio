@@ -70,27 +70,10 @@ definition
             EVENT[id3] occurrences matches {0..1} matches {    -- Any event
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {    -- Consumption Details
-                        /items[id16]/items matches {
-                            ELEMENT[id15] occurrences matches {0..1} matches {    -- Standard Drinks
-                                value matches {
-                                    DV_QUANTITY[id30] matches {
-                                        property matches {[at1]}
-                                        units matches {"/h", "/d", "/wk", "/mo"}
-                                    }
-                                }
-                            }
-                            ELEMENT[id17] occurrences matches {0..1} matches {    -- Grams Consumed
-                                value matches {
-                                    DV_QUANTITY[id31] matches {
-                                        property matches {[at2]}
-                                        units matches {"gm/d", "gm/wk"}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Problemas comportamentais
-                                value matches {
-                                    DV_TEXT[id0.3] 
-                                }
+                        /items[id16]/items[id17]/value matches {
+                            DV_QUANTITY[id31] matches {
+                                property matches {[at2]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -100,8 +83,16 @@ definition
                     }
                 }
             }
+            POINT_EVENT[id24] matches {    -- Specified Day
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
             INTERVAL_EVENT[id23] matches {    -- Average Consumption Interval
                 /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
             }
         }
         /protocol[id25]/items matches {
