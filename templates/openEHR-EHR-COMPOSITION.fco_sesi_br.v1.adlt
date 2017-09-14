@@ -640,6 +640,7 @@ definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
             use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-alcohol_use-001.v1.0.0]
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-substance_use-tobacco-001.v1.0.0]
         }
     }
 
@@ -736,6 +737,68 @@ terminology
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-substance_use-tobacco-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Tobacco Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                /value[id20.1]/defining_code matches {[at0.2]}
+            }
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id21.1]/defining_code matches {[ac0.1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                }
+                items matches {
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13.1] matches {
+                        value matches {
+                            DV_QUANTITY[id0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2] matches {
+                        value matches {
+                            DV_QUANTITY[id0.2] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id15] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time. ">
             >
         >
     >
