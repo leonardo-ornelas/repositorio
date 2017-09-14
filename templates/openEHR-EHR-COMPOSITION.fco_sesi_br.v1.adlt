@@ -45,6 +45,7 @@ definition
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-fco_sesi_br-physical_activity_summary-SESI_BR-001.v1.0.0]
             use_archetype OBSERVATION[id0.6, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-substance_use-SESI_BR-001.v1.0.0]
             use_archetype OBSERVATION[id0.6, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-substance_use-SESI_BR-002.v1.0.0]
+            use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-fco_sesi_br-adhoc-001.v1.0.0]
         }
     }
 
@@ -623,6 +624,118 @@ terminology
             ["id0.8.1"] = <
                 text = <"Nome da substância psicoativa">
                 description = <"Nome da substância psicoativa">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-fco_sesi_br-adhoc-001.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-alcohol_use-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-alcohol_use-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Alcohol Use
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    CLUSTER[id6] matches {
+                        /items[id16]/items matches {
+                            ELEMENT[id15] occurrences matches {0..1} matches {
+                                value matches {
+                                    DV_QUANTITY[id30] matches {
+                                        property matches {[at1]}
+                                        units matches {"/h", "/d", "/wk", "/mo"}
+                                    }
+                                }
+                            }
+                            ELEMENT[id17] occurrences matches {0..1} matches {
+                                value matches {
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id28] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+            POINT_EVENT[id24] matches {
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+            INTERVAL_EVENT[id23] matches {
+                /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+        }
+        /protocol[id25]/items matches {
+            ELEMENT[id26] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id39] matches {
+                        property matches {[at4]}
+                        units matches {"gm"}
+                    }
+                }
+            }
+            ELEMENT[id27] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id40] matches {
+                        property matches {[at1]}
+                        units matches {"/d", "/wk", "/mo"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Uso de álcool">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
         >
     >
