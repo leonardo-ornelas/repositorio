@@ -40,6 +40,6 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
-    "sha" : "71d2173c7a3def880d2a1a932240fa42e46a9ab9"
+    "sha" : "47211487ee6b37143646ec025fde4996a28657df"
   } ]
 }
