@@ -796,5 +796,113 @@
     "path" : "archetypes/openEHR-EHR-SECTION.adhoc.v1.adls",
     "sha" : "e2b5e49e9df39501a62511c5f64a4012b2f57d49",
     "languages" : [ "en" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.Antecedentes.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Antecedentes",
+    "path" : "archetypes/CEN-EN13606-SECTION.Antecedentes.v1.adls",
+    "sha" : "60f6856729907e32b86ec2be029b09358e9e64f9",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.AntecedentesEnfermeria.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Antecedentes Enfermeria",
+    "path" : "archetypes/CEN-EN13606-SECTION.AntecedentesEnfermeria.v1.adls",
+    "sha" : "b6f85dedda7bb2a78672f2c1e24731f666ba24c8",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.Diagnosticos.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Diagnosticos",
+    "path" : "archetypes/CEN-EN13606-SECTION.Diagnosticos.v1.adls",
+    "sha" : "3f551cac9350ed1e6498a489f65992d2461f0973",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.ExploracionFisica.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "ExploracionFisica",
+    "path" : "archetypes/CEN-EN13606-SECTION.ExploracionFisica.v1.adls",
+    "sha" : "3b506e1cb4353d5efca835231915b4dbe743c4ce",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "ResumenPruebasComplementarias",
+    "path" : "archetypes/CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1.adls",
+    "sha" : "81b9b710988f997e8836686187800a87fef78c74",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "CEN-EN13606-SECTION.Tratamiento.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Tratamiento",
+    "path" : "archetypes/CEN-EN13606-SECTION.Tratamiento.v1.adls",
+    "sha" : "3314dfaec6ec22055f036074bc33847447af0e15",
+    "languages" : [ "es" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.adverse_list.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Adverse Reaction List",
+    "path" : "archetypes/openEHR-EHR-SECTION.adverse_list.v1.0.0.adls",
+    "sha" : "0f68d9231d5454ecce757c43f0f4566d9ee043aa",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.conclusion.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Conclusion",
+    "path" : "archetypes/openEHR-EHR-SECTION.conclusion.v1.0.0.adls",
+    "sha" : "c5b5a639ca062b27a37c911ab4c598375623d810",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.diagnostic_reports.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Diagnostic Reports",
+    "path" : "archetypes/openEHR-EHR-SECTION.diagnostic_reports.v1.0.0.adls",
+    "sha" : "ddcfd72582d74e618114a5db31757345c3adc1f3",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.medication_order_list.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Medication Order List",
+    "path" : "archetypes/openEHR-EHR-SECTION.medication_order_list.v1.0.0.adls",
+    "sha" : "8e051367c58760287b94aea201db88a05b72e35e",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.problem_list.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Problem List",
+    "path" : "archetypes/openEHR-EHR-SECTION.problem_list.v1.0.0.adls",
+    "sha" : "d3e84ece7e690ecd2135ccf79dbec7b0e35dd914",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.referral_details.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Referral Details",
+    "path" : "archetypes/openEHR-EHR-SECTION.referral_details.v1.0.0.adls",
+    "sha" : "e50e3112e3b49b3963a0f896a513e6cb363eba92",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.section_parent.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Physical examination",
+    "path" : "archetypes/openEHR-EHR-SECTION.section_parent.v1.0.0.adls",
+    "sha" : "6b178cec55e3dae71e35b9a33021cd09a6574291",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.soap.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "SOAP",
+    "path" : "archetypes/openEHR-EHR-SECTION.soap.v1.0.0.adls",
+    "sha" : "9da761d6527d033c4b35691221cc38dbb2cbfd8f",
+    "languages" : [ "en" ]
+  }, {
+    "path" : "archetypes/openEHR-EHR-SECTION.t_patient_event_info_ds_sf.v1.0.0.adls",
+    "sha" : "72b8ec3880ca05bbfd2db3e13460cf4485679410"
+  }, {
+    "id" : "openEHR-EHR-SECTION.vital_signs.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Vital signs",
+    "path" : "archetypes/openEHR-EHR-SECTION.vital_signs.v1.0.0.adls",
+    "sha" : "e3badbee42c4f93501d237d7f360a01d9b421394",
+    "languages" : [ "en", "de", "ko" ]
   } ]
 }
