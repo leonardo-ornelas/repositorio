@@ -44,6 +44,7 @@ definition
         content matches {
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesifco-physical_activity_summary-SESI_BR-001.v1.0.0]
             use_archetype SECTION[id0.3, openEHR-EHR-SECTION.ovl-sesifco-adhoc-001.v1.0.0]
+            use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-sesifco-adhoc-002.v1.0.0]
         }
     }
 
@@ -301,7 +302,6 @@ definition
         items matches {
             use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesifco-substance_use-SESI_BR-001.v1.0.0]
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-sesifco-substance_use-SESI_BR-002.v1.0.0]
-            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesifco-alcohol_use-001.v1.0.0]
         }
     }
 
@@ -315,7 +315,7 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Adhoc Heading">
+                text = <"Exposição">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
@@ -631,6 +631,37 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-002.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesifco-alcohol_use-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Álcool">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
     openEHR-EHR-OBSERVATION.ovl-sesifco-alcohol_use-001.v1.0.0
 
 specialize
@@ -725,13 +756,13 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
-            ["id7.1"] = <
-                text = <"Form">
-                description = <"Form of alcohol consumed.">
+            ["id23.1"] = <
+                text = <"Average Consumption Interval">
+                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
             >
-            ["id17.1"] = <
-                text = <"Grams Consumed">
-                description = <"Grams of alcohol consumed.">
+            ["id24.1"] = <
+                text = <"Specified Day">
+                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
             >
             ["id18.1"] = <
                 text = <"Triggers">
@@ -741,13 +772,13 @@ terminology
                 text = <"Context">
                 description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
             >
-            ["id24.1"] = <
-                text = <"Specified Day">
-                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
+            ["id17.1"] = <
+                text = <"Grams Consumed">
+                description = <"Grams of alcohol consumed.">
             >
-            ["id23.1"] = <
-                text = <"Average Consumption Interval">
-                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
+            ["id7.1"] = <
+                text = <"Form">
+                description = <"Form of alcohol consumed.">
             >
         >
         ["pt-br"] = <
@@ -755,13 +786,13 @@ terminology
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
-            ["id7.1"] = <
-                text = <"Forma">
-                description = <"Forma de consumo de álcool">
+            ["id23.1"] = <
+                text = <"Intervalo médio consumido">
+                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
             >
-            ["id17.1"] = <
-                text = <"Consumo em gramas">
-                description = <"Consumo de álcool em gramas">
+            ["id24.1"] = <
+                text = <"Dia específico">
+                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
             >
             ["id18.1"] = <
                 text = <"Gatilhos">
@@ -771,13 +802,13 @@ terminology
                 text = <"Contexto">
                 description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
             >
-            ["id24.1"] = <
-                text = <"Dia específico">
-                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
+            ["id17.1"] = <
+                text = <"Consumo em gramas">
+                description = <"Consumo de álcool em gramas">
             >
-            ["id23.1"] = <
-                text = <"Intervalo médio consumido">
-                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
+            ["id7.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo de álcool">
             >
         >
     >
