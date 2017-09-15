@@ -228,8 +228,8 @@
     "rmType" : "SECTION",
     "name" : "Medication",
     "path" : "archetypes/openEHR-EHR-SECTION.medication.v1.adls",
-    "sha" : "d379bcf36aa1293b122d305a3daa87b3647ada0f",
-    "languages" : [ "en" ]
+    "sha" : "e2b4a7552872c6cb333791ffa829f6354938d882",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.device_details.v1.0.0",
     "rmType" : "CLUSTER",
@@ -430,7 +430,7 @@
     "rmType" : "EVALUATION",
     "name" : "Physical Activity Summary",
     "path" : "archetypes/openEHR-EHR-EVALUATION.physical_activity_summary.v1.adls",
-    "sha" : "5b10ad856edb33211125cffcae905804a939bc60",
+    "sha" : "f86864393a9d2fc2e6ed1e135d2b4f81ccc51aef",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.risk-family_history.v1.0.0",
@@ -598,7 +598,7 @@
     "rmType" : "SECTION",
     "name" : "Medication Order List",
     "path" : "archetypes/openEHR-EHR-SECTION.medication_order_list.v1.adls",
-    "sha" : "5ee87f98a19760cf9178d1932b6c35f842635584",
+    "sha" : "2fbb495121c204605a0dd5f13a4ef06fdf093c95",
     "languages" : [ "en", "ru" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.exam.v1.0.0",
@@ -759,7 +759,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.adls",
-    "sha" : "e3c3ff61b0aad265245f635ccfd8f70a0fbe2db4",
+    "sha" : "6d496f971a9a36bff1ee72bf040c75e82665b3b9",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0",
@@ -794,8 +794,8 @@
     "rmType" : "SECTION",
     "name" : "Adhoc Heading",
     "path" : "archetypes/openEHR-EHR-SECTION.adhoc.v1.adls",
-    "sha" : "e2b5e49e9df39501a62511c5f64a4012b2f57d49",
-    "languages" : [ "en" ]
+    "sha" : "114c282ad56f29ca67a31fc0ef83e211cbc10ee7",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "CEN-EN13606-SECTION.Antecedentes.v1.0.0",
     "rmType" : "SECTION",
