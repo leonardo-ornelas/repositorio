@@ -47,7 +47,7 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"Adhoc Heading">
+                text = <"Encabeçamento">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
