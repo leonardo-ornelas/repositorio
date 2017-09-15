@@ -39,7 +39,7 @@ description
     >
 
 definition
-    COMPOSITION[id1.1] matches {    -- Encounter
+    COMPOSITION[id1.1] matches {    -- FCO
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-fco_sesi_br-physical_activity_summary-SESI_BR-001.v1.0.0]
@@ -53,7 +53,7 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"Encounter">
+                text = <"FCO">
                 description = <"Generic encounter or progress note composition.">
             >
         >
@@ -578,6 +578,14 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
@@ -586,13 +594,8 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
+                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
+                        /value[id0.0.3]/value matches {True, False}
                     }
                 }
             }
