@@ -38,8 +38,8 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "Encounter",
+    "name" : "FCO",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
-    "sha" : "47211487ee6b37143646ec025fde4996a28657df"
+    "sha" : "628a2036d7db5cd5352b1e0d7c59ed12dd1a026a"
   } ]
 }
