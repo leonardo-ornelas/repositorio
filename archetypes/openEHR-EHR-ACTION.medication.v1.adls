@@ -675,20 +675,20 @@ terminology
                 description = <"A medicação foi re-prescrita para uma instrução existente.">
             >
             ["at12"] = <
-                text = <"*Suspend re-issue of prescription (en)">
-                description = <"*Reissuing of this prescription is not available without some intervention. (en)">
+                text = <"Suspenda a re-emissão de receita médica">
+                description = <"A reedição desta receita não está disponível sem alguma intervenção.">
             >
             ["at13"] = <
-                text = <"*Cancel medication plan (en)">
-                description = <"*The planned administration has been cancelled prior to any administration. (en)">
+                text = <"Cancelar o plano de medicação">
+                description = <"A administração planejada foi cancelada antes de qualquer administração.">
             >
             ["at14"] = <
-                text = <"*Suspend medication plan (en)">
-                description = <"*The plan to order medication has been suspended. (en)">
+                text = <"Suspender o plano de medicação">
+                description = <"O plano para pedir medicação foi suspenso.">
             >
             ["at15"] = <
-                text = <"*Reverse prescription for medication (en)">
-                description = <"*The prescription has been cancelled but administration or dispensing may have occurred. (en)">
+                text = <"Prescrição de medicação retroativa">
+                description = <"A prescrição foi cancelada, mas a administração ou dispensação pode ter ocorrido.">
             >
             ["at16"] = <
                 text = <"*Cease administration (en)">
@@ -699,12 +699,12 @@ terminology
                 description = <"*The time to start this medication has been set. (en)">
             >
             ["at19"] = <
-                text = <"*Withhold medication (en)">
-                description = <"*The administration of a medication has been withheld and not given. (en)">
+                text = <"Reter a medicação">
+                description = <"A administração de um medicamento foi retida e não administrada.">
             >
             ["at20"] = <
-                text = <"*Medication declined (en)">
-                description = <"*An administration of the medication was refused by the subject of care (patient). (en)">
+                text = <"Medicamentos recusados">
+                description = <"Uma administração da medicação foi recusada pelo sujeito de cuidados (paciente).">
             >
             ["id21"] = <
                 text = <"Medicação">
@@ -751,8 +751,8 @@ terminology
                 description = <"Todas as instruções dadas ao sujeito de cuidado ou cuidador no momento da ação.">
             >
             ["at36"] = <
-                text = <"*Return medication (en)">
-                description = <"*A dispensed medication is returned or not collected without use. (en)">
+                text = <"Devolver a medicação">
+                description = <"O medicamento devolvido é retornado ou não é coletado sem uso. medicação">
             >
             ["id37"] = <
                 text = <"Marca substituta">
@@ -767,8 +767,8 @@ terminology
                 description = <"A categoria de reembolso ou subsídio procurado para o item.">
             >
             ["at40"] = <
-                text = <"*Change dose or timing (en)">
-                description = <"*A new instruction with changed dose or timing has been created that replaces this one. (en)">
+                text = <"Alterar a dose ou o tempo">
+                description = <"Uma nova instrução com mudança de dose ou tempo foi criada que substitui esta.">
             >
             ["id41"] = <
                 text = <"Data de validade">
@@ -779,44 +779,44 @@ terminology
                 description = <"*A Medicinal Product Unit of Use (MPUU), a Medicinal Product Pack (MPP), a Trade Product Pack (TPP) or a Containered Trade Product Pack (CTPP). (en)">
             >
             ["at41"] = <
-                text = <"*initial (en)">
-                description = <"*initial (en)">
+                text = <"Inicial">
+                description = <"Inicial">
             >
             ["at42"] = <
-                text = <"*postponed (en)">
-                description = <"*postponed (en)">
+                text = <"adiado">
+                description = <"adiado">
             >
             ["at43"] = <
-                text = <"*cancelled (en)">
-                description = <"*cancelled (en)">
+                text = <"cancelado">
+                description = <"cancelado">
             >
             ["at44"] = <
-                text = <"*scheduled (en)">
-                description = <"*scheduled (en)">
+                text = <"agendado">
+                description = <"agendado">
             >
             ["at45"] = <
-                text = <"*active (en)">
-                description = <"*active (en)">
+                text = <"ativo">
+                description = <"ativo">
             >
             ["at46"] = <
-                text = <"*suspended (en)">
-                description = <"*suspended (en)">
+                text = <"suspenso">
+                description = <"suspenso">
             >
             ["at47"] = <
-                text = <"*aborted (en)">
-                description = <"*aborted (en)">
+                text = <"abortado">
+                description = <"abortado">
             >
             ["at48"] = <
-                text = <"*complete (en)">
-                description = <"*complete (en)">
+                text = <"completo">
+                description = <"completo">
             >
             ["at49"] = <
                 text = <"*active (en)">
                 description = <"*active (en)">
             >
             ["at50"] = <
-                text = <"*initial (en)">
-                description = <"*initial (en)">
+                text = <"inicial">
+                description = <"inicial">
             >
             ["at51"] = <
                 text = <"*active (en)">
