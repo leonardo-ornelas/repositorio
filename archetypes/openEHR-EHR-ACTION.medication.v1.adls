@@ -635,44 +635,44 @@ terminology
                 description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
             >
             ["at2"] = <
-                text = <"*Plan medication (en)">
-                description = <"*The medication is planned but no execution has taken place. (en)">
+                text = <"Plano de medicação">
+                description = <"A medicação está planejada, mas nenhuma execução ocorreu.">
             >
             ["at3"] = <
-                text = <"*Issue prescription for medication (en)">
-                description = <"*The instruction has issued as an item on a prescription. (en)">
+                text = <"Receita médica emitida">
+                description = <"A instrução emitida como um item em uma receita médica.">
             >
             ["at4"] = <
-                text = <"*Dispense medication (en)">
-                description = <"*The medication has been dispensed. (en)">
+                text = <"Medicação dispensada">
+                description = <"A medicação foi dispensada.">
             >
             ["at5"] = <
-                text = <"*Commence medication (en)">
-                description = <"*The medication has been taken by the patient for the first time. (en)">
+                text = <"Começo da medicação">
+                description = <"A medicação foi tomada pelo paciente pela primeira vez.">
             >
             ["at6"] = <
-                text = <"*Review medication (en)">
-                description = <"*The medication has been reviewed. (en)">
+                text = <"Revisão da medicação">
+                description = <"A medicação foi revisada.">
             >
             ["at7"] = <
                 text = <"*Administer medication (en)">
                 description = <"*A single administration of the medication has taken place. (en)">
             >
             ["at8"] = <
-                text = <"*Complete medication (en)">
-                description = <"*The medication has been completed as instructed. (en)">
+                text = <"Medicação completa">
+                description = <"A medicação foi completada conforme instruído.">
             >
             ["at9"] = <
-                text = <"*Delay medication supply (en)">
-                description = <"*The medication has not been dispensed as supply is not yet available. (en)">
+                text = <"Atraso no fornecimento de medicamentos">
+                description = <"A medicação não foi dispensada porque o fornecimento ainda não está disponível.">
             >
             ["at10"] = <
-                text = <"*Suspend administration (en)">
-                description = <"*The administration of the  medication has been suspended. (en)">
+                text = <"Administração suspensa">
+                description = <"A administração da medicação foi suspensa.">
             >
             ["at11"] = <
-                text = <"*Re-issue prescription for medication (en)">
-                description = <"*The medication has been re-prescribed for an existing instruction. (en)">
+                text = <"Reeditar receita para medicação">
+                description = <"A medicação foi re-prescrita para uma instrução existente.">
             >
             ["at12"] = <
                 text = <"*Suspend re-issue of prescription (en)">
