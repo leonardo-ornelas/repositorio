@@ -827,12 +827,12 @@ terminology
                 description = <"*initial (en)">
             >
             ["at53"] = <
-                text = <"*active (en)">
-                description = <"*active (en)">
+                text = <"ativo">
+                description = <"ativo">
             >
             ["at54"] = <
-                text = <"*initial (en)">
-                description = <"*initial (en)">
+                text = <"inicial">
+                description = <"inicial">
             >
             ["ac3"] = <
                 text = <"*Medication action (synthesised) (en)">
