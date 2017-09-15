@@ -46,6 +46,7 @@ definition
             use_archetype SECTION[id0.3, openEHR-EHR-SECTION.ovl-habitos_vida_sesi_fco-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-habitos_vida_sesi_fco-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-habitos_vida_sesi_fco-adhoc-003.v1.0.0]
+            use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-habitos_vida_sesi_fco-adhoc-004.v1.0.0]
         }
     }
 
@@ -1060,6 +1061,67 @@ terminology
             ["id13.2.0.1"] = <
                 text = <"Gramas de tabaco">
                 description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-habitos_vida_sesi_fco-adhoc-004.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-habitos_vida_sesi_fco-habitos_lazer-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hábitos de lazer">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-habitos_vida_sesi_fco-habitos_lazer-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- habitos_lazer
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {0..1} matches {
+                /value[id9]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"habitos_lazer">
+                description = <"habitos_lazer">
             >
         >
     >
