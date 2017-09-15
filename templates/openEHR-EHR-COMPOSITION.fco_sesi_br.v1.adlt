@@ -497,16 +497,22 @@ definition
                             DV_TEXT[id22.0.1] 
                         }
                     }
-                    ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Frequency
-                        value matches {
-                            DV_CODED_TEXT[id23.0.1] matches {
-                                defining_code matches {[ac1]}
-                            }
-                        }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
                     }
                     ELEMENT[id13.0.1] occurrences matches {0} matches {    -- Amount
                         value matches {
                             DV_QUANTITY[id0.6.1] 
+                        }
+                    }
+                    ELEMENT[id0.2.1] occurrences matches {0} matches {    -- Frequency
+                        value matches {
+                            DV_TEXT[id0.3.1] 
+                        }
+                    }
+                    ELEMENT[id0.4.1] occurrences matches {0} matches {    -- Type
+                        value matches {
+                            DV_TEXT[id0.5.1] 
                         }
                     }
                 }
@@ -525,17 +531,8 @@ definition
                     DV_TEXT[id25.0.1] 
                 }
             }
-            ELEMENT[id0.7.1] occurrences matches {0} matches {    -- Psychoactive substance
-                value matches {
-                    DV_CODED_TEXT[id0.9.1] matches {
-                        defining_code matches {[ac0.1]}
-                    }
-                }
-            }
-            ELEMENT[id0.8.1] occurrences matches {0} matches {    -- Name of the psychoactive substance
-                value matches {
-                    DV_TEXT[id0.10.1] 
-                }
+            ELEMENT[id0.7] occurrences matches {0..1} matches {
+                /value[id0.9]/defining_code matches {[ac0.1]}
             }
         }
     }
@@ -559,10 +556,6 @@ terminology
                 text = <"Method of use">
                 description = <"Method of use or consumption of the substance">
             >
-            ["id6.0.1"] = <
-                text = <"Frequency">
-                description = <"Frequency of use of substance">
-            >
             ["id13.0.1"] = <
                 text = <"Amount">
                 description = <"Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates">
@@ -575,13 +568,13 @@ terminology
                 text = <"Evidence of dependence">
                 description = <"Description of any evidence of dependence on the substance">
             >
-            ["id0.7.1"] = <
-                text = <"Psychoactive substance">
-                description = <"Report psychoactive substances">
+            ["id0.2.1"] = <
+                text = <"Frequency">
+                description = <"Record the frequency">
             >
-            ["id0.8.1"] = <
-                text = <"Name of the psychoactive substance">
-                description = <"Name of the psychoactive substance">
+            ["id0.4.1"] = <
+                text = <"Type">
+                description = <"Record the type">
             >
         >
         ["pt-br"] = <
@@ -590,7 +583,7 @@ terminology
                 description = <"Arquétipo genérico para registrar o uso ou consumo real de uma substância definida no momento atual, um tempo específico ou durante um período de tempo.">
             >
             ["id5.0.1"] = <
-                text = <"Uso de fitoterápicos, suplementos  ou vitaminas ">
+                text = <"Outras categorias de substâncias psicoativas">
                 description = <"Identificação da substância">
             >
             ["id12.0.1"] = <
@@ -600,10 +593,6 @@ terminology
             ["id19.0.1"] = <
                 text = <"Método de uso">
                 description = <"Método de uso ou consumo da substância">
-            >
-            ["id6.0.1"] = <
-                text = <"Frequência">
-                description = <"Frequência de uso da substância">
             >
             ["id13.0.1"] = <
                 text = <"Quantidade">
@@ -617,13 +606,13 @@ terminology
                 text = <"Evidência de dependência">
                 description = <"Descrição de qualquer evidência de dependência da substância.">
             >
-            ["id0.7.1"] = <
-                text = <"Substâncias psicoativas">
-                description = <"Informar substância psicoativas.">
+            ["id0.2.1"] = <
+                text = <"Frequência">
+                description = <"Registre a frequência">
             >
-            ["id0.8.1"] = <
-                text = <"Nome da substância psicoativa">
-                description = <"Nome da substância psicoativa">
+            ["id0.4.1"] = <
+                text = <"Tipo">
+                description = <"Registre o tipo">
             >
         >
     >
@@ -641,6 +630,7 @@ definition
         items matches {
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-alcohol_use-001.v1.0.0]
             use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-habitos_lazer-001.v1.0.0]
         }
     }
 
@@ -1029,6 +1019,36 @@ terminology
             ["id6.0.0.2"] = <
                 text = <"Frequência">
                 description = <"Frequência do uso da substância.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_sesi_br-habitos_lazer-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- habitos_lazer
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {0..1} matches {
+                /value[id9]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"habitos_lazer">
+                description = <"habitos_lazer">
             >
         >
     >
