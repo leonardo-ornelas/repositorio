@@ -38,8 +38,44 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "FCO",
+    "name" : "*FCO (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
-    "sha" : "628a2036d7db5cd5352b1e0d7c59ed12dd1a026a"
+    "sha" : "dd734df5e87265f98e2703a309542dff4fa73703"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.habitos_de_vida_fco_sesi.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.habitos_de_vida_fco_sesi.v1.adlt",
+    "sha" : "1733d58b3f8266b6a8ecbec8b8e54bdb974fea79"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.habitos_vida_sesi_fco.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.habitos_vida_sesi_fco.v1.adlt",
+    "sha" : "ccabe6e53de431d7ef1798ea6a1f8a6fc1e21fff"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.historico_familiar_fco_sesi.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Family History",
+    "path" : "templates/openEHR-EHR-COMPOSITION.historico_familiar_fco_sesi.v1.adlt",
+    "sha" : "f09e33a8ff4a303043543ac8d61272a52616517d"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.adlt",
+    "sha" : "10d6a1b2649c085802c4bc350c370fdd5afa13b7"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.sesifco.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.sesifco.v1.adlt",
+    "sha" : "efb6470d893d36d0381474a7e4172d45d5e72324"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.teste15.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.teste15.v1.adlt",
+    "sha" : "bc0dad89c51140a74a044363e0bc8bbedd767439"
   } ]
 }
