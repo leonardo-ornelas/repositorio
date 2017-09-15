@@ -16,6 +16,10 @@ language
             >
             language = <[ISO_639-1::pt-br]>
         >
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
     >
     
 description
@@ -35,6 +39,12 @@ description
             purpose = <"Registro de encontro como nota de progresso.">
             use = <"Usado para gravar uma interação entre uma pessoa e um clínico.">
         >
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            purpose = <"*Record of encounter as a progress note. (en)">
+            use = <"*For use to record when a person and clinician interact. (en)">
+        >
     >
     lifecycle_state = <"unmanaged">
     original_author = <
@@ -44,13 +54,14 @@ description
     >
 
 definition
-    COMPOSITION[id1.1] matches {    -- FCO
+    COMPOSITION[id1.1] matches {    -- *FCO (en)
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-fco_sesi_br-physical_activity_summary-SESI_BR-001.v1.0.0]
             use_archetype SECTION[id0.8, openEHR-EHR-SECTION.ovl-fco_sesi_br-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-fco_sesi_br-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-fco_sesi_br-adhoc-003.v1.0.0]
+            use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-fco_sesi_br-medication-001.v1.0.0]
         }
     }
 
@@ -58,14 +69,30 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"FCO">
-                description = <"Generic encounter or progress note composition.">
+                text = <"*FCO (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["id1"] = <
+                text = <"*Encounter (en)">
+                description = <"*Generic encounter or progress note composition. (en)">
+            >
+            ["at1"] = <
+                text = <"*event (en)">
+                description = <"*event (en)">
             >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Ficha completa ocupacional">
                 description = <"progress note composition. (en)Encontro genérico ou  composição da nota de progresso">
+            >
+            ["id1"] = <
+                text = <"Encontro">
+                description = <"progress note composition. (en)Encontro genérico ou  composição da nota de progresso">
+            >
+            ["at1"] = <
+                text = <"evento">
+                description = <"evento">
             >
         >
     >
@@ -1405,6 +1432,50 @@ terminology
             ["id76.0.1"] = <
                 text = <"Link de suporte de evidência clínica">
                 description = <"Links para outras informações relevantes, incluindo relatórios de patologia.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-fco_sesi_br-medication-001.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.medication.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Medication
+        items matches {
+            allow_archetype INSTRUCTION[id2] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.medication(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype ACTION[id3] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-ACTION\.medication(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication">
+                description = <"A section containing medication orders and their associated actions.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Medication(en)">
+                description = <"*A section containing medication orders and their associated actions.(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Medicamento">
+                description = <"Uma seção contendo ordens de medicação e suas ações associadas">
             >
         >
     >
