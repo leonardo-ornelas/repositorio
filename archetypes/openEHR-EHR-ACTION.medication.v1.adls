@@ -3,6 +3,17 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© 2011 NEHTA">
@@ -17,6 +28,17 @@ description
 Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
 
 There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
+        >
+        ["pt-br"] = <
+            keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Use when recording an instruction or order (use INSTRUCTION.medication). (en)">
+            purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate. (en)">
+            use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -605,6 +627,224 @@ terminology
             ["ac5"] = <
                 text = <"Medication action (synthesised)">
                 description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*Medication action (en)">
+                description = <"*Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (en)">
+            >
+            ["at2"] = <
+                text = <"*Plan medication (en)">
+                description = <"*The medication is planned but no execution has taken place. (en)">
+            >
+            ["at3"] = <
+                text = <"*Issue prescription for medication (en)">
+                description = <"*The instruction has issued as an item on a prescription. (en)">
+            >
+            ["at4"] = <
+                text = <"*Dispense medication (en)">
+                description = <"*The medication has been dispensed. (en)">
+            >
+            ["at5"] = <
+                text = <"*Commence medication (en)">
+                description = <"*The medication has been taken by the patient for the first time. (en)">
+            >
+            ["at6"] = <
+                text = <"*Review medication (en)">
+                description = <"*The medication has been reviewed. (en)">
+            >
+            ["at7"] = <
+                text = <"*Administer medication (en)">
+                description = <"*A single administration of the medication has taken place. (en)">
+            >
+            ["at8"] = <
+                text = <"*Complete medication (en)">
+                description = <"*The medication has been completed as instructed. (en)">
+            >
+            ["at9"] = <
+                text = <"*Delay medication supply (en)">
+                description = <"*The medication has not been dispensed as supply is not yet available. (en)">
+            >
+            ["at10"] = <
+                text = <"*Suspend administration (en)">
+                description = <"*The administration of the  medication has been suspended. (en)">
+            >
+            ["at11"] = <
+                text = <"*Re-issue prescription for medication (en)">
+                description = <"*The medication has been re-prescribed for an existing instruction. (en)">
+            >
+            ["at12"] = <
+                text = <"*Suspend re-issue of prescription (en)">
+                description = <"*Reissuing of this prescription is not available without some intervention. (en)">
+            >
+            ["at13"] = <
+                text = <"*Cancel medication plan (en)">
+                description = <"*The planned administration has been cancelled prior to any administration. (en)">
+            >
+            ["at14"] = <
+                text = <"*Suspend medication plan (en)">
+                description = <"*The plan to order medication has been suspended. (en)">
+            >
+            ["at15"] = <
+                text = <"*Reverse prescription for medication (en)">
+                description = <"*The prescription has been cancelled but administration or dispensing may have occurred. (en)">
+            >
+            ["at16"] = <
+                text = <"*Cease administration (en)">
+                description = <"*The administration of this medication has been ceased before anticipated completion. (en)">
+            >
+            ["at17"] = <
+                text = <"*Set medication start date (en)">
+                description = <"*The time to start this medication has been set. (en)">
+            >
+            ["at19"] = <
+                text = <"*Withhold medication (en)">
+                description = <"*The administration of a medication has been withheld and not given. (en)">
+            >
+            ["at20"] = <
+                text = <"*Medication declined (en)">
+                description = <"*An administration of the medication was refused by the subject of care (patient). (en)">
+            >
+            ["id21"] = <
+                text = <"*Medicine (en)">
+                description = <"*The medicine, vaccine or other therapeutic good which was the focus of the action. (en)">
+            >
+            ["id22"] = <
+                text = <"*Reason (en)">
+                description = <"*The reason(s) the specific action or step was carried out. Note: This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication. (en)">
+            >
+            ["id23"] = <
+                text = <"*Quantity (en)">
+                description = <"*The quantity of medicine, vaccine or other therapeutic good. (en)">
+            >
+            ["id24"] = <
+                text = <"*Ingredients and form (en)">
+                description = <"*Detailed information about the ingredient(s) including form and strength. (en)">
+            >
+            ["id25"] = <
+                text = <"*Comment (en)">
+                description = <"*A comment on the action taken. (en)">
+            >
+            ["id26"] = <
+                text = <"*Sequence number (en)">
+                description = <"*The sequence number specific to the action being recorded. (en)">
+            >
+            ["id27"] = <
+                text = <"*BatchID (en)">
+                description = <"*Assigned by the manufacturer to identify the manufacturing batch of the item. (en)">
+            >
+            ["id28"] = <
+                text = <"*Administration (en)">
+                description = <"*Details about the administration of the medicine, vaccine or other therapeutic good. (en)">
+            >
+            ["id32"] = <
+                text = <"*Dispensed to (en)">
+                description = <"*The name of the person to whom this was dispensed, if not the subject of care. (en)">
+            >
+            ["id33"] = <
+                text = <"*Remaining repeats (en)">
+                description = <"*The number of times the medicine, vaccine or other therapeutic good may still be dispensed without re-issue of a prescription or order. Note: This is the information required by the subject of care and prescriber. (en)">
+            >
+            ["id34"] = <
+                text = <"*Instructions (en)">
+                description = <"*Any instructions given to the subject of care or carer at the time of the action. (en)">
+            >
+            ["at36"] = <
+                text = <"*Return medication (en)">
+                description = <"*A dispensed medication is returned or not collected without use. (en)">
+            >
+            ["id37"] = <
+                text = <"*Brand substituted (en)">
+                description = <"*A different brand of the same medicine, vaccine or other therapeutic good was substituted for the one nominated in the order. (en)">
+            >
+            ["id38"] = <
+                text = <"*Number of times dispensed (en)">
+                description = <"*The number of times this order has been dispensed. The sum of this number minus one and the remaining repeats provides the number of repeats on the original order. (en)">
+            >
+            ["id39"] = <
+                text = <"*Claim category (en)">
+                description = <"*The category of reimbursement or subsidy sought for the item. (en)">
+            >
+            ["at40"] = <
+                text = <"*Change dose or timing (en)">
+                description = <"*A new instruction with changed dose or timing has been created that replaces this one. (en)">
+            >
+            ["id41"] = <
+                text = <"*Expiry date (en)">
+                description = <"*The expiry date of the medicine administered as documented by the manufacturer. (en)">
+            >
+            ["ac2"] = <
+                text = <"*Medicines Terminology (en)">
+                description = <"*A Medicinal Product Unit of Use (MPUU), a Medicinal Product Pack (MPP), a Trade Product Pack (TPP) or a Containered Trade Product Pack (CTPP). (en)">
+            >
+            ["at41"] = <
+                text = <"*initial (en)">
+                description = <"*initial (en)">
+            >
+            ["at42"] = <
+                text = <"*postponed (en)">
+                description = <"*postponed (en)">
+            >
+            ["at43"] = <
+                text = <"*cancelled (en)">
+                description = <"*cancelled (en)">
+            >
+            ["at44"] = <
+                text = <"*scheduled (en)">
+                description = <"*scheduled (en)">
+            >
+            ["at45"] = <
+                text = <"*active (en)">
+                description = <"*active (en)">
+            >
+            ["at46"] = <
+                text = <"*suspended (en)">
+                description = <"*suspended (en)">
+            >
+            ["at47"] = <
+                text = <"*aborted (en)">
+                description = <"*aborted (en)">
+            >
+            ["at48"] = <
+                text = <"*complete (en)">
+                description = <"*complete (en)">
+            >
+            ["at49"] = <
+                text = <"*active (en)">
+                description = <"*active (en)">
+            >
+            ["at50"] = <
+                text = <"*initial (en)">
+                description = <"*initial (en)">
+            >
+            ["at51"] = <
+                text = <"*active (en)">
+                description = <"*active (en)">
+            >
+            ["at52"] = <
+                text = <"*initial (en)">
+                description = <"*initial (en)">
+            >
+            ["at53"] = <
+                text = <"*active (en)">
+                description = <"*active (en)">
+            >
+            ["at54"] = <
+                text = <"*initial (en)">
+                description = <"*initial (en)">
+            >
+            ["ac3"] = <
+                text = <"*Medication action (synthesised) (en)">
+                description = <"*Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised) (en)">
+            >
+            ["ac4"] = <
+                text = <"*Medication action (synthesised) (en)">
+                description = <"*Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised) (en)">
+            >
+            ["ac5"] = <
+                text = <"*Medication action (synthesised) (en)">
+                description = <"*Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (synthesised) (en)">
             >
         >
     >
