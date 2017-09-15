@@ -11,8 +11,8 @@
     "rmType" : "ACTION",
     "name" : "Medication action",
     "path" : "archetypes/openEHR-EHR-ACTION.medication.v1.adls",
-    "sha" : "045b32d0755196de045bf9d40d54b125a5cca25f",
-    "languages" : [ "en" ]
+    "sha" : "01e452464303b50d32271a31cdfa6476e93788e6",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.anatomical_location.v1.0.0",
     "rmType" : "CLUSTER",
@@ -95,7 +95,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.encounter.v1.adls",
-    "sha" : "84582e94615acc997a04cb4d3ac12f9ff1816b0c",
+    "sha" : "349f0c3cbfa391480d37f9540dd317c0af41f116",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.report.v1.0.0",
@@ -364,8 +364,8 @@
     "rmType" : "COMPOSITION",
     "name" : "Family History",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.family_history.v1.adls",
-    "sha" : "13ce0ee1d9b0fcbbd2b0631ace7b78ca86c58a0f",
-    "languages" : [ "en" ]
+    "sha" : "ca97344267c5bce602cbcc38bc4536f2b590eafc",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.medication_list.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -794,7 +794,7 @@
     "rmType" : "SECTION",
     "name" : "Adhoc Heading",
     "path" : "archetypes/openEHR-EHR-SECTION.adhoc.v1.adls",
-    "sha" : "114c282ad56f29ca67a31fc0ef83e211cbc10ee7",
+    "sha" : "e4eb2bc3cfb53efd61c8b031b2e64cf16806a3f9",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "CEN-EN13606-SECTION.Antecedentes.v1.0.0",
