@@ -1,96 +1,133 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
-	openEHR-EHR-COMPOSITION.family_history.v1.0.0
+    openEHR-EHR-COMPOSITION.family_history.v1.0.0
 
 language
-	original_language = <[ISO_639-1::en]>
-
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
 description
-	lifecycle_state = <"unmanaged">
-	original_author = <
-		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"2013-06-16">
-	>
-	copyright = <"© National E-Health Transition Authority">
-	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record a persistent and managed list of all relevant family history for the subject, or statements about positive exclusion or actual absence of information about adverse reactions, that may influence clinical decision-making and care provision.">
-			use = <"Use to record a persistent and managed list of all relevant family history for the subject, or statements about positive exclusion or actual absence of information about adverse reactions, that may influence clinical decision-making and care provision.
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"family", "history", "pedigree">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"Para registrar uma lista persistente e gerenciada de todo o histórico familiar relevante para o assunto, ou declarações sobre exclusão positiva ou ausência real de informações sobre reações adversas, que podem influenciar a tomada de decisões clínicas e a provisão de cuidados">
+            use = <"Usado para gravar uma lista persistente e gerenciada de todos os antecedentes familiares relevantes para o assunto, ou declarações sobre exclusão positiva ou ausência real de informações sobre reações adversas, que podem influenciar a tomada de decisões clínicas e a provisão de cuidados.
 
-It is also possible to record family history information for individuals other than the subject of the health record - for example information about the father of an unborn fetus needs to be stored in the mother's health record until birth. In this situation the subject of care must be explicitly specified.
+Também é possível gravar informações de histórico familiar para indivíduos que não sejam o sujeito do registro de saúde - por exemplo, informações sobre o pai do feto não nascido precisam ser armazenadas no registro de saúde da mãe até o nascimento. Nessa situação, o assunto do cuidado deve ser explicitamente especificado.
 
-The intent of this COMPOSITION is for use as a persistent summary, however it has been identified that for implementation the archetype also needs additional attributes related to the context of the event. As a result, the COMPOSITION has been temporarily modified as an EVENT COMPOSITION which allows addition of an Items SLOT into which additional context-related archetypes can be included. This new requirement for context-related attributes in the Persistent COMPOSITION has been requested as a future openEHR Reference Model update.">
-			keywords = <"family", "history", "pedigree">
-			misuse = <"">
-		>
-	>
-	other_details = <
-		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
-		["MD5-CAM-1.0.1"] = <"F5E7D64BFB84798E0FB3E568C4AC7E4A">
-	>
+A intenção desta COMPOSITION é para uso como um resumo persistente, no entanto, foi identificado que, para implementação, o arquétipo também precisa de atributos adicionais relacionados ao contexto do evento. Como resultado, a COMPOSITION foi modificada temporariamente como uma EVENT COMPOSITION que permite a adição de um SLOT de itens em que os arquétipos relacionados ao contexto adicionais podem ser incluídos. Este novo requisito para atributos relacionados ao contexto na COMPOSITION persistente foi solicitado como uma atualização futura do modelo de referência OpenEHR.">
+        >
+        ["pt-br"] = <
+            keywords = <"família", "história. raça">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Para gravar uma lista persistente e gerenciada de todos os antecedentes familiares relevantes para o assunto, ou declarações sobre exclusão positiva ou ausência real de informações sobre reações adversas, que podem influenciar a tomada de decisões clínicas e a provisão de cuidados.">
+            use = <"Usado para gravar uma lista persistente e gerenciada de todos os antecedentes familiares relevantes para o assunto, ou declarações sobre exclusão positiva ou ausência real de informações sobre reações adversas, que podem influenciar a tomada de decisões clínicas e a provisão de cuidados.
+
+Também é possível gravar informações de histórico familiar para indivíduos que não sejam o sujeito do registro de saúde - por exemplo, informações sobre o pai do feto não nascido precisam ser armazenadas no registro de saúde da mãe até o nascimento. Nessa situação, o assunto do cuidado deve ser explicitamente especificado.
+
+A intenção desta COMPOSITION é para uso como um resumo persistente, no entanto, foi identificado que, para implementação, o arquétipo também precisa de atributos adicionais relacionados ao contexto do evento. Como resultado, a COMPOSITION foi modificada temporariamente como uma EVENT COMPOSITION que permite a adição de um SLOT de itens em que os arquétipos relacionados ao contexto adicionais podem ser incluídos. Este novo requisito para atributos relacionados ao contexto na COMPOSITION persistente foi solicitado como uma atualização futura do modelo de referência OpenEHR.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2013-06-16">
+    >
 
 definition
-	COMPOSITION[id1] matches {	-- Family History
-		category matches {
-			DV_CODED_TEXT[id6] matches {
-				defining_code matches {[at1]}
-			}
-		}
-		context matches {
-			EVENT_CONTEXT[id7] matches {
-				other_context matches {
-					ITEM_TREE[id4] matches {
-						items matches {
-							allow_archetype ITEM[id5] matches {	-- Items
-								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_entry_metadata(-a-zA-Z0-9_]+)*\.v1/}
-							}
-						}
-					}
-				}
-			}
-		}
-		content cardinality matches {1..*; unordered} matches {
-			allow_archetype EVALUATION[id2] matches {	-- Family History
-				include
-					archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-family_history(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.family_history(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
-			}
-			allow_archetype EVALUATION[id3] matches {	-- Exclusion/Absence
-				include
-					archetype_id/value matches {/.*/}
-			}
-		}
-	}
+    COMPOSITION[id1] matches {    -- Family History
+        category matches {
+            DV_CODED_TEXT[id6] matches {
+                defining_code matches {[at1]}
+            }
+        }
+        context matches {
+            EVENT_CONTEXT[id7] matches {
+                other_context matches {
+                    ITEM_TREE[id4] matches {
+                        items matches {
+                            allow_archetype ITEM[id5] matches { 
+                                include
+                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_entry_metadata(-a-zA-Z0-9_]+)*\.v1/}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        content cardinality matches {1..*; unordered} matches {
+            allow_archetype EVALUATION[id2] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-EVALUATION\.exclusion-family_history(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.family_history(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype EVALUATION[id3] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
 
 terminology
-	term_definitions = <
-		["en"] = <
-			["id1"] = <
-				text = <"Family History">
-				description = <"A persistent and managed list about relevant family history of the subject that may influence clinical decision-making and care provision.">
-			>
-			["id2"] = <
-				text = <"Family History">
-				description = <"Details about known family history.">
-			>
-			["id3"] = <
-				text = <"Exclusion/Absence">
-				description = <"Positive statement/s about exclusion of family history or that no information is available.">
-			>
-			["id5"] = <
-				text = <"Items">
-				description = <"Additional COMPOSITION related data.">
-			>
-			["at1"] = <
-				text = <"event">
-				description = <"event">
-			>
-		>
-	>
-	term_bindings = <
-		["openehr"] = <
-			["at1"] = <http://openehr.org/id/433>
-		>
-	>
+    term_bindings = <
+        ["openehr"] = <
+            ["at1"] = <http://openehr.org/id/433>
+        
+        >
+    >
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"Family History">
+                description = <"A persistent and managed list about relevant family history of the subject that may influence clinical decision-making and care provision.">
+            >
+            ["id2"] = <
+                text = <"Family History">
+                description = <"Details about known family history.">
+            >
+            ["id3"] = <
+                text = <"Exclusion/Absence">
+                description = <"Positive statement/s about exclusion of family history or that no information is available.">
+            >
+            ["id5"] = <
+                text = <"Items">
+                description = <"Additional COMPOSITION related data.">
+            >
+            ["at1"] = <
+                text = <"event">
+                description = <"event">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"História familiar">
+                description = <"Uma lista persistente e gerenciada sobre histórico familiar relevante do assunto que pode influenciar a tomada de decisões clínicas e a provisão de cuidados.">
+            >
+            ["id2"] = <
+                text = <"História familiar">
+                description = <"Detalhes sobre história familiar conhecida.">
+            >
+            ["id3"] = <
+                text = <"Exclusão / ausência">
+                description = <"Declaração / s positiva sobre exclusão do histórico familiar ou que nenhuma informação está disponível.">
+            >
+            ["id5"] = <
+                text = <"Itens">
+                description = <"Dados relacionados COMPOSITION adicionais.">
+            >
+            ["at1"] = <
+                text = <"*event (en)">
+                description = <"*event (en)">
+            >
+        >
+    >
+
