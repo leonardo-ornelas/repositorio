@@ -717,12 +717,12 @@ definition
                     }
                 }
             }
-            POINT_EVENT[id24] matches {
+            POINT_EVENT[id24.1] occurrences matches {0} matches {    -- Specified Day
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
                 }
             }
-            INTERVAL_EVENT[id23] matches {
+            INTERVAL_EVENT[id23.1] occurrences matches {0} matches {    -- Average Consumption Interval
                 /math_function[id37]/defining_code matches {[at3]}
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
@@ -730,17 +730,17 @@ definition
             }
         }
         /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
+            ELEMENT[id26.1] occurrences matches {0} matches {    -- Standard Drink Definition
                 value matches {
-                    DV_QUANTITY[id39] matches {
+                    DV_QUANTITY[id39.1] matches {
                         property matches {[at4]}
                         units matches {"gm"}
                     }
                 }
             }
-            ELEMENT[id27] occurrences matches {0..1} matches {
+            ELEMENT[id27.1] occurrences matches {0} matches {    -- Average Use Frequency
                 value matches {
-                    DV_QUANTITY[id40] matches {
+                    DV_QUANTITY[id40.1] matches {
                         property matches {[at1]}
                         units matches {"/d", "/wk", "/mo"}
                     }
@@ -772,6 +772,22 @@ terminology
                 text = <"Form">
                 description = <"Form of alcohol consumed.">
             >
+            ["id24.1"] = <
+                text = <"Specified Day">
+                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
+            >
+            ["id23.1"] = <
+                text = <"Average Consumption Interval">
+                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
+            >
+            ["id26.1"] = <
+                text = <"Standard Drink Definition">
+                description = <"Amount of alcohol defining a standard drink.">
+            >
+            ["id27.1"] = <
+                text = <"Average Use Frequency">
+                description = <"Frequency of 'Average Use' per time interval.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -793,6 +809,22 @@ terminology
             ["id7.1"] = <
                 text = <"Forma">
                 description = <"Forma de consumo de álcool">
+            >
+            ["id24.1"] = <
+                text = <"Dia específico">
+                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
+            >
+            ["id23.1"] = <
+                text = <"Intervalo médio consumido">
+                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
+            >
+            ["id26.1"] = <
+                text = <"Definição de dose padrão">
+                description = <"Definição da quantidade de álcool na dose padrão">
+            >
+            ["id27.1"] = <
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
         >
     >
