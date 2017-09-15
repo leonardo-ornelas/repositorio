@@ -655,8 +655,8 @@ terminology
                 description = <"A medicação foi revisada.">
             >
             ["at7"] = <
-                text = <"*Administer medication (en)">
-                description = <"*A single administration of the medication has taken place. (en)">
+                text = <"Administração do medicamento">
+                description = <"Uma única administração da medicação ocorreu.">
             >
             ["at8"] = <
                 text = <"Medicação completa">
