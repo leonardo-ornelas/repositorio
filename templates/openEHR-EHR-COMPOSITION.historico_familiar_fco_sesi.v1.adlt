@@ -113,8 +113,12 @@ definition
                             DV_TEXT[id31.0.1] 
                         }
                     }
-                    ELEMENT[id17] occurrences matches {0..1} matches {
-                        /value[id32]/defining_code matches {[ac0.2]}
+                    ELEMENT[id17.0.1] occurrences matches {0..1} matches {    -- Relationship
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac0.2]}
+                            }
+                        }
                     }
                     ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Date of Birth
                         value matches {
@@ -250,6 +254,10 @@ terminology
                 text = <"Last updated">
                 description = <"Date that thisFamily History Summary was last updated.">
             >
+            ["id17.0.1"] = <
+                text = <"Relationship">
+                description = <"The relationship of the genetic relative to the individual.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -311,6 +319,10 @@ terminology
             ["id27.0.1"] = <
                 text = <"Última atualização">
                 description = <"Data em que este Resumo do Histórico Familiar foi atualizado pela última vez.">
+            >
+            ["id17.0.1"] = <
+                text = <"Relação">
+                description = <"A relação do parente genético com o indivíduo.">
             >
         >
     >
