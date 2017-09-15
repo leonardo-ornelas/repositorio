@@ -631,8 +631,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Medication action (en)">
-                description = <"*Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician. (en)">
+                text = <"Ação da medicação">
+                description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
             >
             ["at2"] = <
                 text = <"*Plan medication (en)">
@@ -707,72 +707,72 @@ terminology
                 description = <"*An administration of the medication was refused by the subject of care (patient). (en)">
             >
             ["id21"] = <
-                text = <"*Medicine (en)">
-                description = <"*The medicine, vaccine or other therapeutic good which was the focus of the action. (en)">
+                text = <"Medicação">
+                description = <"O medicamento, vacina ou outro bem terapêutico que foi o foco da ação.">
             >
             ["id22"] = <
-                text = <"*Reason (en)">
-                description = <"*The reason(s) the specific action or step was carried out. Note: This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication. (en)">
+                text = <"Razão">
+                description = <"O (s) motivo (s) a ação ou etapa específica foi realizada. Nota: Este não é o motivo da instrução de medicação, em vez da razão específica, e. para administração ou para cessar a medicação.">
             >
             ["id23"] = <
-                text = <"*Quantity (en)">
-                description = <"*The quantity of medicine, vaccine or other therapeutic good. (en)">
+                text = <"Quantidade">
+                description = <"A quantidade de medicamento, vacina ou outro bem terapêutico.">
             >
             ["id24"] = <
-                text = <"*Ingredients and form (en)">
-                description = <"*Detailed information about the ingredient(s) including form and strength. (en)">
+                text = <"Ingredientes e forma">
+                description = <"Informações detalhadas sobre o (s) ingrediente (s), incluindo a forma e a força.">
             >
             ["id25"] = <
-                text = <"*Comment (en)">
-                description = <"*A comment on the action taken. (en)">
+                text = <"Comentário">
+                description = <"Um comentário sobre as ações tomadas.">
             >
             ["id26"] = <
-                text = <"*Sequence number (en)">
-                description = <"*The sequence number specific to the action being recorded. (en)">
+                text = <"Número de sequência">
+                description = <"O número de seqüência específico para a ação que está sendo gravada.">
             >
             ["id27"] = <
-                text = <"*BatchID (en)">
-                description = <"*Assigned by the manufacturer to identify the manufacturing batch of the item. (en)">
+                text = <"ID do lote">
+                description = <"Atribuído pelo fabricante para identificar o lote de fabricação do item.">
             >
             ["id28"] = <
-                text = <"*Administration (en)">
-                description = <"*Details about the administration of the medicine, vaccine or other therapeutic good. (en)">
+                text = <"Administração">
+                description = <"Detalhes sobre a administração do medicamento, vacina ou outro bem terapêutico.">
             >
             ["id32"] = <
-                text = <"*Dispensed to (en)">
-                description = <"*The name of the person to whom this was dispensed, if not the subject of care. (en)">
+                text = <"Dispensado para">
+                description = <"O nome da pessoa a quem isso foi dispensado, se não o assunto de cuidados.">
             >
             ["id33"] = <
-                text = <"*Remaining repeats (en)">
-                description = <"*The number of times the medicine, vaccine or other therapeutic good may still be dispensed without re-issue of a prescription or order. Note: This is the information required by the subject of care and prescriber. (en)">
+                text = <"Repetições remanescentes">
+                description = <"O número de vezes que o medicamento, vacina ou outro bem terapêutico ainda pode ser dispensado sem re-emissão de uma receita ou pedido. Nota: Esta é a informação exigida pelo assunto do atendimento e prescritor.">
             >
             ["id34"] = <
-                text = <"*Instructions (en)">
-                description = <"*Any instructions given to the subject of care or carer at the time of the action. (en)">
+                text = <"Instruções">
+                description = <"Todas as instruções dadas ao sujeito de cuidado ou cuidador no momento da ação.">
             >
             ["at36"] = <
                 text = <"*Return medication (en)">
                 description = <"*A dispensed medication is returned or not collected without use. (en)">
             >
             ["id37"] = <
-                text = <"*Brand substituted (en)">
-                description = <"*A different brand of the same medicine, vaccine or other therapeutic good was substituted for the one nominated in the order. (en)">
+                text = <"Marca substituta">
+                description = <"Uma marca diferente do mesmo medicamento, vacina ou outro bem terapêutico foi substituído pelo indicado na ordem.">
             >
             ["id38"] = <
-                text = <"*Number of times dispensed (en)">
-                description = <"*The number of times this order has been dispensed. The sum of this number minus one and the remaining repeats provides the number of repeats on the original order. (en)">
+                text = <"Número de vezes dispensado">
+                description = <"O número de vezes que este pedido foi dispensado. A soma deste número menos uma e as repetições restantes fornecem o número de repetições na ordem original.">
             >
             ["id39"] = <
-                text = <"*Claim category (en)">
-                description = <"*The category of reimbursement or subsidy sought for the item. (en)">
+                text = <"Categoria de reivindicação">
+                description = <"A categoria de reembolso ou subsídio procurado para o item.">
             >
             ["at40"] = <
                 text = <"*Change dose or timing (en)">
                 description = <"*A new instruction with changed dose or timing has been created that replaces this one. (en)">
             >
             ["id41"] = <
-                text = <"*Expiry date (en)">
-                description = <"*The expiry date of the medicine administered as documented by the manufacturer. (en)">
+                text = <"Data de validade">
+                description = <"O prazo de validade do medicamento administrado conforme documentado pelo fabricante.">
             >
             ["ac2"] = <
                 text = <"*Medicines Terminology (en)">
