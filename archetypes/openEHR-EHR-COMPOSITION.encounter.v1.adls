@@ -72,7 +72,7 @@ terminology
         ["pt-br"] = <
             ["id1"] = <
                 text = <"Encontro">
-                description = <"progress note composition. (en)Encontro genérico ou  composição da nota de progresso">
+                description = <"Encontro genérico ou  composição da nota de progresso.">
             >
             ["at1"] = <
                 text = <"evento">
