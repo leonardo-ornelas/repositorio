@@ -1079,6 +1079,7 @@ definition
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesi_fco_completa-problem_diagnosis-SESI_BR-001.v1.0.0]
             use_archetype SECTION[id0.3, openEHR-EHR-SECTION.ovl-sesi_fco_completa-medication-001.v1.0.0]
             use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-acidente_trabalho-001.v1.0.0]
+            use_archetype OBSERVATION[id0.8, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historico_intervencoes_cirurgias-001.v1.0.0]
         }
     }
 
@@ -1748,6 +1749,35 @@ terminology
             ["id6.1"] = <
                 text = <"After the last consultation you had an accident at work?">
                 description = <"After the last consultation you had an accident at work?">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historico_intervencoes_cirurgias-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.historico_intervencoes_cirurgias.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Histórico de intervenções/cirurgias
+        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Histórico de intervenções/cirurgias">
+                description = <"Histórico de intervenções/cirurgias">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"historical_interventions_experiences">
+                description = <"historical_interventions_experiences">
             >
         >
     >
