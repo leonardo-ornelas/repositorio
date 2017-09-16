@@ -199,8 +199,8 @@ terminology
                 description = <"Mass per area">
             >
             ["ac1"] = <
-                text = <"Method (synthesised)">
-                description = <"The method of entering the Body Mass Index. (synthesised)">
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
             >
         >
         ["nl"] = <
@@ -241,8 +241,8 @@ terminology
                 description = <"*Mass per area (en)">
             >
             ["ac1"] = <
-                text = <"Methode (synthesised)">
-                description = <"De methode om de Body Mass Index in te voeren. (synthesised)">
+                text = <"Método (en)">
+                description = <"O método de entrada no Índice de Massa Corporal. (en)">
             >
         >
         ["sl"] = <
@@ -283,8 +283,8 @@ terminology
                 description = <"*Mass per area (en)">
             >
             ["ac1"] = <
-                text = <"Metoda (synthesised)">
-                description = <"Metoda (synthesised)">
+                text = <"Método (en)">
+                description = <"O método de entrada no Índice de Massa Corporal. (en)">
             >
         >
         ["pt-br"] = <
@@ -325,8 +325,8 @@ terminology
                 description = <"Massa por área">
             >
             ["ac1"] = <
-                text = <"*Method (synthesised) (en)">
-                description = <"*The method of entering the Body Mass Index. (synthesised) (en)">
+                text = <"Método (en)">
+                description = <"O método de entrada no Índice de Massa Corporal. (en)">
             >
         >
     >
