@@ -40,6 +40,13 @@ definition
                                             DV_TEXT[id11] 
                                         }
                                     }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Mammography
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -95,12 +102,44 @@ terminology
                 text = <"value of the result">
                 description = <"value of the result">
             >
+            ["id12"] = <
+                text = <"Mammography">
+                description = <"Mammography">
+            >
+            ["at5"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at6"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at7"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["at8"] = <
+                text = <"ignorado">
+                description = <"ignorado">
+            >
+            ["at9"] = <
+                text = <"ignored">
+                description = <"ignored">
+            >
+            ["ac2"] = <
+                text = <"Mammography">
+                description = <"Mammography">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2", "at3", "at4">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at5", "at6", "at7", "at9">
         >
     >
 
