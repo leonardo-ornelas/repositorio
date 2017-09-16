@@ -193,8 +193,8 @@ terminology
                 description = <"Sector">
             >
             ["id5"] = <
-                text = <"*Cargo (pt-br)">
-                description = <"*Cargo (pt-br)">
+                text = <"Charge">
+                description = <"Charge">
             >
             ["id7"] = <
                 text = <"Function">
