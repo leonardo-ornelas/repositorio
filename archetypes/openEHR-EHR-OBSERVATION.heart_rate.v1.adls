@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealthGroup">
+                ["organization"] = <"iHealthGroup">
+                ["email"] = <"contato@ihealthgroup.com">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +21,9 @@ description
         ["en"] = <
             language = <[ISO_639-1::en]>
             purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -66,6 +80,24 @@ terminology
             ["at1"] = <
                 text = <"Frequency">
                 description = <"Frequency">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*heart rate (en)">
+                description = <"*heart rate (en)">
+            >
+            ["id3"] = <
+                text = <"*Any event (en)">
+                description = <"*Any event (en)">
+            >
+            ["id6"] = <
+                text = <"*Heart rate (en)">
+                description = <"*Heart rate (en)">
+            >
+            ["at1"] = <
+                text = <"*Frequency (en)">
+                description = <"*Frequency (en)">
             >
         >
     >
