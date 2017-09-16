@@ -185,28 +185,28 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*historia_ocupacional_atual_SESI_BR (pt-br)">
-                description = <"*historia_ocupacional atual (pt-br)">
+                text = <"current_occupational_history">
+                description = <"current_occupational_history">
             >
             ["id3"] = <
-                text = <"*Setor (pt-br)">
-                description = <"*Setor (pt-br)">
+                text = <"Sector">
+                description = <"Sector">
             >
             ["id5"] = <
                 text = <"*Cargo (pt-br)">
                 description = <"*Cargo (pt-br)">
             >
             ["id7"] = <
-                text = <"*Função (pt-br)">
-                description = <"*Função (pt-br)">
+                text = <"Function">
+                description = <"Function">
             >
             ["id9"] = <
-                text = <"*Alocação (pt-br)">
-                description = <"*Alocação (pt-br)">
+                text = <"Allocation">
+                description = <"Allocation">
             >
             ["id11"] = <
-                text = <"*Tempo no cargo (pt-br)">
-                description = <"*Tempo no cargo (pt-br)">
+                text = <"Time in charge">
+                description = <"Time in charge">
             >
             ["at1"] = <
                 text = <"*Anos (pt-br)">
@@ -221,16 +221,16 @@ terminology
                 description = <"*Dias (pt-br)">
             >
             ["id13"] = <
-                text = <"*Mudou de cargo desde o último exame ocupacional? (pt-br)">
-                description = <"*Mudou de cargo desde o último exame ocupacional? (pt-br)">
+                text = <"Changed your position since the last occupational examination?">
+                description = <"Changed your position since the last occupational examination?">
             >
             ["id15"] = <
-                text = <"*GAS/GHE (pt-br)">
-                description = <"*Informar o grupo homogêneo de exposição (pt-br)">
+                text = <"GAS/GHE">
+                description = <"Informar o grupo homogêneo de exposição">
             >
             ["id17"] = <
-                text = <"*Turno (pt-br)">
-                description = <"*Turno (pt-br)">
+                text = <"Shift">
+                description = <"Shift">
             >
             ["at4"] = <
                 text = <"*Diurno (pt-br)">
@@ -269,12 +269,12 @@ terminology
                 description = <"*Dias (pt-br)">
             >
             ["id20"] = <
-                text = <"*Descrição das atividades desenvolvidas (pt-br)">
-                description = <"*Descrição das atividades desenvolvidas (pt-br)">
+                text = <"Description of the activities carried out">
+                description = <"Description of the activities carried out">
             >
             ["id22"] = <
-                text = <"*Observações (pt-br)">
-                description = <"*Observações (pt-br)">
+                text = <"Comments">
+                description = <"Comments">
             >
         >
     >
