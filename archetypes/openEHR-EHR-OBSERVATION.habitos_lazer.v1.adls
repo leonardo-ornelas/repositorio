@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -103,6 +112,60 @@ terminology
             ["ac2"] = <
                 text = <"Tipo de lazer">
                 description = <"Tipo de lazer">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Leisure habits">
+                description = <"Leisure habits">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Atividades de lazer (pt-br)">
+                description = <"*Atividades de lazer (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Tipo de lazer (pt-br)">
+                description = <"*Tipo de lazer (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Esporadicamente (pt-br)">
+                description = <"*Esporadicamente (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Frequentemente (pt-br)">
+                description = <"*Frequentemente (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Atividades de lazer (pt-br)">
+                description = <"*Atividades de lazer (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Atividade manual (pt-br)">
+                description = <"*Atividade manual (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Canto (pt-br)">
+                description = <"*Canto (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Instrumento musical (pt-br)">
+                description = <"*Instrumento musical (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Outros (pt-br)">
+                description = <"*Outros (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Tipo de lazer (pt-br)">
+                description = <"*Tipo de lazer (pt-br)">
             >
         >
     >
