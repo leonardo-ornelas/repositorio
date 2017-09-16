@@ -106,16 +106,16 @@ terminology
                 description = <"History of interventions and / or surgeries">
             >
             ["at1"] = <
-                text = <"*Sim (pt-br)">
-                description = <"*Sim (pt-br)">
+                text = <"Yes">
+                description = <"Yes">
             >
             ["at2"] = <
-                text = <"*Não (pt-br)">
-                description = <"*Não (pt-br)">
+                text = <"Not">
+                description = <"Not">
             >
             ["at3"] = <
-                text = <"*Ignorado (pt-br)">
-                description = <"*Ignorado (pt-br)">
+                text = <"Ignored">
+                description = <"Ignored">
             >
             ["ac1"] = <
                 text = <"*Histórico de intervenções e ou cirurgias (pt-br)">
