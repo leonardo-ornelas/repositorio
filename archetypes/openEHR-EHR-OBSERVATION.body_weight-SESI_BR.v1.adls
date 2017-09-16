@@ -151,7 +151,7 @@ definition
                     ELEMENT[id10] occurrences matches {0..1} matches {
                         /value[id32]/defining_code matches {[ac1; at12]}
                     }
-                    ELEMENT[id29] occurrences matches {0..1} matches {
+                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Pregnant?
                         /value[id33]/value matches {True, False; false}
                     }
                 }
@@ -186,6 +186,14 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id28"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id29"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -199,6 +207,14 @@ terminology
             ["at0.1"] = <
                 text = <"Length">
                 description = <"Length">
+            >
+            ["id28"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
+            >
+            ["id29"] = <
+                text = <"Pregnant?">
+                description = <"Is the woman pregnant at time of measurement?">
             >
         >
         ["de"] = <
@@ -214,6 +230,14 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id28"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id29"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -228,6 +252,14 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id28"] = <
+                text = <"Novo elemento">
+                description = <"">
+            >
+            ["id29"] = <
+                text = <"Novo elemento">
+                description = <"">
+            >
         >
         ["ru"] = <
             ["id1.1"] = <
@@ -241,6 +273,14 @@ terminology
             ["at0.1"] = <
                 text = <"Length (en)">
                 description = <"Length (en)">
+            >
+            ["id28"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id29"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
             >
         >
     >
