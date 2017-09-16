@@ -292,45 +292,44 @@ terminology
                 description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado)">
             >
             ["ac2"] = <
-                text = <"Interest/Pleasure (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things? (synthesised)">
+                text = <"Interesse / Prazer (sintetizado)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas? (sintetizado)">
             >
             ["ac3"] = <
-                text = <"Feeling Down (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless? (synthesised)">
+                text = <"Sentimento baixo (sintetizado)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por sentir-se abatido, deprimido ou sem esperança? (sintetizado)">
             >
             ["ac4"] = <
-                text = <"Sleep Issues (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by trouble falling or staying asleep, or sleeping too much? (synthesised)">
+                text = <"Problemas de sono (sintetizados)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais? (sintetizado)">
             >
             ["ac5"] = <
-                text = <"Tired/Little Energy (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by feeling tired or having little energy? (synthesised)">
+                text = <"Cansado / pouca energia">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou ter pouca energia? (sintetizado)">
             >
             ["ac6"] = <
-                text = <"Appetite (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by poor appetite or overeating? (synthesised)">
+                text = <"Apetite">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida?">
             >
             ["ac7"] = <
-                text = <"Feeling Bad About Yourself (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down? (synthesised)">
+                text = <"Sentindo-se mal com você mesmo">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família?">
             >
             ["ac8"] = <
-                text = <"Trouble Concentrating (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television? (synthesised)">
+                text = <"Problemas de concentração">
+                description = <"Nas últimas duas semanas, com que frequência você se sentiu incomodado por problemas, falta de concentração em coisas, como ler o jornal ou assistir televisão?">
             >
             ["ac9"] = <
-                text = <"Slowness/Fidgety (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual? (synthesised)">
+                text = <"Lentidão/Agitado">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual?">
             >
             ["ac10"] = <
-                text = <"Death/Self-harm (synthesised)">
-                description = <"Over the last two weeks, how often have you been bothered 
-by thoughts that you would be better off dead or of hurting yourself in some way? (synthesised)">
+                text = <"Morte / Auto-ferimento">
+                description = <"Nas últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma?">
             >
             ["at25"] = <
-                text = <"Sem dificuldade">
-                description = <"Sem dificuldade">
+                text = <"No difficulty">
+                description = <"No difficulty">
             >
         >
         ["pt-br"] = <
@@ -427,45 +426,44 @@ by thoughts that you would be better off dead or of hurting yourself in some way
                 description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado) (en)">
             >
             ["ac2"] = <
-                text = <"*Interest/Pleasure (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things? (synthesised) (en)">
+                text = <"Interesse / Prazer (sintetizado) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas? (sintetizado) (en)">
             >
             ["ac3"] = <
-                text = <"*Feeling Down (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless? (synthesised) (en)">
+                text = <"Sentimento baixo (sintetizado) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por sentir-se abatido, deprimido ou sem esperança? (sintetizado) (en)">
             >
             ["ac4"] = <
-                text = <"*Sleep Issues (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by trouble falling or staying asleep, or sleeping too much? (synthesised) (en)">
+                text = <"Problemas de sono (sintetizados) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais? (sintetizado) (en)">
             >
             ["ac5"] = <
-                text = <"*Tired/Little Energy (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by feeling tired or having little energy? (synthesised) (en)">
+                text = <"Cansado / pouca energia (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou ter pouca energia? (sintetizado) (en)">
             >
             ["ac6"] = <
-                text = <"*Appetite (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by poor appetite or overeating? (synthesised) (en)">
+                text = <"Apetite (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida? (en)">
             >
             ["ac7"] = <
-                text = <"*Feeling Bad About Yourself (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down? (synthesised) (en)">
+                text = <"Sentindo-se mal com você mesmo (en)">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família? (en)">
             >
             ["ac8"] = <
-                text = <"*Trouble Concentrating (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television? (synthesised) (en)">
+                text = <"Problemas de concentração (en)">
+                description = <"Nas últimas duas semanas, com que frequência você se sentiu incomodado por problemas, falta de concentração em coisas, como ler o jornal ou assistir televisão? (en)">
             >
             ["ac9"] = <
-                text = <"*Slowness/Fidgety (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual? (synthesised) (en)">
+                text = <"Lentidão/Agitado (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual? (en)">
             >
             ["ac10"] = <
-                text = <"*Death/Self-harm (synthesised) (en)">
-                description = <"*Over the last two weeks, how often have you been bothered 
-by thoughts that you would be better off dead or of hurting yourself in some way? (synthesised) (en)">
+                text = <"Morte / Auto-ferimento (en)">
+                description = <"Nas últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma? (en)">
             >
             ["at25"] = <
-                text = <"Sem dificuldade (en)">
-                description = <"Sem dificuldade (en)">
+                text = <"Sem dificuldade">
+                description = <"Sem dificuldade">
             >
         >
     >
