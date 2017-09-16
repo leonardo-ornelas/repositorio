@@ -29,7 +29,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- heart rate
+    OBSERVATION[id1] occurrences matches {1} matches {    -- heart frequency
         data matches {
             HISTORY[id2] matches {
                 events matches {
@@ -37,7 +37,7 @@ definition
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
-                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Heart rate
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Heart frequency
                                         value matches {
                                             DV_QUANTITY[id7] matches {
                                                 property matches {[at1]}
@@ -66,16 +66,16 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1"] = <
-                text = <"heart rate">
-                description = <"heart rate">
+                text = <"heart frequency">
+                description = <"heart frequency">
             >
             ["id3"] = <
                 text = <"Any event">
                 description = <"Any event">
             >
             ["id6"] = <
-                text = <"Heart rate">
-                description = <"Heart rate">
+                text = <"Heart frequency">
+                description = <"Heart frequency">
             >
             ["at1"] = <
                 text = <"Frequency">
