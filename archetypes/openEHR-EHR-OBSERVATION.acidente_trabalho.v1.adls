@@ -190,16 +190,16 @@ terminology
                 description = <"After the last consultation you had an accident at work?">
             >
             ["at1"] = <
-                text = <"*não (pt-br)">
-                description = <"*não (pt-br)">
+                text = <"Not">
+                description = <"Not">
             >
             ["at2"] = <
-                text = <"*sim, sem afastamento (pt-br)">
-                description = <"*sim, sem afastamento (pt-br)">
+                text = <"Yes, without leaving">
+                description = <"Yes, without leaving">
             >
             ["at3"] = <
-                text = <"*sim. com afastamento menor que 15 dias (pt-br)">
-                description = <"*sim. com afastamento menor que 15 dias (pt-br)">
+                text = <"Yes. with remoteness less than 15 days">
+                description = <"Yes. with remoteness less than 15 days">
             >
             ["at4"] = <
                 text = <"*sim, com afastamento maior que 15 dias (pt-br)">
@@ -214,20 +214,20 @@ terminology
                 description = <"Type of accident">
             >
             ["at5"] = <
-                text = <"*Típico (pt-br)">
-                description = <"*Típico (pt-br)">
+                text = <"Typical">
+                description = <"Typical">
             >
             ["at6"] = <
-                text = <"*Trajeto (pt-br)">
-                description = <"*Trajeto (pt-br)">
+                text = <"Path">
+                description = <"Path">
             >
             ["at7"] = <
-                text = <"*Doença ocupacional (pt-br)">
-                description = <"*Doença ocupacional (pt-br)">
+                text = <"Occupational disease">
+                description = <"Occupational disease">
             >
             ["at8"] = <
-                text = <"*Doença/nexo equipada (o) (pt-br)">
-                description = <"*Doença/nexo equipada (o) (pt-br)">
+                text = <"Illness / nexus equipped">
+                description = <"Illness / nexus equipped">
             >
             ["ac2"] = <
                 text = <"*Tipo de acidente (pt-br)">
@@ -250,16 +250,16 @@ terminology
                 description = <"Removal in the last two years for more than 15 days">
             >
             ["at9"] = <
-                text = <"*Sim (pt-br)">
-                description = <"*Sim (pt-br)">
+                text = <"Yes">
+                description = <"Yes">
             >
             ["at10"] = <
-                text = <"*Não (pt-br)">
-                description = <"*Não (pt-br)">
+                text = <"Not">
+                description = <"Not">
             >
             ["at11"] = <
-                text = <"*Ignorado (pt-br)">
-                description = <"*Ignorado (pt-br)">
+                text = <"ignored">
+                description = <"ignored">
             >
             ["ac4"] = <
                 text = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
