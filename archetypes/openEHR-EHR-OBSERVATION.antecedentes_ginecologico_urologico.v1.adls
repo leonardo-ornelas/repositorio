@@ -47,6 +47,11 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- description
+                                        value matches {
+                                            DV_TEXT[id15] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -129,6 +134,10 @@ terminology
             ["ac2"] = <
                 text = <"Mammography">
                 description = <"Mammography">
+            >
+            ["id14"] = <
+                text = <"description">
+                description = <"description">
             >
         >
     >
