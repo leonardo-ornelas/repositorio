@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -74,6 +83,28 @@ terminology
             ["id10"] = <
                 text = <"CIDs relacionados com o CMAN desta empresa">
                 description = <"CIDs relacionados com o CMAN desta empresa">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Current clinical story">
+                description = <"Current clinical story">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"Absence of complaints">
+                description = <"Record complaints at the current time">
+            >
+            ["id8"] = <
+                text = <"Complaints">
+                description = <"Describe the complaints at the current time">
+            >
+            ["id10"] = <
+                text = <"CIDs related to this company's CMAN">
+                description = <"CIDs related to this company's CMAN">
             >
         >
     >
