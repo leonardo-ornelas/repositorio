@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -11,6 +17,9 @@ description
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
         >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
     >
     lifecycle_state = <"unmanaged">
 
@@ -18,7 +27,7 @@ definition
     ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- historia_ocupacional_pregressa
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
-                items existence matches {1} cardinality matches {0..*} matches {
+                items existence matches {1} cardinality matches {0..*; unordered} matches {
                     ELEMENT[id3] occurrences matches {0..1} matches {    -- Nome da empresa
                         value matches {
                             DV_TEXT[id7] 
@@ -32,7 +41,7 @@ definition
                     ELEMENT[id5] occurrences matches {0..1} matches {    -- Tempo trabalhado
                         value matches {
                             DV_DATE[id6] matches {
-                                value matches {*}
+                                value
                             }
                         }
                     }
@@ -123,6 +132,64 @@ terminology
             ["ac1"] = <
                 text = <"Acidentes/doenças ocupacionais">
                 description = <"Acidentes/doenças ocupacionais">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"History of previous occupations">
+                description = <"History of previous occupations">
+            >
+            ["id3"] = <
+                text = <"Company Name">
+                description = <"Company Name">
+            >
+            ["id4"] = <
+                text = <"Branch of activity">
+                description = <"Branch of activity">
+            >
+            ["id5"] = <
+                text = <"Time worked">
+                description = <"Time worked">
+            >
+            ["id9"] = <
+                text = <"Danger / occupational risk factors">
+                description = <"Danger / occupational risk factors">
+            >
+            ["id11"] = <
+                text = <"Use of EPI / EPC?">
+                description = <"Use of EPI / EPC?">
+            >
+            ["id13"] = <
+                text = <"EPI / EPC Description">
+                description = <"EPI / EPC Description">
+            >
+            ["id15"] = <
+                text = <"Accidents / occupational diseases">
+                description = <"Accidents / occupational diseases">
+            >
+            ["at1"] = <
+                text = <"*não (pt-br)">
+                description = <"*não (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*sim (pt-br)">
+                description = <"*sim (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*sim, sem afastamento (pt-br)">
+                description = <"*sim, sem afastamento (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*sim, com afastamento menor que 15 dias (pt-br)">
+                description = <"*sim, com afastamento menor que 15 dias (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*sim, com afastamento maior que 15 dias (pt-br)">
+                description = <"*sim, com afastamento maior que 15 dias (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Acidentes/doenças ocupacionais (pt-br)">
+                description = <"*Acidentes/doenças ocupacionais (pt-br)">
             >
         >
     >
