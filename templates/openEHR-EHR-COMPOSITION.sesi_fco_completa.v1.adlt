@@ -46,6 +46,7 @@ definition
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-003.v1.0.0]
+            use_archetype SECTION[id0.8, openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-004.v1.0.0]
         }
     }
 
@@ -1778,6 +1779,263 @@ terminology
             ["id1.1"] = <
                 text = <"historical_interventions_experiences">
                 description = <"historical_interventions_experiences">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-004.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesi_fco_completa-family_history-SESI-BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Histórico Familiar (SIC)">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-sesi_fco_completa-family_history-SESI-BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.family_history-SESI-BR.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Family History
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Summary
+                value matches {
+                    DV_TEXT[id29.0.1] 
+                }
+            }
+            CLUSTER[id4] matches {
+                items matches {
+                    ELEMENT[id5.0.1] occurrences matches {0} matches {    -- Name
+                        value matches {
+                            DV_TEXT[id30.0.1] 
+                        }
+                    }
+                    ELEMENT[id21.0.1] occurrences matches {0} matches {    -- Alias
+                        value matches {
+                            DV_TEXT[id31.0.1] 
+                        }
+                    }
+                    ELEMENT[id17.0.1] occurrences matches {1} matches {    -- Relationship
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac0.2]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Date of Birth
+                        value matches {
+                            DV_DATE_TIME[id33.0.1] 
+                        }
+                    }
+                    ELEMENT[id24.0.1] occurrences matches {0} matches {    -- Deceased?
+                        value matches {
+                            DV_BOOLEAN[id34.0.1] matches {
+                                value matches {True}
+                            }
+                        }
+                    }
+                    ELEMENT[id12.0.1] occurrences matches {0} matches {    -- Age at Death
+                        value matches {
+                            DV_DURATION[id35.0.1] 
+                        }
+                    }
+                    CLUSTER[id9.0.1] occurrences matches {0} matches {    -- Medical History
+                        items matches {
+                            ELEMENT[id13.0.1] occurrences matches {0} matches {    -- Clinical Description
+                                value matches {
+                                    DV_TEXT[id37.0.1] 
+                                }
+                            }
+                            ELEMENT[id11.0.1] occurrences matches {0} matches {    -- Age at Onset
+                                value matches {
+                                    DV_DURATION[id38.0.1] 
+                                }
+                            }
+                            ELEMENT[id15.0.1] occurrences matches {0} matches {    -- Cause of Death?
+                                value matches {
+                                    DV_BOOLEAN[id39.0.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[id25.0.1] occurrences matches {0} matches {    -- Genetic Markers
+                        items matches {
+                            ELEMENT[id23.0.1] occurrences matches {0} matches {    -- Marker Description
+                                value matches {
+                                    DV_TEXT[id40.0.1] 
+                                }
+                            }
+                            allow_archetype ITEM[id28] occurrences matches {0} matches { 
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.3.1] occurrences matches {1} matches {    -- Family illness
+                        value matches {
+                            DV_CODED_TEXT[id0.4.1] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Family History">
+                description = <"Summary information about the problems and/or diagnoses found in genetic relatives.">
+            >
+            ["id3.0.1"] = <
+                text = <"Summary">
+                description = <"Textual description about the problems, diagnoses, and genetic markers found in genetic relatives. This field may be used to capture unstructured family history information recorded in clinical records.">
+            >
+            ["id5.0.1"] = <
+                text = <"Name">
+                description = <"Name of genetic relative.">
+            >
+            ["id21.0.1"] = <
+                text = <"Alias">
+                description = <"An alias or label to uniquely identify a genetic relative, without using a personal name.">
+            >
+            ["id6.0.1"] = <
+                text = <"Date of Birth">
+                description = <"Date of birth of the genetic relative.">
+            >
+            ["id24.0.1"] = <
+                text = <"Deceased?">
+                description = <"Is the genetic relative is deceased?">
+            >
+            ["id12.0.1"] = <
+                text = <"Age at Death">
+                description = <"Age of the genetic relative at death.">
+            >
+            ["id9.0.1"] = <
+                text = <"Medical History">
+                description = <"Detail about problems or diagnoses for the genetic relative.">
+            >
+            ["id25.0.1"] = <
+                text = <"Genetic Markers">
+                description = <"Detailed genetic marker information for the genetic relative.">
+            >
+            ["id0.3.1"] = <
+                text = <"Family illness">
+                description = <"Report disease in the family">
+            >
+            ["id17.0.1"] = <
+                text = <"Relationship">
+                description = <"The relationship of the genetic relative to the individual.">
+            >
+            ["id11.0.1"] = <
+                text = <"Age at Onset">
+                description = <"Estimated or actual age of the genetic relative when the problem/diagnosis was clinically recognised.">
+            >
+            ["id15.0.1"] = <
+                text = <"Cause of Death?">
+                description = <"True if the problem/diagnosis was a direct cause of death in this genetic relative.">
+            >
+            ["id23.0.1"] = <
+                text = <"Marker Description">
+                description = <"Description of risk-related genetic markers identified in this genetic relative.">
+            >
+            ["id13.0.1"] = <
+                text = <"Clinical Description">
+                description = <"Narrative description or comments about clinical aspects of the genetic relative's problem/diagnosis.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Histórico Familiar">
+                description = <"Resumo de informações sobre os problemas e / ou diagnósticos encontrados em parentes genéticos.">
+            >
+            ["id3.0.1"] = <
+                text = <"Resumo/Sumário">
+                description = <"Descrição textual dos problemas, diagnósticos e marcadores genéticos encontrados em parentes genéticos. Este campo pode ser usado para capturar informações de história familiar não estruturada registradas em registros clínicos.">
+            >
+            ["id5.0.1"] = <
+                text = <"Nome">
+                description = <"Nome do parente genético.">
+            >
+            ["id21.0.1"] = <
+                text = <"Alias">
+                description = <"Um alias ou rótulo para identificar de maneira exclusiva um parente genético, sem usar um nome pessoal.">
+            >
+            ["id6.0.1"] = <
+                text = <"Data de nascimento">
+                description = <"Data de nascimento do parente genético.">
+            >
+            ["id24.0.1"] = <
+                text = <"Falecido?">
+                description = <"O parente genético é falecido?">
+            >
+            ["id12.0.1"] = <
+                text = <"Idade da morte">
+                description = <"Idade do parente genético na morte.">
+            >
+            ["id9.0.1"] = <
+                text = <"Histórico Médico">
+                description = <"Detalhes sobre os problemas/diagnósticos do parente genético.">
+            >
+            ["id25.0.1"] = <
+                text = <"Marcadores genéticos">
+                description = <"Informação detalhada de marcador genético para o parente genético.">
+            >
+            ["id0.3.1"] = <
+                text = <"Doença familiar">
+                description = <"Informar doença na família.">
+            >
+            ["id17.0.1"] = <
+                text = <"Grau de parentesco">
+                description = <"A relação do parente genético com o indivíduo.">
+            >
+            ["id11.0.1"] = <
+                text = <"Idade inicial">
+                description = <"Idade estimada ou real do parente genético quando o problema / diagnóstico foi clinicamente reconhecido.">
+            >
+            ["id15.0.1"] = <
+                text = <"Causa da morte?">
+                description = <"Verdadeiro se o problema / diagnóstico fosse uma causa direta de morte nesse parente genético.">
+            >
+            ["id23.0.1"] = <
+                text = <"Descrição do marcador">
+                description = <"Descrição dos marcadores genéticos relacionados ao risco identificados neste parente genético.">
+            >
+            ["id13.0.1"] = <
+                text = <"Descrição clínica">
+                description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema / diagnóstico do parente genético.">
             >
         >
     >
