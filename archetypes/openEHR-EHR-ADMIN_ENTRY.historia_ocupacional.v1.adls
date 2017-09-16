@@ -168,24 +168,24 @@ terminology
                 description = <"Accidents / occupational diseases">
             >
             ["at1"] = <
-                text = <"*não (pt-br)">
-                description = <"*não (pt-br)">
+                text = <"No">
+                description = <"No">
             >
             ["at2"] = <
-                text = <"*sim (pt-br)">
-                description = <"*sim (pt-br)">
+                text = <"yes">
+                description = <"yes">
             >
             ["at3"] = <
-                text = <"*sim, sem afastamento (pt-br)">
-                description = <"*sim, sem afastamento (pt-br)">
+                text = <"Yes, without leaving">
+                description = <"Yes, without leaving">
             >
             ["at4"] = <
-                text = <"*sim, com afastamento menor que 15 dias (pt-br)">
-                description = <"*sim, com afastamento menor que 15 dias (pt-br)">
+                text = <"yes, with leave less than 15 days">
+                description = <"yes, with leave less than 15 days">
             >
             ["at5"] = <
-                text = <"*sim, com afastamento maior que 15 dias (pt-br)">
-                description = <"*sim, com afastamento maior que 15 dias (pt-br)">
+                text = <"yes, with leave greater than 15 days">
+                description = <"yes, with leave greater than 15 days">
             >
             ["ac1"] = <
                 text = <"*Acidentes/doenças ocupacionais (pt-br)">
