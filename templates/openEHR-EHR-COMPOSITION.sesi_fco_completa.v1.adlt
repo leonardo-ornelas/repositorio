@@ -1078,6 +1078,7 @@ definition
         items matches {
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesi_fco_completa-problem_diagnosis-SESI_BR-001.v1.0.0]
             use_archetype SECTION[id0.3, openEHR-EHR-SECTION.ovl-sesi_fco_completa-medication-001.v1.0.0]
+            use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-acidente_trabalho-001.v1.0.0]
         }
     }
 
@@ -1658,6 +1659,95 @@ terminology
             ["id37.1"] = <
                 text = <"Marca substituta">
                 description = <"Uma marca diferente do mesmo medicamento, vacina ou outro bem terapêutico foi substituído pelo indicado na ordem.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-acidente_trabalho-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.acidente_trabalho.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Acidente de trabalho
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6.1] occurrences matches {0} matches {    -- Após a última consulta sofreu acidente de trabalho?
+                value matches {
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id8.1] occurrences matches {0} matches {    -- Tipo de acidente
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
+            }
+            ELEMENT[id15.1] occurrences matches {0} matches {    -- CID-10
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+            ELEMENT[id17.1] occurrences matches {0} matches {    -- Descrição do acidente
+                value matches {
+                    DV_TEXT[id18.1] 
+                }
+            }
+            ELEMENT[id19] occurrences matches {1} matches {
+                /value[id20]/defining_code matches {[ac4]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Acidente de trabalho">
+                description = <"acidente_trabalho">
+            >
+            ["id17.1"] = <
+                text = <"Descrição do acidente">
+                description = <"Descrição do acidente">
+            >
+            ["id15.1"] = <
+                text = <"CID-10">
+                description = <"CID-10">
+            >
+            ["id8.1"] = <
+                text = <"Tipo de acidente">
+                description = <"Tipo de acidente">
+            >
+            ["id6.1"] = <
+                text = <"Após a última consulta sofreu acidente de trabalho?">
+                description = <"Após a última consulta sofreu acidente de trabalho?">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"accident_work">
+                description = <"accident_work">
+            >
+            ["id17.1"] = <
+                text = <"Accident description">
+                description = <"Accident description">
+            >
+            ["id15.1"] = <
+                text = <"ICD-10">
+                description = <"ICD-10">
+            >
+            ["id8.1"] = <
+                text = <"Type of accident">
+                description = <"Type of accident">
+            >
+            ["id6.1"] = <
+                text = <"After the last consultation you had an accident at work?">
+                description = <"After the last consultation you had an accident at work?">
             >
         >
     >
