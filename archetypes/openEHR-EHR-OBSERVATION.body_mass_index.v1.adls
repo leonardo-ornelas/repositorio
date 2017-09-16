@@ -305,12 +305,12 @@ terminology
                 description = <"O método de entrada no Índice de Massa Corporal.">
             >
             ["at8"] = <
-                text = <"*Automatic entry (en)">
-                description = <"*Body Mass Index calculated and entered automatically without user intervention. (en)">
+                text = <"Entrada automática">
+                description = <"Índice de massa corporal calculado e inserido automaticamente sem a intervenção do usuário.">
             >
             ["at9"] = <
-                text = <"*Direct entry (en)">
-                description = <"*Body Mass Index calculated and entered directly by user. (en)">
+                text = <"Entrada direta">
+                description = <"Índice de massa corporal calculado e digitado diretamente pelo usuário.">
             >
             ["id11"] = <
                 text = <"Fórmula">
@@ -321,8 +321,8 @@ terminology
                 description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
             >
             ["at10"] = <
-                text = <"*Mass per area (en)">
-                description = <"*Mass per area (en)">
+                text = <"Massa por área">
+                description = <"Massa por área">
             >
             ["ac1"] = <
                 text = <"*Method (synthesised) (en)">
