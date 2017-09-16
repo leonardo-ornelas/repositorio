@@ -28,6 +28,13 @@ definition
                                             DV_TEXT[id7] 
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {1} matches {    -- Gynecological Preventive
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -55,6 +62,36 @@ terminology
                 text = <"Date of last menstruation - DUM">
                 description = <"Date of last menstruation - DUM">
             >
+            ["id8"] = <
+                text = <"Gynecological Preventive">
+                description = <"Gynecological Preventive">
+            >
+            ["at1"] = <
+                text = <"yes">
+                description = <"yes">
+            >
+            ["at2"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at3"] = <
+                text = <"ignored">
+                description = <"ignored">
+            >
+            ["at4"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["ac1"] = <
+                text = <"Gynecological Preventive">
+                description = <"Gynecological Preventive">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4">
         >
     >
 
