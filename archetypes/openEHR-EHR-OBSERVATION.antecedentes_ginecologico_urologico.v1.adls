@@ -64,6 +64,11 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- value of the result
+                                        value matches {
+                                            DV_TEXT[id21] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -178,6 +183,10 @@ terminology
             ["ac3"] = <
                 text = <"PSA">
                 description = <"PSA">
+            >
+            ["id20"] = <
+                text = <"value of the result">
+                description = <"value of the result">
             >
         >
     >
