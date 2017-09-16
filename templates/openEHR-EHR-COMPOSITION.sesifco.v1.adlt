@@ -50,6 +50,8 @@ definition
             use_archetype SECTION[id0.8, openEHR-EHR-SECTION.ovl-sesifco-adhoc-005.v1.0.0]
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-sesifco-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
+            use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0]
+            use_archetype SECTION[id0.13, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
         }
     }
 
@@ -915,19 +917,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -2083,7 +2085,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesifco-antecedentes_ginecologico_urologico-001.v1.0.0]
+        }
     }
 
 terminology
@@ -2098,6 +2102,624 @@ terminology
             ["id1.1"] = <
                 text = <"Antecedentes ginecológicos / urológicos">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-antecedentes_ginecologico_urologico-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Antecedentes_ginecologico_urologico
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id8] occurrences matches {1} matches {
+                /value[id9]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id12] occurrences matches {0..1} matches {
+                /value[id13]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id18] occurrences matches {0..1} matches {
+                /value[id19]/defining_code matches {[ac3]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Antecedentes_ginecologico_urologico">
+                description = <"Antecedentes_ginecologico_urologico">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Antecedentes ginecologico urologico">
+                description = <"Antecedentes ginecologico urologico">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-sesifco-height-001.v1.0.0]
+            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-sesifco-body_mass_index-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados antropomêtricos">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id30] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.0.1] 
+                        }
+                    }
+                    ELEMENT[id0.3.1] occurrences matches {0} matches {    -- Abdominal circumference (en)
+                        value matches {
+                            DV_QUANTITY[id0.4.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"cm"}, {|>0.0..<10000.0|}, {|>=0|}]
+                                }
+                            }
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
+                    }
+                    ELEMENT[id29.0.1] occurrences matches {0} matches {    -- *New element(en)
+                        value matches {
+                            DV_BOOLEAN[id33.0.1] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.0.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id27.0.1] occurrences matches {0} matches {    -- *Any event(en)
+                data
+                state
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
+            ["id25.0.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+            ["id10.0.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference">
+                description = <"Record abdominal circumference">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+            ["id10.0.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id29.0.1"] = <
+                text = <"Pregnant?">
+                description = <"Is the woman pregnant at time of measurement?">
+            >
+            ["id26.0.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id27.0.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
+        >
+        ["de"] = <
+            ["id1.1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
+            ["id25.0.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+            ["id10.0.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id0.3.1"] = <
+                text = <"Circunferência abdominal">
+                description = <"Circunferência abdominal">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+            ["id10.0.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+        >
+        ["ru"] = <
+            ["id1.1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
+            ["id25.0.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
+            >
+            ["id10.0.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-height-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.height.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lengte
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {1..*} matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id23] matches {
+                                property matches {[at22]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"cm"}], 
+                                    [{|0.0..250.0|}, {"in"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id19.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id24.1] 
+                        }
+                    }
+                }
+                /state[id14]/items matches {
+                    ELEMENT[id15.1] occurrences matches {0} matches {    -- Positie
+                        value matches {
+                            DV_CODED_TEXT[id25.1] matches {
+                                defining_code matches {[ac1; at17]}
+                            }
+                        }
+                    }
+                    ELEMENT[id20.1] occurrences matches {0} matches {    -- Beïnvloedende factoren
+                        value matches {
+                            DV_TEXT[id26.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id22.1] occurrences matches {0}     -- *Birth(en)
+        }
+        /protocol[id8]/items matches {
+            allow_archetype CLUSTER[id12] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lengte">
+                description = <"De lichaamslengte wordt gemeten vanaf de kruin van het hoofd tot en met de voetzool. In het engelse taaldomein wordt er verschil gemaakt tussen hoogte (height) en lengte (length), waarbij hoogte staande gemeten wordt en lengte liggend.">
+            >
+            ["id19.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de meting van de lichaamslengte.">
+            >
+            ["id15.1"] = <
+                text = <"Positie">
+                description = <"Positie tijdens de meting, van de gemeten persoon.">
+            >
+            ["id20.1"] = <
+                text = <"Beïnvloedende factoren">
+                description = <"Vermeld ieder probleem of feit die de meting van de lengte beïnvloedt, b.v. notitie maken van een amputatie.">
+            >
+            ["id22.1"] = <
+                text = <"*Birth(en)">
+                description = <"*First body length measured at, or soon after, birth.(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body Height/Length">
+                description = <"Body height, or length, is measured from crown of head to sole of foot.  Body height is measured with the individual in a standing position and body length in a recumbent position.">
+            >
+            ["id19.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of body height/length.">
+            >
+            ["id15.1"] = <
+                text = <"Position">
+                description = <"Position of individual when measured.">
+            >
+            ["id20.1"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the measurement of body height or length.">
+            >
+            ["id22.1"] = <
+                text = <"Birth">
+                description = <"First body length measured at, or soon after, birth.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Größe/Länge">
+                description = <"Größe bzw. Körperlänge wird vom Scheitel bis zur Fußsohle gemessen. Größe wird in einer stehenden Position gemessen, Körperlänge in einer liegenden Position.">
+            >
+            ["id19.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung der Körpergröße/-länge.">
+            >
+            ["id15.1"] = <
+                text = <"Position">
+                description = <"Position des Individiums bei der Messung.">
+            >
+            ["id20.1"] = <
+                text = <"Einflussfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die sich auf die Messung der Körpergröße/-länge auswirken können, z.B. einer Amputation.">
+            >
+            ["id22.1"] = <
+                text = <"*Birth(en)">
+                description = <"*First body length measured at, or soon after, birth.(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Altura / comprimento">
+                description = <"Altura ou comprimento do corpo, é medida a partir da coroa da cabeça a sola do pé.A altura é medida com o indivíduo na posição de pé e comprimento do corpo na posição decúbito dorsal.">
+            >
+            ["id19.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição da altura/comprimento do corpo.">
+            >
+            ["id15.1"] = <
+                text = <"Posição">
+                description = <"Posição individual quando medido.">
+            >
+            ["id20.1"] = <
+                text = <"Fatore de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição da altura/comprimento do corpo, por exemplo, observação de amputação.">
+            >
+            ["id22.1"] = <
+                text = <"Nascimento">
+                description = <"Primeiro comprimento do corpo medido em, ou logo após, nascimento.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História Ocupacional pregressa">
+                description = <"Descreva as 3 últimas atividades ocupacionais (SIC)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Historia ocupacional pregressa
+        /data[id2]/items matches {
+            ELEMENT[id11] occurrences matches {1} matches {
+                /value[id12]/value matches {True, False}
+            }
+            ELEMENT[id15] occurrences matches {0..1} matches {
+                /value[id16]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Historia ocupacional pregressa">
+                description = <"Histórico de ocupações anteriores">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items matches {
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Method
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id11.1] occurrences matches {0} matches {    -- Formula
+                value matches {
+                    DV_TEXT[id15.1] 
+                }
+            }
+            ELEMENT[id12.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+            ["id7.1"] = <
+                text = <"Method">
+                description = <"The method of entering the Body Mass Index.">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula used to derive the Body Mass Index.">
+            >
+            ["id12.1"] = <
+                text = <"Comment">
+                description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+            ["id7.1"] = <
+                text = <"Methode">
+                description = <"De methode om de Body Mass Index in te voeren.">
+            >
+            ["id11.1"] = <
+                text = <"Formule">
+                description = <"De formule die gebruikt wordt om de Body Mass Index te berekenen">
+            >
+            ["id12.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+            ["id7.1"] = <
+                text = <"Metoda">
+                description = <"Metoda">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula">
+            >
+            ["id12.1"] = <
+                text = <"Opombe">
+                description = <"Opombe">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
+            >
+            ["id7.1"] = <
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
+            >
+            ["id11.1"] = <
+                text = <"Fórmula">
+                description = <"Fórmula utilizada para derivar o Índice de Massa Corporal.">
+            >
+            ["id12.1"] = <
+                text = <"Comentário">
+                description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
             >
         >
     >
