@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["en"] = <
             language = <[ISO_639-1::en]>
             purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -187,6 +196,112 @@ terminology
             ["id20"] = <
                 text = <"value of the result">
                 description = <"value of the result">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Antecedentes ginecologico urologico">
+                description = <"Antecedentes ginecologico urologico">
+            >
+            ["id3"] = <
+                text = <"*Any event (en)">
+                description = <"*Any event (en)">
+            >
+            ["id6"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id8"] = <
+                text = <"Preventivo ginecologico">
+                description = <"Preventivo ginecologico">
+            >
+            ["at1"] = <
+                text = <"*yes (en)">
+                description = <"*yes (en)">
+            >
+            ["at2"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at3"] = <
+                text = <"*ignored (en)">
+                description = <"*ignored (en)">
+            >
+            ["at4"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["ac1"] = <
+                text = <"*Gynecological Preventive (en)">
+                description = <"*Gynecological Preventive (en)">
+            >
+            ["id10"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
+            >
+            ["id12"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["at5"] = <
+                text = <"*Yes (en)">
+                description = <"*Yes (en)">
+            >
+            ["at6"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at7"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["at8"] = <
+                text = <"*ignorado (en)">
+                description = <"*ignorado (en)">
+            >
+            ["at9"] = <
+                text = <"*ignored (en)">
+                description = <"*ignored (en)">
+            >
+            ["ac2"] = <
+                text = <"*Mammography (en)">
+                description = <"*Mammography (en)">
+            >
+            ["id14"] = <
+                text = <"descrição">
+                description = <"descrição">
+            >
+            ["id16"] = <
+                text = <"comentário">
+                description = <"comentário">
+            >
+            ["id18"] = <
+                text = <"Antígeno Prostático Específico (PSA)">
+                description = <"Antígeno Prostático Específico (PSA)">
+            >
+            ["at10"] = <
+                text = <"*Yes (en)">
+                description = <"*Yes (en)">
+            >
+            ["at11"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at12"] = <
+                text = <"*Ignored (en)">
+                description = <"*Ignored (en)">
+            >
+            ["at13"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["ac3"] = <
+                text = <"*PSA (en)">
+                description = <"*PSA (en)">
+            >
+            ["id20"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
             >
         >
     >
