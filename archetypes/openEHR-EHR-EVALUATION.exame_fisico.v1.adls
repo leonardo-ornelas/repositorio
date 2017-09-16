@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -97,6 +106,60 @@ terminology
             ["ac2"] = <
                 text = <"Interpretação">
                 description = <"Interpretação">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"physical exam">
+                description = <"physical exam">
+            >
+            ["id2"] = <
+                text = <"Physical exam detailing">
+                description = <"Physical exam detailing">
+            >
+            ["id3"] = <
+                text = <"Anatomical region examined">
+                description = <"Anatomical region examined">
+            >
+            ["at1"] = <
+                text = <"Head and neck">
+                description = <"Head and neck">
+            >
+            ["at2"] = <
+                text = <"members">
+                description = <"members">
+            >
+            ["at3"] = <
+                text = <"Column">
+                description = <"Column">
+            >
+            ["ac1"] = <
+                text = <"*Região anatômica (pt-br)">
+                description = <"*Região anatômica (pt-br)">
+            >
+            ["id5"] = <
+                text = <"Description">
+                description = <"Description">
+            >
+            ["id7"] = <
+                text = <"Interpretation of findings on physical examination">
+                description = <"Single word, phrase or brief description that represents the clinical significance and findings of the physical examination.">
+            >
+            ["at4"] = <
+                text = <"Changed">
+                description = <"Changed">
+            >
+            ["at5"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at6"] = <
+                text = <"Not reviewed">
+                description = <"Not reviewed">
+            >
+            ["ac2"] = <
+                text = <"*Interpretação (pt-br)">
+                description = <"*Interpretação (pt-br)">
             >
         >
     >
