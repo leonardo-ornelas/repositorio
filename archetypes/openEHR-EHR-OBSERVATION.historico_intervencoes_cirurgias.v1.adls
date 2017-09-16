@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -81,6 +90,40 @@ terminology
             ["id8"] = <
                 text = <"Intervenções e ou cirurgias">
                 description = <"Intervenções e ou cirurgias">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*historico_intervencoes_cirurgias (pt-br)">
+                description = <"*historico_intervencoes_cirurgias (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Histórico de intervenções e ou cirurgias (pt-br)">
+                description = <"*Histórico de intervenções e ou cirurgias (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Sim (pt-br)">
+                description = <"*Sim (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Não (pt-br)">
+                description = <"*Não (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Ignorado (pt-br)">
+                description = <"*Ignorado (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Histórico de intervenções e ou cirurgias (pt-br)">
+                description = <"*Histórico de intervenções e ou cirurgias (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Intervenções e ou cirurgias (pt-br)">
+                description = <"*Intervenções e ou cirurgias (pt-br)">
             >
         >
     >
