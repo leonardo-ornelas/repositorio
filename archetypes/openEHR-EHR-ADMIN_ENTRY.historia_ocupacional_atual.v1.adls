@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -172,6 +181,100 @@ terminology
             ["id22"] = <
                 text = <"Observações">
                 description = <"Observações">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*historia_ocupacional_atual_SESI_BR (pt-br)">
+                description = <"*historia_ocupacional atual (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Setor (pt-br)">
+                description = <"*Setor (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Cargo (pt-br)">
+                description = <"*Cargo (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Função (pt-br)">
+                description = <"*Função (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Alocação (pt-br)">
+                description = <"*Alocação (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Tempo no cargo (pt-br)">
+                description = <"*Tempo no cargo (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Anos (pt-br)">
+                description = <"*Anos (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Meses (pt-br)">
+                description = <"*Meses (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Dias (pt-br)">
+                description = <"*Dias (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Mudou de cargo desde o último exame ocupacional? (pt-br)">
+                description = <"*Mudou de cargo desde o último exame ocupacional? (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*GAS/GHE (pt-br)">
+                description = <"*Informar o grupo homogêneo de exposição (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Turno (pt-br)">
+                description = <"*Turno (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Diurno (pt-br)">
+                description = <"*Diurno (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Noturno (pt-br)">
+                description = <"*Noturno (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Revesamento (pt-br)">
+                description = <"*Revesamento (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Turno (pt-br)">
+                description = <"*Turno (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Revezamento (pt-br)">
+                description = <"*Revezamento (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*xxx (pt-br)">
+                description = <"*xxx (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Anos (pt-br)">
+                description = <"*Anos (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Meses (pt-br)">
+                description = <"*Meses (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Dias (pt-br)">
+                description = <"*Dias (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Descrição das atividades desenvolvidas (pt-br)">
+                description = <"*Descrição das atividades desenvolvidas (pt-br)">
+            >
+            ["id22"] = <
+                text = <"*Observações (pt-br)">
+                description = <"*Observações (pt-br)">
             >
         >
     >
