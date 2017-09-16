@@ -178,16 +178,16 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*acidente_trabalho (pt-br)">
-                description = <"*acidente_trabalho (pt-br)">
+                text = <"accident_work">
+                description = <"accident_work">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
-                text = <"*Após a última consulta sofreu acidente de trabalho? (pt-br)">
-                description = <"*Após a última consulta sofreu acidente de trabalho? (pt-br)">
+                text = <"After the last consultation you had an accident at work?">
+                description = <"After the last consultation you had an accident at work?">
             >
             ["at1"] = <
                 text = <"*não (pt-br)">
@@ -210,8 +210,8 @@ terminology
                 description = <"*Acidente de trabalho (pt-br)">
             >
             ["id8"] = <
-                text = <"*Tipo de acidente (pt-br)">
-                description = <"*Tipo de acidente (pt-br)">
+                text = <"Type of accident">
+                description = <"Type of accident">
             >
             ["at5"] = <
                 text = <"*Típico (pt-br)">
@@ -238,16 +238,16 @@ terminology
                 description = <"*ICD-1998 (pt-br)">
             >
             ["id15"] = <
-                text = <"*CID-10 (pt-br)">
-                description = <"*CID-10 (pt-br)">
+                text = <"ICD-10">
+                description = <"ICD-10">
             >
             ["id17"] = <
-                text = <"*Descrição do acidente (pt-br)">
-                description = <"*Descrição do acidente (pt-br)">
+                text = <"Accident description">
+                description = <"Accident description">
             >
             ["id19"] = <
-                text = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
-                description = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
+                text = <"Removal in the last two years for more than 15 days">
+                description = <"Removal in the last two years for more than 15 days">
             >
             ["at9"] = <
                 text = <"*Sim (pt-br)">
@@ -266,8 +266,8 @@ terminology
                 description = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
             >
             ["id22"] = <
-                text = <"*Motivo do afastamento (pt-br)">
-                description = <"*Motivo do afastamento (pt-br)">
+                text = <"Reason for removal">
+                description = <"Reason for removal">
             >
         >
     >
