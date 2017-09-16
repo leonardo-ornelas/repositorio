@@ -51,7 +51,7 @@ definition
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-sesifco-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0]
-            use_archetype SECTION[id0.13, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
+            use_archetype SECTION[id0.14, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
         }
     }
 
@@ -917,19 +917,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -2550,67 +2550,6 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"História Ocupacional pregressa">
-                description = <"Descreva as 3 últimas atividades ocupacionais (SIC)">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Historia ocupacional pregressa
-        /data[id2]/items matches {
-            ELEMENT[id11] occurrences matches {1} matches {
-                /value[id12]/value matches {True, False}
-            }
-            ELEMENT[id15] occurrences matches {0..1} matches {
-                /value[id16]/defining_code matches {[ac1]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Historia ocupacional pregressa">
-                description = <"Histórico de ocupações anteriores">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
     openEHR-EHR-OBSERVATION.ovl-sesifco-body_mass_index-001.v1.0.0
 
 specialize
@@ -2720,6 +2659,35 @@ terminology
             ["id12.1"] = <
                 text = <"Comentário">
                 description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados antropométricos ">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
