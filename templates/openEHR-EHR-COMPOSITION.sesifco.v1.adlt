@@ -3734,7 +3734,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional_atual-001.v1.0.0]
+        }
     }
 
 terminology
@@ -3749,6 +3751,42 @@ terminology
             ["id1.1"] = <
                 text = <"Histórico ocupacional atual">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional_atual-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional atual 
+        /data[id2]/items matches {
+            ELEMENT[id13] occurrences matches {1} matches {
+                /value[id14]/value matches {True, False}
+            }
+            ELEMENT[id17] occurrences matches {1} matches {
+                /value[id18]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História ocupacional atual ">
+                description = <"historia_ocupacional atual">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"current_occupational_history">
+                description = <"current_occupational_history">
             >
         >
     >
