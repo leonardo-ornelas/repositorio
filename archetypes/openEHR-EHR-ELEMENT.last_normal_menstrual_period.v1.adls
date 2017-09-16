@@ -64,8 +64,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"**Last Normal Menstrual Period (en) (en)">
-                description = <"**Record of the date of 1st day of last normal menstrual period (en) (en)">
+                text = <"Último Período menstrual normal">
+                description = <"Registro da data do 1º dia do último período menstrual normal">
             >
         >
     >
