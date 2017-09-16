@@ -49,6 +49,7 @@ definition
             use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-sesifco-adhoc-004.v1.0.0]
             use_archetype SECTION[id0.8, openEHR-EHR-SECTION.ovl-sesifco-adhoc-005.v1.0.0]
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-sesifco-adhoc-006.v1.0.0]
+            use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
         }
     }
 
@@ -1943,6 +1944,13 @@ definition
                 }
             }
         }
+        /protocol[id26]/items matches {
+            ELEMENT[id27.0.1] occurrences matches {0} matches {    -- Last updated
+                value matches {
+                    DV_TEXT[id41.0.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -2000,6 +2008,10 @@ terminology
                 text = <"Family illness">
                 description = <"Report disease in the family">
             >
+            ["id27.0.1"] = <
+                text = <"Last updated">
+                description = <"Date that thisFamily History Summary was last updated.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2053,6 +2065,39 @@ terminology
             ["id0.3.1"] = <
                 text = <"Doença familiar">
                 description = <"Informar doença na família.">
+            >
+            ["id27.0.1"] = <
+                text = <"Última atualização">
+                description = <"Data em que este Resumo do Histórico Familiar foi atualizado pela última vez.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Antecedentes ginecológicos / urológicos">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
