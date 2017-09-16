@@ -51,7 +51,6 @@ definition
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-sesifco-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0]
-            use_archetype SECTION[id0.14, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
         }
     }
 
@@ -917,19 +916,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -2156,9 +2155,12 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-001.v1.0.0]
-            use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-sesifco-height-001.v1.0.0]
-            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-sesifco-body_mass_index-001.v1.0.0]
+            use_archetype OBSERVATION[id0.12, openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.13, openEHR-EHR-OBSERVATION.ovl-sesifco-height-001.v1.0.0]
+            use_archetype OBSERVATION[id0.14, openEHR-EHR-OBSERVATION.ovl-sesifco-body_mass_index-001.v1.0.0]
+            use_archetype OBSERVATION[id0.15, openEHR-EHR-OBSERVATION.ovl-sesifco-heart_rate-001.v1.0.0]
+            use_archetype OBSERVATION[id0.16, openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-002.v1.0.0]
+            use_archetype OBSERVATION[id0.17, openEHR-EHR-OBSERVATION.ovl-sesifco-blood_pressure-001.v1.0.0]
         }
     }
 
@@ -2244,6 +2246,17 @@ definition
                 state
             }
         }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.0.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.0.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -2277,6 +2290,10 @@ terminology
                 text = <"*Any event(en)">
                 description = <"**(en)">
             >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["en"] = <
             ["id1.1.1"] = <
@@ -2306,6 +2323,10 @@ terminology
             ["id27.0.1"] = <
                 text = <"Birth">
                 description = <"First weight recorded after birth.">
+            >
+            ["id28.0.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
             >
         >
         ["de"] = <
@@ -2337,6 +2358,10 @@ terminology
                 text = <"*Any event(en)">
                 description = <"**(en)">
             >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2356,16 +2381,20 @@ terminology
                 description = <"Descrição do vestuário da pessoa na hora da pesagem.">
             >
             ["id29.0.1"] = <
-                text = <"*New element(en)">
-                description = <"**(en)">
+                text = <"Novo elemento">
+                description = <"Novo elemento">
             >
             ["id26.0.1"] = <
                 text = <"Fatores de erro">
                 description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
             >
             ["id27.0.1"] = <
-                text = <"*Any event(en)">
-                description = <"**(en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id28.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
             >
         >
         ["ru"] = <
@@ -2395,6 +2424,10 @@ terminology
             >
             ["id27.0.1"] = <
                 text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
                 description = <"**(en)">
             >
         >
@@ -2445,7 +2478,14 @@ definition
                     }
                 }
             }
-            POINT_EVENT[id22.1] occurrences matches {0}     -- *Birth(en)
+            POINT_EVENT[id22.1] occurrences matches {0} matches {    -- *Birth(en)
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/state[id14]
+                }
+            }
         }
         /protocol[id8]/items matches {
             allow_archetype CLUSTER[id12] occurrences matches {0} matches { 
@@ -2666,28 +2706,763 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0
+    openEHR-EHR-OBSERVATION.ovl-sesifco-heart_rate-001.v1.0.0
 
 specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
+    openEHR-EHR-OBSERVATION.heart_rate.v1.0.0
 
 definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- heart frequency
+        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/property matches {[at1]}
     }
 
 terminology
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
+                text = <"heart frequency">
+                description = <"heart frequency">
             >
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Dados antropométricos ">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-body_weight-SESI_BR-002.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items matches {
+                    ELEMENT[id5.0.1] occurrences matches {0} matches {    -- Gewicht
+                        value matches {
+                            DV_QUANTITY[id30.0.1] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.0.1] 
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
+                    }
+                    ELEMENT[id29.0.1] occurrences matches {0} matches {    -- *New element(en)
+                        value matches {
+                            DV_BOOLEAN[id33.0.1] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.0.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id27.0.1] occurrences matches {0} matches {    -- *Any event(en)
+                data
+                state
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.0.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.0.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Het gewicht van het individu.">
+            >
+            ["id25.0.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+            ["id10.0.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+            ["id5.0.1"] = <
+                text = <"Weight">
+                description = <"The weight of the individual.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+            ["id10.0.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id29.0.1"] = <
+                text = <"Pregnant?">
+                description = <"Is the woman pregnant at time of measurement?">
+            >
+            ["id26.0.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id27.0.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
+            ["id28.0.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
+            >
+        >
+        ["de"] = <
+            ["id1.1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Das Gewicht eines Individuums.">
+            >
+            ["id25.0.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+            ["id10.0.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Circunferência abdominal ">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id5.0.1"] = <
+                text = <"Peso">
+                description = <"O peso do indivíduo.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+            ["id10.0.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id29.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
+            >
+            ["id26.0.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id27.0.1"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id28.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
+            >
+        >
+        ["ru"] = <
+            ["id1.1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+            ["id5.0.1"] = <
+                text = <"Вес">
+                description = <"Вес пациента.">
+            >
+            ["id25.0.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
+            >
+            ["id10.0.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-blood_pressure-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Blood Pressure(en)
+        /data[id2]/events matches {
+            EVENT[id7] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id1054] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id1055] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1007.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure(en)
+                        value matches {
+                            DV_QUANTITY[id1056.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1008.1] occurrences matches {0} matches {    -- 脉压
+                        value matches {
+                            DV_QUANTITY[id1057.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id34.1] occurrences matches {0} matches {    -- 注释
+                        value matches {
+                            DV_TEXT[id1058.1] 
+                        }
+                    }
+                }
+                /state[id8]/items matches {
+                    ELEMENT[id9] occurrences matches {0..1} matches {
+                        /value[id1059]/defining_code matches {[ac1; at1002]}
+                    }
+                    allow_archetype CLUSTER[id1031] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id1044] occurrences matches {0..1} matches {
+                        /value[id1061]/defining_code matches {[ac2; at1045]}
+                    }
+                    ELEMENT[id1006] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id1062] matches {
+                                property matches {[at1056]}
+                                magnitude matches {|-90.0..90.0|}
+                                precision matches {|0|}
+                                units matches {"°"}
+                            }
+                        }
+                    }
+                }
+            }
+            INTERVAL_EVENT[id1043] occurrences matches {0..1} matches {
+                math_function matches {
+                    DV_CODED_TEXT[id1063.1] occurrences matches {0} matches {
+                        defining_code matches {[at1057]}
+                    }
+                }
+                width matches {
+                    DV_DURATION[id1064.1] occurrences matches {0} matches {
+                        value matches {PT24H}
+                    }
+                }
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/data[id4]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/state[id8]
+                }
+            }
+        }
+        /protocol[id12]/items matches {
+            ELEMENT[id14.1] occurrences matches {0} matches {    -- *Cuff size(en)
+                value matches {
+                    DV_CODED_TEXT[id1067.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id1034] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id15.1] occurrences matches {0} matches {    -- *Location of measurement(en)
+                        value matches {
+                            DV_CODED_TEXT[id1068.1] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1035.1] occurrences matches {0} matches {    -- *Specific location(en)
+                        value matches {
+                            DV_TEXT[id1069.1] 
+                        }
+                    }
+                }
+            }
+            ELEMENT[id1036.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_CODED_TEXT[id1070.1] matches {
+                        defining_code matches {[ac5]}
+                    }
+                }
+            }
+            ELEMENT[id1039.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure Formula(en)
+                value matches {
+                    DV_TEXT[id1071.1] 
+                }
+            }
+            ELEMENT[id1011.1] occurrences matches {0} matches {    -- *Diastolic endpoint(en)
+                value matches {
+                    DV_CODED_TEXT[id1072.1] matches {
+                        defining_code matches {[ac6]}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id1026] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["zh-cn"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1007.1"] = <
+                text = <"*Mean Arterial Pressure(en)">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
+            >
+            ["id1008.1"] = <
+                text = <"脉压">
+                description = <"*The variation in pressure over one contraction cycle(en)">
+            >
+            ["id34.1"] = <
+                text = <"注释">
+                description = <"有关血压值的注释">
+            >
+            ["id14.1"] = <
+                text = <"*Cuff size(en)">
+                description = <"*The size of the cuff used for blood pressure measurement(en)">
+            >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body locations where blood pressure is recorded(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Detailed description about the site of the measurement of the blood pressure(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data)(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en)">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Blutdruck">
+                description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
+            >
+            ["id1007.1"] = <
+                text = <"Mittlerer arterieller Druck">
+                description = <"Der mittlerer arterielle Druck über den gesamten Verlauf der Konktraktions- und Entspannungsphase des Herzens.">
+            >
+            ["id1008.1"] = <
+                text = <"Pulsdruck">
+                description = <"Der Abstand zwischen dem systolischen und dem diastolischen Blutdruckwert.">
+            >
+            ["id34.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar zur Blutdruckmessung.">
+            >
+            ["id14.1"] = <
+                text = <"Manschettengröße">
+                description = <"Die Größe der Manschette, die zur Blutdruckmessung benutzt wurde.">
+            >
+            ["id15.1"] = <
+                text = <"Körperstelle der Messung">
+                description = <"Gewöhnliche Körperstellen, an denen der Blutdruck gemessen wird.">
+            >
+            ["id1035.1"] = <
+                text = <"Spezifische Stelle">
+                description = <"Spezifische Details über die Körperstelle, an der der Blutdruck gemessen wird.">
+            >
+            ["id1036.1"] = <
+                text = <"Methode">
+                description = <"Methode der Messung des Blutdrucks.">
+            >
+            ["id1039.1"] = <
+                text = <"Formel für mittleren arterieller Druck">
+                description = <"Die Formel die ggf. verwendet wurde, um den mittleren arteriellen Druck zu berechnen.">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolischer Endpunkt">
+                description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Blood Pressure">
+                description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+            >
+            ["id1007.1"] = <
+                text = <"Mean Arterial Pressure">
+                description = <"The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.">
+            >
+            ["id1008.1"] = <
+                text = <"Pulse Pressure">
+                description = <"The difference between the systolic and diastolic pressure.">
+            >
+            ["id34.1"] = <
+                text = <"Comment">
+                description = <"Comment on blood pressure measurement.">
+            >
+            ["id14.1"] = <
+                text = <"Cuff size">
+                description = <"The size of the cuff used for blood pressure measurement.">
+            >
+            ["id15.1"] = <
+                text = <"Location of measurement">
+                description = <"Common body sites where blood pressure is recorded.">
+            >
+            ["id1035.1"] = <
+                text = <"Specific location">
+                description = <"Specific details about the body site where blood pressure is recorded.">
+            >
+            ["id1036.1"] = <
+                text = <"Method">
+                description = <"Method of measurement of blood pressure.">
+            >
+            ["id1039.1"] = <
+                text = <"Mean Arterial Pressure Formula">
+                description = <"Formula used to calculate the MAP (if recorded in data).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolic endpoint">
+                description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"فشار خون">
+                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+            >
+            ["id1007.1"] = <
+                text = <"میانگین فشار وریدی">
+                description = <"متوسط فشار خون وریدی که در کل دوره انقباظ و انبساط قلبی رخ می دهد">
+            >
+            ["id1008.1"] = <
+                text = <"فشار نبضی">
+                description = <"تفاوت بین فشار سیستولیک و دیاستولیک">
+            >
+            ["id34.1"] = <
+                text = <"نظر">
+                description = <"نظر در مورد اندازه گیری فشار خون">
+            >
+            ["id14.1"] = <
+                text = <"اندازه کاف">
+                description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون">
+            >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body sites where blood pressure is recorded.(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Specific details about the body site where blood pressure is recorded.(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*Method(en)">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data).(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+            >
+        >
+        ["ja"] = <
+            ["id1.1"] = <
+                text = <"血圧">
+                description = <"全身の循環での動脈圧の代用として，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+            >
+            ["id1007.1"] = <
+                text = <"平均同脈圧">
+                description = <"縮拡張サイクルのすべての過程における動脈圧の平均値.">
+            >
+            ["id1008.1"] = <
+                text = <"脈圧">
+                description = <"1回の収縮サイクルでの血圧の変動">
+            >
+            ["id34.1"] = <
+                text = <"コメント">
+                description = <"血圧測定のコメント">
+            >
+            ["id14.1"] = <
+                text = <"カフサイズ">
+                description = <"血圧測定のために使われるカフの大きさ.">
+            >
+            ["id15.1"] = <
+                text = <"計測部位">
+                description = <"血圧が一般的に測定される身体の部位">
+            >
+            ["id1035.1"] = <
+                text = <"特別な部位">
+                description = <"血圧が測定される場所についての詳細な記録.">
+            >
+            ["id1036.1"] = <
+                text = <"方法">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"平均同脈圧の計算式">
+                description = <"平均同脈圧を計算するために使われた士気（もしデータに記録されていれば）">
+            >
+            ["id1011.1"] = <
+                text = <"拡張期終末">
+                description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Bloeddruk">
+                description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+            >
+            ["id1007.1"] = <
+                text = <"Gemiddelde arteriële druk">
+                description = <"De gemiddelde bloeddruk gedurende 1 cyclus van samentrekken en ontspannen van het hart.">
+            >
+            ["id1008.1"] = <
+                text = <"Polsdruk">
+                description = <"Het verschil tussen de systolische en diastolische bloeddruk">
+            >
+            ["id34.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gemeten bloeddruk">
+            >
+            ["id14.1"] = <
+                text = <"Manchet grootte">
+                description = <"De grootte van de manchet gebruikt bij de meting">
+            >
+            ["id15.1"] = <
+                text = <"Plaats van meting">
+                description = <"Gewoonlijke lichaamslocaties waar bloeddruk gemeten wordt.">
+            >
+            ["id1035.1"] = <
+                text = <"Specifieke locatie">
+                description = <"Specifieke details over de lichaamsplaats waar de bloeddruk is gemeten.">
+            >
+            ["id1036.1"] = <
+                text = <"Methodiek">
+                description = <"De methode van de meting van de bloeddruk">
+            >
+            ["id1039.1"] = <
+                text = <"Gemiddelde arteriële druk formule">
+                description = <"Formule om de MAP (mean arterial pressure=gemiddelde arteriële druk) te berekenen (als deze data opgeslagen wordt).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolisch eindpunt">
+                description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"АД">
+                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.">
+            >
+            ["id1007.1"] = <
+                text = <"Среднего артериального давления крови">
+                description = <"Среднее артериальное давление на всём протяжении цикла сокращения и релаксации сердца.">
+            >
+            ["id1008.1"] = <
+                text = <"Пульсовое давление">
+                description = <"Разница между систолическим и диастолическим давлением.">
+            >
+            ["id34.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к измерению кровяного давления.">
+            >
+            ["id14.1"] = <
+                text = <"Размер манжеты(ru)">
+                description = <"Размер манжеты для измерения кровяного давления.">
+            >
+            ["id15.1"] = <
+                text = <"Место измерения">
+                description = <"Обобщенное место тела, в которм производится измерение артериального давления.">
+            >
+            ["id1035.1"] = <
+                text = <"Точное месторасположение">
+                description = <"Конкретные сведения о месте тела, где  регистрируется АД.">
+            >
+            ["id1036.1"] = <
+                text = <"Метод">
+                description = <"Метод измерения кровяного давления.">
+            >
+            ["id1039.1"] = <
+                text = <"Формула среднего артериального давления">
+                description = <"Формула, используемая для вычисления СрАД (если требуется записывать).">
+            >
+            ["id1011.1"] = <
+                text = <"Диастолическая конечная точка">
+                description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Pressão sanguínea">
+                description = <"A medida local da pressão arterial que é um substituto para a arterial, pressão na circulação sistêmica. Mais comumente, o uso do termo \"pressão sanguínea\" refere-se à medida da pressão da artéria braquial na parte superior do braço.">
+            >
+            ["id1007.1"] = <
+                text = <"Pressão arterial média">
+                description = <"A pressão arterial média que ocorre durante todo o curso do ciclo de contração e relaxamento cardíaco.">
+            >
+            ["id1008.1"] = <
+                text = <"Diferença de pressão">
+                description = <"A diferença entre a pressão sistólica e diastólica.">
+            >
+            ["id34.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição da pressão arterial.">
+            >
+            ["id14.1"] = <
+                text = <"Tamanho do manguito">
+                description = <"O tamanho do manguito usado para a medição da pressão arterial.">
+            >
+            ["id15.1"] = <
+                text = <"Localização da medida">
+                description = <"Regiões comuns do corpo onde a pressão arterial é registrada.">
+            >
+            ["id1035.1"] = <
+                text = <"Localização específica">
+                description = <"Detalhes específicos sobre o local do corpo onde a pressão arterial é registrada.">
+            >
+            ["id1036.1"] = <
+                text = <"Método">
+                description = <"Método de medição da pressão sanguínea.">
+            >
+            ["id1039.1"] = <
+                text = <"Fórmula de Pressão Arterial Média">
+                description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
+            >
+            ["id1011.1"] = <
+                text = <"Ponto de extremidade diastólica">
+                description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
             >
         >
     >
