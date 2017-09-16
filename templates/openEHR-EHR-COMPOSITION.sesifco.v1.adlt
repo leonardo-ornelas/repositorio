@@ -52,7 +52,10 @@ definition
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0]
             use_archetype SECTION[id0.15, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
-            use_archetype SECTION[id0.16, openEHR-EHR-SECTION.ovl-sesifco-adhoc-010.v1.0.0]
+            use_archetype SECTION[id0.18, openEHR-EHR-SECTION.ovl-sesifco-adhoc-010.v1.0.0]
+            use_archetype SECTION[id0.19, openEHR-EHR-SECTION.ovl-sesifco-adhoc-011.v1.0.0]
+            use_archetype SECTION[id0.20, openEHR-EHR-SECTION.ovl-sesifco-adhoc-012.v1.0.0]
+            use_archetype SECTION[id0.23, openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0]
         }
     }
 
@@ -1764,6 +1767,10 @@ terminology
                 text = <"Após a última consulta sofreu acidente de trabalho?">
                 description = <"Após a última consulta sofreu acidente de trabalho?">
             >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1785,6 +1792,10 @@ terminology
             ["id6.1"] = <
                 text = <"After the last consultation you had an accident at work?">
                 description = <"After the last consultation you had an accident at work?">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
         >
     >
@@ -3654,7 +3665,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
+            use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
         }
     }
 
@@ -3690,13 +3701,6 @@ definition
                     DV_TEXT[id7.1] 
                 }
             }
-            ELEMENT[id5.1] occurrences matches {0..1} matches {    -- Tempo trabalhado
-                value matches {
-                    DV_DATE_TIME[id6.1] matches {
-                        value matches {*}
-                    }
-                }
-            }
             ELEMENT[id11] occurrences matches {1} matches {
                 /value[id12]/value matches {True, False}
             }
@@ -3717,9 +3721,15 @@ terminology
                 text = <"Nome da empresa">
                 description = <"Nome da empresa">
             >
-            ["id5.1"] = <
-                text = <"Tempo trabalhado">
-                description = <"Tempo trabalhado">
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"History of previous occupations">
+                description = <"History of previous occupations">
+            >
+            ["id3.1"] = <
+                text = <"Company Name">
+                description = <"Company Name">
             >
         >
     >
@@ -3749,7 +3759,7 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Histórico ocupacional atual">
+                text = <"História ocupacional atual">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
@@ -3764,7 +3774,7 @@ specialize
     openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.0.0
 
 definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional atual 
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional atual
         /data[id2]/items matches {
             ELEMENT[id13] occurrences matches {1} matches {
                 /value[id14]/value matches {True, False}
@@ -3779,7 +3789,7 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"História ocupacional atual ">
+                text = <"História ocupacional atual">
                 description = <"historia_ocupacional atual">
             >
         >
@@ -3787,6 +3797,219 @@ terminology
             ["id1.1"] = <
                 text = <"current_occupational_history">
                 description = <"current_occupational_history">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-011.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesifco-acidente_trabalho-002.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Acidente de trabalho">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-acidente_trabalho-002.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.acidente_trabalho.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Acidente trabalho
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {1} matches {
+                /value[id9]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id19] occurrences matches {1} matches {
+                /value[id20]/defining_code matches {[ac4]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Acidente trabalho">
+                description = <"acidente_trabalho">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"accident_work">
+                description = <"accident_work">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-012.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesifco-historia_clinica_atual-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História clínica atual">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-historia_clinica_atual-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- História clinica atual
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6.1] occurrences matches {1} matches {    -- Ausência de queixas
+                value matches {
+                    DV_BOOLEAN[id7.1] matches {
+                        value matches {True, False}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História clinica atual">
+                description = <"historia_clinica_atual">
+            >
+            ["id6.1"] = <
+                text = <"Ausência de queixas">
+                description = <"Registre se queixas no momento atual">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Current clinical story">
+                description = <"Current clinical story">
+            >
+            ["id6.1"] = <
+                text = <"Absence of complaints">
+                description = <"Record complaints at the current time">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesifco-exame_fisico-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Exame físico">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-sesifco-exame_fisico-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.exame_fisico.v1.0.0
+
+definition
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Exame físico
+        /data[id2]/items matches {
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                /value[id4]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id7] occurrences matches {0..1} matches {
+                /value[id8]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Exame físico">
+                description = <"exame_fisico">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"physical exam">
+                description = <"physical exam">
             >
         >
     >
