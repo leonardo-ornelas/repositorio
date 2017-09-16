@@ -57,6 +57,13 @@ definition
                                             DV_TEXT[id17] 
                                         }
                                     }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Prostate Specific Antigen (PSA)
+                                        value matches {
+                                            DV_CODED_TEXT[id19] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -148,6 +155,30 @@ terminology
                 text = <"comment">
                 description = <"comment">
             >
+            ["id18"] = <
+                text = <"Prostate Specific Antigen (PSA)">
+                description = <"Prostate Specific Antigen (PSA)">
+            >
+            ["at10"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at11"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at12"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at13"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["ac3"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
         >
     >
     value_sets = <
@@ -158,6 +189,10 @@ terminology
         ["ac2"] = <
             id = <"ac2">
             members = <"at5", "at6", "at7", "at9">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at10", "at11", "at12", "at13">
         >
     >
 
