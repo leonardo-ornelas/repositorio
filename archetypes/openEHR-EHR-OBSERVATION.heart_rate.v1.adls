@@ -84,16 +84,16 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*heart rate (en)">
-                description = <"*heart rate (en)">
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event (en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
-                text = <"*Heart rate (en)">
-                description = <"*Heart rate (en)">
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
             >
             ["at1"] = <
                 text = <"*Frequency (en)">
