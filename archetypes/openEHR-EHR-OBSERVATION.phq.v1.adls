@@ -288,8 +288,8 @@ terminology
                 description = <"The individual found it extremely difficult to work, take care of things at home or get along with other people.">
             >
             ["ac1"] = <
-                text = <"Difficulty in Life Activities (synthesised)">
-                description = <"If you checked off any problems on this questionnaire, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people? (synthesised)">
+                text = <"Dificuldade em atividades do dia a dia (sintetizado)">
+                description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado)">
             >
             ["ac2"] = <
                 text = <"Interest/Pleasure (synthesised)">
@@ -327,6 +327,10 @@ terminology
                 text = <"Death/Self-harm (synthesised)">
                 description = <"Over the last two weeks, how often have you been bothered 
 by thoughts that you would be better off dead or of hurting yourself in some way? (synthesised)">
+            >
+            ["at25"] = <
+                text = <"Sem dificuldade">
+                description = <"Sem dificuldade">
             >
         >
         ["pt-br"] = <
@@ -419,8 +423,8 @@ by thoughts that you would be better off dead or of hurting yourself in some way
                 description = <"O indivíduo achou extremamente difícil trabalhar, cuidar das coisas em casa ou se dar bem com outras pessoas.">
             >
             ["ac1"] = <
-                text = <"*Difficulty in Life Activities (synthesised) (en)">
-                description = <"*If you checked off any problems on this questionnaire, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people? (synthesised) (en)">
+                text = <"Dificuldade em atividades do dia a dia (sintetizado) (en)">
+                description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado) (en)">
             >
             ["ac2"] = <
                 text = <"*Interest/Pleasure (synthesised) (en)">
@@ -458,6 +462,10 @@ by thoughts that you would be better off dead or of hurting yourself in some way
                 text = <"*Death/Self-harm (synthesised) (en)">
                 description = <"*Over the last two weeks, how often have you been bothered 
 by thoughts that you would be better off dead or of hurting yourself in some way? (synthesised) (en)">
+            >
+            ["at25"] = <
+                text = <"Sem dificuldade (en)">
+                description = <"Sem dificuldade (en)">
             >
         >
     >
