@@ -343,20 +343,20 @@ by thoughts that you would be better off dead or of hurting yourself in some way
                 description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas?">
             >
             ["at6"] = <
-                text = <"*Not At All (en)">
-                description = <"*The topic of the question has not affected the subject at all during the last two weeks. (en)">
+                text = <"De modo nenhum">
+                description = <"O tópico da questão não afetou o assunto durante as duas últimas semanas.">
             >
             ["at7"] = <
-                text = <"*Several Days (en)">
-                description = <"*The topic of the question has affected the subject on several days during the last two weeks. (en)">
+                text = <"Vários dias">
+                description = <"tema da questão afetou o assunto em vários dias nas últimas duas semanas.">
             >
             ["at8"] = <
-                text = <"*More Than Half the Days (en)">
-                description = <"*The topic of the question has affected the subject more than half the days during the last two weeks. (en)">
+                text = <"Mais do que metade dos dias">
+                description = <"O tema da questão afetou o assunto mais de metade dos dias nas últimas duas semanas.">
             >
             ["at9"] = <
-                text = <"*Nearly Every Day (en)">
-                description = <"*The topic of the question has affected the subject nearly every day during the last two weeks. (en)">
+                text = <"Quase todos os dias">
+                description = <"O tema da questão afetou o assunto quase todos os dias durante as últimas duas semanas.">
             >
             ["id10"] = <
                 text = <"Sentindo pra baixo">
@@ -403,20 +403,20 @@ by thoughts that you would be better off dead or of hurting yourself in some way
                 description = <"Se você verificou todos os problemas neste questionário, quão difíceis foram esses problemas para você fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas?">
             >
             ["at21"] = <
-                text = <"*No Difficulty At All (en)">
-                description = <"*The individual found no difficulty working, taking care of things at home or getting along with other people. (en)">
+                text = <"Sem dificuldade no total">
+                description = <"O indivíduo não encontrou dificuldade em trabalhar, cuidar de coisas em casa ou se dar bem com outras pessoas.">
             >
             ["at22"] = <
-                text = <"*Somewhat Difficult (en)">
-                description = <"*The individual found it somewhat difficult to work, take care of things at home or get along with other people. (en)">
+                text = <"Um pouco difícil">
+                description = <"O indivíduo achou um pouco difícil trabalhar, cuidar de coisas em casa ou se dar bem com outras pessoas.">
             >
             ["at23"] = <
-                text = <"*Very Difficult (en)">
-                description = <"*The individual found it very difficult to work, take care of things at home or get along with other people. (en)">
+                text = <"Muito Difícil">
+                description = <"O indivíduo achou muito difícil trabalhar, cuidar das coisas em casa ou se dar bem com outras pessoas.">
             >
             ["at24"] = <
-                text = <"*Extremely Difficult (en)">
-                description = <"*The individual found it extremely difficult to work, take care of things at home or get along with other people. (en)">
+                text = <"Extremamente difícil">
+                description = <"O indivíduo achou extremamente difícil trabalhar, cuidar das coisas em casa ou se dar bem com outras pessoas.">
             >
             ["ac1"] = <
                 text = <"*Difficulty in Life Activities (synthesised) (en)">
