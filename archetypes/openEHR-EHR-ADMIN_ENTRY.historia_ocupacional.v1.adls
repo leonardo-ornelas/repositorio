@@ -130,8 +130,8 @@ terminology
                 description = <"sim, com afastamento maior que 15 dias">
             >
             ["ac1"] = <
-                text = <"Acidentes/doenças ocupacionais">
-                description = <"Acidentes/doenças ocupacionais">
+                text = <"Accidents / occupational diseases">
+                description = <"Accidents / occupational diseases">
             >
         >
         ["en"] = <
@@ -188,8 +188,8 @@ terminology
                 description = <"yes, with leave greater than 15 days">
             >
             ["ac1"] = <
-                text = <"*Acidentes/doenças ocupacionais (pt-br)">
-                description = <"*Acidentes/doenças ocupacionais (pt-br)">
+                text = <"Accidents / occupational diseases (pt-br)">
+                description = <"Accidents / occupational diseases (pt-br)">
             >
         >
     >
