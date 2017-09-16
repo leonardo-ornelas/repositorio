@@ -94,16 +94,16 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*historico_intervencoes_cirurgias (pt-br)">
-                description = <"*historico_intervencoes_cirurgias (pt-br)">
+                text = <"historical_interventions_experiences">
+                description = <"historical_interventions_experiences">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
-                text = <"*Histórico de intervenções e ou cirurgias (pt-br)">
-                description = <"*Histórico de intervenções e ou cirurgias (pt-br)">
+                text = <"History of interventions and / or surgeries">
+                description = <"History of interventions and / or surgeries">
             >
             ["at1"] = <
                 text = <"*Sim (pt-br)">
@@ -122,8 +122,8 @@ terminology
                 description = <"*Histórico de intervenções e ou cirurgias (pt-br)">
             >
             ["id8"] = <
-                text = <"*Intervenções e ou cirurgias (pt-br)">
-                description = <"*Intervenções e ou cirurgias (pt-br)">
+                text = <"Interventions and or surgeries">
+                description = <"Interventions and or surgeries">
             >
         >
     >
