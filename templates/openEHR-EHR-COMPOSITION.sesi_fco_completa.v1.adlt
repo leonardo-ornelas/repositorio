@@ -1008,7 +1008,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-habitos_lazer-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-habitos_lazer-001.v1.0.0]
         }
     }
 
@@ -1054,6 +1054,12 @@ terminology
             ["id1.1"] = <
                 text = <"habitos_lazer">
                 description = <"habitos_lazer">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Leisure habits">
+                description = <"Leisure habits">
             >
         >
     >
