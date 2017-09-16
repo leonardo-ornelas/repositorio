@@ -81,16 +81,15 @@ In children and teens, BMI needs to be assessed using age-related reference char
         ["pt-br"] = <
             keywords = <"obesity", "index", "body mass", "BMI", "anorexia", "Quetelet", "malnutrition", "failure to thrive", "bulimia">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not intended to record information regarding Body Mass Index percentiles - these will be recorded in separate archetypes. (en)">
-            purpose = <"*To record the Body Mass Index (BMI) of a person.
-Body Mass Index is a calculated ratio describing how an individual's body weight relates to the weight that is regarded as normal, or desirable, for the individual's height.  (en)">
-            use = <"*Use to record the Body Mass Index of both adults and children.  
-Use to enter the Body Mass Index either manually (ie calculated and directly entered by the clinician), or automatically (ie calculation and entry is done automatically by a software application, based on separate height and weight measurements).
-Formulas: Body Mass Index is commonly calculated as weight (kg) / [height (m) squared]. This is the assumed formula unless otherwise specified in the Formula element within Protocol. Alternatively estimate Body Mass Index using pounds and inches: weight (lb) / [height (in) squared] x 703 (with ounces (oz) and fractions changed to decimal values).
-In some situations the Body Mass Index formula is corrected eg for use in amputees - this specific formula can be recorded as part of the protocol.  Alternatively the common Body Mass Index calculation can be used with amputees and similar injuries or disabilities if using adjusted height and/or adjusted weight, as appropriate, rather than actual height and weight.   See openEHR-EHR-OBSERVATION.height-adjusted and openEHR-EHR-OBSERVATION.body_weight-adjusted.
-See WHO reference re adjusting height/length for Body Mass Index in paediatrics. 
-In children and teens, BMI needs to be assessed using age-related reference charts. 
- (en)">
+            misuse = <"Não se destina a registrar informações sobre os percentuais do Índice de Massa Corporal - estes serão registrados em arquétipos separados.">
+            purpose = <"Para registrar o Índice de Massa Corporal (IMC) de uma pessoa.
+O índice de massa corporal é uma relação calculada que descreve como o peso corporal de um indivíduo se relaciona com o peso que é considerado normal ou desejável para a altura do indivíduo.">
+            use = <"Use para registrar o índice de massa corporal de adultos e crianças.
+Utilize para inserir o índice de massa corporal de forma manual (ou seja, calculado e digitado diretamente pelo clínico), ou automaticamente (ou seja, o cálculo e a entrada são feitos automaticamente por uma aplicação de software, com base em medidas separadas de altura e peso).
+Fórmulas: O índice de massa corporal é comumente calculado como peso (kg) / [altura (m) quadrado]. Esta é a fórmula assumida, a menos que especificado de outra forma no elemento Fórmula dentro do protocolo. Alternativamente, avalie o índice de massa corporal usando libras e polegadas: peso (lb) / [altura (dentro) quadrado] x 703 (com onças (oz) e as frações são alteradas para valores decimais).
+Em algumas situações, a fórmula do índice de massa corporal é corrigida, por exemplo, para uso em amputados - esta fórmula específica pode ser registrada como parte do protocolo. Alternativamente, o cálculo do Índice de Massa Corporal comum pode ser usado com amputados e lesões ou deficiências semelhantes, se estiver usando altura ajustada e / ou peso ajustado, conforme apropriado, em vez de altura real e peso. Veja openEHR-EHR-OBSERVATION.height-ajustado e openEHR-EHR-OBSERVATION.body_ ajustado ao peso.
+Consulte a referência da OMS para ajustar a altura / comprimento para o índice de massa corporal em pediatria.
+Em crianças e adolescentes, o IMC precisa ser avaliado usando gráficos de referência relacionados à idade.">
         >
     >
     lifecycle_state = <"unmanaged">
