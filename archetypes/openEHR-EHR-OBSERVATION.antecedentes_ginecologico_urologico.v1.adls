@@ -52,6 +52,11 @@ definition
                                             DV_TEXT[id15] 
                                         }
                                     }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- comment
+                                        value matches {
+                                            DV_TEXT[id17] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -138,6 +143,10 @@ terminology
             ["id14"] = <
                 text = <"description">
                 description = <"description">
+            >
+            ["id16"] = <
+                text = <"comment">
+                description = <"comment">
             >
         >
     >
