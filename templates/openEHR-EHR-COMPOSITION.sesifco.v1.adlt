@@ -51,6 +51,8 @@ definition
             use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-sesifco-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-sesifco-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.11, openEHR-EHR-SECTION.ovl-sesifco-adhoc-008.v1.0.0]
+            use_archetype SECTION[id0.15, openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0]
+            use_archetype SECTION[id0.16, openEHR-EHR-SECTION.ovl-sesifco-adhoc-010.v1.0.0]
         }
     }
 
@@ -2193,13 +2195,12 @@ definition
         /data[id3]/events matches {
             EVENT[id4] matches {
                 /data[id2]/items matches {
-                    ELEMENT[id5] matches {
+                    ELEMENT[id5.0.1] occurrences matches {1} matches {    -- Gewicht
                         value matches {
-                            DV_QUANTITY[id30] matches {
-                                property matches {[at19]}
-                                [magnitude, units] matches {
-                                    [{|0.0..1000.0|}, {"kg"}], 
-                                    [{|0.0..2000.0|}, {"lb"}]
+                            DV_QUANTITY[id30.0.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|0.0..1000.0|}, {|>=0|}], 
+                                    [{"lb"}, {|0.0..2000.0|}, {|>=0|}]
                                 }
                             }
                         }
@@ -2294,6 +2295,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Het gewicht van het individu.">
+            >
         >
         ["en"] = <
             ["id1.1.1"] = <
@@ -2327,6 +2332,10 @@ terminology
             ["id28.0.1"] = <
                 text = <"Weight Estimation Formula">
                 description = <"Formula used to calculate the estimated weight.">
+            >
+            ["id5.0.1"] = <
+                text = <"Weight">
+                description = <"The weight of the individual.">
             >
         >
         ["de"] = <
@@ -2362,6 +2371,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Das Gewicht eines Individuums.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2395,6 +2408,10 @@ terminology
             ["id28.0.1"] = <
                 text = <"Novo elemento">
                 description = <"Novo elemento">
+            >
+            ["id5.0.1"] = <
+                text = <"Peso">
+                description = <"O peso do indivíduo.">
             >
         >
         ["ru"] = <
@@ -2430,6 +2447,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id5.0.1"] = <
+                text = <"Вес">
+                description = <"Вес пациента.">
+            >
         >
     >
 
@@ -2446,13 +2467,12 @@ definition
         /data[id2]/events matches {
             EVENT[id3] occurrences matches {1..*} matches {
                 /data[id4]/items matches {
-                    ELEMENT[id5] matches {
+                    ELEMENT[id5.1] occurrences matches {1} matches {    -- Lengte
                         value matches {
-                            DV_QUANTITY[id23] matches {
-                                property matches {[at22]}
-                                [magnitude, units] matches {
-                                    [{|0.0..1000.0|}, {"cm"}], 
-                                    [{|0.0..250.0|}, {"in"}]
+                            DV_QUANTITY[id23.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"cm"}, {|0.0..1000.0|}, {|>=0|}], 
+                                    [{"in"}, {|0.0..250.0|}, {|>=0|}]
                                 }
                             }
                         }
@@ -2518,6 +2538,10 @@ terminology
                 text = <"*Birth(en)">
                 description = <"*First body length measured at, or soon after, birth.(en)">
             >
+            ["id5.1"] = <
+                text = <"Lengte">
+                description = <"De lichaamslengte vanaf de kruin van het hoofd tot en met de voetzool.">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -2539,6 +2563,10 @@ terminology
             ["id22.1"] = <
                 text = <"Birth">
                 description = <"First body length measured at, or soon after, birth.">
+            >
+            ["id5.1"] = <
+                text = <"Height/Length">
+                description = <"The length of the body from crown of head to sole of foot.">
             >
         >
         ["de"] = <
@@ -2562,6 +2590,10 @@ terminology
                 text = <"*Birth(en)">
                 description = <"*First body length measured at, or soon after, birth.(en)">
             >
+            ["id5.1"] = <
+                text = <"Größe/Länge">
+                description = <"Die Länge des Körpers von Scheitel bis Sohle.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -2584,6 +2616,10 @@ terminology
                 text = <"Nascimento">
                 description = <"Primeiro comprimento do corpo medido em, ou logo após, nascimento.">
             >
+            ["id5.1"] = <
+                text = <"Altura / comprimento">
+                description = <"O comprimento do corpo da coroa da cabeça a sola do pé.">
+            >
         >
     >
 
@@ -2597,12 +2633,15 @@ specialize
 
 definition
     OBSERVATION[id1.1] matches {    -- Body mass index
-        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
-            DV_QUANTITY[id13] matches {
-                property matches {[at10]}
-                [magnitude, units, precision] matches {
-                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
-                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.1] occurrences matches {1} matches {    -- Body Mass Index
+                value matches {
+                    DV_QUANTITY[id13.1] matches {
+                        [units, magnitude, precision] matches {
+                            [{"kg/m2"}, {|0.0..<1000.0|}, {|>=0|}], 
+                            [{"lb/in2"}, {|0.0..<1000.0|}, {|>=0|}]
+                        }
+                    }
                 }
             }
         }
@@ -2646,6 +2685,10 @@ terminology
                 text = <"Comment">
                 description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
             >
+            ["id5.1"] = <
+                text = <"Body Mass Index">
+                description = <"Index describing ratio of weight to height.">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
@@ -2663,6 +2706,10 @@ terminology
             ["id12.1"] = <
                 text = <"Opmerking">
                 description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
+            >
+            ["id5.1"] = <
+                text = <"Body Mass Index">
+                description = <"Index om ratio gewicht - lengte te beschrijven">
             >
         >
         ["sl"] = <
@@ -2682,6 +2729,10 @@ terminology
                 text = <"Opombe">
                 description = <"Opombe">
             >
+            ["id5.1"] = <
+                text = <"ITM">
+                description = <"Indeks telesne mase">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -2700,6 +2751,10 @@ terminology
                 text = <"Comentário">
                 description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
             >
+            ["id5.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
+            >
         >
     >
 
@@ -2713,21 +2768,51 @@ specialize
 
 definition
     OBSERVATION[id1.1] occurrences matches {1} matches {    -- heart frequency
-        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/property matches {[at1]}
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6.1] occurrences matches {0..1} matches {    -- Heart frequency
+                value matches {
+                    DV_QUANTITY[id7.1] matches {
+                        property matches {[at0.1]}
+                    }
+                }
+            }
+        }
     }
 
 terminology
+    term_bindings = <
+        ["openehr"] = <
+            ["at0.1"] = <http://openehr.org/id/128>
+        
+        >
+    >
     term_definitions = <
         ["en"] = <
             ["id1.1"] = <
                 text = <"heart frequency">
                 description = <"heart frequency">
             >
+            ["id6.1"] = <
+                text = <"Heart frequency">
+                description = <"Heart frequency">
+            >
+            ["at0.1"] = <
+                text = <"Time">
+                description = <"Time">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Frequência cardíaca">
                 description = <"Frequência cardíaca">
+            >
+            ["id6.1"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+            ["at0.1"] = <
+                text = <"Time (en)">
+                description = <"Time (en)">
             >
         >
     >
@@ -2759,6 +2844,15 @@ definition
                     ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Opmerking
                         value matches {
                             DV_TEXT[id31.0.1] 
+                        }
+                    }
+                    ELEMENT[id0.3.1] occurrences matches {1} matches {    -- Abdominal circumference (en)
+                        value matches {
+                            DV_QUANTITY[id0.4.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"cm"}, {|>0.0..<10000.0|}, {|>=0|}]
+                                }
+                            }
                         }
                     }
                 }
@@ -2837,6 +2931,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
         >
         ["en"] = <
             ["id1.1.1"] = <
@@ -2870,6 +2968,10 @@ terminology
             ["id28.0.1"] = <
                 text = <"Weight Estimation Formula">
                 description = <"Formula used to calculate the estimated weight.">
+            >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference">
+                description = <"Record abdominal circumference">
             >
         >
         ["de"] = <
@@ -2905,6 +3007,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2938,6 +3044,10 @@ terminology
             ["id28.0.1"] = <
                 text = <"Novo elemento">
                 description = <"Novo elemento">
+            >
+            ["id0.3.1"] = <
+                text = <"Circunferência abdominal">
+                description = <"Circunferência abdominal">
             >
         >
         ["ru"] = <
@@ -2973,6 +3083,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id0.3.1"] = <
+                text = <"Abdominal circumference (en)">
+                description = <"Record abdominal circumference (en)">
+            >
         >
     >
 
@@ -2989,23 +3103,21 @@ definition
         /data[id2]/events matches {
             EVENT[id7] matches {
                 /data[id4]/items matches {
-                    ELEMENT[id5] occurrences matches {0..1} matches {
+                    ELEMENT[id5.1] occurrences matches {1} matches {    -- 收缩压
                         value matches {
-                            DV_QUANTITY[id1054] matches {
-                                property matches {[at1055]}
-                                magnitude matches {|0.0..<1000.0|}
-                                precision matches {|0|}
-                                units matches {"mm[Hg]"}
+                            DV_QUANTITY[id1054.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"mm[Hg]"}, {|0.0..<1000.0|}, {|>=0|}]
+                                }
                             }
                         }
                     }
-                    ELEMENT[id6] occurrences matches {0..1} matches {
+                    ELEMENT[id6.1] occurrences matches {1} matches {    -- 舒张压
                         value matches {
-                            DV_QUANTITY[id1055] matches {
-                                property matches {[at1055]}
-                                magnitude matches {|0.0..<1000.0|}
-                                precision matches {|0|}
-                                units matches {"mm[Hg]"}
+                            DV_QUANTITY[id1055.1] matches {
+                                [units, magnitude, precision] matches {
+                                    [{"mm[Hg]"}, {|0.0..<1000.0|}, {|>=0|}]
+                                }
                             }
                         }
                     }
@@ -3170,6 +3282,14 @@ terminology
                 text = <"*Diastolic endpoint(en)">
                 description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en)">
             >
+            ["id6.1"] = <
+                text = <"舒张压">
+                description = <"一个血液循环周期中，系统性动脉血压最低值。 舒张期血压">
+            >
+            ["id5.1"] = <
+                text = <"收缩压">
+                description = <"一个血液循环周期中，系统性动脉血压高峰值。 收缩期血压">
+            >
         >
         ["de"] = <
             ["id1.1"] = <
@@ -3211,6 +3331,14 @@ terminology
             ["id1011.1"] = <
                 text = <"Diastolischer Endpunkt">
                 description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen.">
+            >
+            ["id6.1"] = <
+                text = <"Diastolisch">
+                description = <"Der minimale systemische arterielle Blutdruck eines Zyklus - gemessen in der diastolischen oder Entspannungsphase des Herzens.">
+            >
+            ["id5.1"] = <
+                text = <"Systolisch">
+                description = <"Der höchste arterielle Blutdruck eines Zyklus - gemessen in der systolischen oder Kontraktionsphase des Herzens.">
             >
         >
         ["en"] = <
@@ -3254,6 +3382,14 @@ terminology
                 text = <"Diastolic endpoint">
                 description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
             >
+            ["id6.1"] = <
+                text = <"Diastolic">
+                description = <"Minimum systemic arterial blood pressure - measured in the diastolic or relaxation phase of the heart cycle.">
+            >
+            ["id5.1"] = <
+                text = <"Systolic">
+                description = <"Peak systemic arterial blood pressure  - measured in systolic or contraction phase of the heart cycle.">
+            >
         >
         ["fa"] = <
             ["id1.1"] = <
@@ -3295,6 +3431,14 @@ terminology
             ["id1011.1"] = <
                 text = <"*Diastolic endpoint(en)">
                 description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+            >
+            ["id6.1"] = <
+                text = <"دیاستولیک">
+                description = <"حداقل فشار خون وریدی کلی که در دیاستولیک یا فاز انبساطی چرخه گردش خون اندازه گیری می شود">
+            >
+            ["id5.1"] = <
+                text = <"سیستولیک">
+                description = <"اوج فشار خون وریدی کلی که در سیستولیک یا فاز انقباضی چرخه گردش خون اندازه گیری می شود">
             >
         >
         ["ja"] = <
@@ -3338,6 +3482,14 @@ terminology
                 text = <"拡張期終末">
                 description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録.">
             >
+            ["id6.1"] = <
+                text = <"拡張期">
+                description = <"1つ以上の脈の間で最低値を示す全身の動脈圧 - 心機図の拡張期で測定される">
+            >
+            ["id5.1"] = <
+                text = <"収縮期">
+                description = <"1つ以上の脈の間で最高値を示す全身の動脈圧 - 心機図の収縮期で測定される">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
@@ -3379,6 +3531,14 @@ terminology
             ["id1011.1"] = <
                 text = <"Diastolisch eindpunt">
                 description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode.">
+            >
+            ["id6.1"] = <
+                text = <"Diastole">
+                description = <"Laagste systemische arteriele bloeddruk -  gemeten in de diastolische of ontspanningsfase van de hartslag">
+            >
+            ["id5.1"] = <
+                text = <"Systole">
+                description = <"De maximale (piek) systemische arteriele bloeddruk - gemeten in de systolische of samentrekkingsfase van de hartslag">
             >
         >
         ["ru"] = <
@@ -3422,6 +3582,14 @@ terminology
                 text = <"Диастолическая конечная точка">
                 description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации.">
             >
+            ["id6.1"] = <
+                text = <"Диастолическое">
+                description = <"Минимальное системное артериальное давление - измеряется в диастолу или в фазу релаксации сердца.">
+            >
+            ["id5.1"] = <
+                text = <"Систолическое">
+                description = <"Пик системного артериального давления - измеряется в систолиу или в фазу сокращения сердца">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -3463,6 +3631,113 @@ terminology
             ["id1011.1"] = <
                 text = <"Ponto de extremidade diastólica">
                 description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
+            >
+            ["id6.1"] = <
+                text = <"Diastólica">
+                description = <"Pressão arterial sistêmica arterial mínima - medida na fase diastólica ou de relaxamento do ciclo cardíaco.">
+            >
+            ["id5.1"] = <
+                text = <"Sistólica">
+                description = <"Pressão arterial sistêmica máxima - medida na fase sistólica ou de contração do ciclo cardíaco.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-009.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História ocupacional pregressa">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional pregressa
+        /data[id2]/items matches {
+            ELEMENT[id3.1] occurrences matches {1} matches {    -- Nome da empresa
+                value matches {
+                    DV_TEXT[id7.1] 
+                }
+            }
+            ELEMENT[id11] occurrences matches {1} matches {
+                /value[id12]/value matches {True, False}
+            }
+            ELEMENT[id15] occurrences matches {0..1} matches {
+                /value[id16]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História ocupacional pregressa">
+                description = <"Histórico de ocupações anteriores">
+            >
+            ["id3.1"] = <
+                text = <"Nome da empresa">
+                description = <"Nome da empresa">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-010.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Histórico ocupacional atual">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
