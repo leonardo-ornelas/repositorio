@@ -221,8 +221,8 @@ terminology
                 description = <"A medição do peso corporal de um indivíduo.">
             >
             ["id0.3"] = <
-                text = <"Abdominal circumference (en)">
-                description = <"Record abdominal circumference (en)">
+                text = <"Circunferência abdominal">
+                description = <"Circunferência abdominal">
             >
             ["at0.1"] = <
                 text = <"Length (en)">
