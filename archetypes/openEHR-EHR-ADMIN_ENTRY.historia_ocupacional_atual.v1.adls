@@ -147,8 +147,8 @@ terminology
                 description = <"Noturno">
             >
             ["at6"] = <
-                text = <"Revesamento">
-                description = <"Revesamento">
+                text = <"Revezamento">
+                description = <"Revezamento">
             >
             ["ac1"] = <
                 text = <"Turno">
@@ -209,16 +209,16 @@ terminology
                 description = <"Time in charge">
             >
             ["at1"] = <
-                text = <"*Anos (pt-br)">
-                description = <"*Anos (pt-br)">
+                text = <"Years">
+                description = <"Years">
             >
             ["at2"] = <
-                text = <"*Meses (pt-br)">
-                description = <"*Meses (pt-br)">
+                text = <"Months">
+                description = <"Months">
             >
             ["at3"] = <
-                text = <"*Dias (pt-br)">
-                description = <"*Dias (pt-br)">
+                text = <"Days">
+                description = <"Days">
             >
             ["id13"] = <
                 text = <"Changed your position since the last occupational examination?">
@@ -233,16 +233,16 @@ terminology
                 description = <"Shift">
             >
             ["at4"] = <
-                text = <"*Diurno (pt-br)">
-                description = <"*Diurno (pt-br)">
+                text = <"Daytime">
+                description = <"Daytime">
             >
             ["at5"] = <
                 text = <"*Noturno (pt-br)">
                 description = <"*Noturno (pt-br)">
             >
             ["at6"] = <
-                text = <"*Revesamento (pt-br)">
-                description = <"*Revesamento (pt-br)">
+                text = <"Relay">
+                description = <"Relay">
             >
             ["ac1"] = <
                 text = <"*Turno (pt-br)">
@@ -253,20 +253,20 @@ terminology
                 description = <"*Revezamento (pt-br)">
             >
             ["at8"] = <
-                text = <"*xxx (pt-br)">
-                description = <"*xxx (pt-br)">
+                text = <"xxx">
+                description = <"xxx">
             >
             ["at9"] = <
-                text = <"*Anos (pt-br)">
-                description = <"*Anos (pt-br)">
+                text = <"Years">
+                description = <"Years">
             >
             ["at10"] = <
-                text = <"*Meses (pt-br)">
-                description = <"*Meses (pt-br)">
+                text = <"Months">
+                description = <"Months">
             >
             ["at11"] = <
-                text = <"*Dias (pt-br)">
-                description = <"*Dias (pt-br)">
+                text = <"Days">
+                description = <"Days">
             >
             ["id20"] = <
                 text = <"Description of the activities carried out">
