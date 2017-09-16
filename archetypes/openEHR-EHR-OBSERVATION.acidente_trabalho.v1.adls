@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -165,6 +174,100 @@ terminology
             ["id22"] = <
                 text = <"Motivo do afastamento">
                 description = <"Motivo do afastamento">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*acidente_trabalho (pt-br)">
+                description = <"*acidente_trabalho (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Após a última consulta sofreu acidente de trabalho? (pt-br)">
+                description = <"*Após a última consulta sofreu acidente de trabalho? (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*não (pt-br)">
+                description = <"*não (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*sim, sem afastamento (pt-br)">
+                description = <"*sim, sem afastamento (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*sim. com afastamento menor que 15 dias (pt-br)">
+                description = <"*sim. com afastamento menor que 15 dias (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*sim, com afastamento maior que 15 dias (pt-br)">
+                description = <"*sim, com afastamento maior que 15 dias (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Acidente de trabalho (pt-br)">
+                description = <"*Acidente de trabalho (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Tipo de acidente (pt-br)">
+                description = <"*Tipo de acidente (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Típico (pt-br)">
+                description = <"*Típico (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Trajeto (pt-br)">
+                description = <"*Trajeto (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Doença ocupacional (pt-br)">
+                description = <"*Doença ocupacional (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Doença/nexo equipada (o) (pt-br)">
+                description = <"*Doença/nexo equipada (o) (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Tipo de acidente (pt-br)">
+                description = <"*Tipo de acidente (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*ICD-1998 (pt-br)">
+                description = <"*ICD-1998 (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*CID-10 (pt-br)">
+                description = <"*CID-10 (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Descrição do acidente (pt-br)">
+                description = <"*Descrição do acidente (pt-br)">
+            >
+            ["id19"] = <
+                text = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
+                description = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Sim (pt-br)">
+                description = <"*Sim (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Não (pt-br)">
+                description = <"*Não (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Ignorado (pt-br)">
+                description = <"*Ignorado (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
+                description = <"*Afastamento nos últimos dois anos por mais de 15 dias (pt-br)">
+            >
+            ["id22"] = <
+                text = <"*Motivo do afastamento (pt-br)">
+                description = <"*Motivo do afastamento (pt-br)">
             >
         >
     >
