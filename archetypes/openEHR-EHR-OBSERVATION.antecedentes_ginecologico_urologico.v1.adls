@@ -35,7 +35,7 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- value of the result
+                                    ELEMENT[id10] occurrences matches {1} matches {    -- value of the result
                                         value matches {
                                             DV_TEXT[id11] 
                                         }
