@@ -3690,6 +3690,13 @@ definition
                     DV_TEXT[id7.1] 
                 }
             }
+            ELEMENT[id5.1] occurrences matches {0..1} matches {    -- Tempo trabalhado
+                value matches {
+                    DV_DATE_TIME[id6.1] matches {
+                        value matches {*}
+                    }
+                }
+            }
             ELEMENT[id11] occurrences matches {1} matches {
                 /value[id12]/value matches {True, False}
             }
@@ -3709,6 +3716,10 @@ terminology
             ["id3.1"] = <
                 text = <"Nome da empresa">
                 description = <"Nome da empresa">
+            >
+            ["id5.1"] = <
+                text = <"Tempo trabalhado">
+                description = <"Tempo trabalhado">
             >
         >
     >
