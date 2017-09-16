@@ -35,6 +35,11 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- value of the result
+                                        value matches {
+                                            DV_TEXT[id11] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -85,6 +90,10 @@ terminology
             ["ac1"] = <
                 text = <"Gynecological Preventive">
                 description = <"Gynecological Preventive">
+            >
+            ["id10"] = <
+                text = <"value of the result">
+                description = <"value of the result">
             >
         >
     >
