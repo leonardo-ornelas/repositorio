@@ -289,20 +289,20 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Body mass index (en)">
-                description = <"*Calculated measurement which compares a person's weight and height. (en)">
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any timed recording of Body Mass Index. (en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer gravação cronometrada do Índice de Massa Corporal.">
             >
             ["id5"] = <
-                text = <"*Body Mass Index (en)">
-                description = <"*Index describing ratio of weight to height. (en)">
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
             >
             ["id7"] = <
-                text = <"*Method (en)">
-                description = <"*The method of entering the Body Mass Index. (en)">
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
             >
             ["at8"] = <
                 text = <"*Automatic entry (en)">
@@ -313,12 +313,12 @@ terminology
                 description = <"*Body Mass Index calculated and entered directly by user. (en)">
             >
             ["id11"] = <
-                text = <"*Formula (en)">
-                description = <"*Formula used to derive the Body Mass Index. (en)">
+                text = <"Fórmula">
+                description = <"Fórmula utilizada para derivar o Índice de Massa Corporal.">
             >
             ["id12"] = <
-                text = <"*Comment (en)">
-                description = <"*Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height. (en)">
+                text = <"Comentário">
+                description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
             >
             ["at10"] = <
                 text = <"*Mass per area (en)">
