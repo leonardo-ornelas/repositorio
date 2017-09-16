@@ -186,6 +186,10 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id27"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
             ["id28"] = <
                 text = <"*New element(en)">
                 description = <"**(en)">
@@ -207,6 +211,10 @@ terminology
             ["at0.1"] = <
                 text = <"Length">
                 description = <"Length">
+            >
+            ["id27"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
             >
             ["id28"] = <
                 text = <"Weight Estimation Formula">
@@ -230,6 +238,10 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id27"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
             ["id28"] = <
                 text = <"*New element(en)">
                 description = <"**(en)">
@@ -252,6 +264,10 @@ terminology
                 text = <"Length (en)">
                 description = <"Length (en)">
             >
+            ["id27"] = <
+                text = <"Qualquer evento">
+                description = <"">
+            >
             ["id28"] = <
                 text = <"Novo elemento">
                 description = <"">
@@ -273,6 +289,10 @@ terminology
             ["at0.1"] = <
                 text = <"Length (en)">
                 description = <"Length (en)">
+            >
+            ["id27"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
             >
             ["id28"] = <
                 text = <"*New element(en)">
