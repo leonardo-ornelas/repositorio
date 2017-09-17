@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"">
@@ -11,42 +22,45 @@ description
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
         >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+        >
     >
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- recomendacoes_educativo_preventivas_qualidade_vida
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- *recomendacoes_educativo_preventivas_qualidade_vida (pt-br)
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Conclusão
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- *Conclusão (pt-br)
                         value matches {
                             DV_CODED_TEXT[id4] matches {
                                 defining_code matches {[ac1]}
                             }
                         }
                     }
-                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Data da conclusão
+                    ELEMENT[id11] occurrences matches {0..1} matches {    -- *Data da conclusão (pt-br)
                         value matches {
                             DV_TEXT[id12] 
                         }
                     }
-                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Município
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- *Município (pt-br)
                         value matches {
                             DV_TEXT[id14] 
                         }
                     }
-                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Médico examinador
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- *Médico examinador (pt-br)
                         value matches {
                             DV_TEXT[id16] 
                         }
                     }
-                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Observações
+                    ELEMENT[id18] occurrences matches {0..1} matches {    -- *Observações (pt-br)
                         value matches {
                             DV_TEXT[id19] 
                         }
                     }
-                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Observações ASO
+                    ELEMENT[id20] occurrences matches {0..1} matches {    -- *Observações ASO (pt-br)
                         value matches {
                             DV_TEXT[id21] 
                         }
@@ -60,48 +74,48 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"recomendacoes_educativo_preventivas_qualidade_vida">
-                description = <"recomendacoes_educativo_preventivas_qualidade_vida">
+                text = <"*recomendacoes_educativo_preventivas_qualidade_vida (pt-br)">
+                description = <"*recomendacoes_educativo_preventivas_qualidade_vida (pt-br)">
             >
             ["id3"] = <
-                text = <"Conclusão">
-                description = <"Conclusão">
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
             >
             ["at1"] = <
-                text = <"Conclusão">
-                description = <"Conclusão">
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
             >
             ["at2"] = <
-                text = <"Inapto">
-                description = <"Inapto">
+                text = <"*Inapto (pt-br)">
+                description = <"*Inapto (pt-br)">
             >
             ["at3"] = <
-                text = <"Exame não concluído">
-                description = <"Exame não concluído">
+                text = <"*Exame não concluído (pt-br)">
+                description = <"*Exame não concluído (pt-br)">
             >
             ["ac1"] = <
-                text = <"Conclusão">
-                description = <"Conclusão">
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
             >
             ["id11"] = <
-                text = <"Data da conclusão">
-                description = <"Data da conclusão">
+                text = <"*Data da conclusão (pt-br)">
+                description = <"*Data da conclusão (pt-br)">
             >
             ["id13"] = <
-                text = <"Município">
-                description = <"Município">
+                text = <"*Município (pt-br)">
+                description = <"*Município (pt-br)">
             >
             ["id15"] = <
-                text = <"Médico examinador">
-                description = <"Médico examinador">
+                text = <"*Médico examinador (pt-br)">
+                description = <"*Médico examinador (pt-br)">
             >
             ["id18"] = <
-                text = <"Observações">
-                description = <"Observações">
+                text = <"*Observações (pt-br)">
+                description = <"*Observações (pt-br)">
             >
             ["id20"] = <
-                text = <"Observações ASO">
-                description = <"Observações ASO">
+                text = <"*Observações ASO (pt-br)">
+                description = <"*Observações ASO (pt-br)">
             >
         >
     >
