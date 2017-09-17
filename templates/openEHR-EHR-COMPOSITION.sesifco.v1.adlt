@@ -55,7 +55,6 @@ definition
             use_archetype SECTION[id0.18, openEHR-EHR-SECTION.ovl-sesifco-adhoc-010.v1.0.0]
             use_archetype SECTION[id0.19, openEHR-EHR-SECTION.ovl-sesifco-adhoc-011.v1.0.0]
             use_archetype SECTION[id0.20, openEHR-EHR-SECTION.ovl-sesifco-adhoc-012.v1.0.0]
-            use_archetype SECTION[id0.23, openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0]
         }
     }
 
@@ -3776,6 +3775,11 @@ specialize
 definition
     ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional atual
         /data[id2]/items matches {
+            ELEMENT[id11.1] occurrences matches {1} matches {    -- Tempo no cargo
+                value matches {
+                    DV_ORDINAL[id19.1] 
+                }
+            }
             ELEMENT[id13] occurrences matches {1} matches {
                 /value[id14]/value matches {True, False}
             }
@@ -3792,11 +3796,19 @@ terminology
                 text = <"História ocupacional atual">
                 description = <"historia_ocupacional atual">
             >
+            ["id11.1"] = <
+                text = <"Tempo no cargo">
+                description = <"Tempo no cargo">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"current_occupational_history">
                 description = <"current_occupational_history">
+            >
+            ["id11.1"] = <
+                text = <"Time in charge">
+                description = <"Time in charge">
             >
         >
     >
@@ -3943,35 +3955,6 @@ terminology
             ["id6.1"] = <
                 text = <"Absence of complaints">
                 description = <"Record complaints at the current time">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Exame físico">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
