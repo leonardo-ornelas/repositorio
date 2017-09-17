@@ -4487,12 +4487,100 @@ definition
 terminology
     term_definitions = <
         ["pt-br"] = <
+            ["id1"] = <
+                text = <"Recomendações Educativo Preventivas">
+                description = <"Recomendações Educativo Preventivas Qualidade de Vida">
+            >
+            ["id3"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at1"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at2"] = <
+                text = <"Inapto">
+                description = <"Inapto">
+            >
+            ["at3"] = <
+                text = <"Exame não concluído">
+                description = <"Exame não concluído">
+            >
+            ["ac1"] = <
+                text = <"Conclusão (pt-br)">
+                description = <"Conclusão (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Data da conclusão">
+                description = <"Data da conclusão">
+            >
+            ["id13"] = <
+                text = <"Município">
+                description = <"Município">
+            >
+            ["id15"] = <
+                text = <"Médico examinador">
+                description = <"Médico examinador">
+            >
+            ["id18"] = <
+                text = <"Observações">
+                description = <"Observações">
+            >
+            ["id20"] = <
+                text = <"Observações ASO">
+                description = <"Observações ASO">
+            >
             ["id1.1"] = <
                 text = <"Recomendações Educativo Preventivas">
                 description = <"Recomendações Educativo Preventivas Qualidade de Vida">
             >
         >
         ["en"] = <
+            ["id1"] = <
+                text = <"*Recomendações Educativo Preventivas (pt-br)">
+                description = <"*Recomendações Educativo Preventivas Qualidade de Vida (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Inapto (pt-br)">
+                description = <"*Inapto (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Exame não concluído (pt-br)">
+                description = <"*Exame não concluído (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Conclusão (pt-br) (pt-br)">
+                description = <"*Conclusão (pt-br) (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Data da conclusão (pt-br)">
+                description = <"*Data da conclusão (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Município (pt-br)">
+                description = <"*Município (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Médico examinador (pt-br)">
+                description = <"*Médico examinador (pt-br)">
+            >
+            ["id18"] = <
+                text = <"*Observações (pt-br)">
+                description = <"*Observações (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Observações ASO (pt-br)">
+                description = <"*Observações ASO (pt-br)">
+            >
             ["id1.1"] = <
                 text = <"*Recomendações Educativo Preventivas (pt-br)">
                 description = <"*Recomendações Educativo Preventivas Qualidade de Vida (pt-br)">
