@@ -4450,7 +4450,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.4, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-recomendacoes_educativo_preventivas_qualidade_vida-001.v1.0.0]
+        }
     }
 
 terminology
@@ -4465,6 +4467,35 @@ terminology
             ["id1.1"] = <
                 text = <"Dados do desfecho">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-recomendacoes_educativo_preventivas_qualidade_vida-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Recomendações Educativo Preventivas
+        /data[id2]/items[id3]/value[id4]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Recomendações Educativo Preventivas">
+                description = <"Recomendações Educativo Preventivas Qualidade de Vida">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Recomendações Educativo Preventivas (pt-br)">
+                description = <"*Recomendações Educativo Preventivas Qualidade de Vida (pt-br)">
             >
         >
     >
