@@ -56,6 +56,8 @@ definition
             use_archetype SECTION[id0.19, openEHR-EHR-SECTION.ovl-sesifco-adhoc-011.v1.0.0]
             use_archetype SECTION[id0.20, openEHR-EHR-SECTION.ovl-sesifco-adhoc-012.v1.0.0]
             use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0]
+            use_archetype SECTION[id0.25, openEHR-EHR-SECTION.ovl-sesifco-adhoc-014.v1.0.0]
+            use_archetype SECTION[id0.26, openEHR-EHR-SECTION.ovl-sesifco-adhoc-015.v1.0.0]
         }
     }
 
@@ -3946,6 +3948,7 @@ definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
             use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesifco-exame_fisico-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesifco-phq-001.v1.0.0]
         }
     }
 
@@ -3997,6 +4000,416 @@ terminology
             ["id1.1"] = <
                 text = <"physical exam">
                 description = <"physical exam">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-phq-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.phq.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Patient Health Questionnaire (PHQ)
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.1] occurrences matches {0} matches {    -- Interest/Pleasure
+                value matches {
+                    DV_ORDINAL[id21.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id10.1] occurrences matches {0} matches {    -- Feeling Down
+                value matches {
+                    DV_ORDINAL[id22.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id13.1] occurrences matches {0} matches {    -- Sleep Issues
+                value matches {
+                    DV_ORDINAL[id23.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id14.1] occurrences matches {0} matches {    -- Tired/Little Energy
+                value matches {
+                    DV_ORDINAL[id24.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id15.1] occurrences matches {0} matches {    -- Appetite
+                value matches {
+                    DV_ORDINAL[id25.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id16.1] occurrences matches {0} matches {    -- Feeling Bad About Yourself
+                value matches {
+                    DV_ORDINAL[id26.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id17.1] occurrences matches {0} matches {    -- Trouble Concentrating
+                value matches {
+                    DV_ORDINAL[id27.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id18.1] occurrences matches {0} matches {    -- Slowness/Fidgety
+                value matches {
+                    DV_ORDINAL[id28.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id19.1] occurrences matches {0} matches {    -- Death/Self-harm
+                value matches {
+                    DV_ORDINAL[id29.1] matches {
+                        [value, symbol] matches {
+                            [{|0|}, {[at6]}], 
+                            [{|1|}, {[at7]}], 
+                            [{|2|}, {[at8]}], 
+                            [{|3|}, {[at9]}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id11.1] occurrences matches {0..1} matches {    -- PHQ-2 Score
+                value matches {
+                    DV_COUNT[id30.1] matches {
+                        magnitude matches {|0..6|}
+                    }
+                }
+            }
+            ELEMENT[id12.1] occurrences matches {0} matches {    -- PHQ-9 Score
+                value matches {
+                    DV_COUNT[id31.1] matches {
+                        magnitude matches {|0..27|}
+                    }
+                }
+            }
+            ELEMENT[id20.1] occurrences matches {0} matches {    -- Difficulty in Life Activities
+                value matches {
+                    DV_CODED_TEXT[id32.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Patient Health Questionnaire (PHQ)">
+                description = <"Screening questionnaire for mental health that can be used by health professionals or self-reported by individuals.">
+            >
+            ["id11.1"] = <
+                text = <"PHQ-2 Score">
+                description = <"Total score for the first two questions on 'Interest/Pleasure' and 'Feeling Down'.">
+            >
+            ["id12.1"] = <
+                text = <"PHQ-9 Score">
+                description = <"Total Score for all nine questions.">
+            >
+            ["id20.1"] = <
+                text = <"Difficulty in Life Activities">
+                description = <"If you checked off any problems on this questionnaire, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?">
+            >
+            ["id19.1"] = <
+                text = <"Death/Self-harm">
+                description = <"Over the last two weeks, how often have you been bothered by thoughts that you would be better off dead or of hurting yourself in some way?">
+            >
+            ["id18.1"] = <
+                text = <"Slowness/Fidgety">
+                description = <"Over the last two weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?">
+            >
+            ["id17.1"] = <
+                text = <"Trouble Concentrating">
+                description = <"Over the last two weeks, how often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?">
+            >
+            ["id16.1"] = <
+                text = <"Feeling Bad About Yourself">
+                description = <"Over the last two weeks, how often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down?">
+            >
+            ["id15.1"] = <
+                text = <"Appetite">
+                description = <"Over the last two weeks, how often have you been bothered by poor appetite or overeating?">
+            >
+            ["id14.1"] = <
+                text = <"Tired/Little Energy">
+                description = <"Over the last two weeks, how often have you been bothered by feeling tired or having little energy?">
+            >
+            ["id13.1"] = <
+                text = <"Sleep Issues">
+                description = <"Over the last two weeks, how often have you been bothered by trouble falling or staying asleep, or sleeping too much?">
+            >
+            ["id10.1"] = <
+                text = <"Feeling Down">
+                description = <"Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless?">
+            >
+            ["id5.1"] = <
+                text = <"Interest/Pleasure">
+                description = <"Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things?">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Questionário de Saúde do Paciente">
+                description = <"Questionário de triagem para saúde mental que pode ser usado por profissionais de saúde ou auto-relatado por indivíduos.">
+            >
+            ["id11.1"] = <
+                text = <"Resultado PHQ 20">
+                description = <"Pontuação total para as duas primeiras questões sobre 'Interesse / Prazer' e 'Sentir-se'.">
+            >
+            ["id12.1"] = <
+                text = <"Escala PHQ-9">
+                description = <"Pontuação total para as nove perguntas.">
+            >
+            ["id20.1"] = <
+                text = <"Dificuldade em atividades de vida">
+                description = <"Se você verificou todos os problemas neste questionário, quão difíceis foram esses problemas para você fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas?">
+            >
+            ["id19.1"] = <
+                text = <"Morte / autojudicação">
+                description = <"Durante as últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma?">
+            >
+            ["id18.1"] = <
+                text = <"Lento/Inquieto">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual?">
+            >
+            ["id17.1"] = <
+                text = <"Problema Concentrando">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por problemas, concentrando-se em coisas, como ler o jornal ou assistir televisão?">
+            >
+            ["id16.1"] = <
+                text = <"Sentir-se mal com você">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família?">
+            >
+            ["id15.1"] = <
+                text = <"Apetite">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida?">
+            >
+            ["id14.1"] = <
+                text = <"Cansado/pouca energia">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou com pouca energia?">
+            >
+            ["id13.1"] = <
+                text = <"Problemas de sono">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais?">
+            >
+            ["id10.1"] = <
+                text = <"Sentindo pra baixo">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir abatido, deprimido ou sem esperança?">
+            >
+            ["id5.1"] = <
+                text = <"Interesse / Prazer">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas?">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-014.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Portador de deficiência">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-015.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-sesifco-problem_diagnosis-SESI_BR-002.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hipóteses diagnosticas">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-sesifco-problem_diagnosis-SESI_BR-002.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Problem/Diagnosis
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {1} matches {    -- Problem/Diagnosis
+                value matches {
+                    DV_TEXT[id84.0.1] 
+                }
+            }
+            ELEMENT[id10.0.1] occurrences matches {1} matches {    -- Clinical description
+                value matches {
+                    DV_TEXT[id85.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id45] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            CLUSTER[id19] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id26] occurrences matches {0..1} matches {
+                        /value[id89]/magnitude matches {|>=1|}
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id90] matches {
+                                property matches {[at83]}
+                                units matches {"/min", "/h", "/d", "/wk", "/mo", "/yr"}
+                            }
+                        }
+                    }
+                }
+            }
+            CLUSTER[id27] matches {
+                /items[id57]/value[id95]/defining_code matches {[ac1]}
+            }
+            allow_archetype CLUSTER[id55] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            allow_archetype CLUSTER[id56] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {
+                /value[id0.3]/defining_code matches {[ac0.1]}
+            }
+        }
+        /protocol[id75]/items matches {
+            allow_archetype CLUSTER[id77] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
+            >
+            ["id3.0.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Identification of the problem or diagnosis. Coding of the problem or diagnosis with a terminology is preferred, where possible.">
+            >
+            ["id10.0.1"] = <
+                text = <"Clinical description">
+                description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Problema/Diagnóstico">
+                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
+            >
+            ["id3.0.1"] = <
+                text = <"Diagnóstico">
+                description = <"Identificação do problema ou diagnóstico. A codificação do problema ou diagnóstico com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id10.0.1"] = <
+                text = <"Código CID do diagnóstico">
+                description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema/diagnóstico.">
             >
         >
     >
