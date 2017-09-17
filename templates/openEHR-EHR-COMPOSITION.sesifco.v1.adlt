@@ -58,6 +58,7 @@ definition
             use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-sesifco-adhoc-013.v1.0.0]
             use_archetype SECTION[id0.25, openEHR-EHR-SECTION.ovl-sesifco-adhoc-014.v1.0.0]
             use_archetype SECTION[id0.26, openEHR-EHR-SECTION.ovl-sesifco-adhoc-015.v1.0.0]
+            use_archetype SECTION[id0.27, openEHR-EHR-SECTION.ovl-sesifco-adhoc-016.v1.0.0]
         }
     }
 
@@ -4370,8 +4371,17 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {
-                /value[id0.3]/defining_code matches {[ac0.1]}
+            ELEMENT[id70.0.1] occurrences matches {0..1} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id98.0.1] 
+                }
+            }
+            ELEMENT[id0.2.1] occurrences matches {1} matches {    -- Type
+                value matches {
+                    DV_CODED_TEXT[id0.3.1] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
             }
         }
         /protocol[id75]/items matches {
@@ -4397,6 +4407,14 @@ terminology
                 text = <"Clinical description">
                 description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
             >
+            ["id0.2.1"] = <
+                text = <"Type">
+                description = <"Record the type of diagnosis">
+            >
+            ["id70.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -4410,6 +4428,43 @@ terminology
             ["id10.0.1"] = <
                 text = <"Código CID do diagnóstico">
                 description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema/diagnóstico.">
+            >
+            ["id0.2.1"] = <
+                text = <"Descrição">
+                description = <"Registre o tipo de diagnóstico">
+            >
+            ["id70.0.1"] = <
+                text = <"Observações diagnósticas">
+                description = <"Narração adicional sobre o problema ou diagnóstico não capturado em outros campos.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-sesifco-adhoc-016.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados do desfecho">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
