@@ -13,6 +13,10 @@ language
             >
             language = <[ISO_639-1::pt-br]>
         >
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
     >
     
 description
@@ -24,6 +28,9 @@ description
         >
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -116,6 +123,52 @@ terminology
             ["id20"] = <
                 text = <"Observações ASO">
                 description = <"Observações ASO">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Recomendações Educativo Preventivas (pt-br)">
+                description = <"*Recomendações Educativo Preventivas Qualidade de Vida (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Conclusão (pt-br)">
+                description = <"*Conclusão (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Inapto (pt-br)">
+                description = <"*Inapto (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Exame não concluído (pt-br)">
+                description = <"*Exame não concluído (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Conclusão (pt-br) (pt-br)">
+                description = <"*Conclusão (pt-br) (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Data da conclusão (pt-br)">
+                description = <"*Data da conclusão (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Município (pt-br)">
+                description = <"*Município (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Médico examinador (pt-br)">
+                description = <"*Médico examinador (pt-br)">
+            >
+            ["id18"] = <
+                text = <"*Observações (pt-br)">
+                description = <"*Observações (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Observações ASO (pt-br)">
+                description = <"*Observações ASO (pt-br)">
             >
         >
     >
