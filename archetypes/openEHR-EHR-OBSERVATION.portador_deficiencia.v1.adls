@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -19,7 +28,7 @@ definition
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -60,8 +69,8 @@ terminology
                 description = <"portador_deficiencia">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
                 text = <"É portador de deficiência?">
@@ -74,6 +83,28 @@ terminology
             ["id10"] = <
                 text = <"Descrição do exame físico">
                 description = <"Descrição do exame físico">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"carrier deficiency">
+                description = <"carrier deficiency">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"Do you have a disability?">
+                description = <"Do you have a disability?">
+            >
+            ["id8"] = <
+                text = <"Diagnostic code CID-10">
+                description = <"Diagnostic code CID-10">
+            >
+            ["id10"] = <
+                text = <"Physical exam description">
+                description = <"Physical exam description">
             >
         >
     >
