@@ -3663,9 +3663,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -3680,55 +3678,6 @@ terminology
             ["id1.1"] = <
                 text = <"História ocupacional pregressa">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional pregressa
-        /data[id2]/items matches {
-            ELEMENT[id3.1] occurrences matches {1} matches {    -- Nome da empresa
-                value matches {
-                    DV_TEXT[id7.1] 
-                }
-            }
-            ELEMENT[id11] occurrences matches {1} matches {
-                /value[id12]/value matches {True, False}
-            }
-            ELEMENT[id15] occurrences matches {0..1} matches {
-                /value[id16]/defining_code matches {[ac1]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"História ocupacional pregressa">
-                description = <"Histórico de ocupações anteriores">
-            >
-            ["id3.1"] = <
-                text = <"Nome da empresa">
-                description = <"Nome da empresa">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"History of previous occupations">
-                description = <"History of previous occupations">
-            >
-            ["id3.1"] = <
-                text = <"Company Name">
-                description = <"Company Name">
             >
         >
     >
@@ -3743,9 +3692,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional_atual-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -3760,55 +3707,6 @@ terminology
             ["id1.1"] = <
                 text = <"História ocupacional atual">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-sesifco-historia_ocupacional_atual-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- História ocupacional atual
-        /data[id2]/items matches {
-            ELEMENT[id11.1] occurrences matches {1} matches {    -- Tempo no cargo
-                value matches {
-                    DV_ORDINAL[id19.1] 
-                }
-            }
-            ELEMENT[id13] occurrences matches {1} matches {
-                /value[id14]/value matches {True, False}
-            }
-            ELEMENT[id17] occurrences matches {1} matches {
-                /value[id18]/defining_code matches {[ac1]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"História ocupacional atual">
-                description = <"historia_ocupacional atual">
-            >
-            ["id11.1"] = <
-                text = <"Tempo no cargo">
-                description = <"Tempo no cargo">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"current_occupational_history">
-                description = <"current_occupational_history">
-            >
-            ["id11.1"] = <
-                text = <"Time in charge">
-                description = <"Time in charge">
             >
         >
     >
