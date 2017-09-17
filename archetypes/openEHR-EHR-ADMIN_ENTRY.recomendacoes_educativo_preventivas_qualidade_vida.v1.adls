@@ -15,6 +15,11 @@ language
         >
         ["en"] = <
             accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
             language = <[ISO_639-1::en]>
         >
     >
