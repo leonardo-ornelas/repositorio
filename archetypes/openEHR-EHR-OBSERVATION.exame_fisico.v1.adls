@@ -413,6 +413,73 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id130] occurrences matches {0..1}     -- Varizes em membro inferior esquerdo
+                                            ELEMENT[id131] occurrences matches {0..1} matches {    -- Varizes ausentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id132] matches {
+                                                        defining_code matches {[ac36]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id133] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id134] 
+                                                }
+                                            }
+                                            ELEMENT[id135] occurrences matches {0..1} matches {    -- Úlceras em membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id136] matches {
+                                                        defining_code matches {[ac37]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id137] occurrences matches {0..1} matches {    -- Úlceras em membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id138] matches {
+                                                        defining_code matches {[ac38]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id139] occurrences matches {0..1} matches {    -- Úlceras ausentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id140] matches {
+                                                        defining_code matches {[ac39]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id141] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id142] 
+                                                }
+                                            }
+                                            ELEMENT[id143] occurrences matches {0..1} matches {    -- Edema membro superior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id144] matches {
+                                                        defining_code matches {[ac40]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id145] occurrences matches {0..1} matches {    -- Edema membro superior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id146] matches {
+                                                        defining_code matches {[ac41]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id147] occurrences matches {0..1} matches {    -- Edema membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id148] matches {
+                                                        defining_code matches {[ac42]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id149] occurrences matches {0..1} matches {    -- Edema membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id150] matches {
+                                                        defining_code matches {[ac43]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -842,6 +909,86 @@ terminology
                 text = <"Varizes em membro inferior direito">
                 description = <"Varizes em membro inferior direito">
             >
+            ["id130"] = <
+                text = <"Varizes em membro inferior esquerdo">
+                description = <"Varizes em membro inferior esquerdo">
+            >
+            ["ac35"] = <
+                text = <"Varizes em membro inferior esquerdo">
+                description = <"Varizes em membro inferior esquerdo">
+            >
+            ["id131"] = <
+                text = <"Varizes ausentes">
+                description = <"Varizes ausentes">
+            >
+            ["ac36"] = <
+                text = <"Varizes ausentes">
+                description = <"Varizes ausentes">
+            >
+            ["id133"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id135"] = <
+                text = <"Úlceras em membro inferior direito">
+                description = <"Úlceras em membro inferior direito">
+            >
+            ["ac37"] = <
+                text = <"Úlceras em membro inferior direito">
+                description = <"Úlceras em membro inferior direito">
+            >
+            ["id137"] = <
+                text = <"Úlceras em membro inferior esquerdo">
+                description = <"Úlceras em membro inferior esquerdo">
+            >
+            ["ac38"] = <
+                text = <"Úlceras em membro inferior esquerdo">
+                description = <"Úlceras em membro inferior esquerdo">
+            >
+            ["id139"] = <
+                text = <"Úlceras ausentes">
+                description = <"Úlceras ausentes">
+            >
+            ["ac39"] = <
+                text = <"Úlceras ausentes">
+                description = <"Úlceras ausentes">
+            >
+            ["id141"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id143"] = <
+                text = <"Edema membro superior direito">
+                description = <"Edema membro superior direito">
+            >
+            ["ac40"] = <
+                text = <"Edema membro superior direito">
+                description = <"Edema membro superior direito">
+            >
+            ["id145"] = <
+                text = <"Edema membro superior esquerdo">
+                description = <"Edema membro superior esquerdo">
+            >
+            ["ac41"] = <
+                text = <"Edema membro superior esquerdo">
+                description = <"Edema membro superior esquerdo">
+            >
+            ["id147"] = <
+                text = <"Edema membro inferior direito">
+                description = <"Edema membro inferior direito">
+            >
+            ["ac42"] = <
+                text = <"Edema membro inferior direito">
+                description = <"Edema membro inferior direito">
+            >
+            ["id149"] = <
+                text = <"Edema membro inferior esquerdo">
+                description = <"Edema membro inferior esquerdo">
+            >
+            ["ac43"] = <
+                text = <"Edema membro inferior esquerdo">
+                description = <"Edema membro inferior esquerdo">
+            >
         >
     >
     value_sets = <
@@ -979,6 +1126,42 @@ terminology
         >
         ["ac34"] = <
             id = <"ac34">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac35"] = <
+            id = <"ac35">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac36"] = <
+            id = <"ac36">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac37"] = <
+            id = <"ac37">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac38"] = <
+            id = <"ac38">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac39"] = <
+            id = <"ac39">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac40"] = <
+            id = <"ac40">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac41"] = <
+            id = <"ac41">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac42"] = <
+            id = <"ac42">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac43"] = <
+            id = <"ac43">
             members = <"at1", "at2", "at3">
         >
     >
