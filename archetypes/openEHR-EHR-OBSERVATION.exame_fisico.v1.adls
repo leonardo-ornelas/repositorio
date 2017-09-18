@@ -480,6 +480,114 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id151] occurrences matches {0..1} matches {    -- Edema ausente
+                                                value matches {
+                                                    DV_CODED_TEXT[id152] matches {
+                                                        defining_code matches {[ac44]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id153] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                                value matches {
+                                                    DV_CODED_TEXT[id154] matches {
+                                                        defining_code matches {[ac45]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id155] occurrences matches {0..1} matches {    -- Dor espontânea
+                                                value matches {
+                                                    DV_CODED_TEXT[id156] matches {
+                                                        defining_code matches {[ac46]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id157] occurrences matches {0..1} matches {    -- Dor ausente
+                                                value matches {
+                                                    DV_CODED_TEXT[id158] matches {
+                                                        defining_code matches {[ac47]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id159] occurrences matches {0..1} matches {    -- Localização da dor
+                                                value matches {
+                                                    DV_TEXT[id160] 
+                                                }
+                                            }
+                                            ELEMENT[id161] occurrences matches {0..1} matches {    -- Irradiação
+                                                value matches {
+                                                    DV_BOOLEAN[id162] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id164] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id165] 
+                                                }
+                                            }
+                                            ELEMENT[id166] occurrences matches {0..1} matches {    -- Sinais flogísticos
+                                                value matches {
+                                                    DV_BOOLEAN[id167] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id168] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id169] 
+                                                }
+                                            }
+                                            ELEMENT[id170] occurrences matches {0..1} matches {    -- Alterações de sensibilidade
+                                                value matches {
+                                                    DV_BOOLEAN[id171] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id172] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id173] 
+                                                }
+                                            }
+                                            ELEMENT[id174] occurrences matches {0..1} matches {    -- Restrição de movimentos membro superior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id175] matches {
+                                                        defining_code matches {[ac48]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id176] occurrences matches {0..1} matches {    -- Restrição de movimentos membro superior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id177] matches {
+                                                        defining_code matches {[ac49]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id178] occurrences matches {0..1} matches {    -- Restrição de movimentos membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id179] matches {
+                                                        defining_code matches {[ac50]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id181] occurrences matches {0..1} matches {    -- Restrição de movimentos membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id182] matches {
+                                                        defining_code matches {[ac51]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id183] occurrences matches {0..1} matches {    -- Testes osteomusculares
+                                        items matches {
+                                            ELEMENT[id184] occurrences matches {0..1} matches {    -- Sinal de Phalen invertido
+                                                value matches {
+                                                    DV_CODED_TEXT[id185] matches {
+                                                        defining_code matches {[ac52]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -989,6 +1097,130 @@ terminology
                 text = <"Edema membro inferior esquerdo">
                 description = <"Edema membro inferior esquerdo">
             >
+            ["id151"] = <
+                text = <"Edema ausente">
+                description = <"Edema ausente">
+            >
+            ["ac44"] = <
+                text = <"Edema ausente">
+                description = <"Edema ausente">
+            >
+            ["id153"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["ac45"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["id155"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["ac46"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["id157"] = <
+                text = <"Dor ausente">
+                description = <"Dor ausente">
+            >
+            ["ac47"] = <
+                text = <"Dor ausente">
+                description = <"Dor ausente">
+            >
+            ["id159"] = <
+                text = <"Localização da dor">
+                description = <"Localização da dor">
+            >
+            ["id161"] = <
+                text = <"Irradiação">
+                description = <"Irradiação">
+            >
+            ["id164"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id166"] = <
+                text = <"Sinais flogísticos">
+                description = <"Sinais flogísticos">
+            >
+            ["id168"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id170"] = <
+                text = <"Alterações de sensibilidade">
+                description = <"Alterações de sensibilidade">
+            >
+            ["id172"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id174"] = <
+                text = <"Restrição de movimentos membro superior direito">
+                description = <"Restrição de movimentos membro superior direito">
+            >
+            ["ac48"] = <
+                text = <"Restrição de movimentos membro superior direito">
+                description = <"Restrição de movimentos membro superior direito">
+            >
+            ["id176"] = <
+                text = <"Restrição de movimentos membro superior esquerdo">
+                description = <"Restrição de movimentos membro superior esquerdo">
+            >
+            ["ac49"] = <
+                text = <"Restrição de movimentos membro superior esquerdo">
+                description = <"Restrição de movimentos membro superior esquerdo">
+            >
+            ["id178"] = <
+                text = <"Restrição de movimentos membro inferior direito">
+                description = <"Restrição de movimentos membro inferior direito">
+            >
+            ["ac50"] = <
+                text = <"Restrição de movimentos membro inferior direito">
+                description = <"Restrição de movimentos membro inferior direito">
+            >
+            ["id181"] = <
+                text = <"Restrição de movimentos membro inferior esquerdo">
+                description = <"Restrição de movimentos membro inferior esquerdo">
+            >
+            ["ac51"] = <
+                text = <"Restrição de movimentos membro inferior esquerdo">
+                description = <"Restrição de movimentos membro inferior esquerdo">
+            >
+            ["id183"] = <
+                text = <"Testes osteomusculares">
+                description = <"Testes osteomusculares">
+            >
+            ["id184"] = <
+                text = <"Sinal de Phalen invertido">
+                description = <"Sinal de Phalen invertido">
+            >
+            ["at4"] = <
+                text = <"Presente">
+                description = <"Presente">
+            >
+            ["at5"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["at6"] = <
+                text = <"Presente direito">
+                description = <"Presente direito">
+            >
+            ["at7"] = <
+                text = <"Presente esquerdo">
+                description = <"Presente esquerdo">
+            >
+            ["at8"] = <
+                text = <"Ausente">
+                description = <"Ausente">
+            >
+            ["ac52"] = <
+                text = <"Sinal de Phalen invertido">
+                description = <"Sinal de Phalen invertido">
+            >
         >
     >
     value_sets = <
@@ -1163,6 +1395,42 @@ terminology
         ["ac43"] = <
             id = <"ac43">
             members = <"at1", "at2", "at3">
+        >
+        ["ac44"] = <
+            id = <"ac44">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac45"] = <
+            id = <"ac45">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac46"] = <
+            id = <"ac46">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac47"] = <
+            id = <"ac47">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac48"] = <
+            id = <"ac48">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac49"] = <
+            id = <"ac49">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac50"] = <
+            id = <"ac50">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac51"] = <
+            id = <"ac51">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac52"] = <
+            id = <"ac52">
+            members = <"at5", "at6", "at7", "at8">
         >
     >
 
