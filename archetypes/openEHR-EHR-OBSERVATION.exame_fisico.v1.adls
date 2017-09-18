@@ -365,6 +365,54 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id114] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id115] 
+                                                }
+                                            }
+                                            ELEMENT[id116] occurrences matches {0..1} matches {    -- Força
+                                                value matches {
+                                                    DV_CODED_TEXT[id117] matches {
+                                                        defining_code matches {[ac32]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id118] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id119] 
+                                                }
+                                            }
+                                            ELEMENT[id120] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id121] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id122] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id123] 
+                                                }
+                                            }
+                                            ELEMENT[id124] occurrences matches {0..1} matches {    -- Prótese/órtese
+                                                value matches {
+                                                    DV_CODED_TEXT[id125] matches {
+                                                        defining_code matches {[ac33]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id126] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id127] 
+                                                }
+                                            }
+                                            ELEMENT[id128] occurrences matches {0..1} matches {    -- Varizes em membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id129] matches {
+                                                        defining_code matches {[ac34]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -750,6 +798,50 @@ terminology
                 text = <"Palpação">
                 description = <"Palpação">
             >
+            ["id114"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id116"] = <
+                text = <"Força">
+                description = <"Força">
+            >
+            ["ac32"] = <
+                text = <"Força">
+                description = <"Força">
+            >
+            ["id118"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id120"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id122"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id124"] = <
+                text = <"Prótese/órtese">
+                description = <"Prótese/órtese">
+            >
+            ["ac33"] = <
+                text = <"Prótese/órtese">
+                description = <"Prótese/órtese">
+            >
+            ["id126"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id128"] = <
+                text = <"Varizes em membro inferior direito">
+                description = <"Varizes em membro inferior direito">
+            >
+            ["ac34"] = <
+                text = <"Varizes em membro inferior direito">
+                description = <"Varizes em membro inferior direito">
+            >
         >
     >
     value_sets = <
@@ -875,6 +967,18 @@ terminology
         >
         ["ac31"] = <
             id = <"ac31">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac32"] = <
+            id = <"ac32">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac33"] = <
+            id = <"ac33">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac34"] = <
+            id = <"ac34">
             members = <"at1", "at2", "at3">
         >
     >
