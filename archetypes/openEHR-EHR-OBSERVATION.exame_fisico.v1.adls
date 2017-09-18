@@ -233,6 +233,79 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id72] occurrences matches {0..1} matches {    -- Coluna
+                                        items matches {
+                                            ELEMENT[id73] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id74] matches {
+                                                        defining_code matches {[ac20]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id75] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id76] 
+                                                }
+                                            }
+                                            ELEMENT[id77] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id78] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id79] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id80] 
+                                                }
+                                            }
+                                            ELEMENT[id81] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                                value matches {
+                                                    DV_CODED_TEXT[id82] matches {
+                                                        defining_code matches {[ac21]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id83] occurrences matches {0..1} matches {    -- Dor espontânea
+                                                value matches {
+                                                    DV_CODED_TEXT[id84] matches {
+                                                        defining_code matches {[ac22]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id85] occurrences matches {0..1} matches {    -- Dor ausente
+                                                value matches {
+                                                    DV_CODED_TEXT[id86] matches {
+                                                        defining_code matches {[ac23]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id87] occurrences matches {0..1} matches {    -- Localização da dor
+                                                value matches {
+                                                    DV_TEXT[id88] 
+                                                }
+                                            }
+                                            ELEMENT[id89] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id90] 
+                                                }
+                                            }
+                                            ELEMENT[id91] occurrences matches {0..1} matches {    -- Irradiação escapular
+                                                value matches {
+                                                    DV_CODED_TEXT[id92] matches {
+                                                        defining_code matches {[ac24]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id93] occurrences matches {0..1} matches {    -- Irradiação membro superior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id94] matches {
+                                                        defining_code matches {[ac25]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -480,6 +553,78 @@ terminology
                 text = <"Especificar">
                 description = <"Especificar">
             >
+            ["id72"] = <
+                text = <"Coluna">
+                description = <"Coluna">
+            >
+            ["id73"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac20"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id75"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id77"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id79"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id81"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["ac21"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["id83"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["ac22"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["id85"] = <
+                text = <"Dor ausente">
+                description = <"Dor ausente">
+            >
+            ["ac23"] = <
+                text = <"Dor ausente">
+                description = <"Dor ausente">
+            >
+            ["id87"] = <
+                text = <"Localização da dor">
+                description = <"Localização da dor">
+            >
+            ["id89"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id91"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["ac24"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["id93"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
+            ["ac25"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
         >
     >
     value_sets = <
@@ -557,6 +702,30 @@ terminology
         >
         ["ac19"] = <
             id = <"ac19">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac20"] = <
+            id = <"ac20">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac21"] = <
+            id = <"ac21">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac22"] = <
+            id = <"ac22">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac23"] = <
+            id = <"ac23">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac24"] = <
+            id = <"ac24">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac25"] = <
+            id = <"ac25">
             members = <"at1", "at2", "at3">
         >
     >
