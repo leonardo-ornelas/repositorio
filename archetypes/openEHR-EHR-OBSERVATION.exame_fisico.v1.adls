@@ -2,7 +2,7 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
     openEHR-EHR-OBSERVATION.exame_fisico.v1.0.0
 
 language
-    original_language = <[ISO_639-1::pt br]>
+    original_language = <[ISO_639-1::ptbr]>
     translations = <
         ["en"] = <
             accreditation = <"">
@@ -17,8 +17,8 @@ language
 description
     copyright = <"">
     details = <
-        ["pt br"] = <
-            language = <[ISO_639-1::pt br]>
+        ["ptbr"] = <
+            language = <[ISO_639-1::ptbr]>
             purpose = <"">
         >
         ["en"] = <
@@ -31,562 +31,562 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- Exame Fisico
+    OBSERVATION[id1] occurrences matches {1} matches {
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
-                                    CLUSTER[id7] occurrences matches {0..1} matches {    -- Detalhes do exame físico
+                                    CLUSTER[id7] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id8] occurrences matches {0..1} matches {    -- Mucosas
+                                            ELEMENT[id8] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id9] matches {
                                                         defining_code matches {[ac1]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id10] occurrences matches {0..1} matches {    -- Pelos e Fâneros
+                                            ELEMENT[id10] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id11] matches {
                                                         defining_code matches {[ac2]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id12] occurrences matches {0..1} matches {    -- Gânglios
+                                            ELEMENT[id12] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id13] matches {
                                                         defining_code matches {[ac3]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Marcha
+                                            ELEMENT[id14] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id15] matches {
                                                         defining_code matches {[ac4]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id16] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id17] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id18] occurrences matches {0..1} matches {    -- Cabeça e pescoço
+                                    CLUSTER[id18] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Audição
+                                            ELEMENT[id19] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id20] matches {
                                                         defining_code matches {[ac5]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id21] occurrences matches {0..1} matches {    -- Orofaringe
+                                            ELEMENT[id21] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id22] matches {
                                                         defining_code matches {[ac6]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id23] occurrences matches {0..1} matches {    -- Boca e dentes
+                                            ELEMENT[id23] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id24] matches {
                                                         defining_code matches {[ac7]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id25] occurrences matches {0..1} matches {    -- Visão
+                                            ELEMENT[id25] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id26] matches {
                                                         defining_code matches {[ac8]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id27] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id27] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id28] 
                                                 }
                                             }
-                                            ELEMENT[id29] occurrences matches {0..1} matches {    -- Uso obrigatório de lentes corretivas
+                                            ELEMENT[id29] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id30] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id31] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id31] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id32] 
                                                 }
                                             }
-                                            ELEMENT[id33] occurrences matches {0..1} matches {    -- Deformidade
+                                            ELEMENT[id33] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id34] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id35] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id35] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id36] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id37] occurrences matches {0..1} matches {    -- Tórax
+                                    CLUSTER[id37] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id38] occurrences matches {0..1} matches {    -- Simetria
+                                            ELEMENT[id38] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id39] matches {
                                                         defining_code matches {[ac9]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id40] occurrences matches {0..1} matches {    -- Expansibilidade
+                                            ELEMENT[id40] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id41] matches {
                                                         defining_code matches {[ac10]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id42] occurrences matches {0..1} matches {    -- Ritmo cardíaco
+                                            ELEMENT[id42] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id43] matches {
                                                         defining_code matches {[ac11]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id44] occurrences matches {0..1} matches {    -- Ausculta pulmonar
+                                            ELEMENT[id44] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id45] matches {
                                                         defining_code matches {[ac12]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id46] occurrences matches {0..1} matches {    -- Ausculta respiratória
+                                            ELEMENT[id46] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id47] matches {
                                                         defining_code matches {[ac13]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id48] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id48] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id49] 
                                                 }
                                             }
-                                            ELEMENT[id50] occurrences matches {0..1} matches {    -- Outras deformidades?
+                                            ELEMENT[id50] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id52] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id53] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id53] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id54] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id55] occurrences matches {0..1} matches {    -- Abdômen
+                                    CLUSTER[id55] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id56] occurrences matches {0..1} matches {    -- Inspeção
+                                            ELEMENT[id56] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id57] matches {
                                                         defining_code matches {[ac14]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id58] occurrences matches {0..1} matches {    -- Palpação
+                                            ELEMENT[id58] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id59] matches {
                                                         defining_code matches {[ac15]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id60] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id60] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id61] 
                                                 }
                                             }
-                                            ELEMENT[id62] occurrences matches {0..1} matches {    -- Hérnia umbilical
+                                            ELEMENT[id62] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id63] matches {
                                                         defining_code matches {[ac16]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id64] occurrences matches {0..1} matches {    -- Hérnia ignal
+                                            ELEMENT[id64] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id65] matches {
                                                         defining_code matches {[ac17]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id66] occurrences matches {0..1} matches {    -- Hérnia epigástrica
+                                            ELEMENT[id66] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id67] matches {
                                                         defining_code matches {[ac18]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id68] occurrences matches {0..1} matches {    -- Hérnia incisional
+                                            ELEMENT[id68] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id69] matches {
                                                         defining_code matches {[ac19]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id70] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id70] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id71] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id72] occurrences matches {0..1} matches {    -- Coluna
+                                    CLUSTER[id72] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id73] occurrences matches {0..1} matches {    -- Inspeção
+                                            ELEMENT[id73] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id74] matches {
                                                         defining_code matches {[ac20]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id75] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id75] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id76] 
                                                 }
                                             }
-                                            ELEMENT[id77] occurrences matches {0..1} matches {    -- Deformidade
+                                            ELEMENT[id77] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id78] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id79] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id79] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id80] 
                                                 }
                                             }
-                                            ELEMENT[id81] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                            ELEMENT[id81] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id82] matches {
                                                         defining_code matches {[ac21]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id83] occurrences matches {0..1} matches {    -- Dor espontânea
+                                            ELEMENT[id83] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id84] matches {
                                                         defining_code matches {[ac22]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id85] occurrences matches {0..1} matches {    -- Dor ausente
+                                            ELEMENT[id85] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id86] matches {
                                                         defining_code matches {[ac23]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id87] occurrences matches {0..1} matches {    -- Localização da dor
+                                            ELEMENT[id87] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id88] 
                                                 }
                                             }
-                                            ELEMENT[id89] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id89] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id90] 
                                                 }
                                             }
-                                            ELEMENT[id91] occurrences matches {0..1} matches {    -- Irradiação escapular
+                                            ELEMENT[id91] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id92] matches {
                                                         defining_code matches {[ac24]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id93] occurrences matches {0..1} matches {    -- Irradiação membro superior direito
+                                            ELEMENT[id93] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id94] matches {
                                                         defining_code matches {[ac25]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id95] occurrences matches {0..1} matches {    -- Irradiação membro superior esquerdo
+                                            ELEMENT[id95] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id96] matches {
                                                         defining_code matches {[ac26]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id97] occurrences matches {0..1} matches {    -- Irradiação membro inferior direito
+                                            ELEMENT[id97] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id98] matches {
                                                         defining_code matches {[ac27]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id99] occurrences matches {0..1} matches {    -- Irradiação membro inferior esquerdo
+                                            ELEMENT[id99] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id100] matches {
                                                         defining_code matches {[ac28]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id101] occurrences matches {0..1} matches {    -- Irradiação ausente
+                                            ELEMENT[id101] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id102] matches {
                                                         defining_code matches {[ac29]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id103] occurrences matches {0..1} matches {    -- Outras irradiações
+                                            ELEMENT[id103] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id104] 
                                                 }
                                             }
-                                            ELEMENT[id105] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id105] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id106] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id107] occurrences matches {0..1} matches {    -- Membros
+                                    CLUSTER[id107] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id108] occurrences matches {0..1} matches {    -- Inspeção
+                                            ELEMENT[id108] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id109] matches {
                                                         defining_code matches {[ac30]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id110] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id110] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id111] 
                                                 }
                                             }
-                                            ELEMENT[id112] occurrences matches {0..1} matches {    -- Palpação
+                                            ELEMENT[id112] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id113] matches {
                                                         defining_code matches {[ac31]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id114] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id114] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id115] 
                                                 }
                                             }
-                                            ELEMENT[id116] occurrences matches {0..1} matches {    -- Força
+                                            ELEMENT[id116] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id117] matches {
                                                         defining_code matches {[ac32]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id118] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id118] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id119] 
                                                 }
                                             }
-                                            ELEMENT[id120] occurrences matches {0..1} matches {    -- Deformidade
+                                            ELEMENT[id120] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id121] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id122] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id122] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id123] 
                                                 }
                                             }
-                                            ELEMENT[id124] occurrences matches {0..1} matches {    -- Prótese/órtese
+                                            ELEMENT[id124] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id125] matches {
                                                         defining_code matches {[ac33]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id126] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id126] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id127] 
                                                 }
                                             }
-                                            ELEMENT[id128] occurrences matches {0..1} matches {    -- Varizes em membro inferior direito
+                                            ELEMENT[id128] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id129] matches {
                                                         defining_code matches {[ac34]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id130] occurrences matches {0..1}     -- Varizes em membro inferior esquerdo
-                                            ELEMENT[id131] occurrences matches {0..1} matches {    -- Varizes ausentes
+                                            ELEMENT[id130] occurrences matches {0..1} 
+                                            ELEMENT[id131] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id132] matches {
                                                         defining_code matches {[ac36]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id133] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id133] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id134] 
                                                 }
                                             }
-                                            ELEMENT[id135] occurrences matches {0..1} matches {    -- Úlceras em membro inferior direito
+                                            ELEMENT[id135] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id136] matches {
                                                         defining_code matches {[ac37]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id137] occurrences matches {0..1} matches {    -- Úlceras em membro inferior esquerdo
+                                            ELEMENT[id137] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id138] matches {
                                                         defining_code matches {[ac38]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id139] occurrences matches {0..1} matches {    -- Úlceras ausentes
+                                            ELEMENT[id139] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id140] matches {
                                                         defining_code matches {[ac39]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id141] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id141] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id142] 
                                                 }
                                             }
-                                            ELEMENT[id143] occurrences matches {0..1} matches {    -- Edema membro superior direito
+                                            ELEMENT[id143] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id144] matches {
                                                         defining_code matches {[ac40]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id145] occurrences matches {0..1} matches {    -- Edema membro superior esquerdo
+                                            ELEMENT[id145] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id146] matches {
                                                         defining_code matches {[ac41]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id147] occurrences matches {0..1} matches {    -- Edema membro inferior direito
+                                            ELEMENT[id147] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id148] matches {
                                                         defining_code matches {[ac42]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id149] occurrences matches {0..1} matches {    -- Edema membro inferior esquerdo
+                                            ELEMENT[id149] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id150] matches {
                                                         defining_code matches {[ac43]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id151] occurrences matches {0..1} matches {    -- Edema ausente
+                                            ELEMENT[id151] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id152] matches {
                                                         defining_code matches {[ac44]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id153] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                            ELEMENT[id153] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id154] matches {
                                                         defining_code matches {[ac45]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id155] occurrences matches {0..1} matches {    -- Dor espontânea
+                                            ELEMENT[id155] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id156] matches {
                                                         defining_code matches {[ac46]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id157] occurrences matches {0..1} matches {    -- Dor ausente
+                                            ELEMENT[id157] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id158] matches {
                                                         defining_code matches {[ac47]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id159] occurrences matches {0..1} matches {    -- Localização da dor
+                                            ELEMENT[id159] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id160] 
                                                 }
                                             }
-                                            ELEMENT[id161] occurrences matches {0..1} matches {    -- Irradiação
+                                            ELEMENT[id161] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id162] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id164] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id164] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id165] 
                                                 }
                                             }
-                                            ELEMENT[id166] occurrences matches {0..1} matches {    -- Sinais flogísticos
+                                            ELEMENT[id166] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id167] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id168] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id168] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id169] 
                                                 }
                                             }
-                                            ELEMENT[id170] occurrences matches {0..1} matches {    -- Alterações de sensibilidade
+                                            ELEMENT[id170] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_BOOLEAN[id171] matches {
                                                         value matches {True, False}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id172] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id172] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id173] 
                                                 }
                                             }
-                                            ELEMENT[id174] occurrences matches {0..1} matches {    -- Restrição de movimentos membro superior direito
+                                            ELEMENT[id174] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id175] matches {
                                                         defining_code matches {[ac48]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id176] occurrences matches {0..1} matches {    -- Restrição de movimentos membro superior esquerdo
+                                            ELEMENT[id176] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id177] matches {
                                                         defining_code matches {[ac49]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id178] occurrences matches {0..1} matches {    -- Restrição de movimentos membro inferior direito
+                                            ELEMENT[id178] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id179] matches {
                                                         defining_code matches {[ac50]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id181] occurrences matches {0..1} matches {    -- Restrição de movimentos membro inferior esquerdo
+                                            ELEMENT[id181] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id182] matches {
                                                         defining_code matches {[ac51]}
@@ -595,37 +595,37 @@ definition
                                             }
                                         }
                                     }
-                                    CLUSTER[id183] occurrences matches {0..1} matches {    -- Testes osteomusculares
+                                    CLUSTER[id183] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id184] occurrences matches {0..1} matches {    -- Sinal de Phalen invertido
+                                            ELEMENT[id184] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id185] matches {
                                                         defining_code matches {[ac52]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id186] occurrences matches {0..1} matches {    -- Sinal de Finkelstein
+                                            ELEMENT[id186] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id187] matches {
                                                         defining_code matches {[ac53]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id188] occurrences matches {0..1} matches {    -- Sinal de Phalen
+                                            ELEMENT[id188] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id189] matches {
                                                         defining_code matches {[ac54]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id190] occurrences matches {0..1} matches {    -- Sinal de Tinel
+                                            ELEMENT[id190] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id191] matches {
                                                         defining_code matches {[ac55]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id192] occurrences matches {0..1} matches {    -- Sinal de Laségue
+                                            ELEMENT[id192] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id193] matches {
                                                         defining_code matches {[ac56]}
@@ -634,53 +634,53 @@ definition
                                             }
                                         }
                                     }
-                                    CLUSTER[id194] occurrences matches {0..1} matches {    -- Sistema Nervoso
+                                    CLUSTER[id194] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id195] occurrences matches {0..1} matches {    -- Equilíbrio
+                                            ELEMENT[id195] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id196] matches {
                                                         defining_code matches {[ac57]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id197] occurrences matches {0..1} matches {    -- Coordenação motora
+                                            ELEMENT[id197] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id198] matches {
                                                         defining_code matches {[ac58]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id199] occurrences matches {0..1} matches {    -- Reflexos periféricos
+                                            ELEMENT[id199] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id200] matches {
                                                         defining_code matches {[ac59]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id201] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id201] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id202] 
                                                 }
                                             }
                                         }
                                     }
-                                    CLUSTER[id203] occurrences matches {0..1} matches {    -- Psiquismo
+                                    CLUSTER[id203] occurrences matches {0..1} matches {
                                         items matches {
-                                            ELEMENT[id204] occurrences matches {1} matches {    -- Orientação tempo / espaço
+                                            ELEMENT[id204] occurrences matches {1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id205] matches {
                                                         defining_code matches {[ac60]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id206] occurrences matches {1} matches {    -- Humor
+                                            ELEMENT[id206] occurrences matches {1} matches {
                                                 value matches {
                                                     DV_CODED_TEXT[id207] matches {
                                                         defining_code matches {[ac61]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id208] occurrences matches {0..1} matches {    -- Especificar
+                                            ELEMENT[id208] occurrences matches {0..1} matches {
                                                 value matches {
                                                     DV_TEXT[id209] 
                                                 }
