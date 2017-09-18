@@ -172,8 +172,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Body mass index",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.body_mass_index.v1.adls",
-    "sha" : "433a6cee7201b71b26bdf9b1417af6d8c1711011",
-    "languages" : [ "en", "nl", "sl" ]
+    "sha" : "207f89791640ef98cf527d977e2762ec05f5b053",
+    "languages" : [ "en", "nl", "sl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.body_temperature.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -193,7 +193,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Body Height/Length",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.height.v1.adls",
-    "sha" : "8fe5a98e94d49cdc686bded91ac98ddc5502acd2",
+    "sha" : "4f7143c374bc4dc4483ed376ad9d9e3756b6d19a",
     "languages" : [ "en", "de", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.imaging_exam.v1.0.0",
@@ -207,7 +207,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Indirect oximetry",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.indirect_oximetry.v1.adls",
-    "sha" : "5363a96be6ede321bf75ee7335ee99d4e83f7724",
+    "sha" : "092d306bb6ffcb2f5cc21b7b363bc9edfce26c99",
     "languages" : [ "en", "de", "sl" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.lab_test-result.v1.0.0",
@@ -261,10 +261,10 @@
   }, {
     "id" : "openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0",
     "rmType" : "ELEMENT",
-    "name" : "Last Normal Menstrual Period",
+    "name" : "*Last Normal Menstrual Period (en)",
     "path" : "archetypes/openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.adls",
-    "sha" : "fc90e689ceaca1c0680de8ccda5167fa52a55807",
-    "languages" : [ "en" ]
+    "sha" : "a7ac07488c394b2bace864e6d01c3d83f148381b",
+    "languages" : [ "en", "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.ambient_oxygen.v1.0.0",
     "rmType" : "CLUSTER",
@@ -549,8 +549,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Patient Health Questionnaire (PHQ)",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.phq.v1.adls",
-    "sha" : "b6f6fd5ab6bb78d6d5dc41a25642150b0dcfc2fb",
-    "languages" : [ "en" ]
+    "sha" : "03bb22c98631544148c79768457bad8e10e3c02c",
+    "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.psychiatric_risk_nt_rmp.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -696,7 +696,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Body Weight",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.adls",
-    "sha" : "17737e8c2e491c39fdd7a64f2b70c8ff46c19a69",
+    "sha" : "c030bda98163e9107e7c71e7ca96ee16a986675b",
     "languages" : [ "en", "de", "ru", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.0.0",
@@ -724,36 +724,36 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "historia_ocupacional_pregressa",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.historia_ocupacional.v1.adls",
-    "sha" : "f1321e1aa66574357809ddff1da35fee7c3f145f",
-    "languages" : [ "pt-br" ]
+    "sha" : "31c51a410c64bdab6aca8fd0bec9499d58190ee3",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.0.0",
     "rmType" : "ADMIN_ENTRY",
     "name" : "historia_ocupacional_atual_SESI_BR",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.adls",
-    "sha" : "236d59128225c63a0532efeeea8258d16d03e05d",
-    "languages" : [ "pt-br" ]
+    "sha" : "49b3dc6346c821b351306e92487af59dd4d11026",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.0.0",
     "rmType" : "ADMIN_ENTRY",
-    "name" : "recomendacoes_educativo_preventivas_qualidade_vida",
+    "name" : "Recomendações Educativo Preventivas",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.adls",
-    "sha" : "7cb0ccecda8443f2073725738edb4c7e1cf188ad",
-    "languages" : [ "pt-br" ]
+    "sha" : "7c03925e126c34dbf56b93642b60006e1b86998b",
+    "languages" : [ "pt-br", "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.exame_fisico.v1.0.0",
     "rmType" : "EVALUATION",
     "name" : "exame_fisico",
     "path" : "archetypes/openEHR-EHR-EVALUATION.exame_fisico.v1.adls",
-    "sha" : "2ec9aaaff8656621a6b233f1615f65b93d205849",
-    "languages" : [ "pt-br" ]
+    "sha" : "fe07eaa6a651da35d7a9783b6c2d55adcc954c61",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.acidente_trabalho.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "acidente_trabalho",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.acidente_trabalho.v1.adls",
-    "sha" : "e7969d8c72a51fae1bb8d7dcfe5bdf4dc4c537d1",
-    "languages" : [ "pt-br" ]
+    "sha" : "56f7e40ca42f1275f204d5de0b39c94d5753ee36",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -766,22 +766,22 @@
     "rmType" : "OBSERVATION",
     "name" : "habitos_lazer",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.habitos_lazer.v1.adls",
-    "sha" : "8bd0d8d1bf601e36d015901b77e25deeef6d2a2c",
-    "languages" : [ "pt-br" ]
+    "sha" : "6bd251c1dfaf6c723b54578289d853b9d221477d",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "historia_clinica_atual",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.adls",
-    "sha" : "b0bda985bd8ca431a9480860bf6759af94bbaab2",
-    "languages" : [ "pt-br" ]
+    "sha" : "504e8a6d38a97c9f90c090bcd20493c6111b7368",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.historico_intervencoes_cirurgias.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "historico_intervencoes_cirurgias",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.historico_intervencoes_cirurgias.v1.adls",
-    "sha" : "8a9ea408f4a07f768cf952d2712ee8b1ec801913",
-    "languages" : [ "pt-br" ]
+    "sha" : "127186cd9acac62fd1079194622b8b2842df61cc",
+    "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-SESI_BR.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -904,5 +904,26 @@
     "path" : "archetypes/openEHR-EHR-SECTION.vital_signs.v1.0.0.adls",
     "sha" : "e3badbee42c4f93501d237d7f360a01d9b421394",
     "languages" : [ "en", "de", "ko" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Antecedentes_ginecologico_urologico",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.adls",
+    "sha" : "151010fc322962e8082bdaac5ab0751919ee361f",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.heart_rate.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "heart frequency",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.heart_rate.v1.adls",
+    "sha" : "f7ef307167aff28749c9a5fae15f54affdc99611",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.portador_deficiencia.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "portador_deficiencia",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.portador_deficiencia.v1.adls",
+    "sha" : "eb60d0a2b046c71a4a46881ec71ae62065a56e11",
+    "languages" : [ "pt-br", "en" ]
   } ]
 }
