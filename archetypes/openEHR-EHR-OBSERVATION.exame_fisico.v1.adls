@@ -144,6 +144,55 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id44] occurrences matches {0..1} matches {    -- Ausculta pulmonar
+                                                value matches {
+                                                    DV_CODED_TEXT[id45] matches {
+                                                        defining_code matches {[ac12]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id46] occurrences matches {0..1} matches {    -- Ausculta respiratória
+                                                value matches {
+                                                    DV_CODED_TEXT[id47] matches {
+                                                        defining_code matches {[ac13]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id48] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id49] 
+                                                }
+                                            }
+                                            ELEMENT[id50] occurrences matches {0..1} matches {    -- Outras deformidades?
+                                                value matches {
+                                                    DV_BOOLEAN[id52] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id53] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id54] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id55] occurrences matches {0..1} matches {    -- Abdômen
+                                        items matches {
+                                            ELEMENT[id56] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id57] matches {
+                                                        defining_code matches {[ac14]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id58] occurrences matches {0..1} matches {    -- Palpação
+                                                value matches {
+                                                    DV_CODED_TEXT[id59] matches {
+                                                        defining_code matches {[ac15]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -305,6 +354,54 @@ terminology
                 text = <"Ritmo cardíaco">
                 description = <"Ritmo cardíaco">
             >
+            ["id44"] = <
+                text = <"Ausculta pulmonar">
+                description = <"Ausculta pulmonar">
+            >
+            ["ac12"] = <
+                text = <"Ausculta pulmonar">
+                description = <"Ausculta pulmonar">
+            >
+            ["id46"] = <
+                text = <"Ausculta respiratória">
+                description = <"Ausculta respiratória">
+            >
+            ["ac13"] = <
+                text = <"Ausculta respiratória">
+                description = <"Ausculta respiratória">
+            >
+            ["id48"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id50"] = <
+                text = <"Outras deformidades?">
+                description = <"Outras deformidades?">
+            >
+            ["id53"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id55"] = <
+                text = <"Abdômen">
+                description = <"Abdômen">
+            >
+            ["id56"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac14"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id58"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
+            ["ac15"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
         >
     >
     value_sets = <
@@ -350,6 +447,22 @@ terminology
         >
         ["ac11"] = <
             id = <"ac11">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac12"] = <
+            id = <"ac12">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac13"] = <
+            id = <"ac13">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac14"] = <
+            id = <"ac14">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac15"] = <
+            id = <"ac15">
             members = <"at1", "at2", "at3">
         >
     >
