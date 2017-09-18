@@ -40,7 +40,7 @@
     "rmType" : "COMPOSITION",
     "name" : "*FCO (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
-    "sha" : "dd734df5e87265f98e2703a309542dff4fa73703"
+    "sha" : "cdcbe5e159d32be5b2bbe4480ea0f393ff6d6199"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.habitos_de_vida_fco_sesi.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -64,18 +64,24 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.adlt",
-    "sha" : "10d6a1b2649c085802c4bc350c370fdd5afa13b7"
+    "sha" : "2419ba31467c44d6c20ce2aa77cd23292d26bbaa"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.sesifco.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesifco.v1.adlt",
-    "sha" : "efb6470d893d36d0381474a7e4172d45d5e72324"
+    "sha" : "94b124096b247b2e102d5c2efb344b89f6f50ab2"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.teste15.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.teste15.v1.adlt",
     "sha" : "bc0dad89c51140a74a044363e0bc8bbedd767439"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa_teste1.v1.adlt",
+    "sha" : "6ce9e65654436f6fbf0363b551eb88b1db4dd4ab"
   } ]
 }
