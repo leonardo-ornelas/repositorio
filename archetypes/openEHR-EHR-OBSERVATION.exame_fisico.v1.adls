@@ -678,13 +678,6 @@ definition
                                                     DV_TEXT[id209] 
                                                 }
                                             }
-                                            ELEMENT[id210] occurrences matches {0..1} matches {    -- Resultado do SRQ 20
-                                                value matches {
-                                                    DV_COUNT[id211] matches {
-                                                        magnitude matches {*}
-                                                    }
-                                                }
-                                            }
                                         }
                                     }
                                     CLUSTER[id212] occurrences matches {0..1} matches {    -- Portador de deficiência
@@ -1447,10 +1440,6 @@ terminology
                 text = <"Especificar">
                 description = <"Especificar">
             >
-            ["id210"] = <
-                text = <"Resultado do SRQ 20">
-                description = <"Resultado do SRQ 20">
-            >
             ["id212"] = <
                 text = <"Portador de deficiência">
                 description = <"Portador de deficiência">
@@ -2192,10 +2181,6 @@ terminology
             ["id208"] = <
                 text = <"*Especificar (pt br)">
                 description = <"*Especificar (pt br)">
-            >
-            ["id210"] = <
-                text = <"*Resultado do SRQ 20 (pt br)">
-                description = <"*Resultado do SRQ 20 (pt br)">
             >
             ["id212"] = <
                 text = <"*Portador de deficiência (pt br)">
