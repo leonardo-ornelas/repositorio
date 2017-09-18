@@ -925,5 +925,11 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.portador_deficiencia.v1.adls",
     "sha" : "eb60d0a2b046c71a4a46881ec71ae62065a56e11",
     "languages" : [ "pt-br", "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.exame_fisico.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.exame_fisico.v1.adls",
+    "sha" : "c5a88845bcad97b8b7a0e82744527167bc8bfea0",
+    "languages" : [ "ptbr", "en", "pt-br" ]
   } ]
 }
