@@ -650,14 +650,14 @@ definition
                                     }
                                     CLUSTER[id203] occurrences matches {0..1} matches {    -- Psiquismo
                                         items matches {
-                                            ELEMENT[id204] occurrences matches {0..1} matches {    -- Orientação tempo / espaço
+                                            ELEMENT[id204] occurrences matches {1} matches {    -- Orientação tempo / espaço
                                                 value matches {
                                                     DV_CODED_TEXT[id205] matches {
                                                         defining_code matches {[ac60]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id206] occurrences matches {0..1} matches {    -- Humor
+                                            ELEMENT[id206] occurrences matches {1} matches {    -- Humor
                                                 value matches {
                                                     DV_CODED_TEXT[id207] matches {
                                                         defining_code matches {[ac61]}
@@ -674,6 +674,27 @@ definition
                                                     DV_COUNT[id211] matches {
                                                         magnitude matches {*}
                                                     }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id212] occurrences matches {0..1} matches {    -- Portador de deficiência
+                                        items matches {
+                                            ELEMENT[id213] occurrences matches {0..1} matches {    -- É portador de deficiência?
+                                                value matches {
+                                                    DV_BOOLEAN[id214] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id215] occurrences matches {0..1} matches {    -- Código do diagnóstico CID-10
+                                                value matches {
+                                                    DV_TEXT[id216] 
+                                                }
+                                            }
+                                            ELEMENT[id217] occurrences matches {0..1} matches {    -- Observações do exame físico
+                                                value matches {
+                                                    DV_TEXT[id218] 
                                                 }
                                             }
                                         }
@@ -1420,6 +1441,22 @@ terminology
             ["id210"] = <
                 text = <"Resultado do SRQ 20">
                 description = <"Resultado do SRQ 20">
+            >
+            ["id212"] = <
+                text = <"Portador de deficiência">
+                description = <"Portador de deficiência">
+            >
+            ["id213"] = <
+                text = <"É portador de deficiência?">
+                description = <"É portador de deficiência?">
+            >
+            ["id215"] = <
+                text = <"Código do diagnóstico CID-10">
+                description = <"Código do diagnóstico CID-10">
+            >
+            ["id217"] = <
+                text = <"Observações do exame físico">
+                description = <"Observações do exame físico">
             >
         >
     >
