@@ -1459,8 +1459,8 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*Exame Fisico (pt br)">
-                description = <"*Exame Fisico (pt br)">
+                text = <"Exame Fisico">
+                description = <"Exame Fisico">
             >
             ["id3"] = <
                 text = <"*Any event (pt br)">
