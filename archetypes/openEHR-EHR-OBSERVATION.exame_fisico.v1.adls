@@ -22,7 +22,70 @@ definition
                     EVENT[id3] matches {    -- Any event
                         data matches {
                             ITEM_TREE[id4] matches {
-                                items
+                                items matches {
+                                    CLUSTER[id7] occurrences matches {0..1} matches {    -- Detalhes do exame físico
+                                        items matches {
+                                            ELEMENT[id8] occurrences matches {0..1} matches {    -- Mucosas
+                                                value matches {
+                                                    DV_CODED_TEXT[id9] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id10] occurrences matches {0..1} matches {    -- Pelos e Fâneros
+                                                value matches {
+                                                    DV_CODED_TEXT[id11] matches {
+                                                        defining_code matches {[ac2]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id12] occurrences matches {0..1} matches {    -- Gânglios
+                                                value matches {
+                                                    DV_CODED_TEXT[id13] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Marcha
+                                                value matches {
+                                                    DV_CODED_TEXT[id15] matches {
+                                                        defining_code matches {[ac4]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id17] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id18] occurrences matches {0..1} matches {    -- Cabeça e pescoço
+                                        items matches {
+                                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Audição
+                                                value matches {
+                                                    DV_CODED_TEXT[id20] matches {
+                                                        defining_code matches {[ac5]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id21] occurrences matches {0..1} matches {    -- Orofaringe
+                                                value matches {
+                                                    DV_CODED_TEXT[id22] matches {
+                                                        defining_code matches {[ac6]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id23] occurrences matches {0..1} matches {    -- Boca e dentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id24] matches {
+                                                        defining_code matches {[ac7]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                         state matches {
@@ -45,6 +108,116 @@ terminology
                 text = <"Any event">
                 description = <"Any event">
             >
+            ["id7"] = <
+                text = <"Detalhes do exame físico">
+                description = <"informar os detalhes do exame físico">
+            >
+            ["id8"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["at1"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at2"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at3"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac1"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["id10"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["ac2"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["id12"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["ac3"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["id14"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["ac4"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["id16"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id18"] = <
+                text = <"Cabeça e pescoço">
+                description = <"Informações sobre exame físico">
+            >
+            ["id19"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["ac5"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["id21"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["ac6"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["id23"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+            ["ac7"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at1", "at2", "at3">
         >
     >
 
