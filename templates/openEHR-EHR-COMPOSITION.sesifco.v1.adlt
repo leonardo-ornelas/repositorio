@@ -924,19 +924,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -3969,6 +3969,7 @@ definition
         items matches {
             use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesifco-phq-001.v1.0.0]
             use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-sesifco-exame_fisico-001.v1.0.0]
+            use_archetype OBSERVATION[id0.8, openEHR-EHR-OBSERVATION.ovl-sesifco-portador_deficiencia-001.v1.0.0]
         }
     }
 
@@ -4846,6 +4847,35 @@ terminology
             ["id1.1"] = <
                 text = <"*Exame Fisico (pt br)">
                 description = <"*Exame Fisico (pt br)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-portador_deficiencia-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.portador_deficiencia.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Portador Deficiência
+        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/value matches {True, False}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Portador Deficiência">
+                description = <"portador_deficiencia">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"carrier deficiency">
+                description = <"carrier deficiency">
             >
         >
     >
