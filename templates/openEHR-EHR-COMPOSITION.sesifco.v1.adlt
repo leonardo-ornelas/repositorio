@@ -924,19 +924,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -3968,6 +3968,7 @@ definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
             use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesifco-phq-001.v1.0.0]
+            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-sesifco-exame_fisico-001.v1.0.0]
         }
     }
 
@@ -4566,6 +4567,285 @@ terminology
             ["id1.1"] = <
                 text = <"*Recomendações Educativo Preventivas (pt-br)">
                 description = <"*Recomendações Educativo Preventivas Qualidade de Vida (pt-br)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesifco-exame_fisico-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.exame_fisico.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Exame Fisico
+        /data[id2]/events[id3]/data[id4]/items matches {
+            CLUSTER[id7] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id8] occurrences matches {0..1} matches {
+                        /value[id9]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id10] occurrences matches {0..1} matches {
+                        /value[id11]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id13]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id14] occurrences matches {0..1} matches {
+                        /value[id15]/defining_code matches {[ac4]}
+                    }
+                }
+            }
+            CLUSTER[id18] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id19] occurrences matches {0..1} matches {
+                        /value[id20]/defining_code matches {[ac5]}
+                    }
+                    ELEMENT[id21] occurrences matches {0..1} matches {
+                        /value[id22]/defining_code matches {[ac6]}
+                    }
+                    ELEMENT[id23] occurrences matches {0..1} matches {
+                        /value[id24]/defining_code matches {[ac7]}
+                    }
+                    ELEMENT[id25] occurrences matches {0..1} matches {
+                        /value[id26]/defining_code matches {[ac8]}
+                    }
+                    ELEMENT[id29] occurrences matches {0..1} matches {
+                        /value[id30]/value matches {True, False}
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {
+                        /value[id34]/value matches {True, False}
+                    }
+                }
+            }
+            CLUSTER[id37] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id38] occurrences matches {0..1} matches {
+                        /value[id39]/defining_code matches {[ac9]}
+                    }
+                    ELEMENT[id40] occurrences matches {0..1} matches {
+                        /value[id41]/defining_code matches {[ac10]}
+                    }
+                    ELEMENT[id42] occurrences matches {0..1} matches {
+                        /value[id43]/defining_code matches {[ac11]}
+                    }
+                    ELEMENT[id44] occurrences matches {0..1} matches {
+                        /value[id45]/defining_code matches {[ac12]}
+                    }
+                    ELEMENT[id46] occurrences matches {0..1} matches {
+                        /value[id47]/defining_code matches {[ac13]}
+                    }
+                    ELEMENT[id50] occurrences matches {0..1} matches {
+                        /value[id52]/value matches {True, False}
+                    }
+                }
+            }
+            CLUSTER[id55] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id56] occurrences matches {0..1} matches {
+                        /value[id57]/defining_code matches {[ac14]}
+                    }
+                    ELEMENT[id58] occurrences matches {0..1} matches {
+                        /value[id59]/defining_code matches {[ac15]}
+                    }
+                    ELEMENT[id62] occurrences matches {0..1} matches {
+                        /value[id63]/defining_code matches {[ac16]}
+                    }
+                    ELEMENT[id64] occurrences matches {0..1} matches {
+                        /value[id65]/defining_code matches {[ac17]}
+                    }
+                    ELEMENT[id66] occurrences matches {0..1} matches {
+                        /value[id67]/defining_code matches {[ac18]}
+                    }
+                    ELEMENT[id68] occurrences matches {0..1} matches {
+                        /value[id69]/defining_code matches {[ac19]}
+                    }
+                }
+            }
+            CLUSTER[id72] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id73] occurrences matches {0..1} matches {
+                        /value[id74]/defining_code matches {[ac20]}
+                    }
+                    ELEMENT[id77] occurrences matches {0..1} matches {
+                        /value[id78]/value matches {True, False}
+                    }
+                    ELEMENT[id81] occurrences matches {0..1} matches {
+                        /value[id82]/defining_code matches {[ac21]}
+                    }
+                    ELEMENT[id83] occurrences matches {0..1} matches {
+                        /value[id84]/defining_code matches {[ac22]}
+                    }
+                    ELEMENT[id85] occurrences matches {0..1} matches {
+                        /value[id86]/defining_code matches {[ac23]}
+                    }
+                    ELEMENT[id91] occurrences matches {0..1} matches {
+                        /value[id92]/defining_code matches {[ac24]}
+                    }
+                    ELEMENT[id93] occurrences matches {0..1} matches {
+                        /value[id94]/defining_code matches {[ac25]}
+                    }
+                    ELEMENT[id95] occurrences matches {0..1} matches {
+                        /value[id96]/defining_code matches {[ac26]}
+                    }
+                    ELEMENT[id97] occurrences matches {0..1} matches {
+                        /value[id98]/defining_code matches {[ac27]}
+                    }
+                    ELEMENT[id99] occurrences matches {0..1} matches {
+                        /value[id100]/defining_code matches {[ac28]}
+                    }
+                    ELEMENT[id101] occurrences matches {0..1} matches {
+                        /value[id102]/defining_code matches {[ac29]}
+                    }
+                }
+            }
+            CLUSTER[id107] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id108] occurrences matches {0..1} matches {
+                        /value[id109]/defining_code matches {[ac30]}
+                    }
+                    ELEMENT[id112] occurrences matches {0..1} matches {
+                        /value[id113]/defining_code matches {[ac31]}
+                    }
+                    ELEMENT[id116] occurrences matches {0..1} matches {
+                        /value[id117]/defining_code matches {[ac32]}
+                    }
+                    ELEMENT[id120] occurrences matches {0..1} matches {
+                        /value[id121]/value matches {True, False}
+                    }
+                    ELEMENT[id124] occurrences matches {0..1} matches {
+                        /value[id125]/defining_code matches {[ac33]}
+                    }
+                    ELEMENT[id128] occurrences matches {0..1} matches {
+                        /value[id129]/defining_code matches {[ac34]}
+                    }
+                    ELEMENT[id131] occurrences matches {0..1} matches {
+                        /value[id132]/defining_code matches {[ac36]}
+                    }
+                    ELEMENT[id135] occurrences matches {0..1} matches {
+                        /value[id136]/defining_code matches {[ac37]}
+                    }
+                    ELEMENT[id137] occurrences matches {0..1} matches {
+                        /value[id138]/defining_code matches {[ac38]}
+                    }
+                    ELEMENT[id139] occurrences matches {0..1} matches {
+                        /value[id140]/defining_code matches {[ac39]}
+                    }
+                    ELEMENT[id143] occurrences matches {0..1} matches {
+                        /value[id144]/defining_code matches {[ac40]}
+                    }
+                    ELEMENT[id145] occurrences matches {0..1} matches {
+                        /value[id146]/defining_code matches {[ac41]}
+                    }
+                    ELEMENT[id147] occurrences matches {0..1} matches {
+                        /value[id148]/defining_code matches {[ac42]}
+                    }
+                    ELEMENT[id149] occurrences matches {0..1} matches {
+                        /value[id150]/defining_code matches {[ac43]}
+                    }
+                    ELEMENT[id151] occurrences matches {0..1} matches {
+                        /value[id152]/defining_code matches {[ac44]}
+                    }
+                    ELEMENT[id153] occurrences matches {0..1} matches {
+                        /value[id154]/defining_code matches {[ac45]}
+                    }
+                    ELEMENT[id155] occurrences matches {0..1} matches {
+                        /value[id156]/defining_code matches {[ac46]}
+                    }
+                    ELEMENT[id157] occurrences matches {0..1} matches {
+                        /value[id158]/defining_code matches {[ac47]}
+                    }
+                    ELEMENT[id161] occurrences matches {0..1} matches {
+                        /value[id162]/value matches {True, False}
+                    }
+                    ELEMENT[id166] occurrences matches {0..1} matches {
+                        /value[id167]/value matches {True, False}
+                    }
+                    ELEMENT[id170] occurrences matches {0..1} matches {
+                        /value[id171]/value matches {True, False}
+                    }
+                    ELEMENT[id174] occurrences matches {0..1} matches {
+                        /value[id175]/defining_code matches {[ac48]}
+                    }
+                    ELEMENT[id176] occurrences matches {0..1} matches {
+                        /value[id177]/defining_code matches {[ac49]}
+                    }
+                    ELEMENT[id178] occurrences matches {0..1} matches {
+                        /value[id179]/defining_code matches {[ac50]}
+                    }
+                    ELEMENT[id181] occurrences matches {0..1} matches {
+                        /value[id182]/defining_code matches {[ac51]}
+                    }
+                }
+            }
+            CLUSTER[id183] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id184] occurrences matches {0..1} matches {
+                        /value[id185]/defining_code matches {[ac52]}
+                    }
+                    ELEMENT[id186] occurrences matches {0..1} matches {
+                        /value[id187]/defining_code matches {[ac53]}
+                    }
+                    ELEMENT[id188] occurrences matches {0..1} matches {
+                        /value[id189]/defining_code matches {[ac54]}
+                    }
+                    ELEMENT[id190] occurrences matches {0..1} matches {
+                        /value[id191]/defining_code matches {[ac55]}
+                    }
+                    ELEMENT[id192] occurrences matches {0..1} matches {
+                        /value[id193]/defining_code matches {[ac56]}
+                    }
+                }
+            }
+            CLUSTER[id194] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id195] occurrences matches {0..1} matches {
+                        /value[id196]/defining_code matches {[ac57]}
+                    }
+                    ELEMENT[id197] occurrences matches {0..1} matches {
+                        /value[id198]/defining_code matches {[ac58]}
+                    }
+                    ELEMENT[id199] occurrences matches {0..1} matches {
+                        /value[id200]/defining_code matches {[ac59]}
+                    }
+                }
+            }
+            CLUSTER[id203] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id204] occurrences matches {1} matches {
+                        /value[id205]/defining_code matches {[ac60]}
+                    }
+                    ELEMENT[id206] occurrences matches {1} matches {
+                        /value[id207]/defining_code matches {[ac61]}
+                    }
+                }
+            }
+            CLUSTER[id212] occurrences matches {0..1} matches {
+                /items[id213]/value[id214]/value matches {True, False}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt br"] = <
+            ["id1.1"] = <
+                text = <"Exame Fisico">
+                description = <"Exame Fisico">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Exame Fisico">
+                description = <"Exame Fisico">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"*Exame Fisico (pt br)">
+                description = <"*Exame Fisico (pt br)">
             >
         >
     >
