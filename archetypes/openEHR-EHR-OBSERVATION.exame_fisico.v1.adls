@@ -618,6 +618,66 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id194] occurrences matches {0..1} matches {    -- Sistema Nervoso
+                                        items matches {
+                                            ELEMENT[id195] occurrences matches {0..1} matches {    -- Equilíbrio
+                                                value matches {
+                                                    DV_CODED_TEXT[id196] matches {
+                                                        defining_code matches {[ac57]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id197] occurrences matches {0..1} matches {    -- Coordenação motora
+                                                value matches {
+                                                    DV_CODED_TEXT[id198] matches {
+                                                        defining_code matches {[ac58]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id199] occurrences matches {0..1} matches {    -- Reflexos periféricos
+                                                value matches {
+                                                    DV_CODED_TEXT[id200] matches {
+                                                        defining_code matches {[ac59]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id201] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id202] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id203] occurrences matches {0..1} matches {    -- Psiquismo
+                                        items matches {
+                                            ELEMENT[id204] occurrences matches {0..1} matches {    -- Orientação tempo / espaço
+                                                value matches {
+                                                    DV_CODED_TEXT[id205] matches {
+                                                        defining_code matches {[ac60]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id206] occurrences matches {0..1} matches {    -- Humor
+                                                value matches {
+                                                    DV_CODED_TEXT[id207] matches {
+                                                        defining_code matches {[ac61]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id208] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id209] 
+                                                }
+                                            }
+                                            ELEMENT[id210] occurrences matches {0..1} matches {    -- Resultado do SRQ 20
+                                                value matches {
+                                                    DV_COUNT[id211] matches {
+                                                        magnitude matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1281,6 +1341,86 @@ terminology
                 text = <"Sinal de Laségue">
                 description = <"Sinal de Laségue">
             >
+            ["id194"] = <
+                text = <"Sistema Nervoso">
+                description = <"Sistema Nervoso">
+            >
+            ["id195"] = <
+                text = <"Equilíbrio">
+                description = <"Equilíbrio">
+            >
+            ["ac57"] = <
+                text = <"Equilíbrio">
+                description = <"Equilíbrio">
+            >
+            ["id197"] = <
+                text = <"Coordenação motora">
+                description = <"Coordenação motora">
+            >
+            ["ac58"] = <
+                text = <"Coordenação motora">
+                description = <"Coordenação motora">
+            >
+            ["id199"] = <
+                text = <"Reflexos periféricos">
+                description = <"Reflexos periféricos">
+            >
+            ["ac59"] = <
+                text = <"Reflexos periféricos">
+                description = <"Reflexos periféricos">
+            >
+            ["id201"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id203"] = <
+                text = <"Psiquismo">
+                description = <"Psiquismo">
+            >
+            ["id204"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["ac60"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["id206"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["at9"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["at10"] = <
+                text = <"Estável">
+                description = <"Estável">
+            >
+            ["at11"] = <
+                text = <"Ansioso">
+                description = <"Ansioso">
+            >
+            ["at12"] = <
+                text = <"Irritável">
+                description = <"Irritável">
+            >
+            ["at13"] = <
+                text = <"Deprimido">
+                description = <"Deprimido">
+            >
+            ["ac61"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["id208"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id210"] = <
+                text = <"Resultado do SRQ 20">
+                description = <"Resultado do SRQ 20">
+            >
         >
     >
     value_sets = <
@@ -1507,6 +1647,26 @@ terminology
         ["ac56"] = <
             id = <"ac56">
             members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac57"] = <
+            id = <"ac57">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac58"] = <
+            id = <"ac58">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac59"] = <
+            id = <"ac59">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac60"] = <
+            id = <"ac60">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac61"] = <
+            id = <"ac61">
+            members = <"at9", "at10", "at11", "at12", "at13">
         >
     >
 
