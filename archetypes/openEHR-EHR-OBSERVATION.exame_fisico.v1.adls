@@ -588,6 +588,34 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id186] occurrences matches {0..1} matches {    -- Sinal de Finkelstein
+                                                value matches {
+                                                    DV_CODED_TEXT[id187] matches {
+                                                        defining_code matches {[ac53]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id188] occurrences matches {0..1} matches {    -- Sinal de Phalen
+                                                value matches {
+                                                    DV_CODED_TEXT[id189] matches {
+                                                        defining_code matches {[ac54]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id190] occurrences matches {0..1} matches {    -- Sinal de Tinel
+                                                value matches {
+                                                    DV_CODED_TEXT[id191] matches {
+                                                        defining_code matches {[ac55]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id192] occurrences matches {0..1} matches {    -- Sinal de Laségue
+                                                value matches {
+                                                    DV_CODED_TEXT[id193] matches {
+                                                        defining_code matches {[ac56]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -1221,6 +1249,38 @@ terminology
                 text = <"Sinal de Phalen invertido">
                 description = <"Sinal de Phalen invertido">
             >
+            ["id186"] = <
+                text = <"Sinal de Finkelstein">
+                description = <"Sinal de Finkelstein">
+            >
+            ["ac53"] = <
+                text = <"Sinal de Finkelstein">
+                description = <"Sinal de Finkelstein">
+            >
+            ["id188"] = <
+                text = <"Sinal de Phalen">
+                description = <"Sinal de Phalen">
+            >
+            ["ac54"] = <
+                text = <"Sinal de Phalen">
+                description = <"Sinal de Phalen">
+            >
+            ["id190"] = <
+                text = <"Sinal de Tinel">
+                description = <"Sinal de Tinel">
+            >
+            ["ac55"] = <
+                text = <"Sinal de Tinel">
+                description = <"Sinal de Tinel">
+            >
+            ["id192"] = <
+                text = <"Sinal de Laségue">
+                description = <"Sinal de Laségue">
+            >
+            ["ac56"] = <
+                text = <"Sinal de Laségue">
+                description = <"Sinal de Laségue">
+            >
         >
     >
     value_sets = <
@@ -1430,6 +1490,22 @@ terminology
         >
         ["ac52"] = <
             id = <"ac52">
+            members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac53"] = <
+            id = <"ac53">
+            members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac54"] = <
+            id = <"ac54">
+            members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac55"] = <
+            id = <"ac55">
+            members = <"at5", "at6", "at7", "at8">
+        >
+        ["ac56"] = <
+            id = <"ac56">
             members = <"at5", "at6", "at7", "at8">
         >
     >
