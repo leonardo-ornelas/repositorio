@@ -193,6 +193,44 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id60] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id61] 
+                                                }
+                                            }
+                                            ELEMENT[id62] occurrences matches {0..1} matches {    -- Hérnia umbilical
+                                                value matches {
+                                                    DV_CODED_TEXT[id63] matches {
+                                                        defining_code matches {[ac16]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id64] occurrences matches {0..1} matches {    -- Hérnia ignal
+                                                value matches {
+                                                    DV_CODED_TEXT[id65] matches {
+                                                        defining_code matches {[ac17]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id66] occurrences matches {0..1} matches {    -- Hérnia epigástrica
+                                                value matches {
+                                                    DV_CODED_TEXT[id67] matches {
+                                                        defining_code matches {[ac18]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id68] occurrences matches {0..1} matches {    -- Hérnia incisional
+                                                value matches {
+                                                    DV_CODED_TEXT[id69] matches {
+                                                        defining_code matches {[ac19]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id70] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id71] 
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -402,6 +440,46 @@ terminology
                 text = <"Palpação">
                 description = <"Palpação">
             >
+            ["id60"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id62"] = <
+                text = <"Hérnia umbilical">
+                description = <"Hérnia umbilical">
+            >
+            ["ac16"] = <
+                text = <"Hérnia umbilical">
+                description = <"Hérnia umbilical">
+            >
+            ["id64"] = <
+                text = <"Hérnia ignal">
+                description = <"Hérnia ignal">
+            >
+            ["ac17"] = <
+                text = <"Hérnia ignal">
+                description = <"Hérnia ignal">
+            >
+            ["id66"] = <
+                text = <"Hérnia epigástrica">
+                description = <"Hérnia epigástrica">
+            >
+            ["ac18"] = <
+                text = <"Hérnia epigástrica">
+                description = <"Hérnia epigástrica">
+            >
+            ["id68"] = <
+                text = <"Hérnia incisional">
+                description = <"Hérnia incisional">
+            >
+            ["ac19"] = <
+                text = <"Hérnia incisional">
+                description = <"Hérnia incisional">
+            >
+            ["id70"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
         >
     >
     value_sets = <
@@ -463,6 +541,22 @@ terminology
         >
         ["ac15"] = <
             id = <"ac15">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac16"] = <
+            id = <"ac16">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac17"] = <
+            id = <"ac17">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac18"] = <
+            id = <"ac18">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac19"] = <
+            id = <"ac19">
             members = <"at1", "at2", "at3">
         >
     >
