@@ -151,7 +151,7 @@
     "rmType" : "EVALUATION",
     "name" : "Problem/Diagnosis",
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis.v1.adls",
-    "sha" : "29b6e49c97e314b8ddd6f20285a751c0a561e6ba",
+    "sha" : "f167ebe697e2c65de43bd7783c53124ab665a077",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-INSTRUCTION.medication.v1.0.0",
@@ -423,7 +423,7 @@
     "rmType" : "EVALUATION",
     "name" : "Family History",
     "path" : "archetypes/openEHR-EHR-EVALUATION.family_history.v1.adls",
-    "sha" : "9d59b74063615226546e63ed7817c94925a21108",
+    "sha" : "5273996a36193ba3aa86a1e3702b5b206d35b579",
     "languages" : [ "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.physical_activity_summary.v1.0.0",
@@ -563,7 +563,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Story/History",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.story.v1.adls",
-    "sha" : "648eda60b3be3a616f97b00b5a7c8ca196d770a1",
+    "sha" : "d1fcb5eca8e39d282d3430f02af3cf0b5104b0f1",
     "languages" : [ "en", "ar-sy", "es-ar" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-alcohol.v1.0.0",
@@ -931,5 +931,61 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.exame_fisico.v1.adls",
     "sha" : "985036192ea168548229b22bd0017ee45ce9c023",
     "languages" : [ "ptbr", "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.health_education.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "Health Education",
+    "path" : "archetypes/openEHR-EHR-ACTION.health_education.v1.adls",
+    "sha" : "89c63f22f06f11385ce550500ff0f1728a7fa5ab",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.home_environment.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Home Environment",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.home_environment.v1.adls",
+    "sha" : "85adda0c70531b93964638a41ffde3fef643cffb",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.household.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Household",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.household.v1.adls",
+    "sha" : "1e115f88b7766369d69531cb8edd3a53a66cd8a3",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.housing.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Housing",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.housing.v1.adls",
+    "sha" : "1dcee24b27e166bafd34ec1bededed08f58cc4b3",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-CLUSTER.symptom.v1.0.0",
+    "rmType" : "CLUSTER",
+    "name" : "Symptom",
+    "path" : "archetypes/openEHR-EHR-CLUSTER.symptom.v1.adls",
+    "sha" : "83bd2fe8214d477e1225de13e9070e514e953990",
+    "languages" : [ "en", "de", "ar-sy" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.lifestyle_factors.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Lifestyle Factors",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.lifestyle_factors.v1.adls",
+    "sha" : "67271e5ae4e11176519f55235aee67a0e21f6a6d",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.exposure.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Exposure",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.exposure.v1.adls",
+    "sha" : "5225f1c5e773a2d360f6f7b63c85c41cd4b95256",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.nutrition_summary.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Nutrition Summary",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.nutrition_summary.v1.adls",
+    "sha" : "2014651ff9f899f4954c0ae9bc0d9bd13e13ee94",
+    "languages" : [ "en" ]
   } ]
 }
