@@ -132,7 +132,7 @@ definition
                 }
             }
         }
-        /protocol[id8]/items existence matches {0} matches {
+        /protocol[id8]/items matches {
             ELEMENT[id21] occurrences matches {0..1} matches {
                 /value[id73]/defining_code matches {[ac2]}
             }
@@ -236,7 +236,7 @@ definition
                 }
             }
         }
-        /protocol[id21]/items existence matches {0} matches {
+        /protocol[id21]/items matches {
             ELEMENT[id22] occurrences matches {0..1} matches {
                 /value[id64]/defining_code matches {[ac2]}
             }
