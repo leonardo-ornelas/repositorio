@@ -929,7 +929,7 @@
     "id" : "openEHR-EHR-OBSERVATION.exame_fisico.v1.0.0",
     "rmType" : "OBSERVATION",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.exame_fisico.v1.adls",
-    "sha" : "c5a88845bcad97b8b7a0e82744527167bc8bfea0",
+    "sha" : "985036192ea168548229b22bd0017ee45ce9c023",
     "languages" : [ "ptbr", "en", "pt-br" ]
   } ]
 }
