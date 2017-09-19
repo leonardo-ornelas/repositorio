@@ -152,20 +152,20 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Story/History (en)">
-                description = <"*The subjective observation by an individual about their health and health issues, as told to a clinician or recorded directly by an individual/patient. Commonly referred to by clinicians as 'Clinical History' or 'History of Presenting Complaint'. (en)">
+                text = <"Estória/História">
+                description = <"A observação subjetiva de um indivíduo sobre seus problemas de saúde e saúde, como é dito a um clínico ou registrado diretamente por um indivíduo / paciente. Comumente referido pelos clínicos como \"História Clínica\" ou \"História da Apresentação de Reclamações\".">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+                text = <"Qualquer evento">
+                description = <"Padrão, ponto de tempo não especificado ou evento de intervalo que pode ser explicitamente definido em um modelo ou em tempo de execução.">
             >
             ["id5"] = <
-                text = <"*Story (en)">
-                description = <"*Narrative description of the clinical history or story. (en)">
+                text = <"Estória">
+                description = <"Descrição narrativa da história ou história clínica.">
             >
             ["id7"] = <
-                text = <"*Details (en)">
-                description = <"*Additional structured details about the individual's story or patient's history. (en)">
+                text = <"Detalhes">
+                description = <"Detalhes estruturados adicionais sobre a história do indivíduo ou a história do paciente.">
             >
         >
     >
