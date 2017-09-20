@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+﻿archetype (adl_version=2.0.5; rm_release=1.0.2)
 	openEHR-DEMOGRAPHIC-PARTY_IDENTITY.person_name.v1.0.0
 
 language
@@ -7,22 +7,20 @@ language
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			author = <
-				["name"] = <"Sergio Miranda Freire">
 				["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
+				["name"] = <"Sergio Miranda Freire">
 				["email"] = <"sergio@lampada.uerj.br">
 			>
 		>
 	>
 
 description
-	lifecycle_state = <"unmanaged">
 	original_author = <
 		["name"] = <"Rigoleta Dutra & Sergio Miranda Freire">
 		["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
 		["email"] = <"sergio@lampada.uerj.br">
 		["date"] = <"20/05/2009">
 	>
-	copyright = <"© openEHR Foundation">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -39,10 +37,12 @@ description
 			misuse = <"">
 		>
 	>
+	lifecycle_state = <"unmanaged">
 	other_contributors = <"Ian McNiccol, Ocean Informatics, Scotland", "Rong Chen, Cambio Healthcare Systems, Sweden", "Ricardo Correia, SBIM/FMUP, Portugal", "Grahame Grieve, Australia", "Heather Grain, Llewelyn Grain Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia">
-	references = <
-		["1"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
+	other_details = <
+		["references"] = <"ISO/TS 22220:2008(E) - Identification of Subject of Care - Technical Specification- International Organization for Standardization.">
 	>
+	copyright = <"copyright (c) 2010 openEHR foundation">
 
 definition
 	PARTY_IDENTITY[id1] matches {	-- Person name
@@ -54,23 +54,23 @@ definition
 		}
 		details matches {
 			ITEM_TREE[id2] occurrences matches {0..1} matches {	-- Name
-				items cardinality matches {1..*; ordered} matches {
-					ELEMENT[id3] matches {	-- Given name
+				items matches {
+					ELEMENT[id3] occurrences matches {0..*} matches {	-- Given name
 						value matches {
 							DV_TEXT[id26] 
 						}
 					}
-					ELEMENT[id4] matches {	-- Family name
+					ELEMENT[id4] occurrences matches {0..*} matches {	-- Family name
 						value matches {
 							DV_TEXT[id27] 
 						}
 					}
-					ELEMENT[id5] matches {	-- Title
+					ELEMENT[id5] occurrences matches {0..*} matches {	-- Title
 						value matches {
 							DV_TEXT[id28] 
 						}
 					}
-					ELEMENT[id6] matches {	-- Suffix
+					ELEMENT[id6] occurrences matches {0..*} matches {	-- Suffix
 						value matches {
 							DV_TEXT[id29] 
 						}
@@ -99,7 +99,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[id9] occurrences matches {1} matches {	-- Preferred name
+					ELEMENT[id9] occurrences matches {0..1} matches {	-- Preferred name
 						value matches {
 							DV_BOOLEAN[id34] 
 						}
@@ -124,120 +124,6 @@ definition
 
 terminology
 	term_definitions = <
-		["pt-br"] = <
-			["id1"] = <
-				text = <"Nome da pessoa">
-				description = <"Estrutura do nome de uma pessoa.">
-			>
-			["id2"] = <
-				text = <"Componentes do nome">
-				description = <"Componentes do nome da pessoa.">
-			>
-			["id3"] = <
-				text = <"Nome atribuído">
-				description = <"O nome que identifica a pessoa no grupo familiar ou pelo qual ela é univocamente identificada socialmente.">
-			>
-			["id4"] = <
-				text = <"Sobrenome">
-				description = <"A parte do nome que uma pessoa possui em comum com outros membros de sua família, distinta do(s) seu(s) nome(s) atribuído(s).">
-			>
-			["id5"] = <
-				text = <"Título do nome">
-				description = <"Uma forma honorífica que inicia o nome, usada ao se referir a uma pessoa pelo nome, seja por correspondência ou por telefone, ou, dependendo da situação cultural, pessoalmente.">
-			>
-			["id6"] = <
-				text = <"Sufixo do nome">
-				description = <"Termo adicional usado após o nome da pessoa.">
-			>
-			["id8"] = <
-				text = <"Representação alternativa do nome">
-				description = <"Grupo que descreve uma forma alternativa de representar o nome de uma pessoa.">
-			>
-			["id9"] = <
-				text = <"Nome preferencial">
-				description = <"Indica o nome pelo qual a pessoa prefere ser identificada.">
-			>
-			["id10"] = <
-				text = <"Indicador de acurácia/segurança">
-				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa.">
-			>
-			["id11"] = <
-				text = <"Nome completo">
-				description = <"O nome completo da pessoa, resultado da concatenação de suas partes componentes.">
-			>
-			["id20"] = <
-				text = <"Intervalo de utilização">
-				description = <"O período de tempo para o qual este uso do nome se aplica para o nome ao qual ele está associado.">
-			>
-			["id21"] = <
-				text = <"Identificador usado">
-				description = <"A combinação do tipo de identificador, emissor do identificador e nome do identificador que especifica o vínculo entre este nome e o uso do identificador para relatório, ou outros usos.">
-			>
-			["id22"] = <
-				text = <"Uso da representação">
-				description = <"Nome da forma de representação usada.">
-			>
-			["id23"] = <
-				text = <"Representação alternativa do nome">
-				description = <"Representação alternativa do nome desta pessoa usando estilos alternativos de representação, tais como caracteres ou variações do conjunto de caracteres do idioma para exibição local.">
-			>
-			["at24"] = <
-				text = <"Nome para relatório">
-				description = <"O nome do sujeito usado para relatório, quando acompanhado por um identificador específico.">
-			>
-			["at25"] = <
-				text = <"Nome de recém-nascido">
-				description = <"Tipo reservado para identificação de recém-nascidos sem nome.">
-			>
-			["at26"] = <
-				text = <"Nome profissional ou comercial">
-				description = <"O nome usado pela pessoa para propósitos profissionais ou de negócios.">
-			>
-			["at27"] = <
-				text = <"Nome de solteiro(a)">
-				description = <"O nome usado pela pessoa antes de se casar.">
-			>
-			["at28"] = <
-				text = <"Nome legal">
-				description = <"Nome registrado (legal) para a pessoa.">
-			>
-			["at29"] = <
-				text = <"Outro nome">
-				description = <"Qualquer outro nome pelo qual o sujeito é conhecido, ou foi conhecido no passado.">
-			>
-			["at32"] = <
-				text = <"Nome não confiável">
-				description = <"Indica que o nome registrado é um nome fictício ou parcial.">
-			>
-			["at33"] = <
-				text = <"Escrito de forma errada">
-				description = <"Este indicador permite ao usuário indicar que há um erro de digitação, mas que deve ser retido para um uso potencial na vinculação de registros.">
-			>
-			["at34"] = <
-				text = <"Nome para não ser usado">
-				description = <"Indica que este nome não deve ser usado ao se referir à pessoa.">
-			>
-			["at35"] = <
-				text = <"Vínculo do nome proibido por lei">
-				description = <"Indica que este nome e todos os nomes antes dele na seqüência de nomes não devem ser exibidos ou indicados de nenhum modo ao procurar por ou lidar com informações e eventos associados com um nome que segue a este na seqüência de nomes.">
-			>
-			["at36"] = <
-				text = <"Requisito especial seguranca/privacidade">
-				description = <"Indica um nome para o qual episódios são vinculados e devem somente ser acessados por pessoas autorizadas.">
-			>
-			["at37"] = <
-				text = <"Nome temporário">
-				description = <"Indica que o nome da pessoa não foi determinado.">
-			>
-			["ac1"] = <
-				text = <"Nome da pessoa (synthesised)">
-				description = <"Estrutura do nome de uma pessoa. (synthesised)">
-			>
-			["ac2"] = <
-				text = <"Indicador de acurácia/segurança (synthesised)">
-				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa. (synthesised)">
-			>
-		>
 		["en"] = <
 			["id1"] = <
 				text = <"Person name">
@@ -350,6 +236,120 @@ terminology
 			["ac2"] = <
 				text = <"Issues of accuracy and privacy (synthesised)">
 				description = <"An indicator of specific conditions or rules that should be applied to the use of the person name. (synthesised)">
+			>
+		>
+		["pt-br"] = <
+			["id1"] = <
+				text = <"Nome da pessoa">
+				description = <"Estrutura do nome de uma pessoa.">
+			>
+			["id2"] = <
+				text = <"Componentes do nome">
+				description = <"Componentes do nome da pessoa.">
+			>
+			["id3"] = <
+				text = <"Nome atribuído">
+				description = <"O nome que identifica a pessoa no grupo familiar ou pelo qual ela é univocamente identificada socialmente.">
+			>
+			["id4"] = <
+				text = <"Sobrenome">
+				description = <"A parte do nome que uma pessoa possui em comum com outros membros de sua família, distinta do(s) seu(s) nome(s) atribuído(s).">
+			>
+			["id5"] = <
+				text = <"Título do nome">
+				description = <"Uma forma honorífica que inicia o nome, usada ao se referir a uma pessoa pelo nome, seja por correspondência ou por telefone, ou, dependendo da situação cultural, pessoalmente.">
+			>
+			["id6"] = <
+				text = <"Sufixo do nome">
+				description = <"Termo adicional usado após o nome da pessoa.">
+			>
+			["id8"] = <
+				text = <"Representação alternativa do nome">
+				description = <"Grupo que descreve uma forma alternativa de representar o nome de uma pessoa.">
+			>
+			["id9"] = <
+				text = <"Nome preferencial">
+				description = <"Indica o nome pelo qual a pessoa prefere ser identificada.">
+			>
+			["id10"] = <
+				text = <"Indicador de acurácia/segurança">
+				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa.">
+			>
+			["id11"] = <
+				text = <"Nome completo">
+				description = <"O nome completo da pessoa, resultado da concatenação de suas partes componentes.">
+			>
+			["id20"] = <
+				text = <"Intervalo de utilização">
+				description = <"O período de tempo para o qual este uso do nome se aplica para o nome ao qual ele está associado.">
+			>
+			["id21"] = <
+				text = <"Identificador usado">
+				description = <"A combinação do tipo de identificador, emissor do identificador e nome do identificador que especifica o vínculo entre este nome e o uso do identificador para relatório, ou outros usos.">
+			>
+			["id22"] = <
+				text = <"Uso da representação">
+				description = <"Nome da forma de representação usada.">
+			>
+			["id23"] = <
+				text = <"Representação alternativa do nome">
+				description = <"Representação alternativa do nome desta pessoa usando estilos alternativos de representação, tais como caracteres ou variações do conjunto de caracteres do idioma para exibição local.">
+			>
+			["at24"] = <
+				text = <"Nome para relatório">
+				description = <"O nome do sujeito usado para relatório, quando acompanhado por um identificador específico.">
+			>
+			["at25"] = <
+				text = <"Nome de recém-nascido">
+				description = <"Tipo reservado para identificação de recém-nascidos sem nome.">
+			>
+			["at26"] = <
+				text = <"Nome profissional ou comercial">
+				description = <"O nome usado pela pessoa para propósitos profissionais ou de negócios.">
+			>
+			["at27"] = <
+				text = <"Nome de solteiro(a)">
+				description = <"O nome usado pela pessoa antes de se casar.">
+			>
+			["at28"] = <
+				text = <"Nome legal">
+				description = <"Nome registrado (legal) para a pessoa.">
+			>
+			["at29"] = <
+				text = <"Outro nome">
+				description = <"Qualquer outro nome pelo qual o sujeito é conhecido, ou foi conhecido no passado.">
+			>
+			["at32"] = <
+				text = <"Nome não confiável">
+				description = <"Indica que o nome registrado é um nome fictício ou parcial.">
+			>
+			["at33"] = <
+				text = <"Escrito de forma errada">
+				description = <"Este indicador permite ao usuário indicar que há um erro de digitação, mas que deve ser retido para um uso potencial na vinculação de registros.">
+			>
+			["at34"] = <
+				text = <"Nome para não ser usado">
+				description = <"Indica que este nome não deve ser usado ao se referir à pessoa.">
+			>
+			["at35"] = <
+				text = <"Vínculo do nome proibido por lei">
+				description = <"Indica que este nome e todos os nomes antes dele na seqüência de nomes não devem ser exibidos ou indicados de nenhum modo ao procurar por ou lidar com informações e eventos associados com um nome que segue a este na seqüência de nomes.">
+			>
+			["at36"] = <
+				text = <"Requisito especial seguranca/privacidade">
+				description = <"Indica um nome para o qual episódios são vinculados e devem somente ser acessados por pessoas autorizadas.">
+			>
+			["at37"] = <
+				text = <"Nome temporário">
+				description = <"Indica que o nome da pessoa não foi determinado.">
+			>
+			["ac1"] = <
+				text = <"Nome da pessoa (synthesised)">
+				description = <"Estrutura do nome de uma pessoa. (synthesised)">
+			>
+			["ac2"] = <
+				text = <"Indicador de acurácia/segurança (synthesised)">
+				description = <"Um indicador das condições específicas ou regras que devem ser aplicadas ao nome de uma pessoa. (synthesised)">
 			>
 		>
 	>
