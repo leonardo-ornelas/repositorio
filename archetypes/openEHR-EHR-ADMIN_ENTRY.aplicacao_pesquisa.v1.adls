@@ -68,16 +68,16 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*Aplicacao pesquisa (pt-br)">
-                description = <"*Aplicacao pesquisa (pt-br)">
+                text = <"Search application">
+                description = <"Search application">
             >
             ["id3"] = <
-                text = <"*Data da aplicação da pesquisa (pt-br)">
-                description = <"*Data de aplicação (pt-br)">
+                text = <"Research application date">
+                description = <"Research application date">
             >
             ["id5"] = <
-                text = <"*Aceitou responder o questionário (pt-br)">
-                description = <"*Aceitou responder o questionário (pt-br)">
+                text = <"Accepted to answer the questionnaire">
+                description = <"Accepted to answer the questionnaire">
             >
         >
     >
