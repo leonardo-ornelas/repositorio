@@ -3,6 +3,15 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +19,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -52,6 +64,20 @@ terminology
             ["id5"] = <
                 text = <"Aceitou responder o questionário">
                 description = <"Aceitou responder o questionário">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Aplicacao pesquisa (pt-br)">
+                description = <"*Aplicacao pesquisa (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Data da aplicação da pesquisa (pt-br)">
+                description = <"*Data de aplicação (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Aceitou responder o questionário (pt-br)">
+                description = <"*Aceitou responder o questionário (pt-br)">
             >
         >
     >
