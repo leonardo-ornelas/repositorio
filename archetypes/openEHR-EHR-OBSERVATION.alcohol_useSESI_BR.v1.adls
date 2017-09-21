@@ -96,21 +96,21 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Consumo
+                            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Consumption
                                 value matches {
                                     DV_CODED_TEXT[id0.6] matches {
                                         defining_code matches {[ac0.2]}
                                     }
                                 }
                             }
-                            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Tipo
+                            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Type
                                 value matches {
                                     DV_CODED_TEXT[id0.8] matches {
                                         defining_code matches {[ac0.3]}
                                     }
                                 }
                             }
-                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.
+                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
                                 value matches {
                                     DV_BOOLEAN[id0.10] matches {
                                         value matches {True, False}
@@ -124,14 +124,14 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Costuma beber pela manhã para diminuir o nervosismo ou ressaca.
+                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Usually drinks in the morning to lessen the nervousness or hangover.
                                 value matches {
                                     DV_BOOLEAN[id0.14] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Sente culpado pela maneira como costuma beber.
+                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- You feel guilty about the way you usually drink.
                                 value matches {
                                     DV_BOOLEAN[id0.16] matches {
                                         value matches {True, False}
@@ -210,8 +210,8 @@ terminology
                 description = <"Doses">
             >
             ["id0.5"] = <
-                text = <"Consumo">
-                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião.">
+                text = <"Consumption">
+                description = <"Taking into account all types of alcoholic beverage, how many times in the last 30 days, consumed five or more doses on a single occasion.">
             >
             ["at0.5"] = <
                 text = <"Nenhuma">
@@ -242,8 +242,8 @@ terminology
                 description = <"Consumo">
             >
             ["id0.7"] = <
-                text = <"Tipo">
-                description = <"Tipo">
+                text = <"Type">
+                description = <"Type">
             >
             ["at0.11"] = <
                 text = <"Não consome bebida alcoólica">
@@ -278,20 +278,20 @@ terminology
                 description = <"Tipo">
             >
             ["id0.9"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
+                text = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
+                description = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
             >
             ["id0.11"] = <
                 text = <"As pessoas o(a) aborrecem por seu modo de beber">
                 description = <"As pessoas o(a) aborrecem por seu modo de beber">
             >
             ["id0.13"] = <
-                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
-                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
+                text = <"Usually drinks in the morning to lessen the nervousness or hangover.">
+                description = <"Usually drinks in the morning to lessen the nervousness or hangover.">
             >
             ["id0.15"] = <
-                text = <"Sente culpado pela maneira como costuma beber.">
-                description = <"Sente culpado pela maneira como costuma beber.">
+                text = <"You feel guilty about the way you usually drink.">
+                description = <"You feel guilty about the way you usually drink.">
             >
         >
         ["pt-br"] = <
@@ -300,8 +300,8 @@ terminology
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
             ["id0.2"] = <
-                text = <"Doses (en)">
-                description = <"Doses (en)">
+                text = <"Doses">
+                description = <"Doses">
             >
             ["at0.1"] = <
                 text = <"Nenhuma, eu não bebo (en)">
@@ -324,8 +324,8 @@ terminology
                 description = <"Doses (en)">
             >
             ["id0.5"] = <
-                text = <"Consumo (en)">
-                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião. (en)">
+                text = <"Consumo">
+                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião.">
             >
             ["at0.5"] = <
                 text = <"Nenhuma (en)">
@@ -356,8 +356,8 @@ terminology
                 description = <"Consumo (en)">
             >
             ["id0.7"] = <
-                text = <"Tipo (en)">
-                description = <"Tipo (en)">
+                text = <"Tipo">
+                description = <"Tipo">
             >
             ["at0.11"] = <
                 text = <"Não consome bebida alcoólica (en)">
@@ -392,20 +392,20 @@ terminology
                 description = <"Tipo (en)">
             >
             ["id0.9"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber. (en)">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber. (en)">
+                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
+                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
             >
             ["id0.11"] = <
                 text = <"As pessoas o(a) aborrecem por seu modo de beber (en)">
                 description = <"As pessoas o(a) aborrecem por seu modo de beber (en)">
             >
             ["id0.13"] = <
-                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca. (en)">
-                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca. (en)">
+                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
+                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
             >
             ["id0.15"] = <
-                text = <"Sente culpado pela maneira como costuma beber. (en)">
-                description = <"Sente culpado pela maneira como costuma beber. (en)">
+                text = <"Sente culpado pela maneira como costuma beber.">
+                description = <"Sente culpado pela maneira como costuma beber.">
             >
         >
     >
