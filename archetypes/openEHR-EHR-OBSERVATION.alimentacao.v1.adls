@@ -23,14 +23,14 @@ definition
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
-                                    ELEMENT[id6] occurrences matches {1} matches {    -- Com que freqüência o trabalhador normalmente come frutas frescas.
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Com que frequência o trabalhador normalmente come frutas frescas.
                                         value matches {
                                             DV_CODED_TEXT[id7] matches {
                                                 defining_code matches {[ac1]}
                                             }
                                         }
                                     }
-                                    ELEMENT[id9] occurrences matches {1} matches {    -- Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.
+                                    ELEMENT[id9] occurrences matches {1} matches {    -- Com que frequência o trabalhador normalmente come verduras ou saladas cruas.
                                         value matches {
                                             DV_CODED_TEXT[id10] matches {
                                                 defining_code matches {[ac2]}
@@ -82,8 +82,8 @@ terminology
                 description = <"Any event">
             >
             ["id6"] = <
-                text = <"Com que freqüência o trabalhador normalmente come frutas frescas.">
-                description = <"Com que freqüência o trabalhador normalmente come frutas frescas.">
+                text = <"Com que frequência o trabalhador normalmente come frutas frescas.">
+                description = <"Com que frequência o trabalhador normalmente come frutas frescas.">
             >
             ["at1"] = <
                 text = <"5 ou mais vezes ao dia.">
@@ -122,8 +122,8 @@ terminology
                 description = <"Com que freqüência o trabalhador normalmente come frutas frescas">
             >
             ["id9"] = <
-                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
-                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+                text = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
             >
             ["ac2"] = <
                 text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
