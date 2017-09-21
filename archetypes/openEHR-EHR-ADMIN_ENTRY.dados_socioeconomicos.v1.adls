@@ -43,6 +43,7 @@ definition
                     CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
                         items matches {
                             CLUSTER[id12] occurrences matches {0..1} 
+                            allow_archetype ELEMENT[id13] occurrences matches {0..1}
                         }
                     }
                 }
