@@ -75,6 +75,9 @@ definition
                     ELEMENT[id12] occurrences matches {0..1} matches {    -- Form
                         /value[id21.1]/defining_code matches {[ac0.1]}
                     }
+                    ELEMENT[id19] occurrences matches {1} matches {    -- Method of use
+                        /value[id22]/defining_code matches {[ac0.0.1]}
+                    }
                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
                     }
@@ -99,6 +102,13 @@ definition
             allow_archetype CLUSTER[id15] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+            ELEMENT[id0.0.4] occurrences matches {0..1} matches {    -- Exposure
+                value matches {
+                    DV_BOOLEAN[id0.0.5] matches {
+                        value matches {True, False}
+                    }
+                }
             }
         }
     }
@@ -222,6 +232,38 @@ terminology
                 text = <"Frequency (synthesised)">
                 description = <"Frequency of use of substance (synthesised)">
             >
+            ["at0.0.1"] = <
+                text = <"Nunca fumou">
+                description = <"Nunca fumou">
+            >
+            ["at0.0.2"] = <
+                text = <"Parou de fumar há mais de 2 anos">
+                description = <"Parou de fumar há mais de 2 anos">
+            >
+            ["at0.0.3"] = <
+                text = <"Parou de fumar há menos de 2 anos">
+                description = <"Parou de fumar há menos de 2 anos">
+            >
+            ["at0.0.4"] = <
+                text = <"Fuma menos de 10 cigarros por dia">
+                description = <"Fuma menos de 10 cigarros por dia">
+            >
+            ["at0.0.5"] = <
+                text = <"Fuma de 10 a 20 cigarros por dia">
+                description = <"Fuma de 10 a 20 cigarros por dia">
+            >
+            ["at0.0.6"] = <
+                text = <"Fuma mais 20 cigarros por dia">
+                description = <"Fuma mais 20 cigarros por dia">
+            >
+            ["ac0.0.1"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso">
+            >
+            ["id0.0.4"] = <
+                text = <"Exposure">
+                description = <"Exposure to smoke">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -340,6 +382,44 @@ terminology
                 text = <"*Frequency (synthesised) (en)">
                 description = <"*Frequency of use of substance (synthesised) (en)">
             >
+            ["at0.0.1"] = <
+                text = <"Nunca fumou (en)">
+                description = <"Nunca fumou (en)">
+            >
+            ["at0.0.2"] = <
+                text = <"Parou de fumar há mais de 2 anos (en)">
+                description = <"Parou de fumar há mais de 2 anos (en)">
+            >
+            ["at0.0.3"] = <
+                text = <"Parou de fumar há menos de 2 anos (en)">
+                description = <"Parou de fumar há menos de 2 anos (en)">
+            >
+            ["at0.0.4"] = <
+                text = <"Fuma menos de 10 cigarros por dia (en)">
+                description = <"Fuma menos de 10 cigarros por dia (en)">
+            >
+            ["at0.0.5"] = <
+                text = <"Fuma de 10 a 20 cigarros por dia (en)">
+                description = <"Fuma de 10 a 20 cigarros por dia (en)">
+            >
+            ["at0.0.6"] = <
+                text = <"Fuma mais 20 cigarros por dia (en)">
+                description = <"Fuma mais 20 cigarros por dia (en)">
+            >
+            ["ac0.0.1"] = <
+                text = <"Modo de uso (en)">
+                description = <"Modo de uso (en)">
+            >
+            ["id0.0.4"] = <
+                text = <"Exposição">
+                description = <"Exposição á fumaça">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.0.1"] = <
+            id = <"ac0.0.1">
+            members = <"at0.0.1", "at0.0.2", "at0.0.3", "at0.0.4", "at0.0.5", "at0.0.6">
         >
     >
 
