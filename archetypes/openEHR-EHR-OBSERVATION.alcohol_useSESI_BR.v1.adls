@@ -1,0 +1,283 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.alcohol_useSESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"alcohol", "beer", "wine", "spirits", "fortified", "consumption", "use", "abuse", "binge">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used for recording persistent, summary details about alcohol consumption - this should be captured using the EVALUATION.alcohol_use_summary archetype.
+
+Not to be used to record information about consumption of other substances other than alcohol.">
+            purpose = <"To record details about the actual consumption of alcohol and related behaviour.
+">
+            use = <"Use to record details of the use of all forms of alcohol, including actual consumption and behaviour at a specific point in time and average consumption over intervals of time. 
+
+An alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.
+
+A record of typical alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.
+
+Data that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_use_summary archetype (recording the summary and persisting data).
+
+Binge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.">
+        >
+        ["pt-br"] = <
+            keywords = <"álcool", "cerveja", "vinho", "bebida alcoólica", "fortificado", "consumo", "uso", "abuso", "compulsão">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para registrar detalhes resumidos sobre o consumo de álcool - isso deve ser capturado usando o arquétipo EVALUATION.alcohol_use_summary
+
+Não deve ser usado para registrar informações sobre o consumo de outras substâncias além do álcool
+">
+            purpose = <"Para registrar detalhes sobre o atual consumo de álcool e comportamento relacionado.
+
+">
+            use = <"Use para registrar detalhes sobre o uso de todas as formas de álcool, incluindo o atual consumo e comportamento reais em um ponto específico no tempo e consumo médio ao longo de intervalos de tempo.
+Um diário de consumo de álcool que pode ser acumulado ao longo do tempo, registrando o consumo de álcool em vários dias seqüenciais - registrando consumos reais usando o evento 'Dia especificado' para cada entrada diária.
+Um registro do consumo típico de álcool durante um período de tempo que pode ser registrando a quantidade de álcool consumida usando o evento \"Uso médio\" - uso médio durante um período de tempo especificado.
+Os dados que podem ser usados ​​para avaliar o risco de abuso ou dependência de álcool serão registrados usando dois arquétipos: este arquétipo OBSERVATION ( Registrando as observações / medições) e o arquétipo EVALUATION.alcohol_use_summary (Gravar o resumo e os dados persistentes)
+O consumo excessivo não é diretamente referido neste arquétipo, mas este arquétipo será um recurso chave usado para apoiar a identificação de compulsão através do registro preciso da quantidade e freqüência de bebidas, gatilhos e contexto social/cultural do consumo. A avaliação do \"Compulsão por bebidas\" pode ser registrada como parte de uma \"Lista de Problemas\"
+
+">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2011-07-15">
+    >
+    other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Tim Garden, NTG Department of Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
+
+definition
+    OBSERVATION[id1.1] matches {    -- Alcohol Use
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    CLUSTER[id6] matches {
+                        items matches {
+                            CLUSTER[id16] occurrences matches {0..1} matches {
+                                items cardinality matches {1; unordered} matches {
+                                    ELEMENT[id15] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_QUANTITY[id30] matches {
+                                                property matches {[at1]}
+                                                units matches {"/h", "/d", "/wk", "/mo"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_QUANTITY[id31] matches {
+                                                property matches {[at2]}
+                                                units matches {"gm/d", "gm/wk"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Doses
+                                value matches {
+                                    DV_CODED_TEXT[id0.3] matches {
+                                        defining_code matches {[ac0.1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Consumo
+                                value matches {
+                                    DV_CODED_TEXT[id0.6] matches {
+                                        defining_code matches {[ac0.2]}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id28] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+            POINT_EVENT[id24] matches {
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+            INTERVAL_EVENT[id23] matches {
+                /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+        }
+        /protocol[id25]/items matches {
+            ELEMENT[id26] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id39] matches {
+                        property matches {[at4]}
+                        units matches {"gm"}
+                    }
+                }
+            }
+            ELEMENT[id27] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id40] matches {
+                        property matches {[at1]}
+                        units matches {"/d", "/wk", "/mo"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+            ["id0.2"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
+            ["at0.1"] = <
+                text = <"Nenhuma, eu não bebo">
+                description = <"Nenhuma, eu não bebo">
+            >
+            ["at0.2"] = <
+                text = <"1 a 7 doses">
+                description = <"1 a 7 doses">
+            >
+            ["at0.3"] = <
+                text = <"8 a 14 doses">
+                description = <"8 a 14 doses">
+            >
+            ["at0.4"] = <
+                text = <"15 ou mais doses">
+                description = <"15 ou mais doses">
+            >
+            ["ac0.1"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
+            ["id0.5"] = <
+                text = <"Consumo">
+                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião.">
+            >
+            ["at0.5"] = <
+                text = <"Nenhuma">
+                description = <"Nenhuma">
+            >
+            ["at0.6"] = <
+                text = <"1 vez">
+                description = <"1 vez">
+            >
+            ["at0.7"] = <
+                text = <"2 a 4 vezes">
+                description = <"2 a 4 vezes">
+            >
+            ["at0.8"] = <
+                text = <"5 a 8 vezes">
+                description = <"5 a 8 vezes">
+            >
+            ["at0.9"] = <
+                text = <"8 a 12 vezes">
+                description = <"8 a 12 vezes">
+            >
+            ["at0.10"] = <
+                text = <"Acima de 12 vezes">
+                description = <"Acima de 12 vezes">
+            >
+            ["ac0.2"] = <
+                text = <"Consumo">
+                description = <"Consumo">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Uso de álcool">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+            ["id0.2"] = <
+                text = <"Doses (en)">
+                description = <"Doses (en)">
+            >
+            ["at0.1"] = <
+                text = <"Nenhuma, eu não bebo (en)">
+                description = <"Nenhuma, eu não bebo (en)">
+            >
+            ["at0.2"] = <
+                text = <"1 a 7 doses (en)">
+                description = <"1 a 7 doses (en)">
+            >
+            ["at0.3"] = <
+                text = <"8 a 14 doses (en)">
+                description = <"8 a 14 doses (en)">
+            >
+            ["at0.4"] = <
+                text = <"15 ou mais doses (en)">
+                description = <"15 ou mais doses (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Doses (en)">
+                description = <"Doses (en)">
+            >
+            ["id0.5"] = <
+                text = <"Consumo (en)">
+                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião. (en)">
+            >
+            ["at0.5"] = <
+                text = <"Nenhuma (en)">
+                description = <"Nenhuma (en)">
+            >
+            ["at0.6"] = <
+                text = <"1 vez (en)">
+                description = <"1 vez (en)">
+            >
+            ["at0.7"] = <
+                text = <"2 a 4 vezes (en)">
+                description = <"2 a 4 vezes (en)">
+            >
+            ["at0.8"] = <
+                text = <"5 a 8 vezes (en)">
+                description = <"5 a 8 vezes (en)">
+            >
+            ["at0.9"] = <
+                text = <"8 a 12 vezes (en)">
+                description = <"8 a 12 vezes (en)">
+            >
+            ["at0.10"] = <
+                text = <"Acima de 12 vezes (en)">
+                description = <"Acima de 12 vezes (en)">
+            >
+            ["ac0.2"] = <
+                text = <"Consumo (en)">
+                description = <"Consumo (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10">
+        >
+    >
+
