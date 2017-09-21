@@ -67,7 +67,13 @@ definition
                                     }
                                     CLUSTER[id20] occurrences matches {0..1} matches {    -- Comportamento preventivo
                                         items matches {
-                                            ELEMENT[id21] occurrences matches {0..1}     -- Proteção solar
+                                            ELEMENT[id21] occurrences matches {1} matches {    -- Proteção solar
+                                                value matches {
+                                                    DV_CODED_TEXT[id22] matches {
+                                                        defining_code matches {[ac7]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -253,6 +259,22 @@ terminology
                 text = <"Proteção solar">
                 description = <"Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol.">
             >
+            ["at27"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at28"] = <
+                text = <"Eventualmente, às vezes">
+                description = <"Eventualmente, às vezes">
+            >
+            ["at29"] = <
+                text = <"Sempre ou quase sempre">
+                description = <"Sempre ou quase sempre">
+            >
+            ["ac7"] = <
+                text = <"Proteção solar">
+                description = <"Proteção solar">
+            >
         >
     >
     value_sets = <
@@ -279,6 +301,10 @@ terminology
         ["ac6"] = <
             id = <"ac6">
             members = <"at22", "at23", "at24", "at25", "at26">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at27", "at28", "at29">
         >
     >
 
