@@ -1,0 +1,174 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- dados socioeconomicos
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Nível de escolaridade
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Atualmente frequenta escola
+                        value matches {
+                            DV_BOOLEAN[id6] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
+                        value matches {
+                            DV_CODED_TEXT[id8] matches {
+                                defining_code matches {[ac2]}
+                            }
+                        }
+                    }
+                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
+                        items
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"dados socioeconomicos">
+                description = <"dados socioeconomicos">
+            >
+            ["id3"] = <
+                text = <"Nível de escolaridade">
+                description = <"Informe o nível de escolaridade">
+            >
+            ["at1"] = <
+                text = <"Nunca estudou">
+                description = <"Nunca estudou">
+            >
+            ["at2"] = <
+                text = <"1ª série do ensino fundamental">
+                description = <"1ª série do ensino fundamental">
+            >
+            ["at3"] = <
+                text = <"2ª série do ensino fundamental">
+                description = <"2ª série do ensino fundamental">
+            >
+            ["at4"] = <
+                text = <"3ª série do ensino fundamental">
+                description = <"3ª série do ensino fundamental">
+            >
+            ["at5"] = <
+                text = <"4ª série do ensino fundamental">
+                description = <"4ª série do ensino fundamental">
+            >
+            ["at6"] = <
+                text = <"5ª série do ensino fundamental">
+                description = <"5ª série do ensino fundamental">
+            >
+            ["at7"] = <
+                text = <"6ª série do ensino fundamental">
+                description = <"6ª série do ensino fundamental">
+            >
+            ["at8"] = <
+                text = <"7ª série do ensino fundamental">
+                description = <"7ª série do ensino fundamental">
+            >
+            ["at9"] = <
+                text = <"8ª série do ensino fundamental">
+                description = <"8ª série do ensino fundamental">
+            >
+            ["at10"] = <
+                text = <"1ª série do ensino médio">
+                description = <"1ª série do ensino médio">
+            >
+            ["at11"] = <
+                text = <"2ª série do ensino médio">
+                description = <"2ª série do ensino médio">
+            >
+            ["at12"] = <
+                text = <"3ª série do ensino médio">
+                description = <"3ª série do ensino médio">
+            >
+            ["at13"] = <
+                text = <"Superior incompleto">
+                description = <"Superior incompleto">
+            >
+            ["at14"] = <
+                text = <"Superior completo">
+                description = <"Superior completo">
+            >
+            ["at15"] = <
+                text = <"Pós-graduação">
+                description = <"Pós-graduação">
+            >
+            ["ac1"] = <
+                text = <"Nível de escolaridade">
+                description = <"Nível de escolaridade">
+            >
+            ["id5"] = <
+                text = <"Atualmente frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
+            >
+            ["id7"] = <
+                text = <"Faixa de renda mensal">
+                description = <"Informe a renda mensal">
+            >
+            ["at16"] = <
+                text = <"Menos de 1 SM">
+                description = <"Menos de 1 SM">
+            >
+            ["at17"] = <
+                text = <"De 1 SM  a 3 SM">
+                description = <"De 1 SM  a 3 SM">
+            >
+            ["at18"] = <
+                text = <"Maior que  3 SM a 5 SM">
+                description = <"Maior que  3 SM a 5 SM">
+            >
+            ["at19"] = <
+                text = <"Maior que 5 SM até 10 SM">
+                description = <"Maior que 5 SM até 10 SM">
+            >
+            ["at20"] = <
+                text = <"Maior que 10 SM">
+                description = <"Maior que 10 SM">
+            >
+            ["ac2"] = <
+                text = <"Faixa de renda mensal">
+                description = <"Faixa de renda mensal">
+            >
+            ["id10"] = <
+                text = <"Dados do domicílio e da família">
+                description = <"Dados do domicílio e da família">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14", "at15">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at16", "at17", "at18", "at19", "at20">
+        >
+    >
+
