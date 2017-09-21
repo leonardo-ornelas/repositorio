@@ -563,8 +563,8 @@
     "rmType" : "OBSERVATION",
     "name" : "Story/History",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.story.v1.adls",
-    "sha" : "d1fcb5eca8e39d282d3430f02af3cf0b5104b0f1",
-    "languages" : [ "en", "ar-sy", "es-ar" ]
+    "sha" : "24d2986b70b3d613200211ecbc73e6ce08809e39",
+    "languages" : [ "en", "ar-sy", "es-ar", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.substance_use-alcohol.v1.0.0",
     "rmType" : "OBSERVATION",
@@ -797,48 +797,6 @@
     "sha" : "e4eb2bc3cfb53efd61c8b031b2e64cf16806a3f9",
     "languages" : [ "en", "pt-br" ]
   }, {
-    "id" : "CEN-EN13606-SECTION.Antecedentes.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Antecedentes",
-    "path" : "archetypes/CEN-EN13606-SECTION.Antecedentes.v1.adls",
-    "sha" : "60f6856729907e32b86ec2be029b09358e9e64f9",
-    "languages" : [ "es" ]
-  }, {
-    "id" : "CEN-EN13606-SECTION.AntecedentesEnfermeria.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Antecedentes Enfermeria",
-    "path" : "archetypes/CEN-EN13606-SECTION.AntecedentesEnfermeria.v1.adls",
-    "sha" : "b6f85dedda7bb2a78672f2c1e24731f666ba24c8",
-    "languages" : [ "es" ]
-  }, {
-    "id" : "CEN-EN13606-SECTION.Diagnosticos.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Diagnosticos",
-    "path" : "archetypes/CEN-EN13606-SECTION.Diagnosticos.v1.adls",
-    "sha" : "3f551cac9350ed1e6498a489f65992d2461f0973",
-    "languages" : [ "es" ]
-  }, {
-    "id" : "CEN-EN13606-SECTION.ExploracionFisica.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "ExploracionFisica",
-    "path" : "archetypes/CEN-EN13606-SECTION.ExploracionFisica.v1.adls",
-    "sha" : "3b506e1cb4353d5efca835231915b4dbe743c4ce",
-    "languages" : [ "es" ]
-  }, {
-    "id" : "CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "ResumenPruebasComplementarias",
-    "path" : "archetypes/CEN-EN13606-SECTION.ResumenPruebasComplementarias.v1.adls",
-    "sha" : "81b9b710988f997e8836686187800a87fef78c74",
-    "languages" : [ "es" ]
-  }, {
-    "id" : "CEN-EN13606-SECTION.Tratamiento.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Tratamiento",
-    "path" : "archetypes/CEN-EN13606-SECTION.Tratamiento.v1.adls",
-    "sha" : "3314dfaec6ec22055f036074bc33847447af0e15",
-    "languages" : [ "es" ]
-  }, {
     "id" : "openEHR-EHR-SECTION.adverse_list.v1.0.0",
     "rmType" : "SECTION",
     "name" : "Adverse Reaction List",
@@ -986,6 +944,27 @@
     "name" : "Nutrition Summary",
     "path" : "archetypes/openEHR-EHR-EVALUATION.nutrition_summary.v1.adls",
     "sha" : "2014651ff9f899f4954c0ae9bc0d9bd13e13ee94",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0",
+    "rmType" : "PARTY_IDENTITY",
+    "name" : "Person name",
+    "path" : "archetypes/openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0.adls",
+    "sha" : "bc5eb18622848e2dc0af96a64d83045735cbeb3a",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.medication_list.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Medication List",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.medication_list.v1.0.0.adls",
+    "sha" : "62c54d4a57296242be8d1db4450107270dd0e794",
+    "languages" : [ "en", "es-ar" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.social_summary.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Social Summary",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.social_summary.v1.adls",
+    "sha" : "fed0869fd55219edc65ce68e736304ec9afaaf9a",
     "languages" : [ "en" ]
   } ]
 }
