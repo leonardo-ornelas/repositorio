@@ -1,0 +1,232 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.alimentacao.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Alimentacao
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Com que freqüência o trabalhador normalmente come frutas frescas.
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {1} matches {    -- Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.
+                                        value matches {
+                                            DV_CODED_TEXT[id10] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {1} matches {    -- Quando o trabalhador come frango, o que normalmente faz com a pele.
+                                        value matches {
+                                            DV_CODED_TEXT[id12] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {1} matches {    -- Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.
+                                        value matches {
+                                            DV_CODED_TEXT[id14] matches {
+                                                defining_code matches {[ac4]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {1} matches {    -- Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.
+                                        value matches {
+                                            DV_CODED_TEXT[id16] matches {
+                                                defining_code matches {[ac5]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Alimentacao">
+                description = <"Alimentacao">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Com que freqüência o trabalhador normalmente come frutas frescas.">
+                description = <"Com que freqüência o trabalhador normalmente come frutas frescas.">
+            >
+            ["at1"] = <
+                text = <"5 ou mais vezes ao dia.">
+                description = <"5 ou mais vezes ao dia.">
+            >
+            ["at2"] = <
+                text = <"3 ou 4 vezes por dia">
+                description = <"3 ou 4 vezes por dia">
+            >
+            ["at3"] = <
+                text = <"1 ou 2 vezes por dia">
+                description = <"1 ou 2 vezes por dia">
+            >
+            ["at4"] = <
+                text = <"5 ou mais vezes na semana">
+                description = <"5 ou mais vezes na semana">
+            >
+            ["at5"] = <
+                text = <"3 ou 4 vezes por semana">
+                description = <"3 ou 4 vezes por semana">
+            >
+            ["at6"] = <
+                text = <"1 ou 2 vezes na semana">
+                description = <"1 ou 2 vezes na semana">
+            >
+            ["at7"] = <
+                text = <"1 a 3  vezes por mês">
+                description = <"1 a 3  vezes por mês">
+            >
+            ["at8"] = <
+                text = <"Menos de 1 vez por mês">
+                description = <"Menos de 1 vez por mês">
+            >
+            ["ac1"] = <
+                text = <"Com que freqüência o trabalhador normalmente come frutas frescas">
+                description = <"Com que freqüência o trabalhador normalmente come frutas frescas">
+            >
+            ["id9"] = <
+                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["ac2"] = <
+                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["id11"] = <
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+            >
+            ["at9"] = <
+                text = <"Sempre retira antes de comer">
+                description = <"Sempre retira antes de comer">
+            >
+            ["at10"] = <
+                text = <"Na maioria das vezes retira">
+                description = <"Na maioria das vezes retira">
+            >
+            ["at11"] = <
+                text = <"Raramente retira a pele">
+                description = <"Raramente retira a pele">
+            >
+            ["at12"] = <
+                text = <"Nunca retira a pele">
+                description = <"Nunca retira a pele">
+            >
+            ["at13"] = <
+                text = <"Não come frango">
+                description = <"Não come frango">
+            >
+            ["ac3"] = <
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+            >
+            ["id13"] = <
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
+            ["at14"] = <
+                text = <"Sempre retira antes de comer">
+                description = <"Sempre retira antes de comer">
+            >
+            ["at15"] = <
+                text = <"Na maioria das vezes retira">
+                description = <"Na maioria das vezes retira">
+            >
+            ["at16"] = <
+                text = <"Raramente retira">
+                description = <"Raramente retira">
+            >
+            ["at17"] = <
+                text = <"Nunca retira a gordura">
+                description = <"Nunca retira a gordura">
+            >
+            ["at18"] = <
+                text = <"Não come carne vermelha">
+                description = <"Não come carne vermelha">
+            >
+            ["ac4"] = <
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
+            ["id15"] = <
+                text = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+                description = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+            >
+            ["at19"] = <
+                text = <"Nunca coloca sal no prato de comida">
+                description = <"Nunca coloca sal no prato de comida">
+            >
+            ["at20"] = <
+                text = <"Prova e coloca se estiver sem sal">
+                description = <"Prova e coloca se estiver sem sal">
+            >
+            ["at21"] = <
+                text = <"Sempre ou quase sempre, mesmo sem provar">
+                description = <"Sempre ou quase sempre, mesmo sem provar">
+            >
+            ["ac5"] = <
+                text = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+                description = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at9", "at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at19", "at20", "at21">
+        >
+    >
+
