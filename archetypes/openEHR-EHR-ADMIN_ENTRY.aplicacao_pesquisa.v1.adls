@@ -15,7 +15,28 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1}     -- Aplicacao pesquisa
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- Aplicacao pesquisa
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Data da aplicação da pesquisa
+                        value matches {
+                            DV_DATE[id7] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Aceitou responder o questionário
+                        value matches {
+                            DV_BOOLEAN[id6] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 terminology
     term_definitions = <
@@ -23,6 +44,14 @@ terminology
             ["id1"] = <
                 text = <"Aplicacao pesquisa">
                 description = <"Aplicacao pesquisa">
+            >
+            ["id3"] = <
+                text = <"Data da aplicação da pesquisa">
+                description = <"Data de aplicação">
+            >
+            ["id5"] = <
+                text = <"Aceitou responder o questionário">
+                description = <"Aceitou responder o questionário">
             >
         >
     >
