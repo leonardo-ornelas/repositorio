@@ -3,6 +3,15 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +19,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -274,6 +286,192 @@ terminology
             ["ac7"] = <
                 text = <"Proteção solar">
                 description = <"Proteção solar">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Alimentacao (pt-br)">
+                description = <"*Alimentacao (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
+                description = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*5 ou mais vezes ao dia. (pt-br)">
+                description = <"*5 ou mais vezes ao dia. (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*3 ou 4 vezes por dia (pt-br)">
+                description = <"*3 ou 4 vezes por dia (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*1 ou 2 vezes por dia (pt-br)">
+                description = <"*1 ou 2 vezes por dia (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*5 ou mais vezes na semana (pt-br)">
+                description = <"*5 ou mais vezes na semana (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*3 ou 4 vezes por semana (pt-br)">
+                description = <"*3 ou 4 vezes por semana (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*1 ou 2 vezes na semana (pt-br)">
+                description = <"*1 ou 2 vezes na semana (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*1 a 3  vezes por mês (pt-br)">
+                description = <"*1 a 3  vezes por mês (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Menos de 1 vez por mês (pt-br)">
+                description = <"*Menos de 1 vez por mês (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Com que freqüência o trabalhador normalmente come frutas frescas (pt-br)">
+                description = <"*Com que freqüência o trabalhador normalmente come frutas frescas (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Sempre retira antes de comer (pt-br)">
+                description = <"*Sempre retira antes de comer (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Na maioria das vezes retira (pt-br)">
+                description = <"*Na maioria das vezes retira (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Raramente retira a pele (pt-br)">
+                description = <"*Raramente retira a pele (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Nunca retira a pele (pt-br)">
+                description = <"*Nunca retira a pele (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Não come frango (pt-br)">
+                description = <"*Não come frango (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Sempre retira antes de comer (pt-br)">
+                description = <"*Sempre retira antes de comer (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Na maioria das vezes retira (pt-br)">
+                description = <"*Na maioria das vezes retira (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Raramente retira (pt-br)">
+                description = <"*Raramente retira (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*Nunca retira a gordura (pt-br)">
+                description = <"*Nunca retira a gordura (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Não come carne vermelha (pt-br)">
+                description = <"*Não come carne vermelha (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                description = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Nunca coloca sal no prato de comida (pt-br)">
+                description = <"*Nunca coloca sal no prato de comida (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Prova e coloca se estiver sem sal (pt-br)">
+                description = <"*Prova e coloca se estiver sem sal (pt-br)">
+            >
+            ["at21"] = <
+                text = <"*Sempre ou quase sempre, mesmo sem provar (pt-br)">
+                description = <"*Sempre ou quase sempre, mesmo sem provar (pt-br)">
+            >
+            ["ac5"] = <
+                text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                description = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at23"] = <
+                text = <"*1 a 3 vezes por semana (pt-br)">
+                description = <"*1 a 3 vezes por semana (pt-br)">
+            >
+            ["at24"] = <
+                text = <"*4 a 6 vezes por semana (pt-br)">
+                description = <"*4 a 6 vezes por semana (pt-br)">
+            >
+            ["at25"] = <
+                text = <"*Diariamente, 1 vez por dia (pt-br)">
+                description = <"*Diariamente, 1 vez por dia (pt-br)">
+            >
+            ["at26"] = <
+                text = <"*Diariamente, 2 ou mais vezes por dia (pt-br)">
+                description = <"*Diariamente, 2 ou mais vezes por dia (pt-br)">
+            >
+            ["ac6"] = <
+                text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Comportamento preventivo (pt-br)">
+                description = <"*Comportamento preventivo (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Proteção solar (pt-br)">
+                description = <"*Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol. (pt-br)">
+            >
+            ["at27"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at28"] = <
+                text = <"*Eventualmente, às vezes (pt-br)">
+                description = <"*Eventualmente, às vezes (pt-br)">
+            >
+            ["at29"] = <
+                text = <"*Sempre ou quase sempre (pt-br)">
+                description = <"*Sempre ou quase sempre (pt-br)">
+            >
+            ["ac7"] = <
+                text = <"*Proteção solar (pt-br)">
+                description = <"*Proteção solar (pt-br)">
             >
         >
     >
