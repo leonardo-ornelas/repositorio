@@ -83,5 +83,11 @@
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa_teste1.v1.adlt",
     "sha" : "6ce9e65654436f6fbf0363b551eb88b1db4dd4ab"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.triagem.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.triagem.v1.adlt",
+    "sha" : "d7c1160c7d38c5bf546eb59174210219dea57018"
   } ]
 }
