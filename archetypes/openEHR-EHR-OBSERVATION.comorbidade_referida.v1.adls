@@ -58,6 +58,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id17] occurrences matches {1} matches {    -- Colesterol alterado
+                                        value matches {
+                                            DV_BOOLEAN[id18] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -100,6 +107,10 @@ terminology
             ["id15"] = <
                 text = <"Acidente vascular cerebral ou derrame">
                 description = <"Acidente vascular cerebral ou derrame">
+            >
+            ["id17"] = <
+                text = <"Colesterol alterado">
+                description = <"Colesterol alterado">
             >
         >
     >
