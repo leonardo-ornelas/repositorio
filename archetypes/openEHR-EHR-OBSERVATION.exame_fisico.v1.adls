@@ -31,13 +31,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {
-        data matches {
-            HISTORY[id2] matches {
-                events
-            }
-        }
-    }
+    OBSERVATION[id1] occurrences matches {1} 
 
 terminology
     term_definitions = <
