@@ -65,7 +65,63 @@ definition
                                     }
                                     CLUSTER[id19] occurrences matches {0..1} matches {    -- Cabeça e pescoço
                                         items matches {
-                                            ELEMENT[id20] occurrences matches {0..1}     -- Audição
+                                            ELEMENT[id20] occurrences matches {0..1} matches {    -- Audição
+                                                value matches {
+                                                    DV_CODED_TEXT[id21] matches {
+                                                        defining_code matches {[ac8]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id22] occurrences matches {0..1} matches {    -- Orofaringe
+                                                value matches {
+                                                    DV_CODED_TEXT[id23] matches {
+                                                        defining_code matches {[ac9]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id24] occurrences matches {0..1} matches {    -- Boca e dentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id25] matches {
+                                                        defining_code matches {[ac10]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id26] occurrences matches {0..1} matches {    -- Visão
+                                                value matches {
+                                                    DV_CODED_TEXT[id27] matches {
+                                                        defining_code matches {[ac11]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id28] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id29] 
+                                                }
+                                            }
+                                            ELEMENT[id33] occurrences matches {0..1} matches {    -- Uso obrigatório de lentes corretivas
+                                                value matches {
+                                                    DV_BOOLEAN[id34] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id35] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id36] 
+                                                }
+                                            }
+                                            ELEMENT[id37] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id38] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id39] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id40] 
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -179,6 +235,54 @@ terminology
                 text = <"Audição">
                 description = <"Audição">
             >
+            ["ac8"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["id22"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["ac9"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["id24"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+            ["ac10"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+            ["id26"] = <
+                text = <"Visão">
+                description = <"Visão">
+            >
+            ["ac11"] = <
+                text = <"Visão">
+                description = <"Visão">
+            >
+            ["id28"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id33"] = <
+                text = <"Uso obrigatório de lentes corretivas">
+                description = <"Uso obrigatório de lentes corretivas">
+            >
+            ["id35"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id37"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id39"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
         >
     >
     value_sets = <
@@ -208,6 +312,22 @@ terminology
         >
         ["ac7"] = <
             id = <"ac7">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac8"] = <
+            id = <"ac8">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac9"] = <
+            id = <"ac9">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac10"] = <
+            id = <"ac10">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac11"] = <
+            id = <"ac11">
             members = <"at4", "at5", "at6">
         >
     >
