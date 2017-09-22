@@ -1624,7 +1624,7 @@ terminology
         ["en"] = <
             ["id1.1"] = <
                 text = <"Indirect oximetry">
-                description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means. ">
+                description = <"Method of monitoring blood gas measurements such as pulse oximetry(Spo2) and transcutaneous oximetry (TCO2) by indirect, currently non-invasive, means.">
             >
             ["id7.1"] = <
                 text = <"Arterial saturation of pulse oximeter (SpO2)">
