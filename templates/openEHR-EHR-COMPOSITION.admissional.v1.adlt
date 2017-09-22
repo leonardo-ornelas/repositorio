@@ -59,11 +59,11 @@ definition
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
             use_archetype EVALUATION[id0.4, openEHR-EHR-EVALUATION.ovl-admissional-allergy-001.v1.0.0]
-            use_archetype ACTION[id0.6, openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0]
             use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
             use_archetype OBSERVATION[id0.9, openEHR-EHR-OBSERVATION.ovl-admissional-body_temperature-001.v1.0.0]
             use_archetype OBSERVATION[id0.10, openEHR-EHR-OBSERVATION.ovl-admissional-body_mass_index-001.v1.0.0]
             use_archetype OBSERVATION[id0.11, openEHR-EHR-OBSERVATION.ovl-admissional-indirect_oximetry-001.v1.0.0]
+            use_archetype ACTION[id0.12, openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0]
         }
     }
 
@@ -473,341 +473,6 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0
-
-specialize
-    openEHR-EHR-ACTION.medication.v1.0.0
-
-definition
-    ACTION[id1.1] matches {    -- Medication action
-        ism_transition matches {
-            ISM_TRANSITION[id42.1] occurrences matches {0} matches {
-                /current_state[id43]/defining_code matches {[at41]}
-                /careflow_step[id44]/defining_code matches {[at2]}
-            }
-            ISM_TRANSITION[id45.1] occurrences matches {0} matches {
-                /current_state[id46]/defining_code matches {[at42]}
-                /careflow_step[id47]/defining_code matches {[at14]}
-            }
-            ISM_TRANSITION[id48.1] occurrences matches {0} matches {
-                /current_state[id49]/defining_code matches {[at43]}
-                /careflow_step[id50]/defining_code matches {[at13]}
-            }
-            ISM_TRANSITION[id51.1] occurrences matches {0} matches {
-                /current_state[id52]/defining_code matches {[at44]}
-                /careflow_step[id53]/defining_code matches {[at17]}
-            }
-            ISM_TRANSITION[id54.1] occurrences matches {0} matches {
-                /current_state[id55]/defining_code matches {[ac3]}
-                /careflow_step[id56]/defining_code matches {[at3]}
-            }
-            ISM_TRANSITION[id57.1] occurrences matches {0} matches {
-                /current_state[id58]/defining_code matches {[ac4]}
-                /careflow_step[id59]/defining_code matches {[at4]}
-            }
-            ISM_TRANSITION[id60.1] occurrences matches {0} matches {
-                /current_state[id61]/defining_code matches {[at45]}
-                /careflow_step[id62]/defining_code matches {[at5]}
-            }
-            ISM_TRANSITION[id63.1] occurrences matches {0} matches {
-                /current_state[id64]/defining_code matches {[at45]}
-                /careflow_step[id65]/defining_code matches {[at6]}
-            }
-            ISM_TRANSITION[id66.1] occurrences matches {0} matches {
-                /current_state[id67]/defining_code matches {[at45]}
-                /careflow_step[id68]/defining_code matches {[at7]}
-            }
-            ISM_TRANSITION[id69.1] occurrences matches {0} matches {
-                /current_state[id70]/defining_code matches {[at45]}
-                /careflow_step[id71]/defining_code matches {[at11]}
-            }
-            ISM_TRANSITION[id72.1] occurrences matches {0} matches {
-                /current_state[id73]/defining_code matches {[at45]}
-                /careflow_step[id74]/defining_code matches {[at19]}
-            }
-            ISM_TRANSITION[id75.1] occurrences matches {0} matches {
-                /current_state[id76]/defining_code matches {[at45]}
-                /careflow_step[id77]/defining_code matches {[at20]}
-            }
-            ISM_TRANSITION[id78.1] occurrences matches {0} matches {
-                /current_state[id79]/defining_code matches {[ac5]}
-                /careflow_step[id80]/defining_code matches {[at36]}
-            }
-            ISM_TRANSITION[id81.1] occurrences matches {0} matches {
-                /current_state[id82]/defining_code matches {[at46]}
-                /careflow_step[id83]/defining_code matches {[at9]}
-            }
-            ISM_TRANSITION[id84.1] occurrences matches {0} matches {
-                /current_state[id85]/defining_code matches {[at46]}
-                /careflow_step[id86]/defining_code matches {[at10]}
-            }
-            ISM_TRANSITION[id87.1] occurrences matches {0} matches {
-                /current_state[id88]/defining_code matches {[at46]}
-                /careflow_step[id89]/defining_code matches {[at12]}
-            }
-            ISM_TRANSITION[id90.1] occurrences matches {0} matches {
-                /current_state[id91]/defining_code matches {[at47]}
-                /careflow_step[id92]/defining_code matches {[at16]}
-            }
-            ISM_TRANSITION[id93.1] occurrences matches {0} matches {
-                /current_state[id94]/defining_code matches {[at47]}
-                /careflow_step[id95]/defining_code matches {[at15]}
-            }
-            ISM_TRANSITION[id96.1] occurrences matches {0} matches {
-                /current_state[id97]/defining_code matches {[at47]}
-                /careflow_step[id98]/defining_code matches {[at40]}
-            }
-            ISM_TRANSITION[id99.1] occurrences matches {0} matches {
-                /current_state[id100]/defining_code matches {[at48]}
-                /careflow_step[id101]/defining_code matches {[at8]}
-            }
-        }
-        /description[id18]/items matches {
-            ELEMENT[id21] matches {
-                /value[id102]/defining_code matches {[ac2]}
-            }
-            allow_archetype CLUSTER[id24] occurrences matches {0..1} matches { 
-                include
-                    archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_ingredients\.v1\.0\.0/}
-            }
-            use_archetype CLUSTER[id24.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0]
-            allow_archetype CLUSTER[id23] occurrences matches {0..1} matches { 
-                include
-                    archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_amount\.v1\.0\.0/}
-            }
-            use_archetype CLUSTER[id23.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-002.v1.0.0]
-            allow_archetype CLUSTER[id28] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            use_archetype CLUSTER[id28.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0]
-            ELEMENT[id37] occurrences matches {0..1} matches {
-                /value[id107]/value matches {True, False}
-            }
-        }
-        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Medication action">
-                description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Ação da medicação">
-                description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0
-
-specialize
-    openEHR-EHR-CLUSTER.medication_ingredients.v1.0.0
-
-definition
-    CLUSTER[id1.1] matches {    -- Medication ingredients
-        items matches {
-            ELEMENT[id6] occurrences matches {0..1} matches {
-                /value[id36]/defining_code matches {[ac1]}
-            }
-            allow_archetype CLUSTER[id31] occurrences matches {0} matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
-            }
-            CLUSTER[id2] matches {
-                items matches {
-                    allow_archetype CLUSTER[id34] occurrences matches {0} matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
-                    }
-                    allow_archetype CLUSTER[id25] occurrences matches {0..1} matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
-                    }
-                    use_archetype CLUSTER[id25.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0]
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Medication ingredients">
-                description = <"The actual ingredients with strength and overall form of a chemical or medication.">
-            >
-        >
-        ["sl"] = <
-            ["id1.1"] = <
-                text = <"*Chemical description of medication(en)">
-                description = <"*The actual ingredients with strength and overall form of a chemical or medication.(en)">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0
-
-specialize
-    openEHR-EHR-CLUSTER.medication_amount.v1.0.0
-
-definition
-    CLUSTER[id1.1] matches {    -- Medication amount
-        items matches {
-            ELEMENT[id2.1] occurrences matches {0..1} matches {    -- Amount
-                value matches {
-                    DV_QUANTITY[id10.1] matches {
-                        property matches {[at1]}
-                        magnitude matches {|>=0.0|}
-                    }
-                    DV_INTERVAL<DV_QUANTITY>[id11.1] matches {
-                        upper matches {
-                            DV_QUANTITY[id12.1] 
-                        }
-                        lower matches {
-                            DV_QUANTITY[id13.1] matches {
-                                property matches {[at1]}
-                                magnitude matches {|>=0.0|}
-                            }
-                        }
-                    }
-                }
-            }
-            ELEMENT[id3] occurrences matches {0..1} matches {
-                /value[id14]/defining_code matches {[ac2]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Medication amount">
-                description = <"The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.">
-            >
-            ["id2.1"] = <
-                text = <"Amount">
-                description = <"The value of the amount of medication as a real number e.g 1, 1.5, 0.125. ">
-            >
-        >
-        ["sl"] = <
-            ["id1.1"] = <
-                text = <"*Medication amount(en)">
-                description = <"*The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.(en)">
-            >
-            ["id2.1"] = <
-                text = <"*Amount(en)">
-                description = <"*The value of the amount of medication as a real number e.g 1, 1.5, 0.125. (en)">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-002.v1.0.0
-
-specialize
-    openEHR-EHR-CLUSTER.medication_amount.v1.0.0
-
-definition
-    CLUSTER[id1.1] matches {    -- Medication amount
-        items matches {
-            ELEMENT[id2.1] occurrences matches {0..1} matches {    -- Amount
-                value matches {
-                    DV_QUANTITY[id10.1] matches {
-                        property matches {[at1]}
-                        magnitude matches {|>=0.0|}
-                    }
-                    DV_INTERVAL<DV_QUANTITY>[id11.1] matches {
-                        upper matches {
-                            DV_QUANTITY[id12.1] 
-                        }
-                        lower matches {
-                            DV_QUANTITY[id13.1] matches {
-                                property matches {[at1]}
-                                magnitude matches {|>=0.0|}
-                            }
-                        }
-                    }
-                }
-            }
-            ELEMENT[id3] occurrences matches {0..1} matches {
-                /value[id14]/defining_code matches {[ac2]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Medication amount">
-                description = <"The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.">
-            >
-            ["id2.1"] = <
-                text = <"Amount">
-                description = <"The value of the amount of medication as a real number e.g 1, 1.5, 0.125. ">
-            >
-        >
-        ["sl"] = <
-            ["id1.1"] = <
-                text = <"*Medication amount(en)">
-                description = <"*The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.(en)">
-            >
-            ["id2.1"] = <
-                text = <"*Amount(en)">
-                description = <"*The value of the amount of medication as a real number e.g 1, 1.5, 0.125. (en)">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0
-
-specialize
-    openEHR-EHR-CLUSTER.medication_admin.v1.0.0
-
-definition
-    CLUSTER[id1.1] matches {    -- Medication administration
-        items matches {
-            ELEMENT[id2] occurrences matches {0..1} matches {
-                /value[id7]/defining_code matches {[ac2]}
-            }
-            allow_archetype CLUSTER[id6] occurrences matches {0} matches { 
-                include
-                    archetype_id/value matches {/.*/}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Medication administration">
-                description = <"Information about the future or actual administration of medication.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
     openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0
 
 specialize
@@ -894,11 +559,11 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
             allow_archetype ITEM[id10] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
         }
     }
 
@@ -1031,16 +696,16 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.environmental_conditions\.v1/}
                     }
+                    use_archetype CLUSTER[id57.1, openEHR-EHR-CLUSTER.ovl-admissional-environmental_conditions-001.v1.0.0]
                     allow_archetype CLUSTER[id58] occurrences matches {0..1} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion\.v1/}
                     }
+                    use_archetype CLUSTER[id58.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-002.v1.0.0]
                     allow_archetype ELEMENT[id59] occurrences matches {0..1} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-ELEMENT\.last_normal_menstrual_period\.v1|openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
                     }
-                    use_archetype CLUSTER[id57.1, openEHR-EHR-CLUSTER.ovl-admissional-environmental_conditions-001.v1.0.0]
-                    use_archetype CLUSTER[id58.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-002.v1.0.0]
                     use_archetype ELEMENT[id59.1, openEHR-EHR-ELEMENT.ovl-admissional-last_normal_menstrual_period-001.v1.0.0]
                 }
             }
@@ -1130,11 +795,11 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-002.v1.0.0]
             allow_archetype ITEM[id10] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-002.v1.0.0]
         }
     }
 
@@ -1512,11 +1177,11 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
                     }
+                    use_archetype CLUSTER[id35.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-003.v1.0.0]
                     allow_archetype CLUSTER[id16] occurrences matches {0..1} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
                     }
-                    use_archetype CLUSTER[id35.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-003.v1.0.0]
                     use_archetype CLUSTER[id16.1, openEHR-EHR-CLUSTER.ovl-admissional-ambient_oxygen-001.v1.0.0]
                 }
             }
@@ -1851,11 +1516,11 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-003.v1.0.0]
             allow_archetype ITEM[id10] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
             }
-            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-003.v1.0.0]
         }
     }
 
@@ -1955,6 +1620,248 @@ terminology
             ["id1.1"] = <
                 text = <"Dimensions">
                 description = <"The physical dimensions of a part examined.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.medication.v1.0.0
+
+definition
+    ACTION[id1.1] matches {    -- Medication action
+        ism_transition matches {
+            ISM_TRANSITION[id42.1] occurrences matches {0} matches {
+                /current_state[id43]/defining_code matches {[at41]}
+                /careflow_step[id44]/defining_code matches {[at2]}
+            }
+            ISM_TRANSITION[id45.1] occurrences matches {0} matches {
+                /current_state[id46]/defining_code matches {[at42]}
+                /careflow_step[id47]/defining_code matches {[at14]}
+            }
+            ISM_TRANSITION[id48.1] occurrences matches {0} matches {
+                /current_state[id49]/defining_code matches {[at43]}
+                /careflow_step[id50]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id51.1] occurrences matches {0} matches {
+                /current_state[id52]/defining_code matches {[at44]}
+                /careflow_step[id53]/defining_code matches {[at17]}
+            }
+            ISM_TRANSITION[id54.1] occurrences matches {0} matches {
+                /current_state[id55]/defining_code matches {[ac3]}
+                /careflow_step[id56]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id57.1] occurrences matches {0} matches {
+                /current_state[id58]/defining_code matches {[ac4]}
+                /careflow_step[id59]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id60.1] occurrences matches {0} matches {
+                /current_state[id61]/defining_code matches {[at45]}
+                /careflow_step[id62]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id63.1] occurrences matches {0} matches {
+                /current_state[id64]/defining_code matches {[at45]}
+                /careflow_step[id65]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id66.1] occurrences matches {0} matches {
+                /current_state[id67]/defining_code matches {[at45]}
+                /careflow_step[id68]/defining_code matches {[at7]}
+            }
+            ISM_TRANSITION[id69.1] occurrences matches {0} matches {
+                /current_state[id70]/defining_code matches {[at45]}
+                /careflow_step[id71]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id72.1] occurrences matches {0} matches {
+                /current_state[id73]/defining_code matches {[at45]}
+                /careflow_step[id74]/defining_code matches {[at19]}
+            }
+            ISM_TRANSITION[id75.1] occurrences matches {0} matches {
+                /current_state[id76]/defining_code matches {[at45]}
+                /careflow_step[id77]/defining_code matches {[at20]}
+            }
+            ISM_TRANSITION[id78.1] occurrences matches {0} matches {
+                /current_state[id79]/defining_code matches {[ac5]}
+                /careflow_step[id80]/defining_code matches {[at36]}
+            }
+            ISM_TRANSITION[id81.1] occurrences matches {0} matches {
+                /current_state[id82]/defining_code matches {[at46]}
+                /careflow_step[id83]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id84.1] occurrences matches {0} matches {
+                /current_state[id85]/defining_code matches {[at46]}
+                /careflow_step[id86]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id87.1] occurrences matches {0} matches {
+                /current_state[id88]/defining_code matches {[at46]}
+                /careflow_step[id89]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id90.1] occurrences matches {0} matches {
+                /current_state[id91]/defining_code matches {[at47]}
+                /careflow_step[id92]/defining_code matches {[at16]}
+            }
+            ISM_TRANSITION[id93.1] occurrences matches {0} matches {
+                /current_state[id94]/defining_code matches {[at47]}
+                /careflow_step[id95]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id96.1] occurrences matches {0} matches {
+                /current_state[id97]/defining_code matches {[at47]}
+                /careflow_step[id98]/defining_code matches {[at40]}
+            }
+            ISM_TRANSITION[id99.1] occurrences matches {0} matches {
+                /current_state[id100]/defining_code matches {[at48]}
+                /careflow_step[id101]/defining_code matches {[at8]}
+            }
+        }
+        /description[id18]/items matches {
+            ELEMENT[id21] matches {
+                /value[id102]/defining_code matches {[ac2]}
+            }
+            allow_archetype CLUSTER[id24] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_ingredients\.v1\.0\.0/}
+            }
+            allow_archetype CLUSTER[id23] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
+            }
+            allow_archetype CLUSTER[id28] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id37] occurrences matches {0..1} matches {
+                /value[id107]/value matches {True, False}
+            }
+            use_archetype CLUSTER[id24.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0]
+        }
+        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication action">
+                description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Ação da medicação">
+                description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.medication_ingredients.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Medication ingredients
+        items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id36]/defining_code matches {[ac1]}
+            }
+            allow_archetype CLUSTER[id31] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
+            }
+            CLUSTER[id2] matches {
+                items matches {
+                    allow_archetype CLUSTER[id34] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    allow_archetype CLUSTER[id25] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    use_archetype CLUSTER[id25.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0]
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication ingredients">
+                description = <"The actual ingredients with strength and overall form of a chemical or medication.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Chemical description of medication(en)">
+                description = <"*The actual ingredients with strength and overall form of a chemical or medication.(en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.medication_amount.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Medication amount
+        items matches {
+            ELEMENT[id2.1] occurrences matches {0} matches {    -- Amount
+                value matches {
+                    DV_QUANTITY[id10.1] matches {
+                        property matches {[at1]}
+                        magnitude matches {|>=0.0|}
+                    }
+                    DV_INTERVAL<DV_QUANTITY>[id11.1] matches {
+                        upper matches {
+                            DV_QUANTITY[id12.1] 
+                        }
+                        lower matches {
+                            DV_QUANTITY[id13.1] matches {
+                                property matches {[at1]}
+                                magnitude matches {|>=0.0|}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                /value[id14]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication amount">
+                description = <"The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.">
+            >
+            ["id2.1"] = <
+                text = <"Amount">
+                description = <"The value of the amount of medication as a real number e.g 1, 1.5, 0.125. ">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Medication amount(en)">
+                description = <"*The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.(en)">
+            >
+            ["id2.1"] = <
+                text = <"*Amount(en)">
+                description = <"*The value of the amount of medication as a real number e.g 1, 1.5, 0.125. (en)">
             >
         >
     >
