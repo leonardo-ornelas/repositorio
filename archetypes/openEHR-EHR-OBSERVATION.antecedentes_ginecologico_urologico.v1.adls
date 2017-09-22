@@ -204,8 +204,8 @@ terminology
                 description = <"Antecedentes ginecologico urologico">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event (en)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
                 text = <"Data da última menstruação">
