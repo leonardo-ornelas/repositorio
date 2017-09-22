@@ -34,7 +34,7 @@
     "rmType" : "COMPOSITION",
     "name" : "*Admission (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
-    "sha" : "73154385342e302a28f952f91ea7bb8e0f6e6ae1"
+    "sha" : "12c9e2025d937692ed37eea7f01d1e1afa3b3c89"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -89,5 +89,17 @@
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.triagem.v1.adlt",
     "sha" : "d7c1160c7d38c5bf546eb59174210219dea57018"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.ameacas_a_vida.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Lifestyle Factors",
+    "path" : "templates/openEHR-EHR-COMPOSITION.ameacas_a_vida.v1.adlt",
+    "sha" : "046160adfb5499b5a6874325360392b415dd11e7"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.medicacoes.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Medication List",
+    "path" : "templates/openEHR-EHR-COMPOSITION.medicacoes.v1.adlt",
+    "sha" : "c98dd2185bbe21f1971566d33be1d18b81b68b07"
   } ]
 }
