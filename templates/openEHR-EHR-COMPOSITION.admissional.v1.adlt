@@ -1450,8 +1450,17 @@ definition
         /data[id2]/events matches {
             POINT_EVENT[id3] occurrences matches {0..1} matches {
                 /data[id4]/items matches {
-                    ELEMENT[id59] matches {
-                        /value[id61]/defining_code matches {[ac1]}
+                    ELEMENT[id7.1] occurrences matches {0..1} matches {    -- *spO2(en)
+                        value matches {
+                            DV_PROPORTION[id60.1] 
+                        }
+                    }
+                    ELEMENT[id59.1] matches {    -- *Location of measurement SaO2(en)
+                        value matches {
+                            DV_CODED_TEXT[id61.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
                     }
                     ELEMENT[id45] occurrences matches {0..1} matches {
                         value matches {
@@ -1529,17 +1538,41 @@ terminology
                 text = <"*Oximetry(en)">
                 description = <"*Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.(en)">
             >
+            ["id7.1"] = <
+                text = <"*spO2(en)">
+                description = <"*Measured via pulse oximetry, the saturation of oxygen in the peripheral blood.(en)">
+            >
+            ["id59.1"] = <
+                text = <"*Location of measurement SaO2(en)">
+                description = <"*Location of measurement SaO2(en)">
+            >
         >
         ["sl"] = <
             ["id1.1"] = <
                 text = <"Posredna oksimetrija">
                 description = <"Metoda merjenja prisotnosti plnov kot so Spo2 in TCO2 na indirekten, posreden n-invazivni način">
             >
+            ["id7.1"] = <
+                text = <"SpO2">
+                description = <"Saturacija kisika v krvi izmerjena s pulzno oksimetrijo.">
+            >
+            ["id59.1"] = <
+                text = <"Lokacija meritve SaO2">
+                description = <"Lokacija meritve SaO2">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Indirect oximetry">
                 description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means. ">
+            >
+            ["id7.1"] = <
+                text = <"Arterial saturation of pulse oximeter (SpO2)">
+                description = <"Measured via pulse oximetry, the saturation of oxygen in the peripheral blood. ">
+            >
+            ["id59.1"] = <
+                text = <"Location of measurement SaO2">
+                description = <"Location of measurement (SaO2)">
             >
         >
     >
