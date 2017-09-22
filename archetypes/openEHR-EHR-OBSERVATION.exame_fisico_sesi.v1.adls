@@ -281,6 +281,58 @@ definition
                                                     DV_TEXT[id90] 
                                                 }
                                             }
+                                            ELEMENT[id91] occurrences matches {0..1} matches {    -- Irradiação escapular
+                                                value matches {
+                                                    DV_CODED_TEXT[id92] matches {
+                                                        defining_code matches {[ac26]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id93] occurrences matches {0..1} matches {    -- Irradiação membro superior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id94] matches {
+                                                        defining_code matches {[ac27]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id95] occurrences matches {0..1} matches {    -- Irradiação membro superior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id96] matches {
+                                                        defining_code matches {[ac28]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id97] occurrences matches {0..1} matches {    -- Irradiação membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id98] matches {
+                                                        defining_code matches {[ac29]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id99] occurrences matches {0..1} matches {    -- Irradiação membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id100] matches {
+                                                        defining_code matches {[ac30]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id101] occurrences matches {0..1} matches {    -- Irradiação ausente
+                                                value matches {
+                                                    DV_CODED_TEXT[id102] matches {
+                                                        defining_code matches {[ac31]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id104] occurrences matches {0..1} matches {    -- Outras irradiações
+                                                value matches {
+                                                    DV_TEXT[id105] 
+                                                }
+                                            }
+                                            ELEMENT[id106] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id107] 
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -602,6 +654,62 @@ terminology
                 text = <"Especificar">
                 description = <"Especificar">
             >
+            ["id91"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["ac26"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["id93"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
+            ["ac27"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
+            ["id95"] = <
+                text = <"Irradiação membro superior esquerdo">
+                description = <"Irradiação membro superior esquerdo">
+            >
+            ["ac28"] = <
+                text = <"Irradiação membro superior esquerdo">
+                description = <"Irradiação membro superior esquerdo">
+            >
+            ["id97"] = <
+                text = <"Irradiação membro inferior direito">
+                description = <"Irradiação membro inferior direito">
+            >
+            ["ac29"] = <
+                text = <"Irradiação membro inferior direito">
+                description = <"Irradiação membro inferior direito">
+            >
+            ["id99"] = <
+                text = <"Irradiação membro inferior esquerdo">
+                description = <"Irradiação membro inferior esquerdo">
+            >
+            ["ac30"] = <
+                text = <"Irradiação membro inferior esquerdo">
+                description = <"Irradiação membro inferior esquerdo">
+            >
+            ["id101"] = <
+                text = <"Irradiação ausente">
+                description = <"Irradiação ausente">
+            >
+            ["ac31"] = <
+                text = <"Irradiação ausente">
+                description = <"Irradiação ausente">
+            >
+            ["id104"] = <
+                text = <"Outras irradiações">
+                description = <"Outras irradiações">
+            >
+            ["id106"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
         >
     >
     value_sets = <
@@ -703,6 +811,30 @@ terminology
         >
         ["ac25"] = <
             id = <"ac25">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac26"] = <
+            id = <"ac26">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac27"] = <
+            id = <"ac27">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac28"] = <
+            id = <"ac28">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac29"] = <
+            id = <"ac29">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac30"] = <
+            id = <"ac30">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac31"] = <
+            id = <"ac31">
             members = <"at4", "at5", "at6">
         >
     >
