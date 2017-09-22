@@ -2849,29 +2849,56 @@ definition
     OBSERVATION[id1.1.1] matches {    -- Lichaamsgewicht
         /data[id3]/events matches {
             EVENT[id4] matches {
-                /data[id2]/items[id5]/value matches {
-                    DV_QUANTITY[id30] matches {
-                        property matches {[at19]}
-                        [magnitude, units] matches {
-                            [{|0.0..1000.0|}, {"kg"}], 
-                            [{|0.0..2000.0|}, {"lb"}]
+                /data[id2]/items matches {
+                    ELEMENT[id5.0.1] occurrences matches {0} matches {    -- Gewicht
+                        value matches {
+                            DV_QUANTITY[id30.0.1] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.0.1] 
                         }
                     }
                 }
                 /state[id9]/items matches {
-                    ELEMENT[id10] occurrences matches {0..1} matches {
-                        /value[id32]/defining_code matches {[ac1; at12]}
+                    ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
                     }
-                    ELEMENT[id29] occurrences matches {0..1} matches {
-                        /value[id33]/value matches {True, False; false}
+                    ELEMENT[id29.0.1] occurrences matches {0} matches {    -- *New element(en)
+                        value matches {
+                            DV_BOOLEAN[id33.0.1] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.0.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
                     }
                 }
             }
         }
         /protocol[id16]/items matches {
-            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.0.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.0.1] 
+                }
             }
         }
     }
@@ -2883,11 +2910,59 @@ terminology
                 text = <"Lichaamsgewicht">
                 description = <"Meting van het lichaamsgewicht van een individu.">
             >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Het gewicht van het individu.">
+            >
+            ["id25.0.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+            ["id10.0.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["en"] = <
             ["id1.1.1"] = <
                 text = <"Body Weight">
                 description = <"Measurement of the body weight of an individual.">
+            >
+            ["id5.0.1"] = <
+                text = <"Weight">
+                description = <"The weight of the individual.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+            ["id10.0.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id29.0.1"] = <
+                text = <"Pregnant?">
+                description = <"Is the woman pregnant at time of measurement?">
+            >
+            ["id26.0.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id28.0.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
             >
         >
         ["de"] = <
@@ -2895,17 +2970,89 @@ terminology
                 text = <"Körpergewicht">
                 description = <"Messung des Körpergewichts eines Individuums.">
             >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Das Gewicht eines Individuums.">
+            >
+            ["id25.0.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+            ["id10.0.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
-                text = <"Peso corporal">
+                text = <"Circunferência abdominal">
                 description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id5.0.1"] = <
+                text = <"Peso">
+                description = <"O peso do indivíduo.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+            ["id10.0.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id29.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
+            >
+            ["id26.0.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id28.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
             >
         >
         ["ru"] = <
             ["id1.1.1"] = <
                 text = <"Масса тела">
                 description = <"Взвешивание пациента.">
+            >
+            ["id5.0.1"] = <
+                text = <"Вес">
+                description = <"Вес пациента.">
+            >
+            ["id25.0.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
+            >
+            ["id10.0.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
             >
         >
     >
@@ -3033,7 +3180,20 @@ definition
                 }
             }
             CLUSTER[id1034.1] occurrences matches {0} matches {    -- *New cluster(en)
-                /items[id15]/value[id1068]/defining_code matches {[ac4]}
+                items matches {
+                    ELEMENT[id15.1] occurrences matches {0} matches {    -- *Location of measurement(en)
+                        value matches {
+                            DV_CODED_TEXT[id1068.1] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1035.1] occurrences matches {0} matches {    -- *Specific location(en)
+                        value matches {
+                            DV_TEXT[id1069.1] 
+                        }
+                    }
+                }
             }
             ELEMENT[id1036.1] occurrences matches {0} matches {    -- *New element(en)
                 value matches {
@@ -3120,6 +3280,14 @@ terminology
                 text = <"*Tilt(en)">
                 description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
             >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body locations where blood pressure is recorded(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Detailed description about the site of the measurement of the blood pressure(en)">
+            >
         >
         ["de"] = <
             ["id1.1"] = <
@@ -3177,6 +3345,14 @@ terminology
             ["id1006.1"] = <
                 text = <"Neigung">
                 description = <"Die cranio-kaudale Neigung der Oberfläche auf der die Person zum Zeitpunkt der Messung liegt.">
+            >
+            ["id15.1"] = <
+                text = <"Körperstelle der Messung">
+                description = <"Gewöhnliche Körperstellen, an denen der Blutdruck gemessen wird.">
+            >
+            ["id1035.1"] = <
+                text = <"Spezifische Stelle">
+                description = <"Spezifische Details über die Körperstelle, an der der Blutdruck gemessen wird.">
             >
         >
         ["en"] = <
@@ -3236,6 +3412,14 @@ terminology
                 text = <"Tilt">
                 description = <"The craniocaudal tilt of the surface on which the person is lying at the time of measurement.">
             >
+            ["id15.1"] = <
+                text = <"Location of measurement">
+                description = <"Common body sites where blood pressure is recorded.">
+            >
+            ["id1035.1"] = <
+                text = <"Specific location">
+                description = <"Specific details about the body site where blood pressure is recorded.">
+            >
         >
         ["fa"] = <
             ["id1.1"] = <
@@ -3293,6 +3477,14 @@ terminology
             ["id1006.1"] = <
                 text = <"شیب">
                 description = <"شیب طولی سطحی که فرد در حین اندازه گیری رون آن دراز کشیده است">
+            >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body sites where blood pressure is recorded.(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Specific details about the body site where blood pressure is recorded.(en)">
             >
         >
         ["ja"] = <
@@ -3352,6 +3544,14 @@ terminology
                 text = <"ティルト">
                 description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
             >
+            ["id15.1"] = <
+                text = <"計測部位">
+                description = <"血圧が一般的に測定される身体の部位">
+            >
+            ["id1035.1"] = <
+                text = <"特別な部位">
+                description = <"血圧が測定される場所についての詳細な記録.">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
@@ -3409,6 +3609,14 @@ terminology
             ["id1006.1"] = <
                 text = <"Schuinte">
                 description = <"De craniocaudale schuinte van het oppervlak waarop het individu ligt op het moment van de meting">
+            >
+            ["id15.1"] = <
+                text = <"Plaats van meting">
+                description = <"Gewoonlijke lichaamslocaties waar bloeddruk gemeten wordt.">
+            >
+            ["id1035.1"] = <
+                text = <"Specifieke locatie">
+                description = <"Specifieke details over de lichaamsplaats waar de bloeddruk is gemeten.">
             >
         >
         ["ru"] = <
@@ -3468,6 +3676,14 @@ terminology
                 text = <"Наклонная поверхность">
                 description = <"краниокаудальный наклон поверхности, на которой лежит пациент во время измерения АД.">
             >
+            ["id15.1"] = <
+                text = <"Место измерения">
+                description = <"Обобщенное место тела, в которм производится измерение артериального давления.">
+            >
+            ["id1035.1"] = <
+                text = <"Точное месторасположение">
+                description = <"Конкретные сведения о месте тела, где  регистрируется АД.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -3525,6 +3741,14 @@ terminology
             ["id1006.1"] = <
                 text = <"Inclinação">
                 description = <"A inclinação craniocaudal da superfície em que a pessoa está no momento da medição.">
+            >
+            ["id15.1"] = <
+                text = <"Localização da medida">
+                description = <"Regiões comuns do corpo onde a pressão arterial é registrada.">
+            >
+            ["id1035.1"] = <
+                text = <"Localização específica">
+                description = <"Detalhes específicos sobre o local do corpo onde a pressão arterial é registrada.">
             >
         >
     >
