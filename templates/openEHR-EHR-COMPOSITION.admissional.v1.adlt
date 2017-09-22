@@ -58,6 +58,7 @@ definition
             use_archetype ACTION[id0.6, openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0]
             use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
             use_archetype OBSERVATION[id0.9, openEHR-EHR-OBSERVATION.ovl-admissional-body_temperature-001.v1.0.0]
+            use_archetype OBSERVATION[id0.10, openEHR-EHR-OBSERVATION.ovl-admissional-body_mass_index-001.v1.0.0]
         }
     }
 
@@ -1377,6 +1378,56 @@ terminology
             ["id1.1"] = <
                 text = <"Último Período menstrual normal">
                 description = <"Registro da data do 1º dia do último período menstrual normal">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items[id7]/value[id14]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
             >
         >
     >
