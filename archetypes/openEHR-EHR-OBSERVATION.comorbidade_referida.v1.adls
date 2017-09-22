@@ -44,6 +44,20 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id13] occurrences matches {1} matches {    -- Infarto
+                                        value matches {
+                                            DV_BOOLEAN[id14] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {1} matches {    -- Acidente vascular cerebral ou derrame
+                                        value matches {
+                                            DV_BOOLEAN[id16] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -78,6 +92,14 @@ terminology
             ["id11"] = <
                 text = <"Angina">
                 description = <"Angina">
+            >
+            ["id13"] = <
+                text = <"Infarto">
+                description = <"Infarto">
+            >
+            ["id15"] = <
+                text = <"Acidente vascular cerebral ou derrame">
+                description = <"Acidente vascular cerebral ou derrame">
             >
         >
     >
