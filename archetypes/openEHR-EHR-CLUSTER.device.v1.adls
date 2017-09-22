@@ -12,6 +12,15 @@ language
             >
             language = <[ISO_639-1::sl]>
         >
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organisation"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
     >
     
 description
@@ -35,6 +44,15 @@ For common use cases, it may be appropriate to specialise this archetype specifi
             use = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe. Uporaba termina naprava je odvisna od vsebine oz. namena uporabe.
 
 ">
+        >
+        ["pt-br"] = <
+            keywords = <"device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "physical", "object">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para registrar produtos como medicamentos ou vacinas ou similares, que são usados para meios terapêuticos ou metabólicos.">
+            purpose = <"Para registrar os detalhes de um objeto físico, produto ou dispositivo usado na descrição mais ampla da prestação de cuidados de saúde, mas sem meios terapêuticos ou metabólicos diretos.">
+            use = <"Use para registrar os detalhes sobre qualquer dispositivo genérico que possa ser usado diretamente de forma terapêutica ou diagnóstica ou, indiretamente, para apoiar a prestação de cuidados de saúde. O uso do termo dispositivo varia de acordo com o contexto. Dentro do mundo das Normas, o termo dispositivo tende a se referir a dispositivos mecânicos ou eletrônicos que atendem a assistência médica e exigem documentação rigorosa em relação às especificações, manutenção, etc. Dentro do contexto terminológico, o uso do dispositivo é muito amplo, incluindo qualquer objeto físico que possa ser usado em prestação direta ou indireta de cuidados clínicos. Exemplos incluem circuitos ventilatórios, medidores de fluxo de pico, espirômetros, óculos e lentes de contato, cateteres intravasculares, implantes mamários, próteses, tubos de drenagem e anéis de milho.
+Este arquétipo é projetado para fornecer a base para uma representação estruturada de qualquer dispositivo, a partir de um exemplo simples de uma marca de vira-dentes urinária com uma data atual de \"uso por\" até uma orelha biônica implantada que pode exigir documentação complexa re software, hardware, manutenção, calibração etc.
+Para casos de uso comum, pode ser apropriado especializar este arquétipo especificamente, por exemplo, cateter intravascular ou cateter urinário.">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -194,7 +212,7 @@ terminology
             >
             ["id2"] = <
                 text = <"ID">
-                description = <"ID naprave ">
+                description = <"ID naprave">
             >
             ["id3"] = <
                 text = <"Opis">
@@ -230,7 +248,7 @@ terminology
             >
             ["id14"] = <
                 text = <"Varnostna navodila">
-                description = <"Varnostna navodila ">
+                description = <"Varnostna navodila">
             >
             ["id15"] = <
                 text = <"Tip navodil">
@@ -251,6 +269,72 @@ terminology
             ["id21"] = <
                 text = <"Sestavni deli">
                 description = <"*Information about the device sub-components.(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Dispositivo">
+                description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
+            >
+            ["id2"] = <
+                text = <"Nome do dispositivo">
+                description = <"Identificação do dispositivo. É muito provável que seja um campo codificado, incluindo detalhes pré ou pós-coordenados.">
+            >
+            ["id3"] = <
+                text = <"Descrição">
+                description = <"Descrição do dispositivo.">
+            >
+            ["id4"] = <
+                text = <"Tipo">
+                description = <"Tipo do dispositivo.">
+            >
+            ["id5"] = <
+                text = <"Fabricante">
+                description = <"O nome do fabricante do dispositivo.">
+            >
+            ["id6"] = <
+                text = <"Data de fabricação">
+                description = <"Data que o dispositivo foi fabricado.">
+            >
+            ["id7"] = <
+                text = <"Número do lote">
+                description = <"Número do lote do fabricante.">
+            >
+            ["id8"] = <
+                text = <"Data de validade">
+                description = <"Data em que o dispositivo / produto já não é adequado para uso.">
+            >
+            ["id9"] = <
+                text = <"Comentário">
+                description = <"Comentários sobre o dispositivo.">
+            >
+            ["id10"] = <
+                text = <"Detalhes adicionais">
+                description = <"Detalhes adicionais a serem observados sobre o dispositivo.">
+            >
+            ["id14"] = <
+                text = <"Funcionalidade de segurança">
+                description = <"Detalhes sobre recursos de segurança do dispositivo.">
+            >
+            ["id15"] = <
+                text = <"Tipo de funcionalidade">
+                description = <"Tipo da funcionalidade de segurança do dispositivo.">
+            >
+            ["id16"] = <
+                text = <"Descrição">
+                description = <"Descrição da funcionalidade de segurança do dispositivo.">
+            >
+            ["id17"] = <
+                text = <"Tamanho">
+                description = <"Tamanho do dispositivo - é oferecida uma escolha de tipos de valor - contagem, quantidade ou texto.">
+            >
+            ["id18"] = <
+                text = <"Dimensões">
+                description = <"Especifique as dimensões do dispositivo.">
+            >
+            ["id21"] = <
+                text = <"Componentes">
+                description = <"Informações sobre os subcomponentes do dispositivo.">
             >
         >
     >

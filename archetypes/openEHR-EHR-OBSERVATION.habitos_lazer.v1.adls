@@ -1,0 +1,182 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- habitos_lazer
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Atividades de lazer
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Tipo de lazer
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"habitos_lazer">
+                description = <"habitos_lazer">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Atividades de lazer">
+                description = <"Atividades de lazer">
+            >
+            ["id8"] = <
+                text = <"Tipo de lazer">
+                description = <"Tipo de lazer">
+            >
+            ["at1"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at2"] = <
+                text = <"Esporadicamente">
+                description = <"Esporadicamente">
+            >
+            ["at3"] = <
+                text = <"Frequentemente">
+                description = <"Frequentemente">
+            >
+            ["ac1"] = <
+                text = <"Atividades de lazer">
+                description = <"Atividades de lazer">
+            >
+            ["at4"] = <
+                text = <"Atividade manual">
+                description = <"Atividade manual">
+            >
+            ["at5"] = <
+                text = <"Canto">
+                description = <"Canto">
+            >
+            ["at6"] = <
+                text = <"Instrumento musical">
+                description = <"Instrumento musical">
+            >
+            ["at7"] = <
+                text = <"Outros">
+                description = <"Outros">
+            >
+            ["ac2"] = <
+                text = <"Tipo de lazer">
+                description = <"Tipo de lazer">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Leisure habits">
+                description = <"Leisure habits">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"Leisure of activity">
+                description = <"Leisure of activity">
+            >
+            ["id8"] = <
+                text = <"Type of leisure">
+                description = <"Type of leisure">
+            >
+            ["at1"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Esporadicamente (pt-br)">
+                description = <"*Esporadicamente (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Frequentemente (pt-br)">
+                description = <"*Frequentemente (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Atividades de lazer (pt-br)">
+                description = <"*Atividades de lazer (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Atividade manual (pt-br)">
+                description = <"*Atividade manual (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Canto (pt-br)">
+                description = <"*Canto (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Instrumento musical (pt-br)">
+                description = <"*Instrumento musical (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Outros (pt-br)">
+                description = <"*Outros (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Tipo de lazer (pt-br)">
+                description = <"*Tipo de lazer (pt-br)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at4", "at5", "at6", "at7">
+        >
+    >
+

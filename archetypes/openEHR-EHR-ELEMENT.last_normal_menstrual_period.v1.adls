@@ -1,43 +1,72 @@
 archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
-	openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
+    openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
 
 language
-	original_language = <[ISO_639-1::en]>
-
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
 description
-	lifecycle_state = <"unmanaged">
-	original_author = <
-		["name"] = <"Heather Leslie">
-		["organisation"] = <"Ocean Informatics">
-		["email"] = <"heather.leslie@oceaninformatics.com">
-		["date"] = <"19/07/2008">
-	>
-	copyright = <"© openEHR Foundation">
-	details = <
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the date of the Last Normal Menstrual Period (LNMP)">
-			use = <"To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation">
-			keywords = <"menstruation", "woman", "female", "menstrual", "period", "date">
-			misuse = <"">
-		>
-	>
+    copyright = <"© openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"menstruation", "woman", "female", "menstrual", "period", "date">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"To record the date of the Last Normal Menstrual Period (LNMP)">
+            use = <"To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation">
+        >
+        ["en"] = <
+            keywords = <"menstruation", "woman", "female", "menstrual", "period", "date">
+            language = <[ISO_639-1::en]>
+            purpose = <"*To record the date of the Last Normal Menstrual Period (LNMP) (en)">
+            use = <"*To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation (en)">
+        >
+        ["pt-br"] = <
+            keywords = <"menstruation", "woman", "female", "menstrual", "period", "date">
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"*To record the date of the Last Normal Menstrual Period (LNMP) (en)">
+            use = <"*To reuse within multiple archetypes - for example, the cluster recording the details about menstrual cycles, plus use in the temperature observation (en)">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"19/07/2008">
+    >
 
 definition
-	ELEMENT[id1] matches {	-- Last Normal Menstrual Period
-		value matches {
-			DV_DATE_TIME[id2] matches {
-				value matches {yyyy-??-??T??:??:??}
-			}
-		}
-	}
+    ELEMENT[id1] matches {    -- *Last Normal Menstrual Period (en)
+        value matches {
+            DV_DATE_TIME[id2] matches {
+                value matches {yyyy-??-??T??:??:??}
+            }
+        }
+    }
 
 terminology
-	term_definitions = <
-		["en"] = <
-			["id1"] = <
-				text = <"Last Normal Menstrual Period">
-				description = <"Record of the date of 1st day of last normal menstrual period">
-			>
-		>
-	>
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Last Normal Menstrual Period (en)">
+                description = <"*Record of the date of 1st day of last normal menstrual period (en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Último Período menstrual normal">
+                description = <"Registro da data do 1º dia do último período menstrual normal">
+            >
+        >
+    >
+

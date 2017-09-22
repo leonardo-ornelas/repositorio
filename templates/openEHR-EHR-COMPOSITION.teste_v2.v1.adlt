@@ -68,6 +68,7 @@ description
 
 definition
     COMPOSITION[id1.1] matches {    -- Encontro
+        /category[id3]/defining_code matches {[at1]}
         content matches {
             allow_archetype OBSERVATION[id8] matches { 
                 include

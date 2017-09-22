@@ -1,0 +1,322 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Antecedentes_ginecologico_urologico
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Date of last menstruation - DUM
+                                        value matches {
+                                            DV_TEXT[id7] 
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {1} matches {    -- Gynecological Preventive
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {1} matches {    -- value of the result
+                                        value matches {
+                                            DV_TEXT[id11] 
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Mammography
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- description
+                                        value matches {
+                                            DV_TEXT[id15] 
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- comment
+                                        value matches {
+                                            DV_TEXT[id17] 
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Prostate Specific Antigen (PSA)
+                                        value matches {
+                                            DV_CODED_TEXT[id19] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- value of the result
+                                        value matches {
+                                            DV_TEXT[id21] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"Antecedentes_ginecologico_urologico">
+                description = <"Antecedentes_ginecologico_urologico">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Date of last menstruation - DUM">
+                description = <"Date of last menstruation - DUM">
+            >
+            ["id8"] = <
+                text = <"Gynecological Preventive">
+                description = <"Gynecological Preventive">
+            >
+            ["at1"] = <
+                text = <"yes">
+                description = <"yes">
+            >
+            ["at2"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at3"] = <
+                text = <"ignored">
+                description = <"ignored">
+            >
+            ["at4"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["ac1"] = <
+                text = <"Gynecological Preventive">
+                description = <"Gynecological Preventive">
+            >
+            ["id10"] = <
+                text = <"value of the result">
+                description = <"value of the result">
+            >
+            ["id12"] = <
+                text = <"Mammography">
+                description = <"Mammography">
+            >
+            ["at5"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at6"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at7"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["at8"] = <
+                text = <"ignorado">
+                description = <"ignorado">
+            >
+            ["at9"] = <
+                text = <"ignored">
+                description = <"ignored">
+            >
+            ["ac2"] = <
+                text = <"Mammography">
+                description = <"Mammography">
+            >
+            ["id14"] = <
+                text = <"description">
+                description = <"description">
+            >
+            ["id16"] = <
+                text = <"comment">
+                description = <"comment">
+            >
+            ["id18"] = <
+                text = <"Prostate Specific Antigen (PSA)">
+                description = <"Prostate Specific Antigen (PSA)">
+            >
+            ["at10"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at11"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at12"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at13"] = <
+                text = <"not applicable">
+                description = <"not applicable">
+            >
+            ["ac3"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
+            ["id20"] = <
+                text = <"value of the result">
+                description = <"value of the result">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Antecedentes ginecologico urologico">
+                description = <"Antecedentes ginecologico urologico">
+            >
+            ["id3"] = <
+                text = <"*Any event (en)">
+                description = <"*Any event (en)">
+            >
+            ["id6"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id8"] = <
+                text = <"Preventivo ginecologico">
+                description = <"Preventivo ginecologico">
+            >
+            ["at1"] = <
+                text = <"*yes (en)">
+                description = <"*yes (en)">
+            >
+            ["at2"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at3"] = <
+                text = <"*ignored (en)">
+                description = <"*ignored (en)">
+            >
+            ["at4"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["ac1"] = <
+                text = <"*Gynecological Preventive (en)">
+                description = <"*Gynecological Preventive (en)">
+            >
+            ["id10"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
+            >
+            ["id12"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["at5"] = <
+                text = <"*Yes (en)">
+                description = <"*Yes (en)">
+            >
+            ["at6"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at7"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["at8"] = <
+                text = <"*ignorado (en)">
+                description = <"*ignorado (en)">
+            >
+            ["at9"] = <
+                text = <"*ignored (en)">
+                description = <"*ignored (en)">
+            >
+            ["ac2"] = <
+                text = <"*Mammography (en)">
+                description = <"*Mammography (en)">
+            >
+            ["id14"] = <
+                text = <"descrição">
+                description = <"descrição">
+            >
+            ["id16"] = <
+                text = <"comentário">
+                description = <"comentário">
+            >
+            ["id18"] = <
+                text = <"Antígeno Prostático Específico (PSA)">
+                description = <"Antígeno Prostático Específico (PSA)">
+            >
+            ["at10"] = <
+                text = <"*Yes (en)">
+                description = <"*Yes (en)">
+            >
+            ["at11"] = <
+                text = <"*No (en)">
+                description = <"*No (en)">
+            >
+            ["at12"] = <
+                text = <"*Ignored (en)">
+                description = <"*Ignored (en)">
+            >
+            ["at13"] = <
+                text = <"*not applicable (en)">
+                description = <"*not applicable (en)">
+            >
+            ["ac3"] = <
+                text = <"*PSA (en)">
+                description = <"*PSA (en)">
+            >
+            ["id20"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at5", "at6", "at7", "at9">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at10", "at11", "at12", "at13">
+        >
+    >
+

@@ -1,0 +1,670 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.lab_test-result.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"copyright (c) 2010 openEHR Foundation">
+    details = <
+        ["en"] = <
+            keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used for reporting on non-pathology test results e.g. diagnostic imaging, ECG or respiratory function tests.
+
+Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+
+This archetype is suitable for representation of general pathology test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.">
+            purpose = <"To record the findings and interpretation of pathology tests performed on tissues and body fluids. This is typically done in a laboratory but may be done in other environments such as at the point of care.">
+            use = <"Use to record any pathology test result, including the result of a test on a specimen taken as part of a composite procedure or operation.
+
+Multi-analyte panels can be represented using templates or specialised archetypes.
+
+More complex tests such as histopathology or microbiology should be represented using specialised archetypes where additional report content is required.
+
+Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+        >
+        ["pt-br"] = <
+            keywords = <"lab", "pathology", "biochemistry", "haematology", "microbiology", "immunology", "laboratory">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para relatar resultados de testes não-patológicos, e. diagnóstico por imagem, ECG ou testes de função respiratória.
+
+Não deve ser usado para representar um relatório cumulativo completo. Este arquétipo de resultado de teste de patologia representa apenas um dos conjuntos de resultados que geralmente são vistos como verticais em um relatório de teste cumulativo. Um relatório cumulativo é uma visão que é construída a partir dos resultados representados por vários arquétipos de OBSERVATION.
+
+Este arquétipo é adequado para a representação dos resultados dos testes de patologia geral, mas não destinado a cobrir relatórios sinopáticos completos. Para isso, são necessários arquétipos especializados adicionais para representar os dados.">
+            purpose = <"Para registrar os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais. Isso geralmente é feito em um laboratório, mas pode ser feito em outros ambientes, como no ponto de atendimento.">
+            use = <"Use para registrar qualquer resultado do teste de patologia, incluindo o resultado de um teste em uma amostra tomada como parte de um procedimento ou operação composta.
+
+Os painéis de multi-analitos podem ser representados usando modelos ou arquétipos especializados.
+
+Testes mais complexos, como histopatologia ou microbiologia, devem ser representados usando arquétipos especializados em que o conteúdo do relatório adicional é necessário.
+
+Normalmente, será relatado de volta ao clínico solicitante como um componente no contexto de um relatório global baseado em COMPOSITION.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Dr Ian McNicoll">
+        ["organisation"] = <"Ocean Informatics, United Kingdom">
+        ["email"] = <"ian.mcnicoll@oceaninformatics.com">
+        ["date"] = <"07/11/2009">
+    >
+    other_contributors = <"Sam Heard, Ocean Informatics, Australia", "Heather Leslie, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Koray Atalag, University of Auckland, New Zealand", "Grahame Grieve, Health Intersections Pyty Ltd, Australia">
+
+definition
+    OBSERVATION[id1.1] matches {    -- Laboratory test result
+        /data[id2]/events[id3]/data[id4]/items matches {
+            allow_archetype CLUSTER[id66] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen\.v1/}
+                exclude
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id74] matches {    -- Overall test result status
+                /value[id116]/defining_code matches {[ac1]}
+            }
+            CLUSTER[id96] matches {    -- Result group
+                items matches {
+                    CLUSTER[id97] matches {    -- Result
+                        items matches {
+                            ELEMENT[id109] occurrences matches {0..1} matches {    -- Result status
+                                /value[id123]/defining_code matches {[ac2]}
+                            }
+                            allow_archetype CLUSTER[id106] matches { 
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id98] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Prostate-Specific Antigen (PSA)
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+        }
+        /protocol[id5]/items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            CLUSTER[id95] occurrences matches {0..1} matches {    -- Test request details
+                items matches {
+                    allow_archetype CLUSTER[id91] matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id111] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Laboratory test result">
+                description = <"Record the findings and interpretation of pathology tests performed on tissues and body fluids.">
+            >
+            ["id0.2"] = <
+                text = <"Prostate-Specific Antigen (PSA)">
+                description = <"Record if performed in the last year">
+            >
+            ["at0.1"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at0.2"] = <
+                text = <"Not">
+                description = <"Not">
+            >
+            ["at0.3"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["at0.4"] = <
+                text = <"Not applicable">
+                description = <"Not applicable">
+            >
+            ["ac0.1"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
+            ["id1"] = <
+                text = <"Laboratory test result">
+                description = <"Record the findings and interpretation of pathology tests performed on tissues and body fluids.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event.">
+            >
+            ["id6"] = <
+                text = <"Test result name">
+                description = <"Identification of the pathology test performed, sometimes including specimen type. Coding with a terminology, potientially a pre-coordinated term including specimen type, is preferred, where possible. May be coded with LOINC or Snomed-CT. A test result may be for a single analyte, or a group of items, including panel tests.">
+            >
+            ["id11"] = <
+                text = <"Test result representation">
+                description = <"Rich text or other mutlimedia representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they must be semantically equivalent.">
+            >
+            ["id18"] = <
+                text = <"Receiving laboratory">
+                description = <"Demographic details of the laboratory with responsibility for the test. Details of secondary laboratories may also be included.">
+            >
+            ["at38"] = <
+                text = <"Interim">
+                description = <"This is an initial or interim result - further updates are anticipated.">
+            >
+            ["at39"] = <
+                text = <"Final">
+                description = <"This is the final result. No further alterations are anticipated.">
+            >
+            ["at40"] = <
+                text = <"Supplementary">
+                description = <"This is a supplementary result ehich should be appended to a previous result.">
+            >
+            ["at41"] = <
+                text = <"Corrected / Amended">
+                description = <"This is a correction which should completely replace any previous results.">
+            >
+            ["id58"] = <
+                text = <"Conclusion">
+                description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
+            >
+            ["id63"] = <
+                text = <"Requester order identifier">
+                description = <"The local ID assigned to the order by the order requester. Equivalent to the Placer Order Identifier.">
+            >
+            ["id64"] = <
+                text = <"Receiver order Identifier">
+                description = <"The local ID assigned to the test order by the order filler, usually by the (LIS) Laboratory Information System. Equivalent to the DICOM Accession Number and the Filler Order Identifier.">
+            >
+            ["id66"] = <
+                text = <"Specimen detail">
+                description = <"Details about the specimen if all individual test results are derived from the same specimen. If the specimen is sufficiently specified with a code in the Test result name, then this additional data is not required. If there are multiple specimens, these may be represented per 'Result group'.">
+            >
+            ["id69"] = <
+                text = <"Laboratory test result identifier">
+                description = <"The identifier given to the laboratory test result of a pathology investigation.">
+            >
+            ["id74"] = <
+                text = <"Overall test result status">
+                description = <"The status of the pathology test result as a whole.">
+            >
+            ["at75"] = <
+                text = <"Cancelled / Aborted">
+                description = <"The test was aborted and never completed.">
+            >
+            ["id78"] = <
+                text = <"Diagnostic service">
+                description = <"The diagnostic service that performs the examination e.g. biochemistry, haematology. Coding with a terminology is desirable, where possible.">
+            >
+            ["at80"] = <
+                text = <"Never performed">
+                description = <"The test was never performed.">
+            >
+            ["id91"] = <
+                text = <"Requester">
+                description = <"Details of the clinician or organisation requesting the laboratory test.">
+            >
+            ["id95"] = <
+                text = <"Test request details">
+                description = <"*">
+            >
+            ["id96"] = <
+                text = <"Result group">
+                description = <"A group of results. Results may be grouped by specimen, or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT, if possible.">
+            >
+            ["id97"] = <
+                text = <"Result">
+                description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation. Results include whatever specific data items pathology labs report as part of the clinical service; it is not confined to measurements. The result is identified by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT. Examples include: glucose, haemoglobin, phenotype, titre, or scatterplot image.">
+            >
+            ["id98"] = <
+                text = <"Specimen detail">
+                description = <"Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
+            >
+            ["id99"] = <
+                text = <"Pathological diagnosis">
+                description = <"Single word, phrase or brief description representing the 'Conclusion'. Coding with a terminology is preferred, where possible.">
+            >
+            ["id100"] = <
+                text = <"DateTime result issued">
+                description = <"The date and/or time that the result was issued for the recorded ‘Overall test result status’.">
+            >
+            ["id101"] = <
+                text = <"Clinical information provided">
+                description = <"Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the test request.">
+            >
+            ["id102"] = <
+                text = <"Test comment">
+                description = <"Additional narrative about the test not captured in other fields.">
+            >
+            ["id103"] = <
+                text = <"Result comment">
+                description = <"May include statements about significant, unexpected or unreliable. values, or information about the source of the value where this may be relevant to the interpretation of the result.">
+            >
+            ["id104"] = <
+                text = <"Reference range guidance">
+                description = <"Additional advice on the applicability of the reference range.">
+            >
+            ["id105"] = <
+                text = <"Date of analysis">
+                description = <"The date that the analysis was performed.">
+            >
+            ["id106"] = <
+                text = <"Analysis method">
+                description = <"*">
+            >
+            ["id107"] = <
+                text = <"Test requested name">
+                description = <"Identification of pathology test requested, where the test requested differs from the test actually performed.">
+            >
+            ["at108"] = <
+                text = <"Registered">
+                description = <"The tst has been registered by the laboratory but a result is not yet available.">
+            >
+            ["id109"] = <
+                text = <"Result status">
+                description = <"The status of the result value.">
+            >
+            ["id111"] = <
+                text = <"Test procedure">
+                description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
+            >
+            ["id112"] = <
+                text = <"Date Time result issued">
+                description = <"The date and/or time that the result was issued for the recorded ‘Result status’.">
+            >
+            ["id113"] = <
+                text = <"Result value">
+                description = <"*">
+            >
+            ["ac1"] = <
+                text = <"Overall test result status (synthesised)">
+                description = <"The status of the pathology test result as a whole. (synthesised)">
+            >
+            ["ac2"] = <
+                text = <"Result status (synthesised)">
+                description = <"The status of the result value. (synthesised)">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Laboratory test result(en)">
+                description = <"*Record the findings and interpretation of pathology tests performed on tissues and body fluids.(en)">
+            >
+            ["id1"] = <
+                text = <"*Laboratory test result(en)">
+                description = <"*Record the findings and interpretation of pathology tests performed on tissues and body fluids.(en)">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"*Any event.(en)">
+            >
+            ["id6"] = <
+                text = <"*Test result name(en)">
+                description = <"*Identification of the pathology test performed, sometimes including specimen type. Coding with a terminology, potientially a pre-coordinated term including specimen type, is preferred, where possible. May be coded with LOINC or Snomed-CT. A test result may be for a single analyte, or a group of items, including panel tests.(en)">
+            >
+            ["id11"] = <
+                text = <"*Test result representation(en)">
+                description = <"*Rich text or other mutlimedia representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they must be semantically equivalent.(en)">
+            >
+            ["id18"] = <
+                text = <"*Receiving laboratory(en)">
+                description = <"*Demographic details of the laboratory with responsibility for the test. Details of secondary laboratories may also be included.(en)">
+            >
+            ["at38"] = <
+                text = <"*Interim(en)">
+                description = <"*This is an initial or interim result - further updates are anticipated.(en)">
+            >
+            ["at39"] = <
+                text = <"*Final(en)">
+                description = <"*This is the final result. No further alterations are anticipated.(en)">
+            >
+            ["at40"] = <
+                text = <"*Supplementary(en)">
+                description = <"*This is a supplementary result ehich should be appended to a previous result.(en)">
+            >
+            ["at41"] = <
+                text = <"*Corrected / Amended(en)">
+                description = <"*This is a correction which should completely replace any previous results.(en)">
+            >
+            ["id58"] = <
+                text = <"*Conclusion(en)">
+                description = <"*Concise and clinically contextualised narrative interpretation of the pathology test results.(en)">
+            >
+            ["id63"] = <
+                text = <"*Requester order identifier(en)">
+                description = <"*The local ID assigned to the order by the order requester. Equivalent to the Placer Order Identifier.(en)">
+            >
+            ["id64"] = <
+                text = <"*Receiver order Identifier(en)">
+                description = <"*The local ID assigned to the test order by the order filler, usually by the (LIS) Laboratory Information System. Equivalent to the DICOM Accession Number and the Filler Order Identifier.(en)">
+            >
+            ["id66"] = <
+                text = <"*Specimen detail(en)">
+                description = <"*Details about the specimen if all individual test results are derived from the same specimen. If the specimen is sufficiently specified with a code in the Test result name, then this additional data is not required. If there are multiple specimens, these may be represented per 'Result group'.(en)">
+            >
+            ["id69"] = <
+                text = <"*Laboratory test result identifier(en)">
+                description = <"*The identifier given to the laboratory test result of a pathology investigation.(en)">
+            >
+            ["id74"] = <
+                text = <"*Overall test result status(en)">
+                description = <"*The status of the pathology test result as a whole.(en)">
+            >
+            ["at75"] = <
+                text = <"*Cancelled / Aborted(en)">
+                description = <"*The test was aborted and never completed.(en)">
+            >
+            ["id78"] = <
+                text = <"*Diagnostic service(en)">
+                description = <"*The diagnostic service that performs the examination e.g. biochemistry, haematology. Coding with a terminology is desirable, where possible.(en)">
+            >
+            ["at80"] = <
+                text = <"*Never performed(en)">
+                description = <"*The test was never performed.(en)">
+            >
+            ["id91"] = <
+                text = <"*Requester(en)">
+                description = <"*Details of the clinician or organisation requesting the laboratory test.(en)">
+            >
+            ["id95"] = <
+                text = <"*Test request details(en)">
+                description = <"**(en)">
+            >
+            ["id96"] = <
+                text = <"*Result group(en)">
+                description = <"*A group of results. Results may be grouped by specimen, or by some other name or code to describe what binds all the results together. If a name or code is used, it is provided by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT, if possible.(en)">
+            >
+            ["id97"] = <
+                text = <"*Result(en)">
+                description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation. Results include whatever specific data items pathology labs report as part of the clinical service; it is not confined to measurements. The result is identified by run-time re-naming of the 'Result group' element or may be fixed in a specialised archetype or template. Coding with a terminology, potentially a pre-coordinated term including specimen type, is preferred where possible for the name. Should be coded with LOINC or SNOMED CT. Examples include: glucose, haemoglobin, phenotype, titre, or scatterplot image.(en)">
+            >
+            ["id98"] = <
+                text = <"*Specimen detail(en)">
+                description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.(en)">
+            >
+            ["id99"] = <
+                text = <"*Pathological diagnosis(en)">
+                description = <"*Single word, phrase or brief description representing the 'Conclusion'. Coding with a terminology is preferred, where possible.(en)">
+            >
+            ["id100"] = <
+                text = <"*DateTime result issued(en)">
+                description = <"*The date and/or time that the result was issued for the recorded ‘Overall test result status’.(en)">
+            >
+            ["id101"] = <
+                text = <"*Clinical information provided(en)">
+                description = <"*Description of clinical information available at the time of interpretation of results, or a link to the original clinical information provided in the test request.(en)">
+            >
+            ["id102"] = <
+                text = <"*Test comment(en)">
+                description = <"*Additional narrative about the test not captured in other fields.(en)">
+            >
+            ["id103"] = <
+                text = <"*Result comment(en)">
+                description = <"*May include statements about significant, unexpected or unreliable. values, or information about the source of the value where this may be relevant to the interpretation of the result.(en)">
+            >
+            ["id104"] = <
+                text = <"*Reference range guidance(en)">
+                description = <"*Additional advice on the applicability of the reference range.(en)">
+            >
+            ["id105"] = <
+                text = <"*Date of analysis(en)">
+                description = <"*The date that the analysis was performed.(en)">
+            >
+            ["id106"] = <
+                text = <"*Analysis method(en)">
+                description = <"**(en)">
+            >
+            ["id107"] = <
+                text = <"*Test requested name(en)">
+                description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed.(en)">
+            >
+            ["at108"] = <
+                text = <"*Registered(en)">
+                description = <"*The tst has been registered by the laboratory but a result is not yet available.(en)">
+            >
+            ["id109"] = <
+                text = <"*Result status(en)">
+                description = <"*The status of the result value.(en)">
+            >
+            ["id111"] = <
+                text = <"*Test procedure(en)">
+                description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.(en)">
+            >
+            ["id112"] = <
+                text = <"*Date Time result issued(en)">
+                description = <"*The date and/or time that the result was issued for the recorded ‘Result status’.(en)">
+            >
+            ["id113"] = <
+                text = <"*Result value(en)">
+                description = <"**(en)">
+            >
+            ["ac1"] = <
+                text = <"*Overall test result status(en) (synthesised)">
+                description = <"*The status of the pathology test result as a whole.(en) (synthesised)">
+            >
+            ["ac2"] = <
+                text = <"*Result status(en) (synthesised)">
+                description = <"*The status of the result value.(en) (synthesised)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Resultado do teste de laboratório">
+                description = <"Registre os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais.">
+            >
+            ["id0.2"] = <
+                text = <"Prostate-Specific Antigen (PSA)">
+                description = <"Registrar se foi realizado no último ano.">
+            >
+            ["at0.1"] = <
+                text = <"Sim">
+                description = <"Sim">
+            >
+            ["at0.2"] = <
+                text = <"Não">
+                description = <"Não">
+            >
+            ["at0.3"] = <
+                text = <"Ignorado">
+                description = <"Ignorado">
+            >
+            ["at0.4"] = <
+                text = <"Não aplicável">
+                description = <"Não aplicável">
+            >
+            ["ac0.1"] = <
+                text = <"*PSA (en)">
+                description = <"*PSA (en)">
+            >
+            ["id1"] = <
+                text = <"Resultado do teste de laboratório">
+                description = <"Registre os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais.">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id6"] = <
+                text = <"Nome do resultado do teste">
+                description = <"Identificação do teste de patologia realizado, às vezes incluindo o tipo de amostra. A codificação com uma terminologia, potencialmente, um termo pré-coordenado, incluindo o tipo de amostra, é preferível, sempre que possível. Pode ser codificado com LOINC ou Snomed-CT. Um resultado de teste pode ser para um único analito, ou um grupo de itens, incluindo testes de painel.">
+            >
+            ["id11"] = <
+                text = <"Representação do resultado do teste">
+                description = <"Texto rico ou outra representação multimídia de todo o resultado, conforme emitido pelo serviço de diagnóstico. Vários formatos são permitidos, mas devem ser semanticamente equivalentes.">
+            >
+            ["id18"] = <
+                text = <"Laboratório responsável">
+                description = <"Detalhes demográficos do laboratório responsável pelo teste. Os detalhes dos laboratórios secundários também podem ser incluídos.">
+            >
+            ["at38"] = <
+                text = <"Provisório">
+                description = <"Este é um resultado inicial ou provisório - são antecipadas novas atualizações.">
+            >
+            ["at39"] = <
+                text = <"Final">
+                description = <"Esse é o resultado final. Não são previstas novas alterações.">
+            >
+            ["at40"] = <
+                text = <"Suplementar">
+                description = <"Este é um resultado suplementar que deve ser anexado a um resultado anterior.">
+            >
+            ["at41"] = <
+                text = <"Corrigido/Modificado">
+                description = <"Esta é uma correção que deve substituir completamente os resultados anteriores.">
+            >
+            ["id58"] = <
+                text = <"Conclusão">
+                description = <"Interpretação narrativa concisa e clinicamente contextualizada dos resultados dos testes de patologia.">
+            >
+            ["id63"] = <
+                text = <"Identificador da ordem do solicitante">
+                description = <"O ID local atribuído à ordem pelo solicitante.">
+            >
+            ["id64"] = <
+                text = <"Identificador do pedido">
+                description = <"A identificação local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo sistema de informação de laboratório (LIS). Equivalente ao número de acesso DICOM e ao identificador de pedido de preenchimento.">
+            >
+            ["id66"] = <
+                text = <"Detalhes da amostra">
+                description = <"Detalhes sobre a amostragem se todos os resultados de testes individuais forem derivados da mesma amostra. Se a amostra for suficientemente especificada com um código no nome do resultado do teste, esses dados adicionais não são necessários. Se houver várias amostras, estes podem ser representados por 'Grupo de resultados'.">
+            >
+            ["id69"] = <
+                text = <"Identificador do resultado do teste de laboratório">
+                description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
+            >
+            ["id74"] = <
+                text = <"Status geral do resultado do teste">
+                description = <"O status do resultado do teste de patologia como um todo.">
+            >
+            ["at75"] = <
+                text = <"Cancelado/Abortado">
+                description = <"O teste foi abortado e nunca foi concluído.">
+            >
+            ["id78"] = <
+                text = <"Serviço de diagnóstico">
+                description = <"O serviço de diagnóstico que realiza o exame, e. bioquímica, hematologia. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["at80"] = <
+                text = <"Nunca realizado">
+                description = <"O teste nunca foi realizado.">
+            >
+            ["id91"] = <
+                text = <"Solicitante">
+                description = <"Detalhes do clínico ou organização que solicita o teste de laboratório.">
+            >
+            ["id95"] = <
+                text = <"Detalhes da solicitação do teste">
+                description = <"*">
+            >
+            ["id96"] = <
+                text = <"Grupo de resultados">
+                description = <"Um grupo de resultados. Os resultados podem ser agrupados por amostras, ou por algum outro nome ou código para descrever o que une todos os resultados juntos. Se um nome ou código for usado, ele é fornecido por nomeação de tempo de execução do elemento 'Grupo de resultados' ou pode ser corrigido em um arquétipo ou modelo especializado. A codificação com uma terminologia, potencialmente um termo pré-coordenado, incluindo o tipo de amostra, é preferida, sempre que possível, pelo nome. Deveria ser codificado com LOINC ou SNOMED CT, se possível.">
+            >
+            ["id97"] = <
+                text = <"Resultado">
+                description = <"Resultado detalhado específico, incluindo o valor do item de resultado e informações adicionais que podem ser úteis para a interpretação clínica. Os resultados incluem o que os laboratórios de patologia de itens de dados específicos relatam como parte do serviço clínico; não se limita às medidas. O resultado é identificado por re-nomeação de tempo de execução do elemento 'Grupo de resultados' ou pode ser corrigido em um arquétipo ou modelo especializado. A codificação com uma terminologia, potencialmente um termo pré-coordenado, incluindo o tipo de amostra, é preferida, sempre que possível, pelo nome. Deve ser codificado com LOINC ou SNOMED CT. Os exemplos incluem: imagem de glicose, hemoglobina, fenótipo, título ou imagem dispersa.">
+            >
+            ["id98"] = <
+                text = <"Detalhes da amostra">
+                description = <"Detalhes sobre a amostra individual ao qual se referem esses resultados do teste \"Grupo de resultados\", onde o teste de espécimes múltiplos é necessário.">
+            >
+            ["id99"] = <
+                text = <"Diagnóstico patológico">
+                description = <"Palavra única, frase ou breve descrição que representa a \"Conclusão\". A codificação com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id100"] = <
+                text = <"Data/hora da emissão do resultado">
+                description = <"A data e / ou a hora em que o resultado foi emitido para o 'Status do resultado do teste geral' gravado.">
+            >
+            ["id101"] = <
+                text = <"Informação clínica disponibilizada">
+                description = <"Descrição da informação clínica disponível no momento da interpretação dos resultados, ou um link para a informação clínica original fornecida no pedido de teste.">
+            >
+            ["id102"] = <
+                text = <"Comentário do teste">
+                description = <"Narração adicional sobre o teste não capturado em outros campos.">
+            >
+            ["id103"] = <
+                text = <"Comentário do resultado">
+                description = <"Pode incluir declarações sobre significativo, inesperado ou não confiável. valores ou informações sobre a origem do valor onde isso pode ser relevante para a interpretação do resultado.">
+            >
+            ["id104"] = <
+                text = <"Guia de referência">
+                description = <"Conselhos adicionais sobre a aplicabilidade do intervalo de referência.">
+            >
+            ["id105"] = <
+                text = <"Data da análise">
+                description = <"A data em que a análise foi realizada.">
+            >
+            ["id106"] = <
+                text = <"Método de análise">
+                description = <"*">
+            >
+            ["id107"] = <
+                text = <"Nome do teste solicitado">
+                description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
+            >
+            ["at108"] = <
+                text = <"Registrado">
+                description = <"O tst foi registrado pelo laboratório, mas um resultado ainda não está disponível.">
+            >
+            ["id109"] = <
+                text = <"Status do resultado">
+                description = <"O status do valor do resultado.">
+            >
+            ["id111"] = <
+                text = <"Procedimento de teste">
+                description = <"Foram seguidos detalhes estruturados adicionais da metodologia de teste de patologia. Por exemplo, detalhes estruturados sobre o método de laboratório e a interpretação de dados utilizados.">
+            >
+            ["id112"] = <
+                text = <"Data/hora da emissão do resultado">
+                description = <"A data e / ou a hora em que o resultado foi emitido para o 'Status do resultado' registrado.">
+            >
+            ["id113"] = <
+                text = <"Valor do resultado">
+                description = <"*">
+            >
+            ["ac1"] = <
+                text = <"*Overall test result status (synthesised) (en)">
+                description = <"*The status of the pathology test result as a whole. (synthesised) (en)">
+            >
+            ["ac2"] = <
+                text = <"*Result status (synthesised) (en)">
+                description = <"*The status of the result value. (synthesised) (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+    >
+

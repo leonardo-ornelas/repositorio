@@ -1,0 +1,31 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.fis.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1] occurrences matches {1} matches {    -- FIS
+        content existence matches {1} cardinality matches {0..100000}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"FIS">
+                description = <"FIS">
+            >
+        >
+    >
+

@@ -1,0 +1,104 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.heart_rate.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealthGroup">
+                ["organization"] = <"iHealthGroup">
+                ["email"] = <"contato@ihealthgroup.com">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- heart frequency
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Heart frequency
+                                        value matches {
+                                            DV_QUANTITY[id7] matches {
+                                                property matches {[at1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_bindings = <
+        ["openehr"] = <
+            ["at1"] = <http://openehr.org/id/382>
+        
+        >
+    >
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"heart frequency">
+                description = <"heart frequency">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Heart frequency">
+                description = <"Heart frequency">
+            >
+            ["at1"] = <
+                text = <"Frequency">
+                description = <"Frequency">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id6"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+            ["at1"] = <
+                text = <"*Frequency (en)">
+                description = <"*Frequency (en)">
+            >
+        >
+    >
+

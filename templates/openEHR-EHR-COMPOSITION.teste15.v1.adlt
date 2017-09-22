@@ -1,0 +1,182 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.teste15.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© openEHR">
+    details = <
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"Record of encounter as a progress note.">
+            use = <"For use to record when a person and clinician interact.">
+        >
+        ["pt-br"] = <
+            keywords = <"Progresso", "nota", "encontro">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Registro de encontro como nota de progresso.">
+            use = <"Usado para gravar uma interação entre uma pessoa e um clínico.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Thomas Beale">
+        ["organisation"] = <"Ocean Informatics">
+        ["date"] = <"2005-10-10">
+    >
+
+definition
+    COMPOSITION[id1.1] matches {    -- Encounter
+        /category[id3]/defining_code matches {[at1]}
+        content matches {
+            use_archetype SECTION[id0.2, openEHR-EHR-SECTION.ovl-teste15-adhoc-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encontro">
+                description = <"Encontro genérico ou  composição da nota de progresso.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-teste15-adhoc-001.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-teste15-alcohol_use-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encabeçamento">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-teste15-alcohol_use-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Alcohol Use
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    CLUSTER[id6] matches {
+                        /items[id16]/items matches {
+                            ELEMENT[id15] occurrences matches {0..1} matches {
+                                value matches {
+                                    DV_QUANTITY[id30] matches {
+                                        property matches {[at1]}
+                                        units matches {"/h", "/d", "/wk", "/mo"}
+                                    }
+                                }
+                            }
+                            ELEMENT[id17] occurrences matches {0..1} matches {
+                                value matches {
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id28] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+            }
+            POINT_EVENT[id24] matches {
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+            INTERVAL_EVENT[id23] matches {
+                /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+        }
+        /protocol[id25]/items matches {
+            ELEMENT[id26] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id39] matches {
+                        property matches {[at4]}
+                        units matches {"gm"}
+                    }
+                }
+            }
+            ELEMENT[id27] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id40] matches {
+                        property matches {[at1]}
+                        units matches {"/d", "/wk", "/mo"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Uso de álcool">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+        >
+    >
+

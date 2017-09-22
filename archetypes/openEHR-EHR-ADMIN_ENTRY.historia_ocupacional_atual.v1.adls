@@ -1,0 +1,287 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.historia_ocupacional_atual.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- historia_ocupacional_atual_SESI_BR
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Setor
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Cargo
+                        value matches {
+                            DV_TEXT[id6] 
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Função
+                        value matches {
+                            DV_TEXT[id8] 
+                        }
+                    }
+                    ELEMENT[id9] occurrences matches {1} matches {    -- Alocação
+                        value matches {
+                            DV_TEXT[id10] 
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {1} matches {    -- Tempo no cargo
+                        value matches {
+                            DV_ORDINAL[id19] 
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {1} matches {    -- Mudou de cargo desde o último exame ocupacional?
+                        value matches {
+                            DV_BOOLEAN[id14] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- GAS/GHE
+                        value matches {
+                            DV_TEXT[id16] 
+                        }
+                    }
+                    ELEMENT[id17] occurrences matches {1} matches {    -- Turno
+                        value matches {
+                            DV_CODED_TEXT[id18] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id20] occurrences matches {1} matches {    -- Descrição das atividades desenvolvidas
+                        value matches {
+                            DV_TEXT[id21] 
+                        }
+                    }
+                    ELEMENT[id22] occurrences matches {0..1} matches {    -- Observações
+                        value matches {
+                            DV_TEXT[id23] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"historia_ocupacional_atual_SESI_BR">
+                description = <"historia_ocupacional atual">
+            >
+            ["id3"] = <
+                text = <"Setor">
+                description = <"Setor">
+            >
+            ["id5"] = <
+                text = <"Cargo">
+                description = <"Cargo">
+            >
+            ["id7"] = <
+                text = <"Função">
+                description = <"Função">
+            >
+            ["id9"] = <
+                text = <"Alocação">
+                description = <"Alocação">
+            >
+            ["id11"] = <
+                text = <"Tempo no cargo">
+                description = <"Tempo no cargo">
+            >
+            ["at1"] = <
+                text = <"Anos">
+                description = <"Anos">
+            >
+            ["at2"] = <
+                text = <"Meses">
+                description = <"Meses">
+            >
+            ["at3"] = <
+                text = <"Dias">
+                description = <"Dias">
+            >
+            ["id13"] = <
+                text = <"Mudou de cargo desde o último exame ocupacional?">
+                description = <"Mudou de cargo desde o último exame ocupacional?">
+            >
+            ["id15"] = <
+                text = <"GAS/GHE">
+                description = <"Informar o grupo homogêneo de exposição">
+            >
+            ["id17"] = <
+                text = <"Turno">
+                description = <"Turno">
+            >
+            ["at4"] = <
+                text = <"Diurno">
+                description = <"Diurno">
+            >
+            ["at5"] = <
+                text = <"Noturno">
+                description = <"Noturno">
+            >
+            ["at6"] = <
+                text = <"Revezamento">
+                description = <"Revezamento">
+            >
+            ["ac1"] = <
+                text = <"Turno">
+                description = <"Turno">
+            >
+            ["at7"] = <
+                text = <"Revezamento">
+                description = <"Revezamento">
+            >
+            ["at8"] = <
+                text = <"xxx">
+                description = <"xxx">
+            >
+            ["at9"] = <
+                text = <"Anos">
+                description = <"Anos">
+            >
+            ["at10"] = <
+                text = <"Meses">
+                description = <"Meses">
+            >
+            ["at11"] = <
+                text = <"Dias">
+                description = <"Dias">
+            >
+            ["id20"] = <
+                text = <"Descrição das atividades desenvolvidas">
+                description = <"Descrição das atividades desenvolvidas">
+            >
+            ["id22"] = <
+                text = <"Observações">
+                description = <"Observações">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"current_occupational_history">
+                description = <"current_occupational_history">
+            >
+            ["id3"] = <
+                text = <"Sector">
+                description = <"Sector">
+            >
+            ["id5"] = <
+                text = <"Charge">
+                description = <"Charge">
+            >
+            ["id7"] = <
+                text = <"Function">
+                description = <"Function">
+            >
+            ["id9"] = <
+                text = <"Allocation">
+                description = <"Allocation">
+            >
+            ["id11"] = <
+                text = <"Time in charge">
+                description = <"Time in charge">
+            >
+            ["at1"] = <
+                text = <"Years">
+                description = <"Years">
+            >
+            ["at2"] = <
+                text = <"Months">
+                description = <"Months">
+            >
+            ["at3"] = <
+                text = <"Days">
+                description = <"Days">
+            >
+            ["id13"] = <
+                text = <"Changed your position since the last occupational examination?">
+                description = <"Changed your position since the last occupational examination?">
+            >
+            ["id15"] = <
+                text = <"GAS/GHE">
+                description = <"Informar o grupo homogêneo de exposição">
+            >
+            ["id17"] = <
+                text = <"Shift">
+                description = <"Shift">
+            >
+            ["at4"] = <
+                text = <"Daytime">
+                description = <"Daytime">
+            >
+            ["at5"] = <
+                text = <"*Noturno (pt-br)">
+                description = <"*Noturno (pt-br)">
+            >
+            ["at6"] = <
+                text = <"Relay">
+                description = <"Relay">
+            >
+            ["ac1"] = <
+                text = <"*Turno (pt-br)">
+                description = <"*Turno (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Revezamento (pt-br)">
+                description = <"*Revezamento (pt-br)">
+            >
+            ["at8"] = <
+                text = <"xxx">
+                description = <"xxx">
+            >
+            ["at9"] = <
+                text = <"Years">
+                description = <"Years">
+            >
+            ["at10"] = <
+                text = <"Months">
+                description = <"Months">
+            >
+            ["at11"] = <
+                text = <"Days">
+                description = <"Days">
+            >
+            ["id20"] = <
+                text = <"Description of the activities carried out">
+                description = <"Description of the activities carried out">
+            >
+            ["id22"] = <
+                text = <"Comments">
+                description = <"Comments">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at4", "at5", "at7">
+        >
+    >
+

@@ -1,0 +1,512 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.phq.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"screening", "depression", "mood", "assessment", "mental health">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"
+Para registrar os resultados do Questionário de Saúde do Paciente (PHQ) e suas avaliações de subconjuntos - atualmente o escopo está limitado ao PHQ-2 e ao PHQ-9. Perguntas para PHQ-4, PHQ-15, PHQ-SADS, GAD-7, breve PHQ a ser adicionado no futuro.">
+            use = <"Use para registrar os resultados do Questionário de Saúde do Paciente (PHQ) e são avaliações de subconjuntos. O arquétipo atual possui apenas elementos de dados necessários para os PHQ-2 e PHQ-9.
+
+O arquétipo foi projetado de tal forma que as perguntas reais do PHQ são registradas como a Descrição para cada elemento de dados do questionário. O nome do elemento de dados é uma descrição pragmática que é indicativa da intenção da pergunta.
+
+A ferramenta PHQ-9 original foi desenvolvida pelos Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke e colegas, com uma bolsa educacional da Pfizer Inc. No site do PHQ Screeners (http://www.phqscreeners.com/overview.aspx): \"Todos os criadores de PHQ, GAD-7 e as traduções são descarregáveis ​​a partir deste O site e nenhuma permissão são necessárias para reproduzir, traduzir, exibir ou distribuí-los. \" E da página da PHQ (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"Nenhuma permissão é necessária para reproduzir, traduzir, exibir ou distribuir\". 
+
+A adaptação indígena australiana para o estado de avaliação do subconjunto do PHQ-9 foi desenvolvida pelo Dr. Alex Brown, Instituto Baker IDI Heart and Diabetes, Alice Springs, 2009. As perguntas adaptadas são expressas na área de comentários para cada elemento de dados do questionário. Usado com permissão.">
+        >
+        ["pt-br"] = <
+            keywords = <"triagem", "depressão", "humor", "avaliação", "saúde mental">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Para registrar os resultados do Questionário de Saúde do Paciente (PHQ) e suas avaliações de subconjunto - atualmente o escopo está limitado ao PHQ-2 e ao PHQ-9. Perguntas para PHQ-4, PHQ-15, PHQ-SADS, GAD-7, breve PHQ a ser adicionado no futuro. ">
+            use = <"Use para registrar os resultados do Questionário de Saúde do Paciente (PHQ) e são avaliações de subconjuntos. O arquétipo atual possui apenas elementos de dados necessários para os PHQ-2 e PHQ-9.
+
+O arquétipo foi projetado de tal forma que as perguntas reais do PHQ são registradas como a Descrição para cada elemento de dados do questionário. O nome do elemento de dados é uma descrição pragmática que é indicativa da intenção da pergunta.
+
+A ferramenta PHQ-9 original foi desenvolvida pelos Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke e colegas, com uma bolsa educacional da Pfizer Inc. No site do PHQ Screeners (http://www.phqscreeners.com/overview.aspx): \"Todos os criadores de PHQ, GAD-7 e as traduções são descarregáveis ​​a partir deste O site e nenhuma permissão são necessárias para reproduzir, traduzir, exibir ou distribuí-los. \" E da página da PHQ (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"Nenhuma permissão é necessária para reproduzir, traduzir, exibir ou distribuir\". 
+
+A adaptação indígena australiana para o estado de avaliação do subconjunto do PHQ-9 foi desenvolvida pelo Dr. Alex Brown, Instituto Baker IDI Heart and Diabetes, Alice Springs, 2009. As perguntas adaptadas são expressas na área de comentários para cada elemento de dados do questionário. Usado com permissão.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2013-06-14">
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Patient Health Questionnaire (PHQ)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in Time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Interest/Pleasure
+                                        value matches {
+                                            DV_ORDINAL[id21] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- Feeling Down
+                                        value matches {
+                                            DV_ORDINAL[id22] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Sleep Issues
+                                        value matches {
+                                            DV_ORDINAL[id23] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Tired/Little Energy
+                                        value matches {
+                                            DV_ORDINAL[id24] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Appetite
+                                        value matches {
+                                            DV_ORDINAL[id25] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Feeling Bad About Yourself
+                                        value matches {
+                                            DV_ORDINAL[id26] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Trouble Concentrating
+                                        value matches {
+                                            DV_ORDINAL[id27] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Slowness/Fidgety
+                                        value matches {
+                                            DV_ORDINAL[id28] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Death/Self-harm
+                                        value matches {
+                                            DV_ORDINAL[id29] matches {
+                                                [value, symbol] matches {
+                                                    [{|0|}, {[at6]}], 
+                                                    [{|1|}, {[at7]}], 
+                                                    [{|2|}, {[at8]}], 
+                                                    [{|3|}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- PHQ-2 Score
+                                        value matches {
+                                            DV_COUNT[id30] matches {
+                                                magnitude matches {|0..6|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- PHQ-9 Score
+                                        value matches {
+                                            DV_COUNT[id31] matches {
+                                                magnitude matches {|0..27|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Difficulty in Life Activities
+                                        value matches {
+                                            DV_CODED_TEXT[id32] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"Patient Health Questionnaire (PHQ)">
+                description = <"Screening questionnaire for mental health that can be used by health professionals or self-reported by individuals.">
+            >
+            ["id3"] = <
+                text = <"Point in Time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id5"] = <
+                text = <"Interest/Pleasure">
+                description = <"Over the last two weeks, how often have you been bothered by little interest or pleasure in doing things?">
+            >
+            ["at6"] = <
+                text = <"Not At All">
+                description = <"The topic of the question has not affected the subject at all during the last two weeks.">
+            >
+            ["at7"] = <
+                text = <"Several Days">
+                description = <"The topic of the question has affected the subject on several days during the last two weeks.">
+            >
+            ["at8"] = <
+                text = <"More Than Half the Days">
+                description = <"The topic of the question has affected the subject more than half the days during the last two weeks.">
+            >
+            ["at9"] = <
+                text = <"Nearly Every Day">
+                description = <"The topic of the question has affected the subject nearly every day during the last two weeks.">
+            >
+            ["id10"] = <
+                text = <"Feeling Down">
+                description = <"Over the last two weeks, how often have you been bothered by feeling down, depressed, or hopeless?">
+            >
+            ["id11"] = <
+                text = <"PHQ-2 Score">
+                description = <"Total score for the first two questions on 'Interest/Pleasure' and 'Feeling Down'.">
+            >
+            ["id12"] = <
+                text = <"PHQ-9 Score">
+                description = <"Total Score for all nine questions.">
+            >
+            ["id13"] = <
+                text = <"Sleep Issues">
+                description = <"Over the last two weeks, how often have you been bothered by trouble falling or staying asleep, or sleeping too much?">
+            >
+            ["id14"] = <
+                text = <"Tired/Little Energy">
+                description = <"Over the last two weeks, how often have you been bothered by feeling tired or having little energy?">
+            >
+            ["id15"] = <
+                text = <"Appetite">
+                description = <"Over the last two weeks, how often have you been bothered by poor appetite or overeating?">
+            >
+            ["id16"] = <
+                text = <"Feeling Bad About Yourself">
+                description = <"Over the last two weeks, how often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down?">
+            >
+            ["id17"] = <
+                text = <"Trouble Concentrating">
+                description = <"Over the last two weeks, how often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?">
+            >
+            ["id18"] = <
+                text = <"Slowness/Fidgety">
+                description = <"Over the last two weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?">
+            >
+            ["id19"] = <
+                text = <"Death/Self-harm">
+                description = <"Over the last two weeks, how often have you been bothered by thoughts that you would be better off dead or of hurting yourself in some way?">
+            >
+            ["id20"] = <
+                text = <"Difficulty in Life Activities">
+                description = <"If you checked off any problems on this questionnaire, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?">
+            >
+            ["at21"] = <
+                text = <"No Difficulty At All">
+                description = <"The individual found no difficulty working, taking care of things at home or getting along with other people.">
+            >
+            ["at22"] = <
+                text = <"Somewhat Difficult">
+                description = <"The individual found it somewhat difficult to work, take care of things at home or get along with other people.">
+            >
+            ["at23"] = <
+                text = <"Very Difficult">
+                description = <"The individual found it very difficult to work, take care of things at home or get along with other people.">
+            >
+            ["at24"] = <
+                text = <"Extremely Difficult">
+                description = <"The individual found it extremely difficult to work, take care of things at home or get along with other people.">
+            >
+            ["ac1"] = <
+                text = <"Dificuldade em atividades do dia a dia (sintetizado)">
+                description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado)">
+            >
+            ["ac2"] = <
+                text = <"Interesse / Prazer (sintetizado)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas? (sintetizado)">
+            >
+            ["ac3"] = <
+                text = <"Sentimento baixo (sintetizado)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por sentir-se abatido, deprimido ou sem esperança? (sintetizado)">
+            >
+            ["ac4"] = <
+                text = <"Problemas de sono (sintetizados)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais? (sintetizado)">
+            >
+            ["ac5"] = <
+                text = <"Cansado / pouca energia">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou ter pouca energia? (sintetizado)">
+            >
+            ["ac6"] = <
+                text = <"Apetite">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida?">
+            >
+            ["ac7"] = <
+                text = <"Sentindo-se mal com você mesmo">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família?">
+            >
+            ["ac8"] = <
+                text = <"Problemas de concentração">
+                description = <"Nas últimas duas semanas, com que frequência você se sentiu incomodado por problemas, falta de concentração em coisas, como ler o jornal ou assistir televisão?">
+            >
+            ["ac9"] = <
+                text = <"Lentidão/Agitado">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual?">
+            >
+            ["ac10"] = <
+                text = <"Morte / Auto-ferimento">
+                description = <"Nas últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma?">
+            >
+            ["at25"] = <
+                text = <"No difficulty">
+                description = <"No difficulty">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Questionário de Saúde do Paciente">
+                description = <"Questionário de triagem para saúde mental que pode ser usado por profissionais de saúde ou auto-relatado por indivíduos.">
+            >
+            ["id3"] = <
+                text = <"Ponto no tempo">
+                description = <"Uma data e / ou hora específicas que podem ser explicitamente definidas em um modelo ou em tempo de execução.">
+            >
+            ["id5"] = <
+                text = <"Interesse / Prazer">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas?">
+            >
+            ["at6"] = <
+                text = <"De modo nenhum">
+                description = <"O tópico da questão não afetou o assunto durante as duas últimas semanas.">
+            >
+            ["at7"] = <
+                text = <"Vários dias">
+                description = <"tema da questão afetou o assunto em vários dias nas últimas duas semanas.">
+            >
+            ["at8"] = <
+                text = <"Mais do que metade dos dias">
+                description = <"O tema da questão afetou o assunto mais de metade dos dias nas últimas duas semanas.">
+            >
+            ["at9"] = <
+                text = <"Quase todos os dias">
+                description = <"O tema da questão afetou o assunto quase todos os dias durante as últimas duas semanas.">
+            >
+            ["id10"] = <
+                text = <"Sentindo pra baixo">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir abatido, deprimido ou sem esperança?">
+            >
+            ["id11"] = <
+                text = <"PHQ-2 Score">
+                description = <"Pontuação total para as duas primeiras questões sobre 'Interesse / Prazer' e 'Sentir-se'.">
+            >
+            ["id12"] = <
+                text = <"Escala PHQ-9">
+                description = <"Pontuação total para as nove perguntas.">
+            >
+            ["id13"] = <
+                text = <"Problemas de sono">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais?">
+            >
+            ["id14"] = <
+                text = <"Cansado/pouca energia">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou com pouca energia?">
+            >
+            ["id15"] = <
+                text = <"Apetite">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida?">
+            >
+            ["id16"] = <
+                text = <"Sentir-se mal com você">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família?">
+            >
+            ["id17"] = <
+                text = <"Problema Concentrando">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por problemas, concentrando-se em coisas, como ler o jornal ou assistir televisão?">
+            >
+            ["id18"] = <
+                text = <"Lento/Inquieto">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual?">
+            >
+            ["id19"] = <
+                text = <"Morte / autojudicação">
+                description = <"Durante as últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma?">
+            >
+            ["id20"] = <
+                text = <"Dificuldade em atividades de vida">
+                description = <"Se você verificou todos os problemas neste questionário, quão difíceis foram esses problemas para você fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas?">
+            >
+            ["at21"] = <
+                text = <"Sem dificuldade no total">
+                description = <"O indivíduo não encontrou dificuldade em trabalhar, cuidar de coisas em casa ou se dar bem com outras pessoas.">
+            >
+            ["at22"] = <
+                text = <"Um pouco difícil">
+                description = <"O indivíduo achou um pouco difícil trabalhar, cuidar de coisas em casa ou se dar bem com outras pessoas.">
+            >
+            ["at23"] = <
+                text = <"Muito Difícil">
+                description = <"O indivíduo achou muito difícil trabalhar, cuidar das coisas em casa ou se dar bem com outras pessoas.">
+            >
+            ["at24"] = <
+                text = <"Extremamente difícil">
+                description = <"O indivíduo achou extremamente difícil trabalhar, cuidar das coisas em casa ou se dar bem com outras pessoas.">
+            >
+            ["ac1"] = <
+                text = <"Dificuldade em atividades do dia a dia (sintetizado) (en)">
+                description = <"Se você verificou qualquer problema neste questionário, quão difícil esses problemas conseguiram fazer seu trabalho, cuidar de coisas em casa ou se dar bem com outras pessoas? (sintetizado) (en)">
+            >
+            ["ac2"] = <
+                text = <"Interesse / Prazer (sintetizado) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por pouco interesse ou prazer em fazer as coisas? (sintetizado) (en)">
+            >
+            ["ac3"] = <
+                text = <"Sentimento baixo (sintetizado) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por sentir-se abatido, deprimido ou sem esperança? (sintetizado) (en)">
+            >
+            ["ac4"] = <
+                text = <"Problemas de sono (sintetizados) (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado com problemas para cair ou ficar dormindo, ou dormir demais? (sintetizado) (en)">
+            >
+            ["ac5"] = <
+                text = <"Cansado / pouca energia (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por se sentir cansado ou ter pouca energia? (sintetizado) (en)">
+            >
+            ["ac6"] = <
+                text = <"Apetite (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado por falta de apetite ou excesso de comida? (en)">
+            >
+            ["ac7"] = <
+                text = <"Sentindo-se mal com você mesmo (en)">
+                description = <"Nas últimas duas semanas, com que frequência você ficou incomodado ao sentir-se mal por você mesmo - ou porque você é um fracasso ou se deixou cair ou a sua família? (en)">
+            >
+            ["ac8"] = <
+                text = <"Problemas de concentração (en)">
+                description = <"Nas últimas duas semanas, com que frequência você se sentiu incomodado por problemas, falta de concentração em coisas, como ler o jornal ou assistir televisão? (en)">
+            >
+            ["ac9"] = <
+                text = <"Lentidão/Agitado (en)">
+                description = <"Nas últimas duas semanas, com que frequência você foi incomodado movendo ou falando tão devagar que outras pessoas poderiam ter notado? Ou o oposto - sendo tão inquieto ou inquieto que você está se movendo muito mais do que o habitual? (en)">
+            >
+            ["ac10"] = <
+                text = <"Morte / Auto-ferimento (en)">
+                description = <"Nas últimas duas semanas, com que frequência você tem sido incomodado por pensamentos de que você seria melhor morto ou de se machucar de alguma forma? (en)">
+            >
+            ["at25"] = <
+                text = <"Sem dificuldade">
+                description = <"Sem dificuldade">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at21", "at22", "at23", "at24">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac8"] = <
+            id = <"ac8">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac9"] = <
+            id = <"ac9">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac10"] = <
+            id = <"ac10">
+            members = <"at6", "at7", "at8", "at9">
+        >
+    >
+

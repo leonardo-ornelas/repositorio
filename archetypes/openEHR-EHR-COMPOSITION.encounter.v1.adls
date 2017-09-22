@@ -2,93 +2,51 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
     openEHR-EHR-COMPOSITION.encounter.v1.0.0
 
 language
-    original_language = <[ISO_639-1::pt-br]>
+    original_language = <[ISO_639-1::en]>
     translations = <
-        ["en"] = <
-            author = <
-                ["name"] = <"Ismael Queiroz">
-            >
-            language = <[ISO_639-1::en]>
-        >
-        ["sl"] = <
-            author = <
-                ["name"] = <"Ismael Queiroz">
-            >
-            language = <[ISO_639-1::sl]>
-        >
         ["pt-br"] = <
             accreditation = <"">
-            author = <
-                ["name"] = <"Ismael Queiroz">
-                ["organisation"] = <"Solutis Tecnologias">
-            >
             language = <[ISO_639-1::pt-br]>
         >
     >
     
 description
-    copyright = <"copyright (c) 2010 openEHR Foundation">
+    copyright = <"© openEHR">
     details = <
         ["en"] = <
             keywords = <"progress", "note", "encounter">
             language = <[ISO_639-1::en]>
             misuse = <"">
-            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.">
-            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
-        >
-        ["sl"] = <
-            keywords = <"progress", "note", "encounter">
-            language = <[ISO_639-1::sl]>
-            misuse = <"">
-            purpose = <"An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
-
-">
-            use = <"Because of the broad scope of Encounter, not all elements will be relevant in all settings. For this reason, admission/discharge related information is kept in a separate Hospitalization component within Encounter. The class element is used to distinguish between these settings, which will guide further validation and application of business rules.">
+            purpose = <"Record of encounter as a progress note.">
+            use = <"For use to record when a person and clinician interact.">
         >
         ["pt-br"] = <
-            keywords = <"progress", "note", "encounter">
+            keywords = <"Progresso", "nota", "encontro">
             language = <[ISO_639-1::pt-br]>
             misuse = <"">
-            purpose = <"Uma interação entre um paciente e um (s) profissional (es) de saúde com a finalidade de fornecer serviços de saúde ou avaliar o estado de saúde de um paciente.">
-            use = <"Um Encontro abrange o ciclo de vida da pré-admissão, o encontro atual (para encontros ambulatórios) e admissão, permanência e alta (para encontros de internação). Durante o encontro, o paciente pode passar de praticante para praticante e local para local.
-">
+            purpose = <"Registro de encontro como nota de progresso.">
+            use = <"Usado para gravar uma interação entre uma pessoa e um clínico.">
         >
     >
     lifecycle_state = <"unmanaged">
     original_author = <
-        ["organisation"] = <"Solutis Tecnologia">
-        ["name"] = <"Ismael Queiroz">
-        ["email"] = <"ismael.queiroz@solutis.com.br">
-        ["date"] = <"19/08/2017">
+        ["name"] = <"Thomas Beale">
+        ["organisation"] = <"Ocean Informatics">
+        ["date"] = <"2005-10-10">
     >
-    other_contributors = <"Vitor Pacheco, Solutis Tecnologias, Brasil", "Leonardo Ornelas, Solutis Tecnologias, Brasil", "Paulo Junior, Solutis Tecnologias, Brasil">
 
 definition
-    COMPOSITION[id1] matches {    -- Encontro
-        content matches {
-            allow_archetype OBSERVATION[id8] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.blood_pressure(-a-zA-Z0-9_]+)*\.v1/}
+    COMPOSITION[id1] matches {    -- Encounter
+        category matches {
+            DV_CODED_TEXT[id3] matches {
+                defining_code matches {[at1]}
             }
-            allow_archetype OBSERVATION[id9] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_temperature(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            allow_archetype OBSERVATION[id10] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_weight(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            allow_archetype OBSERVATION[id11] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.height(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            allow_archetype OBSERVATION[id12] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.body_mass_index(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            allow_archetype OBSERVATION[id13] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-OBSERVATION\.indirect_oximetry(-a-zA-Z0-9_]+)*\.v1/}
+        }
+        context matches {
+            EVENT_CONTEXT[id4] matches {
+                other_context matches {
+                    ITEM_TREE[id2] 
+                }
             }
         }
     }
@@ -104,115 +62,21 @@ terminology
         ["en"] = <
             ["id1"] = <
                 text = <"Encounter">
-                description = <"Generic encounter or progress note composition">
-            >
-            ["id3"] = <
-                text = <"Context detail">
-                description = <"Local context detail.">
+                description = <"Generic encounter or progress note composition.">
             >
             ["at1"] = <
-                text = <"Event">
-                description = <"Event">
-            >
-            ["id8"] = <
-                text = <"Blood Pressure">
-                description = <"It is the blood pressure circulating in the walls of blood vessels. When used without further specification, \"blood pressure\" generally refers to pressure in large arteries of the systemic circulation.">
-            >
-            ["id9"] = <
-                text = <"Bdy Temperature">
-                description = <"Also known as normothermia or euthermia, is the typical temperature range found in humans. The normal human body temperature range is typically stated as 36.5–37.5 °C (97.7–99.5 °F).[7]">
-            >
-            ["id10"] = <
-                text = <"Body Weight">
-                description = <"is used  in medical sciences to refer to a person's mass or weight.">
-            >
-            ["id11"] = <
-                text = <"Height / Length">
-                description = <"It is the measure of the vertical distance, whether as \"high\" something or someone is, or how \"high\" is the position.">
-            >
-            ["id12"] = <
-                text = <"Body Mass Index">
-                description = <"The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m2, resulting from mass in kilograms and height in metres.">
-            >
-            ["id13"] = <
-                text = <"Indirect Oximetry">
-                description = <"Indirect blood pressure measurement using a pulse oximeter">
-            >
-        >
-        ["sl"] = <
-            ["id1"] = <
-                text = <"Encuentro">
-                description = <"Composición genérica de notas de progreso o encuentro">
-            >
-            ["id3"] = <
-                text = <"Detalle del contexto">
-                description = <"Detalle del contexto local.">
-            >
-            ["at1"] = <
-                text = <"Event">
-                description = <"Event">
-            >
-            ["id8"] = <
-                text = <"Presión Sanguínea">
-                description = <"Es la presión de la sangre circulante en las paredes de los vasos sanguíneos. Cuando se usa sin más especificaciones, la \"presión sanguínea\" generalmente se refiere a la presión en grandes arterias de la circulación sistémica.">
-            >
-            ["id9"] = <
-                text = <"Temperatura corporal">
-                description = <"También conocida como normotermia o euthermia, es el rango de temperatura típico encontrado en los seres humanos. El rango normal de temperatura del cuerpo humano se indica típicamente como 36.5-37.5 ° C (97.7-99.5 ° F). [7]">
-            >
-            ["id10"] = <
-                text = <"Peso corporal">
-                description = <"Se utiliza en ciencias médicas para referirse a la masa o el peso de una persona.">
-            >
-            ["id11"] = <
-                text = <"Altura / Longitud">
-                description = <"Es la medida de la distancia vertical, sea como \"alto\" algo o alguien es, o como \"alto\" es la posición.">
-            >
-            ["id12"] = <
-                text = <"Índice de Massa Corporal">
-                description = <"El índice de masa corporal (IMC) o índice Quetelet es un valor derivado de la masa (peso) y la altura de un individuo. El IMC se define como la masa corporal dividida por el cuadrado de la altura corporal, y se expresa universalmente en unidades de kg / m2, resultante de la masa en kilogramos y la altura en metros.">
-            >
-            ["id13"] = <
-                text = <"Oximetría indireta">
-                description = <"Medición indirecta de la presión arterial usando un oxímetro de pulso">
+                text = <"event">
+                description = <"event">
             >
         >
         ["pt-br"] = <
             ["id1"] = <
                 text = <"Encontro">
-                description = <"Composição genérica de notas de progresso ou de progresso">
-            >
-            ["id3"] = <
-                text = <"Contexto detalhado">
-                description = <"Detalhes do contexto local.">
+                description = <"Encontro genérico ou  composição da nota de progresso.">
             >
             ["at1"] = <
-                text = <"Evento">
-                description = <"Evento">
-            >
-            ["id8"] = <
-                text = <"Pressão Sanguínea">
-                description = <"É a pressão do sangue circulante nas paredes dos vasos sanguíneos. Quando usado sem mais especificações, a \"pressão sanguínea\" geralmente se refere à pressão em grandes artérias da circulação sistêmica.">
-            >
-            ["id9"] = <
-                text = <"Temperatura Corporal">
-                description = <"Também conhecido como normothermia ou euthermia, é a faixa de temperatura típica encontrada em humanos. A faixa de temperatura normal do corpo humano é tipicamente declarada como 36,5-37,5 ° C (97,7-99,5 ° F) (pt-br)">
-            >
-            ["id10"] = <
-                text = <"Peso Corporal">
-                description = <"É usado em ciências médicas para se referir à massa ou ao peso de uma pessoa. (pt-br)">
-            >
-            ["id11"] = <
-                text = <"Altura / Comprimento">
-                description = <"É a medida da distância vertical, seja como \"alto\" algo ou alguém é, ou como \"alto\" é a posição">
-            >
-            ["id12"] = <
-                text = <"Índice de Massa Corporal">
-                description = <"O índice de massa corporal (IMC) ou o índice Quetelet é um valor derivado da massa (peso) e altura de um indivíduo. O IMC é definido como a massa corporal dividida pelo quadrado da altura do corpo e é universalmente expressa em unidades de kg / m2, resultante de massa em quilogramas e altura em metros.">
-            >
-            ["id13"] = <
-                text = <"Oximetría Indireta">
-                description = <"Medição indireta da pressão arterial usando um oxímetro de pulso">
+                text = <"evento">
+                description = <"evento">
             >
         >
     >

@@ -1,0 +1,186 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- Recomendações Educativo Preventivas
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Conclusão
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Data da conclusão
+                        value matches {
+                            DV_TEXT[id12] 
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Município
+                        value matches {
+                            DV_TEXT[id14] 
+                        }
+                    }
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Médico examinador
+                        value matches {
+                            DV_TEXT[id16] 
+                        }
+                    }
+                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Observações
+                        value matches {
+                            DV_TEXT[id19] 
+                        }
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Observações ASO
+                        value matches {
+                            DV_TEXT[id21] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Recomendações Educativo Preventivas">
+                description = <"Recomendações Educativo Preventivas Qualidade de Vida">
+            >
+            ["id3"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at1"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["at2"] = <
+                text = <"Inapto">
+                description = <"Inapto">
+            >
+            ["at3"] = <
+                text = <"Exame não concluído">
+                description = <"Exame não concluído">
+            >
+            ["ac1"] = <
+                text = <"Conclusão (pt-br)">
+                description = <"Conclusão (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Data da conclusão">
+                description = <"Data da conclusão">
+            >
+            ["id13"] = <
+                text = <"Município">
+                description = <"Município">
+            >
+            ["id15"] = <
+                text = <"Médico examinador">
+                description = <"Médico examinador">
+            >
+            ["id18"] = <
+                text = <"Observações">
+                description = <"Observações">
+            >
+            ["id20"] = <
+                text = <"Observações ASO">
+                description = <"Observações ASO">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Recommendations for Preventive Education Quality of Life">
+                description = <"Recommendations for Preventive Education Quality of Life">
+            >
+            ["id3"] = <
+                text = <"Conclusion">
+                description = <"Conclusion">
+            >
+            ["at1"] = <
+                text = <"Conclusion">
+                description = <"Conclusion">
+            >
+            ["at2"] = <
+                text = <"Incapable">
+                description = <"Incapable">
+            >
+            ["at3"] = <
+                text = <"Exam not completed">
+                description = <"Exam not completed">
+            >
+            ["ac1"] = <
+                text = <"Conclusão (pt-br)">
+                description = <"Conclusão (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Date of conclusion">
+                description = <"Date of conclusion">
+            >
+            ["id13"] = <
+                text = <"City">
+                description = <"City">
+            >
+            ["id15"] = <
+                text = <"Medical examiner">
+                description = <"Medical examiner">
+            >
+            ["id18"] = <
+                text = <"Observations">
+                description = <"Observations">
+            >
+            ["id20"] = <
+                text = <"Observations ASO">
+                description = <"Observations ASO">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+    >
+

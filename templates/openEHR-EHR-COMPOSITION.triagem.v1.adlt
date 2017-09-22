@@ -1,0 +1,452 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.triagem.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.encounter.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© openEHR">
+    details = <
+        ["en"] = <
+            keywords = <"progress", "note", "encounter">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"Record of encounter as a progress note.">
+            use = <"For use to record when a person and clinician interact.">
+        >
+        ["pt-br"] = <
+            keywords = <"Progresso", "nota", "encontro">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Registro de encontro como nota de progresso.">
+            use = <"Usado para gravar uma interação entre uma pessoa e um clínico.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Thomas Beale">
+        ["organisation"] = <"Ocean Informatics">
+        ["date"] = <"2005-10-10">
+    >
+
+definition
+    COMPOSITION[id1.1] occurrences matches {0..1} matches {    -- Encounter
+        /category[id3]/defining_code matches {[at1]}
+        context matches {
+            EVENT_CONTEXT[id4.1] occurrences matches {0..1} 
+        }
+        content matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-triagem-indirect_oximetry-001.v1.0.0]
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-triagem-body_temperature-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-triagem-body_weight-SESI_BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Encounter">
+                description = <"Generic encounter or progress note composition.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encontro">
+                description = <"Encontro genérico ou  composição da nota de progresso.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-triagem-indirect_oximetry-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.indirect_oximetry.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Oximetry(en)
+        /data[id2]/events matches {
+            POINT_EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    ELEMENT[id59] matches {
+                        /value[id61]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id45] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id62] matches {
+                                property matches {[at71]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"ml/ml"}
+                            }
+                        }
+                    }
+                    ELEMENT[id40] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id66] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    ELEMENT[id41] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id68] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id55] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.waveform(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                }
+                /state[id15]/items matches {
+                    allow_archetype CLUSTER[id35] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    allow_archetype CLUSTER[id16] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id17.1] occurrences matches {0} matches {    -- *Confounding factors(en)
+                        value matches {
+                            DV_TEXT[id71.1] 
+                        }
+                    }
+                }
+            }
+        }
+        /protocol[id8]/items matches {
+            ELEMENT[id21] occurrences matches {0..1} matches {
+                /value[id73]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id38] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id75] matches {
+                        property matches {[at73]}
+                        magnitude matches {|0.0..100.0|}
+                        precision matches {|1|}
+                        units matches {"°C"}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id19] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Oximetry(en)">
+                description = <"*Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.(en)">
+            >
+            ["id17.1"] = <
+                text = <"*Confounding factors(en)">
+                description = <"*Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, feeding in infants, tracheostomy.(en)">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Posredna oksimetrija">
+                description = <"Metoda merjenja prisotnosti plnov kot so Spo2 in TCO2 na indirekten, posreden n-invazivni način">
+            >
+            ["id17.1"] = <
+                text = <"*Confounding factors(en)">
+                description = <"*Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, poor perfusion, infant feeding.(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Indirect oximetry">
+                description = <"Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means. ">
+            >
+            ["id17.1"] = <
+                text = <"Confounding factors">
+                description = <"Comment on and record other incidental factors that may be affect interpretation of the observation. For example, motion, pain, poor perfusion, infant feeding.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-triagem-body_temperature-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_temperature.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body temperature
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id61] matches {
+                        property matches {[at57]}
+                        [units, precision] matches {
+                            [{"°C"}, {|1|}], 
+                            [{"°F"}, {|1|}]
+                        }
+                    }
+                }
+                /state[id30]/items matches {
+                    ELEMENT[id31.1] occurrences matches {0} matches {    -- Body exposure
+                        value matches {
+                            DV_CODED_TEXT[id62.1] matches {
+                                defining_code matches {[ac1; at34]}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id57] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.environmental_conditions\.v1/}
+                    }
+                    allow_archetype CLUSTER[id58] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion\.v1/}
+                    }
+                    allow_archetype ELEMENT[id59] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-ELEMENT\.last_normal_menstrual_period\.v1|openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
+                    }
+                    ELEMENT[id42.1] occurrences matches {0} matches {    -- Description of thermal stress
+                        value matches {
+                            DV_TEXT[id63.1] 
+                        }
+                    }
+                }
+            }
+        }
+        /protocol[id21]/items matches {
+            ELEMENT[id22] occurrences matches {0..1} matches {
+                /value[id64]/defining_code matches {[ac2]}
+            }
+            allow_archetype CLUSTER[id60] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body temperature">
+                description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
+            >
+            ["id31.1"] = <
+                text = <"Body exposure">
+                description = <"The thermal situation of the person who is having the temperature taken.">
+            >
+            ["id42.1"] = <
+                text = <"Description of thermal stress">
+                description = <"Description of the conditions applied to the subject that might influence their measured body temperature.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpertemperatur">
+                description = <"Eine Messung der Körpertemperatur an einer bestimmten Stelle als Surrogat für den gesamten Körper der Person.">
+            >
+            ["id31.1"] = <
+                text = <"Körperexposition">
+                description = <"Die thermale Situation der Person, deren Temperatur gemessen wird.">
+            >
+            ["id42.1"] = <
+                text = <"Beschreibung der Wärmebelastung">
+                description = <"Beschreibung von Bedingungen, denen die Person ausgesetzt ist, welche die gemessene Körpertemperatur beeinflussen könnten.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"O valor para a temperatura corporal, com valor médio equivalente para o corpo inteiro.">
+            >
+            ["id31.1"] = <
+                text = <"Exposição do corpo">
+                description = <"A situação térmica da pessoa que tem a sua temperatura aferida.">
+            >
+            ["id42.1"] = <
+                text = <"Choque térmico">
+                description = <"Descrição das condições aplicadas ao sujeito que possa influenciar a medida de sua temperatura corporal.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Температура тела">
+                description = <"Измерение температуры тела, которая является суррогатом температуры тела человека в целом.">
+            >
+            ["id31.1"] = <
+                text = <"*Body exposure(en)">
+                description = <"*The thermal situation of the person who is having the temperature taken(en)">
+            >
+            ["id42.1"] = <
+                text = <"Тепловой стресс">
+                description = <"Описание особенностей, которые могут повлиять на результат измерения температуры тела.">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+            ["id31.1"] = <
+                text = <"Exposición corporal">
+                description = <"La situación térmica de la persona al cual se le registra la temperatura.">
+            >
+            ["id42.1"] = <
+                text = <"Descripción de estrés térmico">
+                description = <"Descripción de las condiciones que le suceden al sujeto que puede influenciar la temperatura corporal medida.">
+            >
+        >
+        ["nb"] = <
+            ["id1.1"] = <
+                text = <"Kroppstemperatur">
+                description = <"Måling av kroppstemperatur som skal gjenspeile den faktiske kroppstemperaturen">
+            >
+            ["id31.1"] = <
+                text = <"*Body exposure(en)">
+                description = <"*The thermal situation of the person who is having the temperature taken.(en)">
+            >
+            ["id42.1"] = <
+                text = <"Tilført temperaturpåvirkning">
+                description = <"Temperaturpåvirkning tilført pasienten for å oppnå en økning eller reduksjon i kroppstemperatur.">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"درجة حرارة الجسم">
+                description = <"قياس لدرجة حرارة الجسم, و التي تحل كبديل لدرجة الحرارة الكلية لجسم الشخص">
+            >
+            ["id31.1"] = <
+                text = <"تَعَرُّض الجسم">
+                description = <"الموقف الحراري للشخص الذي يتم قياس درجة حرارته">
+            >
+            ["id42.1"] = <
+                text = <"وصف الضغط الحرارة">
+                description = <"وصف للظروف المُطبَّقة على المريض و التي قد تؤثر على درجة الحرارة التي يتم قياسها">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"دمای بدن">
+                description = <"اندازه گیری دمای بدن که جایگزینی برای دمای کل بدن فرد است">
+            >
+            ["id31.1"] = <
+                text = <"نحوه پوشش بدن">
+                description = <"وضعیت گرمایی (به لحاظ پوشش) فردی که دمایش گرفته شده است">
+            >
+            ["id42.1"] = <
+                text = <"توصیف استرسهای گرمایی">
+                description = <"توصیف شرایط اعمال شده به شخص که ممکن است اندازه گیری دمای بدن فرد را تحت تاثیر قرار دهد">
+            >
+        >
+        ["es"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+            ["id31.1"] = <
+                text = <"Exposición corporal">
+                description = <"La situación térmica de la persona al cual se le registra la temperatura.">
+            >
+            ["id42.1"] = <
+                text = <"Descripción de estrés térmico">
+                description = <"Descripción de las condiciones que le suceden al sujeto que puede influenciar la temperatura corporal medida.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-triagem-body_weight-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id30] matches {
+                        property matches {[at19]}
+                        [magnitude, units] matches {
+                            [{|0.0..1000.0|}, {"kg"}], 
+                            [{|0.0..2000.0|}, {"lb"}]
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10] occurrences matches {0..1} matches {
+                        /value[id32]/defining_code matches {[ac1; at12]}
+                    }
+                    ELEMENT[id29] occurrences matches {0..1} matches {
+                        /value[id33]/value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+        >
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+        >
+        ["de"] = <
+            ["id1.1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+        >
+    >
+

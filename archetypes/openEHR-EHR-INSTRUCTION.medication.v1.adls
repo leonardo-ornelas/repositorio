@@ -12,7 +12,7 @@ description
 		["email"] = <"sam.heard@oceaninformatics.com">
 		["date"] = <"8/11/2010">
 	>
-	copyright = <"© National E-Health Transition Authority">
+	copyright = <"© 2011 NEHTA">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -42,29 +42,24 @@ Not to be used to record ordering of blood products, implants or major devices s
 NEHTA's Therapeutic Good Use Data Group from the NEHTA Website http://www.nehta.gov.au
 Intermountain Healthcare Medication order model, Personal Communication to Sam Heard by Dr Stan Huff.
 Royal Australian College of General Practitioners. Fact Sheet: Medicines List. 2010.">
-		["MD5-CAM-1.0.1"] = <"157D4DD44146BF765025A55DD682C1CF">
+		["MD5-CAM-1.0.1"] = <"19C137CC2F7BBA64B9128B7919E6C6A6">
 	>
 
 definition
 	INSTRUCTION[id1] matches {	-- Medication instruction
 		activities matches {
-			ACTIVITY[id2] matches {	-- Order
+			ACTIVITY[id2] occurrences matches {0..1} matches {	-- Order
 				description matches {
 					ITEM_TREE[id3] matches {
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[id4] matches {	-- Medicine
 								value matches {
-									DV_TEXT[id57] 
+									DV_TEXT[id48] 
 								}
 							}
 							ELEMENT[id10] occurrences matches {0..1} matches {	-- Directions
 								value matches {
-									DV_TEXT[id58] 
-								}
-							}
-							ELEMENT[id48] occurrences matches {0..1} matches {	-- Formatted directions
-								value matches {
-									DV_PARSABLE[id59] 
+									DV_TEXT[id49] 
 								}
 							}
 							allow_archetype CLUSTER[id5] matches {	-- Ingredients and form
@@ -73,15 +68,10 @@ definition
 							}
 							ELEMENT[id6] occurrences matches {0..1} matches {	-- Dose description
 								value matches {
-									DV_TEXT[id60] 
+									DV_TEXT[id50] 
 								}
 							}
-							ELEMENT[id56] occurrences matches {0..1} matches {	-- Parsable dose description
-								value matches {
-									DV_PARSABLE[id61] 
-								}
-							}
-							allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Structured dose amount
+							allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {	-- Structured dose
 								include
 									archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount(-a-zA-Z0-9_]+)*\.v1/}
 							}
@@ -89,7 +79,7 @@ definition
 								items matches {
 									ELEMENT[id9] occurrences matches {0..1} matches {	-- Timing description
 										value matches {
-											DV_TEXT[id62] 
+											DV_TEXT[id51] 
 										}
 									}
 									allow_archetype CLUSTER[id38] occurrences matches {0..1} matches {	-- Structured timing
@@ -98,70 +88,45 @@ definition
 									}
 									ELEMENT[id30] occurrences matches {0..1} matches {	-- PRN
 										value matches {
-											DV_BOOLEAN[id63] matches {
+											DV_BOOLEAN[id52] matches {
 												value matches {True, False}
 											}
 										}
 									}
 									ELEMENT[id12] matches {	-- Start criterion
 										value matches {
-											DV_TEXT[id64] 
+											DV_TEXT[id53] 
 										}
 									}
 									ELEMENT[id13] occurrences matches {0..1} matches {	-- Start date
 										value matches {
-											DV_DATE_TIME[id65] 
+											DV_DATE_TIME[id54] 
 										}
 									}
 									ELEMENT[id17] matches {	-- Stop criterion
 										value matches {
-											DV_TEXT[id66] 
+											DV_TEXT[id55] 
 										}
 									}
 									ELEMENT[id14] occurrences matches {0..1} matches {	-- Stop date
 										value matches {
-											DV_DATE_TIME[id67] 
+											DV_DATE_TIME[id56] 
 										}
 									}
 									ELEMENT[id15] occurrences matches {0..1} matches {	-- Duration of treatment
 										value matches {
-											DV_DURATION[id68] 
-										}
-									}
-									ELEMENT[id51] occurrences matches {0..1} matches {	-- Duration of prior treatment
-										value matches {
-											DV_DURATION[id69] matches {
-												value matches {PWDTH/|>=PT0S|}
-											}
+											DV_DURATION[id57] 
 										}
 									}
 									ELEMENT[id16] occurrences matches {0..1} matches {	-- Number of administrations
 										value matches {
-											DV_COUNT[id70] 
+											DV_COUNT[id58] 
 										}
 									}
 									ELEMENT[id18] occurrences matches {0..1} matches {	-- Long-term
 										value matches {
-											DV_BOOLEAN[id71] matches {
+											DV_BOOLEAN[id59] matches {
 												value matches {True, False}
-											}
-										}
-									}
-								}
-							}
-							CLUSTER[id52] matches {	-- Maximum dose
-								items matches {
-									allow_archetype CLUSTER[id53] occurrences matches {0..1} matches {	-- Maximum dose amount
-										include
-											archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-a-zA-Z0-9_]+)*\.v1/}
-									}
-									ELEMENT[id54] occurrences matches {0..1} matches {	-- Allowed period
-										value matches {
-											DV_DURATION[id72] matches {
-												value matches {PYMWD/|>=PT0S|}
-											}
-											DV_CODED_TEXT[id73] matches {
-												defining_code matches {[at55]}
 											}
 										}
 									}
@@ -169,12 +134,12 @@ definition
 							}
 							ELEMENT[id45] matches {	-- Additional instruction
 								value matches {
-									DV_TEXT[id74] 
+									DV_TEXT[id60] 
 								}
 							}
 							ELEMENT[id19] matches {	-- Clinical Indication
 								value matches {
-									DV_TEXT[id75] 
+									DV_TEXT[id61] 
 								}
 							}
 							allow_archetype CLUSTER[id44] matches {	-- Administration details
@@ -183,7 +148,7 @@ definition
 							}
 							ELEMENT[id36] matches {	-- Comment
 								value matches {
-									DV_TEXT[id76] 
+									DV_TEXT[id62] 
 								}
 							}
 							CLUSTER[id24] occurrences matches {0..1} matches {	-- Dispensing
@@ -194,33 +159,28 @@ definition
 									}
 									ELEMENT[id26] occurrences matches {0..1} matches {	-- Number of repeats
 										value matches {
-											DV_COUNT[id77] matches {
+											DV_COUNT[id63] matches {
 												magnitude matches {|>=0|}
 											}
 										}
 									}
 									ELEMENT[id47] occurrences matches {0..1} matches {	-- Minimum interval between repeats
 										value matches {
-											DV_DURATION[id78] 
+											DV_DURATION[id64] 
 										}
 									}
 									ELEMENT[id27] occurrences matches {0..1} matches {	-- Brand substitution permitted
 										value matches {
-											DV_BOOLEAN[id79] matches {
+											DV_BOOLEAN[id65] matches {
 												value matches {True, False}
 											}
 										}
 									}
 									ELEMENT[id29] occurrences matches {0..1} matches {	-- Dispensing instructions
 										value matches {
-											DV_TEXT[id80] 
+											DV_TEXT[id66] 
 										}
 									}
-								}
-							}
-							ELEMENT[id50] occurrences matches {0..1} matches {	-- Past days of therapy
-								value matches {
-									DV_COUNT[id81] 
 								}
 							}
 						}
@@ -233,17 +193,17 @@ definition
 				items matches {
 					ELEMENT[id39] matches {	-- Indication for authorised use
 						value matches {
-							DV_TEXT[id82] 
+							DV_TEXT[id67] 
 						}
 					}
 					ELEMENT[id33] matches {	-- Medication Instruction Id
 						value matches {
-							DV_IDENTIFIER[id83] 
+							DV_IDENTIFIER[id68] 
 						}
 					}
 					ELEMENT[id43] occurrences matches {0..1} matches {	-- Concession benefit
 						value matches {
-							DV_TEXT[id84] 
+							DV_TEXT[id69] 
 						}
 					}
 				}
@@ -275,7 +235,7 @@ terminology
 				description = <"The amount and units of the medicine, vaccine or other therapeutic good to be used or administered at one time.">
 			>
 			["id7"] = <
-				text = <"Structured dose amount">
+				text = <"Structured dose">
 				description = <"Structured information on dose with dose unit. If 'Structured dose' is used with 'Dose description' then these must be semantically equivalent.">
 			>
 			["id9"] = <
@@ -377,196 +337,6 @@ terminology
 			["id47"] = <
 				text = <"Minimum interval between repeats">
 				description = <"The minimum time between repeat dispensing of the medicine, vaccine or therapeutic good. Note: This is specified by the ordering clinician for a specific reason such as safety or best practice.">
-			>
-			["id48"] = <
-				text = <"Formatted directions">
-				description = <"A complete narrative description, with optional markup or formatting of how much, when and how to use the medicine, vaccine or other therapeutic good.">
-			>
-			["id50"] = <
-				text = <"Past days of therapy">
-				description = <"Number of days patient was on this therapy prior to this instruction (Patient was taking antibiotics three days prior to hospital admission).">
-			>
-			["id51"] = <
-				text = <"Duration of prior treatment">
-				description = <"patient was on this treatment prior to this instruction being issued.">
-			>
-			["id52"] = <
-				text = <"Maximum dose">
-				description = <"Details of maximum dose allowed over a defined period, including lifetime usage.">
-			>
-			["id53"] = <
-				text = <"Maximum dose amount">
-				description = <"The maximum dose allowed over the goven period.">
-			>
-			["id54"] = <
-				text = <"Allowed period">
-				description = <"The allowed period for the maiximal dose.">
-			>
-			["at55"] = <
-				text = <"Lifetime">
-				description = <"The maximal dose amount applies ot a whole lifetime.">
-			>
-			["id56"] = <
-				text = <"Parsable dose description">
-				description = <"*">
-			>
-		>
-		["sl"] = <
-			["id1"] = <
-				text = <"*Medication instruction(en)">
-				description = <"*Details of a medicine, vaccine or other therapeutic good with instructions for use.(en)">
-			>
-			["id2"] = <
-				text = <"*Order(en)">
-				description = <"*The instructions for a particular medicine, vaccine or other therapeutic good including dose and timing.(en)">
-			>
-			["id4"] = <
-				text = <"*Medicine(en)">
-				description = <"*The medicine, vaccine or other therapeutic good being ordered, administered to or used by the subject of care. This item should be coded if possible.(en)">
-			>
-			["id5"] = <
-				text = <"*Ingredients and form(en)">
-				description = <"*Detailed information about the ingredient(s) including form and strength.(en)">
-			>
-			["id6"] = <
-				text = <"*Dose description(en)">
-				description = <"*The amount and units of the medicine, vaccine or other therapeutic good to be used or administered at one time.(en)">
-			>
-			["id7"] = <
-				text = <"*Structured dose(en)">
-				description = <"*Structured information on dose with dose unit. If 'Structured dose' is used with 'Dose description' then these must be semantically equivalent.(en)">
-			>
-			["id9"] = <
-				text = <"*Timing description(en)">
-				description = <"*The timing of the doses, which may include frequency and details such as relationship to food.(en)">
-			>
-			["id10"] = <
-				text = <"*Directions(en)">
-				description = <"*A complete narrative description of how much, when and how to use the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id11"] = <
-				text = <"*Timing(en)">
-				description = <"*Details of the timing of the use or administration of the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id12"] = <
-				text = <"*Start criterion(en)">
-				description = <"*A condition which, when met, requires the start of administration or use.(en)">
-			>
-			["id13"] = <
-				text = <"*Start date(en)">
-				description = <"*The date and optional time to begin using the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id14"] = <
-				text = <"*Stop date(en)">
-				description = <"*The date and optional time to stop using the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id15"] = <
-				text = <"*Duration of treatment(en)">
-				description = <"*The length of time for which the medicine, vaccine or other therapeutic good should be used or administered (from the initial dose to the final dose).(en)">
-			>
-			["id16"] = <
-				text = <"*Number of administrations(en)">
-				description = <"*The total number of doses of the medicine, vaccine or other therapeutic good that are to be used or administered (from the initial dose to the final dose).(en)">
-			>
-			["id17"] = <
-				text = <"*Stop criterion(en)">
-				description = <"*A condition which, when met, requires the cessation of administration or use.(en)">
-			>
-			["id18"] = <
-				text = <"*Long-term(en)">
-				description = <"*It is anticipated that the medicine, vaccine or therapeutic good will be re-prescribed or re-dispensed over a period of time.(en)">
-			>
-			["id19"] = <
-				text = <"*Clinical Indication(en)">
-				description = <"*A reason for ordering the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id24"] = <
-				text = <"*Dispensing(en)">
-				description = <"*Information for the dispenser.(en)">
-			>
-			["id26"] = <
-				text = <"*Number of repeats(en)">
-				description = <"*The number of times the expressed quantity of medicine, vaccine or other therapeutic good may be refilled or redispensed without a new prescription.(en)">
-			>
-			["id27"] = <
-				text = <"*Brand substitution permitted(en)">
-				description = <"*Indicates whether or not the substitution of a prescribed medicine with a different brand name of the same medicine, vaccine or other therapeutic good, which has been determined as bioequivalent, is allowed when the medication is dispensed/supplied.(en)">
-			>
-			["id29"] = <
-				text = <"*Dispensing instructions(en)">
-				description = <"*Additional instructions to the person dispensing the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id30"] = <
-				text = <"*PRN(en)">
-				description = <"*The timing is dependent within limits on the subject of care's condition or symptoms  (e.g. 4hrly p.r.n. means the medicine can be taken as frequently as every four hours if necessary). \"Pro re nata\" in latin means as circumstances arise.(en)">
-			>
-			["id33"] = <
-				text = <"*Medication Instruction Id(en)">
-				description = <"*An identifier used in an external system and associated with this medication instruction.(en)">
-			>
-			["id36"] = <
-				text = <"*Comment(en)">
-				description = <"*Any additional information that may be needed to ensure the continuity of supply, rationale for current dose and timing, or safe and appropriate use.(en)">
-			>
-			["id38"] = <
-				text = <"*Structured timing(en)">
-				description = <"*Structured details of the timing of the use or administration.(en)">
-			>
-			["id39"] = <
-				text = <"*Indication for authorised use(en)">
-				description = <"*The specific indication for use that is required by an authorising agency to achieve subsidy for or access to the medicine, vaccine or other therapeutic good. This could be a national medication scheme, insurance company or other funding agency.(en)">
-			>
-			["id43"] = <
-				text = <"*Concession benefit(en)">
-				description = <"*Indicates the category of subsidy appropriate to the item being prescribed.(en)">
-			>
-			["id44"] = <
-				text = <"*Administration details(en)">
-				description = <"*Details of the administration of the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id45"] = <
-				text = <"*Additional instruction(en)">
-				description = <"*An additional statement on how to use the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id46"] = <
-				text = <"*Quantity(en)">
-				description = <"*The amount of medicine, vaccine or other therapeutic good to be dispensed.(en)">
-			>
-			["id47"] = <
-				text = <"*Minimum interval between repeats(en)">
-				description = <"*The minimum time between repeat dispensing of the medicine, vaccine or therapeutic good. Note: This is specified by the ordering clinician for a specific reason such as safety or best practice.(en)">
-			>
-			["id48"] = <
-				text = <"*Formatted directions(en)">
-				description = <"*A complete narrative description, with optional markup or formatting of how much, when and how to use the medicine, vaccine or other therapeutic good.(en)">
-			>
-			["id50"] = <
-				text = <"*Past days of therapy(en)">
-				description = <"*Number of days patient was on this therapy prior to this instruction (Patient was taking antibiotics three days prior to hospital admission).(en)">
-			>
-			["id51"] = <
-				text = <"*Duration of prior treatment(en)">
-				description = <"*patient was on this treatment prior to this instruction being issued.(en)">
-			>
-			["id52"] = <
-				text = <"*New cluster(en)">
-				description = <"**(en)">
-			>
-			["id53"] = <
-				text = <"*Cluster(en)">
-				description = <"**(en)">
-			>
-			["id54"] = <
-				text = <"*New element(en)">
-				description = <"**(en)">
-			>
-			["at55"] = <
-				text = <"*Lifetime(en)">
-				description = <"*The maximal dose amount applies ot a whole lifetime.(en)">
-			>
-			["id56"] = <
-				text = <"*New element(en)">
-				description = <"**(en)">
 			>
 		>
 	>

@@ -1,0 +1,386 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- dados socioeconomicos
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Nível de escolaridade
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Atualmente frequenta escola
+                        value matches {
+                            DV_BOOLEAN[id6] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
+                        value matches {
+                            DV_CODED_TEXT[id8] matches {
+                                defining_code matches {[ac2]}
+                            }
+                        }
+                    }
+                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
+                        items matches {
+                            ELEMENT[id14] occurrences matches {1} matches {    -- Tipo de residência
+                                value matches {
+                                    DV_CODED_TEXT[id15] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id16] occurrences matches {1} matches {    -- Quantas pessoas vivem na casa
+                                value matches {
+                                    DV_CODED_TEXT[id17] matches {
+                                        defining_code matches {[ac4]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id18] occurrences matches {1} matches {    -- Chefe de família
+                                value matches {
+                                    DV_BOOLEAN[id19] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                            CLUSTER[id20] occurrences matches {0..1} matches {    -- Itens presentes na residência
+                                items matches {
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Telefone Fixo
+                                        value matches {
+                                            DV_BOOLEAN[id22] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Telefone Celular
+                                        value matches {
+                                            DV_BOOLEAN[id24] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Fogão
+                                        value matches {
+                                            DV_BOOLEAN[id26] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Rádio
+                                        value matches {
+                                            DV_BOOLEAN[id28] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- Televisão colorida
+                                        value matches {
+                                            DV_BOOLEAN[id31] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Geladeira
+                                        value matches {
+                                            DV_BOOLEAN[id33] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id34] occurrences matches {0..1} matches {    -- Máquina de lavar roupas
+                                        value matches {
+                                            DV_BOOLEAN[id35] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id36] occurrences matches {0..1} matches {    -- Freezer
+                                        value matches {
+                                            DV_BOOLEAN[id37] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id38] occurrences matches {0..1} matches {    -- Computador
+                                        value matches {
+                                            DV_BOOLEAN[id39] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Acesso à internet
+                                        value matches {
+                                            DV_BOOLEAN[id41] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"dados socioeconomicos">
+                description = <"dados socioeconomicos">
+            >
+            ["id3"] = <
+                text = <"Nível de escolaridade">
+                description = <"Informe o nível de escolaridade">
+            >
+            ["at1"] = <
+                text = <"Nunca estudou">
+                description = <"Nunca estudou">
+            >
+            ["at2"] = <
+                text = <"1ª série do ensino fundamental">
+                description = <"1ª série do ensino fundamental">
+            >
+            ["at3"] = <
+                text = <"2ª série do ensino fundamental">
+                description = <"2ª série do ensino fundamental">
+            >
+            ["at4"] = <
+                text = <"3ª série do ensino fundamental">
+                description = <"3ª série do ensino fundamental">
+            >
+            ["at5"] = <
+                text = <"4ª série do ensino fundamental">
+                description = <"4ª série do ensino fundamental">
+            >
+            ["at6"] = <
+                text = <"5ª série do ensino fundamental">
+                description = <"5ª série do ensino fundamental">
+            >
+            ["at7"] = <
+                text = <"6ª série do ensino fundamental">
+                description = <"6ª série do ensino fundamental">
+            >
+            ["at8"] = <
+                text = <"7ª série do ensino fundamental">
+                description = <"7ª série do ensino fundamental">
+            >
+            ["at9"] = <
+                text = <"8ª série do ensino fundamental">
+                description = <"8ª série do ensino fundamental">
+            >
+            ["at10"] = <
+                text = <"1ª série do ensino médio">
+                description = <"1ª série do ensino médio">
+            >
+            ["at11"] = <
+                text = <"2ª série do ensino médio">
+                description = <"2ª série do ensino médio">
+            >
+            ["at12"] = <
+                text = <"3ª série do ensino médio">
+                description = <"3ª série do ensino médio">
+            >
+            ["at13"] = <
+                text = <"Superior incompleto">
+                description = <"Superior incompleto">
+            >
+            ["at14"] = <
+                text = <"Superior completo">
+                description = <"Superior completo">
+            >
+            ["at15"] = <
+                text = <"Pós-graduação">
+                description = <"Pós-graduação">
+            >
+            ["ac1"] = <
+                text = <"Nível de escolaridade">
+                description = <"Nível de escolaridade">
+            >
+            ["id5"] = <
+                text = <"Atualmente frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
+            >
+            ["id7"] = <
+                text = <"Faixa de renda mensal">
+                description = <"Informe a renda mensal">
+            >
+            ["at16"] = <
+                text = <"Menos de 1 SM">
+                description = <"Menos de 1 SM">
+            >
+            ["at17"] = <
+                text = <"De 1 SM  a 3 SM">
+                description = <"De 1 SM  a 3 SM">
+            >
+            ["at18"] = <
+                text = <"Maior que  3 SM a 5 SM">
+                description = <"Maior que  3 SM a 5 SM">
+            >
+            ["at19"] = <
+                text = <"Maior que 5 SM até 10 SM">
+                description = <"Maior que 5 SM até 10 SM">
+            >
+            ["at20"] = <
+                text = <"Maior que 10 SM">
+                description = <"Maior que 10 SM">
+            >
+            ["ac2"] = <
+                text = <"Faixa de renda mensal">
+                description = <"Faixa de renda mensal">
+            >
+            ["id10"] = <
+                text = <"Dados do domicílio e da família">
+                description = <"Dados do domicílio e da família">
+            >
+            ["id14"] = <
+                text = <"Tipo de residência">
+                description = <"Tipo de residência">
+            >
+            ["at21"] = <
+                text = <"Própria">
+                description = <"Própria">
+            >
+            ["at22"] = <
+                text = <"Alugada">
+                description = <"Alugada">
+            >
+            ["at23"] = <
+                text = <"Emprestada">
+                description = <"Emprestada">
+            >
+            ["ac3"] = <
+                text = <"Tipo de residência">
+                description = <"Tipo de residência">
+            >
+            ["id16"] = <
+                text = <"Quantas pessoas vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
+            >
+            ["at24"] = <
+                text = <"Mora sozinho (a)">
+                description = <"Mora sozinho (a)">
+            >
+            ["at25"] = <
+                text = <"2">
+                description = <"2">
+            >
+            ["at26"] = <
+                text = <"3">
+                description = <"3">
+            >
+            ["at27"] = <
+                text = <"4">
+                description = <"4">
+            >
+            ["at28"] = <
+                text = <"5">
+                description = <"5">
+            >
+            ["at29"] = <
+                text = <"6">
+                description = <"6">
+            >
+            ["at30"] = <
+                text = <"7">
+                description = <"7">
+            >
+            ["at31"] = <
+                text = <"8 ou mais pessoas">
+                description = <"8 ou mais pessoas">
+            >
+            ["ac4"] = <
+                text = <"Quantas pessoas vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
+            >
+            ["id18"] = <
+                text = <"Chefe de família">
+                description = <"Chefe de família">
+            >
+            ["id20"] = <
+                text = <"Itens presentes na residência">
+                description = <"Itens presentes na residência">
+            >
+            ["id21"] = <
+                text = <"Telefone Fixo">
+                description = <"Telefone Fixo">
+            >
+            ["id23"] = <
+                text = <"Telefone Celular">
+                description = <"Telefone Celular">
+            >
+            ["id25"] = <
+                text = <"Fogão">
+                description = <"Fogão">
+            >
+            ["id27"] = <
+                text = <"Rádio">
+                description = <"Rádio">
+            >
+            ["id30"] = <
+                text = <"Televisão colorida">
+                description = <"Televisão colorida">
+            >
+            ["id32"] = <
+                text = <"Geladeira">
+                description = <"Geladeira">
+            >
+            ["id34"] = <
+                text = <"Máquina de lavar roupas">
+                description = <"Máquina de lavar roupas">
+            >
+            ["id36"] = <
+                text = <"Freezer">
+                description = <"Freezer">
+            >
+            ["id38"] = <
+                text = <"Computador">
+                description = <"Computador">
+            >
+            ["id40"] = <
+                text = <"Acesso à internet">
+                description = <"Acesso à internet">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14", "at15">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at16", "at17", "at18", "at19", "at20">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at21", "at22", "at23">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at24", "at25", "at26", "at27", "at28", "at29", "at30", "at31">
+        >
+    >
+

@@ -1,0 +1,369 @@
+archetype (adl_version=2.0.6; rm_release=1.0.2; generated)
+    openEHR-EHR-ADMIN_ENTRY.admission_SESI-BR.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.admission.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["ar-sy"] = <
+            author = <
+                ["name"] = <"Mona Saleh">
+            >
+            language = <[ISO_639-1::ar-sy]>
+        >
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© openEHR Foundation">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"This admission ADMIN_ENTRY archetype was designed for representing the minimum admission data. This is based on the Australian/New Zealand Standard Implementation of Health Level Seven (HL7) Version 2.4 (Part 1: Patient administration) and Health Level Seven (HL7) Standard Version 2.3.1.">
+            use = <"">
+        >
+        ["ar-sy"] = <
+            language = <[ISO_639-1::ar-sy]>
+            misuse = <"">
+            purpose = <"هذا النموذج الخاص بإدخال المريض تم تصميمه لتمثيل الحد الأدنى من بيانات إدخال المريض.
+و هذا يستخدم التطبيق العياري في أستراليا و نيوزيلندة للمستوى الصحي السابع النسخة/الإصدار 2.4 (الجزء الأول:إدراة المريض), و الإصدار 2.3.1 من المستوى الصحي السابع.">
+            use = <"">
+        >
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Esse arquivamento ADMIN_ENTRY de admissão foi projetado para representar os dados mínimos de admissão. Isto é baseado na Implementação Padrão Australiana / Nova Zelândia do HL7 Versão 2.4 (Parte 1: Administração do Paciente) e HL7 Versão Padrão 2.3.1.">
+            use = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Chunlan Ma">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"chunlan.ma@oceaninformatics.com">
+        ["date"] = <"19/07/07">
+    >
+    other_contributors = <"Sistine Barretto">
+
+definition
+    ADMIN_ENTRY[id1.1] matches {    -- Patient admission
+        /data[id2]/items matches {
+            ELEMENT[id3] matches {
+                /value[id123]/defining_code matches {[ac3]}
+            }
+            CLUSTER[id74] occurrences matches {0..1} matches {
+                items matches {
+                    CLUSTER[id105] occurrences matches {0..1} matches {
+                        /items[id108]/value[id130]/defining_code matches {[ac4]}
+                    }
+                    ELEMENT[id82] occurrences matches {0..1} matches {
+                        /value[id139]/defining_code matches {[ac5]}
+                    }
+                }
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id140]/defining_code matches {[ac6]}
+            }
+            CLUSTER[id95] occurrences matches {0..1} matches {
+                items matches {
+                    CLUSTER[id120] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                        }
+                    }
+                    CLUSTER[id96] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                        }
+                    }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                }
+            }
+            CLUSTER[id26] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id122] matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id52] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            ELEMENT[id62] occurrences matches {0..1} matches {
+                /value[id171]/defining_code matches {[ac7]}
+            }
+            ELEMENT[id67] occurrences matches {0..1} matches {
+                /value[id172]/defining_code matches {[ac2]}
+            }
+            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Identificação
+                items matches {
+                    ELEMENT[id0.5] occurrences matches {1} matches {    -- Name
+                        value matches {
+                            DV_TEXT[id0.6] 
+                        }
+                    }
+                    ELEMENT[id0.7] occurrences matches {1} matches {    -- Marital status
+                        value matches {
+                            DV_CODED_TEXT[id0.8] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.9] occurrences matches {1} matches {    -- Raça/Cor
+                        value matches {
+                            DV_CODED_TEXT[id0.10] matches {
+                                defining_code matches {[ac0.2]}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Patient admission">
+                description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
+            >
+            ["id0.4"] = <
+                text = <"Identificação">
+                description = <"Identificação">
+            >
+            ["id0.5"] = <
+                text = <"Name">
+                description = <"Register full name">
+            >
+            ["id0.7"] = <
+                text = <"Marital status">
+                description = <"Record the marital status">
+            >
+            ["at0.1"] = <
+                text = <"Casado/Vive junto">
+                description = <"Casado/Vive junto">
+            >
+            ["at0.2"] = <
+                text = <"Solteiro">
+                description = <"Solteiro">
+            >
+            ["at0.3"] = <
+                text = <"Divorciado">
+                description = <"Divorciado">
+            >
+            ["at0.4"] = <
+                text = <"Viúvo">
+                description = <"Viúvo">
+            >
+            ["ac0.1"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
+            >
+            ["id0.9"] = <
+                text = <"Raça/Cor">
+                description = <"Raça/Cor">
+            >
+            ["at0.5"] = <
+                text = <"Branco">
+                description = <"Branco">
+            >
+            ["at0.6"] = <
+                text = <"Preto">
+                description = <"Preto">
+            >
+            ["at0.7"] = <
+                text = <"Amarelo">
+                description = <"Amarelo">
+            >
+            ["at0.8"] = <
+                text = <"Pardo">
+                description = <"Pardo">
+            >
+            ["at0.9"] = <
+                text = <"Indígena">
+                description = <"Indígena">
+            >
+            ["ac0.2"] = <
+                text = <"Raça/Cor">
+                description = <"Raça/Cor">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"إدخال المريض">
+                description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
+            >
+            ["id0.4"] = <
+                text = <"Identificação (en)">
+                description = <"Identificação (en)">
+            >
+            ["id0.5"] = <
+                text = <"Nome (en)">
+                description = <"Registre o nome completo (en)">
+            >
+            ["id0.7"] = <
+                text = <"Estado civil">
+                description = <"Registre o estado civil">
+            >
+            ["at0.1"] = <
+                text = <"Casado/Vive junto (en)">
+                description = <"Casado/Vive junto (en)">
+            >
+            ["at0.2"] = <
+                text = <"Solteiro (en)">
+                description = <"Solteiro (en)">
+            >
+            ["at0.3"] = <
+                text = <"Divorciado (en)">
+                description = <"Divorciado (en)">
+            >
+            ["at0.4"] = <
+                text = <"Viúvo (en)">
+                description = <"Viúvo (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["id0.9"] = <
+                text = <"Raça/Cor (en)">
+                description = <"Raça/Cor (en)">
+            >
+            ["at0.5"] = <
+                text = <"Branco (en)">
+                description = <"Branco (en)">
+            >
+            ["at0.6"] = <
+                text = <"Preto (en)">
+                description = <"Preto (en)">
+            >
+            ["at0.7"] = <
+                text = <"Amarelo (en)">
+                description = <"Amarelo (en)">
+            >
+            ["at0.8"] = <
+                text = <"Pardo (en)">
+                description = <"Pardo (en)">
+            >
+            ["at0.9"] = <
+                text = <"Indígena (en)">
+                description = <"Indígena (en)">
+            >
+            ["ac0.2"] = <
+                text = <"Raça/Cor (en)">
+                description = <"Raça/Cor (en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Admissão do paciente">
+                description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
+            >
+            ["id0.4"] = <
+                text = <"Identificação (en)">
+                description = <"Identificação (en)">
+            >
+            ["id0.5"] = <
+                text = <"Nome">
+                description = <"Registre o nome completo">
+            >
+            ["id0.7"] = <
+                text = <"Estado civil">
+                description = <"Registre o estado civil">
+            >
+            ["at0.1"] = <
+                text = <"Casado/Vive junto (en)">
+                description = <"Casado/Vive junto (en)">
+            >
+            ["at0.2"] = <
+                text = <"Solteiro (en)">
+                description = <"Solteiro (en)">
+            >
+            ["at0.3"] = <
+                text = <"Divorciado (en)">
+                description = <"Divorciado (en)">
+            >
+            ["at0.4"] = <
+                text = <"Viúvo (en)">
+                description = <"Viúvo (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["id0.9"] = <
+                text = <"Raça/Cor (en)">
+                description = <"Raça/Cor (en)">
+            >
+            ["at0.5"] = <
+                text = <"Branco (en)">
+                description = <"Branco (en)">
+            >
+            ["at0.6"] = <
+                text = <"Preto (en)">
+                description = <"Preto (en)">
+            >
+            ["at0.7"] = <
+                text = <"Amarelo (en)">
+                description = <"Amarelo (en)">
+            >
+            ["at0.8"] = <
+                text = <"Pardo (en)">
+                description = <"Pardo (en)">
+            >
+            ["at0.9"] = <
+                text = <"Indígena (en)">
+                description = <"Indígena (en)">
+            >
+            ["ac0.2"] = <
+                text = <"Raça/Cor (en)">
+                description = <"Raça/Cor (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9">
+        >
+    >
+

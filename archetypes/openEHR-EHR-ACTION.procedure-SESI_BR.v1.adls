@@ -1,0 +1,444 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-ACTION.procedure-SESI_BR.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.procedure.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© 2011 NEHTA">
+    details = <
+        ["en"] = <
+            keywords = <"procedure", "intervention", "surgical", "medical", "clinical", "therapeutic", "diagnostic">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used to record details about related activities such as use of imaging guidance during the procedure or collection of tissue samples for analysis - use specific ACTION archetypes for this purpose.
+
+Not to be used to record a whole operation or procedure report.">
+            purpose = <"To record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.">
+            use = <"Use to record information about the activities required to carry out a procedure, including the planning, scheduling, performance, suspension, cancellation, documentation and completion.  This is done by the recording of data against specific activities, as defined by the 'Pathway' care steps in this archetype.
+
+The scope of this archetype encompasses activities for a broad range of clinical procedures performed for therapeutic, evaluative, investigative, screening or diagnostic purposes. Examples range from the relatively simple activities, such as insertion of an intravenous cannula, through to complex surgical operations.
+
+Additional structured and detailed information about the procedure can be captured using purpose-specific archetypes inserted into the 'Procedure detail' slot, where required.
+
+Start date/time is included in the Protocol. If this is recorded against the Scheduled care pathway step, it captures the scheduled start time; if recorded against the Procedure performed step, then it captures the actual start time of the procedure.
+
+End date/time has not been specifically modelled in this archetype as this is the date/time that is recorded (per the reference model) as each action or care pathway step is completed.
+
+Within the context of an Operation Report, this archetype will be used to record only what was done during the procedure . Separate archetypes will be used to record the other required components of the Operation Report, including the taking of tissue specimen samples, use of imaging guidance, operation findings, post-operative instructions and plans for followup.
+
+Within the context of a Problem list or summary, this archetype may be used to represent procedures that have been performed. The EVALUATION.problem_diagnosis will be used to represent the patient's problems and diagnoses.
+
+In practice, many procedures (for example, in ambulatory care) will occur once and not be ordered in advance. The pathway step, ‘Procedure completed’ (or ‘Failed attempt’, or ‘Procedure aborted’) will be recorded and the details added. In some cases a recurring procedure will be ordered, and in this situation data against the ‘Procedure undertaken’ step will be recorded on each occasion, leaving the instruction in the active state. When the last occurrence is recorded the ‘Procedure completed’ action is recorded showing that this order is now in the completed state.
+
+In other situations, such as secondary care, there may be a formal order for a procedure using a corresponding INSTRUCTION archetype. This ACTION archetype can then be used to record the workflow of when and how the order has been carried out.
+
+Recording information using this ACTION archetype indicates that some sort of activity has actually occurred; this will usually be the procedure itself but may be a failed attempt or another activity such as postponing the procedure. If there is a formal order for the procedure, the state of this order is represented by the Pathway step against which the data is recorded. For example, using this archetype the progressing state of a Gastroscopy order may be recorded through separate entries in the EHR progress notes at each 'Pathway' step:
+- record the scheduled Start date/time for the gastroscopy (Procedure scheduled); 
+- record the gastroscopy was attempted but failed (Failed attempt); and
+- record that the gastroscopy procedure has been completed, including information about the procedure details (Procedure completed).">
+        >
+        ["pt-br"] = <
+            keywords = <"procedure", "intervention", "surgical", "medical", "clinical", "therapeutic", "diagnostic">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para registrar detalhes sobre atividades relacionadas, como o uso de orientação de imagem durante o procedimento ou a coleta de amostras de tecido para análise - use arquétipos de ACTION específicos para este fim.
+
+Não deve ser usado para registrar uma operação completa ou um relatório de procedimento.">
+            purpose = <"Para registrar informações sobre as atividades necessárias para realizar um procedimento, incluindo o planejamento, agendamento, desempenho, suspensão, cancelamento, documentação e conclusão.">
+            use = <"Use para registrar informações sobre as atividades necessárias para realizar um procedimento, incluindo o planejamento, agendamento, desempenho, suspensão, cancelamento, documentação e conclusão. Isso é feito pela gravação de dados contra atividades específicas, conforme definido pelas etapas de cuidado 'Pathway' neste arquétipo.
+
+O escopo deste arquétipo abrange atividades para uma ampla gama de procedimentos clínicos realizados para fins terapêuticos, de avaliação, de investigação, de triagem ou de diagnóstico. Os exemplos variam de atividades relativamente simples, como a inserção de uma cânula intravenosa, até operações cirúrgicas complexas.
+
+Informações adicionais estruturadas e detalhadas sobre o procedimento podem ser capturadas utilizando arquétipos específicos inseridos no espaço de \"Procedimento detalhado\", quando necessário.
+
+A data / hora de início está incluída no protocolo. Se isso for registrado contra a etapa de caminho de cuidados agendados, ele captura a hora de início agendada; se gravado no passo Procedimento executado, ele captura a hora de início real do procedimento.
+
+A data / hora de término não foi modelada especificamente neste arquétipo, pois esta é a data / hora gravada (por modelo de referência) à medida que cada etapa de ação ou caminho de atendimento é concluída.
+
+No contexto de um Relatório de Operação, este arquétipo será usado para registrar apenas o que foi feito durante o procedimento. Arquetipos separados serão usados para registrar os outros componentes necessários do Relatório de Operação, incluindo a tomada de amostras de amostras de tecido, uso de orientação de imagem, resultados de operação, instruções pós-operacionais e planos para acompanhamento.
+
+No contexto de uma lista ou resumo de problemas, esse arquétipo pode ser usado para representar procedimentos que foram realizados. O  EVALUATION.problem_diagnosis será usado para representar os problemas e diagnósticos do paciente.
+
+Na prática, muitos procedimentos (por exemplo, em atendimento ambulatório) ocorrerão uma vez e não serão ordenados com antecedência. O passo do caminho, 'Procedimento concluído' (ou 'Falha na tentativa' ou 'Procedimento abortado') será gravado e os detalhes serão adicionados. Em alguns casos, um procedimento recorrente será ordenado e, nesta situação, os dados contra a etapa \"Procedimento realizado\" serão registrados em cada ocasião, deixando as instruções no estado ativo. Quando a última ocorrência é gravada, a ação \"Procedimento concluído\" é gravada mostrando que esta ordem está agora no estado concluído.
+
+Em outras situações, como o atendimento secundário, pode haver uma ordem formal para um procedimento usando um arquétipo de INSTRUCTION correspondente. Este arquétipo ACTION pode então ser usado para registrar o fluxo de trabalho de quando e como a ordem foi realizada.
+
+A gravação de informações usando este arquétipo ACTION indica que algum tipo de atividade realmente ocorreu; Isso geralmente será o próprio procedimento, mas pode ser uma tentativa falhada ou outra atividade, como adiar o procedimento. Se houver uma ordem formal para o procedimento, o estado desta ordem é representado pelo passo do caminho contra o qual os dados são gravados. Por exemplo, usando esse arquétipo, o estado de progresso de uma ordem de Gastroscopia pode ser gravado através de entradas separadas nas notas de progresso de EHR em cada etapa de 'Caminho':
+- registre a data / hora de início programada para a gastroscopia (procedimento agendado);
+- gravar a gastroscopia foi tentada, mas falhou (tentativa de falha); e
+- registre que o procedimento de gastroscopia foi concluído, incluindo informações sobre os detalhes do procedimento (Procedimento concluído).">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"24/01/2011">
+    >
+    other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "David Evans, Queensland Health, Australia", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Andrew Goodchild, NEHTA, Australia", "Megan Hawkins, Mater Health Services, Australia", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Hugh Leslie, Ocean Informatics, Australia", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Chris Pearce, Melbourne East GP Network, Australia", "Peter Scott, Australia", "Elizabeth Stanick, Hobart Anaesthetic Group, Australia", "John Taylor, NEHTA, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+
+definition
+    ACTION[id1.1] matches {    -- Procedure
+        ism_transition matches {
+            ISM_TRANSITION[id36] matches {
+                /current_state[id37]/defining_code matches {[at30]}
+                /careflow_step[id38]/defining_code matches {[at14]}
+            }
+            ISM_TRANSITION[id39] matches {
+                /current_state[id40]/defining_code matches {[at31]}
+                /careflow_step[id41]/defining_code matches {[at26]}
+            }
+            ISM_TRANSITION[id42] matches {
+                /current_state[id43]/defining_code matches {[at32]}
+                /careflow_step[id44]/defining_code matches {[at28]}
+            }
+            ISM_TRANSITION[id45] matches {
+                /current_state[id46]/defining_code matches {[at33]}
+                /careflow_step[id47]/defining_code matches {[at16]}
+            }
+            ISM_TRANSITION[id48] matches {
+                /current_state[id49]/defining_code matches {[at34]}
+                /careflow_step[id50]/defining_code matches {[at18]}
+            }
+            ISM_TRANSITION[id51] matches {
+                /current_state[id52]/defining_code matches {[at34]}
+                /careflow_step[id53]/defining_code matches {[at19]}
+            }
+            ISM_TRANSITION[id54] matches {
+                /current_state[id55]/defining_code matches {[at35]}
+                /careflow_step[id56]/defining_code matches {[at27]}
+            }
+            ISM_TRANSITION[id57] matches {
+                /current_state[id58]/defining_code matches {[at36]}
+                /careflow_step[id59]/defining_code matches {[at29]}
+            }
+            ISM_TRANSITION[id60] matches {
+                /current_state[id61]/defining_code matches {[at37]}
+                /careflow_step[id62]/defining_code matches {[at25]}
+            }
+        }
+        /description[id2]/items matches {
+            allow_archetype CLUSTER[id35] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id6] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Historic
+                value matches {
+                    DV_CODED_TEXT[id0.3] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
+        }
+        /protocol[id30]/items matches {
+            allow_archetype CLUSTER[id34] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Procedure">
+                description = <"A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.">
+            >
+            ["id0.2"] = <
+                text = <"Historic">
+                description = <"Record history of interventions / surgeries">
+            >
+            ["at0.1"] = <
+                text = <"Yes">
+                description = <"Yes">
+            >
+            ["at0.2"] = <
+                text = <"No">
+                description = <"No">
+            >
+            ["at0.3"] = <
+                text = <"Ignored">
+                description = <"Ignored">
+            >
+            ["ac0.1"] = <
+                text = <"Historic">
+                description = <"Historic">
+            >
+            ["id1"] = <
+                text = <"Procedure">
+                description = <"A clinical activity carried out for therapeutic, evaluative, investigative, screening or diagnostic purposes.">
+            >
+            ["id3"] = <
+                text = <"Procedure name">
+                description = <"The name of the procedure (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+            >
+            ["id4"] = <
+                text = <"Reason">
+                description = <"Reason that the activity or care pathway step for the identified procedure was carried out, for example, the reason for the cancellation or suspension of the procedure.">
+            >
+            ["id5"] = <
+                text = <"Description">
+                description = <"Narrative description about the activity or care pathway step for the identified procedure, for example description about the performance and findings from the the procedure, the failed attempt or the cancellation of the procedure.">
+            >
+            ["id6"] = <
+                text = <"Procedure detail">
+                description = <"Structured information about the procedure. Use to capture detailed, structured information about method & technique, equipment used & devices implanted and findings etc.">
+            >
+            ["id10"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+            >
+            ["id11"] = <
+                text = <"Multimedia">
+                description = <"Multimedia representation of the procedure undertaken, for example, a link to a video of the procedure performed or a drawing of the wound/surgery etc.">
+            >
+            ["at14"] = <
+                text = <"Procedure planned">
+                description = <"The procedure to be undertaken is planned.">
+            >
+            ["at16"] = <
+                text = <"Procedure scheduled">
+                description = <"The procedure has been scheduled.">
+            >
+            ["at18"] = <
+                text = <"Procedure performed">
+                description = <"The procedure has been performed but more actions remain to be completed.">
+            >
+            ["at19"] = <
+                text = <"Failed attempt">
+                description = <"The procedure has been commenced but not completed successfully.">
+            >
+            ["at25"] = <
+                text = <"Procedure completed">
+                description = <"The procedure has been performed and all associated actions completed.">
+            >
+            ["at26"] = <
+                text = <"Procedure postponed">
+                description = <"The procedure has been postponed.">
+            >
+            ["at27"] = <
+                text = <"Procedure suspended">
+                description = <"The procedure has been suspended.">
+            >
+            ["at28"] = <
+                text = <"Procedure cancelled">
+                description = <"The planned procedure has been cancelled prior to commencement.">
+            >
+            ["at29"] = <
+                text = <"Procedure aborted">
+                description = <"The procedure has been aborted.">
+            >
+            ["id31"] = <
+                text = <"Start date/time">
+                description = <"The start date and/or time for the procedure. This will indicate the scheduled date/time when recorded against the Scheduled care pathway step or the actual Start date/time in the Procedure performed step.">
+            >
+            ["id32"] = <
+                text = <"Duration">
+                description = <"Duration of the procedure, (especially for the Procedure performed pathway step).">
+            >
+            ["id34"] = <
+                text = <"Device">
+                description = <"Structured information about any device used during the procedure.">
+            >
+            ["id35"] = <
+                text = <"Anatomical location">
+                description = <"Structured information about the specific anatomical location of the procedure.">
+            >
+            ["at30"] = <
+                text = <"planned">
+                description = <"planned">
+            >
+            ["at31"] = <
+                text = <"postponed">
+                description = <"postponed">
+            >
+            ["at32"] = <
+                text = <"cancelled">
+                description = <"cancelled">
+            >
+            ["at33"] = <
+                text = <"scheduled">
+                description = <"scheduled">
+            >
+            ["at34"] = <
+                text = <"active">
+                description = <"active">
+            >
+            ["at35"] = <
+                text = <"suspended">
+                description = <"suspended">
+            >
+            ["at36"] = <
+                text = <"aborted">
+                description = <"aborted">
+            >
+            ["at37"] = <
+                text = <"complete">
+                description = <"complete">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Procedimento">
+                description = <"Atividade clínica realizada para fins terapêuticos, de avaliação, de investigação, de triagem ou de diagnóstico.">
+            >
+            ["id0.2"] = <
+                text = <"Histórico">
+                description = <"Registro histórico de intervenções / cirurgias">
+            >
+            ["at0.1"] = <
+                text = <"Sim">
+                description = <"Sim">
+            >
+            ["at0.2"] = <
+                text = <"Não">
+                description = <"Não">
+            >
+            ["at0.3"] = <
+                text = <"Ignorado">
+                description = <"Ignorado">
+            >
+            ["ac0.1"] = <
+                text = <"*Historic (en)">
+                description = <"*Historic (en)">
+            >
+            ["id1"] = <
+                text = <"Procedimento">
+                description = <"Atividade clínica realizada para fins terapêuticos, de avaliação, de investigação, de triagem ou de diagnóstico.">
+            >
+            ["id3"] = <
+                text = <"Nome do procedimento">
+                description = <"O nome do procedimento (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id4"] = <
+                text = <"Razão">
+                description = <"Razão de que o passo da atividade ou do caminho de atendimento para o procedimento identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do procedimento.">
+            >
+            ["id5"] = <
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre a etapa de atividade ou caminho de cuidado para o procedimento identificado, por exemplo, descrição sobre o desempenho e os resultados do procedimento, a tentativa falhada ou o cancelamento do procedimento.">
+            >
+            ["id6"] = <
+                text = <"Detalhes do procedimento">
+                description = <"Informações estruturadas sobre o procedimento. Use para capturar informações detalhadas e estruturadas sobre método e técnica, equipamentos usados e dispositivos implantados e descobertas etc.">
+            >
+            ["id10"] = <
+                text = <"Comentário">
+                description = <"Uma narrativa adicional sobre o passo da atividade ou do caminho de cuidado não é capturada em outros campos.">
+            >
+            ["id11"] = <
+                text = <"Multimídia">
+                description = <"Representação multimídia do procedimento realizado, por exemplo, um link para um vídeo do procedimento realizado ou um desenho da ferida / cirurgia, etc.">
+            >
+            ["at14"] = <
+                text = <"Procedimento planejado">
+                description = <"O procedimento a ser realizado está planejado.">
+            >
+            ["at16"] = <
+                text = <"Procedimento agendado">
+                description = <"O procedimento foi agendado.">
+            >
+            ["at18"] = <
+                text = <"Procedimento executado">
+                description = <"O procedimento foi executado, mas ainda há mais ações a serem concluídas.">
+            >
+            ["at19"] = <
+                text = <"Falha na tentativa">
+                description = <"O procedimento foi iniciado, mas não foi concluído com sucesso.">
+            >
+            ["at25"] = <
+                text = <"Procedimento completo">
+                description = <"O procedimento foi executado e todas as ações associadas foram concluídas.">
+            >
+            ["at26"] = <
+                text = <"Procedimento adiado">
+                description = <"O procedimento foi adiado.">
+            >
+            ["at27"] = <
+                text = <"Procedimento suspenso">
+                description = <"O procedimento foi suspenso.">
+            >
+            ["at28"] = <
+                text = <"Procedimento cancelado">
+                description = <"O procedimento planejado foi cancelado.">
+            >
+            ["at29"] = <
+                text = <"Procedimento abortado">
+                description = <"O procedimento foi abortado.">
+            >
+            ["id31"] = <
+                text = <"Data/hora de início">
+                description = <"A data de início e / ou a hora do procedimento. Isso indicará a data / hora agendada quando gravada na etapa de caminho do cuidado agendado ou na data / hora de início real na etapa procedimento executado.">
+            >
+            ["id32"] = <
+                text = <"Duração">
+                description = <"Duração do procedimento, (especialmente para o passo do percurso do procedimento realizado).">
+            >
+            ["id34"] = <
+                text = <"Dispositivo">
+                description = <"Informações estruturadas sobre qualquer dispositivo usado durante o procedimento.">
+            >
+            ["id35"] = <
+                text = <"Localização anatômica">
+                description = <"Informações estruturadas sobre a localização anatômica específica do procedimento.">
+            >
+            ["at30"] = <
+                text = <"planejado">
+                description = <"planejado">
+            >
+            ["at31"] = <
+                text = <"adiado">
+                description = <"adiado">
+            >
+            ["at32"] = <
+                text = <"cancelado">
+                description = <"cancelado">
+            >
+            ["at33"] = <
+                text = <"agendado">
+                description = <"agendado">
+            >
+            ["at34"] = <
+                text = <"ativo">
+                description = <"ativo">
+            >
+            ["at35"] = <
+                text = <"suspenso">
+                description = <"suspenso">
+            >
+            ["at36"] = <
+                text = <"abortado">
+                description = <"abortado">
+            >
+            ["at37"] = <
+                text = <"completo">
+                description = <"completo">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3">
+        >
+    >
+

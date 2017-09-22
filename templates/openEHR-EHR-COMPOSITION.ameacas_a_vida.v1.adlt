@@ -1,0 +1,153 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.ameacas_a_vida.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.lifestyle_factors.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"life", "style", "lifestyle", "risk", "factor", "tobacco", "smoking", "alcohol", "binge", "diet", "exercise">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to record a series of OBSERVATIONS about current activity, such as might be used to create a daily diary of alcohol consumption or activity in a specific exercise session.">
+            purpose = <"To record a persistent and evolving summary record of information about lifestyle choices and activities that may influence clinical decision-making and care provision.">
+            use = <"Use to record a persistent and evolving summary record of information about relevant lifestyle choices and activities that may influence clinical decision-making and care provision.
+
+The scope of this record can includes, but is not limited to:
+- an overview of smoking and tobacco use;
+- an overview of alcohol consumption;
+- an overview of substance use;
+- an overview of physical activity;
+- an overview of diet and nutrition; and when relevant,
+- an overview of sexual history.
+
+The intent of this COMPOSITION is for use as a persistent summary, however it has been identified that for implementation the archetype also needs additional attributes related to the context of the event. As a result, the COMPOSITION has been temporarily modified as an EVENT COMPOSITION which allows addition of an Items SLOT into which additional context-related archetypes can be included. This new requirement for context-related attributes in the Persistent COMPOSITION has been requested as a future openEHR Reference Model update.
+
+Initial design of this archetype was funded by the iCareNet Antenatal Shared Care Plan project, Northern Territory, Australia.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2013-06-12">
+    >
+
+definition
+    COMPOSITION[id1.1] matches {    -- Lifestyle Factors
+        /category[id6]/defining_code matches {[at1]}
+        /context[id7]/other_context[id3]/items matches {
+            allow_archetype ITEM[id4] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.document_entry_metadata(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+        content cardinality matches {1..*; unordered} matches {
+            allow_archetype EVALUATION[id5] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-EVALUATION\.alcohol_use_summary(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.nutrition_summary(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.physical_activity_summary(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.substance_use_summary(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.tobacco_use_summary(-a-zA-Z0-9_]+)*\.v1|openEHR-EHR-EVALUATION\.exposure(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype EVALUATION[id2] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-EVALUATION\.absence(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-ameacas_a_vida-nutrition_summary-001.v1.0.0]
+            use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.ovl-ameacas_a_vida-allergy-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Lifestyle Factors">
+                description = <"A persistent and evolving summary record of information about lifestyle factors that may influence clinical decision-making and care provision.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-ameacas_a_vida-nutrition_summary-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.nutrition_summary.v1.0.0
+
+definition
+    EVALUATION[id1.1] matches {    -- Nutrition Summary
+        /data[id2]/items matches {
+            ELEMENT[id4] occurrences matches {0..1} matches {
+                /value[id13]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id9.1] occurrences matches {0..1} matches {    -- Dietary preference
+                value matches {
+                    DV_TEXT[id14.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Nutrition Summary">
+                description = <"Summary of the nutritional status of an individual, as assessed by a clinician.">
+            >
+            ["id9.1"] = <
+                text = <"Dietary preference">
+                description = <"A description of an individual's dietary preference e.g. Vegetarian or Vegan.  Coding with a terminology is desirable, where possible.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-ameacas_a_vida-allergy-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.allergy.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Adverse Reaction - Allergy
+        /data[id2]/items matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                /value[id51]/value matches {True, False}
+            }
+            CLUSTER[id10] matches {
+                items matches {
+                    ELEMENT[id18] occurrences matches {0..1} matches {
+                        /value[id57]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id22] occurrences matches {0..1} matches {
+                        /value[id58]/defining_code matches {[ac2]}
+                    }
+                }
+            }
+        }
+        /protocol[id43]/items[id45]/value[id68]/value matches {True, False}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Adverse Reaction - Allergy">
+                description = <"A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, insect stings or a medication at therapeutic doses. The range of Adverse Reactions includes both Immune mediated reactions Types I-IV (including allergies and hypersensitivities) and Non-immune mediated reactions (including pseudoallergic reactions, side effects, intolerances, drug toxicities (eg Gentamycin), drug-drug interactions, food-drug interactions, drug-disease interactions and idiosyncratic reactions).">
+            >
+        >
+        ["sl"] = <
+            ["id1.1.1"] = <
+                text = <"*Adverse Reaction(en)">
+                description = <"*A harmful or undesirable effect associated with exposure to any substance or agent, including food, plants, animals, insect stings or a medication at therapeutic doses. The range of Adverse Reactions includes both Immune mediated reactions Types I-IV (including allergies and hypersensitivities) and Non-immune mediated reactions (including pseudoallergic reactions, side effects, intolerances, drug toxicities (eg Gentamycin), drug-drug interactions, food-drug interactions, drug-disease interactions and idiosyncratic reactions).(en)">
+            >
+        >
+    >
+

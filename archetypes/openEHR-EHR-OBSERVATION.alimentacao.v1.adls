@@ -1,0 +1,508 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.alimentacao.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Alimentacao
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Com que frequência o trabalhador normalmente come frutas frescas.
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {1} matches {    -- Com que frequência o trabalhador normalmente come verduras ou saladas cruas.
+                                        value matches {
+                                            DV_CODED_TEXT[id10] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {1} matches {    -- Quando o trabalhador come frango, o que normalmente faz com a pele.
+                                        value matches {
+                                            DV_CODED_TEXT[id12] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {1} matches {    -- Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.
+                                        value matches {
+                                            DV_CODED_TEXT[id14] matches {
+                                                defining_code matches {[ac4]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {1} matches {    -- Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.
+                                        value matches {
+                                            DV_CODED_TEXT[id16] matches {
+                                                defining_code matches {[ac5]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {1} matches {    -- Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).
+                                        value matches {
+                                            DV_CODED_TEXT[id18] matches {
+                                                defining_code matches {[ac6]}
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id20] occurrences matches {0..1} matches {    -- Comportamento preventivo
+                                        items matches {
+                                            ELEMENT[id21] occurrences matches {1} matches {    -- Proteção solar
+                                                value matches {
+                                                    DV_CODED_TEXT[id22] matches {
+                                                        defining_code matches {[ac7]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Alimentacao">
+                description = <"Alimentacao">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Com que frequência o trabalhador normalmente come frutas frescas.">
+                description = <"Com que frequência o trabalhador normalmente come frutas frescas.">
+            >
+            ["at1"] = <
+                text = <"5 ou mais vezes ao dia.">
+                description = <"5 ou mais vezes ao dia.">
+            >
+            ["at2"] = <
+                text = <"3 ou 4 vezes por dia">
+                description = <"3 ou 4 vezes por dia">
+            >
+            ["at3"] = <
+                text = <"1 ou 2 vezes por dia">
+                description = <"1 ou 2 vezes por dia">
+            >
+            ["at4"] = <
+                text = <"5 ou mais vezes na semana">
+                description = <"5 ou mais vezes na semana">
+            >
+            ["at5"] = <
+                text = <"3 ou 4 vezes por semana">
+                description = <"3 ou 4 vezes por semana">
+            >
+            ["at6"] = <
+                text = <"1 ou 2 vezes na semana">
+                description = <"1 ou 2 vezes na semana">
+            >
+            ["at7"] = <
+                text = <"1 a 3  vezes por mês">
+                description = <"1 a 3  vezes por mês">
+            >
+            ["at8"] = <
+                text = <"Menos de 1 vez por mês">
+                description = <"Menos de 1 vez por mês">
+            >
+            ["ac1"] = <
+                text = <"Com que freqüência o trabalhador normalmente come frutas frescas">
+                description = <"Com que freqüência o trabalhador normalmente come frutas frescas">
+            >
+            ["id9"] = <
+                text = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["ac2"] = <
+                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["id11"] = <
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+            >
+            ["at9"] = <
+                text = <"Sempre retira antes de comer">
+                description = <"Sempre retira antes de comer">
+            >
+            ["at10"] = <
+                text = <"Na maioria das vezes retira">
+                description = <"Na maioria das vezes retira">
+            >
+            ["at11"] = <
+                text = <"Raramente retira a pele">
+                description = <"Raramente retira a pele">
+            >
+            ["at12"] = <
+                text = <"Nunca retira a pele">
+                description = <"Nunca retira a pele">
+            >
+            ["at13"] = <
+                text = <"Não come frango">
+                description = <"Não come frango">
+            >
+            ["ac3"] = <
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+            >
+            ["id13"] = <
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
+            ["at14"] = <
+                text = <"Sempre retira antes de comer">
+                description = <"Sempre retira antes de comer">
+            >
+            ["at15"] = <
+                text = <"Na maioria das vezes retira">
+                description = <"Na maioria das vezes retira">
+            >
+            ["at16"] = <
+                text = <"Raramente retira">
+                description = <"Raramente retira">
+            >
+            ["at17"] = <
+                text = <"Nunca retira a gordura">
+                description = <"Nunca retira a gordura">
+            >
+            ["at18"] = <
+                text = <"Não come carne vermelha">
+                description = <"Não come carne vermelha">
+            >
+            ["ac4"] = <
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
+            ["id15"] = <
+                text = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+                description = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+            >
+            ["at19"] = <
+                text = <"Nunca coloca sal no prato de comida">
+                description = <"Nunca coloca sal no prato de comida">
+            >
+            ["at20"] = <
+                text = <"Prova e coloca se estiver sem sal">
+                description = <"Prova e coloca se estiver sem sal">
+            >
+            ["at21"] = <
+                text = <"Sempre ou quase sempre, mesmo sem provar">
+                description = <"Sempre ou quase sempre, mesmo sem provar">
+            >
+            ["ac5"] = <
+                text = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+                description = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida.">
+            >
+            ["id17"] = <
+                text = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).">
+                description = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).">
+            >
+            ["at22"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at23"] = <
+                text = <"1 a 3 vezes por semana">
+                description = <"1 a 3 vezes por semana">
+            >
+            ["at24"] = <
+                text = <"4 a 6 vezes por semana">
+                description = <"4 a 6 vezes por semana">
+            >
+            ["at25"] = <
+                text = <"Diariamente, 1 vez por dia">
+                description = <"Diariamente, 1 vez por dia">
+            >
+            ["at26"] = <
+                text = <"Diariamente, 2 ou mais vezes por dia">
+                description = <"Diariamente, 2 ou mais vezes por dia">
+            >
+            ["ac6"] = <
+                text = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).">
+                description = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).">
+            >
+            ["id20"] = <
+                text = <"Comportamento preventivo">
+                description = <"Comportamento preventivo">
+            >
+            ["id21"] = <
+                text = <"Proteção solar">
+                description = <"Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol.">
+            >
+            ["at27"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at28"] = <
+                text = <"Eventualmente, às vezes">
+                description = <"Eventualmente, às vezes">
+            >
+            ["at29"] = <
+                text = <"Sempre ou quase sempre">
+                description = <"Sempre ou quase sempre">
+            >
+            ["ac7"] = <
+                text = <"Proteção solar">
+                description = <"Proteção solar">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Alimentacao (pt-br)">
+                description = <"*Alimentacao (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
+                description = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*5 ou mais vezes ao dia. (pt-br)">
+                description = <"*5 ou mais vezes ao dia. (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*3 ou 4 vezes por dia (pt-br)">
+                description = <"*3 ou 4 vezes por dia (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*1 ou 2 vezes por dia (pt-br)">
+                description = <"*1 ou 2 vezes por dia (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*5 ou mais vezes na semana (pt-br)">
+                description = <"*5 ou mais vezes na semana (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*3 ou 4 vezes por semana (pt-br)">
+                description = <"*3 ou 4 vezes por semana (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*1 ou 2 vezes na semana (pt-br)">
+                description = <"*1 ou 2 vezes na semana (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*1 a 3  vezes por mês (pt-br)">
+                description = <"*1 a 3  vezes por mês (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Menos de 1 vez por mês (pt-br)">
+                description = <"*Menos de 1 vez por mês (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Com que freqüência o trabalhador normalmente come frutas frescas (pt-br)">
+                description = <"*Com que freqüência o trabalhador normalmente come frutas frescas (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Sempre retira antes de comer (pt-br)">
+                description = <"*Sempre retira antes de comer (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Na maioria das vezes retira (pt-br)">
+                description = <"*Na maioria das vezes retira (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Raramente retira a pele (pt-br)">
+                description = <"*Raramente retira a pele (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Nunca retira a pele (pt-br)">
+                description = <"*Nunca retira a pele (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Não come frango (pt-br)">
+                description = <"*Não come frango (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Sempre retira antes de comer (pt-br)">
+                description = <"*Sempre retira antes de comer (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Na maioria das vezes retira (pt-br)">
+                description = <"*Na maioria das vezes retira (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Raramente retira (pt-br)">
+                description = <"*Raramente retira (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*Nunca retira a gordura (pt-br)">
+                description = <"*Nunca retira a gordura (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Não come carne vermelha (pt-br)">
+                description = <"*Não come carne vermelha (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                description = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Nunca coloca sal no prato de comida (pt-br)">
+                description = <"*Nunca coloca sal no prato de comida (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Prova e coloca se estiver sem sal (pt-br)">
+                description = <"*Prova e coloca se estiver sem sal (pt-br)">
+            >
+            ["at21"] = <
+                text = <"*Sempre ou quase sempre, mesmo sem provar (pt-br)">
+                description = <"*Sempre ou quase sempre, mesmo sem provar (pt-br)">
+            >
+            ["ac5"] = <
+                text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                description = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at23"] = <
+                text = <"*1 a 3 vezes por semana (pt-br)">
+                description = <"*1 a 3 vezes por semana (pt-br)">
+            >
+            ["at24"] = <
+                text = <"*4 a 6 vezes por semana (pt-br)">
+                description = <"*4 a 6 vezes por semana (pt-br)">
+            >
+            ["at25"] = <
+                text = <"*Diariamente, 1 vez por dia (pt-br)">
+                description = <"*Diariamente, 1 vez por dia (pt-br)">
+            >
+            ["at26"] = <
+                text = <"*Diariamente, 2 ou mais vezes por dia (pt-br)">
+                description = <"*Diariamente, 2 ou mais vezes por dia (pt-br)">
+            >
+            ["ac6"] = <
+                text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Comportamento preventivo (pt-br)">
+                description = <"*Comportamento preventivo (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Proteção solar (pt-br)">
+                description = <"*Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol. (pt-br)">
+            >
+            ["at27"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["at28"] = <
+                text = <"*Eventualmente, às vezes (pt-br)">
+                description = <"*Eventualmente, às vezes (pt-br)">
+            >
+            ["at29"] = <
+                text = <"*Sempre ou quase sempre (pt-br)">
+                description = <"*Sempre ou quase sempre (pt-br)">
+            >
+            ["ac7"] = <
+                text = <"*Proteção solar (pt-br)">
+                description = <"*Proteção solar (pt-br)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at9", "at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at19", "at20", "at21">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at22", "at23", "at24", "at25", "at26">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at27", "at28", "at29">
+        >
+    >
+
