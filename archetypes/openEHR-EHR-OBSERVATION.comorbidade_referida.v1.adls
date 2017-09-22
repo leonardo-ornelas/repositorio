@@ -30,6 +30,20 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id9] occurrences matches {1} matches {    -- Enfisema pulmonar
+                                        value matches {
+                                            DV_BOOLEAN[id10] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {1} matches {    -- Angina
+                                        value matches {
+                                            DV_BOOLEAN[id12] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -56,6 +70,14 @@ terminology
             ["id7"] = <
                 text = <"Bronquite ou asma">
                 description = <"Bronquite ou asma">
+            >
+            ["id9"] = <
+                text = <"Enfisema pulmonar">
+                description = <"Enfisema pulmonar">
+            >
+            ["id11"] = <
+                text = <"Angina">
+                description = <"Angina">
             >
         >
     >
