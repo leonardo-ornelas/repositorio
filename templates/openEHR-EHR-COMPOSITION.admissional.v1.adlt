@@ -1448,7 +1448,7 @@ specialize
 definition
     OBSERVATION[id1.1] matches {    -- *Oximetry(en)
         /data[id2]/events matches {
-            POINT_EVENT[id3] occurrences matches {0..1} matches {
+            POINT_EVENT[id3.1] occurrences matches {0..1} matches {    -- *Any event(en)
                 /data[id4]/items matches {
                     ELEMENT[id7.1] occurrences matches {0..1} matches {    -- *spO2(en)
                         value matches {
@@ -1578,6 +1578,10 @@ terminology
                 text = <"*ptcCO2(en)">
                 description = <"*Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.(en)">
             >
+            ["id3.1"] = <
+                text = <"*Any event(en)">
+                description = <"*Timing event.(en)">
+            >
         >
         ["sl"] = <
             ["id1.1"] = <
@@ -1612,6 +1616,10 @@ terminology
                 text = <"tcpCO2">
                 description = <"Transkutani parcialni pritisk ogljikovega dioksida v kapilarah.">
             >
+            ["id3.1"] = <
+                text = <"*Any event(en)">
+                description = <"*Timing event.(en)">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1645,6 +1653,10 @@ terminology
             ["id41.1"] = <
                 text = <"Partial pressure of carbon dioxide (ptcCO2)">
                 description = <"Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.">
+            >
+            ["id3.1"] = <
+                text = <"Measuring ranges">
+                description = <"Timing event.">
             >
         >
     >
