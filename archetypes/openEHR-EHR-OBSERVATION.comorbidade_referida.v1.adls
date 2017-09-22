@@ -65,6 +65,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id19] occurrences matches {1} matches {    -- Problemas auditivos
+                                        value matches {
+                                            DV_BOOLEAN[id20] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -111,6 +118,10 @@ terminology
             ["id17"] = <
                 text = <"Colesterol alterado">
                 description = <"Colesterol alterado">
+            >
+            ["id19"] = <
+                text = <"Problemas auditivos">
+                description = <"Problemas auditivos">
             >
         >
     >
