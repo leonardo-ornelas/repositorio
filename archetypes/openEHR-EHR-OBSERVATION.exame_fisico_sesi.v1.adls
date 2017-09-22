@@ -236,6 +236,53 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id75] occurrences matches {0..1} matches {    -- Coluna
+                                        items matches {
+                                            ELEMENT[id76] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id77] matches {
+                                                        defining_code matches {[ac23]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id79] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id80] 
+                                                }
+                                            }
+                                            ELEMENT[id81] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id82] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id83] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                                value matches {
+                                                    DV_CODED_TEXT[id84] matches {
+                                                        defining_code matches {[ac24]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id85] occurrences matches {0..1} matches {    -- Dor espontânea
+                                                value matches {
+                                                    DV_CODED_TEXT[id86] matches {
+                                                        defining_code matches {[ac25]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id87] occurrences matches {0..1} matches {    -- Localização da dor
+                                                value matches {
+                                                    DV_TEXT[id88] 
+                                                }
+                                            }
+                                            ELEMENT[id89] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id90] 
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -511,6 +558,50 @@ terminology
                 text = <"Especificar">
                 description = <"Especificar">
             >
+            ["id75"] = <
+                text = <"Coluna">
+                description = <"Coluna">
+            >
+            ["id76"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac23"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id79"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id81"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id83"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["ac24"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["id85"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["ac25"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["id87"] = <
+                text = <"Localização da dor">
+                description = <"Localização da dor">
+            >
+            ["id89"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
         >
     >
     value_sets = <
@@ -600,6 +691,18 @@ terminology
         >
         ["ac22"] = <
             id = <"ac22">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac23"] = <
+            id = <"ac23">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac24"] = <
+            id = <"ac24">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac25"] = <
+            id = <"ac25">
             members = <"at4", "at5", "at6">
         >
     >
