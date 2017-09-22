@@ -1462,9 +1462,9 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id45] occurrences matches {0..1} matches {
+                    ELEMENT[id45.1] occurrences matches {0..1} matches {    -- *spOC(en)
                         value matches {
-                            DV_QUANTITY[id62] matches {
+                            DV_QUANTITY[id62.1] matches {
                                 property matches {[at71]}
                                 magnitude matches {|>=0.0|}
                                 units matches {"ml/ml"}
@@ -1546,6 +1546,10 @@ terminology
                 text = <"*Location of measurement SaO2(en)">
                 description = <"*Location of measurement SaO2(en)">
             >
+            ["id45.1"] = <
+                text = <"*spOC(en)">
+                description = <"*Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.(en)">
+            >
         >
         ["sl"] = <
             ["id1.1"] = <
@@ -1560,6 +1564,10 @@ terminology
                 text = <"Lokacija meritve SaO2">
                 description = <"Lokacija meritve SaO2">
             >
+            ["id45.1"] = <
+                text = <"spOC">
+                description = <"Izmerjeno s puzlno CO-oksimetrijo, vsebnost kisika v periferni krvi. ">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1573,6 +1581,10 @@ terminology
             ["id59.1"] = <
                 text = <"Location of measurement SaO2">
                 description = <"Location of measurement (SaO2)">
+            >
+            ["id45.1"] = <
+                text = <"Arterial Oxygen Content (spOC)">
+                description = <"Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.">
             >
         >
     >
