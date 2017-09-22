@@ -72,6 +72,62 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id21] occurrences matches {1} matches {    -- Depressão
+                                        value matches {
+                                            DV_BOOLEAN[id22] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id23] occurrences matches {1} matches {    -- Insuficiência cardíaca
+                                        value matches {
+                                            DV_BOOLEAN[id24] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {1} matches {    -- Outra doença do coração
+                                        value matches {
+                                            DV_BOOLEAN[id26] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {1} matches {    -- Doença renal crônica
+                                        value matches {
+                                            DV_BOOLEAN[id28] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {1} matches {    -- Câncer
+                                        value matches {
+                                            DV_BOOLEAN[id30] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id31] occurrences matches {1} matches {    -- Cirrose
+                                        value matches {
+                                            DV_BOOLEAN[id32] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id33] occurrences matches {1} matches {    -- Problema de coluna/costas
+                                        value matches {
+                                            DV_BOOLEAN[id34] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id35] occurrences matches {1} matches {    -- Tendinite ou LER/DORT
+                                        value matches {
+                                            DV_BOOLEAN[id36] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -122,6 +178,38 @@ terminology
             ["id19"] = <
                 text = <"Problemas auditivos">
                 description = <"Problemas auditivos">
+            >
+            ["id21"] = <
+                text = <"Depressão">
+                description = <"Depressão">
+            >
+            ["id23"] = <
+                text = <"Insuficiência cardíaca">
+                description = <"Insuficiência cardíaca">
+            >
+            ["id25"] = <
+                text = <"Outra doença do coração">
+                description = <"Outra doença do coração">
+            >
+            ["id27"] = <
+                text = <"Doença renal crônica">
+                description = <"Doença renal crônica">
+            >
+            ["id29"] = <
+                text = <"Câncer">
+                description = <"Câncer">
+            >
+            ["id31"] = <
+                text = <"Cirrose">
+                description = <"Cirrose">
+            >
+            ["id33"] = <
+                text = <"Problema de coluna/costas">
+                description = <"Problema de coluna/costas">
+            >
+            ["id35"] = <
+                text = <"Tendinite ou LER/DORT">
+                description = <"Tendinite ou LER/DORT">
             >
         >
     >
