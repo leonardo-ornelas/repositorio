@@ -30,6 +30,20 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?
+                                        value matches {
+                                            DV_BOOLEAN[id9] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- O trabalhador usa atualmente algum medicamento para tratar de diabetes?
+                                        value matches {
+                                            DV_BOOLEAN[id11] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -56,6 +70,14 @@ terminology
             ["id6"] = <
                 text = <"Algum médico já disse que o trabalhador tem ou teve diabetes?">
                 description = <"Algum médico já disse que o trabalhador tem ou teve diabetes?">
+            >
+            ["id8"] = <
+                text = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?">
+                description = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?">
+            >
+            ["id10"] = <
+                text = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
+                description = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
             >
         >
     >
