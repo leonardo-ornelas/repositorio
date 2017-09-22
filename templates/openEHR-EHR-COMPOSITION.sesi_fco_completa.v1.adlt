@@ -40,7 +40,14 @@ description
 
 definition
     COMPOSITION[id1.1] matches {    -- Encounter
-        /category[id3]/defining_code matches {[at1]}
+        category matches {
+            DV_CODED_TEXT[id3.1] occurrences matches {0} matches {
+                defining_code matches {[at1]}
+            }
+        }
+        context matches {
+            EVENT_CONTEXT[id4.1] occurrences matches {0} 
+        }
         content matches {
             use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.ovl-sesi_fco_completa-physical_activity_summary-SESI_BR-001.v1.0.0]
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-sesi_fco_completa-adhoc-001.v1.0.0]
@@ -873,19 +880,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -1400,84 +1407,244 @@ definition
     ACTION[id1.1] matches {    -- Medication action
         ism_transition matches {
             ISM_TRANSITION[id42.1] occurrences matches {0} matches {
-                /current_state[id43]/defining_code matches {[at41]}
-                /careflow_step[id44]/defining_code matches {[at2]}
+                current_state matches {
+                    DV_CODED_TEXT[id43.1] occurrences matches {0} matches {
+                        defining_code matches {[at41]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id44.1] occurrences matches {0} matches {
+                        defining_code matches {[at2]}
+                    }
+                }
             }
             ISM_TRANSITION[id45.1] occurrences matches {0} matches {
-                /current_state[id46]/defining_code matches {[at42]}
-                /careflow_step[id47]/defining_code matches {[at14]}
+                current_state matches {
+                    DV_CODED_TEXT[id46.1] occurrences matches {0} matches {
+                        defining_code matches {[at42]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id47.1] occurrences matches {0} matches {
+                        defining_code matches {[at14]}
+                    }
+                }
             }
             ISM_TRANSITION[id48.1] occurrences matches {0} matches {
-                /current_state[id49]/defining_code matches {[at43]}
-                /careflow_step[id50]/defining_code matches {[at13]}
+                current_state matches {
+                    DV_CODED_TEXT[id49.1] occurrences matches {0} matches {
+                        defining_code matches {[at43]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id50.1] occurrences matches {0} matches {
+                        defining_code matches {[at13]}
+                    }
+                }
             }
             ISM_TRANSITION[id51.1] occurrences matches {0} matches {
-                /current_state[id52]/defining_code matches {[at44]}
-                /careflow_step[id53]/defining_code matches {[at17]}
+                current_state matches {
+                    DV_CODED_TEXT[id52.1] occurrences matches {0} matches {
+                        defining_code matches {[at44]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id53.1] occurrences matches {0} matches {
+                        defining_code matches {[at17]}
+                    }
+                }
             }
             ISM_TRANSITION[id54.1] occurrences matches {0} matches {
-                /current_state[id55]/defining_code matches {[ac3]}
-                /careflow_step[id56]/defining_code matches {[at3]}
+                current_state matches {
+                    DV_CODED_TEXT[id55.1] occurrences matches {0} matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id56.1] occurrences matches {0} matches {
+                        defining_code matches {[at3]}
+                    }
+                }
             }
             ISM_TRANSITION[id57.1] occurrences matches {0} matches {
-                /current_state[id58]/defining_code matches {[ac4]}
-                /careflow_step[id59]/defining_code matches {[at4]}
+                current_state matches {
+                    DV_CODED_TEXT[id58.1] occurrences matches {0} matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id59.1] occurrences matches {0} matches {
+                        defining_code matches {[at4]}
+                    }
+                }
             }
             ISM_TRANSITION[id60.1] occurrences matches {0} matches {
-                /current_state[id61]/defining_code matches {[at45]}
-                /careflow_step[id62]/defining_code matches {[at5]}
+                current_state matches {
+                    DV_CODED_TEXT[id61.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id62.1] occurrences matches {0} matches {
+                        defining_code matches {[at5]}
+                    }
+                }
             }
             ISM_TRANSITION[id63.1] occurrences matches {0} matches {
-                /current_state[id64]/defining_code matches {[at45]}
-                /careflow_step[id65]/defining_code matches {[at6]}
+                current_state matches {
+                    DV_CODED_TEXT[id64.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id65.1] occurrences matches {0} matches {
+                        defining_code matches {[at6]}
+                    }
+                }
             }
             ISM_TRANSITION[id66.1] occurrences matches {0} matches {
-                /current_state[id67]/defining_code matches {[at45]}
-                /careflow_step[id68]/defining_code matches {[at7]}
+                current_state matches {
+                    DV_CODED_TEXT[id67.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id68.1] occurrences matches {0} matches {
+                        defining_code matches {[at7]}
+                    }
+                }
             }
             ISM_TRANSITION[id69.1] occurrences matches {0} matches {
-                /current_state[id70]/defining_code matches {[at45]}
-                /careflow_step[id71]/defining_code matches {[at11]}
+                current_state matches {
+                    DV_CODED_TEXT[id70.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id71.1] occurrences matches {0} matches {
+                        defining_code matches {[at11]}
+                    }
+                }
             }
             ISM_TRANSITION[id72.1] occurrences matches {0} matches {
-                /current_state[id73]/defining_code matches {[at45]}
-                /careflow_step[id74]/defining_code matches {[at19]}
+                current_state matches {
+                    DV_CODED_TEXT[id73.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id74.1] occurrences matches {0} matches {
+                        defining_code matches {[at19]}
+                    }
+                }
             }
             ISM_TRANSITION[id75.1] occurrences matches {0} matches {
-                /current_state[id76]/defining_code matches {[at45]}
-                /careflow_step[id77]/defining_code matches {[at20]}
+                current_state matches {
+                    DV_CODED_TEXT[id76.1] occurrences matches {0} matches {
+                        defining_code matches {[at45]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id77.1] occurrences matches {0} matches {
+                        defining_code matches {[at20]}
+                    }
+                }
             }
             ISM_TRANSITION[id78.1] occurrences matches {0} matches {
-                /current_state[id79]/defining_code matches {[ac5]}
-                /careflow_step[id80]/defining_code matches {[at36]}
+                current_state matches {
+                    DV_CODED_TEXT[id79.1] occurrences matches {0} matches {
+                        defining_code matches {[ac5]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id80.1] occurrences matches {0} matches {
+                        defining_code matches {[at36]}
+                    }
+                }
             }
             ISM_TRANSITION[id81.1] occurrences matches {0} matches {
-                /current_state[id82]/defining_code matches {[at46]}
-                /careflow_step[id83]/defining_code matches {[at9]}
+                current_state matches {
+                    DV_CODED_TEXT[id82.1] occurrences matches {0} matches {
+                        defining_code matches {[at46]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id83.1] occurrences matches {0} matches {
+                        defining_code matches {[at9]}
+                    }
+                }
             }
             ISM_TRANSITION[id84.1] occurrences matches {0} matches {
-                /current_state[id85]/defining_code matches {[at46]}
-                /careflow_step[id86]/defining_code matches {[at10]}
+                current_state matches {
+                    DV_CODED_TEXT[id85.1] occurrences matches {0} matches {
+                        defining_code matches {[at46]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id86.1] occurrences matches {0} matches {
+                        defining_code matches {[at10]}
+                    }
+                }
             }
             ISM_TRANSITION[id87.1] occurrences matches {0} matches {
-                /current_state[id88]/defining_code matches {[at46]}
-                /careflow_step[id89]/defining_code matches {[at12]}
+                current_state matches {
+                    DV_CODED_TEXT[id88.1] occurrences matches {0} matches {
+                        defining_code matches {[at46]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id89.1] occurrences matches {0} matches {
+                        defining_code matches {[at12]}
+                    }
+                }
             }
             ISM_TRANSITION[id90.1] occurrences matches {0} matches {
-                /current_state[id91]/defining_code matches {[at47]}
-                /careflow_step[id92]/defining_code matches {[at16]}
+                current_state matches {
+                    DV_CODED_TEXT[id91.1] occurrences matches {0} matches {
+                        defining_code matches {[at47]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id92.1] occurrences matches {0} matches {
+                        defining_code matches {[at16]}
+                    }
+                }
             }
             ISM_TRANSITION[id93.1] occurrences matches {0} matches {
-                /current_state[id94]/defining_code matches {[at47]}
-                /careflow_step[id95]/defining_code matches {[at15]}
+                current_state matches {
+                    DV_CODED_TEXT[id94.1] occurrences matches {0} matches {
+                        defining_code matches {[at47]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id95.1] occurrences matches {0} matches {
+                        defining_code matches {[at15]}
+                    }
+                }
             }
             ISM_TRANSITION[id96.1] occurrences matches {0} matches {
-                /current_state[id97]/defining_code matches {[at47]}
-                /careflow_step[id98]/defining_code matches {[at40]}
+                current_state matches {
+                    DV_CODED_TEXT[id97.1] occurrences matches {0} matches {
+                        defining_code matches {[at47]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id98.1] occurrences matches {0} matches {
+                        defining_code matches {[at40]}
+                    }
+                }
             }
             ISM_TRANSITION[id99.1] occurrences matches {0} matches {
-                /current_state[id100]/defining_code matches {[at48]}
-                /careflow_step[id101]/defining_code matches {[at8]}
+                current_state matches {
+                    DV_CODED_TEXT[id100.1] occurrences matches {0} matches {
+                        defining_code matches {[at48]}
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id101.1] occurrences matches {0} matches {
+                        defining_code matches {[at8]}
+                    }
+                }
             }
         }
         /description[id18]/items matches {
@@ -2062,7 +2229,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-menstruation-SESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-antecedentes_ginecologico_urologico-001.v1.0.0]
         }
     }
 
@@ -2078,233 +2245,6 @@ terminology
             ["id1.1"] = <
                 text = <"Antecedentes ginecológicos/urológicos">
                 description = <"Um título genérico para renomeação contextual dentro de um modelo.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-menstruation-SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.menstruation-SESI_BR.v1.0.0
-
-definition
-    OBSERVATION[id1.1.1] matches {    -- Menstruation
-        /data[id2]/events matches {
-            EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items matches {
-                    CLUSTER[id16.0.1] occurrences matches {0} matches {    -- Normal Statements
-                        items matches {
-                            ELEMENT[id17.0.1] occurrences matches {0} matches {    -- Normal statement
-                                value matches {
-                                    DV_TEXT[id44.0.1] 
-                                }
-                            }
-                        }
-                    }
-                    ELEMENT[id31.0.1] occurrences matches {0} matches {    -- Clinical description
-                        value matches {
-                            DV_CODED_TEXT[id45.0.1] matches {
-                                defining_code
-                            }
-                        }
-                    }
-                    CLUSTER[id18] occurrences matches {0..1} matches {
-                        items matches {
-                            CLUSTER[id33.0.1] occurrences matches {0} matches {    -- Menarche
-                                items matches {
-                                    ELEMENT[id32] occurrences matches {0..1} matches {
-                                        /value[id46]/value matches {yyyy-??-??T??:??:??}
-                                    }
-                                    ELEMENT[id34] occurrences matches {0..1} matches {
-                                        value matches {
-                                            DV_QUANTITY[id47] matches {
-                                                property matches {[at31]}
-                                                units matches {"a", "mo"}
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            CLUSTER[id5] occurrences matches {0..1} matches {
-                                items matches {
-                                    CLUSTER[id35] occurrences matches {0..1} matches {
-                                        items matches {
-                                            allow_archetype ELEMENT[id37] matches { 
-                                                include
-                                                    archetype_id/value matches {/openEHR-EHR-ELEMENT\.lnmp\.v1/}
-                                            }
-                                        }
-                                    }
-                                    allow_archetype CLUSTER[id38] occurrences matches {0} matches { 
-                                        include
-                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
-                                        exclude
-                                            archetype_id/value matches {/.*/}
-                                    }
-                                    CLUSTER[id15.0.1] occurrences matches {0} matches {    -- Associated symptoms
-                                        items matches {
-                                            allow_archetype CLUSTER[id39] occurrences matches {0} matches { 
-                                                include
-                                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
-                                                exclude
-                                                    archetype_id/value matches {/.*/}
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            CLUSTER[id6.0.1] occurrences matches {0} matches {    -- Typical Menstrual cycle
-                                items matches {
-                                    allow_archetype CLUSTER[id40] occurrences matches {0} matches { 
-                                        include
-                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
-                                        exclude
-                                            archetype_id/value matches {/.*/}
-                                    }
-                                    CLUSTER[id21.0.1] occurrences matches {0} matches {    -- Associated symptoms
-                                        items matches {
-                                            allow_archetype CLUSTER[id41] occurrences matches {0..1} matches { 
-                                                include
-                                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom-pain\.v1|openEHR-EHR-CLUSTER\.symptom\.v1/}
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            CLUSTER[id8.0.1] occurrences matches {0} matches {    -- Specific Menstrual cycle
-                                items matches {
-                                    ELEMENT[id36.0.1] occurrences matches {0} matches {    -- Onset of menstrual period
-                                        value matches {
-                                            DV_DATE_TIME[id48.0.1] matches {
-                                                value matches {yyyy-??-??T??:??:??}
-                                            }
-                                        }
-                                    }
-                                    allow_archetype CLUSTER[id42] occurrences matches {0} matches { 
-                                        include
-                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.menstrual_cycle\.v1/}
-                                    }
-                                    CLUSTER[id22] occurrences matches {0..1} matches {
-                                        items matches {
-                                            allow_archetype CLUSTER[id43] occurrences matches {0} matches { 
-                                                include
-                                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom\.v1|openEHR-EHR-CLUSTER\.symptom-pain\.v1/}
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                /state[id23]/items matches {
-                    ELEMENT[id24.0.1] occurrences matches {0} matches {    -- Hormonal or intrauterine contraception
-                        value matches {
-                            DV_CODED_TEXT[id49.0.1] matches {
-                                defining_code matches {[ac1]}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Menstruation">
-                description = <"Information about menstruation and menstrual cycles">
-            >
-            ["id17.0.1"] = <
-                text = <"Normal statement">
-                description = <"Normal statement about Menstrual History">
-            >
-            ["id31.0.1"] = <
-                text = <"Clinical description">
-                description = <"*">
-            >
-            ["id16.0.1"] = <
-                text = <"Normal Statements">
-                description = <"Collection of normal statements about Menstrual History">
-            >
-            ["id33.0.1"] = <
-                text = <"Menarche">
-                description = <"*">
-            >
-            ["id6.0.1"] = <
-                text = <"Typical Menstrual cycle">
-                description = <"Clinical information about a typical menstrual cycle">
-            >
-            ["id8.0.1"] = <
-                text = <"Specific Menstrual cycle">
-                description = <"Clinical information about a specific menstrual cycle">
-            >
-            ["id15.0.1"] = <
-                text = <"Associated symptoms">
-                description = <"Symptoms associated with the last menstrual cycle">
-            >
-            ["id21.0.1"] = <
-                text = <"Associated symptoms">
-                description = <"Symptoms associated with typical menstrual cycles">
-            >
-            ["id36.0.1"] = <
-                text = <"Onset of menstrual period">
-                description = <"*">
-            >
-            ["id24.0.1"] = <
-                text = <"Hormonal or intrauterine contraception">
-                description = <"Details of hormonal or intrauterine contraception">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Menstruação">
-                description = <"Informação sobre menstruação e ciclos menstruais">
-            >
-            ["id17.0.1"] = <
-                text = <"Situação normal">
-                description = <"Situação normal sobre o histórico menstrual.">
-            >
-            ["id31.0.1"] = <
-                text = <"Descrição clínica">
-                description = <"*">
-            >
-            ["id16.0.1"] = <
-                text = <"Situações normais">
-                description = <"Coleção de situações normais sobre Histórico Menstrual">
-            >
-            ["id33.0.1"] = <
-                text = <"Menarca">
-                description = <"*">
-            >
-            ["id6.0.1"] = <
-                text = <"Ciclo menstrual típico">
-                description = <"Informações clínicas sobre um ciclo menstrual típico">
-            >
-            ["id8.0.1"] = <
-                text = <"Ciclo menstrual específico">
-                description = <"Informações clínicas sobre um ciclo menstrual específico">
-            >
-            ["id15.0.1"] = <
-                text = <"Sintomas associados">
-                description = <"Sintomas associados ao último ciclo menstrual">
-            >
-            ["id21.0.1"] = <
-                text = <"Sintomas associados">
-                description = <"Sintomas associados a ciclos menstruais típicos">
-            >
-            ["id36.0.1"] = <
-                text = <"Início do período menstrual">
-                description = <"*">
-            >
-            ["id24.0.1"] = <
-                text = <"Contracepção hormonal ou intra-uterina">
-                description = <"Detalhes da contracepção hormonal ou intra-uterina">
             >
         >
     >
@@ -4192,6 +4132,83 @@ terminology
             ["id1.1"] = <
                 text = <"Recommendations for Preventive Education Quality of Life">
                 description = <"Recommendations for Preventive Education Quality of Life">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-antecedentes_ginecologico_urologico-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Antecedentes_ginecologico_urologico
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id8.1] occurrences matches {1} matches {    -- Gynecological Preventive
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id12] occurrences matches {0..1} matches {
+                /value[id13]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id14.1] occurrences matches {0..1} matches {    -- description
+                value matches {
+                    DV_TEXT[id15.1] 
+                }
+            }
+            ELEMENT[id16.1] occurrences matches {0..1} matches {    -- comment
+                value matches {
+                    DV_TEXT[id17.1] 
+                }
+            }
+            ELEMENT[id18] occurrences matches {0..1} matches {
+                /value[id19]/defining_code matches {[ac3]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Antecedentes_ginecologico_urologico">
+                description = <"Antecedentes_ginecologico_urologico">
+            >
+            ["id8.1"] = <
+                text = <"Gynecological Preventive">
+                description = <"Gynecological Preventive">
+            >
+            ["id14.1"] = <
+                text = <"description">
+                description = <"description">
+            >
+            ["id16.1"] = <
+                text = <"comment">
+                description = <"comment">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Antecedentes ginecológico urológico">
+                description = <"Antecedentes ginecologico urologico">
+            >
+            ["id8.1"] = <
+                text = <"Preventivo ginecológico">
+                description = <"Preventivo ginecologico">
+            >
+            ["id14.1"] = <
+                text = <"Descrição">
+                description = <"descrição">
+            >
+            ["id16.1"] = <
+                text = <"Comentário">
+                description = <"comentário">
             >
         >
     >
