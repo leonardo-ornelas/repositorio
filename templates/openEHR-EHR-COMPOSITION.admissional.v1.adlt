@@ -50,7 +50,11 @@ description
 
 definition
     COMPOSITION[id1.1] matches {    -- *Admission (en)
-        /category[id3]/defining_code matches {[at1]}
+        category matches {
+            DV_CODED_TEXT[id3.1] occurrences matches {0} matches {
+                defining_code matches {[at1]}
+            }
+        }
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
