@@ -1,0 +1,108 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.exame_fisico_sesi.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Exame fisico SESI
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id6] occurrences matches {0..1} matches {    -- Detalhamento do exame físico
+                                items matches {
+                                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Mucosas
+                                        value matches {
+                                            DV_CODED_TEXT[id8] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Exame fisico SESI">
+                description = <"Exame fisico SESI">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Detalhamento do exame físico">
+                description = <"Detalhamento do exame físico">
+            >
+            ["id7"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["at1"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at2"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at3"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac1"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["at4"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at5"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at6"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac2"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at4", "at5", "at6">
+        >
+    >
+
