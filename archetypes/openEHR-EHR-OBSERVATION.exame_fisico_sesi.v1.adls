@@ -30,6 +30,44 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- Pelos e Fâneros
+                                        value matches {
+                                            DV_CODED_TEXT[id10] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Pelos e Fâneros
+                                        value matches {
+                                            DV_CODED_TEXT[id12] matches {
+                                                defining_code matches {[ac4]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Gânglios
+                                        value matches {
+                                            DV_CODED_TEXT[id14] matches {
+                                                defining_code matches {[ac5]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Marcha
+                                        value matches {
+                                            DV_CODED_TEXT[id16] matches {
+                                                defining_code matches {[ac6]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Especificar
+                                        value matches {
+                                            DV_TEXT[id18] 
+                                        }
+                                    }
+                                    CLUSTER[id19] occurrences matches {0..1} matches {    -- Cabeça e pescoço
+                                        items matches {
+                                            ELEMENT[id20] occurrences matches {0..1}     -- Audição
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -93,6 +131,54 @@ terminology
                 text = <"Mucosas">
                 description = <"Mucosas">
             >
+            ["id9"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["ac3"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["id11"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["ac4"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["id13"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["ac5"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["id15"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["ac6"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["id17"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id19"] = <
+                text = <"Cabeça e pescoço">
+                description = <"Cabeça e pescoço">
+            >
+            ["id20"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["ac7"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
         >
     >
     value_sets = <
@@ -102,6 +188,26 @@ terminology
         >
         ["ac2"] = <
             id = <"ac2">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac7"] = <
+            id = <"ac7">
             members = <"at4", "at5", "at6">
         >
     >
