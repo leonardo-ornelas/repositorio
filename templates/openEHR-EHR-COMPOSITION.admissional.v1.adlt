@@ -1471,18 +1471,30 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id40] occurrences matches {0..1} matches {
+                    ELEMENT[id46.1] occurrences matches {0..1} matches {    -- *spCO(en)
                         value matches {
-                            DV_QUANTITY[id66] matches {
+                            DV_PROPORTION[id63.1] 
+                        }
+                    }
+                    ELEMENT[id47.1] occurrences matches {0..1} matches {    -- *spMet(en)
+                        value matches {
+                            DV_PROPORTION[id64.1] 
+                        }
+                    }
+                    ELEMENT[id40.1] occurrences matches {0..1} matches {    -- *ptcO2(en)
+                        value matches {
+                            DV_PROPORTION[id65.1] 
+                            DV_QUANTITY[id66.1] matches {
                                 property matches {[at72]}
                                 magnitude matches {|>=0.0|}
                                 units matches {"kPa"}
                             }
                         }
                     }
-                    ELEMENT[id41] occurrences matches {0..1} matches {
+                    ELEMENT[id41.1] occurrences matches {0..1} matches {    -- *ptcCO2(en)
                         value matches {
-                            DV_QUANTITY[id68] matches {
+                            DV_PROPORTION[id67.1] 
+                            DV_QUANTITY[id68.1] matches {
                                 property matches {[at72]}
                                 magnitude matches {|>=0.0|}
                                 units matches {"kPa"}
@@ -1550,6 +1562,22 @@ terminology
                 text = <"*spOC(en)">
                 description = <"*Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.(en)">
             >
+            ["id46.1"] = <
+                text = <"*spCO(en)">
+                description = <"*Measured via pulse CO-oximetry, the saturation of carboxyhaemoglobin in the perpiheral blood.(en)">
+            >
+            ["id47.1"] = <
+                text = <"*spMet(en)">
+                description = <"*Measured via pulse CO-oximetry, the saturation of methoxyhaemoglobin in the peripheral blood.(en)">
+            >
+            ["id40.1"] = <
+                text = <"*ptcO2(en)">
+                description = <"*Measured via transcutaneous electrode oximetry, the partial pressure of oxygen in the peripheral blood.(en)">
+            >
+            ["id41.1"] = <
+                text = <"*ptcCO2(en)">
+                description = <"*Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.(en)">
+            >
         >
         ["sl"] = <
             ["id1.1"] = <
@@ -1568,6 +1596,22 @@ terminology
                 text = <"spOC">
                 description = <"Izmerjeno s puzlno CO-oksimetrijo, vsebnost kisika v periferni krvi. ">
             >
+            ["id46.1"] = <
+                text = <"spCO">
+                description = <"Merjeno s pulzno CO-oksimetrijo, zasičenost carboxyhaemoglobin v perpiherni krvi.">
+            >
+            ["id47.1"] = <
+                text = <"spMet">
+                description = <"Merjeno s pulzno CO-oksimetrijo, zasičenost methoxyhaemoglobin v periferni krvi.">
+            >
+            ["id40.1"] = <
+                text = <"tcpO2">
+                description = <"Transkutani parcialni pritisk kisika v kapilarah.">
+            >
+            ["id41.1"] = <
+                text = <"tcpCO2">
+                description = <"Transkutani parcialni pritisk ogljikovega dioksida v kapilarah.">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1585,6 +1629,22 @@ terminology
             ["id45.1"] = <
                 text = <"Arterial Oxygen Content (spOC)">
                 description = <"Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.">
+            >
+            ["id46.1"] = <
+                text = <"Carbon monoxide (spCO)">
+                description = <"Measured via pulse CO-oximetry, the saturation of carboxyhaemoglobin in the perpiheral blood.">
+            >
+            ["id47.1"] = <
+                text = <"Methemoglobin (spMet)">
+                description = <"Measured via pulse CO-oximetry, the saturation of methoxyhaemoglobin in the peripheral blood.">
+            >
+            ["id40.1"] = <
+                text = <"Partial pressure of oxygen (ptcO2)">
+                description = <"Measured via transcutaneous electrode oximetry, the partial pressure of oxygen in the peripheral blood.">
+            >
+            ["id41.1"] = <
+                text = <"Partial pressure of carbon dioxide (ptcCO2)">
+                description = <"Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.">
             >
         >
     >
@@ -1697,18 +1757,18 @@ definition
                     }
                 }
             }
-            ELEMENT[id53] occurrences matches {0..1} matches {
+            ELEMENT[id53.1] occurrences matches {0..1} matches {    -- *FiO2(en)
                 value matches {
-                    DV_PROPORTION[id56] matches {
+                    DV_PROPORTION[id56.1] matches {
                         numerator matches {|0.0..1.0|; 0.21}
                         is_integral matches {False}
                         type matches {|1|}
                     }
                 }
             }
-            ELEMENT[id54] occurrences matches {0..1} matches {
+            ELEMENT[id54.1] occurrences matches {0..1} matches {    -- *Percent O2(en)
                 value matches {
-                    DV_PROPORTION[id57] matches {
+                    DV_PROPORTION[id57.1] matches {
                         numerator matches {|0.0..100.0|; 21.0}
                         is_integral matches {False}
                         type matches {|2|}
@@ -1725,17 +1785,41 @@ terminology
                 text = <"*Ambient oxygen(en)">
                 description = <"*The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.(en)">
             >
+            ["id53.1"] = <
+                text = <"*FiO2(en)">
+                description = <"*Fraction of inspired oxygen.(en)">
+            >
+            ["id54.1"] = <
+                text = <"*Percent O2(en)">
+                description = <"*Percentage of inspired oxygen.(en)">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Ambient oxygen">
                 description = <"The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.">
             >
+            ["id53.1"] = <
+                text = <"Fraction of inspired oxygen (FiO2)">
+                description = <"Fraction of inspired oxygen.">
+            >
+            ["id54.1"] = <
+                text = <"Percent O2">
+                description = <"Percentage of inspired oxygen.">
+            >
         >
         ["es-ar"] = <
             ["id1.1"] = <
                 text = <"Oxígeno ambiental">
                 description = <"La cantidad de oxígeno siendo administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.">
+            >
+            ["id53.1"] = <
+                text = <"FiO2">
+                description = <"Fracción inspiratoria de oxígeno.">
+            >
+            ["id54.1"] = <
+                text = <"Porcentaje de 02">
+                description = <"Porcentaje de oxígeno inspirado.">
             >
         >
     >
