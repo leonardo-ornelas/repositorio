@@ -712,6 +712,11 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id20.1] occurrences matches {0..1} matches {    -- Behavioural Issues
+                        value matches {
+                            DV_TEXT[id34.1] 
+                        }
+                    }
                     allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
@@ -793,6 +798,10 @@ terminology
                 text = <"Average Use Frequency">
                 description = <"Frequency of 'Average Use' per time interval.">
             >
+            ["id20.1"] = <
+                text = <"Behavioural Issues">
+                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -830,6 +839,10 @@ terminology
             ["id27.1"] = <
                 text = <"Frequência de uso médio">
                 description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+            ["id20.1"] = <
+                text = <"Problemas comportamentais">
+                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
             >
         >
     >
