@@ -48,6 +48,17 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id13] occurrences matches {0..1} matches {    -- Problemas obtidos pelo trabalhador como consequência de sua saúde física
+                                        items matches {
+                                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Realizou menos tarefas do que gostaria
+                                                value matches {
+                                                    DV_CODED_TEXT[id15] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -127,6 +138,38 @@ terminology
                 text = <"Subir vários lances de escada">
                 description = <"Subir vários lances de escada">
             >
+            ["id13"] = <
+                text = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+                description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+            >
+            ["id14"] = <
+                text = <"Realizou menos tarefas do que gostaria">
+                description = <"Realizou menos tarefas do que gostaria">
+            >
+            ["at9"] = <
+                text = <"Todo tempo">
+                description = <"Todo tempo">
+            >
+            ["at10"] = <
+                text = <"A maior parte do tempo">
+                description = <"A maior parte do tempo">
+            >
+            ["at11"] = <
+                text = <"Alguma parte do tempo">
+                description = <"Alguma parte do tempo">
+            >
+            ["at12"] = <
+                text = <"Uma pequena parte do tempo">
+                description = <"Uma pequena parte do tempo">
+            >
+            ["at13"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["ac3"] = <
+                text = <"Tarefas">
+                description = <"Tarefas">
+            >
         >
     >
     value_sets = <
@@ -137,6 +180,10 @@ terminology
         ["ac2"] = <
             id = <"ac2">
             members = <"at6", "at7", "at8">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at9", "at10", "at11", "at12", "at13">
         >
     >
 
