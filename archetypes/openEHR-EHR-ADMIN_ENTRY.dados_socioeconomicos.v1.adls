@@ -119,7 +119,7 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id34] occurrences matches {0..1} matches {    -- Máquina de lavar roupas
+                                    ELEMENT[id34] occurrences matches {0..1} matches {    -- Washing machine
                                         value matches {
                                             DV_BOOLEAN[id35] matches {
                                                 value matches {True, False}
@@ -360,8 +360,8 @@ terminology
                 description = <"Refrigerator">
             >
             ["id34"] = <
-                text = <"Máquina de lavar roupas">
-                description = <"Máquina de lavar roupas">
+                text = <"Washing machine">
+                description = <"Washing machine">
             >
             ["id36"] = <
                 text = <"Freezer">
@@ -578,12 +578,12 @@ terminology
                 description = <"Geladeira">
             >
             ["id34"] = <
-                text = <"*Máquina de lavar roupas (pt-br)">
-                description = <"*Máquina de lavar roupas (pt-br)">
+                text = <"Máquina de lavar roupas">
+                description = <"Máquina de lavar roupas">
             >
             ["id36"] = <
-                text = <"*Freezer (pt-br)">
-                description = <"*Freezer (pt-br)">
+                text = <"Freezer">
+                description = <"Freezer">
             >
             ["id38"] = <
                 text = <"Computador">
