@@ -280,22 +280,22 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.77] occurrences matches {1} matches {    -- Nome da Empresa
+                    ELEMENT[id0.77] occurrences matches {1} matches {    -- Company Name
                         value matches {
                             DV_TEXT[id0.78] 
                         }
                     }
-                    ELEMENT[id0.79] occurrences matches {1} matches {    -- Matrícula na Empresa
+                    ELEMENT[id0.79] occurrences matches {1} matches {    -- Enrollment in the Company
                         value matches {
                             DV_TEXT[id0.80] 
                         }
                     }
-                    ELEMENT[id0.81] occurrences matches {1} matches {    -- Ramo da Atividade
+                    ELEMENT[id0.81] occurrences matches {1} matches {    -- Activity Branch
                         value matches {
                             DV_TEXT[id0.82] 
                         }
                     }
-                    ELEMENT[id0.83] occurrences matches {1} matches {    -- Tipo de PCMO
+                    ELEMENT[id0.83] occurrences matches {1} matches {    -- type PCMO
                         value matches {
                             DV_TEXT[id0.84] 
                         }
@@ -485,20 +485,20 @@ terminology
                 description = <"Tipo de Exame">
             >
             ["id0.77"] = <
-                text = <"Nome da Empresa">
-                description = <"Nome da Empresa">
+                text = <"Company Name">
+                description = <"Company Name">
             >
             ["id0.79"] = <
-                text = <"Matrícula na Empresa">
-                description = <"Matrícula na Empresa">
+                text = <"Enrollment in the Company">
+                description = <"Enrollment in the Company">
             >
             ["id0.81"] = <
-                text = <"Ramo da Atividade">
-                description = <"Ramo da Atividade">
+                text = <"Activity Branch">
+                description = <"Activity Branch">
             >
             ["id0.83"] = <
-                text = <"Tipo de PCMO">
-                description = <"Tipo de PCMO">
+                text = <"type PCMO">
+                description = <"type PCMO">
             >
         >
         ["ar-sy"] = <
@@ -873,20 +873,20 @@ terminology
                 description = <"Tipo de Exame (en)">
             >
             ["id0.77"] = <
-                text = <"Nome da Empresa (en)">
-                description = <"Nome da Empresa (en)">
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
             >
             ["id0.79"] = <
-                text = <"Matrícula na Empresa (en)">
-                description = <"Matrícula na Empresa (en)">
+                text = <"Matrícula na Empresa">
+                description = <"Matrícula na Empresa">
             >
             ["id0.81"] = <
-                text = <"Ramo da Atividade (en)">
-                description = <"Ramo da Atividade (en)">
+                text = <"Ramo da Atividade">
+                description = <"Ramo da Atividade">
             >
             ["id0.83"] = <
-                text = <"Tipo de PCMO (en)">
-                description = <"Tipo de PCMO (en)">
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
             >
         >
     >
