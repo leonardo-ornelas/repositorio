@@ -993,20 +993,20 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*Exame fisico SESI (pt-br)">
-                description = <"*Exame fisico SESI (pt-br)">
+                text = <"Physical Exam SESI">
+                description = <"Physical Exam SESI">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Detalhamento do exame físico (pt-br)">
-                description = <"*Detalhamento do exame físico (pt-br)">
+                text = <"Detail of physical examination">
+                description = <"Detail of physical examination">
             >
             ["id7"] = <
-                text = <"*Mucosas (pt-br)">
-                description = <"*Mucosas (pt-br)">
+                text = <"Mucous">
+                description = <"Mucous">
             >
             ["at1"] = <
                 text = <"*Normal (pt-br)">
