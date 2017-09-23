@@ -222,6 +222,21 @@ definition
                             DV_TEXT[id0.47] 
                         }
                     }
+                    ELEMENT[id0.48] occurrences matches {1} matches {    -- Número da identidade
+                        value matches {
+                            DV_TEXT[id0.49] 
+                        }
+                    }
+                    ELEMENT[id0.50] occurrences matches {1} matches {    -- Orgão
+                        value matches {
+                            DV_TEXT[id0.51] 
+                        }
+                    }
+                    ELEMENT[id0.52] occurrences matches {1} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id0.53] 
+                        }
+                    }
                 }
             }
         }
@@ -338,6 +353,18 @@ terminology
                 text = <"Telefone">
                 description = <"Telefone">
             >
+            ["id0.48"] = <
+                text = <"Número da identidade">
+                description = <"Número da identidade">
+            >
+            ["id0.50"] = <
+                text = <"Orgão">
+                description = <"Orgão">
+            >
+            ["id0.52"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -448,6 +475,18 @@ terminology
                 text = <"Telefone (en)">
                 description = <"Telefone (en)">
             >
+            ["id0.48"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.50"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
+            >
+            ["id0.52"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -557,6 +596,18 @@ terminology
             ["id0.46"] = <
                 text = <"Telefone (en)">
                 description = <"Telefone (en)">
+            >
+            ["id0.48"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.50"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
+            >
+            ["id0.52"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
             >
         >
     >
