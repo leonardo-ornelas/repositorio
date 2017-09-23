@@ -210,6 +210,7 @@ definition
             ELEMENT[id67] occurrences matches {0..1} matches {
                 /value[id172]/defining_code matches {[ac2]}
             }
+            CLUSTER[id0.43] occurrences matches {0..1}     -- Identificação do paciente
         }
     }
 
@@ -312,6 +313,10 @@ terminology
                 text = <"Logradouro">
                 description = <"Logradouro">
             >
+            ["id0.43"] = <
+                text = <"Identificação do paciente">
+                description = <"Identificação do paciente">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -410,6 +415,10 @@ terminology
                 text = <"Logradouro (en)">
                 description = <"Logradouro (en)">
             >
+            ["id0.43"] = <
+                text = <"Identificação do paciente (en)">
+                description = <"Identificação do paciente (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -507,6 +516,10 @@ terminology
             ["id0.41"] = <
                 text = <"Logradouro">
                 description = <"Logradouro">
+            >
+            ["id0.43"] = <
+                text = <"Identificação do paciente (en)">
+                description = <"Identificação do paciente (en)">
             >
         >
     >
