@@ -69,7 +69,7 @@ definition
                     }
                     CLUSTER[id85] occurrences matches {0..1} matches {
                         items matches {
-                            ELEMENT[id0.13] occurrences matches {1} matches {    -- Lougradouro
+                            ELEMENT[id0.13] occurrences matches {1} matches {    -- Public place
                                 value matches {
                                     DV_TEXT[id0.14] 
                                 }
@@ -177,7 +177,7 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.11] occurrences matches {1} matches {    -- Telefone
+                    ELEMENT[id0.11] occurrences matches {1} matches {    -- Phone
                         value matches {
                             DV_TEXT[id0.12] 
                         }
@@ -187,31 +187,31 @@ definition
                             DV_TEXT[id0.16] 
                         }
                     }
-                    ELEMENT[id0.17] occurrences matches {1} matches {    -- Sexo
+                    ELEMENT[id0.17] occurrences matches {1} matches {    -- Sex
                         value matches {
                             DV_TEXT[id0.18] 
                         }
                     }
-                    ELEMENT[id0.19] occurrences matches {1} matches {    -- Data de Nascimento
+                    ELEMENT[id0.19] occurrences matches {1} matches {    -- Date of birth
                         value matches {
                             DV_DATE[id0.20] matches {
                                 value matches {*}
                             }
                         }
                     }
-                    ELEMENT[id0.21] occurrences matches {1} matches {    -- Idade
+                    ELEMENT[id0.21] occurrences matches {1} matches {    -- Age
                         value matches {
                             DV_TEXT[id0.22] 
                         }
                     }
-                    CLUSTER[id0.23] occurrences matches {0..1} matches {    -- Identidade
+                    CLUSTER[id0.23] occurrences matches {0..1} matches {    -- Identity
                         items matches {
-                            ELEMENT[id0.24] occurrences matches {1} matches {    -- Número da identidade
+                            ELEMENT[id0.24] occurrences matches {1} matches {    -- Identity number
                                 value matches {
                                     DV_TEXT[id0.25] 
                                 }
                             }
-                            ELEMENT[id0.26] occurrences matches {1} matches {    -- Orgão
+                            ELEMENT[id0.26] occurrences matches {1} matches {    -- Organ
                                 value matches {
                                     DV_TEXT[id0.27] 
                                 }
@@ -223,31 +223,31 @@ definition
                             DV_TEXT[id0.29] 
                         }
                     }
-                    CLUSTER[id0.30] occurrences matches {0..1} matches {    -- Empresa
+                    CLUSTER[id0.30] occurrences matches {0..1} matches {    -- Company
                         items matches {
-                            ELEMENT[id0.31] occurrences matches {1} matches {    -- Nome da Empresa
+                            ELEMENT[id0.31] occurrences matches {1} matches {    -- Company Name
                                 value matches {
                                     DV_TEXT[id0.32] 
                                 }
                             }
-                            ELEMENT[id0.33] occurrences matches {1} matches {    -- Matrícula na Empresa
+                            ELEMENT[id0.33] occurrences matches {1} matches {    -- Enrollment in the Company
                                 value matches {
                                     DV_TEXT[id0.34] 
                                 }
                             }
-                            ELEMENT[id0.35] occurrences matches {1} matches {    -- Ramo da Atividade
+                            ELEMENT[id0.35] occurrences matches {1} matches {    -- Activity Branch
                                 value matches {
                                     DV_TEXT[id0.36] 
                                 }
                             }
-                            ELEMENT[id0.37] occurrences matches {1} matches {    -- Tipo de PCMO
+                            ELEMENT[id0.37] occurrences matches {1} matches {    -- Type of PCMO
                                 value matches {
                                     DV_TEXT[id0.38] 
                                 }
                             }
                         }
                     }
-                    ELEMENT[id0.39] occurrences matches {1} matches {    -- Tipo
+                    ELEMENT[id0.39] occurrences matches {1} matches {    -- Type
                         value matches {
                             DV_CODED_TEXT[id0.40] matches {
                                 defining_code matches {[ac0.3]}
@@ -327,68 +327,68 @@ terminology
                 description = <"Raça/Cor">
             >
             ["id0.11"] = <
-                text = <"Telefone">
-                description = <"Telefone">
+                text = <"Phone">
+                description = <"Phone">
             >
             ["id0.13"] = <
-                text = <"Lougradouro">
-                description = <"Lougradouro">
+                text = <"Public place">
+                description = <"Public place">
             >
             ["id0.15"] = <
                 text = <"email">
                 description = <"email">
             >
             ["id0.17"] = <
-                text = <"Sexo">
-                description = <"Sexo">
+                text = <"Sex">
+                description = <"Sex">
             >
             ["id0.19"] = <
-                text = <"Data de Nascimento">
-                description = <"Data de Nascimento">
+                text = <"Date of birth">
+                description = <"Date of birth">
             >
             ["id0.21"] = <
-                text = <"Idade">
-                description = <"Idade">
+                text = <"Age">
+                description = <"Age">
             >
             ["id0.23"] = <
-                text = <"Identidade">
-                description = <"Identidade">
+                text = <"Identity">
+                description = <"Identity">
             >
             ["id0.24"] = <
-                text = <"Número da identidade">
-                description = <"Número da identidade">
+                text = <"Identity number">
+                description = <"Identity number">
             >
             ["id0.26"] = <
-                text = <"Orgão">
-                description = <"Orgão">
+                text = <"Organ">
+                description = <"Organ">
             >
             ["id0.28"] = <
                 text = <"NIT">
                 description = <"NIT">
             >
             ["id0.30"] = <
-                text = <"Empresa">
-                description = <"Empresa">
+                text = <"Company">
+                description = <"Company">
             >
             ["id0.31"] = <
-                text = <"Nome da Empresa">
-                description = <"Nome da Empresa">
+                text = <"Company Name">
+                description = <"Company Name">
             >
             ["id0.33"] = <
-                text = <"Matrícula na Empresa">
-                description = <"Matrícula na Empresa">
+                text = <"Enrollment in the Company">
+                description = <"Enrollment in the Company">
             >
             ["id0.35"] = <
-                text = <"Ramo da Atividade">
-                description = <"Ramo da Atividade">
+                text = <"Activity Branch">
+                description = <"Activity Branch">
             >
             ["id0.37"] = <
-                text = <"Tipo de PCMO">
-                description = <"Tipo de PCMO">
+                text = <"Type of PCMO">
+                description = <"Type of PCMO">
             >
             ["id0.39"] = <
-                text = <"Tipo">
-                description = <"Tipo">
+                text = <"Type">
+                description = <"Type">
             >
             ["at0.10"] = <
                 text = <"Pré - admissional">
@@ -489,8 +489,8 @@ terminology
                 description = <"Telefone (en)">
             >
             ["id0.13"] = <
-                text = <"Lougradouro (en)">
-                description = <"Lougradouro (en)">
+                text = <"Logradouro">
+                description = <"Logradouro">
             >
             ["id0.15"] = <
                 text = <"email (en)">
@@ -643,68 +643,68 @@ terminology
                 description = <"Raça/Cor (en)">
             >
             ["id0.11"] = <
-                text = <"Telefone (en)">
-                description = <"Telefone (en)">
+                text = <"Telefone">
+                description = <"Telefone">
             >
             ["id0.13"] = <
-                text = <"Lougradouro (en)">
-                description = <"Lougradouro (en)">
+                text = <"Logradouro">
+                description = <"Logradouro">
             >
             ["id0.15"] = <
-                text = <"email (en)">
-                description = <"email (en)">
+                text = <"email">
+                description = <"email">
             >
             ["id0.17"] = <
-                text = <"Sexo (en)">
-                description = <"Sexo (en)">
+                text = <"Sexo">
+                description = <"Sexo">
             >
             ["id0.19"] = <
-                text = <"Data de Nascimento (en)">
-                description = <"Data de Nascimento (en)">
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
             >
             ["id0.21"] = <
-                text = <"Idade (en)">
-                description = <"Idade (en)">
+                text = <"Idade">
+                description = <"Idade">
             >
             ["id0.23"] = <
-                text = <"Identidade (en)">
-                description = <"Identidade (en)">
+                text = <"Identidade">
+                description = <"Identidade">
             >
             ["id0.24"] = <
-                text = <"Número da identidade (en)">
-                description = <"Número da identidade (en)">
+                text = <"Número da identidade">
+                description = <"Número da identidade">
             >
             ["id0.26"] = <
-                text = <"Orgão (en)">
-                description = <"Orgão (en)">
+                text = <"Orgão">
+                description = <"Orgão">
             >
             ["id0.28"] = <
-                text = <"NIT (en)">
-                description = <"NIT (en)">
+                text = <"NIT">
+                description = <"NIT">
             >
             ["id0.30"] = <
-                text = <"Empresa (en)">
-                description = <"Empresa (en)">
+                text = <"Empresa">
+                description = <"Empresa">
             >
             ["id0.31"] = <
-                text = <"Nome da Empresa (en)">
-                description = <"Nome da Empresa (en)">
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
             >
             ["id0.33"] = <
-                text = <"Matrícula na Empresa (en)">
-                description = <"Matrícula na Empresa (en)">
+                text = <"Matrícula na Empresa">
+                description = <"Matrícula na Empresa">
             >
             ["id0.35"] = <
-                text = <"Ramo da Atividade (en)">
-                description = <"Ramo da Atividade (en)">
+                text = <"Ramo da Atividade">
+                description = <"Ramo da Atividade">
             >
             ["id0.37"] = <
-                text = <"Tipo de PCMO (en)">
-                description = <"Tipo de PCMO (en)">
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
             >
             ["id0.39"] = <
-                text = <"Tipo (en)">
-                description = <"Tipo (en)">
+                text = <"Tipo">
+                description = <"Tipo">
             >
             ["at0.10"] = <
                 text = <"Pré - admissional (en)">
