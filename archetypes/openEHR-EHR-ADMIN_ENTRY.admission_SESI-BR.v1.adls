@@ -261,6 +261,18 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.62] occurrences matches {1} matches {    -- Idade
+                        value matches {
+                            DV_TEXT[id0.63] 
+                        }
+                    }
+                    ELEMENT[id0.64] occurrences matches {1} matches {    -- Estado civil
+                        value matches {
+                            DV_CODED_TEXT[id0.65] matches {
+                                defining_code matches {[ac0.5]}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -417,6 +429,26 @@ terminology
                 text = <"Data de Nascimento">
                 description = <"Data de Nascimento">
             >
+            ["id0.62"] = <
+                text = <"Idade">
+                description = <"Idade">
+            >
+            ["id0.64"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
+            >
+            ["at0.18"] = <
+                text = <"Separado">
+                description = <"Separado">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto">
+                description = <"Casado ou vive junto">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -566,6 +598,26 @@ terminology
             ["id0.60"] = <
                 text = <"Data de Nascimento (en)">
                 description = <"Data de Nascimento (en)">
+            >
+            ["id0.62"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.64"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["at0.18"] = <
+                text = <"Separado (en)">
+                description = <"Separado (en)">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto (en)">
+                description = <"Casado ou vive junto (en)">
             >
         >
         ["pt-br"] = <
@@ -717,6 +769,26 @@ terminology
                 text = <"Data de Nascimento (en)">
                 description = <"Data de Nascimento (en)">
             >
+            ["id0.62"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.64"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["at0.18"] = <
+                text = <"Separado (en)">
+                description = <"Separado (en)">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto (en)">
+                description = <"Casado ou vive junto (en)">
+            >
         >
     >
     value_sets = <
@@ -735,6 +807,10 @@ terminology
         ["ac0.4"] = <
             id = <"ac0.4">
             members = <"at0.16", "at0.17">
+        >
+        ["ac0.5"] = <
+            id = <"ac0.5">
+            members = <"at0.2", "at0.3", "at0.4", "at0.18", "at0.19">
         >
     >
 
