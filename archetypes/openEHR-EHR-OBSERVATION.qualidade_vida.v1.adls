@@ -103,6 +103,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id30] occurrences matches {0..1} matches {    -- Como o trabalhador se sente em relação a sua vida
+                                                value matches {
+                                                    DV_CODED_TEXT[id31] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -267,6 +274,10 @@ terminology
             ["id28"] = <
                 text = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
                 description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30"] = <
+                text = <"Como o trabalhador se sente em relação a sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
             >
         >
     >
