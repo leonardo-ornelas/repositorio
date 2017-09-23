@@ -30,6 +30,17 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id8] occurrences matches {0..1} matches {    -- Dificuldades do trabalhador na execução de atividades
+                                        items matches {
+                                            ELEMENT[id9] occurrences matches {0..1} matches {    -- Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa
+                                                value matches {
+                                                    DV_CODED_TEXT[id10] matches {
+                                                        defining_code matches {[ac2]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -81,12 +92,40 @@ terminology
                 text = <"Qualidade de vida">
                 description = <"Qualidade de vida">
             >
+            ["id8"] = <
+                text = <"Dificuldades do trabalhador na execução de atividades">
+                description = <"Dificuldades do trabalhador na execução de atividades">
+            >
+            ["id9"] = <
+                text = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+                description = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+            >
+            ["at6"] = <
+                text = <"SIM Dificulta muito">
+                description = <"SIM Dificulta muito">
+            >
+            ["at7"] = <
+                text = <"SIM Dificulta um pouco">
+                description = <"SIM Dificulta um pouco">
+            >
+            ["at8"] = <
+                text = <"NÃO Não dificulta de modo algum">
+                description = <"NÃO Não dificulta de modo algum">
+            >
+            ["ac2"] = <
+                text = <"Dificuldade na execução de atividades">
+                description = <"Dificuldade na execução de atividades">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2", "at3", "at4", "at5">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8">
         >
     >
 
