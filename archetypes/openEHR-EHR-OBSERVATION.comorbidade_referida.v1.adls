@@ -40,7 +40,7 @@ definition
                 events matches {
                     EVENT[id3] matches {    -- Qualquer evento
                         data matches {
-                            ITEM_TREE[id4] matches {
+                            ITEM_TREE[id4] occurrences matches {0..1} matches {
                                 items matches {
                                     ELEMENT[id7] occurrences matches {1} matches {    -- Bronquite ou asma
                                         value matches {
