@@ -156,7 +156,7 @@ definition
             ELEMENT[id67] occurrences matches {0..1} matches {
                 /value[id172]/defining_code matches {[ac2]}
             }
-            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Identificação
+            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- identification
                 items matches {
                     ELEMENT[id0.5] occurrences matches {1} matches {    -- Name
                         value matches {
@@ -267,8 +267,8 @@ terminology
                 description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
             >
             ["id0.4"] = <
-                text = <"Identificação">
-                description = <"Identificação">
+                text = <"identification">
+                description = <"identification">
             >
             ["id0.5"] = <
                 text = <"Name">
@@ -583,8 +583,8 @@ terminology
                 description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
             >
             ["id0.4"] = <
-                text = <"Identificação (en)">
-                description = <"Identificação (en)">
+                text = <"Identificação">
+                description = <"Identificação">
             >
             ["id0.5"] = <
                 text = <"Nome">
