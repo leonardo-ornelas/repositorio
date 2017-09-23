@@ -63,6 +63,11 @@ definition
                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
                     }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Amount
+                        value matches {
+                            DV_QUANTITY[id0.0.6] 
+                        }
+                    }
                     ELEMENT[id0.0.2] occurrences matches {0..1} matches {    -- Ex smoker
                         value matches {
                             DV_BOOLEAN[id0.0.3] matches {
