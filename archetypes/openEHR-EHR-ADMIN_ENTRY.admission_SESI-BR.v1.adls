@@ -182,6 +182,11 @@ definition
                             DV_TEXT[id0.12] 
                         }
                     }
+                    ELEMENT[id0.15] occurrences matches {1} matches {    -- email
+                        value matches {
+                            DV_TEXT[id0.16] 
+                        }
+                    }
                 }
             }
         }
@@ -262,6 +267,10 @@ terminology
                 text = <"Lougradouro">
                 description = <"Lougradouro">
             >
+            ["id0.15"] = <
+                text = <"email">
+                description = <"email">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -336,6 +345,10 @@ terminology
                 text = <"Lougradouro (en)">
                 description = <"Lougradouro (en)">
             >
+            ["id0.15"] = <
+                text = <"email (en)">
+                description = <"email (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -409,6 +422,10 @@ terminology
             ["id0.13"] = <
                 text = <"Lougradouro (en)">
                 description = <"Lougradouro (en)">
+            >
+            ["id0.15"] = <
+                text = <"email (en)">
+                description = <"email (en)">
             >
         >
     >
