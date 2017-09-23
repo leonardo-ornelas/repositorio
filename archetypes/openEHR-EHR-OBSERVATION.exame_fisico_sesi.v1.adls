@@ -3,6 +3,15 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +19,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -977,6 +989,512 @@ terminology
             ["id146"] = <
                 text = <"Resultado do SRQ 20">
                 description = <"Resultado do SRQ 20">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*Exame fisico SESI (pt-br)">
+                description = <"*Exame fisico SESI (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Detalhamento do exame físico (pt-br)">
+                description = <"*Detalhamento do exame físico (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Mucosas (pt-br)">
+                description = <"*Mucosas (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Normal (pt-br)">
+                description = <"*Normal (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Alterado (pt-br)">
+                description = <"*Alterado (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Não examinado (pt-br)">
+                description = <"*Não examinado (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Mucosas (pt-br)">
+                description = <"*Mucosas (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Normal (pt-br)">
+                description = <"*Normal (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Alterado (pt-br)">
+                description = <"*Alterado (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Não examinado (pt-br)">
+                description = <"*Não examinado (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Mucosas (pt-br)">
+                description = <"*Mucosas (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Gânglios (pt-br)">
+                description = <"*Gânglios (pt-br)">
+            >
+            ["ac5"] = <
+                text = <"*Gânglios (pt-br)">
+                description = <"*Gânglios (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Marcha (pt-br)">
+                description = <"*Marcha (pt-br)">
+            >
+            ["ac6"] = <
+                text = <"*Marcha (pt-br)">
+                description = <"*Marcha (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id19"] = <
+                text = <"*Cabeça e pescoço (pt-br)">
+                description = <"*Cabeça e pescoço (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Audição (pt-br)">
+                description = <"*Audição (pt-br)">
+            >
+            ["ac7"] = <
+                text = <"*Audição (pt-br)">
+                description = <"*Audição (pt-br)">
+            >
+            ["ac8"] = <
+                text = <"*Audição (pt-br)">
+                description = <"*Audição (pt-br)">
+            >
+            ["id22"] = <
+                text = <"*Orofaringe (pt-br)">
+                description = <"*Orofaringe (pt-br)">
+            >
+            ["ac9"] = <
+                text = <"*Orofaringe (pt-br)">
+                description = <"*Orofaringe (pt-br)">
+            >
+            ["id24"] = <
+                text = <"*Boca e dentes (pt-br)">
+                description = <"*Boca e dentes (pt-br)">
+            >
+            ["ac10"] = <
+                text = <"*Boca e dentes (pt-br)">
+                description = <"*Boca e dentes (pt-br)">
+            >
+            ["id26"] = <
+                text = <"*Visão (pt-br)">
+                description = <"*Visão (pt-br)">
+            >
+            ["ac11"] = <
+                text = <"*Visão (pt-br)">
+                description = <"*Visão (pt-br)">
+            >
+            ["id28"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id33"] = <
+                text = <"*Uso obrigatório de lentes corretivas (pt-br)">
+                description = <"*Uso obrigatório de lentes corretivas (pt-br)">
+            >
+            ["id35"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id37"] = <
+                text = <"*Deformidade (pt-br)">
+                description = <"*Deformidade (pt-br)">
+            >
+            ["id39"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id41"] = <
+                text = <"*Tórax (pt-br)">
+                description = <"*Tórax (pt-br)">
+            >
+            ["id42"] = <
+                text = <"*Simetria (pt-br)">
+                description = <"*Simetria (pt-br)">
+            >
+            ["ac12"] = <
+                text = <"*Simetria (pt-br)">
+                description = <"*Simetria (pt-br)">
+            >
+            ["id44"] = <
+                text = <"*Expansibilidade (pt-br)">
+                description = <"*Expansibilidade (pt-br)">
+            >
+            ["ac13"] = <
+                text = <"*Expansibilidade (pt-br)">
+                description = <"*Expansibilidade (pt-br)">
+            >
+            ["id46"] = <
+                text = <"*Ritmo cardíaco (pt-br)">
+                description = <"*Ritmo cardíaco (pt-br)">
+            >
+            ["ac14"] = <
+                text = <"*Ritmo cardíaco (pt-br)">
+                description = <"*Ritmo cardíaco (pt-br)">
+            >
+            ["id48"] = <
+                text = <"*Ausculta pulmonar (pt-br)">
+                description = <"*Ausculta pulmonar (pt-br)">
+            >
+            ["ac15"] = <
+                text = <"*Ausculta pulmonar (pt-br)">
+                description = <"*Ausculta pulmonar (pt-br)">
+            >
+            ["id50"] = <
+                text = <"*Ausculta respiratória (pt-br)">
+                description = <"*Ausculta respiratória (pt-br)">
+            >
+            ["ac16"] = <
+                text = <"*Ausculta respiratória (pt-br)">
+                description = <"*Ausculta respiratória (pt-br)">
+            >
+            ["id52"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id54"] = <
+                text = <"*Outras deformidades (pt-br)">
+                description = <"*Outras deformidades (pt-br)">
+            >
+            ["id56"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id58"] = <
+                text = <"*Abdômen (pt-br)">
+                description = <"*Abdômen (pt-br)">
+            >
+            ["id59"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["ac17"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id61"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["ac18"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["id63"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id65"] = <
+                text = <"*Hérnia umbilical (pt-br)">
+                description = <"*Hérnia umbilical (pt-br)">
+            >
+            ["ac19"] = <
+                text = <"*Hérnia umbilical (pt-br)">
+                description = <"*Hérnia umbilical (pt-br)">
+            >
+            ["id67"] = <
+                text = <"*Hérnia ignal (pt-br)">
+                description = <"*Hérnia ignal (pt-br)">
+            >
+            ["ac20"] = <
+                text = <"*Hérnia ignal (pt-br)">
+                description = <"*Hérnia ignal (pt-br)">
+            >
+            ["id69"] = <
+                text = <"*Hérnia epigástrica (pt-br)">
+                description = <"*Hérnia epigástrica (pt-br)">
+            >
+            ["ac21"] = <
+                text = <"*Hérnia epigástrica (pt-br)">
+                description = <"*Hérnia epigástrica (pt-br)">
+            >
+            ["id71"] = <
+                text = <"*Hérnia incisional (pt-br)">
+                description = <"*Hérnia incisional (pt-br)">
+            >
+            ["ac22"] = <
+                text = <"*Hérnia incisional (pt-br)">
+                description = <"*Hérnia incisional (pt-br)">
+            >
+            ["id73"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id75"] = <
+                text = <"*Coluna (pt-br)">
+                description = <"*Coluna (pt-br)">
+            >
+            ["id76"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["ac23"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id79"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id81"] = <
+                text = <"*Deformidade (pt-br)">
+                description = <"*Deformidade (pt-br)">
+            >
+            ["id83"] = <
+                text = <"*Dor aos esforços (pt-br)">
+                description = <"*Dor aos esforços (pt-br)">
+            >
+            ["ac24"] = <
+                text = <"*Dor aos esforços (pt-br)">
+                description = <"*Dor aos esforços (pt-br)">
+            >
+            ["id85"] = <
+                text = <"*Dor espontânea (pt-br)">
+                description = <"*Dor espontânea (pt-br)">
+            >
+            ["ac25"] = <
+                text = <"*Dor espontânea (pt-br)">
+                description = <"*Dor espontânea (pt-br)">
+            >
+            ["id87"] = <
+                text = <"*Localização da dor (pt-br)">
+                description = <"*Localização da dor (pt-br)">
+            >
+            ["id89"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id91"] = <
+                text = <"*Irradiação escapular (pt-br)">
+                description = <"*Irradiação escapular (pt-br)">
+            >
+            ["ac26"] = <
+                text = <"*Irradiação escapular (pt-br)">
+                description = <"*Irradiação escapular (pt-br)">
+            >
+            ["id93"] = <
+                text = <"*Irradiação membro superior direito (pt-br)">
+                description = <"*Irradiação membro superior direito (pt-br)">
+            >
+            ["ac27"] = <
+                text = <"*Irradiação membro superior direito (pt-br)">
+                description = <"*Irradiação membro superior direito (pt-br)">
+            >
+            ["id95"] = <
+                text = <"*Irradiação membro superior esquerdo (pt-br)">
+                description = <"*Irradiação membro superior esquerdo (pt-br)">
+            >
+            ["ac28"] = <
+                text = <"*Irradiação membro superior esquerdo (pt-br)">
+                description = <"*Irradiação membro superior esquerdo (pt-br)">
+            >
+            ["id97"] = <
+                text = <"*Irradiação membro inferior direito (pt-br)">
+                description = <"*Irradiação membro inferior direito (pt-br)">
+            >
+            ["ac29"] = <
+                text = <"*Irradiação membro inferior direito (pt-br)">
+                description = <"*Irradiação membro inferior direito (pt-br)">
+            >
+            ["id99"] = <
+                text = <"*Irradiação membro inferior esquerdo (pt-br)">
+                description = <"*Irradiação membro inferior esquerdo (pt-br)">
+            >
+            ["ac30"] = <
+                text = <"*Irradiação membro inferior esquerdo (pt-br)">
+                description = <"*Irradiação membro inferior esquerdo (pt-br)">
+            >
+            ["id101"] = <
+                text = <"*Irradiação ausente (pt-br)">
+                description = <"*Irradiação ausente (pt-br)">
+            >
+            ["ac31"] = <
+                text = <"*Irradiação ausente (pt-br)">
+                description = <"*Irradiação ausente (pt-br)">
+            >
+            ["id104"] = <
+                text = <"*Outras irradiações (pt-br)">
+                description = <"*Outras irradiações (pt-br)">
+            >
+            ["id106"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id109"] = <
+                text = <"*Membros (pt-br)">
+                description = <"*Membros (pt-br)">
+            >
+            ["id110"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["ac32"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id112"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["ac33"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id114"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["ac34"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["id116"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["ac35"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id118"] = <
+                text = <"*Força (pt-br)">
+                description = <"*Força (pt-br)">
+            >
+            ["ac36"] = <
+                text = <"*Força (pt-br)">
+                description = <"*Força (pt-br)">
+            >
+            ["id120"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id122"] = <
+                text = <"*Deformidade (pt-br)">
+                description = <"*Deformidade (pt-br)">
+            >
+            ["ac37"] = <
+                text = <"*Deformidade (pt-br)">
+                description = <"*Deformidade (pt-br)">
+            >
+            ["id125"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id127"] = <
+                text = <"*Prótese/órtese (pt-br)">
+                description = <"*Prótese/órtese (pt-br)">
+            >
+            ["ac38"] = <
+                text = <"*Prótese/órtese (pt-br)">
+                description = <"*Prótese/órtese (pt-br)">
+            >
+            ["id129"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id131"] = <
+                text = <"*Varizes em membro inferior direito (pt-br)">
+                description = <"*Varizes em membro inferior direito (pt-br)">
+            >
+            ["ac39"] = <
+                text = <"*Varizes em membro inferior direito (pt-br)">
+                description = <"*Varizes em membro inferior direito (pt-br)">
+            >
+            ["id133"] = <
+                text = <"*Varizes em membro inferior esquerdo (pt-br)">
+                description = <"*Varizes em membro inferior esquerdo (pt-br)">
+            >
+            ["ac40"] = <
+                text = <"*Varizes em membro inferior esquerdo (pt-br)">
+                description = <"*Varizes em membro inferior esquerdo (pt-br)">
+            >
+            ["id135"] = <
+                text = <"*Varizes ausentes (pt-br)">
+                description = <"*Varizes ausentes (pt-br)">
+            >
+            ["ac41"] = <
+                text = <"*Varizes ausentes (pt-br)">
+                description = <"*Varizes ausentes (pt-br)">
+            >
+            ["id137"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id139"] = <
+                text = <"*Psiquismo (pt-br)">
+                description = <"*Psiquismo (pt-br)">
+            >
+            ["id140"] = <
+                text = <"*Orientação tempo / espaço (pt-br)">
+                description = <"*Orientação tempo / espaço (pt-br)">
+            >
+            ["ac42"] = <
+                text = <"*Orientação tempo / espaço (pt-br)">
+                description = <"*Orientação tempo / espaço (pt-br)">
+            >
+            ["id142"] = <
+                text = <"*Humor (pt-br)">
+                description = <"*Humor (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Estável (pt-br)">
+                description = <"*Estável (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Ansioso (pt-br)">
+                description = <"*Ansioso (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Irritável (pt-br)">
+                description = <"*Irritável (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Deprimido (pt-br)">
+                description = <"*Deprimido (pt-br)">
+            >
+            ["ac43"] = <
+                text = <"*Humor (pt-br)">
+                description = <"*Humor (pt-br)">
+            >
+            ["id144"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id146"] = <
+                text = <"*Resultado do SRQ 20 (pt-br)">
+                description = <"*Resultado do SRQ 20 (pt-br)">
             >
         >
     >
