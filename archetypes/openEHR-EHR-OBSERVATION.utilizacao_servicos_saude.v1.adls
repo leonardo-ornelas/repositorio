@@ -44,6 +44,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id12] occurrences matches {1} matches {    -- Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -123,6 +130,30 @@ terminology
                 text = <"Quantas vezes o trabalhador esteve internado nos ultimos 12 meses">
                 description = <"Quantas vezes o trabalhador esteve internado nos ultimos 12 meses">
             >
+            ["id12"] = <
+                text = <"Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador">
+                description = <"Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador">
+            >
+            ["at10"] = <
+                text = <"Nunca mediu a pressão">
+                description = <"Nunca mediu a pressão">
+            >
+            ["at11"] = <
+                text = <"Há menos de 1 ano">
+                description = <"Há menos de 1 ano">
+            >
+            ["at12"] = <
+                text = <"Entre 1 e dois anos">
+                description = <"Entre 1 e dois anos">
+            >
+            ["at13"] = <
+                text = <"Há mais de 2 anos">
+                description = <"Há mais de 2 anos">
+            >
+            ["ac3"] = <
+                text = <"Pressão">
+                description = <"Pressão">
+            >
         >
     >
     value_sets = <
@@ -133,6 +164,10 @@ terminology
         ["ac2"] = <
             id = <"ac2">
             members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at10", "at11", "at12", "at13">
         >
     >
 
