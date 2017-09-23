@@ -48,7 +48,9 @@ definition
         context matches {
             EVENT_CONTEXT[id4.1] occurrences matches {0} 
         }
-        content
+        content matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-fco_dados_identificacao-admission_SESI-BR-001.v1.0.0]
+        }
     }
 
 terminology
@@ -63,6 +65,377 @@ terminology
             ["id1.1"] = <
                 text = <"Encontro">
                 description = <"Encontro genérico ou  composição da nota de progresso.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-fco_dados_identificacao-admission_SESI-BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.admission_SESI-BR.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1.1] matches {    -- Patient admission
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Patient class
+                value matches {
+                    DV_CODED_TEXT[id123.0.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id74.0.1] occurrences matches {0} matches {    -- Assigned patient location
+                items matches {
+                    ELEMENT[id75.0.1] occurrences matches {0} matches {    -- Point of care/Unit
+                        value matches {
+                            DV_TEXT[id124.0.1] 
+                        }
+                    }
+                    ELEMENT[id78.0.1] occurrences matches {0} matches {    -- Ward
+                        value matches {
+                            DV_TEXT[id125.0.1] 
+                        }
+                    }
+                    ELEMENT[id79.0.1] occurrences matches {0} matches {    -- Room
+                        value matches {
+                            DV_TEXT[id126.0.1] 
+                        }
+                    }
+                    ELEMENT[id80.0.1] occurrences matches {0} matches {    -- Bed
+                        value matches {
+                            DV_TEXT[id127.0.1] 
+                        }
+                    }
+                    CLUSTER[id105.0.1] occurrences matches {0} matches {    -- Facility
+                        items matches {
+                            ELEMENT[id106.0.1] occurrences matches {0} matches {    -- Namespace ID
+                                value matches {
+                                    DV_TEXT[id128.0.1] 
+                                }
+                            }
+                            ELEMENT[id107.0.1] occurrences matches {0} matches {    -- Universal ID
+                                value matches {
+                                    DV_TEXT[id129.0.1] 
+                                }
+                            }
+                            ELEMENT[id108.0.1] occurrences matches {0} matches {    -- Universal ID type
+                                value matches {
+                                    DV_CODED_TEXT[id130.0.1] matches {
+                                        defining_code matches {[ac4]}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id102.0.1] occurrences matches {0} matches {    -- Building
+                        value matches {
+                            DV_TEXT[id131.0.1] 
+                        }
+                    }
+                    ELEMENT[id103.0.1] occurrences matches {0} matches {    -- Floor
+                        value matches {
+                            DV_TEXT[id132.0.1] 
+                        }
+                    }
+                    ELEMENT[id104.0.1] occurrences matches {0} matches {    -- Location description
+                        value matches {
+                            DV_TEXT[id133.0.1] 
+                        }
+                    }
+                    ELEMENT[id82] occurrences matches {0..1} matches {
+                        /value[id139]/defining_code matches {[ac5]}
+                    }
+                }
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id140]/defining_code matches {[ac6]}
+            }
+            CLUSTER[id95] occurrences matches {0..1} matches {
+                items matches {
+                    CLUSTER[id120] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                        }
+                    }
+                    CLUSTER[id96] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                        }
+                    }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                }
+            }
+            CLUSTER[id26] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id122] matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id52] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            ELEMENT[id62] occurrences matches {0..1} matches {
+                /value[id171]/defining_code matches {[ac7]}
+            }
+            ELEMENT[id67] occurrences matches {0..1} matches {
+                /value[id172]/defining_code matches {[ac2]}
+            }
+            CLUSTER[id0.4] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id0.7] occurrences matches {1} matches {
+                        /value[id0.8]/defining_code matches {[ac0.1]}
+                    }
+                    ELEMENT[id0.9] occurrences matches {1} matches {
+                        /value[id0.10]/defining_code matches {[ac0.2]}
+                    }
+                    ELEMENT[id0.19] occurrences matches {1} matches {
+                        /value[id0.20]/value matches {*}
+                    }
+                    ELEMENT[id0.39] occurrences matches {1} matches {
+                        /value[id0.40]/defining_code matches {[ac0.3]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Patient admission">
+                description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
+            >
+            ["id3.0.1"] = <
+                text = <"Patient class">
+                description = <"Intended mode of treatement.">
+            >
+            ["id75.0.1"] = <
+                text = <"Point of care/Unit">
+                description = <"*">
+            >
+            ["id78.0.1"] = <
+                text = <"Ward">
+                description = <"*">
+            >
+            ["id79.0.1"] = <
+                text = <"Room">
+                description = <"*">
+            >
+            ["id80.0.1"] = <
+                text = <"Bed">
+                description = <"*">
+            >
+            ["id74.0.1"] = <
+                text = <"Assigned patient location">
+                description = <"Assigned patient location when the patient was admitted.">
+            >
+            ["id106.0.1"] = <
+                text = <"Namespace ID">
+                description = <"*">
+            >
+            ["id107.0.1"] = <
+                text = <"Universal ID">
+                description = <"*">
+            >
+            ["id108.0.1"] = <
+                text = <"Universal ID type">
+                description = <"*">
+            >
+            ["id105.0.1"] = <
+                text = <"Facility">
+                description = <"*">
+            >
+            ["id102.0.1"] = <
+                text = <"Building">
+                description = <"*">
+            >
+            ["id103.0.1"] = <
+                text = <"Floor">
+                description = <"*">
+            >
+            ["id104.0.1"] = <
+                text = <"Location description">
+                description = <"*">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1.1"] = <
+                text = <"إدخال المريض">
+                description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
+            >
+            ["id3.0.1"] = <
+                text = <"درجة المريض">
+                description = <"أسلوب المعاملة المقصود">
+            >
+            ["id75.0.1"] = <
+                text = <"نقطة تقديم الرعاية/الوحدة">
+                description = <"*">
+            >
+            ["id78.0.1"] = <
+                text = <"العنبر">
+                description = <"*">
+            >
+            ["id79.0.1"] = <
+                text = <"الغرفة/الحجرة">
+                description = <"*">
+            >
+            ["id80.0.1"] = <
+                text = <"السرير">
+                description = <"*">
+            >
+            ["id74.0.1"] = <
+                text = <"المكان المعَيَّن للمريض">
+                description = <"المكان الذي تم تعيينه للمريض عند إدخال المريض">
+            >
+            ["id106.0.1"] = <
+                text = <"العنصر التعريفي للمساحة">
+                description = <"*">
+            >
+            ["id107.0.1"] = <
+                text = <"العنصر التعريفي الشامل">
+                description = <"*">
+            >
+            ["id108.0.1"] = <
+                text = <"نوع العنصر التعريفي الشامل">
+                description = <"*">
+            >
+            ["id105.0.1"] = <
+                text = <"المؤسسة">
+                description = <"*">
+            >
+            ["id102.0.1"] = <
+                text = <"المبنى">
+                description = <"*">
+            >
+            ["id103.0.1"] = <
+                text = <"الطابق/الدور">
+                description = <"*">
+            >
+            ["id104.0.1"] = <
+                text = <"وصف الموقع">
+                description = <"*">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Admissão ">
+                description = <"Usado apenas para registro de dados">
+            >
+            ["id3.0.1"] = <
+                text = <"Classe do paciente">
+                description = <"Modo de tratamento previsto.">
+            >
+            ["id75.0.1"] = <
+                text = <"Ponto de atendimento / unidade">
+                description = <"*">
+            >
+            ["id78.0.1"] = <
+                text = <"Enfermaria">
+                description = <"*">
+            >
+            ["id79.0.1"] = <
+                text = <"Quarto">
+                description = <"*">
+            >
+            ["id80.0.1"] = <
+                text = <"Cama">
+                description = <"*">
+            >
+            ["id74.0.1"] = <
+                text = <"Localização do paciente">
+                description = <"Local do paciente específico quando o paciente foi internado.">
+            >
+            ["id106.0.1"] = <
+                text = <"Código de Identificação do Namespace">
+                description = <"*">
+            >
+            ["id107.0.1"] = <
+                text = <"Código de Identificação Universal">
+                description = <"*">
+            >
+            ["id108.0.1"] = <
+                text = <"Tipo do Código de Identificação Universal">
+                description = <"*">
+            >
+            ["id105.0.1"] = <
+                text = <"Instalação">
+                description = <"*">
+            >
+            ["id102.0.1"] = <
+                text = <"Edifício">
+                description = <"*">
+            >
+            ["id103.0.1"] = <
+                text = <"Andar">
+                description = <"*">
+            >
+            ["id104.0.1"] = <
+                text = <"Descrição da localização">
+                description = <"*">
             >
         >
     >
