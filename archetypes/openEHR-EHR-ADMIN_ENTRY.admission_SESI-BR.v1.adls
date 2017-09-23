@@ -505,8 +505,8 @@ terminology
                 description = <"(adicionado por processador pós-análise)">
             >
             ["id0.41"] = <
-                text = <"Logradouro (en)">
-                description = <"Logradouro (en)">
+                text = <"Logradouro">
+                description = <"Logradouro">
             >
         >
     >
