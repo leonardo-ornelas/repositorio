@@ -5676,35 +5676,75 @@ definition
                     }
                     CLUSTER[id20.1] occurrences matches {0} matches {    -- Itens presentes na residência
                         items matches {
-                            ELEMENT[id21] occurrences matches {0..1} matches {
-                                /value[id22]/value matches {True, False}
+                            ELEMENT[id21.1] occurrences matches {0} matches {    -- Telefone Fixo
+                                value matches {
+                                    DV_BOOLEAN[id22.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id23] occurrences matches {0..1} matches {
-                                /value[id24]/value matches {True, False}
+                            ELEMENT[id23.1] occurrences matches {0} matches {    -- Telefone Celular
+                                value matches {
+                                    DV_BOOLEAN[id24.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id25] occurrences matches {0..1} matches {
-                                /value[id26]/value matches {True, False}
+                            ELEMENT[id25.1] occurrences matches {0} matches {    -- Fogão
+                                value matches {
+                                    DV_BOOLEAN[id26.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id27] occurrences matches {0..1} matches {
-                                /value[id28]/value matches {True, False}
+                            ELEMENT[id27.1] occurrences matches {0} matches {    -- Radio
+                                value matches {
+                                    DV_BOOLEAN[id28.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id30] occurrences matches {0..1} matches {
-                                /value[id31]/value matches {True, False}
+                            ELEMENT[id30.1] occurrences matches {0} matches {    -- Televisão colorida
+                                value matches {
+                                    DV_BOOLEAN[id31.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id32] occurrences matches {0..1} matches {
-                                /value[id33]/value matches {True, False}
+                            ELEMENT[id32.1] occurrences matches {0} matches {    -- Geladeira
+                                value matches {
+                                    DV_BOOLEAN[id33.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id34] occurrences matches {0..1} matches {
-                                /value[id35]/value matches {True, False}
+                            ELEMENT[id34.1] occurrences matches {0} matches {    -- Máquina de lavar roupas
+                                value matches {
+                                    DV_BOOLEAN[id35.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id36] occurrences matches {0..1} matches {
-                                /value[id37]/value matches {True, False}
+                            ELEMENT[id36.1] occurrences matches {0} matches {    -- Freezer
+                                value matches {
+                                    DV_BOOLEAN[id37.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id38] occurrences matches {0..1} matches {
-                                /value[id39]/value matches {True, False}
+                            ELEMENT[id38.1] occurrences matches {0} matches {    -- Computador
+                                value matches {
+                                    DV_BOOLEAN[id39.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id40] occurrences matches {0..1} matches {
-                                /value[id41]/value matches {True, False}
+                            ELEMENT[id40.1] occurrences matches {0} matches {    -- Acesso à internet
+                                value matches {
+                                    DV_BOOLEAN[id41.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
                         }
                     }
@@ -5744,6 +5784,46 @@ terminology
                 text = <"Itens presentes na residência">
                 description = <"Itens presentes na residência">
             >
+            ["id21.1"] = <
+                text = <"Telefone Fixo">
+                description = <"Telefone Fixo">
+            >
+            ["id23.1"] = <
+                text = <"Telefone Celular">
+                description = <"Telefone Celular">
+            >
+            ["id25.1"] = <
+                text = <"Fogão">
+                description = <"Fogão">
+            >
+            ["id27.1"] = <
+                text = <"Radio">
+                description = <"Radio">
+            >
+            ["id30.1"] = <
+                text = <"Televisão colorida">
+                description = <"Televisão colorida">
+            >
+            ["id32.1"] = <
+                text = <"Geladeira">
+                description = <"Geladeira">
+            >
+            ["id34.1"] = <
+                text = <"Máquina de lavar roupas">
+                description = <"Máquina de lavar roupas">
+            >
+            ["id36.1"] = <
+                text = <"Freezer">
+                description = <"Freezer">
+            >
+            ["id38.1"] = <
+                text = <"Computador">
+                description = <"Computador">
+            >
+            ["id40.1"] = <
+                text = <"Acesso à internet">
+                description = <"Acesso à internet">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -5773,6 +5853,46 @@ terminology
             ["id20.1"] = <
                 text = <"Items present at the residence">
                 description = <"Items present at the residence">
+            >
+            ["id21.1"] = <
+                text = <"Phone">
+                description = <"Phone">
+            >
+            ["id23.1"] = <
+                text = <"Cellphone">
+                description = <"Cellphone">
+            >
+            ["id25.1"] = <
+                text = <"Cooker">
+                description = <"Cooker">
+            >
+            ["id27.1"] = <
+                text = <"Rádio">
+                description = <"Rádio">
+            >
+            ["id30.1"] = <
+                text = <"TV">
+                description = <"TV">
+            >
+            ["id32.1"] = <
+                text = <"Refrigerator">
+                description = <"Refrigerator">
+            >
+            ["id34.1"] = <
+                text = <"Washing machine">
+                description = <"Washing machine">
+            >
+            ["id36.1"] = <
+                text = <"Freezer">
+                description = <"Freezer">
+            >
+            ["id38.1"] = <
+                text = <"Computer">
+                description = <"Computer">
+            >
+            ["id40.1"] = <
+                text = <"Internet access">
+                description = <"Internet access">
             >
         >
     >
