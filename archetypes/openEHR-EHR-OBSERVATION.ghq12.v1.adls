@@ -86,6 +86,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id24] occurrences matches {1} matches {    -- Tem perdido a confiança em si
+                                        value matches {
+                                            DV_CODED_TEXT[id25] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -184,6 +191,10 @@ terminology
             ["id22"] = <
                 text = <"Sente-se triste ou deprimido">
                 description = <"Sente-se triste ou deprimido">
+            >
+            ["id24"] = <
+                text = <"Tem perdido a confiança em si">
+                description = <"Tem perdido a confiança em si">
             >
         >
     >
