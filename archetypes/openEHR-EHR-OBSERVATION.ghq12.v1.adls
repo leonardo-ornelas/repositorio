@@ -79,6 +79,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id22] occurrences matches {1} matches {    -- Sente-se triste ou deprimido
+                                        value matches {
+                                            DV_CODED_TEXT[id23] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -173,6 +180,10 @@ terminology
             ["id20"] = <
                 text = <"Tem sido capaz de enfrentar seus problemas">
                 description = <"Tem sido capaz de enfrentar seus problemas">
+            >
+            ["id22"] = <
+                text = <"Sente-se triste ou deprimido">
+                description = <"Sente-se triste ou deprimido">
             >
         >
     >
