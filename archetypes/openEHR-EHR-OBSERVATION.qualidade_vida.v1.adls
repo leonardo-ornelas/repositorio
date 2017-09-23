@@ -75,6 +75,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id21] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia
+                                                value matches {
+                                                    DV_CODED_TEXT[id22] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -223,6 +230,10 @@ terminology
             ["id19"] = <
                 text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
                 description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id21"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
             >
         >
     >
