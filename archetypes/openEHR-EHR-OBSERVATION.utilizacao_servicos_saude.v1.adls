@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +21,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -193,6 +207,124 @@ terminology
             ["ac4"] = <
                 text = <"Plano de saúde">
                 description = <"Plano de saúde">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*utilizacao_servicos_saude (pt-br)">
+                description = <"*utilizacao_servicos_saude (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses (pt-br)">
+                description = <"*Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Nenhuma (pt-br)">
+                description = <"*Nenhuma (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*1 a 2 vezes (pt-br)">
+                description = <"*1 a 2 vezes (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*2 a 4 vezes (pt-br)">
+                description = <"*2 a 4 vezes (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*5 a 10 vezes (pt-br)">
+                description = <"*5 a 10 vezes (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*10 vezes ou mais (pt-br)">
+                description = <"*10 vezes ou mais (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Vezes (pt-br)">
+                description = <"*Vezes (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Quando foi a ultima vez que o trabalhador foi ao dentista (pt-br)">
+                description = <"*Quando foi a ultima vez que o trabalhador foi ao dentista (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Menos de 1 ano (pt-br)">
+                description = <"*Menos de 1 ano (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*De 1 a 2 anos (pt-br)">
+                description = <"*De 1 a 2 anos (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*3 ou mais (pt-br)">
+                description = <"*3 ou mais (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Nunca foi ao dentista (pt-br)">
+                description = <"*Nunca foi ao dentista (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Visita Dentista (pt-br)">
+                description = <"*Visita Dentista (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*Quantas vezes o trabalhador esteve internado nos ultimos 12 meses (pt-br)">
+                description = <"*Quantas vezes o trabalhador esteve internado nos ultimos 12 meses (pt-br)">
+            >
+            ["id12"] = <
+                text = <"*Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador (pt-br)">
+                description = <"*Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Nunca mediu a pressão (pt-br)">
+                description = <"*Nunca mediu a pressão (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Há menos de 1 ano (pt-br)">
+                description = <"*Há menos de 1 ano (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Entre 1 e dois anos (pt-br)">
+                description = <"*Entre 1 e dois anos (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Há mais de 2 anos (pt-br)">
+                description = <"*Há mais de 2 anos (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Pressão (pt-br)">
+                description = <"*Pressão (pt-br)">
+            >
+            ["id14"] = <
+                text = <"*O trabalhador possui plano de saúde (pt-br)">
+                description = <"*O trabalhador possui plano de saúde (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Sim, através dessa empresa onde trabalho (pt-br)">
+                description = <"*Sim, através dessa empresa onde trabalho (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Sim, através de outra empresa (pt-br)">
+                description = <"*Sim, através de outra empresa (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Sim, adquirido individualmente sem participação da empresa (pt-br)">
+                description = <"*Sim, adquirido individualmente sem participação da empresa (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*Sim, como dependente (pt-br)">
+                description = <"*Sim, como dependente (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Não (pt-br)">
+                description = <"*Não (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Plano de saúde (pt-br)">
+                description = <"*Plano de saúde (pt-br)">
             >
         >
     >
