@@ -78,8 +78,12 @@ definition
                                     DV_CODED_TEXT[id12] matches {
                                         defining_code matches {[ac2]}
                                     }
-                                    DV_CODED_TEXT[id13] matches {
-                                        defining_code matches {[ac2]}
+                                }
+                            }
+                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Trabalha no mesmo horário todos os dias?
+                                value matches {
+                                    DV_BOOLEAN[id15] matches {
+                                        value matches {True, False}
                                     }
                                 }
                             }
@@ -173,6 +177,10 @@ terminology
                 text = <"Horas trabalhadas">
                 description = <"Horas trabalhadas">
             >
+            ["id14"] = <
+                text = <"Trabalha no mesmo horário todos os dias?">
+                description = <"Trabalha no mesmo horário todos os dias?">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -254,6 +262,10 @@ terminology
             ["ac2"] = <
                 text = <"Horas trabalhadas (en)">
                 description = <"Horas trabalhadas (en)">
+            >
+            ["id14"] = <
+                text = <"Trabalha no mesmo horário todos os dias? (en)">
+                description = <"Trabalha no mesmo horário todos os dias? (en)">
             >
         >
     >
