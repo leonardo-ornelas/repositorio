@@ -315,8 +315,8 @@ terminology
                 description = <"Record the marital status">
             >
             ["at0.1"] = <
-                text = <"Casado/Vive junto">
-                description = <"Casado/Vive junto">
+                text = <"Casado Vive junto">
+                description = <"Casado Vive junto">
             >
             ["at0.2"] = <
                 text = <"Solteiro">
@@ -427,8 +427,8 @@ terminology
                 description = <"Type">
             >
             ["at0.10"] = <
-                text = <"Pré - admissional">
-                description = <"Pré - admissional">
+                text = <"Pré  admissional">
+                description = <"Pré  admissional">
             >
             ["at0.11"] = <
                 text = <"Periódico">
@@ -489,8 +489,8 @@ terminology
                 description = <"Registre o estado civil">
             >
             ["at0.1"] = <
-                text = <"Casado/Vive junto (en)">
-                description = <"Casado/Vive junto (en)">
+                text = <"Casado Vive junto (en)">
+                description = <"Casado Vive junto (en)">
             >
             ["at0.2"] = <
                 text = <"Solteiro (en)">
@@ -663,8 +663,8 @@ terminology
                 description = <"Registre o estado civil">
             >
             ["at0.1"] = <
-                text = <"Casado/Vive junto">
-                description = <"Casado/Vive junto">
+                text = <"Casado Vive junto">
+                description = <"Casado Vive junto">
             >
             ["at0.2"] = <
                 text = <"Solteiro">
@@ -775,8 +775,8 @@ terminology
                 description = <"Tipo">
             >
             ["at0.10"] = <
-                text = <"Pré - admissional">
-                description = <"Pré - admissional">
+                text = <"Pré  admissional">
+                description = <"Pré  admissional">
             >
             ["at0.11"] = <
                 text = <"Periódico">
