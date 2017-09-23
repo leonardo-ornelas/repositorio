@@ -64,6 +64,13 @@ definition
                         include
                             archetype_id/value matches {/.*/}
                     }
+                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Em geral, quantos dias da semana o trabalhador trabalha
+                        value matches {
+                            DV_CODED_TEXT[id7] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -84,6 +91,34 @@ terminology
                 text = <"Social Summary Detail">
                 description = <"Structured details about the social circumstances and experiences.">
             >
+            ["id6"] = <
+                text = <"Em geral, quantos dias da semana o trabalhador trabalha">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha">
+            >
+            ["at1"] = <
+                text = <"a 2 dias">
+                description = <"a 2 dias">
+            >
+            ["at2"] = <
+                text = <"1 a 2 dias">
+                description = <"1 a 2 dias">
+            >
+            ["at3"] = <
+                text = <"3 a 4 dias">
+                description = <"3 a 4 dias">
+            >
+            ["at4"] = <
+                text = <"5 a 6 dias">
+                description = <"5 a 6 dias">
+            >
+            ["at5"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
+            ["ac1"] = <
+                text = <"Dias trabalhados">
+                description = <"Dias trabalhados">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -98,6 +133,40 @@ terminology
                 text = <"Resumo de resumo social">
                 description = <"Detalhes estruturados sobre as circunstâncias e experiências sociais.">
             >
+            ["id6"] = <
+                text = <"Em geral, quantos dias da semana o trabalhador trabalha (en)">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha (en)">
+            >
+            ["at1"] = <
+                text = <"a 2 dias (en)">
+                description = <"a 2 dias (en)">
+            >
+            ["at2"] = <
+                text = <"1 a 2 dias (en)">
+                description = <"1 a 2 dias (en)">
+            >
+            ["at3"] = <
+                text = <"3 a 4 dias (en)">
+                description = <"3 a 4 dias (en)">
+            >
+            ["at4"] = <
+                text = <"5 a 6 dias (en)">
+                description = <"5 a 6 dias (en)">
+            >
+            ["at5"] = <
+                text = <"7 dias (en)">
+                description = <"7 dias (en)">
+            >
+            ["ac1"] = <
+                text = <"Dias trabalhados (en)">
+                description = <"Dias trabalhados (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at2", "at3", "at4", "at5">
         >
     >
 
