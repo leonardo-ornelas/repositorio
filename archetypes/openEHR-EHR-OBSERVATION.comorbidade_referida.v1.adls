@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +21,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -226,6 +240,80 @@ terminology
             ["id37"] = <
                 text = <"Artrite, reumatismo ou gota">
                 description = <"Artrite, reumatismo ou gota">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*comorbidade_referida (pt-br)">
+                description = <"*comorbidade_referida (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Bronquite ou asma (pt-br)">
+                description = <"*Bronquite ou asma (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Enfisema pulmonar (pt-br)">
+                description = <"*Enfisema pulmonar (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Angina (pt-br)">
+                description = <"*Angina (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Infarto (pt-br)">
+                description = <"*Infarto (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Acidente vascular cerebral ou derrame (pt-br)">
+                description = <"*Acidente vascular cerebral ou derrame (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Colesterol alterado (pt-br)">
+                description = <"*Colesterol alterado (pt-br)">
+            >
+            ["id19"] = <
+                text = <"*Problemas auditivos (pt-br)">
+                description = <"*Problemas auditivos (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Depressão (pt-br)">
+                description = <"*Depressão (pt-br)">
+            >
+            ["id23"] = <
+                text = <"*Insuficiência cardíaca (pt-br)">
+                description = <"*Insuficiência cardíaca (pt-br)">
+            >
+            ["id25"] = <
+                text = <"*Outra doença do coração (pt-br)">
+                description = <"*Outra doença do coração (pt-br)">
+            >
+            ["id27"] = <
+                text = <"*Doença renal crônica (pt-br)">
+                description = <"*Doença renal crônica (pt-br)">
+            >
+            ["id29"] = <
+                text = <"*Câncer (pt-br)">
+                description = <"*Câncer (pt-br)">
+            >
+            ["id31"] = <
+                text = <"*Cirrose (pt-br)">
+                description = <"*Cirrose (pt-br)">
+            >
+            ["id33"] = <
+                text = <"*Problema de coluna/costas (pt-br)">
+                description = <"*Problema de coluna/costas (pt-br)">
+            >
+            ["id35"] = <
+                text = <"*Tendinite ou LER/DORT (pt-br)">
+                description = <"*Tendinite ou LER/DORT (pt-br)">
+            >
+            ["id37"] = <
+                text = <"*Artrite, reumatismo ou gota (pt-br)">
+                description = <"*Artrite, reumatismo ou gota (pt-br)">
             >
         >
     >
