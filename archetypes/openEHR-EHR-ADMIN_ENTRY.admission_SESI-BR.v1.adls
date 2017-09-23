@@ -825,8 +825,8 @@ terminology
                 description = <"Raça Cor">
             >
             ["id0.58"] = <
-                text = <"Sexo (en)">
-                description = <"Sexo (en)">
+                text = <"Sexo">
+                description = <"Sexo">
             >
             ["at0.16"] = <
                 text = <"Feminino (en)">
