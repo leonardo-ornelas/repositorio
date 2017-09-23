@@ -458,6 +458,14 @@ terminology
                 text = <"Location description">
                 description = <"Location description">
             >
+            ["id72"] = <
+                text = <"Admit date time">
+                description = <"Date time the patient was admitted.">
+            >
+            ["id88"] = <
+                text = <"State province">
+                description = <"State province">
+            >
             ["id142"] = <
                 text = <"(added by post-parse processor)">
                 description = <"(added by post-parse processor)">
@@ -624,6 +632,14 @@ terminology
                 text = <"وصف الموقع">
                 description = <"">
             >
+            ["id72"] = <
+                text = <"وقت/ تاريخ الإدخال">
+                description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
+            >
+            ["id88"] = <
+                text = <"الولاية/المقاطعة">
+                description = <"*">
+            >
             ["id142"] = <
                 text = <"(added by post-parse processor)(en)">
                 description = <"*(added by post-parse processor)(en)">
@@ -789,6 +805,14 @@ terminology
             ["id104"] = <
                 text = <"Descrição da localização">
                 description = <"Localização">
+            >
+            ["id72"] = <
+                text = <"Data hora de admissão">
+                description = <"Data hora que o paciente foi admitido.">
+            >
+            ["id88"] = <
+                text = <"Estado">
+                description = <"*">
             >
             ["id142"] = <
                 text = <"(adicionado por processador pós-análise)">
