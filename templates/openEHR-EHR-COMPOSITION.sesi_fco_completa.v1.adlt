@@ -335,7 +335,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Hábitos de vida">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                description = <"Bloco hábitos de vida ">
             >
         >
     >
@@ -906,19 +906,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -1069,7 +1069,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Hábitos de lazer">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                description = <"Bloco hábitos de lazer">
             >
         >
     >
@@ -1139,7 +1139,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Antecedentes mórbidos ">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                description = <"Bloco antecedentes mórbidos">
             >
         >
     >
@@ -2083,7 +2083,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Histórico Familiar (SIC)">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                description = <"Bloco histórico familiar">
             >
         >
     >
@@ -2353,7 +2353,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Antecedentes ginecológicos/urológicos">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                description = <"Bloco antecedentes ginecológicos urológicos">
             >
         >
     >
@@ -4012,7 +4012,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Acidente de trabalho/ História clínica atual">
-                description = <"Acidente de trabalho (SIC)">
+                description = <"Blocos acidente de trabalho (SIC) e história clínica atual">
             >
         >
     >
@@ -4083,7 +4083,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Exame físico">
-                description = <"Exame físico">
+                description = <"Bloco exame físico">
             >
         >
     >
@@ -4114,7 +4114,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Hipóteses diagnosticas ">
-                description = <"Hipóteses diagnósticas ">
+                description = <"Bloco hipóteses diagnósticas ">
             >
         >
     >
@@ -4435,7 +4435,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Recomendações educativo - preventivas para qualidade de vida">
-                description = <"Recomendações educativo - preventivas para qualidade de vida">
+                description = <"Bloco recomendações educativo - preventivas para qualidade de vida">
             >
         >
     >
@@ -4722,9 +4722,6 @@ definition
                     }
                     ELEMENT[id142] occurrences matches {0..1} matches {
                         /value[id143]/defining_code matches {[ac43]}
-                    }
-                    ELEMENT[id146] occurrences matches {0..1} matches {
-                        /value[id147]/magnitude matches {*}
                     }
                 }
             }
