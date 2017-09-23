@@ -57,6 +57,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Quantas vezes a dor interferiu no trabalho
+                                                value matches {
+                                                    DV_CODED_TEXT[id17] matches {
+                                                        defining_code matches {[ac4]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -170,6 +177,34 @@ terminology
                 text = <"Tarefas">
                 description = <"Tarefas">
             >
+            ["id16"] = <
+                text = <"Quantas vezes a dor interferiu no trabalho">
+                description = <"Quantas vezes a dor interferiu no trabalho">
+            >
+            ["at14"] = <
+                text = <"De maneira nenhuma">
+                description = <"De maneira nenhuma">
+            >
+            ["at15"] = <
+                text = <"Um pouco">
+                description = <"Um pouco">
+            >
+            ["at16"] = <
+                text = <"Moderadamente">
+                description = <"Moderadamente">
+            >
+            ["at17"] = <
+                text = <"Bastante">
+                description = <"Bastante">
+            >
+            ["at18"] = <
+                text = <"Extremamente">
+                description = <"Extremamente">
+            >
+            ["ac4"] = <
+                text = <"Interferiu no trabalho">
+                description = <"Interferiu no trabalho">
+            >
         >
     >
     value_sets = <
@@ -184,6 +219,10 @@ terminology
         ["ac3"] = <
             id = <"ac3">
             members = <"at9", "at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
         >
     >
 
