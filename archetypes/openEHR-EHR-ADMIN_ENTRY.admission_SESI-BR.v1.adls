@@ -205,7 +205,18 @@ definition
                         }
                     }
                     CLUSTER[id0.23] occurrences matches {0..1} matches {    -- Identidade
-                        items
+                        items matches {
+                            ELEMENT[id0.24] occurrences matches {1} matches {    -- Número da identidade
+                                value matches {
+                                    DV_TEXT[id0.25] 
+                                }
+                            }
+                            ELEMENT[id0.26] occurrences matches {1} matches {    -- Orgão
+                                value matches {
+                                    DV_TEXT[id0.27] 
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -307,6 +318,14 @@ terminology
                 text = <"Identidade">
                 description = <"Identidade">
             >
+            ["id0.24"] = <
+                text = <"Número da identidade">
+                description = <"Número da identidade">
+            >
+            ["id0.26"] = <
+                text = <"Orgão">
+                description = <"Orgão">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -401,6 +420,14 @@ terminology
                 text = <"Identidade (en)">
                 description = <"Identidade (en)">
             >
+            ["id0.24"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.26"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -494,6 +521,14 @@ terminology
             ["id0.23"] = <
                 text = <"Identidade (en)">
                 description = <"Identidade (en)">
+            >
+            ["id0.24"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.26"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
             >
         >
     >
