@@ -145,8 +145,31 @@ definition
                             DV_TEXT[id133.0.1] 
                         }
                     }
-                    ELEMENT[id82] occurrences matches {0..1} matches {
-                        /value[id139]/defining_code matches {[ac5]}
+                    CLUSTER[id85] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id86.0.1] occurrences matches {0..1} matches {    -- Street
+                                value matches {
+                                    DV_TEXT[id134.0.1] 
+                                }
+                            }
+                            ELEMENT[id88.0.1] occurrences matches {0..1} matches {    -- State/province
+                                value matches {
+                                    DV_TEXT[id136.0.1] 
+                                }
+                            }
+                            ELEMENT[id90.0.1] occurrences matches {0} matches {    -- Country
+                                value matches {
+                                    DV_TEXT[id138.0.1] 
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id82.0.1] occurrences matches {0} matches {    -- Location type
+                        value matches {
+                            DV_CODED_TEXT[id139.0.1] matches {
+                                defining_code matches {[ac5]}
+                            }
+                        }
                     }
                 }
             }
@@ -321,6 +344,22 @@ terminology
                 text = <"Location description">
                 description = <"*">
             >
+            ["id82.0.1"] = <
+                text = <"Location type">
+                description = <"*">
+            >
+            ["id86.0.1"] = <
+                text = <"Street">
+                description = <"*">
+            >
+            ["id88.0.1"] = <
+                text = <"State/province">
+                description = <"*">
+            >
+            ["id90.0.1"] = <
+                text = <"Country">
+                description = <"*">
+            >
         >
         ["ar-sy"] = <
             ["id1.1.1"] = <
@@ -379,6 +418,22 @@ terminology
                 text = <"وصف الموقع">
                 description = <"*">
             >
+            ["id82.0.1"] = <
+                text = <"نوع الموقع">
+                description = <"*">
+            >
+            ["id86.0.1"] = <
+                text = <"الشارع">
+                description = <"*">
+            >
+            ["id88.0.1"] = <
+                text = <"الولاية/المقاطعة">
+                description = <"*">
+            >
+            ["id90.0.1"] = <
+                text = <"الدولة/البلد">
+                description = <"*">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -435,6 +490,22 @@ terminology
             >
             ["id104.0.1"] = <
                 text = <"Descrição da localização">
+                description = <"*">
+            >
+            ["id82.0.1"] = <
+                text = <"Tipo de localização">
+                description = <"*">
+            >
+            ["id86.0.1"] = <
+                text = <"Endereço">
+                description = <"Endereço">
+            >
+            ["id88.0.1"] = <
+                text = <"Bairro">
+                description = <"Bairro">
+            >
+            ["id90.0.1"] = <
+                text = <"País">
                 description = <"*">
             >
         >
