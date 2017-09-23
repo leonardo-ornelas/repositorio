@@ -217,17 +217,17 @@ definition
                             DV_TEXT[id0.45] 
                         }
                     }
-                    ELEMENT[id0.46] occurrences matches {1} matches {    -- Telefone
+                    ELEMENT[id0.46] occurrences matches {1} matches {    -- Phone
                         value matches {
                             DV_TEXT[id0.47] 
                         }
                     }
-                    ELEMENT[id0.48] occurrences matches {1} matches {    -- Número da identidade
+                    ELEMENT[id0.48] occurrences matches {1} matches {    -- Identity number
                         value matches {
                             DV_TEXT[id0.49] 
                         }
                     }
-                    ELEMENT[id0.50] occurrences matches {1} matches {    -- Orgão
+                    ELEMENT[id0.50] occurrences matches {1} matches {    -- Organ
                         value matches {
                             DV_TEXT[id0.51] 
                         }
@@ -413,16 +413,16 @@ terminology
                 description = <"Full name">
             >
             ["id0.46"] = <
-                text = <"Telefone">
-                description = <"Telefone">
+                text = <"Phone">
+                description = <"Phone">
             >
             ["id0.48"] = <
-                text = <"Número da identidade">
-                description = <"Número da identidade">
+                text = <"Identity number">
+                description = <"Identity number">
             >
             ["id0.50"] = <
-                text = <"Orgão">
-                description = <"Orgão">
+                text = <"Organ">
+                description = <"Organ">
             >
             ["id0.52"] = <
                 text = <"NIT">
@@ -801,20 +801,20 @@ terminology
                 description = <"Nome completo">
             >
             ["id0.46"] = <
-                text = <"Telefone (en)">
-                description = <"Telefone (en)">
+                text = <"Telefone">
+                description = <"Telefone">
             >
             ["id0.48"] = <
-                text = <"Número da identidade (en)">
-                description = <"Número da identidade (en)">
+                text = <"Número da identidade">
+                description = <"Número da identidade">
             >
             ["id0.50"] = <
-                text = <"Orgão (en)">
-                description = <"Orgão (en)">
+                text = <"Orgão">
+                description = <"Orgão">
             >
             ["id0.52"] = <
-                text = <"NIT (en)">
-                description = <"NIT (en)">
+                text = <"NIT">
+                description = <"NIT">
             >
             ["id0.54"] = <
                 text = <"Email">
