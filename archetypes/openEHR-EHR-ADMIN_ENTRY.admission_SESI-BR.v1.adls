@@ -67,6 +67,15 @@ definition
                     CLUSTER[id105] occurrences matches {0..1} matches {
                         /items[id108]/value[id130]/defining_code matches {[ac4]}
                     }
+                    CLUSTER[id85] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id0.41] occurrences matches {1} matches {    -- Logradouro
+                                value matches {
+                                    DV_TEXT[id0.42] 
+                                }
+                            }
+                        }
+                    }
                     ELEMENT[id82] occurrences matches {0..1} matches {
                         /value[id139]/defining_code matches {[ac5]}
                     }
@@ -299,6 +308,10 @@ terminology
                 text = <"(added by post-parse processor)">
                 description = <"(added by post-parse processor)">
             >
+            ["id0.41"] = <
+                text = <"Logradouro">
+                description = <"Logradouro">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -393,6 +406,10 @@ terminology
                 text = <"(added by post-parse processor)(en)">
                 description = <"*(added by post-parse processor)(en)">
             >
+            ["id0.41"] = <
+                text = <"Logradouro (en)">
+                description = <"Logradouro (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -486,6 +503,10 @@ terminology
             ["id142"] = <
                 text = <"(adicionado por processador pós-análise)">
                 description = <"(adicionado por processador pós-análise)">
+            >
+            ["id0.41"] = <
+                text = <"Logradouro (en)">
+                description = <"Logradouro (en)">
             >
         >
     >
