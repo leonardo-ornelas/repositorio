@@ -30,6 +30,20 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?
+                                        value matches {
+                                            DV_BOOLEAN[id9] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- O trabalhador usa atualmente algum medicamento para tratar de hipertensão?
+                                        value matches {
+                                            DV_BOOLEAN[id11] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -56,6 +70,14 @@ terminology
             ["id6"] = <
                 text = <"Algum médico já disse que o trabalhador tem ou teve hipertensão?">
                 description = <"Algum médico já disse que o trabalhador tem ou teve hipertensão?">
+            >
+            ["id8"] = <
+                text = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?">
+                description = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?">
+            >
+            ["id10"] = <
+                text = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
+                description = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
             >
         >
     >
