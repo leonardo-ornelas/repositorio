@@ -39,6 +39,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id11] occurrences matches {0..1} matches {    -- Subir vários lances de escada
+                                                value matches {
+                                                    DV_CODED_TEXT[id12] matches {
+                                                        defining_code matches {[ac2]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -115,6 +122,10 @@ terminology
             ["ac2"] = <
                 text = <"Dificuldade na execução de atividades">
                 description = <"Dificuldade na execução de atividades">
+            >
+            ["id11"] = <
+                text = <"Subir vários lances de escada">
+                description = <"Subir vários lances de escada">
             >
         >
     >
