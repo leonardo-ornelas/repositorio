@@ -1,0 +1,92 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.qualidade_vida.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- qualidade_vida
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Classificação da saúde do trabalhador
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"qualidade_vida">
+                description = <"qualidade_vida">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Classificação da saúde do trabalhador">
+                description = <"Classificação da saúde do trabalhador">
+            >
+            ["at1"] = <
+                text = <"Excelente">
+                description = <"Excelente">
+            >
+            ["at2"] = <
+                text = <"Muito boa">
+                description = <"Muito boa">
+            >
+            ["at3"] = <
+                text = <"Boa">
+                description = <"Boa">
+            >
+            ["at4"] = <
+                text = <"Ruim">
+                description = <"Ruim">
+            >
+            ["at5"] = <
+                text = <"Muito ruim">
+                description = <"Muito ruim">
+            >
+            ["ac1"] = <
+                text = <"Qualidade de vida">
+                description = <"Qualidade de vida">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5">
+        >
+    >
+
