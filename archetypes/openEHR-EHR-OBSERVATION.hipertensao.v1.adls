@@ -44,6 +44,20 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Hipertensão ou pressão alta?
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Acidente vascular cerebral ou derrame?
+                                        value matches {
+                                            DV_CODED_TEXT[id15] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -79,6 +93,60 @@ terminology
                 text = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
                 description = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
             >
+            ["id12"] = <
+                text = <"Hipertensão ou pressão alta?">
+                description = <"Hipertensão ou pressão alta?">
+            >
+            ["at1"] = <
+                text = <"Nnehum">
+                description = <"Nnehum">
+            >
+            ["at2"] = <
+                text = <"Pai">
+                description = <"Pai">
+            >
+            ["at3"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at4"] = <
+                text = <"Pai">
+                description = <"Pai">
+            >
+            ["at5"] = <
+                text = <"Mãe">
+                description = <"Mãe">
+            >
+            ["at6"] = <
+                text = <"Avô paterno">
+                description = <"Avô paterno">
+            >
+            ["at7"] = <
+                text = <"Avô materno">
+                description = <"Avô materno">
+            >
+            ["at8"] = <
+                text = <"Avó materna">
+                description = <"Avó materna">
+            >
+            ["at9"] = <
+                text = <"Avó paterna">
+                description = <"Avó paterna">
+            >
+            ["ac1"] = <
+                text = <"Historia Familiar">
+                description = <"Historia Familiar">
+            >
+            ["id14"] = <
+                text = <"Acidente vascular cerebral ou derrame?">
+                description = <"Acidente vascular cerebral ou derrame?">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at3", "at4", "at5", "at6", "at7", "at8", "at9">
         >
     >
 
