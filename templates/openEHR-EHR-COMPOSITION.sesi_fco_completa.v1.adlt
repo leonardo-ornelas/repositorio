@@ -880,19 +880,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -3960,7 +3960,10 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-exame_fisico_sesi-001.v1.0.0]
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-portador_deficiencia-001.v1.0.0]
+        }
     }
 
 terminology
@@ -4433,6 +4436,224 @@ terminology
             ["id16.1"] = <
                 text = <"Comentário">
                 description = <"comentário">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-exame_fisico_sesi-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.exame_fisico_sesi.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Exame físico 
+        /data[id2]/events[id3]/data[id6]/items matches {
+            ELEMENT[id7] occurrences matches {0..1} matches {
+                /value[id8]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id9] occurrences matches {0..1} matches {
+                /value[id10]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id13] occurrences matches {0..1} matches {
+                /value[id14]/defining_code matches {[ac5]}
+            }
+            ELEMENT[id15] occurrences matches {0..1} matches {
+                /value[id16]/defining_code matches {[ac6]}
+            }
+            CLUSTER[id19] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id20] occurrences matches {0..1} matches {
+                        /value[id21]/defining_code matches {[ac8]}
+                    }
+                    ELEMENT[id22] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac9]}
+                    }
+                    ELEMENT[id24] occurrences matches {0..1} matches {
+                        /value[id25]/defining_code matches {[ac10]}
+                    }
+                    ELEMENT[id26] occurrences matches {0..1} matches {
+                        /value[id27]/defining_code matches {[ac11]}
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {
+                        /value[id34]/value matches {True, False}
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {
+                        /value[id38]/value matches {True, False}
+                    }
+                }
+            }
+            CLUSTER[id41] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id42] occurrences matches {0..1} matches {
+                        /value[id43]/defining_code matches {[ac12]}
+                    }
+                    ELEMENT[id44] occurrences matches {0..1} matches {
+                        /value[id45]/defining_code matches {[ac13]}
+                    }
+                    ELEMENT[id46] occurrences matches {0..1} matches {
+                        /value[id47]/defining_code matches {[ac14]}
+                    }
+                    ELEMENT[id48] occurrences matches {0..1} matches {
+                        /value[id49]/defining_code matches {[ac15]}
+                    }
+                    ELEMENT[id50] occurrences matches {0..1} matches {
+                        /value[id51]/defining_code matches {[ac16]}
+                    }
+                    ELEMENT[id54] occurrences matches {0..1} matches {
+                        /value[id55]/value matches {True, False}
+                    }
+                }
+            }
+            CLUSTER[id58] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id59] occurrences matches {0..1} matches {
+                        /value[id60]/defining_code matches {[ac17]}
+                    }
+                    ELEMENT[id61] occurrences matches {0..1} matches {
+                        /value[id62]/defining_code matches {[ac18]}
+                    }
+                    ELEMENT[id65] occurrences matches {0..1} matches {
+                        /value[id66]/defining_code matches {[ac19]}
+                    }
+                    ELEMENT[id67] occurrences matches {0..1} matches {
+                        /value[id68]/defining_code matches {[ac20]}
+                    }
+                    ELEMENT[id69] occurrences matches {0..1} matches {
+                        /value[id70]/defining_code matches {[ac21]}
+                    }
+                    ELEMENT[id71] occurrences matches {0..1} matches {
+                        /value[id72]/defining_code matches {[ac22]}
+                    }
+                }
+            }
+            CLUSTER[id75] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id76] occurrences matches {0..1} matches {
+                        /value[id77]/defining_code matches {[ac23]}
+                    }
+                    ELEMENT[id81] occurrences matches {0..1} matches {
+                        /value[id82]/value matches {True, False}
+                    }
+                    ELEMENT[id83] occurrences matches {0..1} matches {
+                        /value[id84]/defining_code matches {[ac24]}
+                    }
+                    ELEMENT[id85] occurrences matches {0..1} matches {
+                        /value[id86]/defining_code matches {[ac25]}
+                    }
+                    ELEMENT[id91] occurrences matches {0..1} matches {
+                        /value[id92]/defining_code matches {[ac26]}
+                    }
+                    ELEMENT[id93] occurrences matches {0..1} matches {
+                        /value[id94]/defining_code matches {[ac27]}
+                    }
+                    ELEMENT[id95] occurrences matches {0..1} matches {
+                        /value[id96]/defining_code matches {[ac28]}
+                    }
+                    ELEMENT[id97] occurrences matches {0..1} matches {
+                        /value[id98]/defining_code matches {[ac29]}
+                    }
+                    ELEMENT[id99] occurrences matches {0..1} matches {
+                        /value[id100]/defining_code matches {[ac30]}
+                    }
+                    ELEMENT[id101] occurrences matches {0..1} matches {
+                        /value[id102]/defining_code matches {[ac31]}
+                    }
+                }
+            }
+            CLUSTER[id109] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id110] occurrences matches {0..1} matches {
+                        /value[id111]/defining_code matches {[ac32]}
+                    }
+                    ELEMENT[id112] occurrences matches {0..1} matches {
+                        /value[id113]/defining_code matches {[ac33]}
+                    }
+                    ELEMENT[id114] occurrences matches {0..1} matches {
+                        /value[id115]/defining_code matches {[ac34]}
+                    }
+                    ELEMENT[id116] occurrences matches {0..1} matches {
+                        /value[id117]/defining_code matches {[ac35]}
+                    }
+                    ELEMENT[id118] occurrences matches {0..1} matches {
+                        /value[id119]/defining_code matches {[ac36]}
+                    }
+                    ELEMENT[id122] occurrences matches {0..1} matches {
+                        /value[id123]/value matches {True, False}
+                    }
+                    ELEMENT[id127] occurrences matches {0..1} matches {
+                        /value[id128]/defining_code matches {[ac38]}
+                    }
+                    ELEMENT[id131] occurrences matches {0..1} matches {
+                        /value[id132]/defining_code matches {[ac39]}
+                    }
+                    ELEMENT[id133] occurrences matches {0..1} matches {
+                        /value[id134]/defining_code matches {[ac40]}
+                    }
+                    ELEMENT[id135] occurrences matches {0..1} matches {
+                        /value[id136]/defining_code matches {[ac41]}
+                    }
+                }
+            }
+            CLUSTER[id139] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id140] occurrences matches {0..1} matches {
+                        /value[id141]/defining_code matches {[ac42]}
+                    }
+                    ELEMENT[id142] occurrences matches {0..1} matches {
+                        /value[id143]/defining_code matches {[ac43]}
+                    }
+                    ELEMENT[id146] occurrences matches {0..1} matches {
+                        /value[id147]/magnitude matches {*}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Exame físico ">
+                description = <"Exame fisico SESI">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Physical Exam SESI">
+                description = <"Physical Exam SESI">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-portador_deficiencia-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.portador_deficiencia.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Portador Deficiência
+        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/value matches {True, False}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Portador Deficiência">
+                description = <"portador_deficiencia">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"carrier deficiency">
+                description = <"carrier deficiency">
             >
         >
     >
