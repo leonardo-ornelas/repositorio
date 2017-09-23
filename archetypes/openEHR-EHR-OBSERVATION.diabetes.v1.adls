@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +21,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -78,6 +92,28 @@ terminology
             ["id10"] = <
                 text = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
                 description = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*diabetes (pt-br)">
+                description = <"*diabetes (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Algum médico já disse que o trabalhador tem ou teve diabetes? (pt-br)">
+                description = <"*Algum médico já disse que o trabalhador tem ou teve diabetes? (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes? (pt-br)">
+                description = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes? (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*O trabalhador usa atualmente algum medicamento para tratar de diabetes? (pt-br)">
+                description = <"*O trabalhador usa atualmente algum medicamento para tratar de diabetes? (pt-br)">
             >
         >
     >
