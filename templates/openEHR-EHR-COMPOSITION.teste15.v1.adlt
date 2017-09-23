@@ -43,7 +43,7 @@ definition
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype SECTION[id0.2, openEHR-EHR-SECTION.ovl-teste15-adhoc-001.v1.0.0]
-            use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-teste15-admission-001.v1.0.0]
+            use_archetype ADMIN_ENTRY[id0.4, openEHR-EHR-ADMIN_ENTRY.ovl-teste15-dados_socioeconomicos-001.v1.0.0]
         }
     }
 
@@ -184,105 +184,85 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-teste15-admission-001.v1.0.0
+    openEHR-EHR-ADMIN_ENTRY.ovl-teste15-dados_socioeconomicos-001.v1.0.0
 
 specialize
-    openEHR-EHR-ADMIN_ENTRY.admission.v1.0.0
+    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
 
 definition
-    ADMIN_ENTRY[id1.1] matches {    -- Patient admission
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- socioeconomic data
         /data[id2]/items matches {
-            ELEMENT[id3] matches {
-                /value[id123]/defining_code matches {[ac3]}
+            ELEMENT[id3] occurrences matches {1} matches {
+                /value[id4]/defining_code matches {[ac1]}
             }
-            CLUSTER[id74] occurrences matches {0..1} matches {
+            ELEMENT[id5] occurrences matches {1} matches {
+                /value[id6]/value matches {True, False}
+            }
+            ELEMENT[id7] occurrences matches {1} matches {
+                /value[id8]/defining_code matches {[ac2]}
+            }
+            CLUSTER[id10] occurrences matches {0..1} matches {
                 items matches {
-                    CLUSTER[id105] occurrences matches {0..1} matches {
-                        /items[id108]/value[id130]/defining_code matches {[ac4]}
+                    ELEMENT[id14] occurrences matches {1} matches {
+                        /value[id15]/defining_code matches {[ac3]}
                     }
-                    ELEMENT[id82] occurrences matches {0..1} matches {
-                        /value[id139]/defining_code matches {[ac5]}
+                    ELEMENT[id16] occurrences matches {1} matches {
+                        /value[id17]/defining_code matches {[ac4]}
                     }
-                }
-            }
-            ELEMENT[id14] occurrences matches {0..1} matches {
-                /value[id140]/defining_code matches {[ac6]}
-            }
-            CLUSTER[id95] occurrences matches {0..1} matches {
-                items matches {
-                    CLUSTER[id120] occurrences matches {0..1} matches {
+                    ELEMENT[id18] occurrences matches {1} matches {
+                        /value[id19]/value matches {True, False}
+                    }
+                    CLUSTER[id20] occurrences matches {0..1} matches {
                         items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            ELEMENT[id21] occurrences matches {0..1} matches {
+                                /value[id22]/value matches {True, False}
+                            }
+                            ELEMENT[id23] occurrences matches {0..1} matches {
+                                /value[id24]/value matches {True, False}
+                            }
+                            ELEMENT[id25] occurrences matches {0..1} matches {
+                                /value[id26]/value matches {True, False}
+                            }
+                            ELEMENT[id27] occurrences matches {0..1} matches {
+                                /value[id28]/value matches {True, False}
+                            }
+                            ELEMENT[id30] occurrences matches {0..1} matches {
+                                /value[id31]/value matches {True, False}
+                            }
+                            ELEMENT[id32] occurrences matches {0..1} matches {
+                                /value[id33]/value matches {True, False}
+                            }
+                            ELEMENT[id34] occurrences matches {0..1} matches {
+                                /value[id35]/value matches {True, False}
+                            }
+                            ELEMENT[id36] occurrences matches {0..1} matches {
+                                /value[id37]/value matches {True, False}
+                            }
+                            ELEMENT[id38] occurrences matches {0..1} matches {
+                                /value[id39]/value matches {True, False}
+                            }
+                            ELEMENT[id40] occurrences matches {0..1} matches {
+                                /value[id41]/value matches {True, False}
+                            }
                         }
                     }
-                    CLUSTER[id96] occurrences matches {0..1} matches {
-                        items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                        }
-                    }
-                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
-            }
-            CLUSTER[id26] occurrences matches {0..1} matches {
-                items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                }
-            }
-            CLUSTER[id122] matches {
-                items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                }
-            }
-            CLUSTER[id52] occurrences matches {0..1} matches {
-                items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                }
-            }
-            ELEMENT[id62] occurrences matches {0..1} matches {
-                /value[id171]/defining_code matches {[ac7]}
-            }
-            ELEMENT[id67] occurrences matches {0..1} matches {
-                /value[id172]/defining_code matches {[ac2]}
             }
         }
     }
 
 terminology
     term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Patient admission">
-                description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
-            >
-        >
-        ["ar-sy"] = <
-            ["id1.1"] = <
-                text = <"إدخال المريض">
-                description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
-            >
-        >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Admissão do paciente">
-                description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
+                text = <"socioeconomic data">
+                description = <"socioeconomic data">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"dados socioeconômicos">
+                description = <"dados socioeconômicos">
             >
         >
     >
