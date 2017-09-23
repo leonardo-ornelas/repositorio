@@ -766,7 +766,7 @@ specialize
 definition
     ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Dados socioeconômicos
         /data[id2]/items matches {
-            ELEMENT[id3] occurrences matches {1} matches {
+            ELEMENT[id3] occurrences matches {1} matches {    -- Nível de escolaridade
                 /value[id4]/defining_code matches {[ac1]}
             }
             ELEMENT[id5.1] occurrences matches {0} matches {    -- Atualmente frequenta escola
@@ -776,7 +776,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id7] occurrences matches {1} matches {
+            ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
                 /value[id8]/defining_code matches {[ac2]}
             }
             CLUSTER[id10.1] occurrences matches {0} matches {    -- Dados do domicílio e da família
@@ -884,6 +884,78 @@ definition
 terminology
     term_definitions = <
         ["pt-br"] = <
+            ["id1"] = <
+                text = <"dados socioeconomicos">
+                description = <"dados socioeconomicos">
+            >
+            ["id3"] = <
+                text = <"Nível de escolaridade">
+                description = <"Informe o nível de escolaridade">
+            >
+            ["id5"] = <
+                text = <"Atualmente frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
+            >
+            ["id7"] = <
+                text = <"Faixa de renda mensal">
+                description = <"Informe a renda mensal">
+            >
+            ["id10"] = <
+                text = <"Dados do domicílio e da família">
+                description = <"Dados do domicílio e da família">
+            >
+            ["id14"] = <
+                text = <"Tipo de residência">
+                description = <"Tipo de residência">
+            >
+            ["id16"] = <
+                text = <"Quantas pessoas vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
+            >
+            ["id18"] = <
+                text = <"Chefe de família">
+                description = <"Chefe de família">
+            >
+            ["id20"] = <
+                text = <"Itens presentes na residência">
+                description = <"Itens presentes na residência">
+            >
+            ["id21"] = <
+                text = <"Telefone Fixo">
+                description = <"Telefone Fixo">
+            >
+            ["id23"] = <
+                text = <"Telefone Celular">
+                description = <"Telefone Celular">
+            >
+            ["id25"] = <
+                text = <"Fogão">
+                description = <"Fogão">
+            >
+            ["id27"] = <
+                text = <"Rádio">
+                description = <"Rádio">
+            >
+            ["id30"] = <
+                text = <"Televisão colorida">
+                description = <"Televisão colorida">
+            >
+            ["id32"] = <
+                text = <"Geladeira">
+                description = <"Geladeira">
+            >
+            ["id34"] = <
+                text = <"Máquina de lavar roupas">
+                description = <"Máquina de lavar roupas">
+            >
+            ["id38"] = <
+                text = <"Computador">
+                description = <"Computador">
+            >
+            ["id40"] = <
+                text = <"Acesso à internet">
+                description = <"Acesso à internet">
+            >
             ["id1.1"] = <
                 text = <"Dados socioeconômicos">
                 description = <"dados socioeconomicos">
