@@ -37,6 +37,27 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id10] occurrences matches {1} matches {    -- Entende que tem um papel útil na vida de alguém
+                                        value matches {
+                                            DV_CODED_TEXT[id11] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {1} matches {    -- Se sente capaz de tomar decisões
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {1} matches {    -- Se sente contentemente agoniado(a) ou tenso(a)
+                                        value matches {
+                                            DV_CODED_TEXT[id15] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -107,6 +128,18 @@ terminology
             ["ac2"] = <
                 text = <"Níveis">
                 description = <"Níveis">
+            >
+            ["id10"] = <
+                text = <"Entende que tem um papel útil na vida de alguém">
+                description = <"Entende que tem um papel útil na vida de alguém">
+            >
+            ["id12"] = <
+                text = <"Se sente capaz de tomar decisões">
+                description = <"Se sente capaz de tomar decisões">
+            >
+            ["id14"] = <
+                text = <"Se sente contentemente agoniado(a) ou tenso(a)">
+                description = <"Se sente contentemente agoniado(a) ou tenso(a)">
             >
         >
     >
