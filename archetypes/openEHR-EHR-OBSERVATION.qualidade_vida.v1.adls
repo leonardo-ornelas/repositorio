@@ -110,6 +110,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id32] occurrences matches {0..1} matches {    -- Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia
+                                                value matches {
+                                                    DV_CODED_TEXT[id33] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -278,6 +285,10 @@ terminology
             ["id30"] = <
                 text = <"Como o trabalhador se sente em relação a sua vida">
                 description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32"] = <
+                text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
             >
         >
     >
