@@ -34,11 +34,11 @@ description
     >
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- diabetes
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Diabetes
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -79,12 +79,12 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"diabetes">
-                description = <"diabetes">
+                text = <"Diabetes">
+                description = <"Diabetes">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
                 text = <"Algum médico já disse que o trabalhador tem ou teve diabetes?">
@@ -101,24 +101,24 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*diabetes (pt-br)">
-                description = <"*diabetes (pt-br)">
+                text = <"Diabetes">
+                description = <"Diabetes">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Algum médico já disse que o trabalhador tem ou teve diabetes? (pt-br)">
-                description = <"*Algum médico já disse que o trabalhador tem ou teve diabetes? (pt-br)">
+                text = <"Has any doctor ever said that the worker has or had diabetes?">
+                description = <"Has any doctor ever said that the worker has or had diabetes?">
             >
             ["id8"] = <
-                text = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes? (pt-br)">
-                description = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes? (pt-br)">
+                text = <"Has the worker ever used any medication to treat diabetes at any time in his life?">
+                description = <"Has the worker ever used any medication to treat diabetes at any time in his life?">
             >
             ["id10"] = <
-                text = <"*O trabalhador usa atualmente algum medicamento para tratar de diabetes? (pt-br)">
-                description = <"*O trabalhador usa atualmente algum medicamento para tratar de diabetes? (pt-br)">
+                text = <"Does the worker currently use any medication to treat diabetes?">
+                description = <"Does the worker currently use any medication to treat diabetes?">
             >
         >
     >
