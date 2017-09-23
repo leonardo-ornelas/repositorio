@@ -1030,8 +1030,8 @@ terminology
                 description = <"*Mucosas (pt-br)">
             >
             ["id9"] = <
-                text = <"*Pelos e Fâneros (pt-br)">
-                description = <"*Pelos e Fâneros (pt-br)">
+                text = <"hair and faneros">
+                description = <"hair and faneros">
             >
             ["ac3"] = <
                 text = <"*Pelos e Fâneros (pt-br)">
@@ -1042,32 +1042,32 @@ terminology
                 description = <"*Pelos e Fâneros (pt-br)">
             >
             ["id13"] = <
-                text = <"*Gânglios (pt-br)">
-                description = <"*Gânglios (pt-br)">
+                text = <"Gânglios">
+                description = <"Gânglios">
             >
             ["ac5"] = <
                 text = <"*Gânglios (pt-br)">
                 description = <"*Gânglios (pt-br)">
             >
             ["id15"] = <
-                text = <"*Marcha (pt-br)">
-                description = <"*Marcha (pt-br)">
+                text = <"March">
+                description = <"March">
             >
             ["ac6"] = <
                 text = <"*Marcha (pt-br)">
                 description = <"*Marcha (pt-br)">
             >
             ["id17"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id19"] = <
-                text = <"*Cabeça e pescoço (pt-br)">
-                description = <"*Cabeça e pescoço (pt-br)">
+                text = <"Head and neck">
+                description = <"Head and neck">
             >
             ["id20"] = <
-                text = <"*Audição (pt-br)">
-                description = <"*Audição (pt-br)">
+                text = <"Hearing">
+                description = <"Hearing">
             >
             ["ac7"] = <
                 text = <"*Audição (pt-br)">
@@ -1078,128 +1078,128 @@ terminology
                 description = <"*Audição (pt-br)">
             >
             ["id22"] = <
-                text = <"*Orofaringe (pt-br)">
-                description = <"*Orofaringe (pt-br)">
+                text = <"Oropharynx">
+                description = <"Oropharynx">
             >
             ["ac9"] = <
                 text = <"*Orofaringe (pt-br)">
                 description = <"*Orofaringe (pt-br)">
             >
             ["id24"] = <
-                text = <"*Boca e dentes (pt-br)">
-                description = <"*Boca e dentes (pt-br)">
+                text = <"Mouth and teeth">
+                description = <"Mouth and teeth">
             >
             ["ac10"] = <
                 text = <"*Boca e dentes (pt-br)">
                 description = <"*Boca e dentes (pt-br)">
             >
             ["id26"] = <
-                text = <"*Visão (pt-br)">
-                description = <"*Visão (pt-br)">
+                text = <"Vision">
+                description = <"Vision">
             >
             ["ac11"] = <
                 text = <"*Visão (pt-br)">
                 description = <"*Visão (pt-br)">
             >
             ["id28"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id33"] = <
-                text = <"*Uso obrigatório de lentes corretivas (pt-br)">
-                description = <"*Uso obrigatório de lentes corretivas (pt-br)">
+                text = <"Mandatory use of corrective lenses">
+                description = <"Mandatory use of corrective lenses">
             >
             ["id35"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id37"] = <
-                text = <"*Deformidade (pt-br)">
-                description = <"*Deformidade (pt-br)">
+                text = <"Deformity">
+                description = <"Deformity">
             >
             ["id39"] = <
                 text = <"*Especificar (pt-br)">
                 description = <"*Especificar (pt-br)">
             >
             ["id41"] = <
-                text = <"*Tórax (pt-br)">
-                description = <"*Tórax (pt-br)">
+                text = <"Chest">
+                description = <"Chest">
             >
             ["id42"] = <
-                text = <"*Simetria (pt-br)">
-                description = <"*Simetria (pt-br)">
+                text = <"Symmetry">
+                description = <"Symmetry">
             >
             ["ac12"] = <
                 text = <"*Simetria (pt-br)">
                 description = <"*Simetria (pt-br)">
             >
             ["id44"] = <
-                text = <"*Expansibilidade (pt-br)">
-                description = <"*Expansibilidade (pt-br)">
+                text = <"Expansibilidade">
+                description = <"Expansibilidade">
             >
             ["ac13"] = <
                 text = <"*Expansibilidade (pt-br)">
                 description = <"*Expansibilidade (pt-br)">
             >
             ["id46"] = <
-                text = <"*Ritmo cardíaco (pt-br)">
-                description = <"*Ritmo cardíaco (pt-br)">
+                text = <"Heart rate">
+                description = <"Heart rate">
             >
             ["ac14"] = <
                 text = <"*Ritmo cardíaco (pt-br)">
                 description = <"*Ritmo cardíaco (pt-br)">
             >
             ["id48"] = <
-                text = <"*Ausculta pulmonar (pt-br)">
-                description = <"*Ausculta pulmonar (pt-br)">
+                text = <"Pulmonary auscultation">
+                description = <"Pulmonary auscultation">
             >
             ["ac15"] = <
                 text = <"*Ausculta pulmonar (pt-br)">
                 description = <"*Ausculta pulmonar (pt-br)">
             >
             ["id50"] = <
-                text = <"*Ausculta respiratória (pt-br)">
-                description = <"*Ausculta respiratória (pt-br)">
+                text = <"Respiratory auscultation">
+                description = <"Respiratory auscultation">
             >
             ["ac16"] = <
                 text = <"*Ausculta respiratória (pt-br)">
                 description = <"*Ausculta respiratória (pt-br)">
             >
             ["id52"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id54"] = <
-                text = <"*Outras deformidades (pt-br)">
-                description = <"*Outras deformidades (pt-br)">
+                text = <"Other deformities">
+                description = <"Other deformities">
             >
             ["id56"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id58"] = <
-                text = <"*Abdômen (pt-br)">
-                description = <"*Abdômen (pt-br)">
+                text = <"Abdomen">
+                description = <"Abdomen">
             >
             ["id59"] = <
-                text = <"*Inspeção (pt-br)">
-                description = <"*Inspeção (pt-br)">
+                text = <"Inspection">
+                description = <"Inspection">
             >
             ["ac17"] = <
                 text = <"*Inspeção (pt-br)">
                 description = <"*Inspeção (pt-br)">
             >
             ["id61"] = <
-                text = <"*Palpação (pt-br)">
-                description = <"*Palpação (pt-br)">
+                text = <"Palpation">
+                description = <"Palpation">
             >
             ["ac18"] = <
                 text = <"*Palpação (pt-br)">
                 description = <"*Palpação (pt-br)">
             >
             ["id63"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id65"] = <
                 text = <"*Hérnia umbilical (pt-br)">
@@ -1234,8 +1234,8 @@ terminology
                 description = <"*Hérnia incisional (pt-br)">
             >
             ["id73"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id75"] = <
                 text = <"*Coluna (pt-br)">
@@ -1250,8 +1250,8 @@ terminology
                 description = <"*Inspeção (pt-br)">
             >
             ["id79"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id81"] = <
                 text = <"*Deformidade (pt-br)">
@@ -1278,8 +1278,8 @@ terminology
                 description = <"*Localização da dor (pt-br)">
             >
             ["id89"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id91"] = <
                 text = <"*Irradiação escapular (pt-br)">
@@ -1334,8 +1334,8 @@ terminology
                 description = <"*Outras irradiações (pt-br)">
             >
             ["id106"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id109"] = <
                 text = <"*Membros (pt-br)">
@@ -1366,8 +1366,8 @@ terminology
                 description = <"*Palpação (pt-br)">
             >
             ["id116"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["ac35"] = <
                 text = <"*Especificar (pt-br)">
@@ -1394,8 +1394,8 @@ terminology
                 description = <"*Deformidade (pt-br)">
             >
             ["id125"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id127"] = <
                 text = <"*Prótese/órtese (pt-br)">
@@ -1434,8 +1434,8 @@ terminology
                 description = <"*Varizes ausentes (pt-br)">
             >
             ["id137"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id139"] = <
                 text = <"*Psiquismo (pt-br)">
@@ -1474,8 +1474,8 @@ terminology
                 description = <"*Humor (pt-br)">
             >
             ["id144"] = <
-                text = <"*Especificar (pt-br)">
-                description = <"*Especificar (pt-br)">
+                text = <"To specify">
+                description = <"To specify">
             >
             ["id146"] = <
                 text = <"*Resultado do SRQ 20 (pt-br)">
