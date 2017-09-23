@@ -50,6 +50,7 @@ definition
         }
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-fco_dados_identificacao-admission_SESI-BR-001.v1.0.0]
+            use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-fco_dados_identificacao-dados_socioeconomicos-001.v1.0.0]
         }
     }
 
@@ -173,10 +174,19 @@ definition
                     }
                 }
             }
-            ELEMENT[id14] occurrences matches {0..1} matches {
-                /value[id140]/defining_code matches {[ac6]}
+            ELEMENT[id14.0.1] occurrences matches {0} matches {    -- Admission type
+                value matches {
+                    DV_CODED_TEXT[id140.0.1] matches {
+                        defining_code matches {[ac6]}
+                    }
+                }
             }
-            CLUSTER[id95] occurrences matches {0..1} matches {
+            ELEMENT[id24.0.1] occurrences matches {0} matches {    -- Pre-admit number
+                value matches {
+                    DV_TEXT[id141.0.1] 
+                }
+            }
+            CLUSTER[id95.0.1] occurrences matches {0} matches {    -- Prior patient location
                 items matches {
                     CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
@@ -189,7 +199,7 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                         }
                     }
-                    CLUSTER[id96] occurrences matches {0..1} matches {
+                    CLUSTER[id96.0.1] occurrences matches {0} matches {    -- Adress
                         items matches {
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -227,7 +237,26 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
             }
-            CLUSTER[id26] occurrences matches {0..1} matches {
+            CLUSTER[id99.0.1] occurrences matches {0} matches {    -- Attending doctor
+                items matches {
+                    ELEMENT[id100.0.1] occurrences matches {0} matches {    -- ID
+                        value matches {
+                            DV_TEXT[id157.0.1] 
+                        }
+                    }
+                    ELEMENT[id101.0.1] occurrences matches {0} matches {    -- Family name
+                        value matches {
+                            DV_TEXT[id158.0.1] 
+                        }
+                    }
+                    ELEMENT[id121.0.1] occurrences matches {0} matches {    -- Last name
+                        value matches {
+                            DV_TEXT[id159.0.1] 
+                        }
+                    }
+                }
+            }
+            CLUSTER[id26.0.1] occurrences matches {0} matches {    -- Referring doctor
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -238,7 +267,7 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id122] matches {
+            CLUSTER[id122.0.1] occurrences matches {0} matches {    -- Consulting doctor
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -247,6 +276,16 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            ELEMENT[id42.0.1] occurrences matches {0} matches {    -- Hospital service
+                value matches {
+                    DV_TEXT[id166.0.1] 
+                }
+            }
+            ELEMENT[id50.0.1] occurrences matches {0} matches {    -- Admit source
+                value matches {
+                    DV_TEXT[id167.0.1] 
                 }
             }
             CLUSTER[id52] occurrences matches {0..1} matches {
@@ -260,13 +299,26 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            ELEMENT[id62] occurrences matches {0..1} matches {
-                /value[id171]/defining_code matches {[ac7]}
+            ELEMENT[id62.0.1] occurrences matches {0} matches {    -- Financial class
+                value matches {
+                    DV_CODED_TEXT[id171.0.1] matches {
+                        defining_code matches {[ac7]}
+                    }
+                }
             }
-            ELEMENT[id67] occurrences matches {0..1} matches {
-                /value[id172]/defining_code matches {[ac2]}
+            ELEMENT[id67.0.1] occurrences matches {0} matches {    -- Charge price indicator
+                value matches {
+                    DV_CODED_TEXT[id172.0.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            CLUSTER[id0.4] occurrences matches {0..1} matches {
+            ELEMENT[id72.0.1] occurrences matches {0} matches {    -- Admit date/time
+                value matches {
+                    DV_DATE_TIME[id173.0.1] 
+                }
+            }
+            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Identificação
                 items matches {
                     ELEMENT[id0.7] occurrences matches {1} matches {
                         /value[id0.8]/defining_code matches {[ac0.1]}
@@ -288,6 +340,10 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
+            ["id0.4"] = <
+                text = <"Identificação">
+                description = <"Identificação">
+            >
             ["id1.1.1"] = <
                 text = <"Patient admission">
                 description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
@@ -360,8 +416,72 @@ terminology
                 text = <"Country">
                 description = <"*">
             >
+            ["id14.0.1"] = <
+                text = <"Admission type">
+                description = <"The circumstance under which the patient will be admitted.">
+            >
+            ["id24.0.1"] = <
+                text = <"Pre-admit number">
+                description = <"ID number of patient's pre-admission">
+            >
+            ["id95.0.1"] = <
+                text = <"Prior patient location">
+                description = <"The patient location prior admission">
+            >
+            ["id99.0.1"] = <
+                text = <"Attending doctor">
+                description = <"The attending doctor providing services to thepatient">
+            >
+            ["id26.0.1"] = <
+                text = <"Referring doctor">
+                description = <"Clinician who referred patient to the consulting doctor">
+            >
+            ["id122.0.1"] = <
+                text = <"Consulting doctor">
+                description = <"Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer">
+            >
+            ["id96.0.1"] = <
+                text = <"Adress">
+                description = <"*">
+            >
+            ["id100.0.1"] = <
+                text = <"ID">
+                description = <"*">
+            >
+            ["id101.0.1"] = <
+                text = <"Family name">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"Last name">
+                description = <"*">
+            >
+            ["id42.0.1"] = <
+                text = <"Hospital service">
+                description = <"For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.">
+            >
+            ["id50.0.1"] = <
+                text = <"Admit source">
+                description = <"Refer to NHDD 000385 Mode of admission andNHDD 000150 Source of referral to public psychiatric hospital">
+            >
+            ["id62.0.1"] = <
+                text = <"Financial class">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"Charge price indicator">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"Admit date/time">
+                description = <"Date/time the patient was admitted.">
+            >
         >
         ["ar-sy"] = <
+            ["id0.4"] = <
+                text = <"Identificação (en)">
+                description = <"Identificação (en)">
+            >
             ["id1.1.1"] = <
                 text = <"إدخال المريض">
                 description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
@@ -434,8 +554,72 @@ terminology
                 text = <"الدولة/البلد">
                 description = <"*">
             >
+            ["id14.0.1"] = <
+                text = <"نوع الإدخال">
+                description = <"الظروف التي يتم إدخال المريض تحتها">
+            >
+            ["id24.0.1"] = <
+                text = <"رقم ما قبل الإدخال">
+                description = <"الرقم التعريفي للمريض ما قبل الإدخال">
+            >
+            ["id95.0.1"] = <
+                text = <"المكان السابق للمريض">
+                description = <"المكان السابق للمريض">
+            >
+            ["id99.0.1"] = <
+                text = <"الطبيب الحاضر">
+                description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
+            >
+            ["id26.0.1"] = <
+                text = <"الطبيب صاحب الإحالة">
+                description = <"الطبيب الذي قام بإحالة المريض إلى الطبيب الاستشاري">
+            >
+            ["id122.0.1"] = <
+                text = <"الطبيب الاستشاري">
+                description = <"الطبيب الاستشاري المسئول عن تقديم الرعاية للمريض, بنا قي ذلك الأخصائي الذي يعمل بأجر, و المسئول الطبي الزائر">
+            >
+            ["id96.0.1"] = <
+                text = <"العنوان">
+                description = <"*">
+            >
+            ["id100.0.1"] = <
+                text = <"العتصر التعريفي">
+                description = <"*">
+            >
+            ["id101.0.1"] = <
+                text = <"اسم العائلة">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"الاسم الأخير">
+                description = <"*">
+            >
+            ["id42.0.1"] = <
+                text = <"خدمة المستشفى">
+                description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: CARDO1">
+            >
+            ["id50.0.1"] = <
+                text = <"مصدر الإدخال">
+                description = <"برجاء الرجوع إلى طريق الإدخال في NHDD 000385 و مصدر الإحالة إلى المستشفى النفسي العامNHDD 000150">
+            >
+            ["id62.0.1"] = <
+                text = <"الدرجة الاقتصادية">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"مؤشر ثمن الرعاية">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"وقت/ تاريخ الإدخال">
+                description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
+            >
         >
         ["pt-br"] = <
+            ["id0.4"] = <
+                text = <"Identificação (en)">
+                description = <"Identificação (en)">
+            >
             ["id1.1.1"] = <
                 text = <"Admissão ">
                 description = <"Usado apenas para registro de dados">
@@ -507,6 +691,146 @@ terminology
             ["id90.0.1"] = <
                 text = <"País">
                 description = <"*">
+            >
+            ["id14.0.1"] = <
+                text = <"Tipo de admissão">
+                description = <"A circunstância sob a qual o paciente será admitido.">
+            >
+            ["id24.0.1"] = <
+                text = <"Número de pré-admissão">
+                description = <"Número de identificação da pré-admissão do paciente.">
+            >
+            ["id95.0.1"] = <
+                text = <"Localização anterior do paciente">
+                description = <"A localização do paciente antes da admissão.">
+            >
+            ["id99.0.1"] = <
+                text = <"Médico assistente">
+                description = <"O médico assistente que presta serviços ao paciente.">
+            >
+            ["id26.0.1"] = <
+                text = <"Referência médica">
+                description = <"Clínico que encaminhou o paciente para o médico.">
+            >
+            ["id122.0.1"] = <
+                text = <"Médico consultor">
+                description = <"Consultor responsável pelo atendimento do paciente, incluindo especialista assalariado e médico visitante.">
+            >
+            ["id96.0.1"] = <
+                text = <"Endereço">
+                description = <"*">
+            >
+            ["id100.0.1"] = <
+                text = <"Código de Identificação">
+                description = <"*">
+            >
+            ["id101.0.1"] = <
+                text = <"Sobrenome">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"Último nome">
+                description = <"*">
+            >
+            ["id42.0.1"] = <
+                text = <"Serviço hospitalar">
+                description = <"Para uso local, este campo possui o tipo de unidade organizacional ou unidade clínica, e. CARDO1.">
+            >
+            ["id50.0.1"] = <
+                text = <"Origem da admissão">
+                description = <"* Consulte o NHDD 000385 Modo de admissão e HDD 000150. Fonte de referência para o hospital psiquiátrico público.">
+            >
+            ["id62.0.1"] = <
+                text = <"Classe financeira">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"Indicador de preço">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"Data/hora de admissão">
+                description = <"Data/hora que o paciente foi admitido.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-fco_dados_identificacao-dados_socioeconomicos-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Dados socioeconômicos
+        /data[id2]/items matches {
+            ELEMENT[id3] occurrences matches {1} matches {
+                /value[id4]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id5] occurrences matches {1} matches {
+                /value[id6]/value matches {True, False}
+            }
+            ELEMENT[id7] occurrences matches {1} matches {
+                /value[id8]/defining_code matches {[ac2]}
+            }
+            CLUSTER[id10] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id14] occurrences matches {1} matches {
+                        /value[id15]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id16] occurrences matches {1} matches {
+                        /value[id17]/defining_code matches {[ac4]}
+                    }
+                    ELEMENT[id18] occurrences matches {1} matches {
+                        /value[id19]/value matches {True, False}
+                    }
+                    CLUSTER[id20] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id21] occurrences matches {0..1} matches {
+                                /value[id22]/value matches {True, False}
+                            }
+                            ELEMENT[id23] occurrences matches {0..1} matches {
+                                /value[id24]/value matches {True, False}
+                            }
+                            ELEMENT[id25] occurrences matches {0..1} matches {
+                                /value[id26]/value matches {True, False}
+                            }
+                            ELEMENT[id27] occurrences matches {0..1} matches {
+                                /value[id28]/value matches {True, False}
+                            }
+                            ELEMENT[id30] occurrences matches {0..1} matches {
+                                /value[id31]/value matches {True, False}
+                            }
+                            ELEMENT[id32] occurrences matches {0..1} matches {
+                                /value[id33]/value matches {True, False}
+                            }
+                            ELEMENT[id34] occurrences matches {0..1} matches {
+                                /value[id35]/value matches {True, False}
+                            }
+                            ELEMENT[id36] occurrences matches {0..1} matches {
+                                /value[id37]/value matches {True, False}
+                            }
+                            ELEMENT[id38] occurrences matches {0..1} matches {
+                                /value[id39]/value matches {True, False}
+                            }
+                            ELEMENT[id40] occurrences matches {0..1} matches {
+                                /value[id41]/value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados socioeconômicos">
+                description = <"dados socioeconomicos">
             >
         >
     >
