@@ -90,6 +90,8 @@ definition
                         items matches {
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -101,6 +103,10 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -108,6 +114,12 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
                     use_node ELEMENT /data[id2]/items[id74]/items[id80]
@@ -127,6 +139,8 @@ definition
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -136,6 +150,8 @@ definition
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -143,6 +159,8 @@ definition
             }
             CLUSTER[id52] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
@@ -418,6 +436,10 @@ terminology
                 text = <"Tipo de exame">
                 description = <"Tipo de exame">
             >
+            ["id104"] = <
+                text = <"Location description">
+                description = <"*">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -576,6 +598,10 @@ terminology
                 text = <"Tipo de exame (en)">
                 description = <"Tipo de exame (en)">
             >
+            ["id104"] = <
+                text = <"وصف الموقع">
+                description = <"*">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -595,20 +621,20 @@ terminology
                 description = <"Registre o estado civil">
             >
             ["at0.1"] = <
-                text = <"Casado/Vive junto (en)">
-                description = <"Casado/Vive junto (en)">
+                text = <"Casado/Vive junto">
+                description = <"Casado/Vive junto">
             >
             ["at0.2"] = <
-                text = <"Solteiro (en)">
-                description = <"Solteiro (en)">
+                text = <"Solteiro">
+                description = <"Solteiro">
             >
             ["at0.3"] = <
-                text = <"Divorciado (en)">
-                description = <"Divorciado (en)">
+                text = <"Divorciado">
+                description = <"Divorciado">
             >
             ["at0.4"] = <
-                text = <"Viúvo (en)">
-                description = <"Viúvo (en)">
+                text = <"Viúvo">
+                description = <"Viúvo">
             >
             ["ac0.1"] = <
                 text = <"Estado civil (en)">
@@ -619,20 +645,20 @@ terminology
                 description = <"Raça/Cor">
             >
             ["at0.5"] = <
-                text = <"Branco (en)">
-                description = <"Branco (en)">
+                text = <"Branco">
+                description = <"Branco">
             >
             ["at0.6"] = <
-                text = <"Preto (en)">
-                description = <"Preto (en)">
+                text = <"Preto">
+                description = <"Preto">
             >
             ["at0.7"] = <
-                text = <"Amarelo (en)">
-                description = <"Amarelo (en)">
+                text = <"Amarelo">
+                description = <"Amarelo">
             >
             ["at0.8"] = <
-                text = <"Pardo (en)">
-                description = <"Pardo (en)">
+                text = <"Pardo">
+                description = <"Pardo">
             >
             ["at0.9"] = <
                 text = <"Indígena (en)">
@@ -733,6 +759,10 @@ terminology
             ["ac0.3"] = <
                 text = <"Tipo de exame (en)">
                 description = <"Tipo de exame (en)">
+            >
+            ["id104"] = <
+                text = <"Descrição da localização">
+                description = <"">
             >
         >
     >
