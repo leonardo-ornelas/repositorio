@@ -52,7 +52,7 @@ definition
                             }
                         }
                     }
-                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
+                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Domicile and family data
                         items matches {
                             ELEMENT[id14] occurrences matches {1} matches {    -- Type of residence
                                 value matches {
@@ -264,8 +264,8 @@ terminology
                 description = <"Faixa de renda mensal">
             >
             ["id10"] = <
-                text = <"Dados do domicílio e da família">
-                description = <"Dados do domicílio e da família">
+                text = <"Domicile and family data">
+                description = <"Domicile and family data">
             >
             ["id14"] = <
                 text = <"Type of residence">
@@ -482,8 +482,8 @@ terminology
                 description = <"*Faixa de renda mensal (pt-br)">
             >
             ["id10"] = <
-                text = <"*Dados do domicílio e da família (pt-br)">
-                description = <"*Dados do domicílio e da família (pt-br)">
+                text = <"Dados do domicílio e da família">
+                description = <"Dados do domicílio e da família">
             >
             ["id14"] = <
                 text = <"Tipo de residência">
