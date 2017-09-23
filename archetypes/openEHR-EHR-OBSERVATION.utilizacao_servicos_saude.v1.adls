@@ -37,6 +37,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id10] occurrences matches {1} matches {    -- Quantas vezes o trabalhador esteve internado nos ultimos 12 meses
+                                        value matches {
+                                            DV_CODED_TEXT[id11] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -111,6 +118,10 @@ terminology
             ["ac2"] = <
                 text = <"Visita Dentista">
                 description = <"Visita Dentista">
+            >
+            ["id10"] = <
+                text = <"Quantas vezes o trabalhador esteve internado nos ultimos 12 meses">
+                description = <"Quantas vezes o trabalhador esteve internado nos ultimos 12 meses">
             >
         >
     >
