@@ -89,6 +89,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id25] occurrences matches {0..1} matches {    -- Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)
+                                                value matches {
+                                                    DV_CODED_TEXT[id26] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -245,6 +252,10 @@ terminology
             ["id23"] = <
                 text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
                 description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25"] = <
+                text = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
             >
         >
     >
