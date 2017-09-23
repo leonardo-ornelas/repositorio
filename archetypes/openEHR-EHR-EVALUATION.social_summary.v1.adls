@@ -64,10 +64,14 @@ definition
                         include
                             archetype_id/value matches {/.*/}
                     }
-                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Em geral, quantos dias da semana o trabalhador trabalha
-                        value matches {
-                            DV_CODED_TEXT[id7] matches {
-                                defining_code matches {[ac1]}
+                    CLUSTER[id8] occurrences matches {0..1} matches {    -- Características do trabalho
+                        items matches {
+                            ELEMENT[id9] occurrences matches {0..1} matches {    -- Em geral, quantos dias da semana o trabalhador trabalha?
+                                value matches {
+                                    DV_CODED_TEXT[id10] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
                             }
                         }
                     }
@@ -90,10 +94,6 @@ terminology
             ["id4"] = <
                 text = <"Social Summary Detail">
                 description = <"Structured details about the social circumstances and experiences.">
-            >
-            ["id6"] = <
-                text = <"Em geral, quantos dias da semana o trabalhador trabalha">
-                description = <"Em geral, quantos dias da semana o trabalhador trabalha">
             >
             ["at1"] = <
                 text = <"a 2 dias">
@@ -119,6 +119,14 @@ terminology
                 text = <"Dias trabalhados">
                 description = <"Dias trabalhados">
             >
+            ["id8"] = <
+                text = <"Características do trabalho">
+                description = <"Características do trabalho">
+            >
+            ["id9"] = <
+                text = <"Em geral, quantos dias da semana o trabalhador trabalha?">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha?">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -132,10 +140,6 @@ terminology
             ["id4"] = <
                 text = <"Resumo de resumo social">
                 description = <"Detalhes estruturados sobre as circunstâncias e experiências sociais.">
-            >
-            ["id6"] = <
-                text = <"Em geral, quantos dias da semana o trabalhador trabalha (en)">
-                description = <"Em geral, quantos dias da semana o trabalhador trabalha (en)">
             >
             ["at1"] = <
                 text = <"a 2 dias (en)">
@@ -160,6 +164,14 @@ terminology
             ["ac1"] = <
                 text = <"Dias trabalhados (en)">
                 description = <"Dias trabalhados (en)">
+            >
+            ["id8"] = <
+                text = <"Características do trabalho (en)">
+                description = <"Características do trabalho (en)">
+            >
+            ["id9"] = <
+                text = <"Em geral, quantos dias da semana o trabalhador trabalha? (en)">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha? (en)">
             >
         >
     >
