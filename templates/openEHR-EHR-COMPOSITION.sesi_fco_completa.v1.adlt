@@ -1219,7 +1219,20 @@ definition
                 }
             }
             CLUSTER[id27] matches {
-                /items[id57]/value[id95]/defining_code matches {[ac1]}
+                items matches {
+                    ELEMENT[id29.0.1] occurrences matches {0} matches {    -- Related item
+                        value matches {
+                            DV_TEXT[id94.0.1] 
+                        }
+                    }
+                    ELEMENT[id57.0.1] occurrences matches {0} matches {    -- Relationship type
+                        value matches {
+                            DV_CODED_TEXT[id95.0.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                }
             }
             ELEMENT[id31.0.1] occurrences matches {0} matches {    -- Date of resolution/remission
                 value matches {
@@ -1315,6 +1328,14 @@ terminology
                 text = <"Link to supporting clinical evidence">
                 description = <"Links to other relevant information, including pathology reports.">
             >
+            ["id57.0.1"] = <
+                text = <"Relationship type">
+                description = <"The type of relationship that this problem/diagnosis has to the related item.">
+            >
+            ["id29.0.1"] = <
+                text = <"Related item">
+                description = <"Identification of a related problem, diagnosis, procedure, or event as text, coded text or link within the health record. Note: It is desirable that this field should be coded using terminology, wherever possible.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1372,6 +1393,14 @@ terminology
             ["id76.0.1"] = <
                 text = <"Link de suporte de evidência clínica">
                 description = <"Links para outras informações relevantes, incluindo relatórios de patologia.">
+            >
+            ["id57.0.1"] = <
+                text = <"Tipo de relacionamento">
+                description = <"O tipo de relacionamento que este problema / diagnóstico tem com o item relacionado.">
+            >
+            ["id29.0.1"] = <
+                text = <"Item relacionado">
+                description = <"Identificação de um problema relacionado, diagnóstico, procedimento ou evento como texto, texto codificado ou link dentro do registro de saúde. Nota: É desejável que este campo seja codificado usando terminologia, sempre que possível.">
             >
         >
     >
