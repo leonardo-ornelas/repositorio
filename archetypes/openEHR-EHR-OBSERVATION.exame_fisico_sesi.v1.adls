@@ -1358,8 +1358,8 @@ terminology
                 description = <"*Especificar (pt-br)">
             >
             ["id114"] = <
-                text = <"*Palpação (pt-br)">
-                description = <"*Palpação (pt-br)">
+                text = <"Palpation">
+                description = <"Palpation">
             >
             ["ac34"] = <
                 text = <"*Palpação (pt-br)">
@@ -1398,8 +1398,8 @@ terminology
                 description = <"To specify">
             >
             ["id127"] = <
-                text = <"*Prótese/órtese (pt-br)">
-                description = <"*Prótese/órtese (pt-br)">
+                text = <"Prosthesis / bracing">
+                description = <"Prosthesis / bracing">
             >
             ["ac38"] = <
                 text = <"*Prótese/órtese (pt-br)">
