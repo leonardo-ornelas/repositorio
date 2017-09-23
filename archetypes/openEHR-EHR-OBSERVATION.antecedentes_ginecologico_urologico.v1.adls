@@ -34,7 +34,9 @@ definition
                                 items matches {
                                     ELEMENT[id6] occurrences matches {1} matches {    -- Date of last menstruation - DUM
                                         value matches {
-                                            DV_TEXT[id7] 
+                                            DV_DATE[id22] matches {
+                                                value matches {*}
+                                            }
                                         }
                                     }
                                     ELEMENT[id8] occurrences matches {1} matches {    -- Gynecological Preventive
