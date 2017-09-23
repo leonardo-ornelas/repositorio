@@ -66,6 +66,17 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id18] occurrences matches {0..1} matches {    -- Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.
+                                        items matches {
+                                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)
+                                                value matches {
+                                                    DV_CODED_TEXT[id20] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -204,6 +215,14 @@ terminology
             ["ac4"] = <
                 text = <"Interferiu no trabalho">
                 description = <"Interferiu no trabalho">
+            >
+            ["id18"] = <
+                text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+                description = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+            >
+            ["id19"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
             >
         >
     >
