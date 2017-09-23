@@ -58,6 +58,27 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id16] occurrences matches {1} matches {    -- Percebe que está difícil superar as suas dificuldades
+                                        value matches {
+                                            DV_CODED_TEXT[id17] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {1} matches {    -- É capaz de desfrutar de atividades normais de cada dia
+                                        value matches {
+                                            DV_CODED_TEXT[id19] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {1} matches {    -- Tem sido capaz de enfrentar seus problemas
+                                        value matches {
+                                            DV_CODED_TEXT[id21] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -140,6 +161,18 @@ terminology
             ["id14"] = <
                 text = <"Se sente contentemente agoniado(a) ou tenso(a)">
                 description = <"Se sente contentemente agoniado(a) ou tenso(a)">
+            >
+            ["id16"] = <
+                text = <"Percebe que está difícil superar as suas dificuldades">
+                description = <"Percebe que está difícil superar as suas dificuldades">
+            >
+            ["id18"] = <
+                text = <"É capaz de desfrutar de atividades normais de cada dia">
+                description = <"É capaz de desfrutar de atividades normais de cada dia">
+            >
+            ["id20"] = <
+                text = <"Tem sido capaz de enfrentar seus problemas">
+                description = <"Tem sido capaz de enfrentar seus problemas">
             >
         >
     >
