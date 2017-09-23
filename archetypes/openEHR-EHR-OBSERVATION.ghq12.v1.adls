@@ -21,7 +21,7 @@ definition
                 events matches {
                     EVENT[id3] matches {    -- Any event
                         data matches {
-                            ITEM_TREE[id4] matches {
+                            ITEM_TREE[id4] occurrences matches {1} matches {
                                 items matches {
                                     ELEMENT[id6] occurrences matches {1} matches {    -- Se mantém atento as coisas que está fazendo
                                         value matches {
@@ -30,6 +30,7 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {0..1}     -- Perde o sono por preocupação
                                 }
                             }
                         }
@@ -76,6 +77,10 @@ terminology
             ["ac1"] = <
                 text = <"Costume">
                 description = <"Costume">
+            >
+            ["id8"] = <
+                text = <"Perde o sono por preocupação">
+                description = <"Perde o sono por preocupação">
             >
         >
     >
