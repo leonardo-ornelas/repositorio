@@ -168,6 +168,11 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.11] occurrences matches {1} matches {    -- Telefone
+                        value matches {
+                            DV_TEXT[id0.12] 
+                        }
+                    }
                 }
             }
         }
@@ -240,6 +245,10 @@ terminology
                 text = <"Raça/Cor">
                 description = <"Raça/Cor">
             >
+            ["id0.11"] = <
+                text = <"Telefone">
+                description = <"Telefone">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -306,6 +315,10 @@ terminology
                 text = <"Raça/Cor (en)">
                 description = <"Raça/Cor (en)">
             >
+            ["id0.11"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -371,6 +384,10 @@ terminology
             ["ac0.2"] = <
                 text = <"Raça/Cor (en)">
                 description = <"Raça/Cor (en)">
+            >
+            ["id0.11"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
             >
         >
     >
