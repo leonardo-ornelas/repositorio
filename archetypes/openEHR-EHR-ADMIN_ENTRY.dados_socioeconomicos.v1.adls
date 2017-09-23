@@ -386,40 +386,40 @@ terminology
                 description = <"Informe o nível de escolaridade">
             >
             ["at1"] = <
-                text = <"*Nunca estudou (pt-br)">
-                description = <"*Nunca estudou (pt-br)">
+                text = <"Nunca estudou">
+                description = <"Nunca estudou">
             >
             ["at2"] = <
-                text = <"*1ª série do ensino fundamental (pt-br)">
-                description = <"*1ª série do ensino fundamental (pt-br)">
+                text = <"1ª série do ensino fundamental">
+                description = <"1ª série do ensino fundamental">
             >
             ["at3"] = <
                 text = <"*2ª série do ensino fundamental (pt-br)">
                 description = <"*2ª série do ensino fundamental (pt-br)">
             >
             ["at4"] = <
-                text = <"*3ª série do ensino fundamental (pt-br)">
-                description = <"*3ª série do ensino fundamental (pt-br)">
+                text = <"3ª série do ensino fundamental">
+                description = <"3ª série do ensino fundamental">
             >
             ["at5"] = <
-                text = <"*4ª série do ensino fundamental (pt-br)">
-                description = <"*4ª série do ensino fundamental (pt-br)">
+                text = <"4ª série do ensino fundamental">
+                description = <"4ª série do ensino fundamental">
             >
             ["at6"] = <
-                text = <"*5ª série do ensino fundamental (pt-br)">
-                description = <"*5ª série do ensino fundamental (pt-br)">
+                text = <"5ª série do ensino fundamental">
+                description = <"5ª série do ensino fundamental">
             >
             ["at7"] = <
-                text = <"*6ª série do ensino fundamental (pt-br)">
-                description = <"*6ª série do ensino fundamental (pt-br)">
+                text = <"6ª série do ensino fundamental">
+                description = <"6ª série do ensino fundamental">
             >
             ["at8"] = <
-                text = <"*7ª série do ensino fundamental (pt-br)">
-                description = <"*7ª série do ensino fundamental (pt-br)">
+                text = <"7ª série do ensino fundamental">
+                description = <"7ª série do ensino fundamental">
             >
             ["at9"] = <
-                text = <"*8ª série do ensino fundamental (pt-br)">
-                description = <"*8ª série do ensino fundamental (pt-br)">
+                text = <"8ª série do ensino fundamental">
+                description = <"8ª série do ensino fundamental">
             >
             ["at10"] = <
                 text = <"*1ª série do ensino médio (pt-br)">
