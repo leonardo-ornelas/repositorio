@@ -3,6 +3,15 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +19,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -362,6 +374,224 @@ terminology
             ["id40"] = <
                 text = <"Acesso à internet">
                 description = <"Acesso à internet">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*dados socioeconomicos (pt-br)">
+                description = <"*dados socioeconomicos (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Nível de escolaridade (pt-br)">
+                description = <"*Informe o nível de escolaridade (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Nunca estudou (pt-br)">
+                description = <"*Nunca estudou (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*1ª série do ensino fundamental (pt-br)">
+                description = <"*1ª série do ensino fundamental (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*2ª série do ensino fundamental (pt-br)">
+                description = <"*2ª série do ensino fundamental (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*3ª série do ensino fundamental (pt-br)">
+                description = <"*3ª série do ensino fundamental (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*4ª série do ensino fundamental (pt-br)">
+                description = <"*4ª série do ensino fundamental (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*5ª série do ensino fundamental (pt-br)">
+                description = <"*5ª série do ensino fundamental (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*6ª série do ensino fundamental (pt-br)">
+                description = <"*6ª série do ensino fundamental (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*7ª série do ensino fundamental (pt-br)">
+                description = <"*7ª série do ensino fundamental (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*8ª série do ensino fundamental (pt-br)">
+                description = <"*8ª série do ensino fundamental (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*1ª série do ensino médio (pt-br)">
+                description = <"*1ª série do ensino médio (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*2ª série do ensino médio (pt-br)">
+                description = <"*2ª série do ensino médio (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*3ª série do ensino médio (pt-br)">
+                description = <"*3ª série do ensino médio (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Superior incompleto (pt-br)">
+                description = <"*Superior incompleto (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Superior completo (pt-br)">
+                description = <"*Superior completo (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Pós-graduação (pt-br)">
+                description = <"*Pós-graduação (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Nível de escolaridade (pt-br)">
+                description = <"*Nível de escolaridade (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Atualmente frequenta escola (pt-br)">
+                description = <"*Informe se atualmente frequenta a escola (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Faixa de renda mensal (pt-br)">
+                description = <"*Informe a renda mensal (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Menos de 1 SM (pt-br)">
+                description = <"*Menos de 1 SM (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*De 1 SM  a 3 SM (pt-br)">
+                description = <"*De 1 SM  a 3 SM (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Maior que  3 SM a 5 SM (pt-br)">
+                description = <"*Maior que  3 SM a 5 SM (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Maior que 5 SM até 10 SM (pt-br)">
+                description = <"*Maior que 5 SM até 10 SM (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Maior que 10 SM (pt-br)">
+                description = <"*Maior que 10 SM (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Faixa de renda mensal (pt-br)">
+                description = <"*Faixa de renda mensal (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*Dados do domicílio e da família (pt-br)">
+                description = <"*Dados do domicílio e da família (pt-br)">
+            >
+            ["id14"] = <
+                text = <"*Tipo de residência (pt-br)">
+                description = <"*Tipo de residência (pt-br)">
+            >
+            ["at21"] = <
+                text = <"*Própria (pt-br)">
+                description = <"*Própria (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Alugada (pt-br)">
+                description = <"*Alugada (pt-br)">
+            >
+            ["at23"] = <
+                text = <"*Emprestada (pt-br)">
+                description = <"*Emprestada (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Tipo de residência (pt-br)">
+                description = <"*Tipo de residência (pt-br)">
+            >
+            ["id16"] = <
+                text = <"*Quantas pessoas vivem na casa (pt-br)">
+                description = <"*Quantas pessoas vivem na casa (pt-br)">
+            >
+            ["at24"] = <
+                text = <"*Mora sozinho (a) (pt-br)">
+                description = <"*Mora sozinho (a) (pt-br)">
+            >
+            ["at25"] = <
+                text = <"*2 (pt-br)">
+                description = <"*2 (pt-br)">
+            >
+            ["at26"] = <
+                text = <"*3 (pt-br)">
+                description = <"*3 (pt-br)">
+            >
+            ["at27"] = <
+                text = <"*4 (pt-br)">
+                description = <"*4 (pt-br)">
+            >
+            ["at28"] = <
+                text = <"*5 (pt-br)">
+                description = <"*5 (pt-br)">
+            >
+            ["at29"] = <
+                text = <"*6 (pt-br)">
+                description = <"*6 (pt-br)">
+            >
+            ["at30"] = <
+                text = <"*7 (pt-br)">
+                description = <"*7 (pt-br)">
+            >
+            ["at31"] = <
+                text = <"*8 ou mais pessoas (pt-br)">
+                description = <"*8 ou mais pessoas (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Quantas pessoas vivem na casa (pt-br)">
+                description = <"*Quantas pessoas vivem na casa (pt-br)">
+            >
+            ["id18"] = <
+                text = <"*Chefe de família (pt-br)">
+                description = <"*Chefe de família (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Itens presentes na residência (pt-br)">
+                description = <"*Itens presentes na residência (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Telefone Fixo (pt-br)">
+                description = <"*Telefone Fixo (pt-br)">
+            >
+            ["id23"] = <
+                text = <"*Telefone Celular (pt-br)">
+                description = <"*Telefone Celular (pt-br)">
+            >
+            ["id25"] = <
+                text = <"*Fogão (pt-br)">
+                description = <"*Fogão (pt-br)">
+            >
+            ["id27"] = <
+                text = <"*Rádio (pt-br)">
+                description = <"*Rádio (pt-br)">
+            >
+            ["id30"] = <
+                text = <"*Televisão colorida (pt-br)">
+                description = <"*Televisão colorida (pt-br)">
+            >
+            ["id32"] = <
+                text = <"*Geladeira (pt-br)">
+                description = <"*Geladeira (pt-br)">
+            >
+            ["id34"] = <
+                text = <"*Máquina de lavar roupas (pt-br)">
+                description = <"*Máquina de lavar roupas (pt-br)">
+            >
+            ["id36"] = <
+                text = <"*Freezer (pt-br)">
+                description = <"*Freezer (pt-br)">
+            >
+            ["id38"] = <
+                text = <"*Computador (pt-br)">
+                description = <"*Computador (pt-br)">
+            >
+            ["id40"] = <
+                text = <"*Acesso à internet (pt-br)">
+                description = <"*Acesso à internet (pt-br)">
             >
         >
     >
