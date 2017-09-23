@@ -34,11 +34,11 @@ description
     >
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- utilizacao_servicos_saude
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Utilização Serviços de Saúde
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -93,12 +93,12 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"utilizacao_servicos_saude">
-                description = <"utilizacao_servicos_saude">
+                text = <"Utilização Serviços de Saúde">
+                description = <"Utilização Serviços de Saúde">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
                 text = <"Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses">
@@ -211,116 +211,116 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*utilizacao_servicos_saude (pt-br)">
-                description = <"*utilizacao_servicos_saude (pt-br)">
+                text = <"Health Services Utilization">
+                description = <"Health Services Utilization">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses (pt-br)">
-                description = <"*Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses (pt-br)">
+                text = <"How many times has the worker consulted the doctor in the last 12 months">
+                description = <"How many times has the worker consulted the doctor in the last 12 months">
             >
             ["at1"] = <
-                text = <"*Nenhuma (pt-br)">
-                description = <"*Nenhuma (pt-br)">
+                text = <"None">
+                description = <"None">
             >
             ["at2"] = <
-                text = <"*1 a 2 vezes (pt-br)">
-                description = <"*1 a 2 vezes (pt-br)">
+                text = <"1 to 2 times">
+                description = <"1 to 2 times">
             >
             ["at3"] = <
-                text = <"*2 a 4 vezes (pt-br)">
-                description = <"*2 a 4 vezes (pt-br)">
+                text = <"2 to 4 times">
+                description = <"2 to 4 times">
             >
             ["at4"] = <
-                text = <"*5 a 10 vezes (pt-br)">
-                description = <"*5 a 10 vezes (pt-br)">
+                text = <"5 to 10 times">
+                description = <"5 to 10 times">
             >
             ["at5"] = <
-                text = <"*10 vezes ou mais (pt-br)">
-                description = <"*10 vezes ou mais (pt-br)">
+                text = <"10 times or more">
+                description = <"10 times or more">
             >
             ["ac1"] = <
                 text = <"*Vezes (pt-br)">
                 description = <"*Vezes (pt-br)">
             >
             ["id8"] = <
-                text = <"*Quando foi a ultima vez que o trabalhador foi ao dentista (pt-br)">
-                description = <"*Quando foi a ultima vez que o trabalhador foi ao dentista (pt-br)">
+                text = <"When was the last time the worker went to the dentist">
+                description = <"When was the last time the worker went to the dentist">
             >
             ["at6"] = <
-                text = <"*Menos de 1 ano (pt-br)">
-                description = <"*Menos de 1 ano (pt-br)">
+                text = <"Less than 1 year">
+                description = <"Less than 1 year">
             >
             ["at7"] = <
-                text = <"*De 1 a 2 anos (pt-br)">
-                description = <"*De 1 a 2 anos (pt-br)">
+                text = <"From 1 to 2 years">
+                description = <"From 1 to 2 years">
             >
             ["at8"] = <
-                text = <"*3 ou mais (pt-br)">
-                description = <"*3 ou mais (pt-br)">
+                text = <"3 or more">
+                description = <"3 or more">
             >
             ["at9"] = <
-                text = <"*Nunca foi ao dentista (pt-br)">
-                description = <"*Nunca foi ao dentista (pt-br)">
+                text = <"Never went to the dentist.">
+                description = <"Never went to the dentist.">
             >
             ["ac2"] = <
                 text = <"*Visita Dentista (pt-br)">
                 description = <"*Visita Dentista (pt-br)">
             >
             ["id10"] = <
-                text = <"*Quantas vezes o trabalhador esteve internado nos ultimos 12 meses (pt-br)">
-                description = <"*Quantas vezes o trabalhador esteve internado nos ultimos 12 meses (pt-br)">
+                text = <"How many times has the worker been hospitalized in the last 12 months">
+                description = <"How many times has the worker been hospitalized in the last 12 months">
             >
             ["id12"] = <
-                text = <"*Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador (pt-br)">
-                description = <"*Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador (pt-br)">
+                text = <"When was the last time a physician, nurse, or health care professional measured worker pressure">
+                description = <"When was the last time a physician, nurse, or health care professional measured worker pressure">
             >
             ["at10"] = <
-                text = <"*Nunca mediu a pressão (pt-br)">
-                description = <"*Nunca mediu a pressão (pt-br)">
+                text = <"Never measured the pressure">
+                description = <"Never measured the pressure">
             >
             ["at11"] = <
-                text = <"*Há menos de 1 ano (pt-br)">
-                description = <"*Há menos de 1 ano (pt-br)">
+                text = <"Less than 1 year ago">
+                description = <"Less than 1 year ago">
             >
             ["at12"] = <
-                text = <"*Entre 1 e dois anos (pt-br)">
-                description = <"*Entre 1 e dois anos (pt-br)">
+                text = <"Between 1 and 2 years">
+                description = <"Between 1 and 2 years">
             >
             ["at13"] = <
-                text = <"*Há mais de 2 anos (pt-br)">
-                description = <"*Há mais de 2 anos (pt-br)">
+                text = <"More than 2 years ago">
+                description = <"More than 2 years ago">
             >
             ["ac3"] = <
                 text = <"*Pressão (pt-br)">
                 description = <"*Pressão (pt-br)">
             >
             ["id14"] = <
-                text = <"*O trabalhador possui plano de saúde (pt-br)">
-                description = <"*O trabalhador possui plano de saúde (pt-br)">
+                text = <"The worker has a health plan">
+                description = <"The worker has a health plan">
             >
             ["at14"] = <
-                text = <"*Sim, através dessa empresa onde trabalho (pt-br)">
-                description = <"*Sim, através dessa empresa onde trabalho (pt-br)">
+                text = <"Yes, through this company where I work">
+                description = <"Yes, through this company where I work">
             >
             ["at15"] = <
-                text = <"*Sim, através de outra empresa (pt-br)">
-                description = <"*Sim, através de outra empresa (pt-br)">
+                text = <"Yes, through another company">
+                description = <"Yes, through another company">
             >
             ["at16"] = <
-                text = <"*Sim, adquirido individualmente sem participação da empresa (pt-br)">
-                description = <"*Sim, adquirido individualmente sem participação da empresa (pt-br)">
+                text = <"Yes, purchased individually without company participation">
+                description = <"Yes, purchased individually without company participation">
             >
             ["at17"] = <
-                text = <"*Sim, como dependente (pt-br)">
-                description = <"*Sim, como dependente (pt-br)">
+                text = <"Yes, as a dependent">
+                description = <"Yes, as a dependent">
             >
             ["at18"] = <
-                text = <"*Não (pt-br)">
-                description = <"*Não (pt-br)">
+                text = <"No">
+                description = <"No">
             >
             ["ac4"] = <
                 text = <"*Plano de saúde (pt-br)">
