@@ -13,6 +13,11 @@ description
         >
     >
     lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Grupo iHealth">
+        ["organization"] = <"Grupo iHealth">
+        ["email"] = <"contato@ihealthgroup.com.br">
+    >
 
 definition
     OBSERVATION[id1] occurrences matches {1} matches {    -- comorbidade_referida
