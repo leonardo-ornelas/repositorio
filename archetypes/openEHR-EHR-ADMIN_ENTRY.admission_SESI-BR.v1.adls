@@ -661,8 +661,8 @@ terminology
                 description = <"Pardo">
             >
             ["at0.9"] = <
-                text = <"Indígena (en)">
-                description = <"Indígena (en)">
+                text = <"Indígena">
+                description = <"Indígena">
             >
             ["ac0.2"] = <
                 text = <"Raça/Cor (en)">
@@ -733,28 +733,28 @@ terminology
                 description = <"Tipo">
             >
             ["at0.10"] = <
-                text = <"Pré - admissional (en)">
-                description = <"Pré - admissional (en)">
+                text = <"Pré - admissional">
+                description = <"Pré - admissional">
             >
             ["at0.11"] = <
-                text = <"Periódico (en)">
-                description = <"Periódico (en)">
+                text = <"Periódico">
+                description = <"Periódico">
             >
             ["at0.12"] = <
-                text = <"Retorno ao trabalho (en)">
-                description = <"Retorno ao trabalho (en)">
+                text = <"Retorno ao trabalho">
+                description = <"Retorno ao trabalho">
             >
             ["at0.13"] = <
-                text = <"Mudança de função (en)">
-                description = <"Mudança de função (en)">
+                text = <"Mudança de função">
+                description = <"Mudança de função">
             >
             ["at0.14"] = <
-                text = <"Demissional (en)">
-                description = <"Demissional (en)">
+                text = <"Demissional">
+                description = <"Demissional">
             >
             ["at0.15"] = <
-                text = <"Especial complementar (en)">
-                description = <"Especial complementar (en)">
+                text = <"Especial complementar">
+                description = <"Especial complementar">
             >
             ["ac0.3"] = <
                 text = <"Tipo de exame (en)">
