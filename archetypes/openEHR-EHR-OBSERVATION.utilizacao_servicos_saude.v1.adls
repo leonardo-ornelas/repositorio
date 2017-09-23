@@ -1,0 +1,92 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- utilizacao_servicos_saude
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"utilizacao_servicos_saude">
+                description = <"utilizacao_servicos_saude">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses">
+                description = <"Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses">
+            >
+            ["at1"] = <
+                text = <"Nenhuma">
+                description = <"Nenhuma">
+            >
+            ["at2"] = <
+                text = <"1 a 2 vezes">
+                description = <"1 a 2 vezes">
+            >
+            ["at3"] = <
+                text = <"2 a 4 vezes">
+                description = <"2 a 4 vezes">
+            >
+            ["at4"] = <
+                text = <"5 a 10 vezes">
+                description = <"5 a 10 vezes">
+            >
+            ["at5"] = <
+                text = <"10 vezes ou mais">
+                description = <"10 vezes ou mais">
+            >
+            ["ac1"] = <
+                text = <"Vezes">
+                description = <"Vezes">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5">
+        >
+    >
+
