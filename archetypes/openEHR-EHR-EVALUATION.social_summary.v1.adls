@@ -87,16 +87,16 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Social Summary (en)">
-                description = <"*Summary information about social circumstances or experiences that may have a potential impact on an individual's health. (en)">
+                text = <"Resumo social">
+                description = <"Resumo de informações sobre circunstâncias sociais ou experiências que podem ter um impacto potencial na saúde de um indivíduo.">
             >
             ["id3"] = <
-                text = <"*Description (en)">
-                description = <"*Narrative summary about social circumstances or experiences that may have a potential impact on an individual's health. (en)">
+                text = <"Descrição">
+                description = <"Resumo narrativo sobre circunstâncias ou experiências sociais que podem ter um impacto potencial na saúde de um indivíduo.">
             >
             ["id4"] = <
-                text = <"*Social Summary Detail (en)">
-                description = <"*Structured details about the social circumstances and experiences. (en)">
+                text = <"Resumo de resumo social">
+                description = <"Detalhes estruturados sobre as circunstâncias e experiências sociais.">
             >
         >
     >
