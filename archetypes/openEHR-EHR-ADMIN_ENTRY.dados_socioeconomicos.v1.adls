@@ -133,14 +133,14 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id38] occurrences matches {0..1} matches {    -- Computador
+                                    ELEMENT[id38] occurrences matches {0..1} matches {    -- Computer
                                         value matches {
                                             DV_BOOLEAN[id39] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Acesso à internet
+                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Internet access
                                         value matches {
                                             DV_BOOLEAN[id41] matches {
                                                 value matches {True, False}
@@ -368,12 +368,12 @@ terminology
                 description = <"Freezer">
             >
             ["id38"] = <
-                text = <"Computador">
-                description = <"Computador">
+                text = <"Computer">
+                description = <"Computer">
             >
             ["id40"] = <
-                text = <"Acesso à internet">
-                description = <"Acesso à internet">
+                text = <"Internet access">
+                description = <"Internet access">
             >
         >
         ["en"] = <
@@ -586,12 +586,12 @@ terminology
                 description = <"*Freezer (pt-br)">
             >
             ["id38"] = <
-                text = <"*Computador (pt-br)">
-                description = <"*Computador (pt-br)">
+                text = <"Computador">
+                description = <"Computador">
             >
             ["id40"] = <
-                text = <"*Acesso à internet (pt-br)">
-                description = <"*Acesso à internet (pt-br)">
+                text = <"Acesso à internet">
+                description = <"Acesso à internet">
             >
         >
     >
