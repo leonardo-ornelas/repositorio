@@ -30,7 +30,13 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id8] occurrences matches {0..1}     -- Perde o sono por preocupação
+                                    ELEMENT[id8] occurrences matches {1} matches {    -- Perde o sono por preocupação
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -82,12 +88,36 @@ terminology
                 text = <"Perde o sono por preocupação">
                 description = <"Perde o sono por preocupação">
             >
+            ["at5"] = <
+                text = <"De jeito nenhum">
+                description = <"De jeito nenhum">
+            >
+            ["at6"] = <
+                text = <"Não mais que de costume">
+                description = <"Não mais que de costume">
+            >
+            ["at7"] = <
+                text = <"Um pouco mais que de costume">
+                description = <"Um pouco mais que de costume">
+            >
+            ["at8"] = <
+                text = <"Bem mais que de costume">
+                description = <"Bem mais que de costume">
+            >
+            ["ac2"] = <
+                text = <"Níveis">
+                description = <"Níveis">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2", "at3", "at4">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at5", "at6", "at7", "at8">
         >
     >
 
