@@ -358,7 +358,7 @@ definition
             }
             CLUSTER[id11] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id12.0.1] occurrences matches {0} matches {    -- Form
+                    ELEMENT[id12.0.1] occurrences matches {0..1} matches {    -- Form
                         value matches {
                             DV_TEXT[id21.0.1] 
                         }
@@ -430,10 +430,6 @@ terminology
                 text = <"Method of use">
                 description = <"Method of use or consumption of the substance">
             >
-            ["id12.0.1"] = <
-                text = <"Form">
-                description = <"Form of the substance used">
-            >
             ["id5.0.1"] = <
                 text = <"Substance">
                 description = <"Identification of substance">
@@ -454,6 +450,10 @@ terminology
                 text = <"Name of the psychoactive substance">
                 description = <"Name of the psychoactive substance">
             >
+            ["id12.0.1"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -471,10 +471,6 @@ terminology
             ["id19.0.1"] = <
                 text = <"Método de uso">
                 description = <"Método de uso ou consumo da substância">
-            >
-            ["id12.0.1"] = <
-                text = <"Forma">
-                description = <"Forma de uso da substância">
             >
             ["id5.0.1"] = <
                 text = <"Substância">
@@ -495,6 +491,10 @@ terminology
             ["id0.8.1"] = <
                 text = <"Nome da substância psicoativa">
                 description = <"Nome da substância psicoativa">
+            >
+            ["id12.0.1"] = <
+                text = <"Uso de fitoterápicos, suplementos  ou vitaminas ">
+                description = <"Forma de uso da substância">
             >
         >
     >
