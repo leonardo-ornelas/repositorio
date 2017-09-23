@@ -87,6 +87,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Trabalha a noite pelo menos 1 dia da semana?
+                                value matches {
+                                    DV_BOOLEAN[id17] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -181,6 +188,10 @@ terminology
                 text = <"Trabalha no mesmo horário todos os dias?">
                 description = <"Trabalha no mesmo horário todos os dias?">
             >
+            ["id16"] = <
+                text = <"Trabalha a noite pelo menos 1 dia da semana?">
+                description = <"Trabalha a noite pelo menos 1 dia da semana?">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -266,6 +277,10 @@ terminology
             ["id14"] = <
                 text = <"Trabalha no mesmo horário todos os dias? (en)">
                 description = <"Trabalha no mesmo horário todos os dias? (en)">
+            >
+            ["id16"] = <
+                text = <"Trabalha a noite pelo menos 1 dia da semana? (en)">
+                description = <"Trabalha a noite pelo menos 1 dia da semana? (en)">
             >
         >
     >
