@@ -34,11 +34,11 @@ description
     >
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- comorbidade_referida
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Comorbidade referida
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -170,12 +170,12 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"comorbidade_referida">
-                description = <"comorbidade_referida">
+                text = <"Comorbidade referida">
+                description = <"Comorbidade referida">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id7"] = <
                 text = <"Bronquite ou asma">
@@ -244,76 +244,76 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*comorbidade_referida (pt-br)">
-                description = <"*comorbidade_referida (pt-br)">
+                text = <"Referred comorbidity">
+                description = <"Referred comorbidity">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id7"] = <
-                text = <"*Bronquite ou asma (pt-br)">
-                description = <"*Bronquite ou asma (pt-br)">
+                text = <"Bronchitis or asthma">
+                description = <"Bronchitis or asthma">
             >
             ["id9"] = <
-                text = <"*Enfisema pulmonar (pt-br)">
-                description = <"*Enfisema pulmonar (pt-br)">
+                text = <"Pulmonary emphysema">
+                description = <"Pulmonary emphysema">
             >
             ["id11"] = <
-                text = <"*Angina (pt-br)">
-                description = <"*Angina (pt-br)">
+                text = <"Angina">
+                description = <"Angina">
             >
             ["id13"] = <
-                text = <"*Infarto (pt-br)">
-                description = <"*Infarto (pt-br)">
+                text = <"Infarct">
+                description = <"Infarct">
             >
             ["id15"] = <
-                text = <"*Acidente vascular cerebral ou derrame (pt-br)">
-                description = <"*Acidente vascular cerebral ou derrame (pt-br)">
+                text = <"Cerebral vascular accident or leakage">
+                description = <"Cerebral vascular accident or leakage">
             >
             ["id17"] = <
-                text = <"*Colesterol alterado (pt-br)">
-                description = <"*Colesterol alterado (pt-br)">
+                text = <"Cholesterol Altered">
+                description = <"Cholesterol Altered">
             >
             ["id19"] = <
-                text = <"*Problemas auditivos (pt-br)">
-                description = <"*Problemas auditivos (pt-br)">
+                text = <"Hearing problems">
+                description = <"Hearing problems">
             >
             ["id21"] = <
-                text = <"*Depressão (pt-br)">
-                description = <"*Depressão (pt-br)">
+                text = <"Depression">
+                description = <"Depression">
             >
             ["id23"] = <
-                text = <"*Insuficiência cardíaca (pt-br)">
-                description = <"*Insuficiência cardíaca (pt-br)">
+                text = <"Cardiac insufficiency">
+                description = <"Cardiac insufficiency">
             >
             ["id25"] = <
-                text = <"*Outra doença do coração (pt-br)">
-                description = <"*Outra doença do coração (pt-br)">
+                text = <"Another heart disease">
+                description = <"Another heart disease">
             >
             ["id27"] = <
-                text = <"*Doença renal crônica (pt-br)">
-                description = <"*Doença renal crônica (pt-br)">
+                text = <"Chronic Kidney Disease">
+                description = <"Chronic Kidney Disease">
             >
             ["id29"] = <
-                text = <"*Câncer (pt-br)">
-                description = <"*Câncer (pt-br)">
+                text = <"Cancer">
+                description = <"Cancer">
             >
             ["id31"] = <
-                text = <"*Cirrose (pt-br)">
-                description = <"*Cirrose (pt-br)">
+                text = <"Cirrhosis">
+                description = <"Cirrhosis">
             >
             ["id33"] = <
-                text = <"*Problema de coluna/costas (pt-br)">
-                description = <"*Problema de coluna/costas (pt-br)">
+                text = <"Column problem">
+                description = <"Column problem">
             >
             ["id35"] = <
-                text = <"*Tendinite ou LER/DORT (pt-br)">
-                description = <"*Tendinite ou LER/DORT (pt-br)">
+                text = <"Tendonitis or LER/DORT">
+                description = <"Tendonitis or LER/DORT">
             >
             ["id37"] = <
-                text = <"*Artrite, reumatismo ou gota (pt-br)">
-                description = <"*Artrite, reumatismo ou gota (pt-br)">
+                text = <"Arthritis, rheumatism or gout">
+                description = <"Arthritis, rheumatism or gout">
             >
         >
     >
