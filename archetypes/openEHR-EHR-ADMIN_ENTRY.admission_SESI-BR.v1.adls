@@ -206,7 +206,7 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.9] occurrences matches {1} matches {    -- Race / Color
+                    ELEMENT[id0.9] occurrences matches {1} matches {    -- Race  Color
                         value matches {
                             DV_CODED_TEXT[id0.10] matches {
                                 defining_code matches {[ac0.2]}
@@ -335,8 +335,8 @@ terminology
                 description = <"Estado civil">
             >
             ["id0.9"] = <
-                text = <"Race / Color">
-                description = <"Race / Color">
+                text = <"Race  Color">
+                description = <"Race  Color">
             >
             ["at0.5"] = <
                 text = <"Branco">
@@ -456,7 +456,7 @@ terminology
             >
             ["id104"] = <
                 text = <"Location description">
-                description = <"*">
+                description = <"Location description">
             >
             ["id142"] = <
                 text = <"(added by post-parse processor)">
@@ -501,8 +501,8 @@ terminology
                 description = <"Estado civil (en)">
             >
             ["id0.9"] = <
-                text = <"Raça/Cor (en)">
-                description = <"Raça/Cor (en)">
+                text = <"Raça Cor">
+                description = <"Raça/Cor">
             >
             ["at0.5"] = <
                 text = <"Branco (en)">
@@ -622,7 +622,7 @@ terminology
             >
             ["id104"] = <
                 text = <"وصف الموقع">
-                description = <"*">
+                description = <"">
             >
             ["id142"] = <
                 text = <"(added by post-parse processor)(en)">
@@ -667,8 +667,8 @@ terminology
                 description = <"Estado civil (en)">
             >
             ["id0.9"] = <
-                text = <"Raça/Cor">
-                description = <"Raça/Cor">
+                text = <"Raça Cor">
+                description = <"Raça Cor">
             >
             ["at0.5"] = <
                 text = <"Branco">
@@ -788,7 +788,7 @@ terminology
             >
             ["id104"] = <
                 text = <"Descrição da localização">
-                description = <"">
+                description = <"Localização">
             >
             ["id142"] = <
                 text = <"(adicionado por processador pós-análise)">
