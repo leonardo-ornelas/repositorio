@@ -210,7 +210,20 @@ definition
             ELEMENT[id67] occurrences matches {0..1} matches {
                 /value[id172]/defining_code matches {[ac2]}
             }
-            CLUSTER[id0.43] occurrences matches {0..1}     -- Identificação do paciente
+            CLUSTER[id0.43] occurrences matches {0..1} matches {    -- Identificação do paciente
+                items matches {
+                    ELEMENT[id0.44] occurrences matches {1} matches {    -- Nome completo
+                        value matches {
+                            DV_TEXT[id0.45] 
+                        }
+                    }
+                    ELEMENT[id0.46] occurrences matches {1} matches {    -- Telefone
+                        value matches {
+                            DV_TEXT[id0.47] 
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -317,6 +330,14 @@ terminology
                 text = <"Identificação do paciente">
                 description = <"Identificação do paciente">
             >
+            ["id0.44"] = <
+                text = <"Nome completo">
+                description = <"Nome completo">
+            >
+            ["id0.46"] = <
+                text = <"Telefone">
+                description = <"Telefone">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -419,6 +440,14 @@ terminology
                 text = <"Identificação do paciente (en)">
                 description = <"Identificação do paciente (en)">
             >
+            ["id0.44"] = <
+                text = <"Nome completo (en)">
+                description = <"Nome completo (en)">
+            >
+            ["id0.46"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -520,6 +549,14 @@ terminology
             ["id0.43"] = <
                 text = <"Identificação do paciente (en)">
                 description = <"Identificação do paciente (en)">
+            >
+            ["id0.44"] = <
+                text = <"Nome completo (en)">
+                description = <"Nome completo (en)">
+            >
+            ["id0.46"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
             >
         >
     >
