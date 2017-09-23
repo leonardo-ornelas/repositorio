@@ -100,6 +100,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id28] occurrences matches {1} matches {    -- Se sente feliz
+                                        value matches {
+                                            DV_CODED_TEXT[id29] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -206,6 +213,10 @@ terminology
             ["id26"] = <
                 text = <"Se acha uma pessoa sem muito valor">
                 description = <"Se acha uma pessoa sem muito valor">
+            >
+            ["id28"] = <
+                text = <"Se sente feliz">
+                description = <"Se sente feliz">
             >
         >
     >
