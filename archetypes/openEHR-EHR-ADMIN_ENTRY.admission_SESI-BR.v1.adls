@@ -230,6 +230,16 @@ definition
                                     DV_TEXT[id0.32] 
                                 }
                             }
+                            ELEMENT[id0.33] occurrences matches {1} matches {    -- Matrícula na Empresa
+                                value matches {
+                                    DV_TEXT[id0.34] 
+                                }
+                            }
+                            ELEMENT[id0.35] occurrences matches {1} matches {    -- Ramo da Atividade
+                                value matches {
+                                    DV_TEXT[id0.36] 
+                                }
+                            }
                         }
                     }
                 }
@@ -352,6 +362,14 @@ terminology
                 text = <"Nome da Empresa">
                 description = <"Nome da Empresa">
             >
+            ["id0.33"] = <
+                text = <"Matrícula na Empresa">
+                description = <"Matrícula na Empresa">
+            >
+            ["id0.35"] = <
+                text = <"Ramo da Atividade">
+                description = <"Ramo da Atividade">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -466,6 +484,14 @@ terminology
                 text = <"Nome da Empresa (en)">
                 description = <"Nome da Empresa (en)">
             >
+            ["id0.33"] = <
+                text = <"Matrícula na Empresa (en)">
+                description = <"Matrícula na Empresa (en)">
+            >
+            ["id0.35"] = <
+                text = <"Ramo da Atividade (en)">
+                description = <"Ramo da Atividade (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -579,6 +605,14 @@ terminology
             ["id0.31"] = <
                 text = <"Nome da Empresa (en)">
                 description = <"Nome da Empresa (en)">
+            >
+            ["id0.33"] = <
+                text = <"Matrícula na Empresa (en)">
+                description = <"Matrícula na Empresa (en)">
+            >
+            ["id0.35"] = <
+                text = <"Ramo da Atividade (en)">
+                description = <"Ramo da Atividade (en)">
             >
         >
     >
