@@ -422,28 +422,28 @@ terminology
                 description = <"8ª série do ensino fundamental">
             >
             ["at10"] = <
-                text = <"*1ª série do ensino médio (pt-br)">
-                description = <"*1ª série do ensino médio (pt-br)">
+                text = <"1ª série do ensino médio">
+                description = <"1ª série do ensino médio">
             >
             ["at11"] = <
-                text = <"*2ª série do ensino médio (pt-br)">
-                description = <"*2ª série do ensino médio (pt-br)">
+                text = <"2ª série do ensino médio">
+                description = <"2ª série do ensino médio">
             >
             ["at12"] = <
-                text = <"*3ª série do ensino médio (pt-br)">
-                description = <"*3ª série do ensino médio (pt-br)">
+                text = <"3ª série do ensino médio">
+                description = <"3ª série do ensino médio">
             >
             ["at13"] = <
-                text = <"*Superior incompleto (pt-br)">
-                description = <"*Superior incompleto (pt-br)">
+                text = <"Superior incompleto">
+                description = <"Superior incompleto">
             >
             ["at14"] = <
-                text = <"*Superior completo (pt-br)">
-                description = <"*Superior completo (pt-br)">
+                text = <"Superior completo">
+                description = <"Superior completo">
             >
             ["at15"] = <
-                text = <"*Pós-graduação (pt-br)">
-                description = <"*Pós-graduação (pt-br)">
+                text = <"Pós-graduação">
+                description = <"Pós-graduação">
             >
             ["ac1"] = <
                 text = <"*Nível de escolaridade (pt-br)">
