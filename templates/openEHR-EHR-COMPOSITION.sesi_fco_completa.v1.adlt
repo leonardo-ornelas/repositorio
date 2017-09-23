@@ -564,6 +564,11 @@ definition
             ELEMENT[id0.7] occurrences matches {0..1} matches {
                 /value[id0.9]/defining_code matches {[ac0.1]}
             }
+            ELEMENT[id0.8.1] occurrences matches {0..1} matches {    -- Name of the psychoactive substance
+                value matches {
+                    DV_TEXT[id0.10.1] 
+                }
+            }
         }
     }
 
@@ -606,6 +611,10 @@ terminology
                 text = <"Evidence of dependence">
                 description = <"Description of any evidence of dependence on the substance">
             >
+            ["id0.8.1"] = <
+                text = <"Name of the psychoactive substance">
+                description = <"Name of the psychoactive substance">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -643,6 +652,10 @@ terminology
             ["id17.0.1"] = <
                 text = <"Evidência de dependência">
                 description = <"Descrição de qualquer evidência de dependência da substância.">
+            >
+            ["id0.8.1"] = <
+                text = <"Substância psicoativa">
+                description = <"Nome da substância psicoativa">
             >
         >
     >
