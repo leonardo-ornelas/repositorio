@@ -280,6 +280,11 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.77] occurrences matches {1} matches {    -- Nome da Empresa
+                        value matches {
+                            DV_TEXT[id0.78] 
+                        }
+                    }
                 }
             }
         }
@@ -464,6 +469,10 @@ terminology
                 text = <"Tipo de Exame">
                 description = <"Tipo de Exame">
             >
+            ["id0.77"] = <
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -642,6 +651,10 @@ terminology
                 text = <"Tipo de Exame (en)">
                 description = <"Tipo de Exame (en)">
             >
+            ["id0.77"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -819,6 +832,10 @@ terminology
             ["ac0.6"] = <
                 text = <"Tipo de Exame (en)">
                 description = <"Tipo de Exame (en)">
+            >
+            ["id0.77"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
             >
         >
     >
