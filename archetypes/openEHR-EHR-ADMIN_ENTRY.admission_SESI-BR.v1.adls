@@ -295,6 +295,11 @@ definition
                             DV_TEXT[id0.82] 
                         }
                     }
+                    ELEMENT[id0.83] occurrences matches {1} matches {    -- Tipo de PCMO
+                        value matches {
+                            DV_TEXT[id0.84] 
+                        }
+                    }
                 }
             }
         }
@@ -491,6 +496,10 @@ terminology
                 text = <"Ramo da Atividade">
                 description = <"Ramo da Atividade">
             >
+            ["id0.83"] = <
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -681,6 +690,10 @@ terminology
                 text = <"Ramo da Atividade (en)">
                 description = <"Ramo da Atividade (en)">
             >
+            ["id0.83"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -870,6 +883,10 @@ terminology
             ["id0.81"] = <
                 text = <"Ramo da Atividade (en)">
                 description = <"Ramo da Atividade (en)">
+            >
+            ["id0.83"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
             >
         >
     >
