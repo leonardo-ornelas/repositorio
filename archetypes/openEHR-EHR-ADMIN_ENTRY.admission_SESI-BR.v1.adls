@@ -187,6 +187,11 @@ definition
                             DV_TEXT[id0.16] 
                         }
                     }
+                    ELEMENT[id0.17] occurrences matches {1} matches {    -- Sexo
+                        value matches {
+                            DV_TEXT[id0.18] 
+                        }
+                    }
                 }
             }
         }
@@ -271,6 +276,10 @@ terminology
                 text = <"email">
                 description = <"email">
             >
+            ["id0.17"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -349,6 +358,10 @@ terminology
                 text = <"email (en)">
                 description = <"email (en)">
             >
+            ["id0.17"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -426,6 +439,10 @@ terminology
             ["id0.15"] = <
                 text = <"email (en)">
                 description = <"email (en)">
+            >
+            ["id0.17"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
             >
         >
     >
