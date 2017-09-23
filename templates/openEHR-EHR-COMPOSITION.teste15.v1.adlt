@@ -43,6 +43,7 @@ definition
         /category[id3]/defining_code matches {[at1]}
         content matches {
             use_archetype SECTION[id0.2, openEHR-EHR-SECTION.ovl-teste15-adhoc-001.v1.0.0]
+            use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-teste15-admission-001.v1.0.0]
         }
     }
 
@@ -176,6 +177,112 @@ terminology
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-teste15-admission-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.admission.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] matches {    -- Patient admission
+        /data[id2]/items matches {
+            ELEMENT[id3] matches {
+                /value[id123]/defining_code matches {[ac3]}
+            }
+            CLUSTER[id74] occurrences matches {0..1} matches {
+                items matches {
+                    CLUSTER[id105] occurrences matches {0..1} matches {
+                        /items[id108]/value[id130]/defining_code matches {[ac4]}
+                    }
+                    ELEMENT[id82] occurrences matches {0..1} matches {
+                        /value[id139]/defining_code matches {[ac5]}
+                    }
+                }
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id140]/defining_code matches {[ac6]}
+            }
+            CLUSTER[id95] occurrences matches {0..1} matches {
+                items matches {
+                    CLUSTER[id120] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                        }
+                    }
+                    CLUSTER[id96] occurrences matches {0..1} matches {
+                        items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                        }
+                    }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                }
+            }
+            CLUSTER[id26] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id122] matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            CLUSTER[id52] occurrences matches {0..1} matches {
+                items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                }
+            }
+            ELEMENT[id62] occurrences matches {0..1} matches {
+                /value[id171]/defining_code matches {[ac7]}
+            }
+            ELEMENT[id67] occurrences matches {0..1} matches {
+                /value[id172]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Patient admission">
+                description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"إدخال المريض">
+                description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Admissão do paciente">
+                description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
             >
         >
     >
