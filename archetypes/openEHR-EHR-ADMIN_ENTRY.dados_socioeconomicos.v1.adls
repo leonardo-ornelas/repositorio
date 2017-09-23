@@ -27,7 +27,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- dados socioeconomicos
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- socioeconomic data
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
                 items matches {
@@ -38,14 +38,14 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id5] occurrences matches {1} matches {    -- Atualmente frequenta escola
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Currently attending school
                         value matches {
                             DV_BOOLEAN[id6] matches {
                                 value matches {True, False}
                             }
                         }
                     }
-                    ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Monthly income range
                         value matches {
                             DV_CODED_TEXT[id8] matches {
                                 defining_code matches {[ac2]}
@@ -54,28 +54,28 @@ definition
                     }
                     CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
                         items matches {
-                            ELEMENT[id14] occurrences matches {1} matches {    -- Tipo de residência
+                            ELEMENT[id14] occurrences matches {1} matches {    -- Type of residence
                                 value matches {
                                     DV_CODED_TEXT[id15] matches {
                                         defining_code matches {[ac3]}
                                     }
                                 }
                             }
-                            ELEMENT[id16] occurrences matches {1} matches {    -- Quantas pessoas vivem na casa
+                            ELEMENT[id16] occurrences matches {1} matches {    -- How many people live in the house
                                 value matches {
                                     DV_CODED_TEXT[id17] matches {
                                         defining_code matches {[ac4]}
                                     }
                                 }
                             }
-                            ELEMENT[id18] occurrences matches {1} matches {    -- Chefe de família
+                            ELEMENT[id18] occurrences matches {1} matches {    -- Householder
                                 value matches {
                                     DV_BOOLEAN[id19] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            CLUSTER[id20] occurrences matches {0..1} matches {    -- Itens presentes na residência
+                            CLUSTER[id20] occurrences matches {0..1} matches {    -- Items present at the residence
                                 items matches {
                                     ELEMENT[id21] occurrences matches {0..1} matches {    -- Telefone Fixo
                                         value matches {
@@ -160,12 +160,12 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"dados socioeconomicos">
-                description = <"dados socioeconomicos">
+                text = <"socioeconomic data">
+                description = <"socioeconomic data">
             >
             ["id3"] = <
                 text = <"Nível de escolaridade">
-                description = <"Informe o nível de escolaridade">
+                description = <"Please state the level of education">
             >
             ["at1"] = <
                 text = <"Nunca estudou">
@@ -232,12 +232,12 @@ terminology
                 description = <"Nível de escolaridade">
             >
             ["id5"] = <
-                text = <"Atualmente frequenta escola">
-                description = <"Informe se atualmente frequenta a escola">
+                text = <"Currently attending school">
+                description = <"Please tell us if you currently attend school">
             >
             ["id7"] = <
-                text = <"Faixa de renda mensal">
-                description = <"Informe a renda mensal">
+                text = <"Monthly income range">
+                description = <"Monthly income range">
             >
             ["at16"] = <
                 text = <"Menos de 1 SM">
@@ -268,8 +268,8 @@ terminology
                 description = <"Dados do domicílio e da família">
             >
             ["id14"] = <
-                text = <"Tipo de residência">
-                description = <"Tipo de residência">
+                text = <"Type of residence">
+                description = <"Type of residence">
             >
             ["at21"] = <
                 text = <"Própria">
@@ -288,8 +288,8 @@ terminology
                 description = <"Tipo de residência">
             >
             ["id16"] = <
-                text = <"Quantas pessoas vivem na casa">
-                description = <"Quantas pessoas vivem na casa">
+                text = <"How many people live in the house">
+                description = <"How many people live in the house">
             >
             ["at24"] = <
                 text = <"Mora sozinho (a)">
@@ -328,12 +328,12 @@ terminology
                 description = <"Quantas pessoas vivem na casa">
             >
             ["id18"] = <
-                text = <"Chefe de família">
-                description = <"Chefe de família">
+                text = <"Householder">
+                description = <"Householder">
             >
             ["id20"] = <
-                text = <"Itens presentes na residência">
-                description = <"Itens presentes na residência">
+                text = <"Items present at the residence">
+                description = <"Items present at the residence">
             >
             ["id21"] = <
                 text = <"Telefone Fixo">
@@ -378,12 +378,12 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*dados socioeconomicos (pt-br)">
-                description = <"*dados socioeconomicos (pt-br)">
+                text = <"dados socioeconômicos">
+                description = <"dados socioeconômicos">
             >
             ["id3"] = <
-                text = <"*Nível de escolaridade (pt-br)">
-                description = <"*Informe o nível de escolaridade (pt-br)">
+                text = <"Nível de escolaridade">
+                description = <"Informe o nível de escolaridade">
             >
             ["at1"] = <
                 text = <"*Nunca estudou (pt-br)">
@@ -450,12 +450,12 @@ terminology
                 description = <"*Nível de escolaridade (pt-br)">
             >
             ["id5"] = <
-                text = <"*Atualmente frequenta escola (pt-br)">
-                description = <"*Informe se atualmente frequenta a escola (pt-br)">
+                text = <"Atualmente frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
             >
             ["id7"] = <
-                text = <"*Faixa de renda mensal (pt-br)">
-                description = <"*Informe a renda mensal (pt-br)">
+                text = <"Faixa de renda mensal">
+                description = <"Faixa de renda mensal">
             >
             ["at16"] = <
                 text = <"*Menos de 1 SM (pt-br)">
@@ -486,8 +486,8 @@ terminology
                 description = <"*Dados do domicílio e da família (pt-br)">
             >
             ["id14"] = <
-                text = <"*Tipo de residência (pt-br)">
-                description = <"*Tipo de residência (pt-br)">
+                text = <"Tipo de residência">
+                description = <"Tipo de residência">
             >
             ["at21"] = <
                 text = <"*Própria (pt-br)">
@@ -506,8 +506,8 @@ terminology
                 description = <"*Tipo de residência (pt-br)">
             >
             ["id16"] = <
-                text = <"*Quantas pessoas vivem na casa (pt-br)">
-                description = <"*Quantas pessoas vivem na casa (pt-br)">
+                text = <"Quantas pessoas vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
             >
             ["at24"] = <
                 text = <"*Mora sozinho (a) (pt-br)">
@@ -546,12 +546,12 @@ terminology
                 description = <"*Quantas pessoas vivem na casa (pt-br)">
             >
             ["id18"] = <
-                text = <"*Chefe de família (pt-br)">
-                description = <"*Chefe de família (pt-br)">
+                text = <"Chefe de família">
+                description = <"Chefe de família">
             >
             ["id20"] = <
-                text = <"*Itens presentes na residência (pt-br)">
-                description = <"*Itens presentes na residência (pt-br)">
+                text = <"Itens presentes na residência">
+                description = <"Itens presentes na residência">
             >
             ["id21"] = <
                 text = <"*Telefone Fixo (pt-br)">
