@@ -240,6 +240,18 @@ definition
                                     DV_TEXT[id0.36] 
                                 }
                             }
+                            ELEMENT[id0.37] occurrences matches {1} matches {    -- Tipo de PCMO
+                                value matches {
+                                    DV_TEXT[id0.38] 
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id0.39] occurrences matches {1} matches {    -- Tipo
+                        value matches {
+                            DV_CODED_TEXT[id0.40] matches {
+                                defining_code matches {[ac0.3]}
+                            }
                         }
                     }
                 }
@@ -370,6 +382,42 @@ terminology
                 text = <"Ramo da Atividade">
                 description = <"Ramo da Atividade">
             >
+            ["id0.37"] = <
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
+            >
+            ["id0.39"] = <
+                text = <"Tipo">
+                description = <"Tipo">
+            >
+            ["at0.10"] = <
+                text = <"Pré - admissional">
+                description = <"Pré - admissional">
+            >
+            ["at0.11"] = <
+                text = <"Periódico">
+                description = <"Periódico">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho">
+                description = <"Retorno ao trabalho">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função">
+                description = <"Mudança de função">
+            >
+            ["at0.14"] = <
+                text = <"Demissional">
+                description = <"Demissional">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar">
+                description = <"Especial complementar">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame">
+                description = <"Tipo de exame">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -491,6 +539,42 @@ terminology
             ["id0.35"] = <
                 text = <"Ramo da Atividade (en)">
                 description = <"Ramo da Atividade (en)">
+            >
+            ["id0.37"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
+            >
+            ["id0.39"] = <
+                text = <"Tipo (en)">
+                description = <"Tipo (en)">
+            >
+            ["at0.10"] = <
+                text = <"Pré - admissional (en)">
+                description = <"Pré - admissional (en)">
+            >
+            ["at0.11"] = <
+                text = <"Periódico (en)">
+                description = <"Periódico (en)">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho (en)">
+                description = <"Retorno ao trabalho (en)">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função (en)">
+                description = <"Mudança de função (en)">
+            >
+            ["at0.14"] = <
+                text = <"Demissional (en)">
+                description = <"Demissional (en)">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar (en)">
+                description = <"Especial complementar (en)">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame (en)">
+                description = <"Tipo de exame (en)">
             >
         >
         ["pt-br"] = <
@@ -614,6 +698,42 @@ terminology
                 text = <"Ramo da Atividade (en)">
                 description = <"Ramo da Atividade (en)">
             >
+            ["id0.37"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
+            >
+            ["id0.39"] = <
+                text = <"Tipo (en)">
+                description = <"Tipo (en)">
+            >
+            ["at0.10"] = <
+                text = <"Pré - admissional (en)">
+                description = <"Pré - admissional (en)">
+            >
+            ["at0.11"] = <
+                text = <"Periódico (en)">
+                description = <"Periódico (en)">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho (en)">
+                description = <"Retorno ao trabalho (en)">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função (en)">
+                description = <"Mudança de função (en)">
+            >
+            ["at0.14"] = <
+                text = <"Demissional (en)">
+                description = <"Demissional (en)">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar (en)">
+                description = <"Especial complementar (en)">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame (en)">
+                description = <"Tipo de exame (en)">
+            >
         >
     >
     value_sets = <
@@ -624,6 +744,10 @@ terminology
         ["ac0.2"] = <
             id = <"ac0.2">
             members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9">
+        >
+        ["ac0.3"] = <
+            id = <"ac0.3">
+            members = <"at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
         >
     >
 
