@@ -140,8 +140,8 @@ terminology
                 description = <"Hipertensão ou pressão alta?">
             >
             ["at1"] = <
-                text = <"Nnehum">
-                description = <"Nnehum">
+                text = <"Nenhum">
+                description = <"Nenhum">
             >
             ["at2"] = <
                 text = <"Pai">
@@ -226,12 +226,12 @@ terminology
                 description = <"Hypertension or high blood pressure?">
             >
             ["at1"] = <
-                text = <"*Nnehum (pt-br)">
-                description = <"*Nnehum (pt-br)">
+                text = <"None">
+                description = <"None">
             >
             ["at2"] = <
-                text = <"*Pai (pt-br)">
-                description = <"*Pai (pt-br)">
+                text = <"Father">
+                description = <"Father">
             >
             ["at3"] = <
                 text = <"*Nenhum (pt-br)">
@@ -242,24 +242,24 @@ terminology
                 description = <"*Pai (pt-br)">
             >
             ["at5"] = <
-                text = <"*Mãe (pt-br)">
-                description = <"*Mãe (pt-br)">
+                text = <"Mother">
+                description = <"Mother">
             >
             ["at6"] = <
-                text = <"*Avô paterno (pt-br)">
-                description = <"*Avô paterno (pt-br)">
+                text = <"Paternal grandfather">
+                description = <"Paternal grandfather">
             >
             ["at7"] = <
-                text = <"*Avô materno (pt-br)">
-                description = <"*Avô materno (pt-br)">
+                text = <"Maternal grandfather">
+                description = <"Maternal grandfather">
             >
             ["at8"] = <
-                text = <"*Avó materna (pt-br)">
-                description = <"*Avó materna (pt-br)">
+                text = <"Maternal grandmother">
+                description = <"Maternal grandmother">
             >
             ["at9"] = <
-                text = <"*Avó paterna (pt-br)">
-                description = <"*Avó paterna (pt-br)">
+                text = <"Paternal grandmother">
+                description = <"Paternal grandmother">
             >
             ["ac1"] = <
                 text = <"*Historia Familiar (pt-br)">
