@@ -3,6 +3,17 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +21,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -184,6 +198,92 @@ terminology
             ["id23"] = <
                 text = <"Depressão">
                 description = <"Depressão">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*hipertensao (pt-br)">
+                description = <"*hipertensao (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Algum médico já disse que o trabalhador tem ou teve hipertensão? (pt-br)">
+                description = <"*Algum médico já disse que o trabalhador tem ou teve hipertensão? (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão? (pt-br)">
+                description = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão? (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*O trabalhador usa atualmente algum medicamento para tratar de hipertensão? (pt-br)">
+                description = <"*O trabalhador usa atualmente algum medicamento para tratar de hipertensão? (pt-br)">
+            >
+            ["id12"] = <
+                text = <"*Hipertensão ou pressão alta? (pt-br)">
+                description = <"*Hipertensão ou pressão alta? (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Nnehum (pt-br)">
+                description = <"*Nnehum (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Pai (pt-br)">
+                description = <"*Pai (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Pai (pt-br)">
+                description = <"*Pai (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Mãe (pt-br)">
+                description = <"*Mãe (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Avô paterno (pt-br)">
+                description = <"*Avô paterno (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Avô materno (pt-br)">
+                description = <"*Avô materno (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Avó materna (pt-br)">
+                description = <"*Avó materna (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Avó paterna (pt-br)">
+                description = <"*Avó paterna (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Historia Familiar (pt-br)">
+                description = <"*Historia Familiar (pt-br)">
+            >
+            ["id14"] = <
+                text = <"*Acidente vascular cerebral ou derrame? (pt-br)">
+                description = <"*Acidente vascular cerebral ou derrame? (pt-br)">
+            >
+            ["id16"] = <
+                text = <"*Diabetes (pt-br)">
+                description = <"*Diabetes (pt-br)">
+            >
+            ["id19"] = <
+                text = <"*Infarto (pt-br)">
+                description = <"*Infarto (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Câncer (pt-br)">
+                description = <"*Câncer (pt-br)">
+            >
+            ["id23"] = <
+                text = <"*Depressão (pt-br)">
+                description = <"*Depressão (pt-br)">
             >
         >
     >
