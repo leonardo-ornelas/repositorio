@@ -49,13 +49,6 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Pelos e Fâneros
-                                        value matches {
-                                            DV_CODED_TEXT[id12] matches {
-                                                defining_code matches {[ac4]}
-                                            }
-                                        }
-                                    }
                                     ELEMENT[id13] occurrences matches {0..1} matches {    -- Gânglios
                                         value matches {
                                             DV_CODED_TEXT[id14] matches {
@@ -539,10 +532,6 @@ terminology
                 description = <"Pelos e Fâneros">
             >
             ["ac3"] = <
-                text = <"Pelos e Fâneros">
-                description = <"Pelos e Fâneros">
-            >
-            ["id11"] = <
                 text = <"Pelos e Fâneros">
                 description = <"Pelos e Fâneros">
             >
@@ -1045,10 +1034,6 @@ terminology
                 description = <"*Pelos e Fâneros (pt-br)">
             >
             ["ac3"] = <
-                text = <"*Pelos e Fâneros (pt-br)">
-                description = <"*Pelos e Fâneros (pt-br)">
-            >
-            ["id11"] = <
                 text = <"*Pelos e Fâneros (pt-br)">
                 description = <"*Pelos e Fâneros (pt-br)">
             >
