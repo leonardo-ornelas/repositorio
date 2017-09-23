@@ -67,6 +67,15 @@ definition
                     CLUSTER[id105] occurrences matches {0..1} matches {
                         /items[id108]/value[id130]/defining_code matches {[ac4]}
                     }
+                    CLUSTER[id85] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id0.13] occurrences matches {1} matches {    -- Lougradouro
+                                value matches {
+                                    DV_TEXT[id0.14] 
+                                }
+                            }
+                        }
+                    }
                     ELEMENT[id82] occurrences matches {0..1} matches {
                         /value[id139]/defining_code matches {[ac5]}
                     }
@@ -249,6 +258,10 @@ terminology
                 text = <"Telefone">
                 description = <"Telefone">
             >
+            ["id0.13"] = <
+                text = <"Lougradouro">
+                description = <"Lougradouro">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -319,6 +332,10 @@ terminology
                 text = <"Telefone (en)">
                 description = <"Telefone (en)">
             >
+            ["id0.13"] = <
+                text = <"Lougradouro (en)">
+                description = <"Lougradouro (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -388,6 +405,10 @@ terminology
             ["id0.11"] = <
                 text = <"Telefone (en)">
                 description = <"Telefone (en)">
+            >
+            ["id0.13"] = <
+                text = <"Lougradouro (en)">
+                description = <"Lougradouro (en)">
             >
         >
     >
