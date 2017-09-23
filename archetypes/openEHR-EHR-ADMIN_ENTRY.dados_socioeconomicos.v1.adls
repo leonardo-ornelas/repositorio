@@ -27,7 +27,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- socioeconomic data
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- Dados socioeconômicos
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
                 items matches {
@@ -38,14 +38,14 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id5] occurrences matches {1} matches {    -- Currently attending school
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Atualmente frequenta escola
                         value matches {
                             DV_BOOLEAN[id6] matches {
                                 value matches {True, False}
                             }
                         }
                     }
-                    ELEMENT[id7] occurrences matches {1} matches {    -- Monthly income range
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
                         value matches {
                             DV_CODED_TEXT[id8] matches {
                                 defining_code matches {[ac2]}
@@ -160,12 +160,12 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"socioeconomic data">
-                description = <"socioeconomic data">
+                text = <"Dados socioeconômicos">
+                description = <"">
             >
             ["id3"] = <
                 text = <"Nível de escolaridade">
-                description = <"Please state the level of education">
+                description = <"Informe o nível de escolaridade">
             >
             ["at1"] = <
                 text = <"Nunca estudou">
@@ -232,12 +232,12 @@ terminology
                 description = <"Nível de escolaridade">
             >
             ["id5"] = <
-                text = <"Currently attending school">
-                description = <"Please tell us if you currently attend school">
+                text = <"Atualmente frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
             >
             ["id7"] = <
-                text = <"Monthly income range">
-                description = <"Monthly income range">
+                text = <"Faixa de renda mensal">
+                description = <"Faixa de renda mensal">
             >
             ["at16"] = <
                 text = <"Menos de 1 SM">
@@ -378,12 +378,12 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"dados socioeconômicos">
-                description = <"dados socioeconômicos">
+                text = <"socioeconomic data">
+                description = <"">
             >
             ["id3"] = <
-                text = <"Nível de escolaridade">
-                description = <"Informe o nível de escolaridade">
+                text = <"Level of schooling">
+                description = <"Please state the level of education">
             >
             ["at1"] = <
                 text = <"Nunca estudou">
@@ -450,12 +450,12 @@ terminology
                 description = <"*Nível de escolaridade (pt-br)">
             >
             ["id5"] = <
-                text = <"Atualmente frequenta escola">
-                description = <"Informe se atualmente frequenta a escola">
+                text = <"Currently attending school">
+                description = <"Please tell us if you currently attend school">
             >
             ["id7"] = <
-                text = <"Faixa de renda mensal">
-                description = <"Faixa de renda mensal">
+                text = <"Monthly income range">
+                description = <"Monthly income range">
             >
             ["at16"] = <
                 text = <"*Menos de 1 SM (pt-br)">
