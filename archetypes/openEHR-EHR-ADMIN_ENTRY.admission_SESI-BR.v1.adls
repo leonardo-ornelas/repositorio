@@ -199,6 +199,14 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.21] occurrences matches {1} matches {    -- Idade
+                        value matches {
+                            DV_TEXT[id0.22] 
+                        }
+                    }
+                    CLUSTER[id0.23] occurrences matches {0..1} matches {    -- Identidade
+                        items
+                    }
                 }
             }
         }
@@ -291,6 +299,14 @@ terminology
                 text = <"Data de Nascimento">
                 description = <"Data de Nascimento">
             >
+            ["id0.21"] = <
+                text = <"Idade">
+                description = <"Idade">
+            >
+            ["id0.23"] = <
+                text = <"Identidade">
+                description = <"Identidade">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -377,6 +393,14 @@ terminology
                 text = <"Data de Nascimento (en)">
                 description = <"Data de Nascimento (en)">
             >
+            ["id0.21"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.23"] = <
+                text = <"Identidade (en)">
+                description = <"Identidade (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -462,6 +486,14 @@ terminology
             ["id0.19"] = <
                 text = <"Data de Nascimento (en)">
                 description = <"Data de Nascimento (en)">
+            >
+            ["id0.21"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.23"] = <
+                text = <"Identidade (en)">
+                description = <"Identidade (en)">
             >
         >
     >
