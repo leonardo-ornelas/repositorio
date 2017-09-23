@@ -1933,8 +1933,12 @@ definition
                     DV_TEXT[id18.1] 
                 }
             }
-            ELEMENT[id19] occurrences matches {1} matches {
-                /value[id20]/defining_code matches {[ac4]}
+            ELEMENT[id19.1] occurrences matches {1} matches {    -- Afastamento nos últimos dois anos por mais de 15 dias
+                value matches {
+                    DV_CODED_TEXT[id20.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
             }
         }
     }
@@ -1962,6 +1966,10 @@ terminology
                 text = <"Após a última consulta sofreu acidente de trabalho?">
                 description = <"Após a última consulta sofreu acidente de trabalho?">
             >
+            ["id19.1"] = <
+                text = <"Afastamento nos últimos dois anos por mais de 15 dias">
+                description = <"Afastamento nos últimos dois anos por mais de 15 dias">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1984,6 +1992,10 @@ terminology
                 text = <"After the last consultation you had an accident at work?">
                 description = <"After the last consultation you had an accident at work?">
             >
+            ["id19.1"] = <
+                text = <"Removal in the last two years for more than 15 days">
+                description = <"Removal in the last two years for more than 15 days">
+            >
         >
     >
 
@@ -1997,7 +2009,20 @@ specialize
 
 definition
     OBSERVATION[id1.1] occurrences matches {1} matches {    -- Histórico de intervenções/cirurgias
-        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/defining_code matches {[ac1]}
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6.1] occurrences matches {0..1} matches {    -- Histórico de intervenções e ou cirurgias
+                value matches {
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id8.1] occurrences matches {0..1} matches {    -- Intervenções e ou cirurgias
+                value matches {
+                    DV_TEXT[id9.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -2007,11 +2032,27 @@ terminology
                 text = <"Histórico de intervenções/cirurgias">
                 description = <"Histórico de intervenções/cirurgias">
             >
+            ["id6.1"] = <
+                text = <"Histórico de intervenções e ou cirurgias">
+                description = <"Histórico de intervenções e ou cirurgias">
+            >
+            ["id8.1"] = <
+                text = <"Intervenções e ou cirurgias">
+                description = <"Intervenções e ou cirurgias">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"historical_interventions_experiences">
                 description = <"historical_interventions_experiences">
+            >
+            ["id6.1"] = <
+                text = <"History of interventions and / or surgeries">
+                description = <"History of interventions and / or surgeries">
+            >
+            ["id8.1"] = <
+                text = <"Interventions and or surgeries">
+                description = <"Interventions and or surgeries">
             >
         >
     >
@@ -2101,6 +2142,11 @@ definition
                     }
                     CLUSTER[id9.0.1] occurrences matches {0} matches {    -- Medical History
                         items matches {
+                            ELEMENT[id10.0.1] occurrences matches {0..1} matches {    -- Problem/Diagnosis
+                                value matches {
+                                    DV_TEXT[id36.0.1] 
+                                }
+                            }
                             ELEMENT[id13.0.1] occurrences matches {0} matches {    -- Clinical Description
                                 value matches {
                                     DV_TEXT[id37.0.1] 
@@ -2208,6 +2254,10 @@ terminology
                 text = <"Clinical Description">
                 description = <"Narrative description or comments about clinical aspects of the genetic relative's problem/diagnosis.">
             >
+            ["id10.0.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Identification of the genetic relative's problem or diagnosis.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2269,6 +2319,10 @@ terminology
             ["id13.0.1"] = <
                 text = <"Descrição clínica">
                 description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema / diagnóstico do parente genético.">
+            >
+            ["id10.0.1"] = <
+                text = <"Problema/Diagnóstico">
+                description = <"Identificação do problema ou diagnóstico do parente genético.">
             >
         >
     >
@@ -3850,11 +3904,20 @@ specialize
 definition
     ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Historia Ocupacional Pregressa
         /data[id2]/items matches {
+            ELEMENT[id9.1] occurrences matches {0..1} matches {    -- Perigo/fatores de risco ocupacional
+                value matches {
+                    DV_TEXT[id10.1] 
+                }
+            }
             ELEMENT[id11] occurrences matches {1} matches {
                 /value[id12]/value matches {True, False}
             }
-            ELEMENT[id15] occurrences matches {0..1} matches {
-                /value[id16]/defining_code matches {[ac1]}
+            ELEMENT[id15.1] occurrences matches {0..1} matches {    -- Acidentes/ doenças ocupacionais
+                value matches {
+                    DV_CODED_TEXT[id16.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
         }
     }
@@ -3866,11 +3929,27 @@ terminology
                 text = <"Historia Ocupacional Pregressa">
                 description = <"Histórico de ocupações anteriores">
             >
+            ["id9.1"] = <
+                text = <"Perigo/fatores de risco ocupacional">
+                description = <"Perigo/fatores de risco ocupacional">
+            >
+            ["id15.1"] = <
+                text = <"Acidentes/ doenças ocupacionais">
+                description = <"Acidentes/ doenças ocupacionais">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"History of previous occupations">
                 description = <"History of previous occupations">
+            >
+            ["id9.1"] = <
+                text = <"Danger / occupational risk factors">
+                description = <"Danger / occupational risk factors">
+            >
+            ["id15.1"] = <
+                text = <"Accidents / occupational diseases">
+                description = <"Accidents / occupational diseases">
             >
         >
     >
@@ -3886,7 +3965,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historia_clinica_atual-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historia_clinica_atual-001.v1.0.0]
         }
     }
 
@@ -3902,35 +3981,6 @@ terminology
             ["id1.1"] = <
                 text = <"História ocupacional atual">
                 description = <"História ocupacional atual">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historia_clinica_atual-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0
-
-definition
-    OBSERVATION[id1.1] occurrences matches {1} matches {    -- História Clínica Atual
-        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/value matches {True, False}
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"História Clínica Atual">
-                description = <"historia_clinica_atual">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Current clinical story">
-                description = <"Current clinical story">
             >
         >
     >
@@ -4449,8 +4499,12 @@ definition
                     DV_TEXT[id17.1] 
                 }
             }
-            ELEMENT[id18] occurrences matches {0..1} matches {
-                /value[id19]/defining_code matches {[ac3]}
+            ELEMENT[id18.1] occurrences matches {0..1} matches {    -- Prostate Specific Antigen (PSA)
+                value matches {
+                    DV_CODED_TEXT[id19.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
         }
     }
@@ -4474,6 +4528,10 @@ terminology
                 text = <"comment">
                 description = <"comment">
             >
+            ["id18.1"] = <
+                text = <"Prostate Specific Antigen (PSA)">
+                description = <"Prostate Specific Antigen (PSA)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -4491,6 +4549,10 @@ terminology
             ["id16.1"] = <
                 text = <"Comentário">
                 description = <"comentário">
+            >
+            ["id18.1"] = <
+                text = <"Antígeno Prostático Específico (PSA)">
+                description = <"Antígeno Prostático Específico (PSA)">
             >
         >
     >
@@ -4709,6 +4771,35 @@ terminology
             ["id1.1"] = <
                 text = <"carrier deficiency">
                 description = <"carrier deficiency">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-sesi_fco_completa-historia_clinica_atual-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- História clinica atual
+        /data[id2]/events[id3]/data[id4]/items[id6]/value[id7]/value matches {True, False}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"História clinica atual">
+                description = <"historia_clinica_atual">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Current clinical story">
+                description = <"Current clinical story">
             >
         >
     >
