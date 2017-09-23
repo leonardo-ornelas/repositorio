@@ -93,6 +93,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id26] occurrences matches {1} matches {    -- Se acha uma pessoa sem muito valor
+                                        value matches {
+                                            DV_CODED_TEXT[id27] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -195,6 +202,10 @@ terminology
             ["id24"] = <
                 text = <"Tem perdido a confiança em si">
                 description = <"Tem perdido a confiança em si">
+            >
+            ["id26"] = <
+                text = <"Se acha uma pessoa sem muito valor">
+                description = <"Se acha uma pessoa sem muito valor">
             >
         >
     >
