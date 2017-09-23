@@ -77,42 +77,42 @@ definition
                             }
                             CLUSTER[id20] occurrences matches {0..1} matches {    -- Items present at the residence
                                 items matches {
-                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Telefone Fixo
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Phone
                                         value matches {
                                             DV_BOOLEAN[id22] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Telefone Celular
+                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- cell phone
                                         value matches {
                                             DV_BOOLEAN[id24] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Fogão
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Cooker
                                         value matches {
                                             DV_BOOLEAN[id26] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Rádio
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Radio
                                         value matches {
                                             DV_BOOLEAN[id28] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- Televisão colorida
+                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- TV
                                         value matches {
                                             DV_BOOLEAN[id31] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Geladeira
+                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Refrigerator
                                         value matches {
                                             DV_BOOLEAN[id33] matches {
                                                 value matches {True, False}
@@ -336,28 +336,28 @@ terminology
                 description = <"Items present at the residence">
             >
             ["id21"] = <
-                text = <"Telefone Fixo">
-                description = <"Telefone Fixo">
+                text = <"Phone">
+                description = <"Phone">
             >
             ["id23"] = <
-                text = <"Telefone Celular">
-                description = <"Telefone Celular">
+                text = <"cell phone">
+                description = <"cell phone">
             >
             ["id25"] = <
-                text = <"Fogão">
-                description = <"Fogão">
+                text = <"Cooker">
+                description = <"Cooker">
             >
             ["id27"] = <
-                text = <"Rádio">
-                description = <"Rádio">
+                text = <"Radio">
+                description = <"Radio">
             >
             ["id30"] = <
-                text = <"Televisão colorida">
-                description = <"Televisão colorida">
+                text = <"TV">
+                description = <"TV">
             >
             ["id32"] = <
-                text = <"Geladeira">
-                description = <"Geladeira">
+                text = <"Refrigerator">
+                description = <"Refrigerator">
             >
             ["id34"] = <
                 text = <"Máquina de lavar roupas">
@@ -554,28 +554,28 @@ terminology
                 description = <"Itens presentes na residência">
             >
             ["id21"] = <
-                text = <"*Telefone Fixo (pt-br)">
-                description = <"*Telefone Fixo (pt-br)">
+                text = <"Telefone Fixo">
+                description = <"Telefone Fixo">
             >
             ["id23"] = <
-                text = <"*Telefone Celular (pt-br)">
-                description = <"*Telefone Celular (pt-br)">
+                text = <"Telefone Celular">
+                description = <"Telefone Celular">
             >
             ["id25"] = <
-                text = <"*Fogão (pt-br)">
-                description = <"*Fogão (pt-br)">
+                text = <"Fogão">
+                description = <"Fogão">
             >
             ["id27"] = <
-                text = <"*Rádio (pt-br)">
-                description = <"*Rádio (pt-br)">
+                text = <"Rádio">
+                description = <"Rádio">
             >
             ["id30"] = <
-                text = <"*Televisão colorida (pt-br)">
-                description = <"*Televisão colorida (pt-br)">
+                text = <"Televisão colorida">
+                description = <"Televisão colorida">
             >
             ["id32"] = <
-                text = <"*Geladeira (pt-br)">
-                description = <"*Geladeira (pt-br)">
+                text = <"Geladeira">
+                description = <"Geladeira">
             >
             ["id34"] = <
                 text = <"*Máquina de lavar roupas (pt-br)">
