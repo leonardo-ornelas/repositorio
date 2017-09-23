@@ -218,6 +218,11 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.28] occurrences matches {1} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id0.29] 
+                        }
+                    }
                 }
             }
         }
@@ -326,6 +331,10 @@ terminology
                 text = <"Orgão">
                 description = <"Orgão">
             >
+            ["id0.28"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -428,6 +437,10 @@ terminology
                 text = <"Orgão (en)">
                 description = <"Orgão (en)">
             >
+            ["id0.28"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -529,6 +542,10 @@ terminology
             ["id0.26"] = <
                 text = <"Orgão (en)">
                 description = <"Orgão (en)">
+            >
+            ["id0.28"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
             >
         >
     >
