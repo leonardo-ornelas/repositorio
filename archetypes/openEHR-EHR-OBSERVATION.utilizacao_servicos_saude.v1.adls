@@ -51,6 +51,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id14] occurrences matches {1} matches {    -- O trabalhador possui plano de saúde
+                                        value matches {
+                                            DV_CODED_TEXT[id15] matches {
+                                                defining_code matches {[ac4]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -154,6 +161,34 @@ terminology
                 text = <"Pressão">
                 description = <"Pressão">
             >
+            ["id14"] = <
+                text = <"O trabalhador possui plano de saúde">
+                description = <"O trabalhador possui plano de saúde">
+            >
+            ["at14"] = <
+                text = <"Sim, através dessa empresa onde trabalho">
+                description = <"Sim, através dessa empresa onde trabalho">
+            >
+            ["at15"] = <
+                text = <"Sim, através de outra empresa">
+                description = <"Sim, através de outra empresa">
+            >
+            ["at16"] = <
+                text = <"Sim, adquirido individualmente sem participação da empresa">
+                description = <"Sim, adquirido individualmente sem participação da empresa">
+            >
+            ["at17"] = <
+                text = <"Sim, como dependente">
+                description = <"Sim, como dependente">
+            >
+            ["at18"] = <
+                text = <"Não">
+                description = <"Não">
+            >
+            ["ac4"] = <
+                text = <"Plano de saúde">
+                description = <"Plano de saúde">
+            >
         >
     >
     value_sets = <
@@ -168,6 +203,10 @@ terminology
         ["ac3"] = <
             id = <"ac3">
             members = <"at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
         >
     >
 
