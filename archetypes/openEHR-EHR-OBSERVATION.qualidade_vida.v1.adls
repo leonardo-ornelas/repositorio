@@ -82,6 +82,13 @@ definition
                                                     }
                                                 }
                                             }
+                                            ELEMENT[id23] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)
+                                                value matches {
+                                                    DV_CODED_TEXT[id24] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -234,6 +241,10 @@ terminology
             ["id21"] = <
                 text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
                 description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id23"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
             >
         >
     >
