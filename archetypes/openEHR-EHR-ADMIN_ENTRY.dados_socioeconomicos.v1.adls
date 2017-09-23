@@ -52,46 +52,46 @@ definition
                             }
                         }
                     }
-                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Domicile and family data
+                    CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
                         items matches {
-                            ELEMENT[id14] occurrences matches {1} matches {    -- Type of residence
+                            ELEMENT[id14] occurrences matches {1} matches {    -- Tipo de residência
                                 value matches {
                                     DV_CODED_TEXT[id15] matches {
                                         defining_code matches {[ac3]}
                                     }
                                 }
                             }
-                            ELEMENT[id16] occurrences matches {1} matches {    -- How many people live in the house
+                            ELEMENT[id16] occurrences matches {1} matches {    -- Quantas pessoas vivem na casa
                                 value matches {
                                     DV_CODED_TEXT[id17] matches {
                                         defining_code matches {[ac4]}
                                     }
                                 }
                             }
-                            ELEMENT[id18] occurrences matches {1} matches {    -- Householder
+                            ELEMENT[id18] occurrences matches {1} matches {    -- Chefe de família
                                 value matches {
                                     DV_BOOLEAN[id19] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            CLUSTER[id20] occurrences matches {0..1} matches {    -- Items present at the residence
+                            CLUSTER[id20] occurrences matches {0..1} matches {    -- Itens presentes na residência
                                 items matches {
-                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Phone
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Telefone Fixo
                                         value matches {
                                             DV_BOOLEAN[id22] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- cell phone
+                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Telefone Celular
                                         value matches {
                                             DV_BOOLEAN[id24] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Cooker
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Fogão
                                         value matches {
                                             DV_BOOLEAN[id26] matches {
                                                 value matches {True, False}
@@ -105,21 +105,21 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- TV
+                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- Televisão colorida
                                         value matches {
                                             DV_BOOLEAN[id31] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Refrigerator
+                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Geladeira
                                         value matches {
                                             DV_BOOLEAN[id33] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id34] occurrences matches {0..1} matches {    -- Washing machine
+                                    ELEMENT[id34] occurrences matches {0..1} matches {    -- Máquina de lavar roupas
                                         value matches {
                                             DV_BOOLEAN[id35] matches {
                                                 value matches {True, False}
@@ -133,14 +133,14 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id38] occurrences matches {0..1} matches {    -- Computer
+                                    ELEMENT[id38] occurrences matches {0..1} matches {    -- Computador
                                         value matches {
                                             DV_BOOLEAN[id39] matches {
                                                 value matches {True, False}
                                             }
                                         }
                                     }
-                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Internet access
+                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Acesso à internet
                                         value matches {
                                             DV_BOOLEAN[id41] matches {
                                                 value matches {True, False}
@@ -264,12 +264,12 @@ terminology
                 description = <"Faixa de renda mensal">
             >
             ["id10"] = <
-                text = <"Domicile and family data">
-                description = <"Domicile and family data">
+                text = <"Dados do domicílio e da família">
+                description = <"Dados do domicílio e da família">
             >
             ["id14"] = <
-                text = <"Type of residence">
-                description = <"Type of residence">
+                text = <"Tipo de residência">
+                description = <"Tipo de residência">
             >
             ["at21"] = <
                 text = <"Própria">
@@ -288,8 +288,8 @@ terminology
                 description = <"Tipo de residência">
             >
             ["id16"] = <
-                text = <"How many people live in the house">
-                description = <"How many people live in the house">
+                text = <"Quantas pessoas vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
             >
             ["at24"] = <
                 text = <"Mora sozinho (a)">
@@ -328,52 +328,52 @@ terminology
                 description = <"Quantas pessoas vivem na casa">
             >
             ["id18"] = <
-                text = <"Householder">
-                description = <"Householder">
+                text = <"Chefe de família">
+                description = <"Chefe de família">
             >
             ["id20"] = <
-                text = <"Items present at the residence">
-                description = <"Items present at the residence">
+                text = <"Itens presentes na residência">
+                description = <"Itens presentes na residência">
             >
             ["id21"] = <
-                text = <"Phone">
-                description = <"Phone">
+                text = <"Telefone Fixo">
+                description = <"Telefone Fixo">
             >
             ["id23"] = <
-                text = <"cell phone">
-                description = <"cell phone">
+                text = <"Telefone Celular">
+                description = <"Telefone Celular">
             >
             ["id25"] = <
-                text = <"Cooker">
-                description = <"Cooker">
+                text = <"Fogão">
+                description = <"Fogão">
             >
             ["id27"] = <
                 text = <"Radio">
                 description = <"Radio">
             >
             ["id30"] = <
-                text = <"TV">
-                description = <"TV">
+                text = <"Televisão colorida">
+                description = <"Televisão colorida">
             >
             ["id32"] = <
-                text = <"Refrigerator">
-                description = <"Refrigerator">
+                text = <"Geladeira">
+                description = <"Geladeira">
             >
             ["id34"] = <
-                text = <"Washing machine">
-                description = <"Washing machine">
+                text = <"Máquina de lavar roupas">
+                description = <"Máquina de lavar roupas">
             >
             ["id36"] = <
                 text = <"Freezer">
                 description = <"Freezer">
             >
             ["id38"] = <
-                text = <"Computer">
-                description = <"Computer">
+                text = <"Computador">
+                description = <"Computador">
             >
             ["id40"] = <
-                text = <"Internet access">
-                description = <"Internet access">
+                text = <"Acesso à internet">
+                description = <"Acesso à internet">
             >
         >
         ["en"] = <
@@ -482,12 +482,12 @@ terminology
                 description = <"*Faixa de renda mensal (pt-br)">
             >
             ["id10"] = <
-                text = <"Dados do domicílio e da família">
-                description = <"Dados do domicílio e da família">
+                text = <"Domicile and family data">
+                description = <"Domicile and family data">
             >
             ["id14"] = <
-                text = <"Tipo de residência">
-                description = <"Tipo de residência">
+                text = <"Type of residence">
+                description = <"Type of residence">
             >
             ["at21"] = <
                 text = <"*Própria (pt-br)">
@@ -506,8 +506,8 @@ terminology
                 description = <"*Tipo de residência (pt-br)">
             >
             ["id16"] = <
-                text = <"Quantas pessoas vivem na casa">
-                description = <"Quantas pessoas vivem na casa">
+                text = <"How many people live in the house">
+                description = <"How many people live in the house">
             >
             ["at24"] = <
                 text = <"*Mora sozinho (a) (pt-br)">
@@ -546,52 +546,52 @@ terminology
                 description = <"*Quantas pessoas vivem na casa (pt-br)">
             >
             ["id18"] = <
-                text = <"Chefe de família">
-                description = <"Chefe de família">
+                text = <"Householder">
+                description = <"Householder">
             >
             ["id20"] = <
-                text = <"Itens presentes na residência">
-                description = <"Itens presentes na residência">
+                text = <"Items present at the residence">
+                description = <"Items present at the residence">
             >
             ["id21"] = <
-                text = <"Telefone Fixo">
-                description = <"Telefone Fixo">
+                text = <"Phone">
+                description = <"Phone">
             >
             ["id23"] = <
-                text = <"Telefone Celular">
-                description = <"Telefone Celular">
+                text = <"Cellphone">
+                description = <"Cellphone">
             >
             ["id25"] = <
-                text = <"Fogão">
-                description = <"Fogão">
+                text = <"Cooker">
+                description = <"Cooker">
             >
             ["id27"] = <
                 text = <"Rádio">
                 description = <"Rádio">
             >
             ["id30"] = <
-                text = <"Televisão colorida">
-                description = <"Televisão colorida">
+                text = <"TV">
+                description = <"TV">
             >
             ["id32"] = <
-                text = <"Geladeira">
-                description = <"Geladeira">
+                text = <"Refrigerator">
+                description = <"Refrigerator">
             >
             ["id34"] = <
-                text = <"Máquina de lavar roupas">
-                description = <"Máquina de lavar roupas">
+                text = <"Washing machine">
+                description = <"Washing machine">
             >
             ["id36"] = <
                 text = <"Freezer">
                 description = <"Freezer">
             >
             ["id38"] = <
-                text = <"Computador">
-                description = <"Computador">
+                text = <"Computer">
+                description = <"Computer">
             >
             ["id40"] = <
-                text = <"Acesso à internet">
-                description = <"Acesso à internet">
+                text = <"Internet access">
+                description = <"Internet access">
             >
         >
     >
