@@ -223,6 +223,15 @@ definition
                             DV_TEXT[id0.29] 
                         }
                     }
+                    CLUSTER[id0.30] occurrences matches {0..1} matches {    -- Empresa
+                        items matches {
+                            ELEMENT[id0.31] occurrences matches {1} matches {    -- Nome da Empresa
+                                value matches {
+                                    DV_TEXT[id0.32] 
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -335,6 +344,14 @@ terminology
                 text = <"NIT">
                 description = <"NIT">
             >
+            ["id0.30"] = <
+                text = <"Empresa">
+                description = <"Empresa">
+            >
+            ["id0.31"] = <
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -441,6 +458,14 @@ terminology
                 text = <"NIT (en)">
                 description = <"NIT (en)">
             >
+            ["id0.30"] = <
+                text = <"Empresa (en)">
+                description = <"Empresa (en)">
+            >
+            ["id0.31"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -546,6 +571,14 @@ terminology
             ["id0.28"] = <
                 text = <"NIT (en)">
                 description = <"NIT (en)">
+            >
+            ["id0.30"] = <
+                text = <"Empresa (en)">
+                description = <"Empresa (en)">
+            >
+            ["id0.31"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
             >
         >
     >
