@@ -69,7 +69,7 @@ definition
                     }
                     CLUSTER[id85] occurrences matches {0..1} matches {
                         items matches {
-                            ELEMENT[id0.41] occurrences matches {1} matches {    -- Logradouro
+                            ELEMENT[id0.41] occurrences matches {1} matches {    -- Public place
                                 value matches {
                                     DV_TEXT[id0.42] 
                                 }
@@ -210,9 +210,9 @@ definition
             ELEMENT[id67] occurrences matches {0..1} matches {
                 /value[id172]/defining_code matches {[ac2]}
             }
-            CLUSTER[id0.43] occurrences matches {0..1} matches {    -- Identificação do paciente
+            CLUSTER[id0.43] occurrences matches {0..1} matches {    -- Patient identification
                 items matches {
-                    ELEMENT[id0.44] occurrences matches {1} matches {    -- Nome completo
+                    ELEMENT[id0.44] occurrences matches {1} matches {    -- Full name
                         value matches {
                             DV_TEXT[id0.45] 
                         }
@@ -242,7 +242,7 @@ definition
                             DV_TEXT[id0.55] 
                         }
                     }
-                    ELEMENT[id0.56] occurrences matches {1} matches {    -- Raça Cor
+                    ELEMENT[id0.56] occurrences matches {1} matches {    -- Color Race
                         value matches {
                             DV_TEXT[id0.57] 
                         }
@@ -254,26 +254,26 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.60] occurrences matches {1} matches {    -- Data de Nascimento
+                    ELEMENT[id0.60] occurrences matches {1} matches {    -- Date of birth
                         value matches {
                             DV_DATE[id0.61] matches {
                                 value matches {*}
                             }
                         }
                     }
-                    ELEMENT[id0.62] occurrences matches {1} matches {    -- Idade
+                    ELEMENT[id0.62] occurrences matches {1} matches {    -- Age
                         value matches {
                             DV_TEXT[id0.63] 
                         }
                     }
-                    ELEMENT[id0.64] occurrences matches {1} matches {    -- Estado civil
+                    ELEMENT[id0.64] occurrences matches {1} matches {    -- marital status
                         value matches {
                             DV_CODED_TEXT[id0.65] matches {
                                 defining_code matches {[ac0.5]}
                             }
                         }
                     }
-                    ELEMENT[id0.66] occurrences matches {1} matches {    -- Tipo de Exame
+                    ELEMENT[id0.66] occurrences matches {1} matches {    -- Type of Exam
                         value matches {
                             DV_CODED_TEXT[id0.67] matches {
                                 defining_code matches {[ac0.6]}
@@ -401,16 +401,16 @@ terminology
                 description = <"(added by post-parse processor)">
             >
             ["id0.41"] = <
-                text = <"Logradouro">
-                description = <"Logradouro">
+                text = <"Public place">
+                description = <"Public place">
             >
             ["id0.43"] = <
-                text = <"Identificação do paciente">
-                description = <"Identificação do paciente">
+                text = <"Patient identification">
+                description = <"Patient identification">
             >
             ["id0.44"] = <
-                text = <"Nome completo">
-                description = <"Nome completo">
+                text = <"Full name">
+                description = <"Full name">
             >
             ["id0.46"] = <
                 text = <"Telefone">
@@ -433,8 +433,8 @@ terminology
                 description = <"Email">
             >
             ["id0.56"] = <
-                text = <"Raça Cor">
-                description = <"Raça Cor">
+                text = <"Color Race">
+                description = <"Color Race">
             >
             ["id0.58"] = <
                 text = <"Sexo">
@@ -453,16 +453,16 @@ terminology
                 description = <"Sexo">
             >
             ["id0.60"] = <
-                text = <"Data de Nascimento">
-                description = <"Data de Nascimento">
+                text = <"Date of birth">
+                description = <"Date of birth">
             >
             ["id0.62"] = <
-                text = <"Idade">
-                description = <"Idade">
+                text = <"Age">
+                description = <"Age">
             >
             ["id0.64"] = <
-                text = <"Estado civil">
-                description = <"Estado civil">
+                text = <"marital status">
+                description = <"marital status">
             >
             ["ac0.5"] = <
                 text = <"Estado civil">
@@ -477,8 +477,8 @@ terminology
                 description = <"Casado ou vive junto">
             >
             ["id0.66"] = <
-                text = <"Tipo de Exame">
-                description = <"Tipo de Exame">
+                text = <"Type of Exam">
+                description = <"Type of Exam">
             >
             ["ac0.6"] = <
                 text = <"Tipo de Exame">
@@ -793,12 +793,12 @@ terminology
                 description = <"Logradouro">
             >
             ["id0.43"] = <
-                text = <"Identificação do paciente (en)">
-                description = <"Identificação do paciente (en)">
+                text = <"Identificação do paciente">
+                description = <"Identificação do paciente">
             >
             ["id0.44"] = <
-                text = <"Nome completo (en)">
-                description = <"Nome completo (en)">
+                text = <"Nome completo">
+                description = <"Nome completo">
             >
             ["id0.46"] = <
                 text = <"Telefone (en)">
@@ -817,12 +817,12 @@ terminology
                 description = <"NIT (en)">
             >
             ["id0.54"] = <
-                text = <"Email (en)">
-                description = <"Email (en)">
+                text = <"Email">
+                description = <"Email">
             >
             ["id0.56"] = <
-                text = <"Raça Cor (en)">
-                description = <"Raça Cor (en)">
+                text = <"Raça Cor">
+                description = <"Raça Cor">
             >
             ["id0.58"] = <
                 text = <"Sexo (en)">
@@ -841,16 +841,16 @@ terminology
                 description = <"Sexo (en)">
             >
             ["id0.60"] = <
-                text = <"Data de Nascimento (en)">
-                description = <"Data de Nascimento (en)">
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
             >
             ["id0.62"] = <
-                text = <"Idade (en)">
-                description = <"Idade (en)">
+                text = <"Idade">
+                description = <"Idade">
             >
             ["id0.64"] = <
-                text = <"Estado civil (en)">
-                description = <"Estado civil (en)">
+                text = <"Estado civil">
+                description = <"Estado civil">
             >
             ["ac0.5"] = <
                 text = <"Estado civil (en)">
@@ -865,8 +865,8 @@ terminology
                 description = <"Casado ou vive junto (en)">
             >
             ["id0.66"] = <
-                text = <"Tipo de Exame (en)">
-                description = <"Tipo de Exame (en)">
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
             >
             ["ac0.6"] = <
                 text = <"Tipo de Exame (en)">
