@@ -202,28 +202,28 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*hipertensao (pt-br)">
-                description = <"*hipertensao (pt-br)">
+                text = <"Hypertension">
+                description = <"Hypertension">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Algum médico já disse que o trabalhador tem ou teve hipertensão? (pt-br)">
-                description = <"*Algum médico já disse que o trabalhador tem ou teve hipertensão? (pt-br)">
+                text = <"Has any doctor ever said that the worker has or had hypertension?">
+                description = <"Has any doctor ever said that the worker has or had hypertension?">
             >
             ["id8"] = <
-                text = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão? (pt-br)">
-                description = <"*O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão? (pt-br)">
+                text = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
+                description = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
             >
             ["id10"] = <
-                text = <"*O trabalhador usa atualmente algum medicamento para tratar de hipertensão? (pt-br)">
-                description = <"*O trabalhador usa atualmente algum medicamento para tratar de hipertensão? (pt-br)">
+                text = <"Does the worker currently use any medication to treat hypertension?">
+                description = <"Does the worker currently use any medication to treat hypertension?">
             >
             ["id12"] = <
-                text = <"*Hipertensão ou pressão alta? (pt-br)">
-                description = <"*Hipertensão ou pressão alta? (pt-br)">
+                text = <"Hypertension or high blood pressure?">
+                description = <"Hypertension or high blood pressure?">
             >
             ["at1"] = <
                 text = <"*Nnehum (pt-br)">
@@ -266,24 +266,24 @@ terminology
                 description = <"*Historia Familiar (pt-br)">
             >
             ["id14"] = <
-                text = <"*Acidente vascular cerebral ou derrame? (pt-br)">
-                description = <"*Acidente vascular cerebral ou derrame? (pt-br)">
+                text = <"Cerebral vascular accident or leakage?">
+                description = <"Cerebral vascular accident or leakage?">
             >
             ["id16"] = <
-                text = <"*Diabetes (pt-br)">
-                description = <"*Diabetes (pt-br)">
+                text = <"Diabetes">
+                description = <"Diabetes">
             >
             ["id19"] = <
-                text = <"*Infarto (pt-br)">
-                description = <"*Infarto (pt-br)">
+                text = <"Infarct">
+                description = <"Infarct">
             >
             ["id21"] = <
-                text = <"*Câncer (pt-br)">
-                description = <"*Câncer (pt-br)">
+                text = <"Cancer">
+                description = <"Cancer">
             >
             ["id23"] = <
-                text = <"*Depressão (pt-br)">
-                description = <"*Depressão (pt-br)">
+                text = <"Depression">
+                description = <"Depression">
             >
         >
     >
