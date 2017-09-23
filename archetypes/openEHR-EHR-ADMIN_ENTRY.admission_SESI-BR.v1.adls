@@ -254,6 +254,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.60] occurrences matches {1} matches {    -- Data de Nascimento
+                        value matches {
+                            DV_DATE[id0.61] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -406,6 +413,10 @@ terminology
                 text = <"Sexo">
                 description = <"Sexo">
             >
+            ["id0.60"] = <
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -552,6 +563,10 @@ terminology
                 text = <"Sexo (en)">
                 description = <"Sexo (en)">
             >
+            ["id0.60"] = <
+                text = <"Data de Nascimento (en)">
+                description = <"Data de Nascimento (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -697,6 +712,10 @@ terminology
             ["ac0.4"] = <
                 text = <"Sexo (en)">
                 description = <"Sexo (en)">
+            >
+            ["id0.60"] = <
+                text = <"Data de Nascimento (en)">
+                description = <"Data de Nascimento (en)">
             >
         >
     >
