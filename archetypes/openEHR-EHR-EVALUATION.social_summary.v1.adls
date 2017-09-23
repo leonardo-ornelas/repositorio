@@ -75,7 +75,9 @@ definition
                             }
                             ELEMENT[id11] occurrences matches {0..1} matches {    -- Em geral, quantas horas o trabalhador trabalha por dia?
                                 value matches {
-                                    DV_TEXT[id12] 
+                                    DV_CODED_TEXT[id12] matches {
+                                        defining_code matches {[ac2]}
+                                    }
                                     DV_CODED_TEXT[id13] matches {
                                         defining_code matches {[ac2]}
                                     }
