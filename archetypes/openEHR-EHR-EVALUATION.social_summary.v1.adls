@@ -73,6 +73,14 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id11] occurrences matches {0..1} matches {    -- Em geral, quantas horas o trabalhador trabalha por dia?
+                                value matches {
+                                    DV_TEXT[id12] 
+                                    DV_CODED_TEXT[id13] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -127,6 +135,42 @@ terminology
                 text = <"Em geral, quantos dias da semana o trabalhador trabalha?">
                 description = <"Em geral, quantos dias da semana o trabalhador trabalha?">
             >
+            ["id11"] = <
+                text = <"Em geral, quantas horas o trabalhador trabalha por dia?">
+                description = <"Em geral, quantas horas o trabalhador trabalha por dia?">
+            >
+            ["at6"] = <
+                text = <"Menos de 4 horas">
+                description = <"Menos de 4 horas">
+            >
+            ["at7"] = <
+                text = <"4 horas">
+                description = <"4 horas">
+            >
+            ["at8"] = <
+                text = <"5 horas">
+                description = <"5 horas">
+            >
+            ["at9"] = <
+                text = <"6 horas">
+                description = <"6 horas">
+            >
+            ["at10"] = <
+                text = <"7 horas">
+                description = <"7 horas">
+            >
+            ["at11"] = <
+                text = <"8 horas">
+                description = <"8 horas">
+            >
+            ["at12"] = <
+                text = <"Mais que 8 horas">
+                description = <"Mais que 8 horas">
+            >
+            ["ac2"] = <
+                text = <"Horas trabalhadas">
+                description = <"Horas trabalhadas">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -173,12 +217,52 @@ terminology
                 text = <"Em geral, quantos dias da semana o trabalhador trabalha? (en)">
                 description = <"Em geral, quantos dias da semana o trabalhador trabalha? (en)">
             >
+            ["id11"] = <
+                text = <"Em geral, quantas horas o trabalhador trabalha por dia? (en)">
+                description = <"Em geral, quantas horas o trabalhador trabalha por dia? (en)">
+            >
+            ["at6"] = <
+                text = <"Menos de 4 horas (en)">
+                description = <"Menos de 4 horas (en)">
+            >
+            ["at7"] = <
+                text = <"4 horas (en)">
+                description = <"4 horas (en)">
+            >
+            ["at8"] = <
+                text = <"5 horas (en)">
+                description = <"5 horas (en)">
+            >
+            ["at9"] = <
+                text = <"6 horas (en)">
+                description = <"6 horas (en)">
+            >
+            ["at10"] = <
+                text = <"7 horas (en)">
+                description = <"7 horas (en)">
+            >
+            ["at11"] = <
+                text = <"8 horas (en)">
+                description = <"8 horas (en)">
+            >
+            ["at12"] = <
+                text = <"Mais que 8 horas (en)">
+                description = <"Mais que 8 horas (en)">
+            >
+            ["ac2"] = <
+                text = <"Horas trabalhadas (en)">
+                description = <"Horas trabalhadas (en)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at2", "at3", "at4", "at5">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8", "at9", "at10", "at11", "at12">
         >
     >
 
