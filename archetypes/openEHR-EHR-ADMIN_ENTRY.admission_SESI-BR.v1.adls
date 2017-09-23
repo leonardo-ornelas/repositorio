@@ -273,6 +273,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.66] occurrences matches {1} matches {    -- Tipo de Exame
+                        value matches {
+                            DV_CODED_TEXT[id0.67] matches {
+                                defining_code matches {[ac0.6]}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -449,6 +456,14 @@ terminology
                 text = <"Casado ou vive junto">
                 description = <"Casado ou vive junto">
             >
+            ["id0.66"] = <
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
@@ -618,6 +633,14 @@ terminology
             ["at0.19"] = <
                 text = <"Casado ou vive junto (en)">
                 description = <"Casado ou vive junto (en)">
+            >
+            ["id0.66"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
             >
         >
         ["pt-br"] = <
@@ -789,6 +812,14 @@ terminology
                 text = <"Casado ou vive junto (en)">
                 description = <"Casado ou vive junto (en)">
             >
+            ["id0.66"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
         >
     >
     value_sets = <
@@ -811,6 +842,10 @@ terminology
         ["ac0.5"] = <
             id = <"ac0.5">
             members = <"at0.2", "at0.3", "at0.4", "at0.18", "at0.19">
+        >
+        ["ac0.6"] = <
+            id = <"ac0.6">
+            members = <"at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
         >
     >
 
