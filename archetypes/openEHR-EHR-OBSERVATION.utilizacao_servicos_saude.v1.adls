@@ -30,6 +30,13 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {1} matches {    -- Quando foi a ultima vez que o trabalhador foi ao dentista
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -81,12 +88,40 @@ terminology
                 text = <"Vezes">
                 description = <"Vezes">
             >
+            ["id8"] = <
+                text = <"Quando foi a ultima vez que o trabalhador foi ao dentista">
+                description = <"Quando foi a ultima vez que o trabalhador foi ao dentista">
+            >
+            ["at6"] = <
+                text = <"Menos de 1 ano">
+                description = <"Menos de 1 ano">
+            >
+            ["at7"] = <
+                text = <"De 1 a 2 anos">
+                description = <"De 1 a 2 anos">
+            >
+            ["at8"] = <
+                text = <"3 ou mais">
+                description = <"3 ou mais">
+            >
+            ["at9"] = <
+                text = <"Nunca foi ao dentista">
+                description = <"Nunca foi ao dentista">
+            >
+            ["ac2"] = <
+                text = <"Visita Dentista">
+                description = <"Visita Dentista">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2", "at3", "at4", "at5">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8", "at9">
         >
     >
 
