@@ -429,6 +429,36 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id139] occurrences matches {0..1} matches {    -- Psiquismo
+                                        items matches {
+                                            ELEMENT[id140] occurrences matches {0..1} matches {    -- Orientação tempo / espaço
+                                                value matches {
+                                                    DV_CODED_TEXT[id141] matches {
+                                                        defining_code matches {[ac42]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id142] occurrences matches {0..1} matches {    -- Humor
+                                                value matches {
+                                                    DV_CODED_TEXT[id143] matches {
+                                                        defining_code matches {[ac43]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id144] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id145] 
+                                                }
+                                            }
+                                            ELEMENT[id146] occurrences matches {0..1} matches {    -- Resultado do SRQ 20
+                                                value matches {
+                                                    DV_COUNT[id147] matches {
+                                                        magnitude matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -904,6 +934,50 @@ terminology
                 text = <"Especificar">
                 description = <"Especificar">
             >
+            ["id139"] = <
+                text = <"Psiquismo">
+                description = <"Psiquismo">
+            >
+            ["id140"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["ac42"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["id142"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["at7"] = <
+                text = <"Estável">
+                description = <"Estável">
+            >
+            ["at8"] = <
+                text = <"Ansioso">
+                description = <"Ansioso">
+            >
+            ["at9"] = <
+                text = <"Irritável">
+                description = <"Irritável">
+            >
+            ["at10"] = <
+                text = <"Deprimido">
+                description = <"Deprimido">
+            >
+            ["ac43"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["id144"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id146"] = <
+                text = <"Resultado do SRQ 20">
+                description = <"Resultado do SRQ 20">
+            >
         >
     >
     value_sets = <
@@ -1070,6 +1144,14 @@ terminology
         ["ac41"] = <
             id = <"ac41">
             members = <"at4", "at5", "at6">
+        >
+        ["ac42"] = <
+            id = <"ac42">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac43"] = <
+            id = <"ac43">
+            members = <"at6", "at7", "at8", "at9", "at10">
         >
     >
 
