@@ -82,6 +82,20 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id22] occurrences matches {1} matches {    -- Tratamento- 15
+                                value matches {
+                                    DV_CODED_TEXT[id23] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id24] occurrences matches {1} matches {    -- Condição Dental- 14
+                                value matches {
+                                    DV_CODED_TEXT[id25] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -211,6 +225,14 @@ terminology
             ["id20"] = <
                 text = <"Condição Dental- 15">
                 description = <"Condição Dental- 15">
+            >
+            ["id22"] = <
+                text = <"Tratamento- 15">
+                description = <"Tratamento- 15">
+            >
+            ["id24"] = <
+                text = <"Condição Dental- 14">
+                description = <"Condição Dental- 14">
             >
         >
     >
