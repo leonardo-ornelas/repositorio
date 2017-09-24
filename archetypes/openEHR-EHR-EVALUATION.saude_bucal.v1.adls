@@ -243,6 +243,20 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id68] occurrences matches {1} matches {    -- Condição Dental- 28
+                                value matches {
+                                    DV_CODED_TEXT[id69] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id70] occurrences matches {1} matches {    -- Tratamento- 28
+                                value matches {
+                                    DV_CODED_TEXT[id71] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -464,6 +478,14 @@ terminology
             ["id66"] = <
                 text = <"Tratamento- 27">
                 description = <"Tratamento- 27">
+            >
+            ["id68"] = <
+                text = <"Condição Dental- 28">
+                description = <"Condição Dental- 28">
+            >
+            ["id70"] = <
+                text = <"Tratamento- 28">
+                description = <"Tratamento- 28">
             >
         >
     >
