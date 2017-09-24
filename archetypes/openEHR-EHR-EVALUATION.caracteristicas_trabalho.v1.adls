@@ -212,16 +212,16 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*caracteristicas_trabalho (pt-br)">
-                description = <"*caracteristicas_trabalho (pt-br)">
+                text = <"characteristics of work">
+                description = <"characteristics of work">
             >
             ["id2"] = <
-                text = <"*Caracterisiticas do trabalho (pt-br)">
-                description = <"*Caracterisiticas do trabalho (pt-br)">
+                text = <"characteristics of work">
+                description = <"characteristics of work">
             >
             ["id3"] = <
-                text = <"*Em geral, quantos dias da semana o trabalhador trabalha (pt-br)">
-                description = <"*Em geral, quantos dias da semana o trabalhador trabalha (pt-br)">
+                text = <"In general, how many days a week does the worker work">
+                description = <"In general, how many days a week does the worker work">
             >
             ["at1"] = <
                 text = <"*1 a 2 dias (pt-br)">
@@ -244,8 +244,8 @@ terminology
                 description = <"*Dias (pt-br)">
             >
             ["id5"] = <
-                text = <"*Em geral, quantas horas o trabalhador trabalha por dia (pt-br)">
-                description = <"*Em geral, quantas horas o trabalhador trabalha por dia (pt-br)">
+                text = <"In general, how many hours a worker works per day">
+                description = <"In general, how many hours a worker works per day">
             >
             ["at5"] = <
                 text = <"*Menos de 4 horas (pt-br)">
@@ -280,16 +280,16 @@ terminology
                 description = <"*Horas trabalhadas (pt-br)">
             >
             ["id7"] = <
-                text = <"*Trabalha no mesmo horário todos os dias (pt-br)">
-                description = <"*Trabalha no mesmo horário todos os dias (pt-br)">
+                text = <"Works at the same time every day">
+                description = <"Works at the same time every day">
             >
             ["id9"] = <
-                text = <"*Trabalha a noite pelo menos 1 dia da semana (pt-br)">
-                description = <"*Trabalha a noite pelo menos 1 dia da semana (pt-br)">
+                text = <"Work at night at least 1 day a week">
+                description = <"Work at night at least 1 day a week">
             >
             ["id11"] = <
-                text = <"*Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde (pt-br)">
-                description = <"*Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde (pt-br)">
+                text = <"In the last 12 months, how many days did you stop working for health reasons?">
+                description = <"In the last 12 months, how many days did you stop working for health reasons?">
             >
             ["at12"] = <
                 text = <"*Nenhum (pt-br)">
@@ -328,8 +328,8 @@ terminology
                 description = <"*Dias de afastamento (pt-br)">
             >
             ["id13"] = <
-                text = <"*Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho (pt-br)">
-                description = <"*Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho (pt-br)">
+                text = <"Of the total number of days absent from work, how many days were absent as a result of work-related accidents">
+                description = <"Of the total number of days absent from work, how many days were absent as a result of work-related accidents">
             >
             ["id15"] = <
                 text = <"*Nos dias de ausência, algum gerou auxílio doença (pt-br)">
