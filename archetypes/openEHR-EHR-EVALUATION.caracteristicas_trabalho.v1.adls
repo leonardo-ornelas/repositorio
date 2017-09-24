@@ -1,0 +1,219 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-EVALUATION.caracteristicas_trabalho.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    EVALUATION[id1] occurrences matches {1} matches {    -- caracteristicas_trabalho
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Caracterisiticas do trabalho
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Em geral, quantos dias da semana o trabalhador trabalha
+                        value matches {
+                            DV_CODED_TEXT[id4] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Em geral, quantas horas o trabalhador trabalha por dia
+                        value matches {
+                            DV_CODED_TEXT[id6] matches {
+                                defining_code matches {[ac2]}
+                            }
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Trabalha no mesmo horário todos os dias
+                        value matches {
+                            DV_BOOLEAN[id8] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id9] occurrences matches {1} matches {    -- Trabalha a noite pelo menos 1 dia da semana
+                        value matches {
+                            DV_BOOLEAN[id10] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {1} matches {    -- Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde
+                        value matches {
+                            DV_CODED_TEXT[id12] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho
+                        value matches {
+                            DV_CODED_TEXT[id14] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
+                    }
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Nos dias de ausência, algum gerou auxílio doença
+                        value matches {
+                            DV_BOOLEAN[id16] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"caracteristicas_trabalho">
+                description = <"caracteristicas_trabalho">
+            >
+            ["id2"] = <
+                text = <"Caracterisiticas do trabalho">
+                description = <"Caracterisiticas do trabalho">
+            >
+            ["id3"] = <
+                text = <"Em geral, quantos dias da semana o trabalhador trabalha">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha">
+            >
+            ["at1"] = <
+                text = <"1 a 2 dias">
+                description = <"1 a 2 dias">
+            >
+            ["at2"] = <
+                text = <"3 a 4 dias">
+                description = <"3 a 4 dias">
+            >
+            ["at3"] = <
+                text = <"5 a 6 dias">
+                description = <"5 a 6 dias">
+            >
+            ["at4"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
+            ["ac1"] = <
+                text = <"Dias">
+                description = <"Dias">
+            >
+            ["id5"] = <
+                text = <"Em geral, quantas horas o trabalhador trabalha por dia">
+                description = <"Em geral, quantas horas o trabalhador trabalha por dia">
+            >
+            ["at5"] = <
+                text = <"Menos de 4 horas">
+                description = <"Menos de 4 horas">
+            >
+            ["at6"] = <
+                text = <"4 horas">
+                description = <"4 horas">
+            >
+            ["at7"] = <
+                text = <"5 horas">
+                description = <"5 horas">
+            >
+            ["at8"] = <
+                text = <"6 horas">
+                description = <"6 horas">
+            >
+            ["at9"] = <
+                text = <"7 horas">
+                description = <"7 horas">
+            >
+            ["at10"] = <
+                text = <"8 horas">
+                description = <"8 horas">
+            >
+            ["at11"] = <
+                text = <"Mais de 8 horas">
+                description = <"Mais de 8 horas">
+            >
+            ["ac2"] = <
+                text = <"Horas trabalhadas">
+                description = <"Horas trabalhadas">
+            >
+            ["id7"] = <
+                text = <"Trabalha no mesmo horário todos os dias">
+                description = <"Trabalha no mesmo horário todos os dias">
+            >
+            ["id9"] = <
+                text = <"Trabalha a noite pelo menos 1 dia da semana">
+                description = <"Trabalha a noite pelo menos 1 dia da semana">
+            >
+            ["id11"] = <
+                text = <"Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde">
+                description = <"Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde">
+            >
+            ["at12"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at13"] = <
+                text = <"1 a 5 dias">
+                description = <"1 a 5 dias">
+            >
+            ["at14"] = <
+                text = <"6 a 10 dias">
+                description = <"6 a 10 dias">
+            >
+            ["at15"] = <
+                text = <"11 a 15 dias">
+                description = <"11 a 15 dias">
+            >
+            ["at16"] = <
+                text = <"16 a 20 dias">
+                description = <"16 a 20 dias">
+            >
+            ["at17"] = <
+                text = <"21 a 25 dias">
+                description = <"21 a 25 dias">
+            >
+            ["at18"] = <
+                text = <"26 a 30 dia">
+                description = <"26 a 30 dia">
+            >
+            ["at19"] = <
+                text = <"31 dias ou mais">
+                description = <"31 dias ou mais">
+            >
+            ["ac3"] = <
+                text = <"Dias de afastamento">
+                description = <"Dias de afastamento">
+            >
+            ["id13"] = <
+                text = <"Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho">
+                description = <"Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho">
+            >
+            ["id15"] = <
+                text = <"Nos dias de ausência, algum gerou auxílio doença">
+                description = <"Nos dias de ausência, algum gerou auxílio doença">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at5", "at6", "at7", "at8", "at9", "at10", "at11">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at12", "at13", "at14", "at15", "at16", "at17", "at18", "at19">
+        >
+    >
+
