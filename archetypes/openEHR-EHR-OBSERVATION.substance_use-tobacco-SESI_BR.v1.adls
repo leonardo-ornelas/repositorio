@@ -60,6 +60,13 @@ definition
                     ELEMENT[id12] occurrences matches {0..1} matches {    -- Form
                         /value[id21.1]/defining_code matches {[ac0.1]}
                     }
+                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Method of use
+                        value matches {
+                            DV_CODED_TEXT[id0.0.7] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
+                        }
+                    }
                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
                     }
