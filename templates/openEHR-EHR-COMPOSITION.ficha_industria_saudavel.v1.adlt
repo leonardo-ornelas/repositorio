@@ -51,7 +51,6 @@ definition
         content matches {
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
-            use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
         }
     }
 
@@ -110,9 +109,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -127,161 +124,6 @@ terminology
             ["id1.1"] = <
                 text = <"Atividade física do trabalhador">
                 description = <"Bloco de atividade física do trabalhador">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
-
-definition
-    EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
-        /data[id2]/items matches {
-            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Physical activity status
-                value matches {
-                    DV_TEXT[id10.0.1] 
-                }
-            }
-            ELEMENT[id4.0.1] occurrences matches {0} matches {    -- Physical activity note
-                value matches {
-                    DV_TEXT[id11.0.1] 
-                }
-            }
-            ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Barriers to activity
-                value matches {
-                    DV_TEXT[id12.0.1] 
-                }
-            }
-            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Enabling factors
-                value matches {
-                    DV_TEXT[id13.0.1] 
-                }
-            }
-            ELEMENT[id9.0.1] occurrences matches {0} matches {    -- Moderate exercise/week
-                value matches {
-                    DV_COUNT[id14.0.1] 
-                }
-            }
-            ELEMENT[id8.0.1] occurrences matches {0} matches {    -- Vigorous exercise/week
-                value matches {
-                    DV_COUNT[id15.0.1] 
-                }
-            }
-            ELEMENT[id0.4] occurrences matches {0..1} matches {
-                /value[id0.5]/defining_code matches {[ac0.1]}
-            }
-            ELEMENT[id0.6] occurrences matches {0..1} matches {
-                /value[id0.7]/defining_code matches {[ac0.2]}
-            }
-            ELEMENT[id0.8] occurrences matches {0..1} matches {
-                /value[id0.9]/defining_code matches {[ac0.3]}
-            }
-            ELEMENT[id0.12] occurrences matches {0..1} matches {
-                /value[id0.13]/defining_code matches {[ac0.4]}
-            }
-            ELEMENT[id0.16] occurrences matches {0..1} matches {
-                /value[id0.17]/defining_code matches {[ac0.5]}
-            }
-            ELEMENT[id0.21] occurrences matches {0..1} matches {
-                /value[id0.22]/defining_code matches {[ac0.6]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Physical Activity Summary">
-                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
-            >
-            ["id3.0.1"] = <
-                text = <"Physical activity status">
-                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
-            >
-            ["id4.0.1"] = <
-                text = <"Physical activity note">
-                description = <"A more detailed description of the physical activity status of the individual.">
-            >
-            ["id6.0.1"] = <
-                text = <"Barriers to activity">
-                description = <"Identified barriers to the individual being involved in physical activity.">
-            >
-            ["id7.0.1"] = <
-                text = <"Enabling factors">
-                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
-            >
-            ["id9.0.1"] = <
-                text = <"Moderate exercise/week">
-                description = <"Number of times per week of 30 min moderate exercise.">
-            >
-            ["id8.0.1"] = <
-                text = <"Vigorous exercise/week">
-                description = <"Number of times per week of 20 min vigorous exercise.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Resumo da atividade física">
-                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
-            >
-            ["id3.0.1"] = <
-                text = <"Status da atividade física">
-                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
-            >
-            ["id4.0.1"] = <
-                text = <"Notas">
-                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
-            >
-            ["id6.0.1"] = <
-                text = <"Barreiras identificadas">
-                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
-            >
-            ["id7.0.1"] = <
-                text = <"Fatores de habilitadores">
-                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
-            >
-            ["id9.0.1"] = <
-                text = <"Exercício moderado por semana">
-                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
-            >
-            ["id8.0.1"] = <
-                text = <"Exercício vigoroso por semana">
-                description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Alimentação">
-                description = <"Bloco sobre alimentação do trabalhador">
             >
         >
     >
