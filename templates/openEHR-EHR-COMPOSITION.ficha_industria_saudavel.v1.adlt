@@ -55,6 +55,7 @@ definition
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
             use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0]
+            use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0]
         }
     }
 
@@ -1767,6 +1768,238 @@ terminology
             ["id17.0.0.1"] = <
                 text = <"Evidência de dependência">
                 description = <"Descrição de qualquer evidência de dependência da substância.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Consumo de álcool">
+                description = <"Bloco para registro do consumo de álcool do trabalhador">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alcohol_useSESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Alcohol Use
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    CLUSTER[id6] matches {
+                        items matches {
+                            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Form
+                                value matches {
+                                    DV_TEXT[id29.0.1] 
+                                }
+                            }
+                            CLUSTER[id16.0.1] occurrences matches {0} matches {    -- Amount
+                                items cardinality matches {1; unordered} matches {
+                                    ELEMENT[id15.0.1] occurrences matches {0} matches {    -- Standard Drinks
+                                        value matches {
+                                            DV_QUANTITY[id30.0.1] matches {
+                                                property matches {[at1]}
+                                                units matches {"/h", "/d", "/wk", "/mo"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17.0.1] occurrences matches {0} matches {    -- Grams Consumed
+                                        value matches {
+                                            DV_QUANTITY[id31.0.1] matches {
+                                                property matches {[at2]}
+                                                units matches {"gm/d", "gm/wk"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Triggers
+                                value matches {
+                                    DV_TEXT[id32.0.1] 
+                                }
+                            }
+                            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Context
+                                value matches {
+                                    DV_TEXT[id33.0.1] 
+                                }
+                            }
+                            ELEMENT[id0.2] occurrences matches {0..1} matches {
+                                /value[id0.3]/defining_code matches {[ac0.1]}
+                            }
+                            ELEMENT[id0.5] occurrences matches {0..1} matches {
+                                /value[id0.6]/defining_code matches {[ac0.2]}
+                            }
+                            ELEMENT[id0.7] occurrences matches {0..1} matches {
+                                /value[id0.8]/defining_code matches {[ac0.3]}
+                            }
+                            ELEMENT[id0.9] occurrences matches {0..1} matches {
+                                /value[id0.10]/value matches {True, False}
+                            }
+                            ELEMENT[id0.11] occurrences matches {0..1} matches {
+                                /value[id0.12]/value matches {True, False}
+                            }
+                            ELEMENT[id0.13] occurrences matches {0..1} matches {
+                                /value[id0.14]/value matches {True, False}
+                            }
+                            ELEMENT[id0.15] occurrences matches {0..1} matches {
+                                /value[id0.16]/value matches {True, False}
+                            }
+                        }
+                    }
+                    ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Behavioural Issues
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Comment
+                        value matches {
+                            DV_TEXT[id35.0.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id24] matches {
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+            INTERVAL_EVENT[id23] matches {
+                /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+        }
+        /protocol[id25]/items matches {
+            ELEMENT[id26] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id39] matches {
+                        property matches {[at4]}
+                        units matches {"gm"}
+                    }
+                }
+            }
+            ELEMENT[id27] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id40] matches {
+                        property matches {[at1]}
+                        units matches {"/d", "/wk", "/mo"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+            ["id7.0.1"] = <
+                text = <"Form">
+                description = <"Form of alcohol consumed.">
+            >
+            ["id16.0.1"] = <
+                text = <"Amount">
+                description = <"Amount of alcohol consumed.">
+            >
+            ["id15.0.1"] = <
+                text = <"Standard Drinks">
+                description = <"Number of standard drinks of alcohol consumed.">
+            >
+            ["id17.0.1"] = <
+                text = <"Grams Consumed">
+                description = <"Grams of alcohol consumed.">
+            >
+            ["id18.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
+            >
+            ["id19.0.1"] = <
+                text = <"Context">
+                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
+            >
+            ["id20.0.1"] = <
+                text = <"Behavioural Issues">
+                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
+            >
+            ["id22.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Álcool">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+            ["id7.0.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo de álcool">
+            >
+            ["id16.0.1"] = <
+                text = <"Quantidade">
+                description = <"Quantidade de álcool consumida">
+            >
+            ["id15.0.1"] = <
+                text = <"Dose padrão">
+                description = <"Número de doses padrão de álcool consumido">
+            >
+            ["id17.0.1"] = <
+                text = <"Consumo em gramas">
+                description = <"Consumo de álcool em gramas">
+            >
+            ["id18.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
+            >
+            ["id19.0.1"] = <
+                text = <"Contexto">
+                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
+            >
+            ["id20.0.1"] = <
+                text = <"Problemas comportamentais">
+                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
+            >
+            ["id22.0.1"] = <
+                text = <"Comentário">
+                description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
             >
         >
     >
