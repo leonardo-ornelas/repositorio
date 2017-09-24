@@ -203,7 +203,7 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id54] occurrences matches {1} matches {    -- Tratament- 24
+                            ELEMENT[id54] occurrences matches {1} matches {    -- Tratamento- 24
                                 value matches {
                                     DV_CODED_TEXT[id55] matches {
                                         defining_code matches {[ac2]}
@@ -507,8 +507,8 @@ terminology
                 description = <"Condição Dental- 24">
             >
             ["id54"] = <
-                text = <"Tratament- 24">
-                description = <"Tratament- 24">
+                text = <"Tratamento- 24">
+                description = <"Tratamento- 24">
             >
             ["id56"] = <
                 text = <"Condição Dental- 25">
@@ -765,68 +765,68 @@ terminology
                 description = <"Dental Condition- 11">
             >
             ["id38"] = <
-                text = <"*Condição Dental- 21 (pt-br)">
-                description = <"*Condição Dental- 21 (pt-br)">
+                text = <"Dental Condition- 21">
+                description = <"Dental Condition- 21">
             >
             ["id40"] = <
                 text = <"*Condição Dental- 21 (pt-br)">
                 description = <"*Condição Dental- 21 (pt-br)">
             >
             ["id42"] = <
-                text = <"*Tratamento- 21 (pt-br)">
-                description = <"*Tratamento- 21 (pt-br)">
+                text = <"Tratament- 21">
+                description = <"Tratament- 21">
             >
             ["id44"] = <
-                text = <"*Condição Dental- 22 (pt-br)">
-                description = <"*Condição Dental- 22 (pt-br)">
+                text = <"Dental Condition- 22">
+                description = <"Dental Condition- 22">
             >
             ["id46"] = <
-                text = <"*Tratamento- 22 (pt-br)">
-                description = <"*Tratamento- 22 (pt-br)">
+                text = <"Tratament- 22">
+                description = <"Tratament- 22">
             >
             ["id48"] = <
-                text = <"*Condição Dental- 23 (pt-br)">
-                description = <"*Condição Dental- 23 (pt-br)">
+                text = <"Dental Condition- 23">
+                description = <"Dental Condition- 23">
             >
             ["id50"] = <
-                text = <"*Tratamento- 23 (pt-br)">
-                description = <"*Tratamento- 23 (pt-br)">
+                text = <"Tratament- 23">
+                description = <"Tratament- 23">
             >
             ["id52"] = <
-                text = <"*Condição Dental- 24 (pt-br)">
-                description = <"*Condição Dental- 24 (pt-br)">
+                text = <"Dental Condition-24">
+                description = <"Dental Condition-24">
             >
             ["id54"] = <
-                text = <"*Tratament- 24 (pt-br)">
-                description = <"*Tratament- 24 (pt-br)">
+                text = <"Tratament- 24">
+                description = <"Tratament- 24">
             >
             ["id56"] = <
-                text = <"*Condição Dental- 25 (pt-br)">
-                description = <"*Condição Dental- 25 (pt-br)">
+                text = <"Dental Condition-25">
+                description = <"Dental Condition-25">
             >
             ["id58"] = <
-                text = <"*Tratamento- 25 (pt-br)">
-                description = <"*Tratamento- 25 (pt-br)">
+                text = <"Tratament- 25">
+                description = <"Tratament- 25">
             >
             ["id60"] = <
-                text = <"*Condição Dental- 26 (pt-br)">
-                description = <"*Condição Dental- 26 (pt-br)">
+                text = <"Dental Condition-26">
+                description = <"Dental Condition-26">
             >
             ["id62"] = <
-                text = <"*Tratamento- 26 (pt-br)">
-                description = <"*Tratamento- 26 (pt-br)">
+                text = <"Tratament- 26">
+                description = <"Tratament- 26">
             >
             ["id64"] = <
-                text = <"*Condição Dental- 27 (pt-br)">
-                description = <"*Condição Dental- 27 (pt-br)">
+                text = <"Dental Condition-27">
+                description = <"Dental Condition-27">
             >
             ["id66"] = <
-                text = <"*Tratamento- 27 (pt-br)">
-                description = <"*Tratamento- 27 (pt-br)">
+                text = <"Tratament- 27">
+                description = <"Tratament- 27">
             >
             ["id68"] = <
-                text = <"*Condição Dental- 28 (pt-br)">
-                description = <"*Condição Dental- 28 (pt-br)">
+                text = <"Dental Condition-28">
+                description = <"Dental Condition-28">
             >
             ["id70"] = <
                 text = <"*Tratamento- 28 (pt-br)">
