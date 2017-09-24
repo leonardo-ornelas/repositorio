@@ -67,20 +67,20 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*dados_avaliador (pt-br)">
-                description = <"*dados_avaliador (pt-br)">
+                text = <"data_appreciator">
+                description = <"data_appreciator">
             >
             ["id2"] = <
-                text = <"*Dados Avaliador (pt-br)">
-                description = <"*Dados Avaliador (pt-br)">
+                text = <"Data Appraiser">
+                description = <"Data Appraiser">
             >
             ["id3"] = <
-                text = <"*Nome do avaliador (pt-br)">
-                description = <"*Nome do avaliador (pt-br)">
+                text = <"Name of the evaluator">
+                description = <"Name of the evaluator">
             >
             ["id5"] = <
-                text = <"*Data da avaliação (pt-br)">
-                description = <"*Data da avaliação (pt-br)">
+                text = <"Date of evaluation">
+                description = <"Date of evaluation">
             >
         >
     >
