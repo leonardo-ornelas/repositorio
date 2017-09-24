@@ -50,6 +50,11 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id13] occurrences matches {1} matches {    -- Telefone
+                        value matches {
+                            DV_TEXT[id14] 
+                        }
+                    }
                 }
             }
         }
@@ -97,6 +102,10 @@ terminology
             ["id11"] = <
                 text = <"Data de Admissão">
                 description = <"Data de Admissão">
+            >
+            ["id13"] = <
+                text = <"Telefone">
+                description = <"Telefone">
             >
         >
     >
