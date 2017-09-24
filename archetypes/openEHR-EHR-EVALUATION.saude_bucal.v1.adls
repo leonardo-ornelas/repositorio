@@ -289,6 +289,20 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id81] occurrences matches {1} matches {    -- Lesões de mucosa bucal
+                                value matches {
+                                    DV_CODED_TEXT[id82] matches {
+                                        defining_code matches {[ac4]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id83] occurrences matches {1} matches {    -- Necessidade de consulta odontológica
+                                value matches {
+                                    DV_BOOLEAN[id84] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -567,6 +581,26 @@ terminology
                 text = <"Necessidade de Prótese Inferior">
                 description = <"Necessidade de Prótese Inferior">
             >
+            ["id81"] = <
+                text = <"Lesões de mucosa bucal">
+                description = <"Lesões de mucosa bucal">
+            >
+            ["at23"] = <
+                text = <"Presença">
+                description = <"Presença">
+            >
+            ["at24"] = <
+                text = <"Ausência">
+                description = <"Ausência">
+            >
+            ["ac4"] = <
+                text = <"Lesão">
+                description = <"Lesão">
+            >
+            ["id83"] = <
+                text = <"Necessidade de consulta odontológica">
+                description = <"Necessidade de consulta odontológica">
+            >
         >
     >
     value_sets = <
@@ -581,6 +615,10 @@ terminology
         ["ac3"] = <
             id = <"ac3">
             members = <"at17", "at18", "at19", "at20", "at21", "at22">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at23", "at24">
         >
     >
 
