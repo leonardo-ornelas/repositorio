@@ -53,6 +53,8 @@ definition
             use_archetype ADMIN_ENTRY[id0.17, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-admission_SESI-BR-001.v1.0.0]
             use_archetype SECTION[id0.18, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.19, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
+            use_archetype SECTION[id0.20, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
+            use_archetype SECTION[id0.21, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0]
         }
     }
 
@@ -1314,8 +1316,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.21] occurrences matches {0..1} matches {
-                /value[id0.22]/defining_code matches {[ac0.6]}
+            ELEMENT[id0.21.1] occurrences matches {0} matches {    -- Main type of physical activity practiced in their leisure time.
+                value matches {
+                    DV_CODED_TEXT[id0.22.1] matches {
+                        defining_code matches {[ac0.6]}
+                    }
+                }
             }
         }
     }
@@ -1323,6 +1329,10 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
+            ["ac0.2"] = <
+                text = <"Do some regular physical activity at your leisure">
+                description = <"Do some regular physical activity at your leisure">
+            >
             ["id1.1.1"] = <
                 text = <"Physical Activity Summary">
                 description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
@@ -1367,8 +1377,16 @@ terminology
                 text = <"Enabling factors">
                 description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
             >
+            ["id0.21.1"] = <
+                text = <"Main type of physical activity practiced in their leisure time.">
+                description = <"What is the main type of physical activity you practice at your leisure.">
+            >
         >
         ["pt-br"] = <
+            ["ac0.2"] = <
+                text = <"*Do some regular physical activity at your leisure (en)">
+                description = <"*Do some regular physical activity at your leisure (en)">
+            >
             ["id1.1.1"] = <
                 text = <"Atividade física">
                 description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
@@ -1412,6 +1430,202 @@ terminology
             ["id7.0.1"] = <
                 text = <"Fatores de habilitadores">
                 description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
+            >
+            ["id0.21.1"] = <
+                text = <"Tipo da principal atividade física praticada nos momentos de lazer">
+                description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alimentacao-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Alimentação">
+                description = <"Bloco sobre alimentação do trabalhador ">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alimentacao-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alimentacao.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Alimentação
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id9] occurrences matches {1} matches {
+                /value[id10]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id11] occurrences matches {1} matches {
+                /value[id12]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id13] occurrences matches {1} matches {
+                /value[id14]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id15] occurrences matches {1} matches {
+                /value[id16]/defining_code matches {[ac5]}
+            }
+            ELEMENT[id17] occurrences matches {1} matches {
+                /value[id18]/defining_code matches {[ac6]}
+            }
+            CLUSTER[id20] occurrences matches {0..1} matches {
+                /items[id21]/value[id22]/defining_code matches {[ac7]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Alimentação">
+                description = <"Alimentação">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Alimentacao (pt-br)">
+                description = <"*Alimentacao (pt-br)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-substance_use-tobacco-SESI_BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Tabagismo">
+                description = <"Bloco para registro de informações sobre tabagismo">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-substance_use-tobacco-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1.1] matches {    -- Tobacco Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                /value[id20.1]/defining_code matches {[at0.2]}
+            }
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id21.1]/defining_code matches {[ac0.1]}
+                    }
+                    ELEMENT[id19] occurrences matches {0..1} matches {
+                        /value[id22]/defining_code matches {[ac0.0.1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
+                        /value[id0.0.3]/value matches {True, False}
+                    }
+                }
+                items matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id21.1]/defining_code matches {[ac0.1]}
+                    }
+                    ELEMENT[id19] occurrences matches {1} matches {
+                        /value[id22]/defining_code matches {[ac0.0.1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13.1] matches {
+                        value matches {
+                            DV_QUANTITY[id0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2] matches {
+                        value matches {
+                            DV_QUANTITY[id0.2] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id0.0.4] occurrences matches {0..1} matches {
+                /value[id0.0.5]/value matches {True, False}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tabagismo">
+                description = <"Uso de tabaco do trabalhador">
             >
         >
     >
