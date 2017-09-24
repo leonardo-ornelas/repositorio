@@ -60,6 +60,11 @@ definition
                             DV_TEXT[id16] 
                         }
                     }
+                    ELEMENT[id17] occurrences matches {1} matches {    -- Função de Trabalho
+                        value matches {
+                            DV_TEXT[id18] 
+                        }
+                    }
                 }
             }
         }
@@ -115,6 +120,10 @@ terminology
             ["id15"] = <
                 text = <"Setor de Trabalho">
                 description = <"Setor de Trabalho">
+            >
+            ["id17"] = <
+                text = <"Função de Trabalho">
+                description = <"Função de Trabalho">
             >
         >
     >
