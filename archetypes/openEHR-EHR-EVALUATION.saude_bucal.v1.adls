@@ -222,6 +222,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id62] occurrences matches {1} matches {    -- Tratamento- 26
+                                value matches {
+                                    DV_CODED_TEXT[id63] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -431,6 +438,10 @@ terminology
             ["id60"] = <
                 text = <"Condição Dental- 26">
                 description = <"Condição Dental- 26">
+            >
+            ["id62"] = <
+                text = <"Tratamento- 26">
+                description = <"Tratamento- 26">
             >
         >
     >
