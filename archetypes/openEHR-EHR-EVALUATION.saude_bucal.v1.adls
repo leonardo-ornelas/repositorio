@@ -117,6 +117,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id32] occurrences matches {1} matches {    -- Condição Dental- 12
+                                value matches {
+                                    DV_CODED_TEXT[id33] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -266,6 +273,10 @@ terminology
             ["id30"] = <
                 text = <"Tratamento- 13">
                 description = <"Tratamento- 13">
+            >
+            ["id32"] = <
+                text = <"Condição Dental- 12">
+                description = <"Condição Dental- 12">
             >
         >
     >
