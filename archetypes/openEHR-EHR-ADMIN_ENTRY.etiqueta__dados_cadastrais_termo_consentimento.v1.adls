@@ -137,28 +137,28 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*etiqueta_ dados_cadastrais_termo_consentimento (pt-br)">
-                description = <"*etiqueta_ dados_cadastrais_termo_consentimento (pt-br)">
+                text = <"label_data_database_concept_concept">
+                description = <"label_data_database_concept_concept">
             >
             ["id2"] = <
-                text = <"*ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO (pt-br)">
-                description = <"*ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO (pt-br)">
+                text = <"TAG 1. WITH DATA FOR THE CONSENT">
+                description = <"TAG 1. WITH DATA FOR THE CONSENT">
             >
             ["id3"] = <
-                text = <"*NIT (pt-br)">
-                description = <"*NIT (pt-br)">
+                text = <"NIT">
+                description = <"NIT">
             >
             ["id5"] = <
-                text = <"*Nome do funcionário (pt-br)">
-                description = <"*Nome do funcionário (pt-br)">
+                text = <"Name of employee">
+                description = <"Name of employee">
             >
             ["id7"] = <
-                text = <"*Data de Nascimento (pt-br)">
-                description = <"*Data de Nascimento (pt-br)">
+                text = <"Date of Birth">
+                description = <"Date of Birth">
             >
             ["id9"] = <
-                text = <"*Sexo (pt-br)">
-                description = <"*Sexo (pt-br)">
+                text = <"Sex">
+                description = <"Sex">
             >
             ["at1"] = <
                 text = <"*Feminino (pt-br)">
@@ -173,20 +173,20 @@ terminology
                 description = <"*sexo (pt-br)">
             >
             ["id11"] = <
-                text = <"*Data de Admissão (pt-br)">
-                description = <"*Data de Admissão (pt-br)">
+                text = <"Date of Admission">
+                description = <"Date of Admission">
             >
             ["id13"] = <
-                text = <"*Telefone (pt-br)">
-                description = <"*Telefone (pt-br)">
+                text = <"Phone">
+                description = <"Phone">
             >
             ["id15"] = <
-                text = <"*Setor de Trabalho (pt-br)">
-                description = <"*Setor de Trabalho (pt-br)">
+                text = <"Workspace">
+                description = <"Workspace">
             >
             ["id17"] = <
-                text = <"*Função de Trabalho (pt-br)">
-                description = <"*Função de Trabalho (pt-br)">
+                text = <"Job Function">
+                description = <"Job Function">
             >
         >
     >
