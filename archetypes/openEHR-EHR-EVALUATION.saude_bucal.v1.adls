@@ -147,7 +147,7 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id38] occurrences matches {1} matches {    -- Condição Dental- 11
+                            ELEMENT[id38] occurrences matches {1} matches {    -- Tratamento- 11
                                 value matches {
                                     DV_CODED_TEXT[id39] matches {
                                         defining_code matches {[ac2]}
@@ -475,8 +475,8 @@ terminology
                 description = <"Condição Dental- 11">
             >
             ["id38"] = <
-                text = <"Condição Dental- 11">
-                description = <"Condição Dental- 11">
+                text = <"Tratamento- 11">
+                description = <"Tratamento- 11">
             >
             ["id40"] = <
                 text = <"Condição Dental- 21">
@@ -765,8 +765,8 @@ terminology
                 description = <"Dental Condition- 11">
             >
             ["id38"] = <
-                text = <"Dental Condition- 11">
-                description = <"Dental Condition- 11">
+                text = <"Tratament- 11">
+                description = <"Tratament- 11">
             >
             ["id40"] = <
                 text = <"*Condição Dental- 21 (pt-br)">
