@@ -54,6 +54,7 @@ definition
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
+            use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0]
         }
     }
 
@@ -1463,7 +1464,7 @@ specialize
     openEHR-EHR-OBSERVATION.alimentacao.v1.0.0
 
 definition
-    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Alimentacao
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Alimentação
         /data[id2]/events[id3]/data[id4]/items matches {
             ELEMENT[id6] occurrences matches {1} matches {
                 /value[id7]/defining_code matches {[ac1]}
@@ -1493,14 +1494,279 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Alimentacao">
-                description = <"Alimentacao">
+                text = <"Alimentação">
+                description = <"Bloco para registro de alimentação do trabalhador ">
             >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"*Alimentacao (pt-br)">
                 description = <"*Alimentacao (pt-br)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-substance_use-tobacco-SESI_BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Tabagismo">
+                description = <"Bloco para registro sobre tabagismo do trabalhador.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-substance_use-tobacco-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1.1] matches {    -- Tobacco Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.0.0.1] occurrences matches {0} matches {    -- Substance
+                value matches {
+                    DV_CODED_TEXT[id20.1.0.1] matches {
+                        defining_code matches {[at0.2]}
+                    }
+                }
+            }
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12.0.0.1] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.1] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.2] occurrences matches {0} matches {    -- Method of use
+                        value matches {
+                            DV_TEXT[id22.0.0.2] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6.0.0.1] occurrences matches {0} matches {    -- Frequency
+                        value matches {
+                            DV_CODED_TEXT[id23.0.0.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.0.0.1] occurrences matches {0} matches {    -- Amount
+                        value matches {
+                            DV_QUANTITY[id0.0.6.1] 
+                        }
+                    }
+                    ELEMENT[id0.0.2.1] occurrences matches {0} matches {    -- Ex smoker
+                        value matches {
+                            DV_BOOLEAN[id0.0.3.1] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                }
+                items matches {
+                    ELEMENT[id12.0.0.2] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.2] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.1] occurrences matches {1} matches {    -- Method of use
+                        value matches {
+                            DV_CODED_TEXT[id22.0.0.1] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6.0.0.2] occurrences matches {0} matches {    -- Frequency
+                        value matches {
+                            DV_CODED_TEXT[id23.0.0.2] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id14.0.0.1] occurrences matches {0} matches {    -- Triggers
+                value matches {
+                    DV_TEXT[id24.0.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id15] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+            ELEMENT[id17.0.0.1] occurrences matches {0} matches {    -- Evidence of dependence
+                value matches {
+                    DV_TEXT[id25.0.0.1] 
+                }
+            }
+            ELEMENT[id0.0.4] occurrences matches {0..1} matches {
+                /value[id0.0.5]/value matches {True, False}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substance">
+                description = <"Identification of substance">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequency">
+                description = <"Frequency of use of substance">
+            >
+            ["id13.0.0.1"] = <
+                text = <"Amount">
+                description = <"Amount of substance consumed.  Data type can be further specified in specialised archetypes or in templates">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex smoker">
+                description = <"Register for ex-smoker">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id6.0.0.2"] = <
+                text = <"Frequency">
+                description = <"Frequency of use of substance">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Number smoked">
+                description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Grams of tobacco">
+                description = <"Weight of tobacco consumed eg in a pipe">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause use">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidence of dependence">
+                description = <"Description of any evidence of dependence on the substance">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tabagismo">
+                description = <"Uso de tabaco para o trabalhador.">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substância">
+                description = <"Identificação da substância">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequência">
+                description = <"Frequência do uso da substância.">
+            >
+            ["id13.0.0.1"] = <
+                text = <"Quantidade">
+                description = <"Quantidade de substância consumida. O tipo de dados pode ser especificado em arquétipos especializados ou em modelos.">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex-fumante">
+                description = <"Cadastre-se no caso de ex-fumante.">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id6.0.0.2"] = <
+                text = <"Frequência">
+                description = <"Frequência do uso da substância.">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Número de unidades de tabaco">
+                description = <"Número de unidades contendo tabaco consumido, por exemplo, cigarros ou charutos.">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Gramas de tabaco">
+                description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificadores de gatilhos que estimulam ou causam uso.">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
             >
         >
     >
