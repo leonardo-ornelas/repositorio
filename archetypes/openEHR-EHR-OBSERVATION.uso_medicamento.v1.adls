@@ -161,8 +161,8 @@ terminology
                 description = <"How many drugs used by the worker in the last 15 days have been prescribed by a physician">
             >
             ["id10"] = <
-                text = <"*Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias (pt-br)">
-                description = <"*Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias (pt-br)">
+                text = <"Name of the medicines used by the worker in the last 15 days">
+                description = <"Name of the medicines used by the worker in the last 15 days">
             >
         >
     >
