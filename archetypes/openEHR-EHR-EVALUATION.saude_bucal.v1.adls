@@ -275,6 +275,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id77] occurrences matches {1} matches {    -- Necessidade de Prótese Superior
+                                value matches {
+                                    DV_CODED_TEXT[id78] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -544,6 +551,10 @@ terminology
             ["id75"] = <
                 text = <"Condição Protética Inferior">
                 description = <"Condição Protética Inferior">
+            >
+            ["id77"] = <
+                text = <"Necessidade de Prótese Superior">
+                description = <"Necessidade de Prótese Superior">
             >
         >
     >
