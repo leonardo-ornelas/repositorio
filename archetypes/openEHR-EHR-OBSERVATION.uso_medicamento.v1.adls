@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -104,6 +113,56 @@ terminology
             ["id10"] = <
                 text = <"Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias">
                 description = <"Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*uso_medicamento (pt-br)">
+                description = <"*uso_medicamento (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Any event (pt-br)">
+                description = <"*Any event (pt-br)">
+            >
+            ["id6"] = <
+                text = <"*Quantos medicamentos o trabalhador usou nos últimos 15 dias (pt-br)">
+                description = <"*Quantos medicamentos o trabalhador usou nos últimos 15 dias (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*1 medicamento (pt-br)">
+                description = <"*1 medicamento (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*De 2 a 4  medicamentos (pt-br)">
+                description = <"*De 2 a 4  medicamentos (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*De 5 a 7 (pt-br)">
+                description = <"*De 5 a 7 (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*De 8 a 10  medicamentos (pt-br)">
+                description = <"*De 8 a 10  medicamentos (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Mais que 10  medicamentos (pt-br)">
+                description = <"*Mais que 10  medicamentos (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Uso de medicamento (pt-br)">
+                description = <"*Uso de medicamento (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico (pt-br)">
+                description = <"*Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias (pt-br)">
+                description = <"*Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias (pt-br)">
             >
         >
     >
