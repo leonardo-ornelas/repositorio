@@ -829,8 +829,8 @@ terminology
                 description = <"Dental Condition-28">
             >
             ["id70"] = <
-                text = <"*Tratamento- 28 (pt-br)">
-                description = <"*Tratamento- 28 (pt-br)">
+                text = <"Tratament- 28">
+                description = <"Tratament- 28">
             >
             ["id72"] = <
                 text = <"Prosthetic Conditions">
