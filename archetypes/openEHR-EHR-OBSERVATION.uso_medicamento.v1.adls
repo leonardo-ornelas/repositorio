@@ -30,6 +30,18 @@ definition
                                             }
                                         }
                                     }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico
+                                        value matches {
+                                            DV_CODED_TEXT[id9] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias
+                                        value matches {
+                                            DV_TEXT[id11] 
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -84,6 +96,14 @@ terminology
             ["ac1"] = <
                 text = <"Uso de medicamento">
                 description = <"Uso de medicamento">
+            >
+            ["id8"] = <
+                text = <"Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico">
+                description = <"Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico">
+            >
+            ["id10"] = <
+                text = <"Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias">
+                description = <"Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias">
             >
         >
     >
