@@ -68,6 +68,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id18] occurrences matches {1} matches {    -- Tratamentp- 16
+                                value matches {
+                                    DV_CODED_TEXT[id19] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -189,6 +196,10 @@ terminology
             ["id16"] = <
                 text = <"Condição Dental- 16">
                 description = <"Condição Dental- 16">
+            >
+            ["id18"] = <
+                text = <"Tratamentp- 16">
+                description = <"Tratamentp- 16">
             >
         >
     >
