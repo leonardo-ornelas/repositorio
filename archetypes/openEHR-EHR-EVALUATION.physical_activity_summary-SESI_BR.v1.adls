@@ -162,8 +162,8 @@ terminology
                 description = <"YES, 5 or more times per week.">
             >
             ["ac0.2"] = <
-                text = <"Do some regular physical activity at your leisure">
-                description = <"Do some regular physical activity at your leisure">
+                text = <"Faz alguma atividade física regular em seu lazer">
+                description = <"Faz alguma atividade física regular em seu lazer">
             >
             ["id0.8"] = <
                 text = <"How many days did you walk for at least 10 continuous minutes">
@@ -372,8 +372,8 @@ terminology
                 description = <"SIM, 5 ou mais vezes por semana.">
             >
             ["ac0.2"] = <
-                text = <"*Do some regular physical activity at your leisure (en)">
-                description = <"*Do some regular physical activity at your leisure (en)">
+                text = <"Faz alguma atividade física regular em seu lazer (en)">
+                description = <"Faz alguma atividade física regular em seu lazer (en)">
             >
             ["id0.8"] = <
                 text = <"Quantos dias da última semana foram realizadas caminhadas por pelo menos 10 minutos contínuos.">
