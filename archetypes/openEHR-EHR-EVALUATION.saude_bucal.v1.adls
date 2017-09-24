@@ -833,12 +833,12 @@ terminology
                 description = <"*Tratamento- 28 (pt-br)">
             >
             ["id72"] = <
-                text = <"*Condições Protéticas (pt-br)">
-                description = <"*Condições Protéticas (pt-br)">
+                text = <"Prosthetic Conditions">
+                description = <"Prosthetic Conditions">
             >
             ["id73"] = <
-                text = <"*Condição Protética Superior (pt-br)">
-                description = <"*Condição Protética Superior (pt-br)">
+                text = <"Superior Prosthetic Condition">
+                description = <"Superior Prosthetic Condition">
             >
             ["at17"] = <
                 text = <"*Sem prótese (pt-br)">
@@ -869,8 +869,8 @@ terminology
                 description = <"*Condição protética (pt-br)">
             >
             ["id75"] = <
-                text = <"*Condição Protética Inferior (pt-br)">
-                description = <"*Condição Protética Inferior (pt-br)">
+                text = <"Inferior Prosthetic Condition">
+                description = <"Inferior Prosthetic Condition">
             >
             ["id77"] = <
                 text = <"*Necessidade de Prótese Superior (pt-br)">
