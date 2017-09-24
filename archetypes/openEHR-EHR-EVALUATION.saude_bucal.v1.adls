@@ -1,0 +1,60 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-EVALUATION.saude_bucal.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    EVALUATION[id1] occurrences matches {1} matches {    -- saude_bucal
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Avaliação
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Nome do avaliador
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Data da avaliação
+                        value matches {
+                            DV_DATE[id6] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"saude_bucal">
+                description = <"saude_bucal">
+            >
+            ["id2"] = <
+                text = <"Avaliação">
+                description = <"Avaliação">
+            >
+            ["id3"] = <
+                text = <"Nome do avaliador">
+                description = <"Nome do avaliador">
+            >
+            ["id5"] = <
+                text = <"Data da avaliação">
+                description = <"Data da avaliação">
+            >
+        >
+    >
+
