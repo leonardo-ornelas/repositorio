@@ -1132,9 +1132,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_socioeconomicos-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -1149,92 +1147,6 @@ terminology
             ["id1.1"] = <
                 text = <"Dados do domicílio e da família do trabalhador">
                 description = <"Dados a respeito do domicílio e família do trabalhador">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_socioeconomicos-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Dados socioeconômicos
-        /data[id2]/items matches {
-            ELEMENT[id3] occurrences matches {1} matches {
-                /value[id4]/defining_code matches {[ac1]}
-            }
-            ELEMENT[id5] occurrences matches {1} matches {
-                /value[id6]/value matches {True, False}
-            }
-            ELEMENT[id7] occurrences matches {1} matches {
-                /value[id8]/defining_code matches {[ac2]}
-            }
-            CLUSTER[id10] occurrences matches {0..1} matches {
-                items matches {
-                    ELEMENT[id14] occurrences matches {1} matches {
-                        /value[id15]/defining_code matches {[ac3]}
-                    }
-                    ELEMENT[id16] occurrences matches {1} matches {
-                        /value[id17]/defining_code matches {[ac4]}
-                    }
-                    ELEMENT[id18] occurrences matches {1} matches {
-                        /value[id19]/value matches {True, False}
-                    }
-                    CLUSTER[id20] occurrences matches {0..1} matches {
-                        items matches {
-                            ELEMENT[id21] occurrences matches {0..1} matches {
-                                /value[id22]/value matches {True, False}
-                            }
-                            ELEMENT[id23] occurrences matches {0..1} matches {
-                                /value[id24]/value matches {True, False}
-                            }
-                            ELEMENT[id25] occurrences matches {0..1} matches {
-                                /value[id26]/value matches {True, False}
-                            }
-                            ELEMENT[id27] occurrences matches {0..1} matches {
-                                /value[id28]/value matches {True, False}
-                            }
-                            ELEMENT[id30] occurrences matches {0..1} matches {
-                                /value[id31]/value matches {True, False}
-                            }
-                            ELEMENT[id32] occurrences matches {0..1} matches {
-                                /value[id33]/value matches {True, False}
-                            }
-                            ELEMENT[id34] occurrences matches {0..1} matches {
-                                /value[id35]/value matches {True, False}
-                            }
-                            ELEMENT[id36] occurrences matches {0..1} matches {
-                                /value[id37]/value matches {True, False}
-                            }
-                            ELEMENT[id38] occurrences matches {0..1} matches {
-                                /value[id39]/value matches {True, False}
-                            }
-                            ELEMENT[id40] occurrences matches {0..1} matches {
-                                /value[id41]/value matches {True, False}
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Dados socioeconômicos">
-                description = <"">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"socioeconomic data">
-                description = <"">
             >
         >
     >
