@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -199,6 +208,132 @@ terminology
             ["id15"] = <
                 text = <"Nos dias de ausência, algum gerou auxílio doença">
                 description = <"Nos dias de ausência, algum gerou auxílio doença">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*caracteristicas_trabalho (pt-br)">
+                description = <"*caracteristicas_trabalho (pt-br)">
+            >
+            ["id2"] = <
+                text = <"*Caracterisiticas do trabalho (pt-br)">
+                description = <"*Caracterisiticas do trabalho (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Em geral, quantos dias da semana o trabalhador trabalha (pt-br)">
+                description = <"*Em geral, quantos dias da semana o trabalhador trabalha (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*1 a 2 dias (pt-br)">
+                description = <"*1 a 2 dias (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*3 a 4 dias (pt-br)">
+                description = <"*3 a 4 dias (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*5 a 6 dias (pt-br)">
+                description = <"*5 a 6 dias (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*7 dias (pt-br)">
+                description = <"*7 dias (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Dias (pt-br)">
+                description = <"*Dias (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Em geral, quantas horas o trabalhador trabalha por dia (pt-br)">
+                description = <"*Em geral, quantas horas o trabalhador trabalha por dia (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Menos de 4 horas (pt-br)">
+                description = <"*Menos de 4 horas (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*4 horas (pt-br)">
+                description = <"*4 horas (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*5 horas (pt-br)">
+                description = <"*5 horas (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*6 horas (pt-br)">
+                description = <"*6 horas (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*7 horas (pt-br)">
+                description = <"*7 horas (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*8 horas (pt-br)">
+                description = <"*8 horas (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Mais de 8 horas (pt-br)">
+                description = <"*Mais de 8 horas (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Horas trabalhadas (pt-br)">
+                description = <"*Horas trabalhadas (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Trabalha no mesmo horário todos os dias (pt-br)">
+                description = <"*Trabalha no mesmo horário todos os dias (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Trabalha a noite pelo menos 1 dia da semana (pt-br)">
+                description = <"*Trabalha a noite pelo menos 1 dia da semana (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde (pt-br)">
+                description = <"*Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*1 a 5 dias (pt-br)">
+                description = <"*1 a 5 dias (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*6 a 10 dias (pt-br)">
+                description = <"*6 a 10 dias (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*11 a 15 dias (pt-br)">
+                description = <"*11 a 15 dias (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*16 a 20 dias (pt-br)">
+                description = <"*16 a 20 dias (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*21 a 25 dias (pt-br)">
+                description = <"*21 a 25 dias (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*26 a 30 dia (pt-br)">
+                description = <"*26 a 30 dia (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*31 dias ou mais (pt-br)">
+                description = <"*31 dias ou mais (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Dias de afastamento (pt-br)">
+                description = <"*Dias de afastamento (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho (pt-br)">
+                description = <"*Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Nos dias de ausência, algum gerou auxílio doença (pt-br)">
+                description = <"*Nos dias de ausência, algum gerou auxílio doença (pt-br)">
             >
         >
     >
