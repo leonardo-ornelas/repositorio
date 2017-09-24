@@ -1,0 +1,49 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.etiqueta__dados_cadastrais_termo_consentimento.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- etiqueta_ dados_cadastrais_termo_consentimento
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"etiqueta_ dados_cadastrais_termo_consentimento">
+                description = <"etiqueta_ dados_cadastrais_termo_consentimento">
+            >
+            ["id2"] = <
+                text = <"ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO">
+                description = <"ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO">
+            >
+            ["id3"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+        >
+    >
+
