@@ -202,8 +202,8 @@ terminology
                 description = <"7 days">
             >
             ["ac0.3"] = <
-                text = <"How many days did you walk for at least 10 continuous minutes">
-                description = <"How many days did you walk for at least 10 continuous minutes">
+                text = <"Quantos dias você caminhou por pelo menos 10 minutos contínuos">
+                description = <"Quantos dias você caminhou por pelo menos 10 minutos contínuos">
             >
             ["id0.10"] = <
                 text = <"Total time walked a day">
@@ -214,8 +214,8 @@ terminology
                 description = <"Record how many days in the last week you performed moderate activity">
             >
             ["ac0.4"] = <
-                text = <"How many days in the last week you performed moderate activity">
-                description = <"How many days in the last week you performed moderate activity">
+                text = <"Quantos dias na última semana você realizou atividade moderada">
+                description = <"Quantos dias na última semana você realizou atividade moderada">
             >
             ["id0.14"] = <
                 text = <"Total time spent doing moderate activities per day.">
@@ -226,8 +226,8 @@ terminology
                 description = <"Record how many days in the last week you performed vigorous activities">
             >
             ["ac0.5"] = <
-                text = <"How many days in the last week did vigorous activities">
-                description = <"How many days in the last week did vigorous activities">
+                text = <"Quantos dias na última semana fizeram atividades vigorosas">
+                description = <"Quantos dias na última semana fizeram atividades vigorosas">
             >
             ["id0.18"] = <
                 text = <"Total time performing vigorous activities per day">
@@ -294,8 +294,8 @@ terminology
                 description = <"Other physical activities">
             >
             ["ac0.6"] = <
-                text = <"Main type of physical activity practiced in their leisure time.">
-                description = <"Main type of physical activity practiced in their leisure time.">
+                text = <"Principal tipo de atividade física praticada em seus tempos de lazer.">
+                description = <"Principal tipo de atividade física praticada em seus tempos de lazer.">
             >
             ["id1"] = <
                 text = <"Physical Activity Summary">
@@ -412,8 +412,8 @@ terminology
                 description = <"7 dias">
             >
             ["ac0.3"] = <
-                text = <"*How many days did you walk for at least 10 continuous minutes (en)">
-                description = <"*How many days did you walk for at least 10 continuous minutes (en)">
+                text = <"Quantos dias você caminhou por pelo menos 10 minutos contínuos (en)">
+                description = <"Quantos dias você caminhou por pelo menos 10 minutos contínuos (en)">
             >
             ["id0.10"] = <
                 text = <"Tempo total gasto com caminhada por dia.">
@@ -424,8 +424,8 @@ terminology
                 description = <"Registre quantos dias na última semana você realizou atividade moderada, por pelo menos 10 minutos contínuos.">
             >
             ["ac0.4"] = <
-                text = <"*How many days in the last week you performed moderate activity (en)">
-                description = <"*How many days in the last week you performed moderate activity (en)">
+                text = <"Quantos dias na última semana você realizou atividade moderada (en)">
+                description = <"Quantos dias na última semana você realizou atividade moderada (en)">
             >
             ["id0.14"] = <
                 text = <"Tempo total gasto com a prática de atividades moderadas por dia">
@@ -436,8 +436,8 @@ terminology
                 description = <"Registre quantos dias na última semana você realizou atividade vigorosa, por pelo menos 10 minutos contínuos.">
             >
             ["ac0.5"] = <
-                text = <"*How many days in the last week did vigorous activities (en)">
-                description = <"*How many days in the last week did vigorous activities (en)">
+                text = <"Quantos dias na última semana fizeram atividades vigorosas (en)">
+                description = <"Quantos dias na última semana fizeram atividades vigorosas (en)">
             >
             ["id0.18"] = <
                 text = <"Tempo total gasto com a prática de atividades vigorosas por dia">
@@ -504,8 +504,8 @@ terminology
                 description = <"Outras atividades físicas">
             >
             ["ac0.6"] = <
-                text = <"*Main type of physical activity practiced in their leisure time. (en)">
-                description = <"*Main type of physical activity practiced in their leisure time. (en)">
+                text = <"Principal tipo de atividade física praticada em seus tempos de lazer. (en)">
+                description = <"Principal tipo de atividade física praticada em seus tempos de lazer. (en)">
             >
             ["id1"] = <
                 text = <"Resumo da atividade física">
