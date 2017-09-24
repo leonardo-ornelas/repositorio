@@ -28,7 +28,7 @@ definition
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -71,8 +71,8 @@ terminology
                 description = <"uso_medicamento">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
                 text = <"Quantos medicamentos o trabalhador usou nos últimos 15 dias">
@@ -117,12 +117,12 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*uso_medicamento (pt-br)">
-                description = <"*uso_medicamento (pt-br)">
+                text = <"use of medication">
+                description = <"use of medication">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
                 text = <"*Quantos medicamentos o trabalhador usou nos últimos 15 dias (pt-br)">
