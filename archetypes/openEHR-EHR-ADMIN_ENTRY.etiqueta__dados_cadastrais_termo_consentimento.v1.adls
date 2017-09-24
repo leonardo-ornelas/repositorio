@@ -24,6 +24,11 @@ definition
                             DV_TEXT[id4] 
                         }
                     }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Nome do funcionário
+                        value matches {
+                            DV_TEXT[id6] 
+                        }
+                    }
                 }
             }
         }
@@ -43,6 +48,10 @@ terminology
             ["id3"] = <
                 text = <"NIT">
                 description = <"NIT">
+            >
+            ["id5"] = <
+                text = <"Nome do funcionário">
+                description = <"Nome do funcionário">
             >
         >
     >
