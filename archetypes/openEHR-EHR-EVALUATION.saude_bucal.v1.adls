@@ -31,6 +31,45 @@ definition
                             }
                         }
                     }
+                    CLUSTER[id7] occurrences matches {0..1} matches {    -- CPOD inovado
+                        items matches {
+                            ELEMENT[id8] occurrences matches {1} matches {    -- Condição Dental - 18
+                                value matches {
+                                    DV_CODED_TEXT[id9] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id10] occurrences matches {1} matches {    -- Tratamento - 18
+                                value matches {
+                                    DV_CODED_TEXT[id11] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id12] occurrences matches {1} matches {    -- Condição Dental-17
+                                value matches {
+                                    DV_CODED_TEXT[id13] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id14] occurrences matches {1} matches {    -- Tratamento- 17
+                                value matches {
+                                    DV_CODED_TEXT[id15] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id16] occurrences matches {1} matches {    -- Condição Dental- 16
+                                value matches {
+                                    DV_CODED_TEXT[id17] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -55,6 +94,112 @@ terminology
                 text = <"Data da avaliação">
                 description = <"Data da avaliação">
             >
+            ["id7"] = <
+                text = <"CPOD inovado">
+                description = <"CPOD inovado">
+            >
+            ["id8"] = <
+                text = <"Condição Dental - 18">
+                description = <"Condição Dental - 18">
+            >
+            ["at1"] = <
+                text = <"Não erupcionado">
+                description = <"Não erupcionado">
+            >
+            ["at2"] = <
+                text = <"Cárie de esmalte/ dentina">
+                description = <"Cárie de esmalte/ dentina">
+            >
+            ["at3"] = <
+                text = <"Cárie c/ envolvimento pulpar">
+                description = <"Cárie c/ envolvimento pulpar">
+            >
+            ["at4"] = <
+                text = <"Restaurado">
+                description = <"Restaurado">
+            >
+            ["at5"] = <
+                text = <"Extraído">
+                description = <"Extraído">
+            >
+            ["at6"] = <
+                text = <"Hígido">
+                description = <"Hígido">
+            >
+            ["at7"] = <
+                text = <"Traumatismo">
+                description = <"Traumatismo">
+            >
+            ["at8"] = <
+                text = <"Sem diagnóstico">
+                description = <"Sem diagnóstico">
+            >
+            ["ac1"] = <
+                text = <"Condição dental">
+                description = <"Condição dental">
+            >
+            ["id10"] = <
+                text = <"Tratamento - 18">
+                description = <"Tratamento - 18">
+            >
+            ["at9"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at10"] = <
+                text = <"Selante">
+                description = <"Selante">
+            >
+            ["at11"] = <
+                text = <"Restaurações diretas">
+                description = <"Restaurações diretas">
+            >
+            ["at12"] = <
+                text = <"Restaurações indiretas">
+                description = <"Restaurações indiretas">
+            >
+            ["at13"] = <
+                text = <"Tratamento endodôntico">
+                description = <"Tratamento endodôntico">
+            >
+            ["at14"] = <
+                text = <"Extração indicada">
+                description = <"Extração indicada">
+            >
+            ["at15"] = <
+                text = <"Outros procedimentos">
+                description = <"Outros procedimentos">
+            >
+            ["at16"] = <
+                text = <"Sem diagnóstico">
+                description = <"Sem diagnóstico">
+            >
+            ["ac2"] = <
+                text = <"Tratamento">
+                description = <"Tratamento">
+            >
+            ["id12"] = <
+                text = <"Condição Dental-17">
+                description = <"Condição Dental-17">
+            >
+            ["id14"] = <
+                text = <"Tratamento- 17">
+                description = <"Tratamento- 17">
+            >
+            ["id16"] = <
+                text = <"Condição Dental- 16">
+                description = <"Condição Dental- 16">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at9", "at10", "at11", "at12", "at13", "at14", "at15", "at16">
         >
     >
 
