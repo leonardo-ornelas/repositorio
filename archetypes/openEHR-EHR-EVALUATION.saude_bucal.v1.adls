@@ -159,6 +159,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id44] occurrences matches {1} matches {    -- Condição Dental- 22
+                                value matches {
+                                    DV_CODED_TEXT[id45] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -332,6 +339,10 @@ terminology
             ["id42"] = <
                 text = <"Tratamento- 21">
                 description = <"Tratamento- 21">
+            >
+            ["id44"] = <
+                text = <"Condição Dental- 22">
+                description = <"Condição Dental- 22">
             >
         >
     >
