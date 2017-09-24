@@ -49,7 +49,6 @@ definition
             EVENT_CONTEXT[id4.1] occurrences matches {0} 
         }
         content matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-aplicacao_pesquisa-001.v1.0.0]
             use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-admission_SESI-BR-001.v1.0.0]
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
@@ -72,35 +71,6 @@ terminology
             ["id1.1"] = <
                 text = <"Encontro">
                 description = <"Encontro genérico ou  composição da nota de progresso.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-aplicacao_pesquisa-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.aplicacao_pesquisa.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Aplicação pesquisa
-        /data[id2]/items[id5]/value[id6]/value matches {True, False}
-    }
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Aplicação pesquisa">
-                description = <"Aplicação pesquisa">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Search application">
-                description = <"Search application">
             >
         >
     >
