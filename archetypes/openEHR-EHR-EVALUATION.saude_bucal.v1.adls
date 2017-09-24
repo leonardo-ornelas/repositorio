@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -600,6 +609,296 @@ terminology
             ["id83"] = <
                 text = <"Necessidade de consulta odontológica">
                 description = <"Necessidade de consulta odontológica">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*saude_bucal (pt-br)">
+                description = <"*saude_bucal (pt-br)">
+            >
+            ["id2"] = <
+                text = <"*Avaliação (pt-br)">
+                description = <"*Avaliação (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Nome do avaliador (pt-br)">
+                description = <"*Nome do avaliador (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Data da avaliação (pt-br)">
+                description = <"*Data da avaliação (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*CPOD inovado (pt-br)">
+                description = <"*CPOD inovado (pt-br)">
+            >
+            ["id8"] = <
+                text = <"*Condição Dental - 18 (pt-br)">
+                description = <"*Condição Dental - 18 (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Não erupcionado (pt-br)">
+                description = <"*Não erupcionado (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Cárie de esmalte/ dentina (pt-br)">
+                description = <"*Cárie de esmalte/ dentina (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Cárie c/ envolvimento pulpar (pt-br)">
+                description = <"*Cárie c/ envolvimento pulpar (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Restaurado (pt-br)">
+                description = <"*Restaurado (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Extraído (pt-br)">
+                description = <"*Extraído (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Hígido (pt-br)">
+                description = <"*Hígido (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Traumatismo (pt-br)">
+                description = <"*Traumatismo (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Sem diagnóstico (pt-br)">
+                description = <"*Sem diagnóstico (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Condição dental (pt-br)">
+                description = <"*Condição dental (pt-br)">
+            >
+            ["id10"] = <
+                text = <"*Tratamento - 18 (pt-br)">
+                description = <"*Tratamento - 18 (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Selante (pt-br)">
+                description = <"*Selante (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Restaurações diretas (pt-br)">
+                description = <"*Restaurações diretas (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Restaurações indiretas (pt-br)">
+                description = <"*Restaurações indiretas (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Tratamento endodôntico (pt-br)">
+                description = <"*Tratamento endodôntico (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Extração indicada (pt-br)">
+                description = <"*Extração indicada (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Outros procedimentos (pt-br)">
+                description = <"*Outros procedimentos (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Sem diagnóstico (pt-br)">
+                description = <"*Sem diagnóstico (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Tratamento (pt-br)">
+                description = <"*Tratamento (pt-br)">
+            >
+            ["id12"] = <
+                text = <"*Condição Dental-17 (pt-br)">
+                description = <"*Condição Dental-17 (pt-br)">
+            >
+            ["id14"] = <
+                text = <"*Tratamento- 17 (pt-br)">
+                description = <"*Tratamento- 17 (pt-br)">
+            >
+            ["id16"] = <
+                text = <"*Condição Dental- 16 (pt-br)">
+                description = <"*Condição Dental- 16 (pt-br)">
+            >
+            ["id18"] = <
+                text = <"*Tratamentp- 16 (pt-br)">
+                description = <"*Tratamentp- 16 (pt-br)">
+            >
+            ["id20"] = <
+                text = <"*Condição Dental- 15 (pt-br)">
+                description = <"*Condição Dental- 15 (pt-br)">
+            >
+            ["id22"] = <
+                text = <"*Tratamento- 15 (pt-br)">
+                description = <"*Tratamento- 15 (pt-br)">
+            >
+            ["id24"] = <
+                text = <"*Condição Dental- 14 (pt-br)">
+                description = <"*Condição Dental- 14 (pt-br)">
+            >
+            ["id26"] = <
+                text = <"*Tratamento- 14 (pt-br)">
+                description = <"*Tratamento- 14 (pt-br)">
+            >
+            ["id28"] = <
+                text = <"*Condição Dental- 13 (pt-br)">
+                description = <"*Condição Dental- 13 (pt-br)">
+            >
+            ["id30"] = <
+                text = <"*Tratamento- 13 (pt-br)">
+                description = <"*Tratamento- 13 (pt-br)">
+            >
+            ["id32"] = <
+                text = <"*Condição Dental- 12 (pt-br)">
+                description = <"*Condição Dental- 12 (pt-br)">
+            >
+            ["id34"] = <
+                text = <"*Tratamento- 12 (pt-br)">
+                description = <"*Tratamento- 12 (pt-br)">
+            >
+            ["id36"] = <
+                text = <"*Condição Dental- 11 (pt-br)">
+                description = <"*Condição Dental- 11 (pt-br)">
+            >
+            ["id38"] = <
+                text = <"*Condição Dental- 21 (pt-br)">
+                description = <"*Condição Dental- 21 (pt-br)">
+            >
+            ["id40"] = <
+                text = <"*Condição Dental- 21 (pt-br)">
+                description = <"*Condição Dental- 21 (pt-br)">
+            >
+            ["id42"] = <
+                text = <"*Tratamento- 21 (pt-br)">
+                description = <"*Tratamento- 21 (pt-br)">
+            >
+            ["id44"] = <
+                text = <"*Condição Dental- 22 (pt-br)">
+                description = <"*Condição Dental- 22 (pt-br)">
+            >
+            ["id46"] = <
+                text = <"*Tratamento- 22 (pt-br)">
+                description = <"*Tratamento- 22 (pt-br)">
+            >
+            ["id48"] = <
+                text = <"*Condição Dental- 23 (pt-br)">
+                description = <"*Condição Dental- 23 (pt-br)">
+            >
+            ["id50"] = <
+                text = <"*Tratamento- 23 (pt-br)">
+                description = <"*Tratamento- 23 (pt-br)">
+            >
+            ["id52"] = <
+                text = <"*Condição Dental- 24 (pt-br)">
+                description = <"*Condição Dental- 24 (pt-br)">
+            >
+            ["id54"] = <
+                text = <"*Tratament- 24 (pt-br)">
+                description = <"*Tratament- 24 (pt-br)">
+            >
+            ["id56"] = <
+                text = <"*Condição Dental- 25 (pt-br)">
+                description = <"*Condição Dental- 25 (pt-br)">
+            >
+            ["id58"] = <
+                text = <"*Tratamento- 25 (pt-br)">
+                description = <"*Tratamento- 25 (pt-br)">
+            >
+            ["id60"] = <
+                text = <"*Condição Dental- 26 (pt-br)">
+                description = <"*Condição Dental- 26 (pt-br)">
+            >
+            ["id62"] = <
+                text = <"*Tratamento- 26 (pt-br)">
+                description = <"*Tratamento- 26 (pt-br)">
+            >
+            ["id64"] = <
+                text = <"*Condição Dental- 27 (pt-br)">
+                description = <"*Condição Dental- 27 (pt-br)">
+            >
+            ["id66"] = <
+                text = <"*Tratamento- 27 (pt-br)">
+                description = <"*Tratamento- 27 (pt-br)">
+            >
+            ["id68"] = <
+                text = <"*Condição Dental- 28 (pt-br)">
+                description = <"*Condição Dental- 28 (pt-br)">
+            >
+            ["id70"] = <
+                text = <"*Tratamento- 28 (pt-br)">
+                description = <"*Tratamento- 28 (pt-br)">
+            >
+            ["id72"] = <
+                text = <"*Condições Protéticas (pt-br)">
+                description = <"*Condições Protéticas (pt-br)">
+            >
+            ["id73"] = <
+                text = <"*Condição Protética Superior (pt-br)">
+                description = <"*Condição Protética Superior (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*Sem prótese (pt-br)">
+                description = <"*Sem prótese (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Prótese fixa (pt-br)">
+                description = <"*Prótese fixa (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Prótese parcial removível (pt-br)">
+                description = <"*Prótese parcial removível (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Próteses fixas e removíveis (pt-br)">
+                description = <"*Próteses fixas e removíveis (pt-br)">
+            >
+            ["at21"] = <
+                text = <"*Prótese total (pt-br)">
+                description = <"*Prótese total (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Não registrado (pt-br)">
+                description = <"*Não registrado (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Condição protética (pt-br)">
+                description = <"*Condição protética (pt-br)">
+            >
+            ["id75"] = <
+                text = <"*Condição Protética Inferior (pt-br)">
+                description = <"*Condição Protética Inferior (pt-br)">
+            >
+            ["id77"] = <
+                text = <"*Necessidade de Prótese Superior (pt-br)">
+                description = <"*Necessidade de Prótese Superior (pt-br)">
+            >
+            ["id79"] = <
+                text = <"*Necessidade de Prótese Inferior (pt-br)">
+                description = <"*Necessidade de Prótese Inferior (pt-br)">
+            >
+            ["id81"] = <
+                text = <"*Lesões de mucosa bucal (pt-br)">
+                description = <"*Lesões de mucosa bucal (pt-br)">
+            >
+            ["at23"] = <
+                text = <"*Presença (pt-br)">
+                description = <"*Presença (pt-br)">
+            >
+            ["at24"] = <
+                text = <"*Ausência (pt-br)">
+                description = <"*Ausência (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Lesão (pt-br)">
+                description = <"*Lesão (pt-br)">
+            >
+            ["id83"] = <
+                text = <"*Necessidade de consulta odontológica (pt-br)">
+                description = <"*Necessidade de consulta odontológica (pt-br)">
             >
         >
     >
