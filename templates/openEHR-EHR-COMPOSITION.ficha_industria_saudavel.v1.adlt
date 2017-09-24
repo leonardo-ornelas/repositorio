@@ -52,9 +52,6 @@ definition
             use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
             use_archetype SECTION[id0.5, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-002.v1.0.0]
             use_archetype SECTION[id0.6, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
-            use_archetype SECTION[id0.7, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0]
-            use_archetype SECTION[id0.9, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0]
-            use_archetype SECTION[id0.10, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0]
         }
     }
 
@@ -285,93 +282,6 @@ terminology
             ["id1.1"] = <
                 text = <"Alimentação">
                 description = <"Bloco sobre alimentação do trabalhador">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Tabagismo">
-                description = <"Bloco para registro sobre tabagismo do trabalhador.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Consumo de álcool">
-                description = <"Bloco para registro do consumo de álcool do trabalhador">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0
-
-specialize
-    openEHR-EHR-SECTION.adhoc.v1.0.0
-
-definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-        items
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Adhoc Heading">
-                description = <"A generic heading for contextual renaming within a template.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Morbidade referida">
-                description = <"Bloco para registro de dados de morbidade referida">
             >
         >
     >
