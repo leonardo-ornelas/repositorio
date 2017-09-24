@@ -41,9 +41,7 @@ description
 definition
     COMPOSITION[id1.1] matches {    -- Encounter
         /category[id3]/defining_code matches {[at1]}
-        content matches {
-            use_archetype EVALUATION[id0.13, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-001.v1.0.0]
-        }
+        content
     }
 
 terminology
@@ -58,27 +56,6 @@ terminology
             ["id1.1"] = <
                 text = <"Encontro">
                 description = <"Encontro genérico ou  composição da nota de progresso.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-001.v1.0.0
-
-specialize
-    openEHR-EHR-EVALUATION.physical_activity_summary.v1.0.0
-
-definition
-    EVALUATION[id1.1]     -- Physical Activity Summary
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Physical Activity Summary">
-                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
         >
     >
