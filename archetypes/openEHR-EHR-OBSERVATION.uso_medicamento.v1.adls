@@ -125,8 +125,8 @@ terminology
                 description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Quantos medicamentos o trabalhador usou nos últimos 15 dias (pt-br)">
-                description = <"*Quantos medicamentos o trabalhador usou nos últimos 15 dias (pt-br)">
+                text = <"How many drugs did the worker use in the last 15 days">
+                description = <"How many drugs did the worker use in the last 15 days">
             >
             ["at1"] = <
                 text = <"*Nenhum (pt-br)">
@@ -157,8 +157,8 @@ terminology
                 description = <"*Uso de medicamento (pt-br)">
             >
             ["id8"] = <
-                text = <"*Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico (pt-br)">
-                description = <"*Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico (pt-br)">
+                text = <"How many drugs used by the worker in the last 15 days have been prescribed by a physician">
+                description = <"How many drugs used by the worker in the last 15 days have been prescribed by a physician">
             >
             ["id10"] = <
                 text = <"*Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias (pt-br)">
