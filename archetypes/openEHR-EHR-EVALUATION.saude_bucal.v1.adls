@@ -259,6 +259,17 @@ definition
                             }
                         }
                     }
+                    CLUSTER[id72] occurrences matches {0..1} matches {    -- Condições Protéticas
+                        items matches {
+                            ELEMENT[id73] occurrences matches {1} matches {    -- Condição Protética Superior
+                                value matches {
+                                    DV_CODED_TEXT[id74] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -487,6 +498,42 @@ terminology
                 text = <"Tratamento- 28">
                 description = <"Tratamento- 28">
             >
+            ["id72"] = <
+                text = <"Condições Protéticas">
+                description = <"Condições Protéticas">
+            >
+            ["id73"] = <
+                text = <"Condição Protética Superior">
+                description = <"Condição Protética Superior">
+            >
+            ["at17"] = <
+                text = <"Sem prótese">
+                description = <"Sem prótese">
+            >
+            ["at18"] = <
+                text = <"Prótese fixa">
+                description = <"Prótese fixa">
+            >
+            ["at19"] = <
+                text = <"Prótese parcial removível">
+                description = <"Prótese parcial removível">
+            >
+            ["at20"] = <
+                text = <"Próteses fixas e removíveis">
+                description = <"Próteses fixas e removíveis">
+            >
+            ["at21"] = <
+                text = <"Prótese total">
+                description = <"Prótese total">
+            >
+            ["at22"] = <
+                text = <"Não registrado">
+                description = <"Não registrado">
+            >
+            ["ac3"] = <
+                text = <"Condição protética">
+                description = <"Condição protética">
+            >
         >
     >
     value_sets = <
@@ -497,6 +544,10 @@ terminology
         ["ac2"] = <
             id = <"ac2">
             members = <"at9", "at10", "at11", "at12", "at13", "at14", "at15", "at16">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at17", "at18", "at19", "at20", "at21", "at22">
         >
     >
 
