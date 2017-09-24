@@ -96,6 +96,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id26] occurrences matches {1} matches {    -- Tratamento- 14
+                                value matches {
+                                    DV_CODED_TEXT[id27] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -233,6 +240,10 @@ terminology
             ["id24"] = <
                 text = <"Condição Dental- 14">
                 description = <"Condição Dental- 14">
+            >
+            ["id26"] = <
+                text = <"Tratamento- 14">
+                description = <"Tratamento- 14">
             >
         >
     >
