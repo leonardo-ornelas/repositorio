@@ -1283,12 +1283,8 @@ definition
                     DV_COUNT[id15.0.1] 
                 }
             }
-            ELEMENT[id0.4.1] occurrences matches {0} matches {    -- Physical activity practiced outside work
-                value matches {
-                    DV_CODED_TEXT[id0.5.1] matches {
-                        defining_code matches {[ac0.1]}
-                    }
-                }
+            ELEMENT[id0.4] occurrences matches {0..1} matches {
+                /value[id0.5]/defining_code matches {[ac0.1]}
             }
             ELEMENT[id0.6.1] occurrences matches {0} matches {    -- Do some regular physical activity at your leisure
                 value matches {
@@ -1335,22 +1331,6 @@ terminology
                 text = <"Physical Activity Summary">
                 description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
-            ["id3.0.1"] = <
-                text = <"Physical activity status">
-                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
-            >
-            ["id4.0.1"] = <
-                text = <"Physical activity note">
-                description = <"A more detailed description of the physical activity status of the individual.">
-            >
-            ["id6.0.1"] = <
-                text = <"Barriers to activity">
-                description = <"Identified barriers to the individual being involved in physical activity.">
-            >
-            ["id7.0.1"] = <
-                text = <"Enabling factors">
-                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
-            >
             ["id9.0.1"] = <
                 text = <"Moderate exercise/week">
                 description = <"Number of times per week of 30 min moderate exercise.">
@@ -1358,10 +1338,6 @@ terminology
             ["id8.0.1"] = <
                 text = <"Vigorous exercise/week">
                 description = <"Number of times per week of 20 min vigorous exercise.">
-            >
-            ["id0.4.1"] = <
-                text = <"Physical activity practiced outside work">
-                description = <"Report physical activity practiced outside of work">
             >
             ["id0.6.1"] = <
                 text = <"Do some regular physical activity at your leisure">
@@ -1383,27 +1359,27 @@ terminology
                 text = <"Main type of physical activity practiced in their leisure time.">
                 description = <"What is the main type of physical activity you practice at your leisure.">
             >
+            ["id3.0.1"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id4.0.1"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id7.0.1"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Atividade física">
                 description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
-            >
-            ["id3.0.1"] = <
-                text = <"Status da atividade física">
-                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
-            >
-            ["id4.0.1"] = <
-                text = <"Notas">
-                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
-            >
-            ["id6.0.1"] = <
-                text = <"Barreiras identificadas">
-                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
-            >
-            ["id7.0.1"] = <
-                text = <"Fatores de habilitadores">
-                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
             ["id9.0.1"] = <
                 text = <"Exercício moderado por semana">
@@ -1412,10 +1388,6 @@ terminology
             ["id8.0.1"] = <
                 text = <"Exercício vigoroso por semana">
                 description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
-            >
-            ["id0.4.1"] = <
-                text = <"Atividade física praticada fora do trabalho">
-                description = <"Informar atividade física praticada fora do trabalho.">
             >
             ["id0.6.1"] = <
                 text = <"Pratica alguma atividade física regular em seu lazer.">
@@ -1436,6 +1408,22 @@ terminology
             ["id0.21.1"] = <
                 text = <"Tipo da principal atividade física praticada nos momentos de lazer">
                 description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
+            >
+            ["id3.0.1"] = <
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["id4.0.1"] = <
+                text = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
+            >
+            ["id7.0.1"] = <
+                text = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
         >
     >
