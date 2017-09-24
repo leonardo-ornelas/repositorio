@@ -332,8 +332,8 @@ terminology
                 description = <"Of the total number of days absent from work, how many days were absent as a result of work-related accidents">
             >
             ["id15"] = <
-                text = <"*Nos dias de ausência, algum gerou auxílio doença (pt-br)">
-                description = <"*Nos dias de ausência, algum gerou auxílio doença (pt-br)">
+                text = <"In the days of absence, some generated disease aid">
+                description = <"In the days of absence, some generated disease aid">
             >
         >
     >
