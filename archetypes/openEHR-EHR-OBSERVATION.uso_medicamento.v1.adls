@@ -1,0 +1,96 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.uso_medicamento.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- uso_medicamento
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Quantos medicamentos o trabalhador usou nos últimos 15 dias
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"uso_medicamento">
+                description = <"uso_medicamento">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Quantos medicamentos o trabalhador usou nos últimos 15 dias">
+                description = <"Quantos medicamentos o trabalhador usou nos últimos 15 dias">
+            >
+            ["at1"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at2"] = <
+                text = <"1 medicamento">
+                description = <"1 medicamento">
+            >
+            ["at3"] = <
+                text = <"De 2 a 4  medicamentos">
+                description = <"De 2 a 4  medicamentos">
+            >
+            ["at4"] = <
+                text = <"De 5 a 7">
+                description = <"De 5 a 7">
+            >
+            ["at5"] = <
+                text = <"De 8 a 10  medicamentos">
+                description = <"De 8 a 10  medicamentos">
+            >
+            ["at6"] = <
+                text = <"Mais que 10  medicamentos">
+                description = <"Mais que 10  medicamentos">
+            >
+            ["ac1"] = <
+                text = <"Uso de medicamento">
+                description = <"Uso de medicamento">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6">
+        >
+    >
+
