@@ -282,6 +282,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id79] occurrences matches {1} matches {    -- Necessidade de Prótese Inferior
+                                value matches {
+                                    DV_CODED_TEXT[id80] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -555,6 +562,10 @@ terminology
             ["id77"] = <
                 text = <"Necessidade de Prótese Superior">
                 description = <"Necessidade de Prótese Superior">
+            >
+            ["id79"] = <
+                text = <"Necessidade de Prótese Inferior">
+                description = <"Necessidade de Prótese Inferior">
             >
         >
     >
