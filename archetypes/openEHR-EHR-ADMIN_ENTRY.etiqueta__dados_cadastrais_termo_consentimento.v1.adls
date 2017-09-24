@@ -55,6 +55,11 @@ definition
                             DV_TEXT[id14] 
                         }
                     }
+                    ELEMENT[id15] occurrences matches {1} matches {    -- Setor de Trabalho
+                        value matches {
+                            DV_TEXT[id16] 
+                        }
+                    }
                 }
             }
         }
@@ -106,6 +111,10 @@ terminology
             ["id13"] = <
                 text = <"Telefone">
                 description = <"Telefone">
+            >
+            ["id15"] = <
+                text = <"Setor de Trabalho">
+                description = <"Setor de Trabalho">
             >
         >
     >
