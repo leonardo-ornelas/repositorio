@@ -1314,12 +1314,8 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.21.1] occurrences matches {0} matches {    -- Main type of physical activity practiced in their leisure time.
-                value matches {
-                    DV_CODED_TEXT[id0.22.1] matches {
-                        defining_code matches {[ac0.6]}
-                    }
-                }
+            ELEMENT[id0.21] occurrences matches {0..1} matches {
+                /value[id0.22]/defining_code matches {[ac0.6]}
             }
         }
     }
@@ -1354,10 +1350,6 @@ terminology
             ["id0.16.1"] = <
                 text = <"How many days in the last week did vigorous activities">
                 description = <"Record how many days in the last week you performed vigorous activities">
-            >
-            ["id0.21.1"] = <
-                text = <"Main type of physical activity practiced in their leisure time.">
-                description = <"What is the main type of physical activity you practice at your leisure.">
             >
             ["id3.0.1"] = <
                 text = <"Physical activity status">
@@ -1404,10 +1396,6 @@ terminology
             ["id0.16.1"] = <
                 text = <"Quantos dias na última semana foram realizadas atividades físicas vigorosas">
                 description = <"Registre quantos dias na última semana você realizou atividade vigorosa, por pelo menos 10 minutos contínuos.">
-            >
-            ["id0.21.1"] = <
-                text = <"Tipo da principal atividade física praticada nos momentos de lazer">
-                description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
             >
             ["id3.0.1"] = <
                 text = <"Status da atividade física">
