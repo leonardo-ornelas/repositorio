@@ -384,32 +384,32 @@ terminology
                 description = <"Nenhum">
             >
             ["at0.9"] = <
-                text = <"*1 day (en)">
-                description = <"*1 day (en)">
+                text = <"1 dia">
+                description = <"1 dia">
             >
             ["at0.10"] = <
-                text = <"*2 days (en)">
-                description = <"*2 days (en)">
+                text = <"2 dias">
+                description = <"2 dias">
             >
             ["at0.11"] = <
-                text = <"*3 days (en)">
-                description = <"*3 days (en)">
+                text = <"3 dias">
+                description = <"3 dias">
             >
             ["at0.12"] = <
-                text = <"*4 days (en)">
-                description = <"*4 days (en)">
+                text = <"4 dias">
+                description = <"4 dias">
             >
             ["at0.13"] = <
-                text = <"*5 days (en)">
-                description = <"*5 days (en)">
+                text = <"5 dias">
+                description = <"5 dias">
             >
             ["at0.14"] = <
-                text = <"*6 days (en)">
-                description = <"*6 days (en)">
+                text = <"6 dias">
+                description = <"6 dias">
             >
             ["at0.15"] = <
-                text = <"*7 days (en)">
-                description = <"*7 days (en)">
+                text = <"7 dias">
+                description = <"7 dias">
             >
             ["ac0.3"] = <
                 text = <"*How many days did you walk for at least 10 continuous minutes (en)">
@@ -448,60 +448,60 @@ terminology
                 description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
             >
             ["at0.16"] = <
-                text = <"*Not practice physical activity. (en)">
-                description = <"*Not practice physical activity. (en)">
+                text = <"Não pratica atividade física">
+                description = <"Não pratica atividade física">
             >
             ["at0.17"] = <
-                text = <"*Walking (en)">
-                description = <"*Walking (en)">
+                text = <"Caminhada">
+                description = <"Caminhada">
             >
             ["at0.18"] = <
-                text = <"*Sport (en)">
-                description = <"*Sport (en)">
+                text = <"Esporte">
+                description = <"Esporte">
             >
             ["at0.19"] = <
-                text = <"*Cycling (en)">
-                description = <"*Cycling (en)">
+                text = <"Ciclismo">
+                description = <"Ciclismo">
             >
             ["at0.20"] = <
-                text = <"*Racing (en)">
-                description = <"*Racing (en)">
+                text = <"Corrida">
+                description = <"Corrida">
             >
             ["at0.21"] = <
-                text = <"*Swimming / Hydrotherapy (en)">
-                description = <"*Swimming / Hydrotherapy (en)">
+                text = <"Natação / Hidroginástica">
+                description = <"Natação / Hidroginástica">
             >
             ["at0.22"] = <
-                text = <"*Fitness (en)">
-                description = <"*Fitness (en)">
+                text = <"Ginástica">
+                description = <"Ginástica">
             >
             ["at0.23"] = <
-                text = <"*Bodybuilding (en)">
-                description = <"*Bodybuilding (en)">
+                text = <"Musculação">
+                description = <"Musculação">
             >
             ["at0.24"] = <
-                text = <"*Dancing (en)">
-                description = <"*Dancing (en)">
+                text = <"Dança">
+                description = <"Dança">
             >
             ["at0.25"] = <
-                text = <"*Adventure sports (en)">
-                description = <"*Adventure sports (en)">
+                text = <"Esportes de aventura">
+                description = <"Esportes de aventura">
             >
             ["at0.26"] = <
-                text = <"*Yoga / Tai-chi-chuan (en)">
-                description = <"*Yoga / Tai-chi-chuan (en)">
+                text = <"Yoga / Tai-chi-chuan">
+                description = <"Yoga / Tai-chi-chuan">
             >
             ["at0.27"] = <
-                text = <"*Stretching (en)">
-                description = <"*Stretching (en)">
+                text = <"Alongamento">
+                description = <"Alongamento">
             >
             ["at0.28"] = <
-                text = <"*Martial Arts / Fights (en)">
-                description = <"*Martial Arts / Fights (en)">
+                text = <"Artes marciais / Lutas">
+                description = <"Artes marciais / Lutas">
             >
             ["at0.29"] = <
-                text = <"*Other physical activities (en)">
-                description = <"*Other physical activities (en)">
+                text = <"Outras atividades físicas">
+                description = <"Outras atividades físicas">
             >
             ["ac0.6"] = <
                 text = <"*Main type of physical activity practiced in their leisure time. (en)">
