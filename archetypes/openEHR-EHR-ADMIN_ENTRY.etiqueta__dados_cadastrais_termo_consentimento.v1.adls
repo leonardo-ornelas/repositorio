@@ -43,6 +43,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id11] occurrences matches {1} matches {    -- Data de Admissão
+                        value matches {
+                            DV_DATE[id12] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -86,6 +93,10 @@ terminology
             ["ac1"] = <
                 text = <"sexo">
                 description = <"sexo">
+            >
+            ["id11"] = <
+                text = <"Data de Admissão">
+                description = <"Data de Admissão">
             >
         >
     >
