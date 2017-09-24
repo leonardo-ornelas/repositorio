@@ -51,6 +51,7 @@ definition
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-aplicacao_pesquisa-001.v1.0.0]
             use_archetype ADMIN_ENTRY[id0.3, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-admission_SESI-BR-001.v1.0.0]
+            use_archetype SECTION[id0.4, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0]
         }
     }
 
@@ -317,7 +318,26 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
             }
-            CLUSTER[id26] occurrences matches {0..1} matches {
+            CLUSTER[id99.0.1] occurrences matches {0} matches {    -- Attending doctor
+                items matches {
+                    ELEMENT[id100.0.1] occurrences matches {0} matches {    -- ID
+                        value matches {
+                            DV_TEXT[id157.0.1] 
+                        }
+                    }
+                    ELEMENT[id101.0.1] occurrences matches {0} matches {    -- Family name
+                        value matches {
+                            DV_TEXT[id158.0.1] 
+                        }
+                    }
+                    ELEMENT[id121.0.1] occurrences matches {0} matches {    -- Last name
+                        value matches {
+                            DV_TEXT[id159.0.1] 
+                        }
+                    }
+                }
+            }
+            CLUSTER[id26.0.1] occurrences matches {0} matches {    -- Referring doctor
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -334,7 +354,7 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id122] matches {
+            CLUSTER[id122.0.1] occurrences matches {0} matches {    -- Consulting doctor
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -351,7 +371,17 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id52] occurrences matches {0..1} matches {
+            ELEMENT[id42.0.1] occurrences matches {0} matches {    -- Hospital service
+                value matches {
+                    DV_TEXT[id166.0.1] 
+                }
+            }
+            ELEMENT[id50.0.1] occurrences matches {0} matches {    -- Admit source
+                value matches {
+                    DV_TEXT[id167.0.1] 
+                }
+            }
+            CLUSTER[id52.0.1] occurrences matches {0} matches {    -- Admitting doctor
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -368,22 +398,103 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            ELEMENT[id62] occurrences matches {0..1} matches {
-                /value[id171]/defining_code matches {[ac7]}
+            ELEMENT[id62.0.1] occurrences matches {0} matches {    -- Financial class
+                value matches {
+                    DV_CODED_TEXT[id171.0.1] matches {
+                        defining_code matches {[ac7]}
+                    }
+                }
             }
-            ELEMENT[id67] occurrences matches {0..1} matches {
-                /value[id172]/defining_code matches {[ac2]}
+            ELEMENT[id67.0.1] occurrences matches {0} matches {    -- Charge price indicator
+                value matches {
+                    DV_CODED_TEXT[id172.0.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
+            }
+            ELEMENT[id72.0.1] occurrences matches {0} matches {    -- Admit date time
+                value matches {
+                    DV_DATE_TIME[id173.0.1] 
+                }
             }
             CLUSTER[id0.43] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id0.58] occurrences matches {1} matches {
-                        /value[id0.59]/defining_code matches {[ac0.4]}
+                    ELEMENT[id0.44.1] occurrences matches {0} matches {    -- Full name
+                        value matches {
+                            DV_TEXT[id0.45.1] 
+                        }
+                    }
+                    ELEMENT[id0.46.1] occurrences matches {0} matches {    -- Phone
+                        value matches {
+                            DV_TEXT[id0.47.1] 
+                        }
+                    }
+                    ELEMENT[id0.48.1] occurrences matches {0} matches {    -- Identity number
+                        value matches {
+                            DV_TEXT[id0.49.1] 
+                        }
+                    }
+                    ELEMENT[id0.50.1] occurrences matches {0} matches {    -- Organ
+                        value matches {
+                            DV_TEXT[id0.51.1] 
+                        }
+                    }
+                    ELEMENT[id0.52.1] occurrences matches {0} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id0.53.1] 
+                        }
+                    }
+                    ELEMENT[id0.54.1] occurrences matches {0} matches {    -- Email
+                        value matches {
+                            DV_TEXT[id0.55.1] 
+                        }
+                    }
+                    ELEMENT[id0.58.1] occurrences matches {0} matches {    -- Sexo
+                        value matches {
+                            DV_CODED_TEXT[id0.59.1] matches {
+                                defining_code matches {[ac0.4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.60.1] occurrences matches {0} matches {    -- Date of birth
+                        value matches {
+                            DV_DATE[id0.61.1] 
+                        }
+                    }
+                    ELEMENT[id0.62.1] occurrences matches {0} matches {    -- Age
+                        value matches {
+                            DV_TEXT[id0.63.1] 
+                        }
                     }
                     ELEMENT[id0.64] occurrences matches {1} matches {
                         /value[id0.65]/defining_code matches {[ac0.5]}
                     }
-                    ELEMENT[id0.66] occurrences matches {1} matches {
-                        /value[id0.67]/defining_code matches {[ac0.6]}
+                    ELEMENT[id0.66.1] occurrences matches {0} matches {    -- Type of Exam
+                        value matches {
+                            DV_CODED_TEXT[id0.67.1] matches {
+                                defining_code matches {[ac0.6]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.77.1] occurrences matches {0} matches {    -- Company Name
+                        value matches {
+                            DV_TEXT[id0.78.1] 
+                        }
+                    }
+                    ELEMENT[id0.79.1] occurrences matches {0} matches {    -- Enrollment in the Company
+                        value matches {
+                            DV_TEXT[id0.80.1] 
+                        }
+                    }
+                    ELEMENT[id0.81.1] occurrences matches {0} matches {    -- Activity Branch
+                        value matches {
+                            DV_TEXT[id0.82.1] 
+                        }
+                    }
+                    ELEMENT[id0.83.1] occurrences matches {0} matches {    -- type PCMO
+                        value matches {
+                            DV_TEXT[id0.84.1] 
+                        }
                     }
                 }
             }
@@ -501,6 +612,110 @@ terminology
                 text = <"Adress">
                 description = <"*">
             >
+            ["id100.0.1"] = <
+                text = <"ID">
+                description = <"*">
+            >
+            ["id99.0.1"] = <
+                text = <"Attending doctor">
+                description = <"The attending doctor providing services to thepatient">
+            >
+            ["id101.0.1"] = <
+                text = <"Family name">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"Last name">
+                description = <"*">
+            >
+            ["id26.0.1"] = <
+                text = <"Referring doctor">
+                description = <"Clinician who referred patient to the consulting doctor">
+            >
+            ["id122.0.1"] = <
+                text = <"Consulting doctor">
+                description = <"Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer">
+            >
+            ["id42.0.1"] = <
+                text = <"Hospital service">
+                description = <"For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.">
+            >
+            ["id50.0.1"] = <
+                text = <"Admit source">
+                description = <"Refer to NHDD 000385 Mode of admission andNHDD 000150 Source of referral to public psychiatric hospital">
+            >
+            ["id52.0.1"] = <
+                text = <"Admitting doctor">
+                description = <"*">
+            >
+            ["id62.0.1"] = <
+                text = <"Financial class">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"Charge price indicator">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"Admit date time">
+                description = <"Date time the patient was admitted.">
+            >
+            ["id0.44.1"] = <
+                text = <"Full name">
+                description = <"Full name">
+            >
+            ["id0.46.1"] = <
+                text = <"Phone">
+                description = <"Phone">
+            >
+            ["id0.48.1"] = <
+                text = <"Identity number">
+                description = <"Identity number">
+            >
+            ["id0.50.1"] = <
+                text = <"Organ">
+                description = <"Organ">
+            >
+            ["id0.52.1"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id0.54.1"] = <
+                text = <"Email">
+                description = <"Email">
+            >
+            ["id0.58.1"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["id0.60.1"] = <
+                text = <"Date of birth">
+                description = <"Date of birth">
+            >
+            ["id0.62.1"] = <
+                text = <"Age">
+                description = <"Age">
+            >
+            ["id0.66.1"] = <
+                text = <"Type of Exam">
+                description = <"Type of Exam">
+            >
+            ["id0.77.1"] = <
+                text = <"Company Name">
+                description = <"Company Name">
+            >
+            ["id0.79.1"] = <
+                text = <"Enrollment in the Company">
+                description = <"Enrollment in the Company">
+            >
+            ["id0.81.1"] = <
+                text = <"Activity Branch">
+                description = <"Activity Branch">
+            >
+            ["id0.83.1"] = <
+                text = <"type PCMO">
+                description = <"type PCMO">
+            >
         >
         ["ar-sy"] = <
             ["id1.1.1"] = <
@@ -611,11 +826,115 @@ terminology
                 text = <"العنوان">
                 description = <"*">
             >
+            ["id100.0.1"] = <
+                text = <"العتصر التعريفي">
+                description = <"*">
+            >
+            ["id99.0.1"] = <
+                text = <"الطبيب الحاضر">
+                description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
+            >
+            ["id101.0.1"] = <
+                text = <"اسم العائلة">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"الاسم الأخير">
+                description = <"*">
+            >
+            ["id26.0.1"] = <
+                text = <"الطبيب صاحب الإحالة">
+                description = <"الطبيب الذي قام بإحالة المريض إلى الطبيب الاستشاري">
+            >
+            ["id122.0.1"] = <
+                text = <"الطبيب الاستشاري">
+                description = <"الطبيب الاستشاري المسئول عن تقديم الرعاية للمريض, بنا قي ذلك الأخصائي الذي يعمل بأجر, و المسئول الطبي الزائر">
+            >
+            ["id42.0.1"] = <
+                text = <"خدمة المستشفى">
+                description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: CARDO1">
+            >
+            ["id50.0.1"] = <
+                text = <"مصدر الإدخال">
+                description = <"برجاء الرجوع إلى طريق الإدخال في NHDD 000385 و مصدر الإحالة إلى المستشفى النفسي العامNHDD 000150">
+            >
+            ["id52.0.1"] = <
+                text = <"الطبيب المسئول عن الإدخال">
+                description = <"*">
+            >
+            ["id62.0.1"] = <
+                text = <"الدرجة الاقتصادية">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"مؤشر ثمن الرعاية">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"وقت/ تاريخ الإدخال">
+                description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
+            >
+            ["id0.44.1"] = <
+                text = <"Nome completo (en)">
+                description = <"Nome completo (en)">
+            >
+            ["id0.46.1"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
+            >
+            ["id0.48.1"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.50.1"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
+            >
+            ["id0.52.1"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
+            >
+            ["id0.54.1"] = <
+                text = <"Email (en)">
+                description = <"Email (en)">
+            >
+            ["id0.58.1"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
+            >
+            ["id0.60.1"] = <
+                text = <"Data de Nascimento (en)">
+                description = <"Data de Nascimento (en)">
+            >
+            ["id0.62.1"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.66.1"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["id0.77.1"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
+            >
+            ["id0.79.1"] = <
+                text = <"Matrícula na Empresa (en)">
+                description = <"Matrícula na Empresa (en)">
+            >
+            ["id0.81.1"] = <
+                text = <"Ramo da Atividade (en)">
+                description = <"Ramo da Atividade (en)">
+            >
+            ["id0.83.1"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
-                text = <"Admissão do paciente">
-                description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
+                text = <"Dados socioeconômicos ">
+                description = <"Usado apenas para registro de dados do paciente.">
             >
             ["id3.0.1"] = <
                 text = <"Classe do paciente">
@@ -720,6 +1039,227 @@ terminology
             ["id96.0.1"] = <
                 text = <"Endereço">
                 description = <"*">
+            >
+            ["id100.0.1"] = <
+                text = <"Código de Identificação">
+                description = <"*">
+            >
+            ["id99.0.1"] = <
+                text = <"Médico assistente">
+                description = <"O médico assistente que presta serviços ao paciente.">
+            >
+            ["id101.0.1"] = <
+                text = <"Sobrenome">
+                description = <"*">
+            >
+            ["id121.0.1"] = <
+                text = <"Último nome">
+                description = <"*">
+            >
+            ["id26.0.1"] = <
+                text = <"Referência médica">
+                description = <"Clínico que encaminhou o paciente para o médico.">
+            >
+            ["id122.0.1"] = <
+                text = <"Médico consultor">
+                description = <"Consultor responsável pelo atendimento do paciente, incluindo especialista assalariado e médico visitante.">
+            >
+            ["id42.0.1"] = <
+                text = <"Serviço hospitalar">
+                description = <"Para uso local, este campo possui o tipo de unidade organizacional ou unidade clínica, e. CARDO1.">
+            >
+            ["id50.0.1"] = <
+                text = <"Origem da admissão">
+                description = <"* Consulte o NHDD 000385 Modo de admissão e HDD 000150. Fonte de referência para o hospital psiquiátrico público.">
+            >
+            ["id52.0.1"] = <
+                text = <"Admissão médica">
+                description = <"*">
+            >
+            ["id62.0.1"] = <
+                text = <"Classe financeira">
+                description = <"*">
+            >
+            ["id67.0.1"] = <
+                text = <"Indicador de preço">
+                description = <"*">
+            >
+            ["id72.0.1"] = <
+                text = <"Data hora de admissão">
+                description = <"Data hora que o paciente foi admitido.">
+            >
+            ["id0.44.1"] = <
+                text = <"Nome completo">
+                description = <"Nome completo">
+            >
+            ["id0.46.1"] = <
+                text = <"Telefone">
+                description = <"Telefone">
+            >
+            ["id0.48.1"] = <
+                text = <"Número da identidade">
+                description = <"Número da identidade">
+            >
+            ["id0.50.1"] = <
+                text = <"Orgão">
+                description = <"Orgão">
+            >
+            ["id0.52.1"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id0.54.1"] = <
+                text = <"Email">
+                description = <"Email">
+            >
+            ["id0.58.1"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["id0.60.1"] = <
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
+            >
+            ["id0.62.1"] = <
+                text = <"Idade">
+                description = <"Idade">
+            >
+            ["id0.66.1"] = <
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
+            >
+            ["id0.77.1"] = <
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
+            >
+            ["id0.79.1"] = <
+                text = <"Matrícula na Empresa">
+                description = <"Matrícula na Empresa">
+            >
+            ["id0.81.1"] = <
+                text = <"Ramo da Atividade">
+                description = <"Ramo da Atividade">
+            >
+            ["id0.83.1"] = <
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-001.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_socioeconomicos-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados do domicílio e da família do trabalhador">
+                description = <"Dados a respeito do domicílio e família do trabalhador">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_socioeconomicos-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Dados socioeconômicos
+        /data[id2]/items matches {
+            ELEMENT[id3] occurrences matches {1} matches {
+                /value[id4]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id5] occurrences matches {1} matches {
+                /value[id6]/value matches {True, False}
+            }
+            ELEMENT[id7] occurrences matches {1} matches {
+                /value[id8]/defining_code matches {[ac2]}
+            }
+            CLUSTER[id10] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id14] occurrences matches {1} matches {
+                        /value[id15]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id16] occurrences matches {1} matches {
+                        /value[id17]/defining_code matches {[ac4]}
+                    }
+                    ELEMENT[id18] occurrences matches {1} matches {
+                        /value[id19]/value matches {True, False}
+                    }
+                    CLUSTER[id20] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id21] occurrences matches {0..1} matches {
+                                /value[id22]/value matches {True, False}
+                            }
+                            ELEMENT[id23] occurrences matches {0..1} matches {
+                                /value[id24]/value matches {True, False}
+                            }
+                            ELEMENT[id25] occurrences matches {0..1} matches {
+                                /value[id26]/value matches {True, False}
+                            }
+                            ELEMENT[id27] occurrences matches {0..1} matches {
+                                /value[id28]/value matches {True, False}
+                            }
+                            ELEMENT[id30] occurrences matches {0..1} matches {
+                                /value[id31]/value matches {True, False}
+                            }
+                            ELEMENT[id32] occurrences matches {0..1} matches {
+                                /value[id33]/value matches {True, False}
+                            }
+                            ELEMENT[id34] occurrences matches {0..1} matches {
+                                /value[id35]/value matches {True, False}
+                            }
+                            ELEMENT[id36] occurrences matches {0..1} matches {
+                                /value[id37]/value matches {True, False}
+                            }
+                            ELEMENT[id38] occurrences matches {0..1} matches {
+                                /value[id39]/value matches {True, False}
+                            }
+                            ELEMENT[id40] occurrences matches {0..1} matches {
+                                /value[id41]/value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados socioeconômicos">
+                description = <"">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"socioeconomic data">
+                description = <"">
             >
         >
     >
