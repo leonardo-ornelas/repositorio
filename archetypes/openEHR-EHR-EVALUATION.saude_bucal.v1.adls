@@ -873,16 +873,16 @@ terminology
                 description = <"Inferior Prosthetic Condition">
             >
             ["id77"] = <
-                text = <"*Necessidade de Prótese Superior (pt-br)">
-                description = <"*Necessidade de Prótese Superior (pt-br)">
+                text = <"Need for Higher Prosthesis">
+                description = <"Need for Higher Prosthesis">
             >
             ["id79"] = <
-                text = <"*Necessidade de Prótese Inferior (pt-br)">
-                description = <"*Necessidade de Prótese Inferior (pt-br)">
+                text = <"Inferior Prosthesis Needed">
+                description = <"Inferior Prosthesis Needed">
             >
             ["id81"] = <
-                text = <"*Lesões de mucosa bucal (pt-br)">
-                description = <"*Lesões de mucosa bucal (pt-br)">
+                text = <"Mucosal lesions">
+                description = <"Mucosal lesions">
             >
             ["at23"] = <
                 text = <"*Presença (pt-br)">
@@ -897,8 +897,8 @@ terminology
                 description = <"*Lesão (pt-br)">
             >
             ["id83"] = <
-                text = <"*Necessidade de consulta odontológica (pt-br)">
-                description = <"*Necessidade de consulta odontológica (pt-br)">
+                text = <"Need for dental consultation">
+                description = <"Need for dental consultation">
             >
         >
     >
