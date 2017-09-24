@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -54,6 +63,24 @@ terminology
             ["id5"] = <
                 text = <"Data da avaliação">
                 description = <"Data da avaliação">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*dados_avaliador (pt-br)">
+                description = <"*dados_avaliador (pt-br)">
+            >
+            ["id2"] = <
+                text = <"*Dados Avaliador (pt-br)">
+                description = <"*Dados Avaliador (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Nome do avaliador (pt-br)">
+                description = <"*Nome do avaliador (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Data da avaliação (pt-br)">
+                description = <"*Data da avaliação (pt-br)">
             >
         >
     >
