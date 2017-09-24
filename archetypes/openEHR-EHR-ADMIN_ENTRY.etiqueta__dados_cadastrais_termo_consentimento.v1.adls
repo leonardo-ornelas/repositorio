@@ -29,6 +29,13 @@ definition
                             DV_TEXT[id6] 
                         }
                     }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Data de Nascimento
+                        value matches {
+                            DV_DATE[id8] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -52,6 +59,10 @@ terminology
             ["id5"] = <
                 text = <"Nome do funcionário">
                 description = <"Nome do funcionário">
+            >
+            ["id7"] = <
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
             >
         >
     >
