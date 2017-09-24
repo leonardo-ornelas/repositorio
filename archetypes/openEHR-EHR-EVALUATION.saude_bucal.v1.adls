@@ -75,6 +75,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id20] occurrences matches {1} matches {    -- Condição Dental- 15
+                                value matches {
+                                    DV_CODED_TEXT[id21] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -200,6 +207,10 @@ terminology
             ["id18"] = <
                 text = <"Tratamentp- 16">
                 description = <"Tratamentp- 16">
+            >
+            ["id20"] = <
+                text = <"Condição Dental- 15">
+                description = <"Condição Dental- 15">
             >
         >
     >
