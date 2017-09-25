@@ -31,9 +31,9 @@ description
         ["pt-br"] = <
             keywords = <"activity", "exercise", "physical", "fitness">
             language = <[ISO_639-1::pt-br]>
-            misuse = <"*Not to be used to record diary-like observations of physical activity. (en)">
-            purpose = <"*To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual. (en)">
-            use = <"*Use to record a summary of physical activity. (en)">
+            misuse = <"Não deve ser usado para registrar observações diárias de atividade física.">
+            purpose = <"Para registrar um resumo da atividade física de um indivíduo em relação à avaliação do nível geral de atividade física e aptidão de um indivíduo.">
+            use = <"Use para registrar um resumo da atividade física.">
         >
     >
     lifecycle_state = <"unmanaged">
