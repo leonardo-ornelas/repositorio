@@ -64,6 +64,7 @@ definition
             use_archetype SECTION[id0.28, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-011.v1.0.0]
             use_archetype SECTION[id0.29, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-012.v1.0.0]
             use_archetype SECTION[id0.30, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-013.v1.0.0]
+            use_archetype SECTION[id0.31, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-014.v1.0.0]
         }
     }
 
@@ -2091,7 +2092,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-uso_medicamento-001.v1.0.0]
+        }
     }
 
 terminology
@@ -2382,6 +2385,71 @@ terminology
             ["id1.1"] = <
                 text = <"GHQ 12">
                 description = <"Registre dados so ghq12">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-014.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Ficha de aferição de medidas">
+                description = <"Bloco para registro de informações de medidas">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-uso_medicamento-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.uso_medicamento.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Uso de medicamento
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {0..1} matches {
+                /value[id9]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Uso de medicamento">
+                description = <"Registre informações sobre uso de medicamentos">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"use of medication">
+                description = <"use of medication">
             >
         >
     >
