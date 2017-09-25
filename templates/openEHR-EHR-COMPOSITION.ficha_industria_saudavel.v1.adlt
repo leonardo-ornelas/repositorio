@@ -2404,6 +2404,8 @@ definition
             use_archetype ADMIN_ENTRY[id0.4, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_avaliador-001.v1.0.0]
             use_archetype OBSERVATION[id0.5, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-body_weight-SESI_BR-001.v1.0.0]
             use_archetype OBSERVATION[id0.6, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-height-001.v1.0.0]
+            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-body_mass_index-001.v1.0.0]
+            use_archetype OBSERVATION[id0.8, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-body_weight-SESI_BR-002.v1.0.0]
         }
     }
 
@@ -3047,6 +3049,366 @@ terminology
             ["id22.1"] = <
                 text = <"Nascimento">
                 description = <"Primeiro comprimento do corpo medido em, ou logo após, nascimento.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items matches {
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Method
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id11.1] occurrences matches {0} matches {    -- Formula
+                value matches {
+                    DV_TEXT[id15.1] 
+                }
+            }
+            ELEMENT[id12.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+            ["id7.1"] = <
+                text = <"Method">
+                description = <"The method of entering the Body Mass Index.">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula used to derive the Body Mass Index.">
+            >
+            ["id12.1"] = <
+                text = <"Comment">
+                description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+            ["id7.1"] = <
+                text = <"Methode">
+                description = <"De methode om de Body Mass Index in te voeren.">
+            >
+            ["id11.1"] = <
+                text = <"Formule">
+                description = <"De formule die gebruikt wordt om de Body Mass Index te berekenen">
+            >
+            ["id12.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+            ["id7.1"] = <
+                text = <"Metoda">
+                description = <"Metoda">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula">
+            >
+            ["id12.1"] = <
+                text = <"Opombe">
+                description = <"Opombe">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
+            >
+            ["id7.1"] = <
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
+            >
+            ["id11.1"] = <
+                text = <"Fórmula">
+                description = <"Fórmula utilizada para derivar o Índice de Massa Corporal.">
+            >
+            ["id12.1"] = <
+                text = <"Comentário">
+                description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-body_weight-SESI_BR-002.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items matches {
+                    ELEMENT[id5.0.1] occurrences matches {0} matches {    -- Gewicht
+                        value matches {
+                            DV_QUANTITY[id30.0.1] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.0.1] 
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.0.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
+                    }
+                    ELEMENT[id29.0.1] occurrences matches {0} matches {    -- *New element(en)
+                        value matches {
+                            DV_BOOLEAN[id33.0.1] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.0.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id27.0.1] occurrences matches {0} matches {    -- *Any event(en)
+                data
+                state
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.0.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.0.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Het gewicht van het individu.">
+            >
+            ["id25.0.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+            ["id10.0.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+            ["id5.0.1"] = <
+                text = <"Weight">
+                description = <"The weight of the individual.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+            ["id10.0.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id29.0.1"] = <
+                text = <"Pregnant?">
+                description = <"Is the woman pregnant at time of measurement?">
+            >
+            ["id26.0.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id27.0.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
+            ["id28.0.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
+            >
+        >
+        ["de"] = <
+            ["id1.1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+            ["id5.0.1"] = <
+                text = <"Gewicht">
+                description = <"Das Gewicht eines Individuums.">
+            >
+            ["id25.0.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+            ["id10.0.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Perímetro abdominal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id5.0.1"] = <
+                text = <"Peso">
+                description = <"O peso do indivíduo.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+            ["id10.0.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id29.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
+            >
+            ["id26.0.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id27.0.1"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id28.0.1"] = <
+                text = <"Novo elemento">
+                description = <"Novo elemento">
+            >
+        >
+        ["ru"] = <
+            ["id1.1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+            ["id5.0.1"] = <
+                text = <"Вес">
+                description = <"Вес пациента.">
+            >
+            ["id25.0.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
+            >
+            ["id10.0.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id29.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id26.0.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id28.0.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
             >
         >
     >
