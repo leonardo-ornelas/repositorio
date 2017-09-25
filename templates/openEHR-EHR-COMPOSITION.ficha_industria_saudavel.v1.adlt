@@ -1603,7 +1603,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.13, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.14, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
         }
     }
 
@@ -1722,9 +1722,6 @@ definition
                     }
                     ELEMENT[id0.7] occurrences matches {0..1} matches {
                         /value[id0.8]/defining_code matches {[ac0.3]}
-                    }
-                    ELEMENT[id0.9] occurrences matches {0..1} matches {
-                        /value[id0.10]/value matches {True, False}
                     }
                 }
             }
