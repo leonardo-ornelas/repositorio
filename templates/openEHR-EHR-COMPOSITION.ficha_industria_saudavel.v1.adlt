@@ -4842,7 +4842,7 @@ terminology
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Uso de alcool">
-                description = <"Uso de alcool">
+                description = <"Registre informações sobre uso de alcool">
             >
         >
         ["en"] = <
