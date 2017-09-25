@@ -294,8 +294,20 @@ terminology
                 description = <"You feel guilty about the way you usually drink.">
             >
             ["at2"] = <
-                text = <"Flow rate, mass">
-                description = <"Flow rate, mass">
+                text = <"Fluxo, massa">
+                description = <"Fluxo, massa">
+            >
+            ["at1"] = <
+                text = <"Frequência">
+                description = <"Frequência">
+            >
+            ["at3"] = <
+                text = <"intenção">
+                description = <"intenção">
+            >
+            ["at4"] = <
+                text = <"massa">
+                description = <"massa">
             >
         >
         ["pt-br"] = <
@@ -414,6 +426,18 @@ terminology
             ["at2"] = <
                 text = <"Fluxo, massa">
                 description = <"Fluxo, massa">
+            >
+            ["at1"] = <
+                text = <"Frequência">
+                description = <"Frequência">
+            >
+            ["at3"] = <
+                text = <"intenção">
+                description = <"intenção">
+            >
+            ["at4"] = <
+                text = <"massa">
+                description = <"massa">
             >
         >
     >
