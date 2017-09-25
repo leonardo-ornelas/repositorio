@@ -18,7 +18,42 @@ definition
     EVALUATION[id1] occurrences matches {1} matches {    -- resumo_atividade_fisica
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {    -- ITEM_TREE
-                items
+                items matches {
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Status da atividade física
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Notas
+                        value matches {
+                            DV_TEXT[id6] 
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Barreiras identificadas
+                        value matches {
+                            DV_TEXT[id8] 
+                        }
+                    }
+                    ELEMENT[id9] occurrences matches {0..1} matches {    -- Fatores de habilitadores
+                        value matches {
+                            DV_TEXT[id10] 
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Exercício moderado por semana
+                        value matches {
+                            DV_COUNT[id12] matches {
+                                magnitude matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Exercício vigoroso por semana
+                        value matches {
+                            DV_COUNT[id14] matches {
+                                magnitude matches {*}
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -33,6 +68,30 @@ terminology
             ["id2"] = <
                 text = <"ITEM_TREE">
                 description = <"ITEM_TREE">
+            >
+            ["id3"] = <
+                text = <"Status da atividade física">
+                description = <"Status da atividade física">
+            >
+            ["id5"] = <
+                text = <"Notas">
+                description = <"Notas">
+            >
+            ["id7"] = <
+                text = <"Barreiras identificadas">
+                description = <"Barreiras identificadas">
+            >
+            ["id9"] = <
+                text = <"Fatores de habilitadores">
+                description = <"Fatores de habilitadores">
+            >
+            ["id11"] = <
+                text = <"Exercício moderado por semana">
+                description = <"Exercício moderado por semana">
+            >
+            ["id13"] = <
+                text = <"Exercício vigoroso por semana">
+                description = <"Exercício vigoroso por semana">
             >
         >
     >
