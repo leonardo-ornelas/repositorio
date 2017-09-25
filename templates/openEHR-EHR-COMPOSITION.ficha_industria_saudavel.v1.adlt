@@ -1685,8 +1685,12 @@ definition
                             ELEMENT[id0.9] occurrences matches {0..1} matches {
                                 /value[id0.10]/value matches {True, False}
                             }
-                            ELEMENT[id0.11] occurrences matches {0..1} matches {
-                                /value[id0.12]/value matches {True, False}
+                            ELEMENT[id0.11.1] occurrences matches {0} matches {    -- How people annoy you by your way of drinking
+                                value matches {
+                                    DV_BOOLEAN[id0.12.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
                             ELEMENT[id0.13] occurrences matches {0..1} matches {
                                 /value[id0.14]/value matches {True, False}
@@ -1803,6 +1807,10 @@ terminology
                 text = <"Average Use Frequency">
                 description = <"Frequency of 'Average Use' per time interval.">
             >
+            ["id0.11.1"] = <
+                text = <"How people annoy you by your way of drinking">
+                description = <"How people annoy you by your way of drinking">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1856,6 +1864,10 @@ terminology
             ["id27.0.1"] = <
                 text = <"Frequência de uso médio">
                 description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+            ["id0.11.1"] = <
+                text = <"As pessoas o(a) aborrecem por seu modo de beber">
+                description = <"As pessoas o(a) aborrecem por seu modo de beber">
             >
         >
     >
