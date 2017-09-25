@@ -1764,26 +1764,14 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.2.1] occurrences matches {0} matches {    -- Doses
-                        value matches {
-                            DV_CODED_TEXT[id0.3.1] matches {
-                                defining_code matches {[ac0.1]}
-                            }
-                        }
+                    ELEMENT[id0.2] occurrences matches {0..1} matches {
+                        /value[id0.3]/defining_code matches {[ac0.1]}
                     }
-                    ELEMENT[id0.5.1] occurrences matches {0} matches {    -- Consumption
-                        value matches {
-                            DV_CODED_TEXT[id0.6.1] matches {
-                                defining_code matches {[ac0.2]}
-                            }
-                        }
+                    ELEMENT[id0.5] occurrences matches {0..1} matches {
+                        /value[id0.6]/defining_code matches {[ac0.2]}
                     }
-                    ELEMENT[id0.7.1] occurrences matches {0} matches {    -- Type
-                        value matches {
-                            DV_CODED_TEXT[id0.8.1] matches {
-                                defining_code matches {[ac0.3]}
-                            }
-                        }
+                    ELEMENT[id0.7] occurrences matches {0..1} matches {
+                        /value[id0.8]/defining_code matches {[ac0.3]}
                     }
                     ELEMENT[id0.9] occurrences matches {0..1} matches {
                         /value[id0.10]/value matches {True, False}
@@ -1834,39 +1822,47 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
+            ["at2"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
+            ["at1"] = <
+                text = <"Frequency">
+                description = <"Frequency">
+            >
+            ["at3"] = <
+                text = <"mean">
+                description = <"mean">
+            >
+            ["at4"] = <
+                text = <"Mass">
+                description = <"Mass">
+            >
             ["id1.1.1"] = <
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
-            ["id0.2.1"] = <
-                text = <"Doses">
-                description = <"Doses">
-            >
-            ["id0.5.1"] = <
-                text = <"Consumption">
-                description = <"Taking into account all types of alcoholic beverage, how many times in the last 30 days, consumed five or more doses on a single occasion.">
-            >
-            ["id0.7.1"] = <
-                text = <"Type">
-                description = <"Type">
-            >
         >
         ["pt-br"] = <
+            ["at2"] = <
+                text = <"Fluxo, massa">
+                description = <"Fluxo, massa">
+            >
+            ["at1"] = <
+                text = <"Frequência">
+                description = <"Frequência">
+            >
+            ["at3"] = <
+                text = <"intenção">
+                description = <"intenção">
+            >
+            ["at4"] = <
+                text = <"massa">
+                description = <"massa">
+            >
             ["id1.1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
-            >
-            ["id0.2.1"] = <
-                text = <"Doses">
-                description = <"Doses">
-            >
-            ["id0.5.1"] = <
-                text = <"Consumo">
-                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião.">
-            >
-            ["id0.7.1"] = <
-                text = <"Tipo">
-                description = <"Tipo">
             >
         >
     >
