@@ -59,6 +59,7 @@ definition
             use_archetype SECTION[id0.23, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.25, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-008.v1.0.0]
+            use_archetype SECTION[id0.26, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-009.v1.0.0]
         }
     }
 
@@ -1996,6 +1997,82 @@ terminology
             ["id1.1"] = <
                 text = <"Hypertension">
                 description = <"Hypertension">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-009.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-utilizacao_servicos_saude-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Utilização de serviços de saúde">
+                description = <"Bloco para registro de de informação de utilização de serviços de saúde">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-utilizacao_servicos_saude-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Utilização Serviços de Saúde
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {1} matches {
+                /value[id9]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id10] occurrences matches {1} matches {
+                /value[id11]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id12] occurrences matches {1} matches {
+                /value[id13]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id14] occurrences matches {1} matches {
+                /value[id15]/defining_code matches {[ac4]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Utilização Serviços de Saúde">
+                description = <"Utilização Serviços de Saúde">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Health Services Utilization">
+                description = <"Health Services Utilization">
             >
         >
     >
