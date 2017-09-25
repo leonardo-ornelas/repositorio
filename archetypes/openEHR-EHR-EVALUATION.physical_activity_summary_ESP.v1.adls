@@ -89,6 +89,13 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.12] occurrences matches {0..1} matches {    -- Main type of physical activity practiced during leisure time.
+                value matches {
+                    DV_CODED_TEXT[id0.13] matches {
+                        defining_code matches {[ac0.2]}
+                    }
+                }
+            }
         }
     }
 
@@ -171,6 +178,70 @@ terminology
                 text = <"Pratica alguma atividade física regular em seu lazer">
                 description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais.">
             >
+            ["id0.12"] = <
+                text = <"Main type of physical activity practiced during leisure time.">
+                description = <"Main type of physical activity practiced during leisure time.">
+            >
+            ["at0.6"] = <
+                text = <"I do not practice physical activity.">
+                description = <"I do not practice physical activity.">
+            >
+            ["at0.7"] = <
+                text = <"Walking">
+                description = <"Walking">
+            >
+            ["at0.8"] = <
+                text = <"Sport">
+                description = <"Sport">
+            >
+            ["at0.9"] = <
+                text = <"Cycling">
+                description = <"Cycling">
+            >
+            ["at0.10"] = <
+                text = <"Running">
+                description = <"Running">
+            >
+            ["at0.11"] = <
+                text = <"Swimming / Hydrotherapy">
+                description = <"Swimming / Hydrotherapy">
+            >
+            ["at0.12"] = <
+                text = <"Fitness">
+                description = <"Fitness">
+            >
+            ["at0.13"] = <
+                text = <"Bodybuilding">
+                description = <"Bodybuilding">
+            >
+            ["at0.14"] = <
+                text = <"Dancing">
+                description = <"Dancing">
+            >
+            ["at0.15"] = <
+                text = <"Adventure Sports">
+                description = <"Adventure Sports">
+            >
+            ["at0.16"] = <
+                text = <"Yoga/Tai-chi-chuan">
+                description = <"Yoga/Tai-chi-chuan">
+            >
+            ["at0.17"] = <
+                text = <"Stretching">
+                description = <"Stretching">
+            >
+            ["at0.18"] = <
+                text = <"Martial arts / fights">
+                description = <"Martial arts / fights">
+            >
+            ["at0.19"] = <
+                text = <"Other physical activities">
+                description = <"Other physical activities">
+            >
+            ["ac0.2"] = <
+                text = <"Tipo da principal atividade física praticada nos momentos de lazer">
+                description = <"Qual o tipo principal de atividade física praticada nos momentos de lazer.">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -249,12 +320,80 @@ terminology
                 text = <"Pratica alguma atividade física regular em seu lazer (en)">
                 description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais. (en)">
             >
+            ["id0.12"] = <
+                text = <"Tipo principal de atividade física praticada nos momentos de lazer.">
+                description = <"Tipo principal de atividade física praticada nos momentos de lazer.">
+            >
+            ["at0.6"] = <
+                text = <"Não pratico atividade física.">
+                description = <"Não pratico atividade física.">
+            >
+            ["at0.7"] = <
+                text = <"Caminhada">
+                description = <"Caminhada">
+            >
+            ["at0.8"] = <
+                text = <"Esporte">
+                description = <"Esporte">
+            >
+            ["at0.9"] = <
+                text = <"Ciclismo">
+                description = <"Ciclismo">
+            >
+            ["at0.10"] = <
+                text = <"Corrida">
+                description = <"Corrida">
+            >
+            ["at0.11"] = <
+                text = <"Natação / Hidroginástica">
+                description = <"Natação / Hidroginástica">
+            >
+            ["at0.12"] = <
+                text = <"Ginástica">
+                description = <"Ginástica">
+            >
+            ["at0.13"] = <
+                text = <"Musculação">
+                description = <"Musculação">
+            >
+            ["at0.14"] = <
+                text = <"Dança">
+                description = <"Dança">
+            >
+            ["at0.15"] = <
+                text = <"Esportes de aventura">
+                description = <"Esportes de aventura">
+            >
+            ["at0.16"] = <
+                text = <"Yoga/Tai-chi-chuan">
+                description = <"Yoga/Tai-chi-chuan">
+            >
+            ["at0.17"] = <
+                text = <"Alongamentos">
+                description = <"Alongamentos">
+            >
+            ["at0.18"] = <
+                text = <"Artes marciais / lutas">
+                description = <"Artes marciais / lutas">
+            >
+            ["at0.19"] = <
+                text = <"Outras atividades físicas">
+                description = <"Outras atividades físicas">
+            >
+            ["ac0.2"] = <
+                text = <"Tipo da principal atividade física praticada nos momentos de lazer (en)">
+                description = <"Qual o tipo principal de atividade física praticada nos momentos de lazer. (en)">
+            >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
             members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.6", "at0.7", "at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17", "at0.18", "at0.19">
         >
     >
 
