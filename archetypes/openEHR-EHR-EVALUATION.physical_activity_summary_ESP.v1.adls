@@ -148,24 +148,24 @@ terminology
                 description = <"He/She regularly performs some type of physical activity at his leisure, such as physical exercises (gymnastics, walking, running), sports, dancing or martial arts.">
             >
             ["at0.1"] = <
-                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
-                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
+                description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
             >
             ["at0.2"] = <
-                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
-                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                text = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
+                description = <"NO, but I am interested in doing physical activities at my leisure in the near future.">
             >
             ["at0.3"] = <
-                text = <"SIM, 1 ou 2 vezes por semana.">
-                description = <"SIM, 1 ou 2 vezes por semana.">
+                text = <"YES, 1 or 2 times a week.">
+                description = <"YES, 1 or 2 times a week.">
             >
             ["at0.4"] = <
-                text = <"SIM, 3 ou 4 vezes por semana.">
-                description = <"SIM, 3 ou 4 vezes por semana.">
+                text = <"YES, 3 or 4 times a week.">
+                description = <"YES, 3 or 4 times a week.">
             >
             ["at0.5"] = <
-                text = <"SIM, 5 ou mais vezes por semana.">
-                description = <"SIM, 5 ou mais vezes por semana.">
+                text = <"YES, 5 or more times per week.">
+                description = <"YES, 5 or more times per week.">
             >
             ["ac0.1"] = <
                 text = <"Pratica alguma atividade física regular em seu lazer">
@@ -226,24 +226,24 @@ terminology
                 description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais.">
             >
             ["at0.1"] = <
-                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
-                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
             >
             ["at0.2"] = <
-                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
-                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
             >
             ["at0.3"] = <
-                text = <"SIM, 1 ou 2 vezes por semana. (en)">
-                description = <"SIM, 1 ou 2 vezes por semana. (en)">
+                text = <"SIM, 1 ou 2 vezes por semana.">
+                description = <"SIM, 1 ou 2 vezes por semana.">
             >
             ["at0.4"] = <
-                text = <"SIM, 3 ou 4 vezes por semana. (en)">
-                description = <"SIM, 3 ou 4 vezes por semana. (en)">
+                text = <"SIM, 3 ou 4 vezes por semana.">
+                description = <"SIM, 3 ou 4 vezes por semana.">
             >
             ["at0.5"] = <
-                text = <"SIM, 5 ou mais vezes por semana. (en)">
-                description = <"SIM, 5 ou mais vezes por semana. (en)">
+                text = <"SIM, 5 ou mais vezes por semana.">
+                description = <"SIM, 5 ou mais vezes por semana.">
             >
             ["ac0.1"] = <
                 text = <"Pratica alguma atividade física regular em seu lazer (en)">
