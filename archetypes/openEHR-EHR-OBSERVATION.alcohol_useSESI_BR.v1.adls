@@ -293,6 +293,10 @@ terminology
                 text = <"You feel guilty about the way you usually drink.">
                 description = <"You feel guilty about the way you usually drink.">
             >
+            ["at2"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -406,6 +410,10 @@ terminology
             ["id0.15"] = <
                 text = <"Sente culpado pela maneira como costuma beber.">
                 description = <"Sente culpado pela maneira como costuma beber.">
+            >
+            ["at2"] = <
+                text = <"Fluxo, massa">
+                description = <"Fluxo, massa">
             >
         >
     >
