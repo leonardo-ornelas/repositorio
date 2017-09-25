@@ -60,6 +60,27 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Tempo total gasto com caminhada por dia
+                        value matches {
+                            DV_DATE_TIME[id18] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades moderadas por dia
+                        value matches {
+                            DV_DATE_TIME[id20] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades vigorosas por dia
+                        value matches {
+                            DV_DATE_TIME[id22] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -115,6 +136,18 @@ terminology
             ["ac1"] = <
                 text = <"Atividade física praticada fora do trabalho">
                 description = <"Atividade física praticada fora do trabalho">
+            >
+            ["id17"] = <
+                text = <"Tempo total gasto com caminhada por dia">
+                description = <"Tempo total gasto com caminhada por dia">
+            >
+            ["id19"] = <
+                text = <"Tempo total gasto com prática de atividades moderadas por dia">
+                description = <"Tempo total gasto com prática de atividades moderadas por dia">
+            >
+            ["id21"] = <
+                text = <"Tempo total gasto com prática de atividades vigorosas por dia">
+                description = <"Tempo total gasto com prática de atividades vigorosas por dia">
             >
         >
     >
