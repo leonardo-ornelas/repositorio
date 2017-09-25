@@ -3,6 +3,12 @@ archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
 
 language
     original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
     
 description
     copyright = <"© 2010 NEHTA">
@@ -13,6 +19,13 @@ description
             misuse = <"Not to be used to record diary-like observations of physical activity.">
             purpose = <"To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual.">
             use = <"Use to record a summary of physical activity.">
+        >
+        ["pt-br"] = <
+            keywords = <"activity", "exercise", "physical", "fitness">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Not to be used to record diary-like observations of physical activity. (en)">
+            purpose = <"*To record a summary of an individual's physical activity with regard to assessing the general level of physical activity and fitness of an individual. (en)">
+            use = <"*Use to record a summary of physical activity. (en)">
         >
     >
     lifecycle_state = <"unmanaged">
@@ -94,6 +107,36 @@ terminology
             ["id9"] = <
                 text = <"Moderate exercise/week">
                 description = <"Number of times per week of 30 min moderate exercise.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"*Physical Activity Summary (en)">
+                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+            >
+            ["id3"] = <
+                text = <"*Physical activity status (en)">
+                description = <"*A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible. (en)">
+            >
+            ["id4"] = <
+                text = <"*Physical activity note (en)">
+                description = <"*A more detailed description of the physical activity status of the individual. (en)">
+            >
+            ["id6"] = <
+                text = <"*Barriers to activity (en)">
+                description = <"*Identified barriers to the individual being involved in physical activity. (en)">
+            >
+            ["id7"] = <
+                text = <"*Enabling factors (en)">
+                description = <"*Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete. (en)">
+            >
+            ["id8"] = <
+                text = <"*Vigorous exercise/week (en)">
+                description = <"*Number of times per week of 20 min vigorous exercise. (en)">
+            >
+            ["id9"] = <
+                text = <"*Moderate exercise/week (en)">
+                description = <"*Number of times per week of 30 min moderate exercise. (en)">
             >
         >
     >
