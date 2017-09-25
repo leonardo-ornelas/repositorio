@@ -1949,7 +1949,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype EVALUATION[id0.5, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-resumo_atividade_fisica-001.v1.0.0]
+        }
     }
 
 terminology
@@ -4814,6 +4816,118 @@ terminology
             ["id1.1"] = <
                 text = <"Uso de alcool">
                 description = <"Uso de alcool">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-resumo_atividade_fisica-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.resumo_atividade_fisica.v1.0.0
+
+definition
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Atividade física
+        /data[id2]/items matches {
+            ELEMENT[id3.1] occurrences matches {0} matches {    -- Status da atividade física
+                value matches {
+                    DV_TEXT[id4.1] 
+                }
+            }
+            ELEMENT[id5.1] occurrences matches {0} matches {    -- Notas
+                value matches {
+                    DV_TEXT[id6.1] 
+                }
+            }
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Barreiras identificadas
+                value matches {
+                    DV_TEXT[id8.1] 
+                }
+            }
+            ELEMENT[id9.1] occurrences matches {0} matches {    -- Fatores de habilitadores
+                value matches {
+                    DV_TEXT[id10.1] 
+                }
+            }
+            ELEMENT[id15.1] occurrences matches {0} matches {    -- Atividade física praticada fora do trabalho
+                value matches {
+                    DV_CODED_TEXT[id16.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id23] occurrences matches {0..1} matches {
+                /value[id30]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id24] occurrences matches {0..1} matches {
+                /value[id31]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id25] occurrences matches {0..1} matches {
+                /value[id32]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id26] occurrences matches {0..1} matches {
+                /value[id29]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id27] occurrences matches {0..1} matches {
+                /value[id28]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
+            >
+            ["id3.1"] = <
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["id5.1"] = <
+                text = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
+            >
+            ["id7.1"] = <
+                text = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
+            >
+            ["id9.1"] = <
+                text = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
+            >
+            ["id15.1"] = <
+                text = <"Atividade física praticada fora do trabalho">
+                description = <"Atividade física praticada fora do trabalho">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id3.1"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id5.1"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id7.1"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id9.1"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
+            ["id15.1"] = <
+                text = <"*Atividade física praticada fora do trabalho (pt-br)">
+                description = <"*Atividade física praticada fora do trabalho (pt-br)">
             >
         >
     >
