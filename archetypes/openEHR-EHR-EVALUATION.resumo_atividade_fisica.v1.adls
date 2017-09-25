@@ -53,20 +53,6 @@ definition
                             DV_TEXT[id10] 
                         }
                     }
-                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Exercício moderado por semana
-                        value matches {
-                            DV_COUNT[id12] matches {
-                                magnitude matches {*}
-                            }
-                        }
-                    }
-                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Exercício vigoroso por semana
-                        value matches {
-                            DV_COUNT[id14] matches {
-                                magnitude matches {*}
-                            }
-                        }
-                    }
                     ELEMENT[id15] occurrences matches {0..1} matches {    -- Atividade física praticada fora do trabalho
                         value matches {
                             DV_CODED_TEXT[id16] matches {
@@ -77,21 +63,56 @@ definition
                     ELEMENT[id17] occurrences matches {0..1} matches {    -- Tempo total gasto com caminhada por dia
                         value matches {
                             DV_DATE_TIME[id18] matches {
-                                value matches {*}
+                                value
                             }
                         }
                     }
                     ELEMENT[id19] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades moderadas por dia
                         value matches {
                             DV_DATE_TIME[id20] matches {
-                                value matches {*}
+                                value
                             }
                         }
                     }
                     ELEMENT[id21] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades vigorosas por dia
                         value matches {
                             DV_DATE_TIME[id22] matches {
-                                value matches {*}
+                                value
+                            }
+                        }
+                    }
+                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Quantos dias / semana são realizadas atividades físicas moderadas
+                        value matches {
+                            DV_CODED_TEXT[id30] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Quantos dias / semana são realizadas atividades físicas vigorosas
+                        value matches {
+                            DV_CODED_TEXT[id31] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos
+                        value matches {
+                            DV_CODED_TEXT[id32] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Pratica alguma atividade física regular em seu lazer
+                        value matches {
+                            DV_CODED_TEXT[id29] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
+                    }
+                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Tipo principal de atividade física praticada nos momentos de lazer
+                        value matches {
+                            DV_CODED_TEXT[id28] matches {
+                                defining_code matches {[ac2]}
                             }
                         }
                     }
@@ -127,14 +148,6 @@ terminology
                 text = <"Fatores de habilitadores">
                 description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
-            ["id11"] = <
-                text = <"Exercício moderado por semana">
-                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
-            >
-            ["id13"] = <
-                text = <"Exercício vigoroso por semana">
-                description = <"Exercício vigoroso por semana">
-            >
             ["id15"] = <
                 text = <"Atividade física praticada fora do trabalho">
                 description = <"Atividade física praticada fora do trabalho">
@@ -163,6 +176,142 @@ terminology
                 text = <"Tempo total gasto com prática de atividades vigorosas por dia">
                 description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
             >
+            ["id23"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas moderadas">
+                description = <"Quantos dias / semana são realizadas atividades físicas moderadas">
+            >
+            ["id24"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas vigorosas">
+                description = <"Quantos dias / semana são realizadas atividades físicas vigorosas">
+            >
+            ["id25"] = <
+                text = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos">
+                description = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos">
+            >
+            ["id26"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer">
+                description = <"Pratica alguma atividade física regular em seu lazer">
+            >
+            ["id27"] = <
+                text = <"Tipo principal de atividade física praticada nos momentos de lazer">
+                description = <"Tipo principal de atividade física praticada nos momentos de lazer">
+            >
+            ["at3"] = <
+                text = <"Não pratico atividade física.">
+                description = <"Não pratico atividade física.">
+            >
+            ["at4"] = <
+                text = <"Caminhada">
+                description = <"Caminhada">
+            >
+            ["at5"] = <
+                text = <"Esporte">
+                description = <"Esporte">
+            >
+            ["at6"] = <
+                text = <"Ciclismo">
+                description = <"Ciclismo">
+            >
+            ["at7"] = <
+                text = <"Corrida">
+                description = <"Corrida">
+            >
+            ["at8"] = <
+                text = <"Natação/Hidroginástica">
+                description = <"Natação/Hidroginástica">
+            >
+            ["at9"] = <
+                text = <"Ginástica">
+                description = <"Ginástica">
+            >
+            ["at10"] = <
+                text = <"Dança">
+                description = <"Dança">
+            >
+            ["at11"] = <
+                text = <"Esportes de aventura">
+                description = <"Esportes de aventura">
+            >
+            ["at12"] = <
+                text = <"Yoga/Tai-chi-chuan">
+                description = <"Yoga/Tai-chi-chuan">
+            >
+            ["at13"] = <
+                text = <"Alongamentos">
+                description = <"Alongamentos">
+            >
+            ["at14"] = <
+                text = <"Artes marciais/lutas">
+                description = <"Artes marciais/lutas">
+            >
+            ["at15"] = <
+                text = <"Outras atividades físicas">
+                description = <"Outras atividades físicas">
+            >
+            ["ac2"] = <
+                text = <"Tipo principal de atividade física">
+                description = <"Tipo principal de atividade física">
+            >
+            ["at16"] = <
+                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+            >
+            ["at17"] = <
+                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+            >
+            ["at18"] = <
+                text = <"SIM, 1 ou 2 vezes por semana.">
+                description = <"SIM, 1 ou 2 vezes por semana.">
+            >
+            ["at19"] = <
+                text = <"SIM, 3 ou 4 vezes por semana.">
+                description = <"SIM, 3 ou 4 vezes por semana.">
+            >
+            ["at20"] = <
+                text = <"SIM, 5 ou mais vezes por semana.">
+                description = <"SIM, 5 ou mais vezes por semana.">
+            >
+            ["ac3"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer">
+                description = <"Pratica alguma atividade física regular em seu lazer">
+            >
+            ["at21"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at22"] = <
+                text = <"1 dia">
+                description = <"1 dia">
+            >
+            ["at23"] = <
+                text = <"2 dias">
+                description = <"2 dias">
+            >
+            ["at24"] = <
+                text = <"3 dias">
+                description = <"3 dias">
+            >
+            ["at25"] = <
+                text = <"4 dias">
+                description = <"4 dias">
+            >
+            ["at26"] = <
+                text = <"5 dias">
+                description = <"5 dias">
+            >
+            ["at27"] = <
+                text = <"6 dias">
+                description = <"6 dias">
+            >
+            ["at28"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
+            ["ac4"] = <
+                text = <"Dias/semana">
+                description = <"Dias/semana">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -188,14 +337,6 @@ terminology
             ["id9"] = <
                 text = <"Enabling factors">
                 description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
-            >
-            ["id11"] = <
-                text = <"Moderate exercise/week">
-                description = <"Number of times per week of 30 min moderate exercise.">
-            >
-            ["id13"] = <
-                text = <"*Exercício vigoroso por semana (pt-br)">
-                description = <"*Exercício vigoroso por semana (pt-br)">
             >
             ["id15"] = <
                 text = <"*Atividade física praticada fora do trabalho (pt-br)">
@@ -225,12 +366,160 @@ terminology
                 text = <"Total time performing vigorous activities per day">
                 description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
             >
+            ["id23"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas moderadas (pt-br)">
+                description = <"Quantos dias / semana são realizadas atividades físicas moderadas (pt-br)">
+            >
+            ["id24"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
+                description = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
+            >
+            ["id25"] = <
+                text = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos (pt-br)">
+                description = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos (pt-br)">
+            >
+            ["id26"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer (pt-br)">
+                description = <"Pratica alguma atividade física regular em seu lazer (pt-br)">
+            >
+            ["id27"] = <
+                text = <"Tipo principal de atividade física praticada nos momentos de lazer (pt-br)">
+                description = <"Tipo principal de atividade física praticada nos momentos de lazer (pt-br)">
+            >
+            ["at3"] = <
+                text = <"Não pratico atividade física. (pt-br)">
+                description = <"Não pratico atividade física. (pt-br)">
+            >
+            ["at4"] = <
+                text = <"Caminhada (pt-br)">
+                description = <"Caminhada (pt-br)">
+            >
+            ["at5"] = <
+                text = <"Esporte (pt-br)">
+                description = <"Esporte (pt-br)">
+            >
+            ["at6"] = <
+                text = <"Ciclismo (pt-br)">
+                description = <"Ciclismo (pt-br)">
+            >
+            ["at7"] = <
+                text = <"Corrida (pt-br)">
+                description = <"Corrida (pt-br)">
+            >
+            ["at8"] = <
+                text = <"Natação/Hidroginástica (pt-br)">
+                description = <"Natação/Hidroginástica (pt-br)">
+            >
+            ["at9"] = <
+                text = <"Ginástica (pt-br)">
+                description = <"Ginástica (pt-br)">
+            >
+            ["at10"] = <
+                text = <"Dança (pt-br)">
+                description = <"Dança (pt-br)">
+            >
+            ["at11"] = <
+                text = <"Esportes de aventura (pt-br)">
+                description = <"Esportes de aventura (pt-br)">
+            >
+            ["at12"] = <
+                text = <"Yoga/Tai-chi-chuan (pt-br)">
+                description = <"Yoga/Tai-chi-chuan (pt-br)">
+            >
+            ["at13"] = <
+                text = <"Alongamentos (pt-br)">
+                description = <"Alongamentos (pt-br)">
+            >
+            ["at14"] = <
+                text = <"Artes marciais/lutas (pt-br)">
+                description = <"Artes marciais/lutas (pt-br)">
+            >
+            ["at15"] = <
+                text = <"Outras atividades físicas (pt-br)">
+                description = <"Outras atividades físicas (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"Tipo principal de atividade física (pt-br)">
+                description = <"Tipo principal de atividade física (pt-br)">
+            >
+            ["at16"] = <
+                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (pt-br)">
+                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (pt-br)">
+            >
+            ["at17"] = <
+                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (pt-br)">
+                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (pt-br)">
+            >
+            ["at18"] = <
+                text = <"SIM, 1 ou 2 vezes por semana. (pt-br)">
+                description = <"SIM, 1 ou 2 vezes por semana. (pt-br)">
+            >
+            ["at19"] = <
+                text = <"SIM, 3 ou 4 vezes por semana. (pt-br)">
+                description = <"SIM, 3 ou 4 vezes por semana. (pt-br)">
+            >
+            ["at20"] = <
+                text = <"SIM, 5 ou mais vezes por semana. (pt-br)">
+                description = <"SIM, 5 ou mais vezes por semana. (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer (pt-br)">
+                description = <"Pratica alguma atividade física regular em seu lazer (pt-br)">
+            >
+            ["at21"] = <
+                text = <"Nenhum (pt-br)">
+                description = <"Nenhum (pt-br)">
+            >
+            ["at22"] = <
+                text = <"1 dia (pt-br)">
+                description = <"1 dia (pt-br)">
+            >
+            ["at23"] = <
+                text = <"2 dias (pt-br)">
+                description = <"2 dias (pt-br)">
+            >
+            ["at24"] = <
+                text = <"3 dias (pt-br)">
+                description = <"3 dias (pt-br)">
+            >
+            ["at25"] = <
+                text = <"4 dias (pt-br)">
+                description = <"4 dias (pt-br)">
+            >
+            ["at26"] = <
+                text = <"5 dias (pt-br)">
+                description = <"5 dias (pt-br)">
+            >
+            ["at27"] = <
+                text = <"6 dias (pt-br)">
+                description = <"6 dias (pt-br)">
+            >
+            ["at28"] = <
+                text = <"7 dias (pt-br)">
+                description = <"7 dias (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"Dias/semana (pt-br)">
+                description = <"Dias/semana (pt-br)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14", "at15">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at16", "at17", "at18", "at19", "at20">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at21", "at22", "at23", "at24", "at25", "at26", "at27", "at28">
         >
     >
 
