@@ -110,7 +110,7 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.9] occurrences matches {1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
+                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
                                 value matches {
                                     DV_BOOLEAN[id0.10] matches {
                                         value matches {True, False}
