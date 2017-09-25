@@ -56,6 +56,8 @@ definition
             use_archetype SECTION[id0.20, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-003.v1.0.0]
             use_archetype SECTION[id0.21, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-004.v1.0.0]
             use_archetype SECTION[id0.22, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0]
+            use_archetype SECTION[id0.23, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0]
+            use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-007.v1.0.0]
         }
     }
 
@@ -1224,9 +1226,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype EVALUATION[id0.4, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -1595,68 +1595,6 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
-
-definition
-    EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
-        /data[id2]/items matches {
-            ELEMENT[id0.4] occurrences matches {0..1} matches {
-                /value[id0.5]/defining_code matches {[ac0.1]}
-            }
-            ELEMENT[id0.6] occurrences matches {0..1} matches {
-                /value[id0.7]/defining_code matches {[ac0.2]}
-            }
-            ELEMENT[id0.8] occurrences matches {0..1} matches {
-                /value[id0.9]/defining_code matches {[ac0.3]}
-            }
-            ELEMENT[id0.12] occurrences matches {0..1} matches {
-                /value[id0.13]/defining_code matches {[ac0.4]}
-            }
-            ELEMENT[id0.16] occurrences matches {0..1} matches {
-                /value[id0.17]/defining_code matches {[ac0.5]}
-            }
-            ELEMENT[id0.21] occurrences matches {0..1} matches {
-                /value[id0.22]/defining_code matches {[ac0.6]}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Physical Activity Summary">
-                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Resumo da atividade física">
-                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
-            >
-        >
-    >
-    value_sets = <
-        ["ac0.2"] = <
-            id = <"ac0.2">
-            members = <"at0.3", "at0.4", "at0.5", "at0.6", "at0.7">
-        >
-        ["ac0.3"] = <
-            id = <"ac0.3">
-            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
-        >
-        ["ac0.4"] = <
-            id = <"ac0.4">
-            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
     openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0
 
 specialize
@@ -1918,6 +1856,144 @@ terminology
             ["id27.0.1"] = <
                 text = <"Frequência de uso médio">
                 description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-comorbidade_referida-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Morbidade referida">
+                description = <"Bloco para registro de dados de morbidade">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-comorbidade_referida-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.comorbidade_referida.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Comorbidade referida
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id7] occurrences matches {1} matches {
+                /value[id8]/value matches {True, False}
+            }
+            ELEMENT[id9] occurrences matches {1} matches {
+                /value[id10]/value matches {True, False}
+            }
+            ELEMENT[id11] occurrences matches {1} matches {
+                /value[id12]/value matches {True, False}
+            }
+            ELEMENT[id13] occurrences matches {1} matches {
+                /value[id14]/value matches {True, False}
+            }
+            ELEMENT[id15] occurrences matches {1} matches {
+                /value[id16]/value matches {True, False}
+            }
+            ELEMENT[id17] occurrences matches {1} matches {
+                /value[id18]/value matches {True, False}
+            }
+            ELEMENT[id19] occurrences matches {1} matches {
+                /value[id20]/value matches {True, False}
+            }
+            ELEMENT[id21] occurrences matches {1} matches {
+                /value[id22]/value matches {True, False}
+            }
+            ELEMENT[id23] occurrences matches {1} matches {
+                /value[id24]/value matches {True, False}
+            }
+            ELEMENT[id25] occurrences matches {1} matches {
+                /value[id26]/value matches {True, False}
+            }
+            ELEMENT[id27] occurrences matches {1} matches {
+                /value[id28]/value matches {True, False}
+            }
+            ELEMENT[id29] occurrences matches {1} matches {
+                /value[id30]/value matches {True, False}
+            }
+            ELEMENT[id31] occurrences matches {1} matches {
+                /value[id32]/value matches {True, False}
+            }
+            ELEMENT[id33] occurrences matches {1} matches {
+                /value[id34]/value matches {True, False}
+            }
+            ELEMENT[id35] occurrences matches {1} matches {
+                /value[id36]/value matches {True, False}
+            }
+            ELEMENT[id37] occurrences matches {1} matches {
+                /value[id38]/value matches {True, False}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Comorbidade referida">
+                description = <"Comorbidade referida">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Referred comorbidity">
+                description = <"Referred comorbidity">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-007.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Diabetes ">
+                description = <"Bloco para registro de dados de diabetes ">
             >
         >
     >
