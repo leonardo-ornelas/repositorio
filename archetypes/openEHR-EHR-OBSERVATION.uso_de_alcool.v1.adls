@@ -239,84 +239,84 @@ terminology
                 description = <"Tipo">
             >
             ["at1"] = <
-                text = <"*Nenhuma (pt-br)">
-                description = <"*Nenhuma (pt-br)">
+                text = <"Nenhuma">
+                description = <"Nenhuma">
             >
             ["at2"] = <
-                text = <"*1 vez (pt-br)">
-                description = <"*1 vez (pt-br)">
+                text = <"1 vez">
+                description = <"1 vez">
             >
             ["at3"] = <
-                text = <"*2 a 4 vezes (pt-br)">
-                description = <"*2 a 4 vezes (pt-br)">
+                text = <"2 a 4 vezes">
+                description = <"2 a 4 vezes">
             >
             ["at4"] = <
-                text = <"*5 a 8 vezes (pt-br)">
-                description = <"*5 a 8 vezes (pt-br)">
+                text = <"5 a 8 vezes">
+                description = <"5 a 8 vezes">
             >
             ["at5"] = <
-                text = <"*8 a 12 vezes (pt-br)">
-                description = <"*8 a 12 vezes (pt-br)">
+                text = <"8 a 12 vezes">
+                description = <"8 a 12 vezes">
             >
             ["at6"] = <
-                text = <"*Acima de 12 vezes (pt-br)">
-                description = <"*Acima de 12 vezes (pt-br)">
+                text = <"Acima de 12 vezes">
+                description = <"Acima de 12 vezes">
             >
             ["ac1"] = <
                 text = <"*Doses (pt-br)">
                 description = <"*Doses (pt-br)">
             >
             ["at7"] = <
-                text = <"*Não consome bebida alcoólica (pt-br)">
-                description = <"*Não consome bebida alcoólica (pt-br)">
+                text = <"Não consome bebida alcoólica">
+                description = <"Não consome bebida alcoólica">
             >
             ["at8"] = <
-                text = <"*Cerveja (pt-br)">
-                description = <"*Cerveja (pt-br)">
+                text = <"Cerveja">
+                description = <"Cerveja">
             >
             ["ac2"] = <
                 text = <"*Consumo (pt-br)">
                 description = <"*Consumo (pt-br)">
             >
             ["at9"] = <
-                text = <"*Vinho (pt-br)">
-                description = <"*Vinho (pt-br)">
+                text = <"Vinho">
+                description = <"Vinho">
             >
             ["at10"] = <
-                text = <"*Cachaça, pinga (pt-br)">
-                description = <"*Cachaça, pinga (pt-br)">
+                text = <"Cachaça, pinga">
+                description = <"Cachaça, pinga">
             >
             ["at11"] = <
-                text = <"*Uísque, vodka, licor (pt-br)">
-                description = <"*Uísque, vodka, licor (pt-br)">
+                text = <"Uísque, vodka, licor">
+                description = <"Uísque, vodka, licor">
             >
             ["at12"] = <
-                text = <"*Champanhe (pt-br)">
-                description = <"*Champanhe (pt-br)">
+                text = <"Champanhe">
+                description = <"Champanhe">
             >
             ["at13"] = <
-                text = <"*Outras bebidas destiladas (pt-br)">
-                description = <"*Outras bebidas destiladas (pt-br)">
+                text = <"Outras bebidas destiladas">
+                description = <"Outras bebidas destiladas">
             >
             ["at14"] = <
-                text = <"*Não consome bebida alcoólica (pt-br)">
-                description = <"*Não consome bebida alcoólica (pt-br)">
+                text = <"Não consome bebida alcoólica">
+                description = <"Não consome bebida alcoólica">
             >
             ["at15"] = <
-                text = <"*Nenhuma, eu não bebo (pt-br)">
-                description = <"*Nenhuma, eu não bebo (pt-br)">
+                text = <"Nenhuma, eu não bebo">
+                description = <"Nenhuma, eu não bebo">
             >
             ["at16"] = <
-                text = <"*1 a 7 doses (pt-br)">
-                description = <"*1 a 7 doses (pt-br)">
+                text = <"1 a 7 doses">
+                description = <"1 a 7 doses">
             >
             ["at17"] = <
-                text = <"*8 a 14 doses (pt-br)">
-                description = <"*8 a 14 doses (pt-br)">
+                text = <"8 a 14 doses">
+                description = <"8 a 14 doses">
             >
             ["at18"] = <
-                text = <"*15 ou mais doses (pt-br)">
-                description = <"*15 ou mais doses (pt-br)">
+                text = <"15 ou mais doses">
+                description = <"15 ou mais doses">
             >
             ["ac3"] = <
                 text = <"*Tipo (pt-br)">
