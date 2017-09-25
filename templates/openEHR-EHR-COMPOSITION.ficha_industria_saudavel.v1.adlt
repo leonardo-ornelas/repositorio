@@ -1825,14 +1825,26 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.2] occurrences matches {0..1} matches {
-                        /value[id0.3]/defining_code matches {[ac0.1]}
+                    ELEMENT[id0.2.1] occurrences matches {0} matches {    -- Doses
+                        value matches {
+                            DV_CODED_TEXT[id0.3.1] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
                     }
-                    ELEMENT[id0.4] occurrences matches {0..1} matches {
-                        /value[id0.5]/defining_code matches {[ac0.2]}
+                    ELEMENT[id0.4.1] occurrences matches {0} matches {    -- Consumo
+                        value matches {
+                            DV_CODED_TEXT[id0.5.1] matches {
+                                defining_code matches {[ac0.2]}
+                            }
+                        }
                     }
-                    ELEMENT[id0.7] occurrences matches {0..1} matches {
-                        /value[id0.8]/defining_code matches {[ac0.3]}
+                    ELEMENT[id0.7.1] occurrences matches {0} matches {    -- Tipo
+                        value matches {
+                            DV_CODED_TEXT[id0.8.1] matches {
+                                defining_code matches {[ac0.3]}
+                            }
+                        }
                     }
                 }
             }
@@ -1875,11 +1887,35 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
+            ["id0.2.1"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
+            ["id0.4.1"] = <
+                text = <"Consumo">
+                description = <"Consumo">
+            >
+            ["id0.7.1"] = <
+                text = <"Tipo">
+                description = <"Tipo">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            >
+            ["id0.2.1"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
+            ["id0.4.1"] = <
+                text = <"Consumo">
+                description = <"Consumo">
+            >
+            ["id0.7.1"] = <
+                text = <"Tipo">
+                description = <"Tipo">
             >
         >
     >
