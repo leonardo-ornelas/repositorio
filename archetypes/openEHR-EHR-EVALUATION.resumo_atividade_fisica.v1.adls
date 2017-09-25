@@ -53,6 +53,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Atividade física praticada fora do trabalho
+                        value matches {
+                            DV_CODED_TEXT[id16] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -93,6 +100,28 @@ terminology
                 text = <"Exercício vigoroso por semana">
                 description = <"Exercício vigoroso por semana">
             >
+            ["id15"] = <
+                text = <"Atividade física praticada fora do trabalho">
+                description = <"Atividade física praticada fora do trabalho">
+            >
+            ["at1"] = <
+                text = <"Regular">
+                description = <"Regular">
+            >
+            ["at2"] = <
+                text = <"Irregular">
+                description = <"Irregular">
+            >
+            ["ac1"] = <
+                text = <"Atividade física praticada fora do trabalho">
+                description = <"Atividade física praticada fora do trabalho">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2">
         >
     >
 
