@@ -29,9 +29,9 @@ description
     >
 
 definition
-    EVALUATION[id1] occurrences matches {1} matches {    -- resumo_atividade_fisica
+    EVALUATION[id1] occurrences matches {1} matches {    -- Resumo da atividade física
         data matches {
-            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- ITEM_TREE
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Qualquer evento
                 items matches {
                     ELEMENT[id3] occurrences matches {0..1} matches {    -- Status da atividade física
                         value matches {
@@ -104,32 +104,32 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"resumo_atividade_fisica">
-                description = <"resumo_atividade_fisica">
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
             >
             ["id2"] = <
-                text = <"ITEM_TREE">
-                description = <"ITEM_TREE">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id3"] = <
                 text = <"Status da atividade física">
-                description = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
             >
             ["id5"] = <
                 text = <"Notas">
-                description = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
             >
             ["id7"] = <
                 text = <"Barreiras identificadas">
-                description = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
             >
             ["id9"] = <
                 text = <"Fatores de habilitadores">
-                description = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
             ["id11"] = <
                 text = <"Exercício moderado por semana">
-                description = <"Exercício moderado por semana">
+                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
             >
             ["id13"] = <
                 text = <"Exercício vigoroso por semana">
@@ -157,41 +157,41 @@ terminology
             >
             ["id19"] = <
                 text = <"Tempo total gasto com prática de atividades moderadas por dia">
-                description = <"Tempo total gasto com prática de atividades moderadas por dia">
+                description = <"Nos dias em que foram realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
             >
             ["id21"] = <
                 text = <"Tempo total gasto com prática de atividades vigorosas por dia">
-                description = <"Tempo total gasto com prática de atividades vigorosas por dia">
+                description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
             >
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*resumo_atividade_fisica (pt-br)">
-                description = <"*resumo_atividade_fisica (pt-br)">
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
             ["id2"] = <
-                text = <"*ITEM_TREE (pt-br)">
-                description = <"*ITEM_TREE (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id3"] = <
-                text = <"*Status da atividade física (pt-br)">
-                description = <"*Status da atividade física (pt-br)">
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
             >
             ["id5"] = <
-                text = <"*Notas (pt-br)">
-                description = <"*Notas (pt-br)">
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
             >
             ["id7"] = <
-                text = <"*Barreiras identificadas (pt-br)">
-                description = <"*Barreiras identificadas (pt-br)">
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
             >
             ["id9"] = <
-                text = <"*Fatores de habilitadores (pt-br)">
-                description = <"*Fatores de habilitadores (pt-br)">
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
             >
             ["id11"] = <
-                text = <"*Exercício moderado por semana (pt-br)">
-                description = <"*Exercício moderado por semana (pt-br)">
+                text = <"Moderate exercise/week">
+                description = <"Number of times per week of 30 min moderate exercise.">
             >
             ["id13"] = <
                 text = <"*Exercício vigoroso por semana (pt-br)">
@@ -218,12 +218,12 @@ terminology
                 description = <"*Tempo total gasto com caminhada por dia (pt-br)">
             >
             ["id19"] = <
-                text = <"*Tempo total gasto com prática de atividades moderadas por dia (pt-br)">
-                description = <"*Tempo total gasto com prática de atividades moderadas por dia (pt-br)">
+                text = <"Total time spent doing moderate activities per day.">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
             >
             ["id21"] = <
-                text = <"*Tempo total gasto com prática de atividades vigorosas por dia (pt-br)">
-                description = <"*Tempo total gasto com prática de atividades vigorosas por dia (pt-br)">
+                text = <"Total time performing vigorous activities per day">
+                description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
             >
         >
     >
