@@ -117,7 +117,7 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- As pessoas o(a) aborrecem por seu modo de beber
+                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- How people annoy you by your way of drinking
                                 value matches {
                                     DV_BOOLEAN[id0.12] matches {
                                         value matches {True, False}
@@ -282,8 +282,8 @@ terminology
                 description = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
             >
             ["id0.11"] = <
-                text = <"As pessoas o(a) aborrecem por seu modo de beber">
-                description = <"As pessoas o(a) aborrecem por seu modo de beber">
+                text = <"How people annoy you by your way of drinking">
+                description = <"How people annoy you by your way of drinking">
             >
             ["id0.13"] = <
                 text = <"Usually drinks in the morning to lessen the nervousness or hangover.">
@@ -396,8 +396,8 @@ terminology
                 description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
             >
             ["id0.11"] = <
-                text = <"How people annoy you by your way of drinking">
-                description = <"How people annoy you by your way of drinking">
+                text = <"As pessoas o(a) aborrecem por seu modo de beber">
+                description = <"As pessoas o(a) aborrecem por seu modo de beber">
             >
             ["id0.13"] = <
                 text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
