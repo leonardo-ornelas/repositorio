@@ -1226,7 +1226,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype EVALUATION[id0.8, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0]
+        }
     }
 
 terminology
@@ -1602,9 +1604,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype OBSERVATION[id0.15, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_use-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -1684,70 +1684,40 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_use-001.v1.0.0
+    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-physical_activity_summary-SESI_BR-001.v1.0.0
 
 specialize
-    openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
+    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
 
 definition
-    OBSERVATION[id1.1] matches {    -- Alcohol Use
-        /data[id2]/events matches {
-            EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items matches {
-                    CLUSTER[id6] matches {
-                        /items[id16]/items matches {
-                            ELEMENT[id15] occurrences matches {0..1} matches {
-                                value matches {
-                                    DV_QUANTITY[id30] matches {
-                                        property matches {[at1]}
-                                        units matches {"/h", "/d", "/wk", "/mo"}
-                                    }
-                                }
-                            }
-                            ELEMENT[id17] occurrences matches {0..1} matches {
-                                value matches {
-                                    DV_QUANTITY[id31] matches {
-                                        property matches {[at2]}
-                                        units matches {"gm/d", "gm/wk"}
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    allow_archetype CLUSTER[id28] matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
-                    }
-                }
+    EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
+        /data[id2]/items matches {
+            ELEMENT[id0.4] occurrences matches {0..1} matches {
+                /value[id0.5]/defining_code matches {[ac0.1]}
             }
-            POINT_EVENT[id24] matches {
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
+            ELEMENT[id0.6] occurrences matches {0..1} matches {
+                /value[id0.7]/defining_code matches {[ac0.2]}
             }
-            INTERVAL_EVENT[id23] matches {
-                /math_function[id37]/defining_code matches {[at3]}
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
+            ELEMENT[id0.8] occurrences matches {0..1} matches {
+                /value[id0.9]/defining_code matches {[ac0.3]}
             }
-        }
-        /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id39] matches {
-                        property matches {[at4]}
-                        units matches {"gm"}
-                    }
-                }
+            ELEMENT[id0.10] occurrences matches {0..1} matches {
+                /value[id0.11]/value matches {*}
             }
-            ELEMENT[id27] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id40] matches {
-                        property matches {[at1]}
-                        units matches {"/d", "/wk", "/mo"}
-                    }
-                }
+            ELEMENT[id0.12] occurrences matches {0..1} matches {
+                /value[id0.13]/defining_code matches {[ac0.4]}
+            }
+            ELEMENT[id0.14] occurrences matches {0..1} matches {
+                /value[id0.15]/value matches {*}
+            }
+            ELEMENT[id0.16] occurrences matches {0..1} matches {
+                /value[id0.17]/defining_code matches {[ac0.5]}
+            }
+            ELEMENT[id0.18] occurrences matches {0..1} matches {
+                /value[id0.20]/value matches {*}
+            }
+            ELEMENT[id0.21] occurrences matches {0..1} matches {
+                /value[id0.22]/defining_code matches {[ac0.6]}
             }
         }
     }
@@ -1755,15 +1725,15 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
-            ["id1.1"] = <
-                text = <"Alcohol Use">
-                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            ["id1.1.1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
         >
         ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Uso de álcool">
-                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
+            ["id1.1.1"] = <
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
             >
         >
     >
