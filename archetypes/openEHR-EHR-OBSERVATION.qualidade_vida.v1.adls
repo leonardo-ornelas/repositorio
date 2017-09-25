@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -10,6 +16,9 @@ description
         ["pt-br"] = <
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
         >
     >
     lifecycle_state = <"unmanaged">
@@ -19,7 +28,7 @@ definition
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Qualquer evento
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -139,8 +148,8 @@ terminology
                 description = <"qualidade_vida">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
             >
             ["id6"] = <
                 text = <"Classificação da saúde do trabalhador">
@@ -257,6 +266,164 @@ terminology
             ["ac4"] = <
                 text = <"Interferiu no trabalho">
                 description = <"Interferiu no trabalho">
+            >
+            ["id18"] = <
+                text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+                description = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+            >
+            ["id19"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id21"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id23"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25"] = <
+                text = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+            >
+            ["id28"] = <
+                text = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+                description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30"] = <
+                text = <"Como o trabalhador se sente em relação a sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32"] = <
+                text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"qualidade_vida">
+                description = <"qualidade_vida">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Classificação da saúde do trabalhador">
+                description = <"Classificação da saúde do trabalhador">
+            >
+            ["at1"] = <
+                text = <"*Excelente (pt-br)">
+                description = <"*Excelente (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Muito boa (pt-br)">
+                description = <"*Muito boa (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Boa (pt-br)">
+                description = <"*Boa (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Ruim (pt-br)">
+                description = <"*Ruim (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Muito ruim (pt-br)">
+                description = <"*Muito ruim (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Qualidade de vida (pt-br)">
+                description = <"*Qualidade de vida (pt-br)">
+            >
+            ["id8"] = <
+                text = <"Dificuldades do trabalhador na execução de atividades">
+                description = <"Dificuldades do trabalhador na execução de atividades">
+            >
+            ["id9"] = <
+                text = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+                description = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+            >
+            ["at6"] = <
+                text = <"*SIM Dificulta muito (pt-br)">
+                description = <"*SIM Dificulta muito (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*SIM Dificulta um pouco (pt-br)">
+                description = <"*SIM Dificulta um pouco (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*NÃO Não dificulta de modo algum (pt-br)">
+                description = <"*NÃO Não dificulta de modo algum (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Dificuldade na execução de atividades (pt-br)">
+                description = <"*Dificuldade na execução de atividades (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Subir vários lances de escada">
+                description = <"Subir vários lances de escada">
+            >
+            ["id13"] = <
+                text = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+                description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+            >
+            ["id14"] = <
+                text = <"Realizou menos tarefas do que gostaria">
+                description = <"Realizou menos tarefas do que gostaria">
+            >
+            ["at9"] = <
+                text = <"*Todo tempo (pt-br)">
+                description = <"*Todo tempo (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*A maior parte do tempo (pt-br)">
+                description = <"*A maior parte do tempo (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Alguma parte do tempo (pt-br)">
+                description = <"*Alguma parte do tempo (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Uma pequena parte do tempo (pt-br)">
+                description = <"*Uma pequena parte do tempo (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Nunca (pt-br)">
+                description = <"*Nunca (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Tarefas (pt-br)">
+                description = <"*Tarefas (pt-br)">
+            >
+            ["id16"] = <
+                text = <"Quantas vezes a dor interferiu no trabalho">
+                description = <"Quantas vezes a dor interferiu no trabalho">
+            >
+            ["at14"] = <
+                text = <"*De maneira nenhuma (pt-br)">
+                description = <"*De maneira nenhuma (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Um pouco (pt-br)">
+                description = <"*Um pouco (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Moderadamente (pt-br)">
+                description = <"*Moderadamente (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*Bastante (pt-br)">
+                description = <"*Bastante (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Extremamente (pt-br)">
+                description = <"*Extremamente (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Interferiu no trabalho (pt-br)">
+                description = <"*Interferiu no trabalho (pt-br)">
             >
             ["id18"] = <
                 text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
