@@ -1603,7 +1603,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.11, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.13, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
         }
     }
 
@@ -1723,12 +1723,8 @@ definition
                     ELEMENT[id0.7] occurrences matches {0..1} matches {
                         /value[id0.8]/defining_code matches {[ac0.3]}
                     }
-                    ELEMENT[id0.9.1] occurrences matches {0} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
-                        value matches {
-                            DV_BOOLEAN[id0.10.1] matches {
-                                value matches {True, False}
-                            }
-                        }
+                    ELEMENT[id0.9] occurrences matches {0..1} matches {
+                        /value[id0.10]/value matches {True, False}
                     }
                 }
             }
@@ -1771,19 +1767,11 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
-            ["id0.9.1"] = <
-                text = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
-                description = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
-            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
-            >
-            ["id0.9.1"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
             >
         >
     >
