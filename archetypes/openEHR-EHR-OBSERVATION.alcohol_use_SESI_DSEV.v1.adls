@@ -245,32 +245,32 @@ terminology
                 description = <"Doses (en)">
             >
             ["id0.4"] = <
-                text = <"Consumo (en)">
-                description = <"Consumo (en)">
+                text = <"Consumo">
+                description = <"Consumo">
             >
             ["at0.5"] = <
-                text = <"Nenhuma (en)">
-                description = <"Nenhuma (en)">
+                text = <"Nenhuma">
+                description = <"Nenhuma">
             >
             ["at0.6"] = <
-                text = <"1 vez (en)">
-                description = <"1 vez (en)">
+                text = <"1 vez">
+                description = <"1 vez">
             >
             ["at0.7"] = <
-                text = <"2 a 4 vezes (en)">
-                description = <"2 a 4 vezes (en)">
+                text = <"2 a 4 vezes">
+                description = <"2 a 4 vezes">
             >
             ["at0.8"] = <
-                text = <"5 a 8 vezes (en)">
-                description = <"5 a 8 vezes (en)">
+                text = <"5 a 8 vezes">
+                description = <"5 a 8 vezes">
             >
             ["at0.9"] = <
-                text = <"8 a 12 vezes (en)">
-                description = <"8 a 12 vezes (en)">
+                text = <"8 a 12 vezes">
+                description = <"8 a 12 vezes">
             >
             ["at0.10"] = <
-                text = <"Acima de 12 vezes (en)">
-                description = <"Acima de 12 vezes (en)">
+                text = <"Acima de 12 vezes">
+                description = <"Acima de 12 vezes">
             >
             ["ac0.2"] = <
                 text = <"Consumo (en)">
