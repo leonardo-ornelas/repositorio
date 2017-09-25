@@ -60,6 +60,8 @@ definition
             use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-007.v1.0.0]
             use_archetype SECTION[id0.25, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-008.v1.0.0]
             use_archetype SECTION[id0.26, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-009.v1.0.0]
+            use_archetype SECTION[id0.27, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-010.v1.0.0]
+            use_archetype SECTION[id0.28, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-011.v1.0.0]
         }
     }
 
@@ -2073,6 +2075,117 @@ terminology
             ["id1.1"] = <
                 text = <"Health Services Utilization">
                 description = <"Health Services Utilization">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-010.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Medicamentos">
+                description = <"Bloco sobre o uso de medicamentos">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-011.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-caracteristicas_trabalho-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Características do trabalho">
+                description = <"Bloco para registro de características do trabalho">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-caracteristicas_trabalho-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.caracteristicas_trabalho.v1.0.0
+
+definition
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Características trabalho
+        /data[id2]/items matches {
+            ELEMENT[id3] occurrences matches {1} matches {
+                /value[id4]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id5] occurrences matches {1} matches {
+                /value[id6]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id7] occurrences matches {1} matches {
+                /value[id8]/value matches {True, False}
+            }
+            ELEMENT[id9] occurrences matches {1} matches {
+                /value[id10]/value matches {True, False}
+            }
+            ELEMENT[id11] occurrences matches {1} matches {
+                /value[id12]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id13] occurrences matches {0..1} matches {
+                /value[id14]/defining_code matches {[ac3]}
+            }
+            ELEMENT[id15] occurrences matches {0..1} matches {
+                /value[id16]/value matches {True, False}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Características trabalho">
+                description = <"registre informações sobre características trabalho">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"characteristics of work">
+                description = <"characteristics of work">
             >
         >
     >
