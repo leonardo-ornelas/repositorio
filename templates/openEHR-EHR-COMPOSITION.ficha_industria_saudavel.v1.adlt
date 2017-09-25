@@ -2401,7 +2401,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_avaliador-001.v1.0.0]
+            use_archetype ADMIN_ENTRY[id0.4, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_avaliador-001.v1.0.0]
         }
     }
 
@@ -2460,33 +2460,6 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
-    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_avaliador-001.v1.0.0
-
-specialize
-    openEHR-EHR-ADMIN_ENTRY.dados_avaliador.v1.0.0
-
-definition
-    ADMIN_ENTRY[id1.1] occurrences matches {1}     -- Dados do avaliador
-
-terminology
-    term_definitions = <
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Dados do avaliador">
-                description = <"Registre informações sobre os dados do avaliador">
-            >
-        >
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"data_appreciator">
-                description = <"data_appreciator">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
     openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-015.v1.0.0
 
 specialize
@@ -2495,7 +2468,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-saude_bucal-001.v1.0.0]
+            use_archetype EVALUATION[id0.3, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-saude_bucal-001.v1.0.0]
         }
     }
 
@@ -2518,13 +2491,40 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-dados_avaliador-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.dados_avaliador.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1}     -- Dados do avaliador
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dados do avaliador">
+                description = <"Registre informações sobre o avaliador">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"data_appreciator">
+                description = <"data_appreciator">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
     openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-saude_bucal-001.v1.0.0
 
 specialize
     openEHR-EHR-EVALUATION.saude_bucal.v1.0.0
 
 definition
-    EVALUATION[id1.1] occurrences matches {1} matches {    -- Saúde bucal 
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Saúde bucal
         /data[id2]/items matches {
             CLUSTER[id7] occurrences matches {0..1} matches {
                 items matches {
@@ -2655,8 +2655,8 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Saúde bucal ">
-                description = <"Registre informações sobre a saúde bucal do trabalhador">
+                text = <"Saúde bucal">
+                description = <"Registre informações sobre a saúde bucal">
             >
         >
         ["en"] = <
