@@ -3,6 +3,12 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -11,8 +17,16 @@ description
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
         >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
     >
     lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Grupo iHealth">
+        ["organization"] = <"Grupo iHealth">
+        ["email"] = <"contato@ihealthgroup.com.br">
+    >
 
 definition
     EVALUATION[id1] occurrences matches {1} matches {    -- resumo_atividade_fisica
@@ -148,6 +162,68 @@ terminology
             ["id21"] = <
                 text = <"Tempo total gasto com prática de atividades vigorosas por dia">
                 description = <"Tempo total gasto com prática de atividades vigorosas por dia">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"*resumo_atividade_fisica (pt-br)">
+                description = <"*resumo_atividade_fisica (pt-br)">
+            >
+            ["id2"] = <
+                text = <"*ITEM_TREE (pt-br)">
+                description = <"*ITEM_TREE (pt-br)">
+            >
+            ["id3"] = <
+                text = <"*Status da atividade física (pt-br)">
+                description = <"*Status da atividade física (pt-br)">
+            >
+            ["id5"] = <
+                text = <"*Notas (pt-br)">
+                description = <"*Notas (pt-br)">
+            >
+            ["id7"] = <
+                text = <"*Barreiras identificadas (pt-br)">
+                description = <"*Barreiras identificadas (pt-br)">
+            >
+            ["id9"] = <
+                text = <"*Fatores de habilitadores (pt-br)">
+                description = <"*Fatores de habilitadores (pt-br)">
+            >
+            ["id11"] = <
+                text = <"*Exercício moderado por semana (pt-br)">
+                description = <"*Exercício moderado por semana (pt-br)">
+            >
+            ["id13"] = <
+                text = <"*Exercício vigoroso por semana (pt-br)">
+                description = <"*Exercício vigoroso por semana (pt-br)">
+            >
+            ["id15"] = <
+                text = <"*Atividade física praticada fora do trabalho (pt-br)">
+                description = <"*Atividade física praticada fora do trabalho (pt-br)">
+            >
+            ["at1"] = <
+                text = <"*Regular (pt-br)">
+                description = <"*Regular (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Irregular (pt-br)">
+                description = <"*Irregular (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Atividade física praticada fora do trabalho (pt-br)">
+                description = <"*Atividade física praticada fora do trabalho (pt-br)">
+            >
+            ["id17"] = <
+                text = <"*Tempo total gasto com caminhada por dia (pt-br)">
+                description = <"*Tempo total gasto com caminhada por dia (pt-br)">
+            >
+            ["id19"] = <
+                text = <"*Tempo total gasto com prática de atividades moderadas por dia (pt-br)">
+                description = <"*Tempo total gasto com prática de atividades moderadas por dia (pt-br)">
+            >
+            ["id21"] = <
+                text = <"*Tempo total gasto com prática de atividades vigorosas por dia (pt-br)">
+                description = <"*Tempo total gasto com prática de atividades vigorosas por dia (pt-br)">
             >
         >
     >
