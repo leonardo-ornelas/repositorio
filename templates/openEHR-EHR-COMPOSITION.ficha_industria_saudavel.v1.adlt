@@ -2305,7 +2305,9 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-ghq12-001.v1.0.0]
+        }
     }
 
 terminology
@@ -2318,8 +2320,68 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Encabeçamento">
-                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
+                text = <"GHQ 20">
+                description = <"Bloco para registro de informações do GHQ20">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-ghq12-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.ghq12.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- ghq12
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id8] occurrences matches {1} matches {
+                /value[id9]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id10] occurrences matches {1} matches {
+                /value[id11]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id12] occurrences matches {1} matches {
+                /value[id13]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id14] occurrences matches {1} matches {
+                /value[id15]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id16] occurrences matches {1} matches {
+                /value[id17]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id18] occurrences matches {1} matches {
+                /value[id19]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id20] occurrences matches {1} matches {
+                /value[id21]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id22] occurrences matches {1} matches {
+                /value[id23]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id24] occurrences matches {1} matches {
+                /value[id25]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id26] occurrences matches {1} matches {
+                /value[id27]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id28] occurrences matches {1} matches {
+                /value[id29]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"ghq12">
+                description = <"ghq12">
             >
         >
     >
