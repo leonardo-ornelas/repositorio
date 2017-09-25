@@ -4974,6 +4974,26 @@ specialize
 definition
     EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
         /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Physical activity status
+                value matches {
+                    DV_TEXT[id10.0.1] 
+                }
+            }
+            ELEMENT[id4.0.1] occurrences matches {0} matches {    -- Physical activity note
+                value matches {
+                    DV_TEXT[id11.0.1] 
+                }
+            }
+            ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Barriers to activity
+                value matches {
+                    DV_TEXT[id12.0.1] 
+                }
+            }
+            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Enabling factors
+                value matches {
+                    DV_TEXT[id13.0.1] 
+                }
+            }
             ELEMENT[id9] occurrences matches {1} matches {
                 /value[id14]/magnitude matches {|>0..<7|}
             }
@@ -4999,11 +5019,43 @@ terminology
                 text = <"Physical Activity Summary">
                 description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
+            ["id3.0.1"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id4.0.1"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id7.0.1"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Atividade Física">
                 description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
+            >
+            ["id3.0.1"] = <
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["id4.0.1"] = <
+                text = <"Nota sobre a atividade física">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barreiras identificadas para a atividade">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
+            >
+            ["id7.0.1"] = <
+                text = <"Fatores habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
         >
     >
