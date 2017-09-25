@@ -86,8 +86,9 @@ definition
             }
             ELEMENT[id0.14] occurrences matches {0..1} matches {    -- Total time spent doing moderate activities per day.
                 value matches {
-                    DV_TIME[id0.15] matches {
+                    DV_DATE[id0.15] matches {
                         value
+                        value matches {*}
                     }
                 }
             }
@@ -100,8 +101,9 @@ definition
             }
             ELEMENT[id0.18] occurrences matches {0..1} matches {    -- Total time performing vigorous activities per day
                 value matches {
-                    DV_TIME[id0.20] matches {
+                    DV_DATE[id0.20] matches {
                         value
+                        value matches {*}
                     }
                 }
             }
