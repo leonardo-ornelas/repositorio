@@ -219,24 +219,24 @@ terminology
         >
         ["en"] = <
             ["id1"] = <
-                text = <"*Uso de alcool (pt-br)">
-                description = <"*Uso de alcool (pt-br)">
+                text = <"Uso de alcool">
+                description = <"Uso de alcool">
             >
             ["id3"] = <
-                text = <"*Any event (pt-br)">
-                description = <"*Any event (pt-br)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
-                text = <"*Doses (pt-br)">
-                description = <"*Doses (pt-br)">
+                text = <"Doses">
+                description = <"Doses">
             >
             ["id7"] = <
-                text = <"*Consumo (pt-br)">
-                description = <"*Consumo (pt-br)">
+                text = <"Consumo">
+                description = <"Consumo">
             >
             ["id8"] = <
-                text = <"*Tipo (pt-br)">
-                description = <"*Tipo (pt-br)">
+                text = <"Tipo">
+                description = <"Tipo">
             >
             ["at1"] = <
                 text = <"*Nenhuma (pt-br)">
@@ -323,20 +323,20 @@ terminology
                 description = <"*Tipo (pt-br)">
             >
             ["id13"] = <
-                text = <"*Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber. (pt-br)">
-                description = <"*Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber. (pt-br)">
+                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
+                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
             >
             ["id15"] = <
-                text = <"*As pessoas o(a) aborrecem porque criticam o modo de beber (pt-br)">
-                description = <"*As pessoas o(a) aborrecem porque criticam o modo de beber (pt-br)">
+                text = <"As pessoas o(a) aborrecem porque criticam o modo de beber">
+                description = <"As pessoas o(a) aborrecem porque criticam o modo de beber">
             >
             ["id17"] = <
-                text = <"*Costuma beber pela manhã para diminuir o nervosismo ou ressaca. (pt-br)">
-                description = <"*Costuma beber pela manhã para diminuir o nervosismo ou ressaca. (pt-br)">
+                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
+                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
             >
             ["id19"] = <
-                text = <"*Sente-se culpado pela maneira como costuma beber. (pt-br)">
-                description = <"*Sente-se culpado pela maneira como costuma beber. (pt-br)">
+                text = <"Sente-se culpado pela maneira como costuma beber.">
+                description = <"Sente-se culpado pela maneira como costuma beber.">
             >
         >
     >
