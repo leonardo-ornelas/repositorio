@@ -1603,7 +1603,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.9, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
+            use_archetype OBSERVATION[id0.11, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
         }
     }
 
@@ -1693,97 +1693,47 @@ definition
     OBSERVATION[id1.1.1] matches {    -- Alcohol Use
         /data[id2]/events matches {
             EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items matches {
-                    CLUSTER[id6] matches {
-                        items matches {
-                            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Form
+                /data[id4]/items[id6]/items matches {
+                    CLUSTER[id16] occurrences matches {0..1} matches {
+                        items cardinality matches {1; unordered} matches {
+                            ELEMENT[id15] occurrences matches {0..1} matches {
                                 value matches {
-                                    DV_TEXT[id29.0.1] 
-                                }
-                            }
-                            CLUSTER[id16] occurrences matches {0..1} matches {
-                                items cardinality matches {1; unordered} matches {
-                                    ELEMENT[id15.0.1] occurrences matches {0} matches {    -- Standard Drinks
-                                        value matches {
-                                            DV_QUANTITY[id30.0.1] matches {
-                                                property matches {[at1]}
-                                                units matches {"/h", "/d", "/wk", "/mo"}
-                                            }
-                                        }
-                                    }
-                                    ELEMENT[id17.0.1] occurrences matches {0} matches {    -- Grams Consumed
-                                        value matches {
-                                            DV_QUANTITY[id31.0.1] matches {
-                                                property matches {[at2]}
-                                                units matches {"gm/d", "gm/wk"}
-                                            }
-                                        }
+                                    DV_QUANTITY[id30] matches {
+                                        property matches {[at1]}
+                                        units matches {"/h", "/d", "/wk", "/mo"}
                                     }
                                 }
                             }
-                            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Triggers
+                            ELEMENT[id17] occurrences matches {0..1} matches {
                                 value matches {
-                                    DV_TEXT[id32.0.1] 
-                                }
-                            }
-                            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Context
-                                value matches {
-                                    DV_TEXT[id33.0.1] 
-                                }
-                            }
-                            ELEMENT[id0.2] occurrences matches {0..1} matches {
-                                /value[id0.3]/defining_code matches {[ac0.1]}
-                            }
-                            ELEMENT[id0.5] occurrences matches {0..1} matches {
-                                /value[id0.6]/defining_code matches {[ac0.2]}
-                            }
-                            ELEMENT[id0.7] occurrences matches {0..1} matches {
-                                /value[id0.8]/defining_code matches {[ac0.3]}
-                            }
-                            ELEMENT[id0.9] occurrences matches {1} matches {
-                                /value[id0.10]/value matches {True, False}
-                            }
-                            ELEMENT[id0.11.1] occurrences matches {0} matches {    -- How people annoy you by your way of drinking
-                                value matches {
-                                    DV_BOOLEAN[id0.12.1] matches {
-                                        value matches {True, False}
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
                                     }
                                 }
-                            }
-                            ELEMENT[id0.13.1] occurrences matches {0} matches {    -- Usually drinks in the morning to lessen the nervousness or hangover.
-                                value matches {
-                                    DV_BOOLEAN[id0.14.1] matches {
-                                        value matches {True, False}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.15] occurrences matches {1} matches {
-                                /value[id0.16]/value matches {True, False}
                             }
                         }
                     }
-                    ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Behavioural Issues
-                        value matches {
-                            DV_TEXT[id34.0.1] 
-                        }
+                    ELEMENT[id0.2] occurrences matches {0..1} matches {
+                        /value[id0.3]/defining_code matches {[ac0.1]}
                     }
-                    allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    ELEMENT[id0.5] occurrences matches {0..1} matches {
+                        /value[id0.6]/defining_code matches {[ac0.2]}
                     }
-                    ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Comment
-                        value matches {
-                            DV_TEXT[id35.0.1] 
-                        }
+                    ELEMENT[id0.7] occurrences matches {0..1} matches {
+                        /value[id0.8]/defining_code matches {[ac0.3]}
+                    }
+                    ELEMENT[id0.9] occurrences matches {1} matches {
+                        /value[id0.10]/value matches {True, False}
                     }
                 }
             }
-            POINT_EVENT[id24.0.1] occurrences matches {0} matches {    -- Specified Day
+            POINT_EVENT[id24] matches {
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
                 }
             }
-            INTERVAL_EVENT[id23.0.1] occurrences matches {0} matches {    -- Average Consumption Interval
+            INTERVAL_EVENT[id23] matches {
                 /math_function[id37]/defining_code matches {[at3]}
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
@@ -1817,99 +1767,11 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
-            ["id19.0.1"] = <
-                text = <"Context">
-                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
-            >
-            ["id18.0.1"] = <
-                text = <"Triggers">
-                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
-            >
-            ["id17.0.1"] = <
-                text = <"Grams Consumed">
-                description = <"Grams of alcohol consumed.">
-            >
-            ["id15.0.1"] = <
-                text = <"Standard Drinks">
-                description = <"Number of standard drinks of alcohol consumed.">
-            >
-            ["id7.0.1"] = <
-                text = <"Form">
-                description = <"Form of alcohol consumed.">
-            >
-            ["id20.0.1"] = <
-                text = <"Behavioural Issues">
-                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
-            >
-            ["id22.0.1"] = <
-                text = <"Comment">
-                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
-            >
-            ["id24.0.1"] = <
-                text = <"Specified Day">
-                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
-            >
-            ["id23.0.1"] = <
-                text = <"Average Consumption Interval">
-                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
-            >
-            ["id0.11.1"] = <
-                text = <"How people annoy you by your way of drinking">
-                description = <"How people annoy you by your way of drinking">
-            >
-            ["id0.13.1"] = <
-                text = <"Usually drinks in the morning to lessen the nervousness or hangover.">
-                description = <"Usually drinks in the morning to lessen the nervousness or hangover.">
-            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
-            >
-            ["id19.0.1"] = <
-                text = <"Contexto">
-                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
-            >
-            ["id18.0.1"] = <
-                text = <"Gatilhos">
-                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
-            >
-            ["id17.0.1"] = <
-                text = <"Consumo em gramas">
-                description = <"Consumo de álcool em gramas">
-            >
-            ["id15.0.1"] = <
-                text = <"Dose padrão">
-                description = <"Número de doses padrão de álcool consumido">
-            >
-            ["id7.0.1"] = <
-                text = <"Forma">
-                description = <"Forma de consumo de álcool">
-            >
-            ["id20.0.1"] = <
-                text = <"Problemas comportamentais">
-                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
-            >
-            ["id22.0.1"] = <
-                text = <"Comentário">
-                description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
-            >
-            ["id24.0.1"] = <
-                text = <"Dia específico">
-                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
-            >
-            ["id23.0.1"] = <
-                text = <"Intervalo médio consumido">
-                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
-            >
-            ["id0.11.1"] = <
-                text = <"As pessoas o(a) aborrecem por seu modo de beber">
-                description = <"As pessoas o(a) aborrecem por seu modo de beber">
-            >
-            ["id0.13.1"] = <
-                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
-                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
             >
         >
     >
