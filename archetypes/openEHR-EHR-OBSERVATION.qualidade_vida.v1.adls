@@ -314,24 +314,24 @@ terminology
                 description = <"Classificação da saúde do trabalhador">
             >
             ["at1"] = <
-                text = <"*Excelente (pt-br)">
-                description = <"*Excelente (pt-br)">
+                text = <"Excelente">
+                description = <"Excelente">
             >
             ["at2"] = <
-                text = <"*Muito boa (pt-br)">
-                description = <"*Muito boa (pt-br)">
+                text = <"Muito boa">
+                description = <"Muito boa">
             >
             ["at3"] = <
-                text = <"*Boa (pt-br)">
-                description = <"*Boa (pt-br)">
+                text = <"Boa">
+                description = <"Boa">
             >
             ["at4"] = <
-                text = <"*Ruim (pt-br)">
-                description = <"*Ruim (pt-br)">
+                text = <"Ruim">
+                description = <"Ruim">
             >
             ["at5"] = <
-                text = <"*Muito ruim (pt-br)">
-                description = <"*Muito ruim (pt-br)">
+                text = <"Muito ruim">
+                description = <"Muito ruim">
             >
             ["ac1"] = <
                 text = <"*Qualidade de vida (pt-br)">
@@ -346,16 +346,16 @@ terminology
                 description = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
             >
             ["at6"] = <
-                text = <"*SIM Dificulta muito (pt-br)">
-                description = <"*SIM Dificulta muito (pt-br)">
+                text = <"SIM Dificulta muito">
+                description = <"SIM Dificulta muito">
             >
             ["at7"] = <
-                text = <"*SIM Dificulta um pouco (pt-br)">
-                description = <"*SIM Dificulta um pouco (pt-br)">
+                text = <"SIM Dificulta um pouco">
+                description = <"SIM Dificulta um pouco">
             >
             ["at8"] = <
-                text = <"*NÃO Não dificulta de modo algum (pt-br)">
-                description = <"*NÃO Não dificulta de modo algum (pt-br)">
+                text = <"NÃO Não dificulta de modo algum">
+                description = <"NÃO Não dificulta de modo algum">
             >
             ["ac2"] = <
                 text = <"*Dificuldade na execução de atividades (pt-br)">
@@ -374,24 +374,24 @@ terminology
                 description = <"Realizou menos tarefas do que gostaria">
             >
             ["at9"] = <
-                text = <"*Todo tempo (pt-br)">
-                description = <"*Todo tempo (pt-br)">
+                text = <"Todo tempo">
+                description = <"Todo tempo">
             >
             ["at10"] = <
-                text = <"*A maior parte do tempo (pt-br)">
-                description = <"*A maior parte do tempo (pt-br)">
+                text = <"A maior parte do tempo">
+                description = <"A maior parte do tempo">
             >
             ["at11"] = <
-                text = <"*Alguma parte do tempo (pt-br)">
-                description = <"*Alguma parte do tempo (pt-br)">
+                text = <"Alguma parte do tempo">
+                description = <"Alguma parte do tempo">
             >
             ["at12"] = <
-                text = <"*Uma pequena parte do tempo (pt-br)">
-                description = <"*Uma pequena parte do tempo (pt-br)">
+                text = <"Uma pequena parte do tempo">
+                description = <"Uma pequena parte do tempo">
             >
             ["at13"] = <
-                text = <"*Nunca (pt-br)">
-                description = <"*Nunca (pt-br)">
+                text = <"Nunca">
+                description = <"Nunca">
             >
             ["ac3"] = <
                 text = <"*Tarefas (pt-br)">
@@ -402,24 +402,24 @@ terminology
                 description = <"Quantas vezes a dor interferiu no trabalho">
             >
             ["at14"] = <
-                text = <"*De maneira nenhuma (pt-br)">
-                description = <"*De maneira nenhuma (pt-br)">
+                text = <"De maneira nenhuma">
+                description = <"De maneira nenhuma">
             >
             ["at15"] = <
-                text = <"*Um pouco (pt-br)">
-                description = <"*Um pouco (pt-br)">
+                text = <"Um pouco">
+                description = <"Um pouco">
             >
             ["at16"] = <
-                text = <"*Moderadamente (pt-br)">
-                description = <"*Moderadamente (pt-br)">
+                text = <"Moderadamente">
+                description = <"Moderadamente">
             >
             ["at17"] = <
-                text = <"*Bastante (pt-br)">
-                description = <"*Bastante (pt-br)">
+                text = <"Bastante">
+                description = <"Bastante">
             >
             ["at18"] = <
-                text = <"*Extremamente (pt-br)">
-                description = <"*Extremamente (pt-br)">
+                text = <"Extremamente">
+                description = <"Extremamente">
             >
             ["ac4"] = <
                 text = <"*Interferiu no trabalho (pt-br)">
