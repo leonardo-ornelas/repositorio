@@ -46,7 +46,30 @@ description
     other_contributors = <"Stephen Chu, NEHTA, Australia">
 
 definition
-    EVALUATION[id1.1]     -- Physical Activity Summary
+    EVALUATION[id1.1] matches {    -- Physical Activity Summary
+        /data[id2]/items matches {
+            ELEMENT[id9] occurrences matches {0..1} matches {    -- How many days / week are moderate physical activities performed
+                /value[id14]/magnitude matches {|>0..<7|}
+            }
+            ELEMENT[id8] occurrences matches {0..1} matches {    -- How many days / week are vigorous physical activities performed
+                /value[id15]/magnitude matches {|>0..<7|}
+            }
+            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- How many days / week are walks carried out for at least 10 continuous minutes.
+                value matches {
+                    DV_COUNT[id0.3] matches {
+                        magnitude matches {|>0..<7|}
+                    }
+                }
+            }
+            ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Total time spent on walking / day
+                value matches {
+                    DV_TIME[id0.5] matches {
+                        value matches {*}
+                    }
+                }
+            }
+        }
+    }
 
 terminology
     term_definitions = <
@@ -72,16 +95,24 @@ terminology
                 description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
             >
             ["id8"] = <
-                text = <"Vigorous exercise/week">
-                description = <"Number of times per week of 20 min vigorous exercise.">
+                text = <"How many days / week are vigorous physical activities performed">
+                description = <"How many days / week, VIGOROUS activities are performed for at least 10 continuous minutes or any activity that has greatly increased breathing or heartbeat.">
             >
             ["id9"] = <
-                text = <"Moderate exercise/week">
-                description = <"Number of times per week of 30 min moderate exercise.">
+                text = <"How many days / week are moderate physical activities performed">
+                description = <"How many days / week are MODERATE activities performed for at least 10 continuous minutes or any activity that did moderate increase in your breathing or heartbeat (PLEASE DO NOT INCLUDE HIKING)">
             >
             ["id1.1"] = <
                 text = <"Physical Activity Summary">
                 description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id0.2"] = <
+                text = <"How many days / week are walks carried out for at least 10 continuous minutes.">
+                description = <"How many days / week are walks carried out for at least 10 continuous minutes at home or at work, as a form of transportation to go from place to place, for leisure, for pleasure or as a form of exercise.">
+            >
+            ["id0.4"] = <
+                text = <"Total time spent on walking / day">
+                description = <"On days when walks were taken for at least 10 continuous minutes, how much time in total was spent walking / day.">
             >
         >
         ["pt-br"] = <
@@ -106,16 +137,24 @@ terminology
                 description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
             >
             ["id8"] = <
-                text = <"Exercício vigoroso / semana">
-                description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
+                text = <"Quantos dias / semana são realizadas atividades físicas vigorosas">
+                description = <"Quantos dias / semana, são realizadas atividades VIGOROSAS por pelo menos 10 minutos contínuos ou qualquer atividade que fez aumentar muito a respiração ou batimentos do coração.">
             >
             ["id9"] = <
-                text = <"Exercício moderado / semana">
-                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
+                text = <"Quantos dias / semana são realizadas atividades físicas moderadas">
+                description = <"Quantos dias / semana são realizadas atividades MODERADAS por pelo menos 10 minutos contínuos ou qualquer atividade que fez aumentar moderadamente sua respiração ou batimentos do coração (POR FAVOR NÃO INCLUIR CAMINHADA)">
             >
             ["id1.1"] = <
                 text = <"Resumo da Atividade Física">
                 description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
+            >
+            ["id0.2"] = <
+                text = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos contínuos">
+                description = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos contínuos em casa ou no trabalho, como forma de transporte para ir de um lugar para outro, por lazer, por prazer ou como forma de exercício.">
+            >
+            ["id0.4"] = <
+                text = <"Tempo total gasto com caminhada / dia">
+                description = <"Nos dias em que foram realizadas caminhadas por pelo menos 10 minutos contínuos, quanto tempo no total, foi gasto caminhando / dia.">
             >
         >
     >
