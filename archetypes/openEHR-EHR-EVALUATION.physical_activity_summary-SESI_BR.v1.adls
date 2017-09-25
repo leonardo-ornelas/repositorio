@@ -413,6 +413,90 @@ terminology
                 text = <"7 dias">
                 description = <"7 dias">
             >
+            ["at0.52"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at0.53"] = <
+                text = <"1 dia">
+                description = <"1 dia">
+            >
+            ["at0.54"] = <
+                text = <"2 dias">
+                description = <"2 dias">
+            >
+            ["at0.55"] = <
+                text = <"3 dias">
+                description = <"3 dias">
+            >
+            ["at0.56"] = <
+                text = <"4 dias">
+                description = <"4 dias">
+            >
+            ["at0.57"] = <
+                text = <"5 dias">
+                description = <"5 dias">
+            >
+            ["at0.58"] = <
+                text = <"6 dias">
+                description = <"6 dias">
+            >
+            ["at0.59"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
+            ["at0.60"] = <
+                text = <"Não pratica atividade física">
+                description = <"Não pratica atividade física">
+            >
+            ["at0.61"] = <
+                text = <"Caminhada">
+                description = <"Caminhada">
+            >
+            ["at0.62"] = <
+                text = <"Esportes">
+                description = <"Esportes">
+            >
+            ["at0.63"] = <
+                text = <"Ciclismo">
+                description = <"Ciclismo">
+            >
+            ["at0.64"] = <
+                text = <"Corrida">
+                description = <"Corrida">
+            >
+            ["at0.65"] = <
+                text = <"Natação / Hidroginástica">
+                description = <"Natação / Hidroginástica">
+            >
+            ["at0.66"] = <
+                text = <"Ginástica">
+                description = <"Ginástica">
+            >
+            ["at0.67"] = <
+                text = <"Musculação">
+                description = <"Musculação">
+            >
+            ["at0.68"] = <
+                text = <"Dança">
+                description = <"Dança">
+            >
+            ["at0.69"] = <
+                text = <"Esportes de aventura">
+                description = <"Esportes de aventura">
+            >
+            ["at0.70"] = <
+                text = <"Alongamento">
+                description = <"Alongamento">
+            >
+            ["at0.71"] = <
+                text = <"Artes marciais / Lutas">
+                description = <"Artes marciais / Lutas">
+            >
+            ["at0.72"] = <
+                text = <"Outras atividades físicas">
+                description = <"Outras atividades físicas">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -711,6 +795,90 @@ terminology
                 text = <"7 dias (en)">
                 description = <"7 dias (en)">
             >
+            ["at0.52"] = <
+                text = <"Nenhum (en)">
+                description = <"Nenhum (en)">
+            >
+            ["at0.53"] = <
+                text = <"1 dia (en)">
+                description = <"1 dia (en)">
+            >
+            ["at0.54"] = <
+                text = <"2 dias (en)">
+                description = <"2 dias (en)">
+            >
+            ["at0.55"] = <
+                text = <"3 dias (en)">
+                description = <"3 dias (en)">
+            >
+            ["at0.56"] = <
+                text = <"4 dias (en)">
+                description = <"4 dias (en)">
+            >
+            ["at0.57"] = <
+                text = <"5 dias (en)">
+                description = <"5 dias (en)">
+            >
+            ["at0.58"] = <
+                text = <"6 dias (en)">
+                description = <"6 dias (en)">
+            >
+            ["at0.59"] = <
+                text = <"7 dias (en)">
+                description = <"7 dias (en)">
+            >
+            ["at0.60"] = <
+                text = <"Não pratica atividade física (en)">
+                description = <"Não pratica atividade física (en)">
+            >
+            ["at0.61"] = <
+                text = <"Caminhada (en)">
+                description = <"Caminhada (en)">
+            >
+            ["at0.62"] = <
+                text = <"Esportes (en)">
+                description = <"Esportes (en)">
+            >
+            ["at0.63"] = <
+                text = <"Ciclismo (en)">
+                description = <"Ciclismo (en)">
+            >
+            ["at0.64"] = <
+                text = <"Corrida (en)">
+                description = <"Corrida (en)">
+            >
+            ["at0.65"] = <
+                text = <"Natação / Hidroginástica (en)">
+                description = <"Natação / Hidroginástica (en)">
+            >
+            ["at0.66"] = <
+                text = <"Ginástica (en)">
+                description = <"Ginástica (en)">
+            >
+            ["at0.67"] = <
+                text = <"Musculação (en)">
+                description = <"Musculação (en)">
+            >
+            ["at0.68"] = <
+                text = <"Dança (en)">
+                description = <"Dança (en)">
+            >
+            ["at0.69"] = <
+                text = <"Esportes de aventura (en)">
+                description = <"Esportes de aventura (en)">
+            >
+            ["at0.70"] = <
+                text = <"Alongamento (en)">
+                description = <"Alongamento (en)">
+            >
+            ["at0.71"] = <
+                text = <"Artes marciais / Lutas (en)">
+                description = <"Artes marciais / Lutas (en)">
+            >
+            ["at0.72"] = <
+                text = <"Outras atividades físicas (en)">
+                description = <"Outras atividades físicas (en)">
+            >
         >
     >
     value_sets = <
@@ -732,11 +900,11 @@ terminology
         >
         ["ac0.5"] = <
             id = <"ac0.5">
-            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+            members = <"at0.52", "at0.53", "at0.54", "at0.55", "at0.56", "at0.57", "at0.58", "at0.59">
         >
         ["ac0.6"] = <
             id = <"ac0.6">
-            members = <"at0.16", "at0.17", "at0.18", "at0.19", "at0.20", "at0.21", "at0.22", "at0.23", "at0.24", "at0.25", "at0.26", "at0.27", "at0.28", "at0.29">
+            members = <"at0.60", "at0.61", "at0.62", "at0.63", "at0.64", "at0.65", "at0.66", "at0.67", "at0.68", "at0.69", "at0.70", "at0.71", "at0.72">
         >
     >
 
