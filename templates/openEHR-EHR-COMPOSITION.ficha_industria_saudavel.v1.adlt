@@ -1714,7 +1714,7 @@ specialize
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
         items matches {
-            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_use_SESI_DSEV-001.v1.0.0]
+            use_archetype OBSERVATION[id0.4, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_use_SESI_DSEV-001.v1.0.0]
         }
     }
 
