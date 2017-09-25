@@ -110,13 +110,6 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
-                                value matches {
-                                    DV_BOOLEAN[id0.10] matches {
-                                        value matches {True, False}
-                                    }
-                                }
-                            }
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
@@ -256,10 +249,6 @@ terminology
                 text = <"Tipo">
                 description = <"Tipo">
             >
-            ["id0.9"] = <
-                text = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
-                description = <"Have you ever felt that you should decrease a quantity of drink or stop drinking.">
-            >
             ["at2"] = <
                 text = <"Fluxo, massa">
                 description = <"Fluxo, massa">
@@ -373,10 +362,6 @@ terminology
             ["ac0.3"] = <
                 text = <"Tipo (en)">
                 description = <"Tipo (en)">
-            >
-            ["id0.9"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
             >
             ["at2"] = <
                 text = <"Fluxo, massa">
