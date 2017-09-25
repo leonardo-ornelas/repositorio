@@ -111,8 +111,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Physical Activity Summary (en)">
-                description = <"*A record of the level of physical activity undertaken by the individual as assessed by a clinician. (en)">
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
             >
             ["id3"] = <
                 text = <"*Physical activity status (en)">
