@@ -68,20 +68,31 @@ definition
             EVENT[id3] occurrences matches {0..1} matches {
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {
-                        /items[id16]/items matches {
-                            ELEMENT[id15] occurrences matches {0..1} matches {
-                                value matches {
-                                    DV_QUANTITY[id30] matches {
-                                        property matches {[at1]}
-                                        units matches {"/h", "/d", "/wk", "/mo"}
+                        items matches {
+                            CLUSTER[id16] occurrences matches {0..1} matches {
+                                items cardinality matches {1; unordered} matches {
+                                    ELEMENT[id15] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_QUANTITY[id30] matches {
+                                                property matches {[at1]}
+                                                units matches {"/h", "/d", "/wk", "/mo"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {
+                                        value matches {
+                                            DV_QUANTITY[id31] matches {
+                                                property matches {[at2]}
+                                                units matches {"gm/d", "gm/wk"}
+                                            }
+                                        }
                                     }
                                 }
                             }
-                            ELEMENT[id17] occurrences matches {0..1} matches {
+                            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Doses
                                 value matches {
-                                    DV_QUANTITY[id31] matches {
-                                        property matches {[at2]}
-                                        units matches {"gm/d", "gm/wk"}
+                                    DV_CODED_TEXT[id0.3] matches {
+                                        defining_code matches {[ac0.1]}
                                     }
                                 }
                             }
@@ -132,12 +143,66 @@ terminology
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
             >
+            ["id0.2"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
+            ["at0.1"] = <
+                text = <"Nenhuma, eu não bebo">
+                description = <"Nenhuma, eu não bebo">
+            >
+            ["at0.2"] = <
+                text = <"1 a 7 doses">
+                description = <"1 a 7 doses">
+            >
+            ["at0.3"] = <
+                text = <"8 a 14 doses">
+                description = <"8 a 14 doses">
+            >
+            ["at0.4"] = <
+                text = <"15 ou mais doses">
+                description = <"15 ou mais doses">
+            >
+            ["ac0.1"] = <
+                text = <"Doses">
+                description = <"Doses">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
+            ["id0.2"] = <
+                text = <"Doses (en)">
+                description = <"Doses (en)">
+            >
+            ["at0.1"] = <
+                text = <"Nenhuma, eu não bebo (en)">
+                description = <"Nenhuma, eu não bebo (en)">
+            >
+            ["at0.2"] = <
+                text = <"1 a 7 doses (en)">
+                description = <"1 a 7 doses (en)">
+            >
+            ["at0.3"] = <
+                text = <"8 a 14 doses (en)">
+                description = <"8 a 14 doses (en)">
+            >
+            ["at0.4"] = <
+                text = <"15 ou mais doses (en)">
+                description = <"15 ou mais doses (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Doses (en)">
+                description = <"Doses (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4">
         >
     >
 
