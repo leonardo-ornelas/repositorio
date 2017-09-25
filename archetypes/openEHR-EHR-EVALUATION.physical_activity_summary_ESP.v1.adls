@@ -68,6 +68,20 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- Total time spent on moderate activity practices / day
+                value matches {
+                    DV_TIME[id0.7] matches {
+                        value matches {*}
+                    }
+                }
+            }
+            ELEMENT[id0.8] occurrences matches {0..1} matches {    -- Total time spent practicing vigorous activities / day
+                value matches {
+                    DV_TIME[id0.9] matches {
+                        value matches {*}
+                    }
+                }
+            }
         }
     }
 
@@ -114,6 +128,14 @@ terminology
                 text = <"Total time spent on walking / day">
                 description = <"On days when walks were taken for at least 10 continuous minutes, how much time in total was spent walking / day.">
             >
+            ["id0.6"] = <
+                text = <"Total time spent on moderate activity practices / day">
+                description = <"On days when moderate activities are performed for at least 10 continuous minutes, how much time in total is spent doing these activities per day.">
+            >
+            ["id0.8"] = <
+                text = <"Total time spent practicing vigorous activities / day">
+                description = <"On days when vigorous activities are performed for at least 10 continuous minutes, how much time in total, you spend doing these activities per day.">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -155,6 +177,14 @@ terminology
             ["id0.4"] = <
                 text = <"Tempo total gasto com caminhada / dia">
                 description = <"Nos dias em que foram realizadas caminhadas por pelo menos 10 minutos contínuos, quanto tempo no total, foi gasto caminhando / dia.">
+            >
+            ["id0.6"] = <
+                text = <"Tempo total gasto com a práticas de atividades moderadas / dia">
+                description = <"Nos dias em que são realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total gasta-se fazendo essas atividades por dia.">
+            >
+            ["id0.8"] = <
+                text = <"Tempo total gasto com a prática de atividades vigorosas / dia">
+                description = <"Nos dias em que são realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total, gasta-se fazendo essas atividades por dia.">
             >
         >
     >
