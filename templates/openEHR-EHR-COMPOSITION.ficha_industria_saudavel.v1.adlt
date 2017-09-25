@@ -63,6 +63,7 @@ definition
             use_archetype SECTION[id0.27, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-010.v1.0.0]
             use_archetype SECTION[id0.28, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-011.v1.0.0]
             use_archetype SECTION[id0.29, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-012.v1.0.0]
+            use_archetype SECTION[id0.30, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-013.v1.0.0]
         }
     }
 
@@ -2290,6 +2291,35 @@ terminology
             ["id1.1"] = <
                 text = <"Qualidade vida">
                 description = <"Registre dados sobre qualidade de vida">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-013.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Encabeçamento">
+                description = <"Um título genérico para renomeação contextual dentro de um modelo.">
             >
         >
     >
