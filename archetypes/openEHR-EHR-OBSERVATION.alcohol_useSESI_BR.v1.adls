@@ -110,28 +110,28 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber
+                            ELEMENT[id0.9] occurrences matches {1} matches {    -- Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber
                                 value matches {
                                     DV_BOOLEAN[id0.10] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- As pessoas o(a) aborrecem por seu modo de beber
+                            ELEMENT[id0.11] occurrences matches {1} matches {    -- As pessoas o(a) aborrecem por seu modo de beber
                                 value matches {
                                     DV_BOOLEAN[id0.12] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Costuma beber pela manhã para diminuir o nervosismo ou ressaca
+                            ELEMENT[id0.13] occurrences matches {1} matches {    -- Costuma beber pela manhã para diminuir o nervosismo ou ressaca
                                 value matches {
                                     DV_BOOLEAN[id0.14] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Sente culpado pela maneira como costuma beber
+                            ELEMENT[id0.15] occurrences matches {1} matches {    -- Sente culpado pela maneira como costuma beber
                                 value matches {
                                     DV_BOOLEAN[id0.16] matches {
                                         value matches {True, False}
