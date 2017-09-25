@@ -1602,9 +1602,7 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0]
-        }
+        items
     }
 
 terminology
@@ -1677,110 +1675,6 @@ terminology
             ["id1.1"] = <
                 text = <"Diabetes ">
                 description = <"Bloco para registro de dados de diabetes ">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-alcohol_useSESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.alcohol_useSESI_BR.v1.0.0
-
-definition
-    OBSERVATION[id1.1.1] matches {    -- Alcohol Use
-        /data[id2]/events matches {
-            EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items[id6]/items matches {
-                    CLUSTER[id16] occurrences matches {0..1} matches {
-                        items cardinality matches {1; unordered} matches {
-                            ELEMENT[id15] occurrences matches {0..1} matches {
-                                value matches {
-                                    DV_QUANTITY[id30] matches {
-                                        property matches {[at1]}
-                                        units matches {"/h", "/d", "/wk", "/mo"}
-                                    }
-                                }
-                            }
-                            ELEMENT[id17] occurrences matches {0..1} matches {
-                                value matches {
-                                    DV_QUANTITY[id31] matches {
-                                        property matches {[at2]}
-                                        units matches {"gm/d", "gm/wk"}
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    ELEMENT[id0.2] occurrences matches {0..1} matches {
-                        /value[id0.3]/defining_code matches {[ac0.1]}
-                    }
-                    ELEMENT[id0.5] occurrences matches {0..1} matches {
-                        /value[id0.6]/defining_code matches {[ac0.2]}
-                    }
-                    ELEMENT[id0.7] occurrences matches {0..1} matches {
-                        /value[id0.8]/defining_code matches {[ac0.3]}
-                    }
-                    ELEMENT[id0.9] occurrences matches {0..1} matches {
-                        /value[id0.10]/value matches {True, False}
-                    }
-                    ELEMENT[id0.11] occurrences matches {0..1} matches {
-                        /value[id0.12]/value matches {True, False}
-                    }
-                    ELEMENT[id0.13] occurrences matches {0..1} matches {
-                        /value[id0.14]/value matches {True, False}
-                    }
-                    ELEMENT[id0.15] occurrences matches {0..1} matches {
-                        /value[id0.16]/value matches {True, False}
-                    }
-                }
-            }
-            POINT_EVENT[id24] matches {
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-            INTERVAL_EVENT[id23] matches {
-                /math_function[id37]/defining_code matches {[at3]}
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-        }
-        /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id39] matches {
-                        property matches {[at4]}
-                        units matches {"gm"}
-                    }
-                }
-            }
-            ELEMENT[id27] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id40] matches {
-                        property matches {[at1]}
-                        units matches {"/d", "/wk", "/mo"}
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Alcohol Use">
-                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Uso de álcool">
-                description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
         >
     >
