@@ -139,6 +139,10 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
+            ["at2"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
             ["id1.1"] = <
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
@@ -169,29 +173,33 @@ terminology
             >
         >
         ["pt-br"] = <
+            ["at2"] = <
+                text = <"Fluxo, massa">
+                description = <"Fluxo, massa">
+            >
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
             >
             ["id0.2"] = <
-                text = <"Doses (en)">
-                description = <"Doses (en)">
+                text = <"Doses">
+                description = <"Doses">
             >
             ["at0.1"] = <
-                text = <"Nenhuma, eu não bebo (en)">
-                description = <"Nenhuma, eu não bebo (en)">
+                text = <"Nenhuma, eu não bebo">
+                description = <"Nenhuma, eu não bebo">
             >
             ["at0.2"] = <
-                text = <"1 a 7 doses (en)">
-                description = <"1 a 7 doses (en)">
+                text = <"1 a 7 doses">
+                description = <"1 a 7 doses">
             >
             ["at0.3"] = <
-                text = <"8 a 14 doses (en)">
-                description = <"8 a 14 doses (en)">
+                text = <"8 a 14 doses">
+                description = <"8 a 14 doses">
             >
             ["at0.4"] = <
-                text = <"15 ou mais doses (en)">
-                description = <"15 ou mais doses (en)">
+                text = <"15 ou mais doses">
+                description = <"15 ou mais doses">
             >
             ["ac0.1"] = <
                 text = <"Doses (en)">
