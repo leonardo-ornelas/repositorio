@@ -71,8 +71,9 @@ definition
             }
             ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Total time walked a day
                 value matches {
-                    DV_TIME[id0.11] matches {
+                    DV_DATE[id0.11] matches {
                         value
+                        value matches {*}
                     }
                 }
             }
