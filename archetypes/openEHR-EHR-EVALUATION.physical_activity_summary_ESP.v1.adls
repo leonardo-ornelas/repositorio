@@ -82,6 +82,13 @@ definition
                     }
                 }
             }
+            ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Do some regular physical activity at your leisure
+                value matches {
+                    DV_CODED_TEXT[id0.11] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
+            }
         }
     }
 
@@ -136,6 +143,34 @@ terminology
                 text = <"Total time spent practicing vigorous activities / day">
                 description = <"On days when vigorous activities are performed for at least 10 continuous minutes, how much time in total, you spend doing these activities per day.">
             >
+            ["id0.10"] = <
+                text = <"Do some regular physical activity at your leisure">
+                description = <"He/She regularly performs some type of physical activity at his leisure, such as physical exercises (gymnastics, walking, running), sports, dancing or martial arts.">
+            >
+            ["at0.1"] = <
+                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+            >
+            ["at0.2"] = <
+                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo.">
+            >
+            ["at0.3"] = <
+                text = <"SIM, 1 ou 2 vezes por semana.">
+                description = <"SIM, 1 ou 2 vezes por semana.">
+            >
+            ["at0.4"] = <
+                text = <"SIM, 3 ou 4 vezes por semana.">
+                description = <"SIM, 3 ou 4 vezes por semana.">
+            >
+            ["at0.5"] = <
+                text = <"SIM, 5 ou mais vezes por semana.">
+                description = <"SIM, 5 ou mais vezes por semana.">
+            >
+            ["ac0.1"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer">
+                description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais.">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -186,6 +221,40 @@ terminology
                 text = <"Tempo total gasto com a prática de atividades vigorosas / dia">
                 description = <"Nos dias em que são realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total, gasta-se fazendo essas atividades por dia.">
             >
+            ["id0.10"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer">
+                description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais.">
+            >
+            ["at0.1"] = <
+                text = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+                description = <"NÃO e não estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+            >
+            ["at0.2"] = <
+                text = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+                description = <"NÃO, mas estou interessado(a) em realizar atividades físicas no meu lazer num futuro próximo. (en)">
+            >
+            ["at0.3"] = <
+                text = <"SIM, 1 ou 2 vezes por semana. (en)">
+                description = <"SIM, 1 ou 2 vezes por semana. (en)">
+            >
+            ["at0.4"] = <
+                text = <"SIM, 3 ou 4 vezes por semana. (en)">
+                description = <"SIM, 3 ou 4 vezes por semana. (en)">
+            >
+            ["at0.5"] = <
+                text = <"SIM, 5 ou mais vezes por semana. (en)">
+                description = <"SIM, 5 ou mais vezes por semana. (en)">
+            >
+            ["ac0.1"] = <
+                text = <"Pratica alguma atividade física regular em seu lazer (en)">
+                description = <"Realiza, regularmente, algum tipo de atividade física no seu lazer, como exercícios físicos (ginástica, caminhada, corrida), esportes, danças ou artes marciais. (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5">
         >
     >
 
