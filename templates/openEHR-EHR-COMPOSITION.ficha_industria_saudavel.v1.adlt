@@ -248,104 +248,8 @@ definition
             }
             CLUSTER[id95.0.1] occurrences matches {0} matches {    -- Prior patient location
                 items matches {
-                    CLUSTER[id120.0.1] occurrences matches {0} matches {    -- Facility
+                    CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
@@ -1471,10 +1375,6 @@ terminology
                 text = <"Prior patient location">
                 description = <"The patient location prior admission">
             >
-            ["id120.0.1"] = <
-                text = <"Facility">
-                description = <"*">
-            >
             ["id96.0.1"] = <
                 text = <"Adress">
                 description = <"*">
@@ -1685,10 +1585,6 @@ terminology
                 text = <"المكان السابق للمريض">
                 description = <"المكان السابق للمريض">
             >
-            ["id120.0.1"] = <
-                text = <"المؤسسة">
-                description = <"*">
-            >
             ["id96.0.1"] = <
                 text = <"العنوان">
                 description = <"*">
@@ -1898,10 +1794,6 @@ terminology
             ["id95.0.1"] = <
                 text = <"Localização anterior do paciente">
                 description = <"A localização do paciente antes da admissão.">
-            >
-            ["id120.0.1"] = <
-                text = <"Instalação">
-                description = <"*">
             >
             ["id96.0.1"] = <
                 text = <"Endereço">
