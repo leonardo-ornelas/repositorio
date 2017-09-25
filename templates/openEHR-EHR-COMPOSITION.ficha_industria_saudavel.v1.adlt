@@ -65,6 +65,7 @@ definition
             use_archetype SECTION[id0.29, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-012.v1.0.0]
             use_archetype SECTION[id0.30, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-013.v1.0.0]
             use_archetype SECTION[id0.31, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-014.v1.0.0]
+            use_archetype SECTION[id0.32, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-015.v1.0.0]
         }
     }
 
@@ -2479,6 +2480,189 @@ terminology
             ["id1.1"] = <
                 text = <"data_appreciator">
                 description = <"data_appreciator">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-015.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype EVALUATION[id0.2, openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-saude_bucal-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Levantamento da saúde bucal do trabalhador">
+                description = <"Bloco para registro da saúde bucal">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-ficha_industria_saudavel-saude_bucal-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.saude_bucal.v1.0.0
+
+definition
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Saúde bucal 
+        /data[id2]/items matches {
+            CLUSTER[id7] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id8] occurrences matches {1} matches {
+                        /value[id9]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id10] occurrences matches {1} matches {
+                        /value[id11]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id12] occurrences matches {1} matches {
+                        /value[id13]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id14] occurrences matches {1} matches {
+                        /value[id15]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id16] occurrences matches {1} matches {
+                        /value[id17]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id18] occurrences matches {1} matches {
+                        /value[id19]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id20] occurrences matches {1} matches {
+                        /value[id21]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id22] occurrences matches {1} matches {
+                        /value[id23]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id24] occurrences matches {1} matches {
+                        /value[id25]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id26] occurrences matches {1} matches {
+                        /value[id27]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id28] occurrences matches {1} matches {
+                        /value[id29]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id30] occurrences matches {1} matches {
+                        /value[id31]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id32] occurrences matches {1} matches {
+                        /value[id33]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id34] occurrences matches {1} matches {
+                        /value[id35]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id36] occurrences matches {1} matches {
+                        /value[id37]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id38] occurrences matches {1} matches {
+                        /value[id39]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id40] occurrences matches {1} matches {
+                        /value[id41]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id42] occurrences matches {1} matches {
+                        /value[id43]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id44] occurrences matches {1} matches {
+                        /value[id45]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id46] occurrences matches {1} matches {
+                        /value[id47]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id48] occurrences matches {1} matches {
+                        /value[id49]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id50] occurrences matches {1} matches {
+                        /value[id51]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id52] occurrences matches {1} matches {
+                        /value[id53]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id54] occurrences matches {1} matches {
+                        /value[id55]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id56] occurrences matches {1} matches {
+                        /value[id57]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id58] occurrences matches {1} matches {
+                        /value[id59]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id60] occurrences matches {1} matches {
+                        /value[id61]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id62] occurrences matches {1} matches {
+                        /value[id63]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id64] occurrences matches {1} matches {
+                        /value[id65]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id66] occurrences matches {1} matches {
+                        /value[id67]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id68] occurrences matches {1} matches {
+                        /value[id69]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id70] occurrences matches {1} matches {
+                        /value[id71]/defining_code matches {[ac2]}
+                    }
+                }
+            }
+            CLUSTER[id72] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id73] occurrences matches {1} matches {
+                        /value[id74]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id75] occurrences matches {1} matches {
+                        /value[id76]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id77] occurrences matches {1} matches {
+                        /value[id78]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id79] occurrences matches {1} matches {
+                        /value[id80]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id81] occurrences matches {1} matches {
+                        /value[id82]/defining_code matches {[ac4]}
+                    }
+                    ELEMENT[id83] occurrences matches {1} matches {
+                        /value[id84]/value matches {True, False}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Saúde bucal ">
+                description = <"Registre informações sobre a saúde bucal do trabalhador">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"oral health">
+                description = <"oral health">
             >
         >
     >
