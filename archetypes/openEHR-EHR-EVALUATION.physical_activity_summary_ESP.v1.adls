@@ -48,13 +48,13 @@ description
 definition
     EVALUATION[id1.1] matches {    -- Physical Activity Summary
         /data[id2]/items matches {
-            ELEMENT[id9] occurrences matches {0..1} matches {    -- How many days / week are moderate physical activities performed
+            ELEMENT[id9] occurrences matches {1} matches {    -- How many days / week are moderate physical activities performed
                 /value[id14]/magnitude matches {|>0..<7|}
             }
-            ELEMENT[id8] occurrences matches {0..1} matches {    -- How many days / week are vigorous physical activities performed
+            ELEMENT[id8] occurrences matches {1} matches {    -- How many days / week are vigorous physical activities performed
                 /value[id15]/magnitude matches {|>0..<7|}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- How many days / week are walks carried out for at least 10 continuous minutes.
+            ELEMENT[id0.2] occurrences matches {1} matches {    -- How many days / week are walks carried out for at least 10 continuous minutes.
                 value matches {
                     DV_COUNT[id0.3] matches {
                         magnitude matches {|>0..<7|}
@@ -82,14 +82,14 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Do some regular physical activity at your leisure
+            ELEMENT[id0.10] occurrences matches {1} matches {    -- Do some regular physical activity at your leisure
                 value matches {
                     DV_CODED_TEXT[id0.11] matches {
                         defining_code matches {[ac0.1]}
                     }
                 }
             }
-            ELEMENT[id0.12] occurrences matches {0..1} matches {    -- Main type of physical activity practiced during leisure time.
+            ELEMENT[id0.12] occurrences matches {1} matches {    -- Main type of physical activity practiced during leisure time.
                 value matches {
                     DV_CODED_TEXT[id0.13] matches {
                         defining_code matches {[ac0.2]}
