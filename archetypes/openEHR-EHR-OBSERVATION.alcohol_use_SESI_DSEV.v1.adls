@@ -103,6 +103,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Tipo
+                                value matches {
+                                    DV_CODED_TEXT[id0.8] matches {
+                                        defining_code matches {[ac0.3]}
+                                    }
+                                }
+                            }
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
@@ -210,6 +217,42 @@ terminology
                 text = <"Consumo">
                 description = <"Consumo">
             >
+            ["at0.11"] = <
+                text = <"Não consome bebida alcoólica">
+                description = <"Não consome bebida alcoólica">
+            >
+            ["at0.12"] = <
+                text = <"Cerveja">
+                description = <"Cerveja">
+            >
+            ["at0.13"] = <
+                text = <"Vinho">
+                description = <"Vinho">
+            >
+            ["at0.14"] = <
+                text = <"Cachaça, pinga">
+                description = <"Cachaça, pinga">
+            >
+            ["at0.15"] = <
+                text = <"Uísque, vodka, licor">
+                description = <"Uísque, vodka, licor">
+            >
+            ["at0.16"] = <
+                text = <"Champanhe">
+                description = <"Champanhe">
+            >
+            ["at0.17"] = <
+                text = <"Outras bebidas destiladas">
+                description = <"Outras bebidas destiladas">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo">
+                description = <"Tipo">
+            >
+            ["id0.7"] = <
+                text = <"Tipo">
+                description = <"Tipo">
+            >
         >
         ["pt-br"] = <
             ["at2"] = <
@@ -276,6 +319,42 @@ terminology
                 text = <"Consumo (en)">
                 description = <"Consumo (en)">
             >
+            ["at0.11"] = <
+                text = <"Não consome bebida alcoólica (en)">
+                description = <"Não consome bebida alcoólica (en)">
+            >
+            ["at0.12"] = <
+                text = <"Cerveja (en)">
+                description = <"Cerveja (en)">
+            >
+            ["at0.13"] = <
+                text = <"Vinho (en)">
+                description = <"Vinho (en)">
+            >
+            ["at0.14"] = <
+                text = <"Cachaça, pinga (en)">
+                description = <"Cachaça, pinga (en)">
+            >
+            ["at0.15"] = <
+                text = <"Uísque, vodka, licor (en)">
+                description = <"Uísque, vodka, licor (en)">
+            >
+            ["at0.16"] = <
+                text = <"Champanhe (en)">
+                description = <"Champanhe (en)">
+            >
+            ["at0.17"] = <
+                text = <"Outras bebidas destiladas (en)">
+                description = <"Outras bebidas destiladas (en)">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo (en)">
+                description = <"Tipo (en)">
+            >
+            ["id0.7"] = <
+                text = <"Tipo (en)">
+                description = <"Tipo (en)">
+            >
         >
     >
     value_sets = <
@@ -286,6 +365,10 @@ terminology
         ["ac0.2"] = <
             id = <"ac0.2">
             members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10">
+        >
+        ["ac0.3"] = <
+            id = <"ac0.3">
+            members = <"at0.11", "at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17">
         >
     >
 
