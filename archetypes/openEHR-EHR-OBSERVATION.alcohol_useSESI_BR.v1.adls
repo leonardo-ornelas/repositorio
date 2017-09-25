@@ -110,28 +110,28 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
+                            ELEMENT[id0.9] occurrences matches {1} matches {    -- Have you ever felt that you should decrease a quantity of drink or stop drinking.
                                 value matches {
                                     DV_BOOLEAN[id0.10] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- How people annoy you by your way of drinking
+                            ELEMENT[id0.11] occurrences matches {1} matches {    -- How people annoy you by your way of drinking
                                 value matches {
                                     DV_BOOLEAN[id0.12] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Usually drinks in the morning to lessen the nervousness or hangover.
+                            ELEMENT[id0.13] occurrences matches {1} matches {    -- Usually drinks in the morning to lessen the nervousness or hangover.
                                 value matches {
                                     DV_BOOLEAN[id0.14] matches {
                                         value matches {True, False}
                                     }
                                 }
                             }
-                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- You feel guilty about the way you usually drink.
+                            ELEMENT[id0.15] occurrences matches {1} matches {    -- You feel guilty about the way you usually drink.
                                 value matches {
                                     DV_BOOLEAN[id0.16] matches {
                                         value matches {True, False}
