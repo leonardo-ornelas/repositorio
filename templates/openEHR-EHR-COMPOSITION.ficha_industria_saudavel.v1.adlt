@@ -1743,14 +1743,26 @@ definition
                             ELEMENT[id0.9] occurrences matches {1} matches {
                                 /value[id0.10]/value matches {True, False}
                             }
-                            ELEMENT[id0.11] occurrences matches {1} matches {
-                                /value[id0.12]/value matches {True, False}
+                            ELEMENT[id0.11.1] occurrences matches {0} matches {    -- How people annoy you by your way of drinking
+                                value matches {
+                                    DV_BOOLEAN[id0.12.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id0.13] occurrences matches {1} matches {
-                                /value[id0.14]/value matches {True, False}
+                            ELEMENT[id0.13.1] occurrences matches {0} matches {    -- Usually drinks in the morning to lessen the nervousness or hangover.
+                                value matches {
+                                    DV_BOOLEAN[id0.14.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
-                            ELEMENT[id0.15] occurrences matches {1} matches {
-                                /value[id0.16]/value matches {True, False}
+                            ELEMENT[id0.15.1] occurrences matches {0} matches {    -- You feel guilty about the way you usually drink.
+                                value matches {
+                                    DV_BOOLEAN[id0.16.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
                         }
                     }
@@ -1845,6 +1857,18 @@ terminology
                 text = <"Average Consumption Interval">
                 description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
             >
+            ["id0.11.1"] = <
+                text = <"How people annoy you by your way of drinking">
+                description = <"How people annoy you by your way of drinking">
+            >
+            ["id0.13.1"] = <
+                text = <"Usually drinks in the morning to lessen the nervousness or hangover.">
+                description = <"Usually drinks in the morning to lessen the nervousness or hangover.">
+            >
+            ["id0.15.1"] = <
+                text = <"You feel guilty about the way you usually drink.">
+                description = <"You feel guilty about the way you usually drink.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1886,6 +1910,18 @@ terminology
             ["id23.0.1"] = <
                 text = <"Intervalo médio consumido">
                 description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
+            >
+            ["id0.11.1"] = <
+                text = <"As pessoas o(a) aborrecem por seu modo de beber">
+                description = <"As pessoas o(a) aborrecem por seu modo de beber">
+            >
+            ["id0.13.1"] = <
+                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
+                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca.">
+            >
+            ["id0.15.1"] = <
+                text = <"Sente culpado pela maneira como costuma beber.">
+                description = <"Sente culpado pela maneira como costuma beber.">
             >
         >
     >
