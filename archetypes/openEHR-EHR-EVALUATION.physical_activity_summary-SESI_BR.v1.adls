@@ -325,6 +325,94 @@ terminology
                 text = <"Moderate exercise/week">
                 description = <"Number of times per week of 30 min moderate exercise.">
             >
+            ["at0.30"] = <
+                text = <"Não e eu não me interesso em fazer atividades em um futuro próximo">
+                description = <"Não e eu não me interesso em fazer atividades em um futuro próximo">
+            >
+            ["at0.31"] = <
+                text = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+                description = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+            >
+            ["at0.32"] = <
+                text = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+                description = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
+            >
+            ["at0.33"] = <
+                text = <"SIM, 1 ou 2 vezes por semana">
+                description = <"SIM, 1 ou 2 vezes por semana">
+            >
+            ["at0.34"] = <
+                text = <"SIM, 3 ou 4 vezes por semana">
+                description = <"SIM, 3 ou 4 vezes por semana">
+            >
+            ["at0.35"] = <
+                text = <"SIM, 5 ou mais vezes por semana">
+                description = <"SIM, 5 ou mais vezes por semana">
+            >
+            ["at0.36"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at0.37"] = <
+                text = <"1 dia">
+                description = <"1 dia">
+            >
+            ["at0.38"] = <
+                text = <"2 dias">
+                description = <"2 dias">
+            >
+            ["at0.39"] = <
+                text = <"3 dias">
+                description = <"3 dias">
+            >
+            ["at0.40"] = <
+                text = <"4 dias">
+                description = <"4 dias">
+            >
+            ["at0.41"] = <
+                text = <"5 dias">
+                description = <"5 dias">
+            >
+            ["at0.42"] = <
+                text = <"6 dias">
+                description = <"6 dias">
+            >
+            ["at0.43"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
+            ["at0.44"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at0.45"] = <
+                text = <"1 dia">
+                description = <"1 dia">
+            >
+            ["at0.46"] = <
+                text = <"2 dias">
+                description = <"2 dias">
+            >
+            ["at0.47"] = <
+                text = <"3 dias">
+                description = <"3 dias">
+            >
+            ["at0.48"] = <
+                text = <"4 dias">
+                description = <"4 dias">
+            >
+            ["at0.49"] = <
+                text = <"5 dias">
+                description = <"5 dias">
+            >
+            ["at0.50"] = <
+                text = <"6 dias">
+                description = <"6 dias">
+            >
+            ["at0.51"] = <
+                text = <"7 dias">
+                description = <"7 dias">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -535,6 +623,94 @@ terminology
                 text = <"Exercício moderado por semana">
                 description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
             >
+            ["at0.30"] = <
+                text = <"Não e eu não me interesso em fazer atividades em um futuro próximo (en)">
+                description = <"Não e eu não me interesso em fazer atividades em um futuro próximo (en)">
+            >
+            ["at0.31"] = <
+                text = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo. (en)">
+                description = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo. (en)">
+            >
+            ["at0.32"] = <
+                text = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo. (en)">
+                description = <"NÃO, mas estou interessado em fazer atividades físicas no meu lazer no futuro próximo. (en)">
+            >
+            ["at0.33"] = <
+                text = <"SIM, 1 ou 2 vezes por semana (en)">
+                description = <"SIM, 1 ou 2 vezes por semana (en)">
+            >
+            ["at0.34"] = <
+                text = <"SIM, 3 ou 4 vezes por semana (en)">
+                description = <"SIM, 3 ou 4 vezes por semana (en)">
+            >
+            ["at0.35"] = <
+                text = <"SIM, 5 ou mais vezes por semana (en)">
+                description = <"SIM, 5 ou mais vezes por semana (en)">
+            >
+            ["at0.36"] = <
+                text = <"Nenhum (en)">
+                description = <"Nenhum (en)">
+            >
+            ["at0.37"] = <
+                text = <"1 dia (en)">
+                description = <"1 dia (en)">
+            >
+            ["at0.38"] = <
+                text = <"2 dias (en)">
+                description = <"2 dias (en)">
+            >
+            ["at0.39"] = <
+                text = <"3 dias (en)">
+                description = <"3 dias (en)">
+            >
+            ["at0.40"] = <
+                text = <"4 dias (en)">
+                description = <"4 dias (en)">
+            >
+            ["at0.41"] = <
+                text = <"5 dias (en)">
+                description = <"5 dias (en)">
+            >
+            ["at0.42"] = <
+                text = <"6 dias (en)">
+                description = <"6 dias (en)">
+            >
+            ["at0.43"] = <
+                text = <"7 dias (en)">
+                description = <"7 dias (en)">
+            >
+            ["at0.44"] = <
+                text = <"Nenhum (en)">
+                description = <"Nenhum (en)">
+            >
+            ["at0.45"] = <
+                text = <"1 dia (en)">
+                description = <"1 dia (en)">
+            >
+            ["at0.46"] = <
+                text = <"2 dias (en)">
+                description = <"2 dias (en)">
+            >
+            ["at0.47"] = <
+                text = <"3 dias (en)">
+                description = <"3 dias (en)">
+            >
+            ["at0.48"] = <
+                text = <"4 dias (en)">
+                description = <"4 dias (en)">
+            >
+            ["at0.49"] = <
+                text = <"5 dias (en)">
+                description = <"5 dias (en)">
+            >
+            ["at0.50"] = <
+                text = <"6 dias (en)">
+                description = <"6 dias (en)">
+            >
+            ["at0.51"] = <
+                text = <"7 dias (en)">
+                description = <"7 dias (en)">
+            >
         >
     >
     value_sets = <
@@ -544,15 +720,15 @@ terminology
         >
         ["ac0.2"] = <
             id = <"ac0.2">
-            members = <"at0.3", "at0.4", "at0.5", "at0.6", "at0.7">
+            members = <"at0.31", "at0.32", "at0.33", "at0.34", "at0.35">
         >
         ["ac0.3"] = <
             id = <"ac0.3">
-            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+            members = <"at0.36", "at0.37", "at0.38", "at0.39", "at0.40", "at0.41", "at0.42", "at0.43">
         >
         ["ac0.4"] = <
             id = <"ac0.4">
-            members = <"at0.8", "at0.9", "at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+            members = <"at0.44", "at0.45", "at0.46", "at0.47", "at0.48", "at0.49", "at0.50", "at0.51">
         >
         ["ac0.5"] = <
             id = <"ac0.5">
