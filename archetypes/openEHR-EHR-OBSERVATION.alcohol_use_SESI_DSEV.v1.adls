@@ -320,40 +320,40 @@ terminology
                 description = <"Consumo (en)">
             >
             ["at0.11"] = <
-                text = <"Não consome bebida alcoólica (en)">
-                description = <"Não consome bebida alcoólica (en)">
+                text = <"Não consome bebida alcoólica">
+                description = <"Não consome bebida alcoólica">
             >
             ["at0.12"] = <
-                text = <"Cerveja (en)">
-                description = <"Cerveja (en)">
+                text = <"Cerveja">
+                description = <"Cerveja">
             >
             ["at0.13"] = <
-                text = <"Vinho (en)">
-                description = <"Vinho (en)">
+                text = <"Vinho">
+                description = <"Vinho">
             >
             ["at0.14"] = <
-                text = <"Cachaça, pinga (en)">
-                description = <"Cachaça, pinga (en)">
+                text = <"Cachaça, pinga">
+                description = <"Cachaça, pinga">
             >
             ["at0.15"] = <
-                text = <"Uísque, vodka, licor (en)">
-                description = <"Uísque, vodka, licor (en)">
+                text = <"Uísque, vodka, licor">
+                description = <"Uísque, vodka, licor">
             >
             ["at0.16"] = <
-                text = <"Champanhe (en)">
-                description = <"Champanhe (en)">
+                text = <"Champanhe">
+                description = <"Champanhe">
             >
             ["at0.17"] = <
-                text = <"Outras bebidas destiladas (en)">
-                description = <"Outras bebidas destiladas (en)">
+                text = <"Outras bebidas destiladas">
+                description = <"Outras bebidas destiladas">
             >
             ["ac0.3"] = <
                 text = <"Tipo (en)">
                 description = <"Tipo (en)">
             >
             ["id0.7"] = <
-                text = <"Tipo (en)">
-                description = <"Tipo (en)">
+                text = <"Tipo">
+                description = <"Tipo">
             >
         >
     >
