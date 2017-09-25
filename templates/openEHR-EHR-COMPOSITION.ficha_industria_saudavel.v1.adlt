@@ -62,6 +62,7 @@ definition
             use_archetype SECTION[id0.26, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-009.v1.0.0]
             use_archetype SECTION[id0.27, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-010.v1.0.0]
             use_archetype SECTION[id0.28, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-011.v1.0.0]
+            use_archetype SECTION[id0.29, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-012.v1.0.0]
         }
     }
 
@@ -2186,6 +2187,109 @@ terminology
             ["id1.1"] = <
                 text = <"characteristics of work">
                 description = <"characteristics of work">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-012.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-qualidade_vida-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Qualidade de vida">
+                description = <"Bloco para registro de informações de qualidade de vida">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-qualidade_vida-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.qualidade_vida.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Qualidade vida
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            CLUSTER[id8] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id9] occurrences matches {0..1} matches {
+                        /value[id10]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id11] occurrences matches {0..1} matches {
+                        /value[id12]/defining_code matches {[ac2]}
+                    }
+                }
+            }
+            CLUSTER[id13] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id14] occurrences matches {0..1} matches {
+                        /value[id15]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id16] occurrences matches {0..1} matches {
+                        /value[id17]/defining_code matches {[ac4]}
+                    }
+                }
+            }
+            CLUSTER[id18] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id19] occurrences matches {0..1} matches {
+                        /value[id20]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id21] occurrences matches {0..1} matches {
+                        /value[id22]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id23] occurrences matches {0..1} matches {
+                        /value[id24]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id25] occurrences matches {0..1} matches {
+                        /value[id26]/defining_code matches {[ac3]}
+                    }
+                    ELEMENT[id28] occurrences matches {0..1} matches {
+                        /value[id29]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id30] occurrences matches {0..1} matches {
+                        /value[id31]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id32] occurrences matches {0..1} matches {
+                        /value[id33]/defining_code matches {[ac1]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Qualidade vida">
+                description = <"Registre dados sobre qualidade de vida">
             >
         >
     >
