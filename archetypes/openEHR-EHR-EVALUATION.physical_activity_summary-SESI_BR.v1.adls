@@ -55,32 +55,11 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- Do some regular physical activity at your leisure
-                value matches {
-                    DV_CODED_TEXT[id0.7] matches {
-                        defining_code matches {[ac0.2]}
-                    }
-                }
-            }
-            ELEMENT[id0.8] occurrences matches {0..1} matches {    -- How many days did you walk for at least 10 continuous minutes
-                value matches {
-                    DV_CODED_TEXT[id0.9] matches {
-                        defining_code matches {[ac0.3]}
-                    }
-                }
-            }
             ELEMENT[id0.10] occurrences matches {0..1} matches {    -- Total time walked a day
                 value matches {
                     DV_DATE[id0.11] matches {
                         value
                         value matches {*}
-                    }
-                }
-            }
-            ELEMENT[id0.12] occurrences matches {0..1} matches {    -- How many days in the last week did moderate activity
-                value matches {
-                    DV_CODED_TEXT[id0.13] matches {
-                        defining_code matches {[ac0.4]}
                     }
                 }
             }
@@ -92,25 +71,11 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.16] occurrences matches {0..1} matches {    -- How many days in the last week did vigorous activities
-                value matches {
-                    DV_CODED_TEXT[id0.17] matches {
-                        defining_code matches {[ac0.5]}
-                    }
-                }
-            }
             ELEMENT[id0.18] occurrences matches {0..1} matches {    -- Total time performing vigorous activities per day
                 value matches {
                     DV_DATE[id0.20] matches {
                         value
                         value matches {*}
-                    }
-                }
-            }
-            ELEMENT[id0.21] occurrences matches {0..1} matches {    -- Main type of physical activity practiced in their leisure time.
-                value matches {
-                    DV_CODED_TEXT[id0.22] matches {
-                        defining_code matches {[ac0.6]}
                     }
                 }
             }
@@ -140,10 +105,6 @@ terminology
                 text = <"Atividade física praticada fora do trabalho">
                 description = <"Atividade física praticada fora do trabalho">
             >
-            ["id0.6"] = <
-                text = <"Do some regular physical activity at your leisure">
-                description = <"Do some kind of physical activity at your leisure regulating, such as physical exercises (gymnastics, walking, running, sports, dancing or martial arts)">
-            >
             ["at0.3"] = <
                 text = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
                 description = <"NO and I am not interested in doing physical activities at my leisure in the near future.">
@@ -167,10 +128,6 @@ terminology
             ["ac0.2"] = <
                 text = <"Faz alguma atividade física regular em seu lazer">
                 description = <"Faz alguma atividade física regular em seu lazer">
-            >
-            ["id0.8"] = <
-                text = <"How many days did you walk for at least 10 continuous minutes">
-                description = <"On how many days of the last week WALK for at least 10 continuous minutes at home or at work as a form of transportation to move from one place to another, for leisure, for pleasure or as a form of exercise.">
             >
             ["at0.8"] = <
                 text = <"None">
@@ -212,10 +169,6 @@ terminology
                 text = <"Total time walked a day">
                 description = <"On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day.">
             >
-            ["id0.12"] = <
-                text = <"How many days in the last week did moderate activity">
-                description = <"Record how many days in the last week you performed moderate activity">
-            >
             ["ac0.4"] = <
                 text = <"Quantos dias na última semana você realizou atividade moderada">
                 description = <"Quantos dias na última semana você realizou atividade moderada">
@@ -224,10 +177,6 @@ terminology
                 text = <"Total time spent doing moderate activities per day.">
                 description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
             >
-            ["id0.16"] = <
-                text = <"How many days in the last week did vigorous activities">
-                description = <"Record how many days in the last week you performed vigorous activities">
-            >
             ["ac0.5"] = <
                 text = <"Quantos dias na última semana fizeram atividades vigorosas">
                 description = <"Quantos dias na última semana fizeram atividades vigorosas">
@@ -235,10 +184,6 @@ terminology
             ["id0.18"] = <
                 text = <"Total time performing vigorous activities per day">
                 description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
-            >
-            ["id0.21"] = <
-                text = <"Main type of physical activity practiced in their leisure time.">
-                description = <"What is the main type of physical activity you practice at your leisure.">
             >
             ["at0.16"] = <
                 text = <"Not practice physical activity.">
@@ -522,10 +467,6 @@ terminology
                 text = <"Atividade física praticada fora do trabalho (en)">
                 description = <"Atividade física praticada fora do trabalho (en)">
             >
-            ["id0.6"] = <
-                text = <"Pratica alguma atividade física regular em seu lazer.">
-                description = <"Faz algum tipo de atividade física em seu lazer, como exercícios físicos (ginástica, caminhada, corrida, esportes, dança ou artes marciais).">
-            >
             ["at0.3"] = <
                 text = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
                 description = <"NÃO e eu não estou interessado em fazer atividades físicas no meu lazer no futuro próximo.">
@@ -549,10 +490,6 @@ terminology
             ["ac0.2"] = <
                 text = <"Faz alguma atividade física regular em seu lazer (en)">
                 description = <"Faz alguma atividade física regular em seu lazer (en)">
-            >
-            ["id0.8"] = <
-                text = <"Quantos dias da última semana foram realizadas caminhadas por pelo menos 10 minutos contínuos.">
-                description = <"Em quantos dias da última semana foram realizadas caminhadas por pelo menos 10 minutos contínuos em casa ou no trabalho, como forma de transporte para ir de um lugar para outro, por lazer, por prazer ou como forma de exercício.">
             >
             ["at0.8"] = <
                 text = <"Nenhum">
@@ -594,10 +531,6 @@ terminology
                 text = <"Tempo total gasto com caminhada por dia.">
                 description = <"Nos dias em que foram realizadas caminhadas por pelo menos 10 minutos contínuos, quanto tempo no total, foram gastos caminhando por dia.">
             >
-            ["id0.12"] = <
-                text = <"Quantos dias na última semana foram realizadas atividades físicas moderadas">
-                description = <"Registre quantos dias na última semana você realizou atividade moderada, por pelo menos 10 minutos contínuos.">
-            >
             ["ac0.4"] = <
                 text = <"Quantos dias na última semana você realizou atividade moderada (en)">
                 description = <"Quantos dias na última semana você realizou atividade moderada (en)">
@@ -606,10 +539,6 @@ terminology
                 text = <"Tempo total gasto com a prática de atividades moderadas por dia">
                 description = <"Nos dias em que foram realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
             >
-            ["id0.16"] = <
-                text = <"Quantos dias na última semana foram realizadas atividades físicas vigorosas">
-                description = <"Registre quantos dias na última semana você realizou atividade vigorosa, por pelo menos 10 minutos contínuos.">
-            >
             ["ac0.5"] = <
                 text = <"Quantos dias na última semana fizeram atividades vigorosas (en)">
                 description = <"Quantos dias na última semana fizeram atividades vigorosas (en)">
@@ -617,10 +546,6 @@ terminology
             ["id0.18"] = <
                 text = <"Tempo total gasto com a prática de atividades vigorosas por dia">
                 description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
-            >
-            ["id0.21"] = <
-                text = <"Tipo da principal atividade física praticada nos momentos de lazer">
-                description = <"Tipo da principal atividade física praticada nos momentos de lazer.">
             >
             ["at0.16"] = <
                 text = <"Não pratica atividade física">
