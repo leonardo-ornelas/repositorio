@@ -3478,19 +3478,32 @@ definition
                     }
                 }
                 /state[id8]/items matches {
-                    ELEMENT[id9] occurrences matches {0..1} matches {
-                        /value[id1059]/defining_code matches {[ac1; at1002]}
+                    ELEMENT[id9.1] occurrences matches {0} matches {    -- *Position(en)
+                        value matches {
+                            DV_CODED_TEXT[id1059.1] matches {
+                                defining_code matches {[ac1; at1002]}
+                            }
+                        }
                     }
-                    allow_archetype CLUSTER[id1031] occurrences matches {0..1} matches { 
+                    ELEMENT[id1053.1] occurrences matches {0} matches {    -- *Confounding factors(en)
+                        value matches {
+                            DV_TEXT[id1060.1] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id1031] occurrences matches {0} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
                     }
-                    ELEMENT[id1044] occurrences matches {0..1} matches {
-                        /value[id1061]/defining_code matches {[ac2; at1045]}
-                    }
-                    ELEMENT[id1006] occurrences matches {0..1} matches {
+                    ELEMENT[id1044.1] occurrences matches {0} matches {    -- *Sleep status(en)
                         value matches {
-                            DV_QUANTITY[id1062] matches {
+                            DV_CODED_TEXT[id1061.1] matches {
+                                defining_code matches {[ac2; at1045]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1006.1] occurrences matches {0} matches {    -- *Tilt(en)
+                        value matches {
+                            DV_QUANTITY[id1062.1] matches {
                                 property matches {[at1056]}
                                 magnitude matches {|-90.0..90.0|}
                                 precision matches {|0|}
@@ -3501,8 +3514,16 @@ definition
                 }
             }
             INTERVAL_EVENT[id1043] occurrences matches {0..1} matches {
-                /math_function[id1063]/defining_code matches {[at1057]}
-                /width[id1064]/value matches {PT24H}
+                math_function matches {
+                    DV_CODED_TEXT[id1063.1] occurrences matches {0} matches {
+                        defining_code matches {[at1057]}
+                    }
+                }
+                width matches {
+                    DV_DURATION[id1064.1] occurrences matches {0} matches {
+                        value matches {PT24H}
+                    }
+                }
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id7]/data[id4]
                 }
@@ -3512,19 +3533,49 @@ definition
             }
         }
         /protocol[id12]/items matches {
-            ELEMENT[id14] occurrences matches {0..1} matches {
-                /value[id1067]/defining_code matches {[ac3]}
+            ELEMENT[id14.1] occurrences matches {0} matches {    -- *Cuff size(en)
+                value matches {
+                    DV_CODED_TEXT[id1067.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
-            CLUSTER[id1034] occurrences matches {0..1} matches {
-                /items[id15]/value[id1068]/defining_code matches {[ac4]}
+            CLUSTER[id1034.1] occurrences matches {0} matches {    -- *New cluster(en)
+                items matches {
+                    ELEMENT[id15.1] occurrences matches {0} matches {    -- *Location of measurement(en)
+                        value matches {
+                            DV_CODED_TEXT[id1068.1] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1035.1] occurrences matches {0} matches {    -- *Specific location(en)
+                        value matches {
+                            DV_TEXT[id1069.1] 
+                        }
+                    }
+                }
             }
-            ELEMENT[id1036] occurrences matches {0..1} matches {
-                /value[id1070]/defining_code matches {[ac5]}
+            ELEMENT[id1036.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_CODED_TEXT[id1070.1] matches {
+                        defining_code matches {[ac5]}
+                    }
+                }
             }
-            ELEMENT[id1011] occurrences matches {0..1} matches {
-                /value[id1072]/defining_code matches {[ac6]}
+            ELEMENT[id1039.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure Formula(en)
+                value matches {
+                    DV_TEXT[id1071.1] 
+                }
             }
-            allow_archetype CLUSTER[id1026] occurrences matches {0..1} matches { 
+            ELEMENT[id1011.1] occurrences matches {0} matches {    -- *Diastolic endpoint(en)
+                value matches {
+                    DV_CODED_TEXT[id1072.1] matches {
+                        defining_code matches {[ac6]}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id1026] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
             }
@@ -3550,6 +3601,50 @@ terminology
                 text = <"注释">
                 description = <"有关血压值的注释">
             >
+            ["id9.1"] = <
+                text = <"*Position(en)">
+                description = <"*The position of the subject at the time of measurement(en)">
+            >
+            ["id1053.1"] = <
+                text = <"*Confounding factors(en)">
+                description = <"*Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.(en)">
+            >
+            ["id1044.1"] = <
+                text = <"*Sleep status(en)">
+                description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+            >
+            ["id1006.1"] = <
+                text = <"*Tilt(en)">
+                description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
+            >
+            ["id14.1"] = <
+                text = <"*Cuff size(en)">
+                description = <"*The size of the cuff used for blood pressure measurement(en)">
+            >
+            ["id1034.1"] = <
+                text = <"*New cluster(en)">
+                description = <"**(en)">
+            >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body locations where blood pressure is recorded(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Detailed description about the site of the measurement of the blood pressure(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data)(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en)">
+            >
         >
         ["de"] = <
             ["id1.1"] = <
@@ -3567,6 +3662,50 @@ terminology
             ["id34.1"] = <
                 text = <"Kommentar">
                 description = <"Kommentar zur Blutdruckmessung.">
+            >
+            ["id9.1"] = <
+                text = <"Position">
+                description = <"Die Position der untersuchten Person während der Messung.">
+            >
+            ["id1053.1"] = <
+                text = <"Einflussfaktoren">
+                description = <"Kommentar und Aufzeichung anderer Faktoren die ggf. zu dem Ergebnis der Blutdruckmessung beitragen können. Die kann z.B. bei belastenden Situationen der Fall sein (z.B. sog. Weißkittelhypertonie, Schmerzen, Fieber, Änderungen im atmosphärischen Druck).">
+            >
+            ["id1044.1"] = <
+                text = <"Schlafzustand">
+                description = <"Schlafzustand  - unterstützt die Auswertung von 24-stündigen ambulanten Aufzeichnungen des Blutdrucks.">
+            >
+            ["id1006.1"] = <
+                text = <"Neigung">
+                description = <"Die cranio-kaudale Neigung der Oberfläche auf der die Person zum Zeitpunkt der Messung liegt.">
+            >
+            ["id14.1"] = <
+                text = <"Manschettengröße">
+                description = <"Die Größe der Manschette, die zur Blutdruckmessung benutzt wurde.">
+            >
+            ["id1034.1"] = <
+                text = <"Körperstelle">
+                description = <"Körperstelle der Blutdruckmessung. 'Körperstelle der Messung' kann für die gewöhnlichen Stellen verwendet werden. 'Spezifische Stelle' wird für die Aufzeichnung spezifischer Details einer Körperstelle, die nicht in den gewöhnlichen Stellen enthalten ist, verwendet, Sie kann auch verwendet werden, um auf eine externe Teminologie zu verweisen.">
+            >
+            ["id15.1"] = <
+                text = <"Körperstelle der Messung">
+                description = <"Gewöhnliche Körperstellen, an denen der Blutdruck gemessen wird.">
+            >
+            ["id1035.1"] = <
+                text = <"Spezifische Stelle">
+                description = <"Spezifische Details über die Körperstelle, an der der Blutdruck gemessen wird.">
+            >
+            ["id1036.1"] = <
+                text = <"Methode">
+                description = <"Methode der Messung des Blutdrucks.">
+            >
+            ["id1039.1"] = <
+                text = <"Formel für mittleren arterieller Druck">
+                description = <"Die Formel die ggf. verwendet wurde, um den mittleren arteriellen Druck zu berechnen.">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolischer Endpunkt">
+                description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen.">
             >
         >
         ["en"] = <
@@ -3586,6 +3725,50 @@ terminology
                 text = <"Comment">
                 description = <"Comment on blood pressure measurement.">
             >
+            ["id9.1"] = <
+                text = <"Position">
+                description = <"The position of the subject at the time of measurement.">
+            >
+            ["id1053.1"] = <
+                text = <"Confounding factors">
+                description = <"Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Sleep status">
+                description = <"Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.">
+            >
+            ["id1006.1"] = <
+                text = <"Tilt">
+                description = <"The craniocaudal tilt of the surface on which the person is lying at the time of measurement.">
+            >
+            ["id14.1"] = <
+                text = <"Cuff size">
+                description = <"The size of the cuff used for blood pressure measurement.">
+            >
+            ["id1034.1"] = <
+                text = <"Location">
+                description = <"Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.">
+            >
+            ["id15.1"] = <
+                text = <"Location of measurement">
+                description = <"Common body sites where blood pressure is recorded.">
+            >
+            ["id1035.1"] = <
+                text = <"Specific location">
+                description = <"Specific details about the body site where blood pressure is recorded.">
+            >
+            ["id1036.1"] = <
+                text = <"Method">
+                description = <"Method of measurement of blood pressure.">
+            >
+            ["id1039.1"] = <
+                text = <"Mean Arterial Pressure Formula">
+                description = <"Formula used to calculate the MAP (if recorded in data).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolic endpoint">
+                description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
+            >
         >
         ["fa"] = <
             ["id1.1"] = <
@@ -3603,6 +3786,50 @@ terminology
             ["id34.1"] = <
                 text = <"نظر">
                 description = <"نظر در مورد اندازه گیری فشار خون">
+            >
+            ["id9.1"] = <
+                text = <"موقعیت">
+                description = <"موقعیت فرد در زمان اندازه گیری">
+            >
+            ["id1053.1"] = <
+                text = <"عوامل مبهم">
+                description = <"نظردهی و ثبت سایر عوامل ضمنی که ممکن است به اندازه گیری فشار خون کمک کنند . به عنوان مثال سطح اضطراب یا \"سندرم روپوش سفید\"، درد یا تب ، تغییرات فشار جوی و غیره">
+            >
+            ["id1044.1"] = <
+                text = <"وضعیت خواب">
+                description = <"وضعیت خواب- به تفسیر ثبتهای صورت گرفته از فشار خون در خانه در طول 24 ساعت کمک می کند">
+            >
+            ["id1006.1"] = <
+                text = <"شیب">
+                description = <"شیب طولی سطحی که فرد در حین اندازه گیری رون آن دراز کشیده است">
+            >
+            ["id14.1"] = <
+                text = <"اندازه کاف">
+                description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.(en)">
+            >
+            ["id15.1"] = <
+                text = <"*Location of measurement(en)">
+                description = <"*Common body sites where blood pressure is recorded.(en)">
+            >
+            ["id1035.1"] = <
+                text = <"*Specific location(en)">
+                description = <"*Specific details about the body site where blood pressure is recorded.(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*Method(en)">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data).(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
             >
         >
         ["ja"] = <
@@ -3622,6 +3849,50 @@ terminology
                 text = <"コメント">
                 description = <"血圧測定のコメント">
             >
+            ["id9.1"] = <
+                text = <"体位">
+                description = <"計測のときの対象者の体位">
+            >
+            ["id1053.1"] = <
+                text = <"交絡因子">
+                description = <"*Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.(en)">
+            >
+            ["id1044.1"] = <
+                text = <"睡眠状況">
+                description = <"睡眠状況 24時間外来血圧記録の解釈を助けるため">
+            >
+            ["id1006.1"] = <
+                text = <"ティルト">
+                description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
+            >
+            ["id14.1"] = <
+                text = <"カフサイズ">
+                description = <"血圧測定のために使われるカフの大きさ.">
+            >
+            ["id1034.1"] = <
+                text = <"部位">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology. (en)">
+            >
+            ["id15.1"] = <
+                text = <"計測部位">
+                description = <"血圧が一般的に測定される身体の部位">
+            >
+            ["id1035.1"] = <
+                text = <"特別な部位">
+                description = <"血圧が測定される場所についての詳細な記録.">
+            >
+            ["id1036.1"] = <
+                text = <"方法">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"平均同脈圧の計算式">
+                description = <"平均同脈圧を計算するために使われた士気（もしデータに記録されていれば）">
+            >
+            ["id1011.1"] = <
+                text = <"拡張期終末">
+                description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録.">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
@@ -3639,6 +3910,50 @@ terminology
             ["id34.1"] = <
                 text = <"Opmerking">
                 description = <"Opmerking over de gemeten bloeddruk">
+            >
+            ["id9.1"] = <
+                text = <"Houding">
+                description = <"De houding van het individu op het moment van de meting">
+            >
+            ["id1053.1"] = <
+                text = <"Beïnvloedende factoren">
+                description = <"Opmerking over en vastleggen van andere incidentele factoren die de bloeddrukmeting zouden kunnen beïnvloeden. Bijvoorbeeld, mate van angst, of 'witte jas syndroom'; pijn of koorts; veranderingen in atmosferische druk etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Slaap/waak toestand">
+                description = <"Slaap/waak toestand, ondersteunt de interpretatie van de 24-uurs bloeddrukmeting.">
+            >
+            ["id1006.1"] = <
+                text = <"Schuinte">
+                description = <"De craniocaudale schuinte van het oppervlak waarop het individu ligt op het moment van de meting">
+            >
+            ["id14.1"] = <
+                text = <"Manchet grootte">
+                description = <"De grootte van de manchet gebruikt bij de meting">
+            >
+            ["id1034.1"] = <
+                text = <"Locatie">
+                description = <"Lichaamslocatie waar de bloeddrukmeting is gemeten. Gebruik 'locatie van meting' om gebruikelijke plaatsen te selecteren. Gebruik 'specifieke locatie' om meer specifieke details of locatie te registreren, die niet in de gebruikelijke set staan of om aan een externe terminologie te refereren.">
+            >
+            ["id15.1"] = <
+                text = <"Plaats van meting">
+                description = <"Gewoonlijke lichaamslocaties waar bloeddruk gemeten wordt.">
+            >
+            ["id1035.1"] = <
+                text = <"Specifieke locatie">
+                description = <"Specifieke details over de lichaamsplaats waar de bloeddruk is gemeten.">
+            >
+            ["id1036.1"] = <
+                text = <"Methodiek">
+                description = <"De methode van de meting van de bloeddruk">
+            >
+            ["id1039.1"] = <
+                text = <"Gemiddelde arteriële druk formule">
+                description = <"Formule om de MAP (mean arterial pressure=gemiddelde arteriële druk) te berekenen (als deze data opgeslagen wordt).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolisch eindpunt">
+                description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode.">
             >
         >
         ["ru"] = <
@@ -3658,6 +3973,50 @@ terminology
                 text = <"Комментарии">
                 description = <"Комментарии к измерению кровяного давления.">
             >
+            ["id9.1"] = <
+                text = <"Поза">
+                description = <"Поза пациента во время измерения давления.">
+            >
+            ["id1053.1"] = <
+                text = <"Стохастические факторы(ru)">
+                description = <"Комментарий и записи других случайных факторов, которые могут способствовать измерению артериального давления. Например,\"боязнь белого халата\" или боль и жар, изменения атмосферного давления т.д.">
+            >
+            ["id1044.1"] = <
+                text = <"Стадия сна(ru)">
+                description = <"Стадия сна - для интерпретации записи амбулаторного измерения АД в течение 42 часов.">
+            >
+            ["id1006.1"] = <
+                text = <"Наклонная поверхность">
+                description = <"краниокаудальный наклон поверхности, на которой лежит пациент во время измерения АД.">
+            >
+            ["id14.1"] = <
+                text = <"Размер манжеты(ru)">
+                description = <"Размер манжеты для измерения кровяного давления.">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"Место тела, где измеряется АД. Используйте \"Место измерения\", чтобы выбрать из обобщённых мест. Используйте \"Точное местограсположение\", чтобы записать более конкретную информацию или место, которое не входит в обобщённый список или обратиться к внешней терминологии.">
+            >
+            ["id15.1"] = <
+                text = <"Место измерения">
+                description = <"Обобщенное место тела, в которм производится измерение артериального давления.">
+            >
+            ["id1035.1"] = <
+                text = <"Точное месторасположение">
+                description = <"Конкретные сведения о месте тела, где  регистрируется АД.">
+            >
+            ["id1036.1"] = <
+                text = <"Метод">
+                description = <"Метод измерения кровяного давления.">
+            >
+            ["id1039.1"] = <
+                text = <"Формула среднего артериального давления">
+                description = <"Формула, используемая для вычисления СрАД (если требуется записывать).">
+            >
+            ["id1011.1"] = <
+                text = <"Диастолическая конечная точка">
+                description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -3675,6 +4034,50 @@ terminology
             ["id34.1"] = <
                 text = <"Comentário">
                 description = <"Comentário sobre a medição da pressão arterial.">
+            >
+            ["id9.1"] = <
+                text = <"Posição">
+                description = <"A posição do sujeito no momento da medição.">
+            >
+            ["id1053.1"] = <
+                text = <"Fatores de complicação">
+                description = <"Comente e registre outros fatores incidentais que podem estar contribuindo para a medição da pressão arterial. Por exemplo, nível de ansiedade ou \"síndrome do casaco branco\"; dor ou febre; mudanças na pressão atmosférica, etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Status do sono">
+                description = <"Status do sono - suporta a interpretação dos registros de pressão arterial ambulatorial de 24 horas.">
+            >
+            ["id1006.1"] = <
+                text = <"Inclinação">
+                description = <"A inclinação craniocaudal da superfície em que a pessoa está no momento da medição.">
+            >
+            ["id14.1"] = <
+                text = <"Tamanho do manguito">
+                description = <"O tamanho do manguito usado para a medição da pressão arterial.">
+            >
+            ["id1034.1"] = <
+                text = <"Localização">
+                description = <"Localização do corpo onde a pressão arterial é medida. Use 'Localização da medida' para selecionar locais comuns. Use 'Local específico' para registrar detalhes mais específicos ou um local que não esteja no conjunto comum ou para se referir a uma terminologia externa.">
+            >
+            ["id15.1"] = <
+                text = <"Localização da medida">
+                description = <"Regiões comuns do corpo onde a pressão arterial é registrada.">
+            >
+            ["id1035.1"] = <
+                text = <"Localização específica">
+                description = <"Detalhes específicos sobre o local do corpo onde a pressão arterial é registrada.">
+            >
+            ["id1036.1"] = <
+                text = <"Método">
+                description = <"Método de medição da pressão sanguínea.">
+            >
+            ["id1039.1"] = <
+                text = <"Fórmula de Pressão Arterial Média">
+                description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
+            >
+            ["id1011.1"] = <
+                text = <"Ponto de extremidade diastólica">
+                description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
             >
         >
     >
