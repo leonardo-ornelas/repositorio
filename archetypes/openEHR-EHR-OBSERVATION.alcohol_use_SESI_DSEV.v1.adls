@@ -96,6 +96,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Consumo
+                                value matches {
+                                    DV_CODED_TEXT[id0.5] matches {
+                                        defining_code matches {[ac0.2]}
+                                    }
+                                }
+                            }
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
@@ -171,6 +178,38 @@ terminology
                 text = <"Doses">
                 description = <"Doses">
             >
+            ["id0.4"] = <
+                text = <"Consumo">
+                description = <"Consumo">
+            >
+            ["at0.5"] = <
+                text = <"Nenhuma">
+                description = <"Nenhuma">
+            >
+            ["at0.6"] = <
+                text = <"1 vez">
+                description = <"1 vez">
+            >
+            ["at0.7"] = <
+                text = <"2 a 4 vezes">
+                description = <"2 a 4 vezes">
+            >
+            ["at0.8"] = <
+                text = <"5 a 8 vezes">
+                description = <"5 a 8 vezes">
+            >
+            ["at0.9"] = <
+                text = <"8 a 12 vezes">
+                description = <"8 a 12 vezes">
+            >
+            ["at0.10"] = <
+                text = <"Acima de 12 vezes">
+                description = <"Acima de 12 vezes">
+            >
+            ["ac0.2"] = <
+                text = <"Consumo">
+                description = <"Consumo">
+            >
         >
         ["pt-br"] = <
             ["at2"] = <
@@ -205,12 +244,48 @@ terminology
                 text = <"Doses (en)">
                 description = <"Doses (en)">
             >
+            ["id0.4"] = <
+                text = <"Consumo (en)">
+                description = <"Consumo (en)">
+            >
+            ["at0.5"] = <
+                text = <"Nenhuma (en)">
+                description = <"Nenhuma (en)">
+            >
+            ["at0.6"] = <
+                text = <"1 vez (en)">
+                description = <"1 vez (en)">
+            >
+            ["at0.7"] = <
+                text = <"2 a 4 vezes (en)">
+                description = <"2 a 4 vezes (en)">
+            >
+            ["at0.8"] = <
+                text = <"5 a 8 vezes (en)">
+                description = <"5 a 8 vezes (en)">
+            >
+            ["at0.9"] = <
+                text = <"8 a 12 vezes (en)">
+                description = <"8 a 12 vezes (en)">
+            >
+            ["at0.10"] = <
+                text = <"Acima de 12 vezes (en)">
+                description = <"Acima de 12 vezes (en)">
+            >
+            ["ac0.2"] = <
+                text = <"Consumo (en)">
+                description = <"Consumo (en)">
+            >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
             members = <"at0.1", "at0.2", "at0.3", "at0.4">
+        >
+        ["ac0.2"] = <
+            id = <"ac0.2">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10">
         >
     >
 
