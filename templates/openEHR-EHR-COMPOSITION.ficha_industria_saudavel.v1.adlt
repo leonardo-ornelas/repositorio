@@ -58,6 +58,7 @@ definition
             use_archetype SECTION[id0.22, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-005.v1.0.0]
             use_archetype SECTION[id0.23, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-006.v1.0.0]
             use_archetype SECTION[id0.24, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-007.v1.0.0]
+            use_archetype SECTION[id0.25, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-008.v1.0.0]
         }
     }
 
@@ -1907,6 +1908,94 @@ terminology
             ["id1.1"] = <
                 text = <"Diabetes">
                 description = <"Diabetes">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-008.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype OBSERVATION[id0.2, openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-hipertensao-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hipertensão">
+                description = <"Registro de informações sobre hipertensão">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-ficha_industria_saudavel-hipertensao-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.hipertensao.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Hipertensão
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {1} matches {
+                /value[id7]/value matches {True, False}
+            }
+            ELEMENT[id8] occurrences matches {0..1} matches {
+                /value[id9]/value matches {True, False}
+            }
+            ELEMENT[id10] occurrences matches {0..1} matches {
+                /value[id11]/value matches {True, False}
+            }
+            ELEMENT[id12] occurrences matches {0..1} matches {
+                /value[id13]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id15]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id16] occurrences matches {0..1} matches {
+                /value[id17]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id19] occurrences matches {0..1} matches {
+                /value[id20]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id21] occurrences matches {0..1} matches {
+                /value[id22]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id23] occurrences matches {0..1} matches {
+                /value[id24]/defining_code matches {[ac1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hipertensão">
+                description = <"dados de hipertensão">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Hypertension">
+                description = <"Hypertension">
             >
         >
     >
