@@ -110,6 +110,34 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber
+                                value matches {
+                                    DV_BOOLEAN[id0.10] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- As pessoas o(a) aborrecem por seu modo de beber
+                                value matches {
+                                    DV_BOOLEAN[id0.12] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Costuma beber pela manhã para diminuir o nervosismo ou ressaca
+                                value matches {
+                                    DV_BOOLEAN[id0.14] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Sente culpado pela maneira como costuma beber
+                                value matches {
+                                    DV_BOOLEAN[id0.16] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
@@ -265,6 +293,22 @@ terminology
                 text = <"massa">
                 description = <"massa">
             >
+            ["id0.9"] = <
+                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
+                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
+            >
+            ["id0.11"] = <
+                text = <"As pessoas o(a) aborrecem por seu modo de beber">
+                description = <"As pessoas o(a) aborrecem por seu modo de beber">
+            >
+            ["id0.13"] = <
+                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
+                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
+            >
+            ["id0.15"] = <
+                text = <"Sente culpado pela maneira como costuma beber">
+                description = <"Sente culpado pela maneira como costuma beber">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -378,6 +422,22 @@ terminology
             ["at4"] = <
                 text = <"massa">
                 description = <"massa">
+            >
+            ["id0.9"] = <
+                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
+                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
+            >
+            ["id0.11"] = <
+                text = <"As pessoas o(a) aborrecem por seu modo de beber">
+                description = <"As pessoas o(a) aborrecem por seu modo de beber">
+            >
+            ["id0.13"] = <
+                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
+                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
+            >
+            ["id0.15"] = <
+                text = <"Sente culpado pela maneira como costuma beber">
+                description = <"Sente culpado pela maneira como costuma beber">
             >
         >
     >
