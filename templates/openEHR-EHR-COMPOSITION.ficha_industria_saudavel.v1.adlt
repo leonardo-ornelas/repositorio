@@ -66,6 +66,7 @@ definition
             use_archetype SECTION[id0.30, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-013.v1.0.0]
             use_archetype SECTION[id0.31, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-014.v1.0.0]
             use_archetype SECTION[id0.32, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-015.v1.0.0]
+            use_archetype SECTION[id0.33, openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-016.v1.0.0]
         }
     }
 
@@ -5056,6 +5057,66 @@ terminology
             ["id7.0.1"] = <
                 text = <"Fatores habilitadores">
                 description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-SECTION.ovl-ficha_industria_saudavel-adhoc-016.v1.0.0
+
+specialize
+    openEHR-EHR-SECTION.adhoc.v1.0.0
+
+definition
+    SECTION[id1.1] matches {    -- Adhoc Heading
+        items matches {
+            use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-etiqueta__dados_cadastrais_termo_consentimento-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Adhoc Heading">
+                description = <"A generic heading for contextual renaming within a template.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Etiqueta com dados cadastrais para o termo de consentimento">
+                description = <"Bloco para registro de cados contidos na etiqueta do termo de consentimento">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ADMIN_ENTRY.ovl-ficha_industria_saudavel-etiqueta__dados_cadastrais_termo_consentimento-001.v1.0.0
+
+specialize
+    openEHR-EHR-ADMIN_ENTRY.etiqueta__dados_cadastrais_termo_consentimento.v1.0.0
+
+definition
+    ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Etiqueta com dados cadastrais do termo consentimento
+        /data[id2]/items[id9]/value[id10]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Etiqueta com dados cadastrais do termo consentimento">
+                description = <"Registre informações sobre os dados cadastrais do termo de consentimento">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"label_data_database_concept_concept">
+                description = <"label_data_database_concept_concept">
             >
         >
     >
