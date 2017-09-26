@@ -248,7 +248,7 @@ definition
             }
             CLUSTER[id95.0.1] occurrences matches {0} matches {    -- Prior patient location
                 items matches {
-                    CLUSTER[id120] occurrences matches {0..1} matches {
+                    CLUSTER[id120.0.1] occurrences matches {0} matches {    -- Facility
                         items matches {
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -1515,6 +1515,10 @@ terminology
                 text = <"Universal ID type">
                 description = <"*">
             >
+            ["id120.0.1"] = <
+                text = <"Facility">
+                description = <"*">
+            >
         >
         ["ar-sy"] = <
             ["id1.1.1"] = <
@@ -1721,6 +1725,10 @@ terminology
                 text = <"نوع العنصر التعريفي الشامل">
                 description = <"*">
             >
+            ["id120.0.1"] = <
+                text = <"المؤسسة">
+                description = <"*">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1925,6 +1933,10 @@ terminology
             >
             ["id108.0.1"] = <
                 text = <"Tipo do Código de Identificação Universal">
+                description = <"*">
+            >
+            ["id120.0.1"] = <
+                text = <"Instalação">
                 description = <"*">
             >
         >
