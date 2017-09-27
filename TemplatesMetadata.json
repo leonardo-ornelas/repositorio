@@ -16,7 +16,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encontro",
     "path" : "templates/openEHR-EHR-COMPOSITION.teste_v2.v1.adlt",
-    "sha" : "6f9923c5b95c89f8ada54d38faa9ef29bc253485"
+    "sha" : "67dfbb1f3871ff87f8e33a0317efeb1c4990b915"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.teste_v3.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -34,7 +34,7 @@
     "rmType" : "COMPOSITION",
     "name" : "*Admission (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
-    "sha" : "12c9e2025d937692ed37eea7f01d1e1afa3b3c89"
+    "sha" : "4538efd1449f71869e298415157242bbaf1a72ba"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -64,7 +64,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.adlt",
-    "sha" : "2419ba31467c44d6c20ce2aa77cd23292d26bbaa"
+    "sha" : "02d02ac2c5d72a1087c73bef87b986555dff2a9d"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.sesifco.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -76,7 +76,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.teste15.v1.adlt",
-    "sha" : "bc0dad89c51140a74a044363e0bc8bbedd767439"
+    "sha" : "5934674fe63d4b5a5dde89135358caf9f3b080f6"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -101,5 +101,23 @@
     "name" : "Medication List",
     "path" : "templates/openEHR-EHR-COMPOSITION.medicacoes.v1.adlt",
     "sha" : "c98dd2185bbe21f1971566d33be1d18b81b68b07"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco_dados_identificacao.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco_dados_identificacao.v1.adlt",
+    "sha" : "23a06ec3f52b7f832be011ae7239cc1aa23f80e9"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
+    "sha" : "83f3f2e2156d3873de2205e998598c8e250e064b"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.identificacao_sesi_fco.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encounter",
+    "path" : "templates/openEHR-EHR-COMPOSITION.identificacao_sesi_fco.v1.adlt",
+    "sha" : "0170ee7474be51998cb6a98a59397d8b6ec5d1ef"
   } ]
 }
