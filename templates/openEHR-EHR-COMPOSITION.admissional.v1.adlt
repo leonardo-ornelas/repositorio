@@ -126,12 +126,10 @@ definition
             ELEMENT[id14] occurrences matches {0..1} matches {
                 /value[id140]/defining_code matches {[ac6]}
             }
-            CLUSTER[id95.1] occurrences matches {0} matches {    -- Prior patient location
+            CLUSTER[id95] occurrences matches {0..1} matches {
                 items matches {
                     CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -139,10 +137,6 @@ definition
                     }
                     CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -150,12 +144,6 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
@@ -168,8 +156,6 @@ definition
             CLUSTER[id99.1] occurrences matches {0}     -- Attending doctor
             CLUSTER[id26] occurrences matches {0..1} matches {
                 items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -177,8 +163,6 @@ definition
             }
             CLUSTER[id122] matches {
                 items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -209,10 +193,6 @@ terminology
                 text = <"Patient admission">
                 description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
             >
-            ["id95.1"] = <
-                text = <"Prior patient location">
-                description = <"The patient location prior admission">
-            >
             ["id99.1"] = <
                 text = <"Attending doctor">
                 description = <"The attending doctor providing services to thepatient">
@@ -223,10 +203,6 @@ terminology
                 text = <"إدخال المريض">
                 description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
             >
-            ["id95.1"] = <
-                text = <"المكان السابق للمريض">
-                description = <"المكان السابق للمريض">
-            >
             ["id99.1"] = <
                 text = <"الطبيب الحاضر">
                 description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
@@ -236,10 +212,6 @@ terminology
             ["id1.1"] = <
                 text = <"Admissão do paciente">
                 description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
-            >
-            ["id95.1"] = <
-                text = <"Localização anterior do paciente">
-                description = <"A localização do paciente antes da admissão.">
             >
             ["id99.1"] = <
                 text = <"Médico assistente">
