@@ -74,18 +74,6 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            SECTION[id8] occurrences matches {0..1} matches {    -- Ficha Indústria Saudável
-                items matches {
-                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
-                        include
-                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
-                    }
-                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
-                        include
-                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.height\.v1\.0\.0/}
-                    }
-                }
-            }
         }
     }
 
@@ -118,18 +106,6 @@ terminology
                 text = <"event">
                 description = <"event">
             >
-            ["id8"] = <
-                text = <"Ficha Indústria Saudável">
-                description = <"Ficha Indústria Saudável">
-            >
-            ["id9"] = <
-                text = <"Peso corporal">
-                description = <"Peso corporal">
-            >
-            ["id10"] = <
-                text = <"Altura / comprimento">
-                description = <"Altura / comprimento">
-            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -151,18 +127,6 @@ terminology
             ["at1"] = <
                 text = <"*event (en)">
                 description = <"*event (en)">
-            >
-            ["id8"] = <
-                text = <"Ficha Indústria Saudável (en)">
-                description = <"Ficha Indústria Saudável (en)">
-            >
-            ["id9"] = <
-                text = <"Peso corporal (en)">
-                description = <"Peso corporal (en)">
-            >
-            ["id10"] = <
-                text = <"Altura / comprimento (en)">
-                description = <"Altura / comprimento (en)">
             >
         >
     >
