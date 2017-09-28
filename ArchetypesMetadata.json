@@ -105,20 +105,6 @@
     "sha" : "e973a24ec96c2efccbbfa2b7f7f30df733c50c48",
     "languages" : [ "en", "sl" ]
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.slots-filled.v1",
-    "rmType" : "COMPOSITION",
-    "name" : "With filled slot",
-    "path" : "archetypes/openEHR-EHR-COMPOSITION.slots-filled.v1.adls",
-    "sha" : "bc2631193ce5529ab853df23561894306a67b955",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.slots.v1",
-    "rmType" : "COMPOSITION",
-    "name" : "Problem list",
-    "path" : "archetypes/openEHR-EHR-COMPOSITION.slots.v1.adls",
-    "sha" : "455bd932d90e88a5bf9a359504bd3392d0af5d82",
-    "languages" : [ "en" ]
-  }, {
     "id" : "openEHR-EHR-COMPOSITION.summary.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Patient summary",
@@ -308,27 +294,6 @@
     "sha" : "85fd0c3c66cf5434550601565775db5a5a953af5",
     "languages" : [ "en", "ar-sy", "pt-br" ]
   }, {
-    "id" : "openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0",
-    "rmType" : "OBSERVATION",
-    "name" : "Tobacco Use",
-    "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco.v1.0.0.adls",
-    "sha" : "6d3d5c61c02ac003d1c1abce0c92e6626840ae67",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-OBSERVATION.substance_use.v1.0.0",
-    "rmType" : "OBSERVATION",
-    "name" : "Substance Use",
-    "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use.v1.0.0.adls",
-    "sha" : "bea87d67ac977d707680e433cb53b7446cdda7ad",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-ACTION.medication.v1.0.0",
-    "rmType" : "ACTION",
-    "name" : "Medication action",
-    "path" : "archetypes/openEHR-EHR-ACTION.medication.v1.0.0.adls",
-    "sha" : "61dd815b7cceb7af52e5dc092296cdcb1f43e66d",
-    "languages" : [ "en", "sl" ]
-  }, {
     "id" : "openEHR-EHR-ACTION.pathology_test.v1.0.0",
     "rmType" : "ACTION",
     "name" : "Pathology test",
@@ -349,9 +314,6 @@
     "path" : "archetypes/openEHR-EHR-CLUSTER.exam-chest.v1.adls",
     "sha" : "7acd2983432811168a201cca1a8b77977bbf9069",
     "languages" : [ "en", "pt-br" ]
-  }, {
-    "path" : "archetypes/openEHR-EHR-CLUSTER.lab-restricted_devices.v1.adls",
-    "sha" : "ebb7a42c3bab6924fe7f8c2f5d1fc87eca0b4af2"
   }, {
     "id" : "openEHR-EHR-CLUSTER.medication_ingredients.v1.0.0",
     "rmType" : "CLUSTER",
@@ -380,9 +342,6 @@
     "path" : "archetypes/openEHR-EHR-COMPOSITION.obstetric_history.v1.adls",
     "sha" : "291778e28d7f3708f8399b8561c5f2c3797b3c27",
     "languages" : [ "en" ]
-  }, {
-    "path" : "archetypes/openEHR-EHR-ELEMENT.lab-method_device.v1.adls",
-    "sha" : "9a7c93f60c3661cf0d0fc8843e629a3e3b37e1a8"
   }, {
     "id" : "openEHR-EHR-EVALUATION.alcohol_use_summary.v1.0.0",
     "rmType" : "EVALUATION",
@@ -797,72 +756,6 @@
     "sha" : "e4eb2bc3cfb53efd61c8b031b2e64cf16806a3f9",
     "languages" : [ "en", "pt-br" ]
   }, {
-    "id" : "openEHR-EHR-SECTION.adverse_list.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Adverse Reaction List",
-    "path" : "archetypes/openEHR-EHR-SECTION.adverse_list.v1.0.0.adls",
-    "sha" : "0f68d9231d5454ecce757c43f0f4566d9ee043aa",
-    "languages" : [ "en", "ru" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.conclusion.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Conclusion",
-    "path" : "archetypes/openEHR-EHR-SECTION.conclusion.v1.0.0.adls",
-    "sha" : "c5b5a639ca062b27a37c911ab4c598375623d810",
-    "languages" : [ "en", "ru" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.diagnostic_reports.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Diagnostic Reports",
-    "path" : "archetypes/openEHR-EHR-SECTION.diagnostic_reports.v1.0.0.adls",
-    "sha" : "ddcfd72582d74e618114a5db31757345c3adc1f3",
-    "languages" : [ "en", "ru" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.medication_order_list.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Medication Order List",
-    "path" : "archetypes/openEHR-EHR-SECTION.medication_order_list.v1.0.0.adls",
-    "sha" : "8e051367c58760287b94aea201db88a05b72e35e",
-    "languages" : [ "en", "ru" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.problem_list.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Problem List",
-    "path" : "archetypes/openEHR-EHR-SECTION.problem_list.v1.0.0.adls",
-    "sha" : "d3e84ece7e690ecd2135ccf79dbec7b0e35dd914",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.referral_details.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Referral Details",
-    "path" : "archetypes/openEHR-EHR-SECTION.referral_details.v1.0.0.adls",
-    "sha" : "e50e3112e3b49b3963a0f896a513e6cb363eba92",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.section_parent.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Physical examination",
-    "path" : "archetypes/openEHR-EHR-SECTION.section_parent.v1.0.0.adls",
-    "sha" : "6b178cec55e3dae71e35b9a33021cd09a6574291",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-SECTION.soap.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "SOAP",
-    "path" : "archetypes/openEHR-EHR-SECTION.soap.v1.0.0.adls",
-    "sha" : "9da761d6527d033c4b35691221cc38dbb2cbfd8f",
-    "languages" : [ "en" ]
-  }, {
-    "path" : "archetypes/openEHR-EHR-SECTION.t_patient_event_info_ds_sf.v1.0.0.adls",
-    "sha" : "72b8ec3880ca05bbfd2db3e13460cf4485679410"
-  }, {
-    "id" : "openEHR-EHR-SECTION.vital_signs.v1.0.0",
-    "rmType" : "SECTION",
-    "name" : "Vital signs",
-    "path" : "archetypes/openEHR-EHR-SECTION.vital_signs.v1.0.0.adls",
-    "sha" : "e3badbee42c4f93501d237d7f360a01d9b421394",
-    "languages" : [ "en", "de", "ko" ]
-  }, {
     "id" : "openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Antecedentes_ginecologico_urologico",
@@ -945,20 +838,6 @@
     "path" : "archetypes/openEHR-EHR-EVALUATION.nutrition_summary.v1.adls",
     "sha" : "2014651ff9f899f4954c0ae9bc0d9bd13e13ee94",
     "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0",
-    "rmType" : "PARTY_IDENTITY",
-    "name" : "Person name",
-    "path" : "archetypes/openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0.adls",
-    "sha" : "bc5eb18622848e2dc0af96a64d83045735cbeb3a",
-    "languages" : [ "en" ]
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.medication_list.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Medication List",
-    "path" : "archetypes/openEHR-EHR-COMPOSITION.medication_list.v1.0.0.adls",
-    "sha" : "62c54d4a57296242be8d1db4450107270dd0e794",
-    "languages" : [ "en", "es-ar" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.social_summary.v1.0.0",
     "rmType" : "EVALUATION",
@@ -1134,5 +1013,68 @@
     "path" : "archetypes/openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.adls",
     "sha" : "12f5715fd3c8520c52203ffe865a206f4908bf35",
     "languages" : [ "pt-br", "en" ]
+  }, {
+    "id" : "openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0",
+    "rmType" : "PARTY_IDENTITY",
+    "name" : "Person name",
+    "path" : "archetypes/openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.adls",
+    "sha" : "bc5eb18622848e2dc0af96a64d83045735cbeb3a",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.adverse_list.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Adverse Reaction List",
+    "path" : "archetypes/openEHR-EHR-SECTION.adverse_list.v1.adls",
+    "sha" : "0f68d9231d5454ecce757c43f0f4566d9ee043aa",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.conclusion.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Conclusion",
+    "path" : "archetypes/openEHR-EHR-SECTION.conclusion.v1.adls",
+    "sha" : "c5b5a639ca062b27a37c911ab4c598375623d810",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.diagnostic_reports.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Diagnostic Reports",
+    "path" : "archetypes/openEHR-EHR-SECTION.diagnostic_reports.v1.adls",
+    "sha" : "ddcfd72582d74e618114a5db31757345c3adc1f3",
+    "languages" : [ "en", "ru" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.problem_list.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Problem List",
+    "path" : "archetypes/openEHR-EHR-SECTION.problem_list.v1.adls",
+    "sha" : "d3e84ece7e690ecd2135ccf79dbec7b0e35dd914",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.referral_details.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Referral Details",
+    "path" : "archetypes/openEHR-EHR-SECTION.referral_details.v1.adls",
+    "sha" : "e50e3112e3b49b3963a0f896a513e6cb363eba92",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.section_parent.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Physical examination",
+    "path" : "archetypes/openEHR-EHR-SECTION.section_parent.v1.adls",
+    "sha" : "6b178cec55e3dae71e35b9a33021cd09a6574291",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.soap.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "SOAP",
+    "path" : "archetypes/openEHR-EHR-SECTION.soap.v1.adls",
+    "sha" : "9da761d6527d033c4b35691221cc38dbb2cbfd8f",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-SECTION.vital_signs.v1.0.0",
+    "rmType" : "SECTION",
+    "name" : "Vital signs",
+    "path" : "archetypes/openEHR-EHR-SECTION.vital_signs.v1.adls",
+    "sha" : "e3badbee42c4f93501d237d7f360a01d9b421394",
+    "languages" : [ "en", "de", "ko" ]
   } ]
 }
