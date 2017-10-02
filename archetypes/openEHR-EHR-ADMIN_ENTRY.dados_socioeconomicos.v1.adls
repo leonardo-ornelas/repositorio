@@ -375,6 +375,38 @@ terminology
                 text = <"Acesso à internet">
                 description = <"Acesso à internet">
             >
+            ["at32"] = <
+                text = <">10">
+                description = <">10">
+            >
+            ["at33"] = <
+                text = <"<10">
+                description = <"<10">
+            >
+            ["at34"] = <
+                text = <"<1 SM">
+                description = <"<1 SM">
+            >
+            ["at35"] = <
+                text = <">10 SM">
+                description = <">10 SM">
+            >
+            ["at36"] = <
+                text = <"<10 SM">
+                description = <"<10 SM">
+            >
+            ["at37"] = <
+                text = <"De 3 a 5 SM">
+                description = <"De 3 a 5 SM">
+            >
+            ["at38"] = <
+                text = <"5 a 10 SM">
+                description = <"5 a 10 SM">
+            >
+            ["at39"] = <
+                text = <"De 5 a 10 SM">
+                description = <"De 5 a 10 SM">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -478,8 +510,8 @@ terminology
                 description = <"*Maior que 10 SM (pt-br)">
             >
             ["ac2"] = <
-                text = <"*Faixa de renda mensal (pt-br)">
-                description = <"*Faixa de renda mensal (pt-br)">
+                text = <"Faixa de renda mensal (pt-br)">
+                description = <"Faixa de renda mensal (pt-br)">
             >
             ["id10"] = <
                 text = <"Domicile and family data">
@@ -593,6 +625,38 @@ terminology
                 text = <"Internet access">
                 description = <"Internet access">
             >
+            ["at32"] = <
+                text = <">10 (pt-br)">
+                description = <">10 (pt-br)">
+            >
+            ["at33"] = <
+                text = <"<10 (pt-br)">
+                description = <"<10 (pt-br)">
+            >
+            ["at34"] = <
+                text = <"<1 SM (pt-br)">
+                description = <"<1 SM (pt-br)">
+            >
+            ["at35"] = <
+                text = <">10 SM (pt-br)">
+                description = <">10 SM (pt-br)">
+            >
+            ["at36"] = <
+                text = <"<10 SM (pt-br)">
+                description = <"<10 SM (pt-br)">
+            >
+            ["at37"] = <
+                text = <"De 3 a 5 SM (pt-br)">
+                description = <"De 3 a 5 SM (pt-br)">
+            >
+            ["at38"] = <
+                text = <"5 a 10 SM (pt-br)">
+                description = <"5 a 10 SM (pt-br)">
+            >
+            ["at39"] = <
+                text = <"De 5 a 10 SM (pt-br)">
+                description = <"De 5 a 10 SM (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -602,7 +666,7 @@ terminology
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at16", "at17", "at18", "at19", "at20">
+            members = <"at16", "at17", "at35", "at36", "at37", "at39">
         >
         ["ac3"] = <
             id = <"ac3">
