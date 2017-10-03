@@ -307,6 +307,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at35"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -466,8 +470,8 @@ terminology
                 description = <"*Diariamente, 2 ou mais vezes por dia (pt-br)">
             >
             ["ac6"] = <
-                text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
-                description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                text = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
+                description = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
             >
             ["id20"] = <
                 text = <"*Comportamento preventivo (pt-br)">
@@ -513,6 +517,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at35"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -538,7 +546,7 @@ terminology
         >
         ["ac6"] = <
             id = <"ac6">
-            members = <"at22", "at23", "at24", "at25", "at26">
+            members = <"at22", "at23", "at24", "at25", "at26", "at35">
         >
         ["ac7"] = <
             id = <"ac7">
