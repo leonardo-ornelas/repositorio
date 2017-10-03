@@ -4560,6 +4560,10 @@ terminology
                 text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
                 description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
             >
+            ["ac4"] = <
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
             ["id9.1"] = <
                 text = <"Com que freqüência você normalmente come verduras ou saladas cruas (p. ex., alface, rúcula, almeirão, repolho, agrião, couve, tomate, pepino, cenoura)">
                 description = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
@@ -4594,6 +4598,10 @@ terminology
                 text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
                 description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
             >
+            ["ac4"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+            >
             ["id9.1"] = <
                 text = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
                 description = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
@@ -4620,6 +4628,10 @@ terminology
         ["ac3"] = <
             id = <"ac3">
             members = <"at9", "at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
         >
     >
 
