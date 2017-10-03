@@ -6839,6 +6839,7 @@ definition
             ELEMENT[id17.1] occurrences matches {0..1} matches {    -- Nos dias em que você caminhou por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou caminhando por dia
                 value matches {
                     DV_TIME[id18.1] matches {
+                        value
                         value matches {*}
                     }
                 }
@@ -6988,6 +6989,12 @@ terminology
                 text = <"Total time performing vigorous activities per day">
                 description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
             >
+        >
+    >
+    value_sets = <
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at16", "at17", "at18", "at19", "at20">
         >
     >
 
