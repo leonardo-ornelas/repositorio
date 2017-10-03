@@ -6850,6 +6850,13 @@ definition
                     }
                 }
             }
+            ELEMENT[id21.1] occurrences matches {0..1} matches {    -- Nos dias em que você fez essas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou fazendo essas atividades por dia?
+                value matches {
+                    DV_TIME[id22.1] matches {
+                        value matches {*}
+                    }
+                }
+            }
             ELEMENT[id23.1] occurrences matches {0..1} matches {    -- Em quantos dias da última semana você realizou atividades MODERADAS por pelo menos 10 minutos contínuos, como por exemplo pedalar leve na bicicleta, nadar, dançar... (se necessário dê mais exemplos: fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos leves, fazer serviços domésticos em casa, no quintal ou no jardim como varrer, aspirar, cuidar do jardim) ou qualquer atividade que fez aumentar moderadamente sua respiração ou batimentos do coração (POR FAVOR NÃO INCLUA CAMINHADA)
                 value matches {
                     DV_CODED_TEXT[id30.1] matches {
@@ -6927,6 +6934,10 @@ terminology
                 text = <"Em quantos dias da última semana, você realizou atividades VIGOROSAS por pelo menos 10 minutos contínuos como, por exemplo, correr, fazer ginástica aeróbica, jogar futebol... (se necessário dê mais exemplos, pedalar rápido na bicicleta, jogar basquete, fazer serviços domésticos pesados em casa, no quintal ou cavoucar no jardim, carregar pesos elevados) ou qualquer atividade que fez aumentar muito sua respiração ou batimentos do coração?">
                 description = <"Quantos dias / semana são realizadas atividades físicas vigorosas">
             >
+            ["id21.1"] = <
+                text = <"Nos dias em que você fez essas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou fazendo essas atividades por dia?">
+                description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -6972,6 +6983,10 @@ terminology
             ["id24.1"] = <
                 text = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
                 description = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
+            >
+            ["id21.1"] = <
+                text = <"Total time performing vigorous activities per day">
+                description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
             >
         >
     >
