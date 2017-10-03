@@ -407,6 +407,10 @@ terminology
                 text = <"De 5 a 10 SM">
                 description = <"De 5 a 10 SM">
             >
+            ["at40"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -656,6 +660,10 @@ terminology
             ["at39"] = <
                 text = <"De 5 a 10 SM (pt-br)">
                 description = <"De 5 a 10 SM (pt-br)">
+            >
+            ["at40"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
             >
         >
     >
