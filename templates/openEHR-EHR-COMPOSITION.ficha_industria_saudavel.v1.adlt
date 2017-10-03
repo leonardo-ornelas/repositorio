@@ -384,6 +384,26 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -721,6 +741,46 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -925,6 +985,66 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
                     use_node ELEMENT /data[id2]/items[id74]/items[id80]
                     use_node ELEMENT /data[id2]/items[id74]/items[id102]
@@ -2000,6 +2120,26 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -2058,6 +2198,26 @@ definition
             }
             CLUSTER[id122.0.1] occurrences matches {0} matches {    -- Consulting doctor
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -2385,6 +2545,26 @@ definition
             }
             CLUSTER[id52.0.1] occurrences matches {0} matches {    -- Admitting doctor
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -3924,19 +4104,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -6656,14 +6836,40 @@ definition
                     }
                 }
             }
-            ELEMENT[id23] occurrences matches {0..1} matches {
-                /value[id30]/defining_code matches {[ac4]}
+            ELEMENT[id17.1] occurrences matches {0..1} matches {    -- Nos dias em que você caminhou por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou caminhando por dia
+                value matches {
+                    DV_TIME[id18.1] matches {
+                        value matches {*}
+                    }
+                }
             }
-            ELEMENT[id24] occurrences matches {0..1} matches {
-                /value[id31]/defining_code matches {[ac4]}
+            ELEMENT[id19.1] occurrences matches {0..1} matches {    --  Nos dias em que você fez essas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total você gastou fazendo essas atividades por dia
+                value matches {
+                    DV_TIME[id20.1] matches {
+                        value matches {*}
+                    }
+                }
             }
-            ELEMENT[id25] occurrences matches {0..1} matches {
-                /value[id32]/defining_code matches {[ac4]}
+            ELEMENT[id23.1] occurrences matches {0..1} matches {    -- Em quantos dias da última semana você realizou atividades MODERADAS por pelo menos 10 minutos contínuos, como por exemplo pedalar leve na bicicleta, nadar, dançar... (se necessário dê mais exemplos: fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos leves, fazer serviços domésticos em casa, no quintal ou no jardim como varrer, aspirar, cuidar do jardim) ou qualquer atividade que fez aumentar moderadamente sua respiração ou batimentos do coração (POR FAVOR NÃO INCLUA CAMINHADA)
+                value matches {
+                    DV_CODED_TEXT[id30.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
+            }
+            ELEMENT[id24.1] occurrences matches {0..1} matches {    -- Em quantos dias da última semana, você realizou atividades VIGOROSAS por pelo menos 10 minutos contínuos como, por exemplo, correr, fazer ginástica aeróbica, jogar futebol... (se necessário dê mais exemplos, pedalar rápido na bicicleta, jogar basquete, fazer serviços domésticos pesados em casa, no quintal ou cavoucar no jardim, carregar pesos elevados) ou qualquer atividade que fez aumentar muito sua respiração ou batimentos do coração?
+                value matches {
+                    DV_CODED_TEXT[id31.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
+            }
+            ELEMENT[id25.1] occurrences matches {0..1} matches {    -- Em quantos dias da última semana você CAMINHOU por pelo menos 10 minutos contínuos em casa ou no trabalho, como forma de transporte para ir de um lugar para outro, por lazer, por prazer ou como forma de exercício
+                value matches {
+                    DV_CODED_TEXT[id32.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
             }
             ELEMENT[id26] occurrences matches {0..1} matches {
                 /value[id29]/defining_code matches {[ac3]}
@@ -6701,6 +6907,26 @@ terminology
                 text = <"Atividade física praticada fora do trabalho">
                 description = <"Atividade física praticada fora do trabalho">
             >
+            ["id17.1"] = <
+                text = <"Nos dias em que você caminhou por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou caminhando por dia">
+                description = <"Tempo total gasto com caminhada por dia">
+            >
+            ["id25.1"] = <
+                text = <"Em quantos dias da última semana você CAMINHOU por pelo menos 10 minutos contínuos em casa ou no trabalho, como forma de transporte para ir de um lugar para outro, por lazer, por prazer ou como forma de exercício">
+                description = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos">
+            >
+            ["id23.1"] = <
+                text = <"Em quantos dias da última semana você realizou atividades MODERADAS por pelo menos 10 minutos contínuos, como por exemplo pedalar leve na bicicleta, nadar, dançar... (se necessário dê mais exemplos: fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos leves, fazer serviços domésticos em casa, no quintal ou no jardim como varrer, aspirar, cuidar do jardim) ou qualquer atividade que fez aumentar moderadamente sua respiração ou batimentos do coração (POR FAVOR NÃO INCLUA CAMINHADA)">
+                description = <"Quantos dias / semana são realizadas atividades físicas moderadas">
+            >
+            ["id19.1"] = <
+                text = <" Nos dias em que você fez essas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total você gastou fazendo essas atividades por dia">
+                description = <"Nos dias em que foram realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+            ["id24.1"] = <
+                text = <"Em quantos dias da última semana, você realizou atividades VIGOROSAS por pelo menos 10 minutos contínuos como, por exemplo, correr, fazer ginástica aeróbica, jogar futebol... (se necessário dê mais exemplos, pedalar rápido na bicicleta, jogar basquete, fazer serviços domésticos pesados em casa, no quintal ou cavoucar no jardim, carregar pesos elevados) ou qualquer atividade que fez aumentar muito sua respiração ou batimentos do coração?">
+                description = <"Quantos dias / semana são realizadas atividades físicas vigorosas">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -6726,6 +6952,26 @@ terminology
             ["id15.1"] = <
                 text = <"*Atividade física praticada fora do trabalho (pt-br)">
                 description = <"*Atividade física praticada fora do trabalho (pt-br)">
+            >
+            ["id17.1"] = <
+                text = <"*Tempo total gasto com caminhada por dia (pt-br)">
+                description = <"*Tempo total gasto com caminhada por dia (pt-br)">
+            >
+            ["id25.1"] = <
+                text = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos (pt-br)">
+                description = <"Quantos dias / semana são realizadas caminhadas por pelo menos 10 minutos (pt-br)">
+            >
+            ["id23.1"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas moderadas (pt-br)">
+                description = <"Quantos dias / semana são realizadas atividades físicas moderadas (pt-br)">
+            >
+            ["id19.1"] = <
+                text = <"Total time spent doing moderate activities per day.">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
+            >
+            ["id24.1"] = <
+                text = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
+                description = <"Quantos dias / semana são realizadas atividades físicas vigorosas (pt-br)">
             >
         >
     >
