@@ -2998,8 +2998,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id5] occurrences matches {1} matches {
-                /value[id6]/value matches {True, False}
+            ELEMENT[id5.1] occurrences matches {1} matches {    -- Atualmente você frequenta escola
+                value matches {
+                    DV_BOOLEAN[id6.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
             ELEMENT[id7] occurrences matches {1} matches {
                 /value[id8]/defining_code matches {[ac2]}
@@ -3065,6 +3069,10 @@ terminology
                 text = <"Qual o último ano escola que você terminou">
                 description = <"Informe o nível de escolaridade">
             >
+            ["id5.1"] = <
+                text = <"Atualmente você frequenta escola">
+                description = <"Informe se atualmente frequenta a escola">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -3075,6 +3083,16 @@ terminology
                 text = <"Level of schooling">
                 description = <"Please state the level of education">
             >
+            ["id5.1"] = <
+                text = <"Currently attending school">
+                description = <"Please tell us if you currently attend school">
+            >
+        >
+    >
+    value_sets = <
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at16", "at17", "at35", "at36", "at37", "at39">
         >
     >
 
