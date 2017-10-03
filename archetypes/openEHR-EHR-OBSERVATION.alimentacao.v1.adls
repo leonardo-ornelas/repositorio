@@ -311,6 +311,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at36"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -494,8 +498,8 @@ terminology
                 description = <"*Sempre ou quase sempre (pt-br)">
             >
             ["ac7"] = <
-                text = <"*Proteção solar (pt-br)">
-                description = <"*Proteção solar (pt-br)">
+                text = <"Proteção solar (pt-br)">
+                description = <"Proteção solar (pt-br)">
             >
             ["at30"] = <
                 text = <"NS/NR (pt-br)">
@@ -518,6 +522,10 @@ terminology
                 description = <"NS/NR (pt-br)">
             >
             ["at35"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at36"] = <
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
@@ -550,7 +558,7 @@ terminology
         >
         ["ac7"] = <
             id = <"ac7">
-            members = <"at27", "at28", "at29">
+            members = <"at27", "at28", "at29", "at36">
         >
     >
 
