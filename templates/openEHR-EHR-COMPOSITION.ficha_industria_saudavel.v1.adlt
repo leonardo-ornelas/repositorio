@@ -4511,8 +4511,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id11] occurrences matches {1} matches {
-                /value[id12]/defining_code matches {[ac3]}
+            ELEMENT[id11.1] occurrences matches {1} matches {    -- Quando você come frango, o que normalmente faz com a pele
+                value matches {
+                    DV_CODED_TEXT[id12.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
             ELEMENT[id13] occurrences matches {1} matches {
                 /value[id14]/defining_code matches {[ac4]}
@@ -4544,9 +4548,21 @@ terminology
                 text = <"Com que freqüência você normalmente come frutas frescas">
                 description = <"Com que frequência o trabalhador normalmente come frutas frescas.">
             >
+            ["ac2"] = <
+                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["ac3"] = <
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
+            >
             ["id9.1"] = <
                 text = <"Com que freqüência você normalmente come verduras ou saladas cruas (p. ex., alface, rúcula, almeirão, repolho, agrião, couve, tomate, pepino, cenoura)">
                 description = <"Com que frequência o trabalhador normalmente come verduras ou saladas cruas.">
+            >
+            ["id11.1"] = <
+                text = <"Quando você come frango, o que normalmente faz com a pele">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
             >
         >
         ["en"] = <
@@ -4562,9 +4578,21 @@ terminology
                 text = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
                 description = <"*Com que frequência o trabalhador normalmente come frutas frescas. (pt-br)">
             >
+            ["ac2"] = <
+                text = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
             ["id9.1"] = <
                 text = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
                 description = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+            >
+            ["id11.1"] = <
+                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
             >
         >
     >
@@ -4572,6 +4600,14 @@ terminology
         ["ac1"] = <
             id = <"ac1">
             members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at9", "at10", "at11", "at12", "at13">
         >
     >
 
