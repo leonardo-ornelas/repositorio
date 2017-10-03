@@ -291,6 +291,14 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at31"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at32"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -346,8 +354,8 @@ terminology
                 description = <"*Com que frequência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
             >
             ["ac2"] = <
-                text = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
-                description = <"*Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                text = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
+                description = <"Com que freqüência o trabalhador normalmente come verduras ou saladas cruas. (pt-br)">
             >
             ["id11"] = <
                 text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
@@ -374,8 +382,8 @@ terminology
                 description = <"*Não come frango (pt-br)">
             >
             ["ac3"] = <
-                text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
-                description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                text = <"Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+                description = <"Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
             >
             ["id13"] = <
                 text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
@@ -481,6 +489,14 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at31"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at32"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -490,11 +506,11 @@ terminology
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at31">
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at9", "at10", "at11", "at12", "at13">
+            members = <"at9", "at10", "at11", "at12", "at13", "at32">
         >
         ["ac4"] = <
             id = <"ac4">
