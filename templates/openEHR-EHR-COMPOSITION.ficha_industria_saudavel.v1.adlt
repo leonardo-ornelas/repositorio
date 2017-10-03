@@ -3381,8 +3381,12 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id16] occurrences matches {1} matches {
-                        /value[id17]/defining_code matches {[ac4]}
+                    ELEMENT[id16.1] occurrences matches {1} matches {    -- Quantas pessoas, incluindo você, vivem na casa
+                        value matches {
+                            DV_CODED_TEXT[id17.1] matches {
+                                defining_code matches {[ac4]}
+                            }
+                        }
                     }
                     ELEMENT[id18] occurrences matches {1} matches {
                         /value[id19]/value matches {True, False}
@@ -3449,6 +3453,10 @@ terminology
                 text = <"A casa onde você mora é">
                 description = <"Tipo de residência">
             >
+            ["id16.1"] = <
+                text = <"Quantas pessoas, incluindo você, vivem na casa">
+                description = <"Quantas pessoas vivem na casa">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -3470,6 +3478,10 @@ terminology
             ["id14.1"] = <
                 text = <"Type of residence">
                 description = <"Type of residence">
+            >
+            ["id16.1"] = <
+                text = <"How many people live in the house">
+                description = <"How many people live in the house">
             >
         >
     >
