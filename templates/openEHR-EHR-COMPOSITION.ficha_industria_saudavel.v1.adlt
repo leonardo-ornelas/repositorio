@@ -4518,8 +4518,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id13] occurrences matches {1} matches {
-                /value[id14]/defining_code matches {[ac4]}
+            ELEMENT[id13.1] occurrences matches {1} matches {    -- Quando você come carne vermelha o que normalmente faz com a gordura aparente?
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
             }
             ELEMENT[id15] occurrences matches {1} matches {
                 /value[id16]/defining_code matches {[ac5]}
@@ -4564,6 +4568,10 @@ terminology
                 text = <"Quando você come frango, o que normalmente faz com a pele">
                 description = <"Quando o trabalhador come frango, o que normalmente faz com a pele.">
             >
+            ["id13.1"] = <
+                text = <"Quando você come carne vermelha o que normalmente faz com a gordura aparente?">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente.">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -4593,6 +4601,10 @@ terminology
             ["id11.1"] = <
                 text = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
                 description = <"*Quando o trabalhador come frango, o que normalmente faz com a pele. (pt-br)">
+            >
+            ["id13.1"] = <
+                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
             >
         >
     >
