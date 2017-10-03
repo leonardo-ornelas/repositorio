@@ -62,8 +62,8 @@ definition
                     }
                     ELEMENT[id17] occurrences matches {0..1} matches {    -- Tempo total gasto com caminhada por dia
                         value matches {
-                            DV_DATE_TIME[id18] matches {
-                                value
+                            DV_TIME[id33] matches {
+                                value matches {*}
                             }
                         }
                     }
@@ -316,6 +316,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at30"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -510,6 +514,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at30"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -523,7 +531,7 @@ terminology
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at16", "at17", "at18", "at19", "at20">
+            members = <"at16", "at17", "at18", "at19", "at20", "at30">
         >
         ["ac4"] = <
             id = <"ac4">
