@@ -415,6 +415,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at42"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -673,6 +677,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at42"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -682,7 +690,7 @@ terminology
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at16", "at17", "at35", "at36", "at37", "at39">
+            members = <"at16", "at17", "at35", "at36", "at37", "at39", "at42">
         >
         ["ac3"] = <
             id = <"ac3">
