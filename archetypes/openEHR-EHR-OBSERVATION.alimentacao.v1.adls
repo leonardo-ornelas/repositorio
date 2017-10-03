@@ -303,6 +303,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at34"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -434,8 +438,8 @@ terminology
                 description = <"*Sempre ou quase sempre, mesmo sem provar (pt-br)">
             >
             ["ac5"] = <
-                text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
-                description = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                text = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
+                description = <"Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
             >
             ["id17"] = <
                 text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
@@ -505,6 +509,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at34"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -526,7 +534,7 @@ terminology
         >
         ["ac5"] = <
             id = <"ac5">
-            members = <"at19", "at20", "at21">
+            members = <"at19", "at20", "at21", "at34">
         >
         ["ac6"] = <
             id = <"ac6">
