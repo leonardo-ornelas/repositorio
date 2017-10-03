@@ -3575,7 +3575,7 @@ definition
                             }
                         }
                     }
-                    CLUSTER[id20] occurrences matches {0..1} matches {
+                    CLUSTER[id20.1] occurrences matches {0..1} matches {    -- Marque a resposta se sua casa tem
                         items matches {
                             ELEMENT[id21] occurrences matches {0..1} matches {
                                 /value[id22]/value matches {True, False}
@@ -3583,8 +3583,12 @@ definition
                             ELEMENT[id23] occurrences matches {0..1} matches {
                                 /value[id24]/value matches {True, False}
                             }
-                            ELEMENT[id25] occurrences matches {0..1} matches {
-                                /value[id26]/value matches {True, False}
+                            ELEMENT[id25.1] occurrences matches {0..1} matches {    -- Fogão de 2 bocas ou mais
+                                value matches {
+                                    DV_BOOLEAN[id26.1] matches {
+                                        value matches {True, False}
+                                    }
+                                }
                             }
                             ELEMENT[id27] occurrences matches {0..1} matches {
                                 /value[id28]/value matches {True, False}
@@ -3645,6 +3649,14 @@ terminology
                 text = <"Você é chefe de família">
                 description = <"Chefe de família">
             >
+            ["id20.1"] = <
+                text = <"Marque a resposta se sua casa tem">
+                description = <"Itens presentes na residência">
+            >
+            ["id25.1"] = <
+                text = <"Fogão de 2 bocas ou mais">
+                description = <"Fogão">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -3674,6 +3686,14 @@ terminology
             ["id18.1"] = <
                 text = <"Householder">
                 description = <"Householder">
+            >
+            ["id20.1"] = <
+                text = <"Items present at the residence">
+                description = <"Items present at the residence">
+            >
+            ["id25.1"] = <
+                text = <"Cooker">
+                description = <"Cooker">
             >
         >
     >
