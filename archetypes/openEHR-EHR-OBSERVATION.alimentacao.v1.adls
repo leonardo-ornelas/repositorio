@@ -299,6 +299,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at33"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -410,8 +414,8 @@ terminology
                 description = <"*Não come carne vermelha (pt-br)">
             >
             ["ac4"] = <
-                text = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
-                description = <"*Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                text = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
+                description = <"Quando o trabalhador come carne vermelha o que normalmente faz com a gordura aparente. (pt-br)">
             >
             ["id15"] = <
                 text = <"*Sem contar as saladas, com que frequência o trabalhador coloca sal no prato de comida. (pt-br)">
@@ -497,6 +501,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at33"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -514,7 +522,7 @@ terminology
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at14", "at15", "at16", "at17", "at18">
+            members = <"at14", "at15", "at16", "at17", "at18", "at33">
         >
         ["ac5"] = <
             id = <"ac5">
