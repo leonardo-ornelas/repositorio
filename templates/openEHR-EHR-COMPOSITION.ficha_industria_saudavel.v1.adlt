@@ -1875,8 +1875,12 @@ definition
                             DV_TEXT[id0.63.1] 
                         }
                     }
-                    ELEMENT[id0.64] occurrences matches {1} matches {
-                        /value[id0.65]/defining_code matches {[ac0.5]}
+                    ELEMENT[id0.64.1] occurrences matches {1} matches {    -- marital status
+                        value matches {
+                            DV_CODED_TEXT[id0.65.1] matches {
+                                defining_code matches {[ac0.5]}
+                            }
+                        }
                     }
                     ELEMENT[id0.66.1] occurrences matches {0} matches {    -- Type of Exam
                         value matches {
@@ -2134,6 +2138,10 @@ terminology
                 text = <"CPF">
                 description = <"CPF">
             >
+            ["id0.64.1"] = <
+                text = <"marital status">
+                description = <"marital status">
+            >
         >
         ["ar-sy"] = <
             ["id1.1.1"] = <
@@ -2352,6 +2360,10 @@ terminology
                 text = <"CPF (en)">
                 description = <"CPF (en)">
             >
+            ["id0.64.1"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -2569,6 +2581,10 @@ terminology
             ["id0.85.1"] = <
                 text = <"CPF">
                 description = <"CPF">
+            >
+            ["id0.64.1"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
             >
         >
     >
