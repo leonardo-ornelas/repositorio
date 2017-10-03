@@ -4968,6 +4968,10 @@ terminology
                 text = <"Durante uma semana normal, com que freqüência você toma refrigerantes ou sucos artificiais (refrescos)">
                 description = <"Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos).">
             >
+            ["ac7"] = <
+                text = <"Proteção solar">
+                description = <"Proteção solar">
+            >
             ["id21.1"] = <
                 text = <"Quando você está em ambiente ensolarado por mais de 30 minutos, com que freqüência você usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol">
                 description = <"Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol.">
@@ -5026,6 +5030,10 @@ terminology
                 text = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
                 description = <"*Durante uma semana normal, com que frequência o trabalhador toma refrigerantes ou sucos artificias (refrescos). (pt-br)">
             >
+            ["ac7"] = <
+                text = <"*Proteção solar (pt-br)">
+                description = <"*Proteção solar (pt-br)">
+            >
             ["id21.1"] = <
                 text = <"*Proteção solar (pt-br)">
                 description = <"*Quando o trabalhador está em ambiente ensolarado por mais de 30 minutos, com que freqüência o trabalhador usa protetor solar, boné ou chapéu, ou outro tipo de proteção contra o sol. (pt-br)">
@@ -5056,6 +5064,10 @@ terminology
         ["ac6"] = <
             id = <"ac6">
             members = <"at22", "at23", "at24", "at25", "at26">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at27", "at28", "at29">
         >
     >
 
@@ -5321,7 +5333,7 @@ terminology
                 description = <"Forma de consumo da substância.">
             >
             ["id19.0.0.2"] = <
-                text = <"Modo de uso">
+                text = <"Com relaçãom ao cigarro, você">
                 description = <"Modo de uso ou consumo da substância.">
             >
         >
