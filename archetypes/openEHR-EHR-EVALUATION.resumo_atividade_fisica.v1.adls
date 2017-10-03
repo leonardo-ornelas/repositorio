@@ -312,6 +312,10 @@ terminology
                 text = <"Dias/semana">
                 description = <"Dias/semana">
             >
+            ["at29"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -502,6 +506,10 @@ terminology
                 text = <"Dias/semana (pt-br)">
                 description = <"Dias/semana (pt-br)">
             >
+            ["at29"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -519,7 +527,7 @@ terminology
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at21", "at22", "at23", "at24", "at25", "at26", "at27", "at28">
+            members = <"at21", "at22", "at23", "at24", "at25", "at26", "at27", "at28", "at29">
         >
     >
 
