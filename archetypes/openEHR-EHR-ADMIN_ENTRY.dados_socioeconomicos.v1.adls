@@ -419,6 +419,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at43"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -546,8 +550,8 @@ terminology
                 description = <"*Emprestada (pt-br)">
             >
             ["ac3"] = <
-                text = <"*Tipo de residência (pt-br)">
-                description = <"*Tipo de residência (pt-br)">
+                text = <"Tipo de residência (pt-br)">
+                description = <"Tipo de residência (pt-br)">
             >
             ["id16"] = <
                 text = <"How many people live in the house">
@@ -681,6 +685,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at43"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -694,7 +702,7 @@ terminology
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at21", "at22", "at23">
+            members = <"at21", "at22", "at23", "at43">
         >
         ["ac4"] = <
             id = <"ac4">
