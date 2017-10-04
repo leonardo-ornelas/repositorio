@@ -620,7 +620,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Tobacco Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
-    "sha" : "afac7e66e4ff0a75b97039917b23067fff13d333",
+    "sha" : "df6492ed1cab5c531b4a49593cc4301b0914156b",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure.v1.0.0",
@@ -850,7 +850,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Patient admission",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission_SESI-BR.v1.adls",
-    "sha" : "08416141d96177777853e9448f46640e837c4d21",
+    "sha" : "58eb8e3d5809223f05bb1ed994fe09863526c882",
     "languages" : [ "en", "ar-sy", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.aplicacao_pesquisa.v1.0.0",
@@ -864,7 +864,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Dados socioeconômicos",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.adls",
-    "sha" : "35ce57ddcc50b9b1cd25dc417d05bfe18a0dcc60",
+    "sha" : "df7210b75e71f7dee7bdbdb3e89fd4cd65d8257d",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.dados.v1.0.0",
@@ -892,7 +892,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alimentacao",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alimentacao.v1.adls",
-    "sha" : "08ce8337bc237df76e571d5ef0eda11b27d22347",
+    "sha" : "71930bd6c0619d05b628fd776da5978056c10618",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.dados_avaliador.v1.0.0",
@@ -927,7 +927,7 @@
     "rmType" : "EVALUATION",
     "name" : "Resumo da atividade física",
     "path" : "archetypes/openEHR-EHR-EVALUATION.resumo_atividade_fisica.v1.adls",
-    "sha" : "0adf7b78fb8a075118cba497abfc320594ae2a10",
+    "sha" : "16f53a5c525337c7f317013b7cdd87576a9c1b78",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.saude_bucal.v1.0.0",
@@ -941,7 +941,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_DSEV.v1.adls",
-    "sha" : "00d1d3b569e079d6185243a573cf277bb1db6a59",
+    "sha" : "9752f031e5c1f0b0b100cfbc855d8eb0accf5a26",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.comorbidade_referida.v1.0.0",
@@ -990,7 +990,7 @@
     "rmType" : "OBSERVATION",
     "name" : "qualidade_vida",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.qualidade_vida.v1.adls",
-    "sha" : "ef7fcbee4cb8dcd07b13f574c1d37e39c4dca3cd",
+    "sha" : "ebf3c4af8b82a2e45694a70c1cc8e473db449786",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.uso_de_alcool.v1.0.0",
@@ -1004,14 +1004,14 @@
     "rmType" : "OBSERVATION",
     "name" : "uso_medicamento",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.uso_medicamento.v1.adls",
-    "sha" : "ea57db87795bff01ad4f8e6f7a987c89d65fda62",
+    "sha" : "2537e535613ab2c7d78cbc766aeedd35d1369ff9",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Utilização Serviços de Saúde",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.adls",
-    "sha" : "12f5715fd3c8520c52203ffe865a206f4908bf35",
+    "sha" : "7c39da9ff675a45399722595439ce5e59c4f61fc",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-DEMOGRAPHIC-PARTY_IDENTITY.t_person_name_simple.v1.0.0",
