@@ -7745,17 +7745,33 @@ definition
                     }
                 }
             }
-            ELEMENT[id10] occurrences matches {1} matches {
-                /value[id11]/defining_code matches {[ac1]}
+            ELEMENT[id10.1] occurrences matches {1} matches {    -- Você tem achado que está tendo um papel útil na vida de alguém
+                value matches {
+                    DV_CODED_TEXT[id11.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id12] occurrences matches {1} matches {
-                /value[id13]/defining_code matches {[ac1]}
+            ELEMENT[id12.1] occurrences matches {1} matches {    -- Você tem se sentido capaz de tomar decisões
+                value matches {
+                    DV_CODED_TEXT[id13.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id14] occurrences matches {1} matches {
-                /value[id15]/defining_code matches {[ac2]}
+            ELEMENT[id14.1] occurrences matches {1} matches {    -- Você tem se sentido constantemente agoniado(a) ou tenso(a)
+                value matches {
+                    DV_CODED_TEXT[id15.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id16] occurrences matches {1} matches {
-                /value[id17]/defining_code matches {[ac2]}
+            ELEMENT[id16.1] occurrences matches {1} matches {    -- Você tem notado que está difícil superar suas dificuldades
+                value matches {
+                    DV_CODED_TEXT[id17.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
             ELEMENT[id18] occurrences matches {1} matches {
                 /value[id19]/defining_code matches {[ac1]}
@@ -7797,6 +7813,22 @@ terminology
                 text = <"Você tem perdido muito sono por preocupação">
                 description = <"Perde o sono por preocupação">
             >
+            ["id10.1"] = <
+                text = <"Você tem achado que está tendo um papel útil na vida de alguém">
+                description = <"Entende que tem um papel útil na vida de alguém">
+            >
+            ["id12.1"] = <
+                text = <"Você tem se sentido capaz de tomar decisões">
+                description = <"Se sente capaz de tomar decisões">
+            >
+            ["id14.1"] = <
+                text = <"Você tem se sentido constantemente agoniado(a) ou tenso(a)">
+                description = <"Se sente contentemente agoniado(a) ou tenso(a)">
+            >
+            ["id16.1"] = <
+                text = <"Você tem notado que está difícil superar suas dificuldades">
+                description = <"Percebe que está difícil superar as suas dificuldades">
+            >
         >
         ["en"] = <
             ["id3"] = <
@@ -7810,6 +7842,22 @@ terminology
             ["id8.1"] = <
                 text = <"Perde o sono por preocupação">
                 description = <"Perde o sono por preocupação">
+            >
+            ["id10.1"] = <
+                text = <"Entende que tem um papel útil na vida de alguém">
+                description = <"Entende que tem um papel útil na vida de alguém">
+            >
+            ["id12.1"] = <
+                text = <"Se sente capaz de tomar decisões">
+                description = <"Se sente capaz de tomar decisões">
+            >
+            ["id14.1"] = <
+                text = <"Se sente contentemente agoniado(a) ou tenso(a)">
+                description = <"Se sente contentemente agoniado(a) ou tenso(a)">
+            >
+            ["id16.1"] = <
+                text = <"Percebe que está difícil superar as suas dificuldades">
+                description = <"Percebe que está difícil superar as suas dificuldades">
             >
         >
     >
