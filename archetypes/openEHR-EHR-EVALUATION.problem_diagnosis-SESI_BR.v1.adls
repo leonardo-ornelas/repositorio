@@ -526,28 +526,28 @@ terminology
                 description = <"Problemas/Diagnósticos (en)">
             >
             ["id0.5"] = <
-                text = <"D.P da infância (en)">
-                description = <"D.P da infância (en)">
+                text = <"D.P da infância">
+                description = <"D.P da infância">
             >
             ["id0.7"] = <
-                text = <"Tuberculose (en)">
-                description = <"Tuberculose (en)">
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
             >
             ["id0.9"] = <
-                text = <"Doença pulmonar obstrutiva crônica (en)">
-                description = <"Doença pulmonar obstrutiva crônica (en)">
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
             >
             ["id0.11"] = <
-                text = <"Pneumonia (en)">
-                description = <"Pneumonia (en)">
+                text = <"Pneumonia">
+                description = <"Pneumonia bacteriana não classificada em outra parte (J15)">
             >
             ["id0.13"] = <
-                text = <"Doença sexualmente transmissível (en)">
-                description = <"Doença sexualmente transmissível (en)">
+                text = <"Doença sexualmente transmissível">
+                description = <"Doenças sexualmente transmitidas (A64)">
             >
             ["id0.15"] = <
-                text = <"Hipertensão arterial (en)">
-                description = <"Hipertensão arterial (en)">
+                text = <"Hipertensão arterial">
+                description = <"Doenças hipertensivas (I10 - I15)">
             >
             ["id0.17"] = <
                 text = <"Angina">
