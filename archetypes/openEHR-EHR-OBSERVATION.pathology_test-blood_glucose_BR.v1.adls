@@ -638,12 +638,12 @@ terminology
                 description = <"Detalhes sobre o espécime individual ao qual esses resultados do teste \"Grupo de resultados\" se referem, onde o teste de espécimes múltiplos é necessário.">
             >
             ["id99"] = <
-                text = <"*Pathological Diagnosis (en)">
-                description = <"*Single word, phrase or brief description representing the narrative in the 'Conclusion'. (en)">
+                text = <"Diagnóstico patológico">
+                description = <"Palavra única, frase ou breve descrição que representa a narrativa na \"Conclusão\".">
             >
             ["id58"] = <
-                text = <"*Conclusion (en)">
-                description = <"*Concise and clinically contextualised narrative interpretation of the pathology test results. (en)">
+                text = <"Conclusão">
+                description = <"Interpretação narrativa concisa e clinicamente contextualizada dos resultados do teste de patologia.">
             >
             ["id11"] = <
                 text = <"*Test Result Representation (en)">
