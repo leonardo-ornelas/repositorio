@@ -220,6 +220,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at22"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -335,8 +339,8 @@ terminology
                 description = <"No">
             >
             ["ac4"] = <
-                text = <"*Plano de saúde (pt-br)">
-                description = <"*Plano de saúde (pt-br)">
+                text = <"Plano de saúde (pt-br)">
+                description = <"Plano de saúde (pt-br)">
             >
             ["at19"] = <
                 text = <"NS/NR (pt-br)">
@@ -347,6 +351,10 @@ terminology
                 description = <"NS/NR (pt-br)">
             >
             ["at21"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at22"] = <
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
@@ -367,7 +375,7 @@ terminology
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at14", "at15", "at16", "at17", "at18">
+            members = <"at14", "at15", "at16", "at17", "at18", "at22">
         >
     >
 
