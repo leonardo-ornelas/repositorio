@@ -398,7 +398,7 @@ terminology
                 description = <"Usado pelo menos semanalmente">
             >
             ["at9"] = <
-                text = <"Uso irregular">
+                text = <"Uso eventual">
                 description = <"Usado irregularmente">
             >
             ["at10"] = <
