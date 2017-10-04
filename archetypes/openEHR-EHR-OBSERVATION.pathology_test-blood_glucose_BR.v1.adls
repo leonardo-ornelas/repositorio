@@ -526,20 +526,20 @@ terminology
                 description = <"Medição específica do ponto em tempo, tomada 2 horas após a medição da linha de base e subseqüente desafio da glicose / insulina.">
             >
             ["id0.6"] = <
-                text = <"*Pre-prandial Measurement (en)">
-                description = <"*Measurement taken before a meal. (en)">
-            >
-            ["id0.7"] = <
-                text = <"Medição pré-prandial">
+                text = <"Medição Pre-prandial">
                 description = <"Medição tomada antes de uma refeição.">
             >
+            ["id0.7"] = <
+                text = <"Medição pós-prandial">
+                description = <"Medição tomada após uma refeição.">
+            >
             ["id0.9"] = <
-                text = <"*Fasting State (en)">
-                description = <"*A fasting specimen was used for the measurement. (en)">
+                text = <"Estado de jejum">
+                description = <"Um espécime de jejum foi usado para a medição.">
             >
             ["id1.1"] = <
-                text = <"*Blood Glucose Test Result (en)">
-                description = <"*The findings and interpretation of glucose tests performed on plasma, serum or whole blood. (en)">
+                text = <"Resultado do teste de glicose no sangue">
+                description = <"Os resultados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total.">
             >
             ["id79.1"] = <
                 text = <"*Glucose Result (en)">
