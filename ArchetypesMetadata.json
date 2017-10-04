@@ -1081,7 +1081,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Blood Glucose Test Result",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.pathology_test-blood_glucose_BR.v1.adls",
-    "sha" : "3e5c7640e8743ee88f8a73a5a3320de911cf39d6",
+    "sha" : "6401c97fd030fb8ea0066b5b259bc3f8f910d88d",
     "languages" : [ "en", "pt-br" ]
   } ]
 }
