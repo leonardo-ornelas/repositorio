@@ -299,6 +299,22 @@ terminology
                 text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
                 description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
             >
+            ["at19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at21"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at22"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -334,8 +350,8 @@ terminology
                 description = <"Muito ruim">
             >
             ["ac1"] = <
-                text = <"*Qualidade de vida (pt-br)">
-                description = <"*Qualidade de vida (pt-br)">
+                text = <"Qualidade de vida (pt-br)">
+                description = <"Qualidade de vida (pt-br)">
             >
             ["id8"] = <
                 text = <"Dificuldades do trabalhador na execução de atividades">
@@ -358,8 +374,8 @@ terminology
                 description = <"NÃO Não dificulta de modo algum">
             >
             ["ac2"] = <
-                text = <"*Dificuldade na execução de atividades (pt-br)">
-                description = <"*Dificuldade na execução de atividades (pt-br)">
+                text = <"Dificuldade na execução de atividades (pt-br)">
+                description = <"Dificuldade na execução de atividades (pt-br)">
             >
             ["id11"] = <
                 text = <"Subir vários lances de escada">
@@ -394,8 +410,8 @@ terminology
                 description = <"Nunca">
             >
             ["ac3"] = <
-                text = <"*Tarefas (pt-br)">
-                description = <"*Tarefas (pt-br)">
+                text = <"Tarefas (pt-br)">
+                description = <"Tarefas (pt-br)">
             >
             ["id16"] = <
                 text = <"Quantas vezes a dor interferiu no trabalho">
@@ -422,8 +438,8 @@ terminology
                 description = <"Extremamente">
             >
             ["ac4"] = <
-                text = <"*Interferiu no trabalho (pt-br)">
-                description = <"*Interferiu no trabalho (pt-br)">
+                text = <"Interferiu no trabalho (pt-br)">
+                description = <"Interferiu no trabalho (pt-br)">
             >
             ["id18"] = <
                 text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
@@ -457,24 +473,40 @@ terminology
                 text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
                 description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
             >
+            ["at19"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at20"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at21"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at22"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
-            members = <"at1", "at2", "at3", "at4", "at5">
+            members = <"at1", "at2", "at3", "at4", "at5", "at19">
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at6", "at7", "at8">
+            members = <"at6", "at7", "at8", "at20">
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at9", "at10", "at11", "at12", "at13">
+            members = <"at9", "at10", "at11", "at12", "at13", "at21">
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at14", "at15", "at16", "at17", "at18">
+            members = <"at14", "at15", "at16", "at17", "at18", "at22">
         >
     >
 
