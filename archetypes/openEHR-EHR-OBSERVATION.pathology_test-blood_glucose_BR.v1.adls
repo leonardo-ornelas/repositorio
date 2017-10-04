@@ -658,8 +658,8 @@ terminology
                 description = <"A data e / ou a hora em que o resultado inteiro foi emitido para o 'Status do resultado do teste geral' registrado.">
             >
             ["id18"] = <
-                text = <"*Receiving Laboratory (en)">
-                description = <"*Demographic details of the laboratory with responsibility for the pathology test. (en)">
+                text = <"Laboratório de Recepção">
+                description = <"Dados demográficos do laboratório responsável pelo teste de patologia.">
             >
             ["id95"] = <
                 text = <"*Test Request Details (en)">
