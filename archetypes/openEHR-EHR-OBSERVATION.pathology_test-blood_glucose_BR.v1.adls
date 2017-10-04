@@ -486,24 +486,24 @@ terminology
                 description = <"Dispositivo usado para examinar o paciente">
             >
             ["id0.11"] = <
-                text = <"*Duration of Fasting (en)">
-                description = <"*The duration of fasting completed by the test subject prior to the sample being taken. (en)">
+                text = <"Duração do jejum">
+                description = <"A duração do jejum realizada pelo paciente antes da amostra ser tomada">
             >
             ["id0.12"] = <
-                text = <"*Point of Care Device Used (en)">
-                description = <"*The test was performed using a point of care device or a home-based device. (en)">
+                text = <"Dispositivo de ponto de atendimento utilizado">
+                description = <"O teste foi realizado usando um dispositivo de ponto de atendimento ou um dispositivo doméstico.">
             >
             ["id0.13"] = <
-                text = <"*Glucose Load (en)">
-                description = <"*The amount of glucose administered to the test subject. (en)">
+                text = <"Carga de glicose">
+                description = <"A quantidade de glicose administrada ao sujeito do teste.">
             >
             ["id0.14"] = <
-                text = <"*Insulin Load (en)">
-                description = <"*The amount of insulin administered to the test subject. (en)">
+                text = <"Carga de insulina">
+                description = <"A quantidade de insulina administrada ao sujeito do teste.">
             >
             ["id0.15"] = <
-                text = <"*Route of Administration (en)">
-                description = <"*Route that the glucose was administered. (en)">
+                text = <"Rota de administração">
+                description = <"Via que a glicose foi administrada.">
             >
             ["at0.16"] = <
                 text = <"*Oral (en)">
@@ -514,16 +514,16 @@ terminology
                 description = <"*Glucose load was administered intravenously. (en)">
             >
             ["id0.2"] = <
-                text = <"*Baseline Measurement (en)">
-                description = <"*Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared. (en)">
+                text = <"Medição de Referência">
+                description = <"Medição específica do ponto de tempo que fornece uma leitura de glicose de referência contra a qual as medições subseqüentes podem ser comparadas.">
             >
             ["id0.3"] = <
-                text = <"*1 Hour Measurement (en)">
-                description = <"*Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge. (en)">
+                text = <"Medição de 1 hora">
+                description = <"Medição específica do ponto em tempo, tomada 1 hora após a medição da linha de base e subsequente desafio de glicose / insulina.">
             >
             ["id0.5"] = <
-                text = <"*2 Hour Measurement (en)">
-                description = <"*Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge. (en)">
+                text = <"Medição de 2 horas">
+                description = <"Medição específica do ponto em tempo, tomada 2 horas após a medição da linha de base e subseqüente desafio da glicose / insulina.">
             >
             ["id0.6"] = <
                 text = <"*Pre-prandial Measurement (en)">
