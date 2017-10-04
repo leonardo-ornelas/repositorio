@@ -4546,10 +4546,6 @@ terminology
                 text = <"Recomendações Educativo Preventivas">
                 description = <"Recomendações Educativo Preventivas Qualidade de Vida">
             >
-            ["at1"] = <
-                text = <"Conclusão">
-                description = <"Conclusão">
-            >
             ["id18"] = <
                 text = <"Observações">
                 description = <"Observações">
@@ -4584,10 +4580,7 @@ terminology
                 text = <"Recommendations for Preventive Education Quality of Life">
                 description = <"Recommendations for Preventive Education Quality of Life">
             >
-            ["at1"] = <
-                text = <"Conclusion">
-                description = <"Conclusion">
-            >
+
             ["id18"] = <
                 text = <"Observations">
                 description = <"Observations">
