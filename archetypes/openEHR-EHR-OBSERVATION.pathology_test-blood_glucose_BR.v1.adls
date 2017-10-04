@@ -654,8 +654,8 @@ terminology
                 description = <"Narração adicional sobre o teste não capturado em outros campos.">
             >
             ["id100"] = <
-                text = <"*DateTime Result Issued (en)">
-                description = <"*The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’. (en)">
+                text = <"Date e hora do Resultado emitido">
+                description = <"A data e / ou a hora em que o resultado inteiro foi emitido para o 'Status do resultado do teste geral' registrado.">
             >
             ["id18"] = <
                 text = <"*Receiving Laboratory (en)">
