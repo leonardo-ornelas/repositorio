@@ -670,16 +670,16 @@ terminology
                 description = <"A identificação local atribuída à ordem pelo solicitante da ordem.">
             >
             ["id107"] = <
-                text = <"*Test Requested Name (en)">
-                description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed. (en)">
+                text = <"Nome do Teste Solicitado">
+                description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
             >
             ["id91"] = <
-                text = <"*Requester (en)">
-                description = <"*Details of the clinician or organisation requesting the pathology test result. (en)">
+                text = <"Requerente">
+                description = <"Detalhes do clínico ou organização que solicita o resultado do teste de patologia.">
             >
             ["id64"] = <
-                text = <"*Receiver Order Identifier (en)">
-                description = <"*The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS). (en)">
+                text = <"Identificador de pedido do receptor">
+                description = <"A ID local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo Sistema de Informações do Laboratório (LIS).">
             >
             ["id69"] = <
                 text = <"*Laboratory Test Result Identifier (en)">
