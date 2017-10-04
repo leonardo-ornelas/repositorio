@@ -5964,11 +5964,19 @@ definition
             ELEMENT[id6] occurrences matches {1} matches {
                 /value[id7]/value matches {True, False}
             }
-            ELEMENT[id8] occurrences matches {0..1} matches {
-                /value[id9]/value matches {True, False}
+            ELEMENT[id8.1] occurrences matches {0..1} matches {    -- Você já usou em qualquer época da vida algum medicamento para tratar hipertensão
+                value matches {
+                    DV_BOOLEAN[id9.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
-            ELEMENT[id10] occurrences matches {0..1} matches {
-                /value[id11]/value matches {True, False}
+            ELEMENT[id10.1] occurrences matches {0..1} matches {    -- Você usa atualmente algum medicamento para tratar hipertensão
+                value matches {
+                    DV_BOOLEAN[id11.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
             ELEMENT[id12] occurrences matches {0..1} matches {
                 /value[id13]/defining_code matches {[ac1]}
@@ -5998,11 +6006,27 @@ terminology
                 text = <"Hipertensão">
                 description = <"dados de hipertensão">
             >
+            ["id8.1"] = <
+                text = <"Você já usou em qualquer época da vida algum medicamento para tratar hipertensão">
+                description = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?">
+            >
+            ["id10.1"] = <
+                text = <"Você usa atualmente algum medicamento para tratar hipertensão">
+                description = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Hypertension">
                 description = <"Hypertension">
+            >
+            ["id8.1"] = <
+                text = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
+                description = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
+            >
+            ["id10.1"] = <
+                text = <"Does the worker currently use any medication to treat hypertension?">
+                description = <"Does the worker currently use any medication to treat hypertension?">
             >
         >
     >
