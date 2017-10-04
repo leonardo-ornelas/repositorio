@@ -196,6 +196,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.32] occurrences matches {0..1} matches {    -- Atopia
+                        value matches {
+                            DV_BOOLEAN[id0.33] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -398,6 +405,10 @@ terminology
                 text = <"Hepatite">
                 description = <"Hepatite">
             >
+            ["id0.32"] = <
+                text = <"Atopia">
+                description = <"Dermatite atópica (L20)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -587,6 +598,10 @@ terminology
             ["id0.30"] = <
                 text = <"Hepatite">
                 description = <"Hepatite viral (B15 - B19)">
+            >
+            ["id0.32"] = <
+                text = <"Atopia (en)">
+                description = <"Dermatite atópica (L20) (en)">
             >
         >
     >
