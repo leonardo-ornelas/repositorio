@@ -646,12 +646,12 @@ terminology
                 description = <"Interpretação narrativa concisa e clinicamente contextualizada dos resultados do teste de patologia.">
             >
             ["id11"] = <
-                text = <"*Test Result Representation (en)">
-                description = <"*Rich text representation of the entire result as issued by the diagnostic service. (en)">
+                text = <"Representação do resultado do teste">
+                description = <"Representação em texto rico do resultado completo, conforme emitido pelo serviço de diagnóstico.">
             >
             ["id102"] = <
-                text = <"*Test Comment (en)">
-                description = <"*Additional narrative about the test not captured in other fields. (en)">
+                text = <"Comentário de teste">
+                description = <"Narração adicional sobre o teste não capturado em outros campos.">
             >
             ["id100"] = <
                 text = <"*DateTime Result Issued (en)">
