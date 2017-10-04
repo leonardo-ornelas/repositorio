@@ -126,6 +126,55 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.11] occurrences matches {0..1} matches {    -- Pneumonia
+                        value matches {
+                            DV_BOOLEAN[id0.12] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Doença sexualmente transmissível
+                        value matches {
+                            DV_BOOLEAN[id0.14] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Hipertensão arterial
+                        value matches {
+                            DV_BOOLEAN[id0.16] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.17] occurrences matches {0..1} matches {    -- Angina
+                        value matches {
+                            DV_BOOLEAN[id0.18] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.19] occurrences matches {0..1} matches {    -- Infarto
+                        value matches {
+                            DV_BOOLEAN[id0.20] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.21] occurrences matches {0..1} matches {    -- Diabetes
+                        value matches {
+                            DV_BOOLEAN[id0.22] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.23] occurrences matches {0..1} matches {    -- Dislipidemia
+                        value matches {
+                            DV_BOOLEAN[id0.24] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -288,6 +337,34 @@ terminology
                 text = <"Doença pulmonar obstrutiva crônica">
                 description = <"Doença pulmonar obstrutiva crônica">
             >
+            ["id0.11"] = <
+                text = <"Pneumonia">
+                description = <"Pneumonia">
+            >
+            ["id0.13"] = <
+                text = <"Doença sexualmente transmissível">
+                description = <"Doença sexualmente transmissível">
+            >
+            ["id0.15"] = <
+                text = <"Hipertensão arterial">
+                description = <"Hipertensão arterial">
+            >
+            ["id0.17"] = <
+                text = <"Angina">
+                description = <"Angina">
+            >
+            ["id0.19"] = <
+                text = <"Infarto">
+                description = <"Infarto">
+            >
+            ["id0.21"] = <
+                text = <"Diabetes">
+                description = <"Diabetes">
+            >
+            ["id0.23"] = <
+                text = <"Dislipidemia">
+                description = <"Dislipidemia">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -437,6 +514,34 @@ terminology
             ["id0.9"] = <
                 text = <"Doença pulmonar obstrutiva crônica (en)">
                 description = <"Doença pulmonar obstrutiva crônica (en)">
+            >
+            ["id0.11"] = <
+                text = <"Pneumonia (en)">
+                description = <"Pneumonia (en)">
+            >
+            ["id0.13"] = <
+                text = <"Doença sexualmente transmissível (en)">
+                description = <"Doença sexualmente transmissível (en)">
+            >
+            ["id0.15"] = <
+                text = <"Hipertensão arterial (en)">
+                description = <"Hipertensão arterial (en)">
+            >
+            ["id0.17"] = <
+                text = <"Angina (en)">
+                description = <"Angina (en)">
+            >
+            ["id0.19"] = <
+                text = <"Infarto (en)">
+                description = <"Infarto (en)">
+            >
+            ["id0.21"] = <
+                text = <"Diabetes (en)">
+                description = <"Diabetes (en)">
+            >
+            ["id0.23"] = <
+                text = <"Dislipidemia (en)">
+                description = <"Dislipidemia (en)">
             >
         >
     >
