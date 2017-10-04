@@ -63,21 +63,24 @@ definition
                     ELEMENT[id17] occurrences matches {0..1} matches {    -- Tempo total gasto com caminhada por dia
                         value matches {
                             DV_TIME[id33] matches {
+                                value
                                 value matches {*}
                             }
                         }
                     }
                     ELEMENT[id19] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades moderadas por dia
                         value matches {
-                            DV_DATE_TIME[id20] matches {
+                            DV_TIME[id20] matches {
                                 value
+                                value matches {*}
                             }
                         }
                     }
                     ELEMENT[id21] occurrences matches {0..1} matches {    -- Tempo total gasto com prática de atividades vigorosas por dia
                         value matches {
-                            DV_DATE_TIME[id22] matches {
+                            DV_TIME[id22] matches {
                                 value
+                                value matches {*}
                             }
                         }
                     }
