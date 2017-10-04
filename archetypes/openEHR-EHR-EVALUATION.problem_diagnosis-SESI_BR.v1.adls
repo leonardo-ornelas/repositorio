@@ -203,6 +203,41 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.34] occurrences matches {0..1} matches {    -- Doença hematológica
+                        value matches {
+                            DV_BOOLEAN[id0.35] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.36] occurrences matches {0..1} matches {    -- Doença osteomuscular
+                        value matches {
+                            DV_BOOLEAN[id0.37] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.38] occurrences matches {0..1} matches {    -- Doença reumatológica
+                        value matches {
+                            DV_BOOLEAN[id0.39] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.40] occurrences matches {0..1} matches {    -- Doença neurolǵica
+                        value matches {
+                            DV_BOOLEAN[id0.41] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.42] occurrences matches {0..1} matches {    -- Distúrbio psiquiátrico
+                        value matches {
+                            DV_BOOLEAN[id0.43] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -409,6 +444,26 @@ terminology
                 text = <"Atopia">
                 description = <"Dermatite atópica (L20)">
             >
+            ["id0.34"] = <
+                text = <"Doença hematológica">
+                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
+            >
+            ["id0.36"] = <
+                text = <"Doença osteomuscular">
+                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
+            >
+            ["id0.38"] = <
+                text = <"Doença reumatológica">
+                description = <"Febre reumática aguda (I00 - I02)">
+            >
+            ["id0.40"] = <
+                text = <"Doença neurolǵica">
+                description = <"Doenças do aparelho circulatório (I00 - I99)">
+            >
+            ["id0.42"] = <
+                text = <"Distúrbio psiquiátrico">
+                description = <"Transtornos mentais e comportamentais (F00 - F99)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -602,6 +657,26 @@ terminology
             ["id0.32"] = <
                 text = <"Atopia (en)">
                 description = <"Dermatite atópica (L20) (en)">
+            >
+            ["id0.34"] = <
+                text = <"Doença hematológica (en)">
+                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61) (en)">
+            >
+            ["id0.36"] = <
+                text = <"Doença osteomuscular (en)">
+                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99) (en)">
+            >
+            ["id0.38"] = <
+                text = <"Doença reumatológica (en)">
+                description = <"Febre reumática aguda (I00 - I02) (en)">
+            >
+            ["id0.40"] = <
+                text = <"Doença neurolǵica (en)">
+                description = <"Doenças do aparelho circulatório (I00 - I99) (en)">
+            >
+            ["id0.42"] = <
+                text = <"Distúrbio psiquiátrico (en)">
+                description = <"Transtornos mentais e comportamentais (F00 - F99) (en)">
             >
         >
     >
