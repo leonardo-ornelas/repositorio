@@ -253,6 +253,14 @@ terminology
                 text = <"Tipo">
                 description = <"Tipo">
             >
+            ["at0.18"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at0.19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["pt-br"] = <
             ["at2"] = <
@@ -355,16 +363,24 @@ terminology
                 text = <"Tipo">
                 description = <"Tipo">
             >
+            ["at0.18"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
+            >
+            ["at0.19"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
+            >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
-            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.18">
         >
         ["ac0.2"] = <
             id = <"ac0.2">
-            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10", "at0.19">
         >
         ["ac0.3"] = <
             id = <"ac0.3">
