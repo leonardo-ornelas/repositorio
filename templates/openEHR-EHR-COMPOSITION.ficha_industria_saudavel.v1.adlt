@@ -7731,11 +7731,19 @@ specialize
 definition
     OBSERVATION[id1.1] occurrences matches {1} matches {    -- Questionário geral de saúde (GHQ-12)
         /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id6] occurrences matches {1} matches {
-                /value[id7]/defining_code matches {[ac1]}
+            ELEMENT[id6.1] occurrences matches {1} matches {    -- Você tem sido capaz de se manter atento às coisas que está fazendo
+                value matches {
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id8] occurrences matches {1} matches {
-                /value[id9]/defining_code matches {[ac2]}
+            ELEMENT[id8.1] occurrences matches {1} matches {    -- Você tem perdido muito sono por preocupação
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
             ELEMENT[id10] occurrences matches {1} matches {
                 /value[id11]/defining_code matches {[ac1]}
@@ -7781,11 +7789,27 @@ terminology
                 text = <"Any event">
                 description = <"Any event">
             >
+            ["id6.1"] = <
+                text = <"Você tem sido capaz de se manter atento às coisas que está fazendo">
+                description = <"Se mantém atento as coisas que está fazendo">
+            >
+            ["id8.1"] = <
+                text = <"Você tem perdido muito sono por preocupação">
+                description = <"Perde o sono por preocupação">
+            >
         >
         ["en"] = <
             ["id3"] = <
                 text = <"Any event">
                 description = <"Any event">
+            >
+            ["id6.1"] = <
+                text = <"Se mantém atento as coisas que está fazendo">
+                description = <"Se mantém atento as coisas que está fazendo">
+            >
+            ["id8.1"] = <
+                text = <"Perde o sono por preocupação">
+                description = <"Perde o sono por preocupação">
             >
         >
     >
