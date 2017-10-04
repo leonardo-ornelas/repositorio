@@ -4546,6 +4546,18 @@ terminology
                 text = <"Recomendações Educativo Preventivas">
                 description = <"Recomendações Educativo Preventivas Qualidade de Vida">
             >
+            ["at1"] = <
+                text = <"Conclusão">
+                description = <"Conclusão">
+            >
+            ["id18"] = <
+                text = <"Observações">
+                description = <"Observações">
+            >
+            ["id20"] = <
+                text = <"Observações ASO">
+                description = <"Observações ASO">
+            >
             ["id11.1"] = <
                 text = <"Data da conclusão">
                 description = <"Data da conclusão">
@@ -4571,6 +4583,18 @@ terminology
             ["id1.1"] = <
                 text = <"Recommendations for Preventive Education Quality of Life">
                 description = <"Recommendations for Preventive Education Quality of Life">
+            >
+            ["at1"] = <
+                text = <"Conclusion">
+                description = <"Conclusion">
+            >
+            ["id18"] = <
+                text = <"Observations">
+                description = <"Observations">
+            >
+            ["id20"] = <
+                text = <"Observations ASO">
+                description = <"Observations ASO">
             >
             ["id11.1"] = <
                 text = <"Date of conclusion">
