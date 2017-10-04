@@ -208,6 +208,18 @@ terminology
                 text = <"Plano de saúde">
                 description = <"Plano de saúde">
             >
+            ["at19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at21"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -243,8 +255,8 @@ terminology
                 description = <"10 times or more">
             >
             ["ac1"] = <
-                text = <"*Vezes (pt-br)">
-                description = <"*Vezes (pt-br)">
+                text = <"Vezes (pt-br)">
+                description = <"Vezes (pt-br)">
             >
             ["id8"] = <
                 text = <"When was the last time the worker went to the dentist">
@@ -267,8 +279,8 @@ terminology
                 description = <"Never went to the dentist.">
             >
             ["ac2"] = <
-                text = <"*Visita Dentista (pt-br)">
-                description = <"*Visita Dentista (pt-br)">
+                text = <"Visita Dentista (pt-br)">
+                description = <"Visita Dentista (pt-br)">
             >
             ["id10"] = <
                 text = <"How many times has the worker been hospitalized in the last 12 months">
@@ -295,8 +307,8 @@ terminology
                 description = <"More than 2 years ago">
             >
             ["ac3"] = <
-                text = <"*Pressão (pt-br)">
-                description = <"*Pressão (pt-br)">
+                text = <"Pressão (pt-br)">
+                description = <"Pressão (pt-br)">
             >
             ["id14"] = <
                 text = <"The worker has a health plan">
@@ -326,20 +338,32 @@ terminology
                 text = <"*Plano de saúde (pt-br)">
                 description = <"*Plano de saúde (pt-br)">
             >
+            ["at19"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at20"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at21"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
-            members = <"at1", "at2", "at3", "at4", "at5">
+            members = <"at1", "at2", "at3", "at4", "at5", "at19">
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at6", "at7", "at8", "at9">
+            members = <"at6", "at7", "at8", "at9", "at20">
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at10", "at11", "at12", "at13">
+            members = <"at10", "at11", "at12", "at13", "at21">
         >
         ["ac4"] = <
             id = <"ac4">
