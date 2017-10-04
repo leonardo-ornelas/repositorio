@@ -697,7 +697,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Recomendações Educativo Preventivas",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.adls",
-    "sha" : "a672c26a6c8155f253b2d7ed7083fcfbf0c888cd",
+    "sha" : "7d2e42c40fd5f93a6a4c5630bec8d160289e1da3",
     "languages" : [ "pt-br", "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.exame_fisico.v1.0.0",
@@ -850,7 +850,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Patient admission",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission_SESI-BR.v1.adls",
-    "sha" : "58eb8e3d5809223f05bb1ed994fe09863526c882",
+    "sha" : "3d205ed5a4c05fa9e02ecd4971399ee5acf45ba4",
     "languages" : [ "en", "ar-sy", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.aplicacao_pesquisa.v1.0.0",
@@ -927,7 +927,7 @@
     "rmType" : "EVALUATION",
     "name" : "Resumo da atividade física",
     "path" : "archetypes/openEHR-EHR-EVALUATION.resumo_atividade_fisica.v1.adls",
-    "sha" : "16f53a5c525337c7f317013b7cdd87576a9c1b78",
+    "sha" : "a457aa95d714eb3e1debcf60719fb84270c78175",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.saude_bucal.v1.0.0",
@@ -997,7 +997,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Uso de alcool",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.uso_de_alcool.v1.adls",
-    "sha" : "99eea7c32fd848741a5a166b98d2a26441b14ae9",
+    "sha" : "e4e74c582591d77308470d36bdac90c45dccf4fc",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.uso_medicamento.v1.0.0",
