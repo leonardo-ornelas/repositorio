@@ -238,6 +238,27 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.44] occurrences matches {0..1} matches {    -- Transfusão de sangue
+                        value matches {
+                            DV_BOOLEAN[id0.45] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.46] occurrences matches {0..1} matches {    -- Fratura
+                        value matches {
+                            DV_BOOLEAN[id0.47] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.48] occurrences matches {0..1} matches {    -- Transtorno do sono
+                        value matches {
+                            DV_BOOLEAN[id0.49] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -464,6 +485,18 @@ terminology
                 text = <"Distúrbio psiquiátrico">
                 description = <"Transtornos mentais e comportamentais (F00 - F99)">
             >
+            ["id0.44"] = <
+                text = <"Transfusão de sangue">
+                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
+            >
+            ["id0.46"] = <
+                text = <"Fratura">
+                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
+            >
+            ["id0.48"] = <
+                text = <"Transtorno do sono">
+                description = <"Distúrbios do sono (G47)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -655,28 +688,40 @@ terminology
                 description = <"Hepatite viral (B15 - B19)">
             >
             ["id0.32"] = <
-                text = <"Atopia (en)">
-                description = <"Dermatite atópica (L20) (en)">
+                text = <"Atopia">
+                description = <"Dermatite atópica (L20)">
             >
             ["id0.34"] = <
-                text = <"Doença hematológica (en)">
-                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61) (en)">
+                text = <"Doença hematológica">
+                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
             >
             ["id0.36"] = <
-                text = <"Doença osteomuscular (en)">
-                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99) (en)">
+                text = <"Doença osteomuscular">
+                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
             >
             ["id0.38"] = <
-                text = <"Doença reumatológica (en)">
-                description = <"Febre reumática aguda (I00 - I02) (en)">
+                text = <"Doença reumatológica">
+                description = <"Febre reumática aguda (I00 - I02)">
             >
             ["id0.40"] = <
-                text = <"Doença neurolǵica (en)">
-                description = <"Doenças do aparelho circulatório (I00 - I99) (en)">
+                text = <"Doença neurolǵica">
+                description = <"Doenças do aparelho circulatório (I00 - I99)">
             >
             ["id0.42"] = <
-                text = <"Distúrbio psiquiátrico (en)">
-                description = <"Transtornos mentais e comportamentais (F00 - F99) (en)">
+                text = <"Distúrbio psiquiátrico">
+                description = <"Transtornos mentais e comportamentais (F00 - F99)">
+            >
+            ["id0.44"] = <
+                text = <"Transfusão de sangue">
+                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
+            >
+            ["id0.46"] = <
+                text = <"Fratura">
+                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
+            >
+            ["id0.48"] = <
+                text = <"Transtorno do sono">
+                description = <"Distúrbios do sono (G47)">
             >
         >
     >
