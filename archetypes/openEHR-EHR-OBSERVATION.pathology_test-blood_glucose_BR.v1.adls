@@ -1,0 +1,746 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-OBSERVATION.pathology_test-blood_glucose_BR.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.pathology_test-blood_glucose.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Alexandre Gitirana">
+                ["organisation"] = <"Solutis">
+                ["mail"] = <"alexandre.gitirana@solutis.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"lab", "pathology", "biochemistry", "laboratory", "test", "specimen">
+            language = <[ISO_639-1::en]>
+            misuse = <"Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+
+Not to be used to record urine glucose test results - use OBSERVATION.urinalysis.
+
+Not to be used to record CSF glucose test results - use the generic OBSERVATION.pathology_test with CSF noted as the biological sample.">
+            purpose = <"To record the findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
+            use = <"Use to record any glucose test results performed on plasma, serum or whole blood whether measured in a formal laboratory environment, point of care delivery or home monitoring.
+
+This archetype has been designed to enable the health record to:
+- distinguish between fasting and non-fasting glucose measurements, 
+- distinguish measurements from laboratory, point of care and home-based devices, and;
+- capture the complexity of a sequence of glucose measurements for a Glucose Tolerance Test, Glucose Challenge Test and Insulin Hypoglycaemia StimulationTest via the specific Events and State data elements.
+
+Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+        >
+        ["pt-br"] = <
+            keywords = <"lab", "pathology", "biochemistry", "laboratory", "test", "specimen">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para representar um relatório cumulativo completo. Este arquétipo de resultado de teste de patologia representa apenas um dos conjuntos de resultados que geralmente são vistos como verticais em um relatório de teste cumulativo. Um relatório cumulativo é uma visão que é construída a partir dos resultados representados por vários arquétipos de OBSERVAÇÃO.
+
+Não deve ser usado para registrar os resultados do teste de glicose de urina - use OBSERVAÇÃO. Análise de avaliação.
+
+Não deve ser usado para registrar os resultados do teste de glicose CSF - use o teste genérico OBSERVATION.pathology_test com CSF observado como a amostra biológica. ">
+            purpose = <"Registrar os achados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total. ">
+            use = <"Use para registrar todos os resultados do teste de glicose realizados em plasma, soro ou sangue total, seja medido em um ambiente de laboratório formal, ponto de atendimento ou monitoramento doméstico.
+
+Este arquétipo foi projetado para habilitar o registro de saúde para:
+- distinguir entre medições de glicose em jejum e não jejum,
+- distinguir medidas de laboratório, ponto de atendimento e dispositivos domésticos, e;
+- capturar a complexidade de uma seqüência de medidas de glicose para um teste de tolerância à glicose, teste de desafio de glicose e teste de estimulação de hipoglicemia de insulina através dos eventos específicos e elementos de dados do estado.
+
+Normalmente, será relatado de volta ao clínico solicitante como um componente no contexto de um relatório global baseado em COMPOSIÇÃO.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Ian McNicoll">
+        ["organisation"] = <"Ocean Informatics, United Kingdom">
+        ["email"] = <"ian.mcnicoll@oceaninformatics.com">
+        ["date"] = <"2009-11-07">
+    >
+    other_contributors = <"Koray Atalag, University of Auckland, New Zealand", "Sharmila Biswas, Dr Sharmila Biswas GP, Australia", "Doug Chesher, PaLMS, Australia", "Stephen Chu, NEHTA, Australia (Editor)", "Matthew Cordell, NEHTA, Australia", "Andre de Wolf, NeHTA, Australia", "Gail Easterbrook, Flinders Medical Centre, Australia", "David Evans, Queensland Health, Australia", "Shahla Foozonkhah, Ocean Informatics, Australia", "Heath Frankel, Ocean Informatics, Australia", "Grahame Grieve, Health Intersections Pyty Ltd, Australia (Editor)", "Sam Heard, Ocean Informatics, Australia", "Mary Kelaher, NEHTA, Australia", "Michael Legg, Michael Legg & associates, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Mike Martyn, The Hobart Anaesthetic Group, Australia", "Andrew McIntyre, Medical-Objects, Australia", "David McKillop, NEHTA, Australia", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Chris Mitchell, RACGP, Australia", "Stewart Morrison, NEHTA, Australia", "Michael Osborne, Mater Health Services, Australia", "Kyle Shore, Charm Health, Australia", "Michael Thompson, Queensland Health, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia">
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Blood Glucose Test Result
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] matches {    -- Any event
+                        /data[id4]/items matches {
+                            allow_archetype CLUSTER[id66] matches { 
+                                include
+                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                            }
+                            ELEMENT[id74] matches {    -- Overall Test Result Status
+                                /value[id114]/defining_code matches {[ac1]}
+                            }
+                            CLUSTER[id96] matches {    -- Result Group
+                                items matches {
+                                    CLUSTER[id97] matches {    -- Result
+                                        items matches {
+                                            ELEMENT[id79.1] matches {    -- Glucose Result
+                                                value matches {
+                                                    DV_QUANTITY[id0.16] matches {
+                                                        property matches {[at0.18]}
+                                                        units matches {"mg/dl", "mmol/l"}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id109] occurrences matches {0..1} matches {    -- Result Value Status
+                                                /value[id121]/defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    allow_archetype CLUSTER[id98] occurrences matches {0..1} matches { 
+                                        include
+                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                                    }
+                                }
+                            }
+                            ELEMENT[id11] matches {    -- Test Result Representation
+                                /value[id124]/media_type matches {[ac3]}
+                            }
+                        }
+                        /state[id0.8]/items matches {
+                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Fasting State
+                                /value[id0.17]/value matches {True}
+                            }
+                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- Duration of Fasting
+                                /value[id0.18]/value matches {PTHM/|>=PT0S|}
+                            }
+                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Glucose Load
+                                value matches {
+                                    DV_QUANTITY[id0.19] matches {
+                                        property matches {[at0.19]}
+                                        [units, precision] matches {
+                                            [{"mg"}, {|>=0|}], 
+                                            [{"gm"}, {|0|}]
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[id0.14] occurrences matches {0..1} matches {    -- Insulin Load
+                                value matches {
+                                    DV_QUANTITY[id0.20] matches {
+                                        property matches {[at0.20]}
+                                        precision matches {|0|}
+                                        units matches {"IU"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] matches {    -- Any event
+                        /data[id4]/items matches {
+                            allow_archetype CLUSTER[id66] matches { 
+                                include
+                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                            }
+                            ELEMENT[id74] matches {    -- Overall Test Result Status
+                                /value[id114]/defining_code matches {[ac1]}
+                            }
+                            CLUSTER[id96] matches {    -- Result Group
+                                items matches {
+                                    CLUSTER[id97] matches {    -- Result
+                                        /items[id109]/value[id121]/defining_code matches {[ac2]}
+                                    }
+                                    allow_archetype CLUSTER[id98] occurrences matches {0..1} matches { 
+                                        include
+                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.specimen(-a-zA-Z0-9_]+)*\.v1/}
+                                    }
+                                }
+                            }
+                            ELEMENT[id11] matches {    -- Test Result Representation
+                                /value[id124]/media_type matches {[ac3]}
+                            }
+                        }
+                    }
+                    POINT_EVENT[id0.2] occurrences matches {0..1} matches {    -- Baseline Measurement
+                        /offset[id0.21]/value matches {PT0S}
+                        data
+                        state
+                    }
+                    POINT_EVENT[id0.3] occurrences matches {0..1} matches {    -- 1 Hour Measurement
+                        /offset[id0.24]/value matches {PT1H}
+                        data
+                        state
+                    }
+                    POINT_EVENT[id0.5] occurrences matches {0..1} matches {    -- 2 Hour Measurement
+                        /offset[id0.27]/value matches {PT2H}
+                        data
+                        state
+                    }
+                }
+            }
+        }
+        /protocol[id5]/items matches {
+            allow_archetype CLUSTER[id0.10] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id18] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            CLUSTER[id95] matches {    -- Test Request Details
+                items matches {
+                    allow_archetype CLUSTER[id91] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    allow_archetype CLUSTER[id36] matches { 
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id111] matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id0.12] occurrences matches {0..1} matches {    -- Point of Care Device Used
+                /value[id0.34]/value matches {True}
+            }
+            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Route of Administration
+                /value[id0.35]/defining_code matches {[ac0.1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id0.10"] = <
+                text = <"Testing Device">
+                description = <"The device used to test the specimen.">
+            >
+            ["id0.11"] = <
+                text = <"Duration of Fasting">
+                description = <"The duration of fasting completed by the test subject prior to the sample being taken.">
+            >
+            ["id0.12"] = <
+                text = <"Point of Care Device Used">
+                description = <"The test was performed using a point of care device or a home-based device.">
+            >
+            ["id0.13"] = <
+                text = <"Glucose Load">
+                description = <"The amount of glucose administered to the test subject.">
+            >
+            ["id0.14"] = <
+                text = <"Insulin Load">
+                description = <"The amount of insulin administered to the test subject.">
+            >
+            ["id0.15"] = <
+                text = <"Route of Administration">
+                description = <"Route that the glucose was administered.">
+            >
+            ["at0.16"] = <
+                text = <"Oral">
+                description = <"Glucose load was administered by mouth.">
+            >
+            ["at0.17"] = <
+                text = <"Intravenous">
+                description = <"Glucose load was administered intravenously.">
+            >
+            ["id0.2"] = <
+                text = <"Baseline Measurement">
+                description = <"Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared.">
+            >
+            ["id0.3"] = <
+                text = <"1 Hour Measurement">
+                description = <"Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge.">
+            >
+            ["id0.5"] = <
+                text = <"2 Hour Measurement">
+                description = <"Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge.">
+            >
+            ["id0.6"] = <
+                text = <"Pre-prandial Measurement">
+                description = <"Measurement taken before a meal.">
+            >
+            ["id0.7"] = <
+                text = <"Post-prandial Measurement">
+                description = <"Measurement taken after a meal.">
+            >
+            ["id0.9"] = <
+                text = <"Fasting State">
+                description = <"A fasting specimen was used for the measurement.">
+            >
+            ["id1.1"] = <
+                text = <"Blood Glucose Test Result">
+                description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
+            >
+            ["id79.1"] = <
+                text = <"Glucose Result">
+                description = <"Actual value of the glucose test result.">
+            >
+            ["at0.18"] = <
+                text = <"Concentration">
+                description = <"Concentration">
+            >
+            ["at0.19"] = <
+                text = <"Mass">
+                description = <"Mass">
+            >
+            ["at0.20"] = <
+                text = <"Mass (IU)">
+                description = <"Mass (IU)">
+            >
+            ["ac0.1"] = <
+                text = <"Route of Administration (synthesised)">
+                description = <"Route that the glucose was administered. (synthesised)">
+            >
+            ["id1"] = <
+                text = <"Pathology Test Result">
+                description = <"The findings and interpretation of pathology tests performed on patient-related specimens.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event.">
+            >
+            ["id6"] = <
+                text = <"Test Result Name">
+                description = <"Identification of the pathology test performed, sometimes including specimen type and patient state.">
+            >
+            ["id78"] = <
+                text = <"Diagnostic Service">
+                description = <"The diagnostic service that performs the examination.">
+            >
+            ["id66"] = <
+                text = <"Specimen Detail">
+                description = <"Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'.">
+            >
+            ["id74"] = <
+                text = <"Overall Test Result Status">
+                description = <"The publication status of the entire pathology test result.">
+            >
+            ["at108"] = <
+                text = <"Registered">
+                description = <"No result yet available.">
+            >
+            ["at38"] = <
+                text = <"Interim">
+                description = <"This is an initial or interim result: data may be missing or verification not been performed.">
+            >
+            ["at39"] = <
+                text = <"Final">
+                description = <"The result is complete and verified by the responsible pathologist.">
+            >
+            ["at41"] = <
+                text = <"Amended">
+                description = <"The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist.">
+            >
+            ["at75"] = <
+                text = <"Cancelled/Aborted">
+                description = <"The result is unavailable because the test was not started or not completed.">
+            >
+            ["id101"] = <
+                text = <"Clinical Information Provided">
+                description = <"Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
+            >
+            ["id96"] = <
+                text = <"Result Group">
+                description = <"A group of results.">
+            >
+            ["id97"] = <
+                text = <"Result">
+                description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
+            >
+            ["id79"] = <
+                text = <"Result Value">
+                description = <"Actual value of the result.">
+            >
+            ["id103"] = <
+                text = <"Result Comment">
+                description = <"Comment about the Result.">
+            >
+            ["id104"] = <
+                text = <"Reference Range Guidance">
+                description = <"Additional advice on the applicability of the reference range.">
+            >
+            ["id109"] = <
+                text = <"Result Value Status">
+                description = <"The status of the result value.">
+            >
+            ["id98"] = <
+                text = <"Specimen Detail">
+                description = <"Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
+            >
+            ["id99"] = <
+                text = <"Pathological Diagnosis">
+                description = <"Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
+            >
+            ["id58"] = <
+                text = <"Conclusion">
+                description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
+            >
+            ["id11"] = <
+                text = <"Test Result Representation">
+                description = <"Rich text representation of the entire result as issued by the diagnostic service.">
+            >
+            ["id102"] = <
+                text = <"Test Comment">
+                description = <"Additional narrative about the test not captured in other fields.">
+            >
+            ["id100"] = <
+                text = <"DateTime Result Issued">
+                description = <"The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’.">
+            >
+            ["id18"] = <
+                text = <"Receiving Laboratory">
+                description = <"Demographic details of the laboratory with responsibility for the pathology test.">
+            >
+            ["id95"] = <
+                text = <"Test Request Details">
+                description = <"Details concerning a single pathology test requested.">
+            >
+            ["id63"] = <
+                text = <"Requester Order Identifier">
+                description = <"The local ID assigned to the order by the order requester.">
+            >
+            ["id107"] = <
+                text = <"Test Requested Name">
+                description = <"Identification of pathology test requested, where the test requested differs from the test actually performed.">
+            >
+            ["id91"] = <
+                text = <"Requester">
+                description = <"Details of the clinician or organisation requesting the pathology test result.">
+            >
+            ["id64"] = <
+                text = <"Receiver Order Identifier">
+                description = <"The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).">
+            >
+            ["id69"] = <
+                text = <"Laboratory Test Result Identifier">
+                description = <"The identifier given to the laboratory test result of a pathology investigation.">
+            >
+            ["id111"] = <
+                text = <"Test Procedure">
+                description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
+            >
+            ["id36"] = <
+                text = <"Copied Provider">
+                description = <"Details of the clinician or organisation who will receive a copy of the pathology test result.">
+            >
+            ["at109"] = <
+                text = <"text/html">
+                description = <"text/html">
+            >
+            ["at110"] = <
+                text = <"text/plain">
+                description = <"text/plain">
+            >
+            ["at111"] = <
+                text = <"text/rtf">
+                description = <"text/rtf">
+            >
+            ["at112"] = <
+                text = <"application/msword">
+                description = <"application/msword">
+            >
+            ["at113"] = <
+                text = <"application/pdf">
+                description = <"application/pdf">
+            >
+            ["at114"] = <
+                text = <"application/rtf">
+                description = <"application/rtf">
+            >
+            ["at115"] = <
+                text = <"application/vnd.oasis.opendocument.text">
+                description = <"application/vnd.oasis.opendocument.text">
+            >
+            ["at116"] = <
+                text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            >
+            ["ac1"] = <
+                text = <"Overall Test Result Status (synthesised)">
+                description = <"The publication status of the entire pathology test result. (synthesised)">
+            >
+            ["ac2"] = <
+                text = <"Result Value Status (synthesised)">
+                description = <"The status of the result value. (synthesised)">
+            >
+            ["ac3"] = <
+                text = <"Test Result Representation (synthesised)">
+                description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
+            >
+            ["id1.1.1"] = <
+                text = <"Blood Glucose Test Result">
+                description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
+            >
+        >
+        ["pt-br"] = <
+            ["id0.10"] = <
+                text = <"Dispositivo de Teste">
+                description = <"Dispositivo usado para examinar o paciente">
+            >
+            ["id0.11"] = <
+                text = <"*Duration of Fasting (en)">
+                description = <"*The duration of fasting completed by the test subject prior to the sample being taken. (en)">
+            >
+            ["id0.12"] = <
+                text = <"*Point of Care Device Used (en)">
+                description = <"*The test was performed using a point of care device or a home-based device. (en)">
+            >
+            ["id0.13"] = <
+                text = <"*Glucose Load (en)">
+                description = <"*The amount of glucose administered to the test subject. (en)">
+            >
+            ["id0.14"] = <
+                text = <"*Insulin Load (en)">
+                description = <"*The amount of insulin administered to the test subject. (en)">
+            >
+            ["id0.15"] = <
+                text = <"*Route of Administration (en)">
+                description = <"*Route that the glucose was administered. (en)">
+            >
+            ["at0.16"] = <
+                text = <"*Oral (en)">
+                description = <"*Glucose load was administered by mouth. (en)">
+            >
+            ["at0.17"] = <
+                text = <"*Intravenous (en)">
+                description = <"*Glucose load was administered intravenously. (en)">
+            >
+            ["id0.2"] = <
+                text = <"*Baseline Measurement (en)">
+                description = <"*Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared. (en)">
+            >
+            ["id0.3"] = <
+                text = <"*1 Hour Measurement (en)">
+                description = <"*Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge. (en)">
+            >
+            ["id0.5"] = <
+                text = <"*2 Hour Measurement (en)">
+                description = <"*Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge. (en)">
+            >
+            ["id0.6"] = <
+                text = <"*Pre-prandial Measurement (en)">
+                description = <"*Measurement taken before a meal. (en)">
+            >
+            ["id0.7"] = <
+                text = <"*Post-prandial Measurement (en)">
+                description = <"*Measurement taken after a meal. (en)">
+            >
+            ["id0.9"] = <
+                text = <"*Fasting State (en)">
+                description = <"*A fasting specimen was used for the measurement. (en)">
+            >
+            ["id1.1"] = <
+                text = <"*Blood Glucose Test Result (en)">
+                description = <"*The findings and interpretation of glucose tests performed on plasma, serum or whole blood. (en)">
+            >
+            ["id79.1"] = <
+                text = <"*Glucose Result (en)">
+                description = <"*Actual value of the glucose test result. (en)">
+            >
+            ["at0.18"] = <
+                text = <"*Concentration (en)">
+                description = <"*Concentration (en)">
+            >
+            ["at0.19"] = <
+                text = <"*Mass (en)">
+                description = <"*Mass (en)">
+            >
+            ["at0.20"] = <
+                text = <"*Mass (IU) (en)">
+                description = <"*Mass (IU) (en)">
+            >
+            ["ac0.1"] = <
+                text = <"*Route of Administration (synthesised) (en)">
+                description = <"*Route that the glucose was administered. (synthesised) (en)">
+            >
+            ["id1"] = <
+                text = <"*Pathology Test Result (en)">
+                description = <"*The findings and interpretation of pathology tests performed on patient-related specimens. (en)">
+            >
+            ["id3"] = <
+                text = <"*Any event (en)">
+                description = <"*Any event. (en)">
+            >
+            ["id6"] = <
+                text = <"*Test Result Name (en)">
+                description = <"*Identification of the pathology test performed, sometimes including specimen type and patient state. (en)">
+            >
+            ["id78"] = <
+                text = <"*Diagnostic Service (en)">
+                description = <"*The diagnostic service that performs the examination. (en)">
+            >
+            ["id66"] = <
+                text = <"*Specimen Detail (en)">
+                description = <"*Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'. (en)">
+            >
+            ["id74"] = <
+                text = <"*Overall Test Result Status (en)">
+                description = <"*The publication status of the entire pathology test result. (en)">
+            >
+            ["at108"] = <
+                text = <"*Registered (en)">
+                description = <"*No result yet available. (en)">
+            >
+            ["at38"] = <
+                text = <"*Interim (en)">
+                description = <"*This is an initial or interim result: data may be missing or verification not been performed. (en)">
+            >
+            ["at39"] = <
+                text = <"*Final (en)">
+                description = <"*The result is complete and verified by the responsible pathologist. (en)">
+            >
+            ["at41"] = <
+                text = <"*Amended (en)">
+                description = <"*The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist. (en)">
+            >
+            ["at75"] = <
+                text = <"*Cancelled/Aborted (en)">
+                description = <"*The result is unavailable because the test was not started or not completed. (en)">
+            >
+            ["id101"] = <
+                text = <"*Clinical Information Provided (en)">
+                description = <"*Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request. (en)">
+            >
+            ["id96"] = <
+                text = <"*Result Group (en)">
+                description = <"*A group of results. (en)">
+            >
+            ["id97"] = <
+                text = <"*Result (en)">
+                description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation. (en)">
+            >
+            ["id79"] = <
+                text = <"*Result Value (en)">
+                description = <"*Actual value of the result. (en)">
+            >
+            ["id103"] = <
+                text = <"*Result Comment (en)">
+                description = <"*Comment about the Result. (en)">
+            >
+            ["id104"] = <
+                text = <"*Reference Range Guidance (en)">
+                description = <"*Additional advice on the applicability of the reference range. (en)">
+            >
+            ["id109"] = <
+                text = <"*Result Value Status (en)">
+                description = <"*The status of the result value. (en)">
+            >
+            ["id98"] = <
+                text = <"*Specimen Detail (en)">
+                description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required. (en)">
+            >
+            ["id99"] = <
+                text = <"*Pathological Diagnosis (en)">
+                description = <"*Single word, phrase or brief description representing the narrative in the 'Conclusion'. (en)">
+            >
+            ["id58"] = <
+                text = <"*Conclusion (en)">
+                description = <"*Concise and clinically contextualised narrative interpretation of the pathology test results. (en)">
+            >
+            ["id11"] = <
+                text = <"*Test Result Representation (en)">
+                description = <"*Rich text representation of the entire result as issued by the diagnostic service. (en)">
+            >
+            ["id102"] = <
+                text = <"*Test Comment (en)">
+                description = <"*Additional narrative about the test not captured in other fields. (en)">
+            >
+            ["id100"] = <
+                text = <"*DateTime Result Issued (en)">
+                description = <"*The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’. (en)">
+            >
+            ["id18"] = <
+                text = <"*Receiving Laboratory (en)">
+                description = <"*Demographic details of the laboratory with responsibility for the pathology test. (en)">
+            >
+            ["id95"] = <
+                text = <"*Test Request Details (en)">
+                description = <"*Details concerning a single pathology test requested. (en)">
+            >
+            ["id63"] = <
+                text = <"*Requester Order Identifier (en)">
+                description = <"*The local ID assigned to the order by the order requester. (en)">
+            >
+            ["id107"] = <
+                text = <"*Test Requested Name (en)">
+                description = <"*Identification of pathology test requested, where the test requested differs from the test actually performed. (en)">
+            >
+            ["id91"] = <
+                text = <"*Requester (en)">
+                description = <"*Details of the clinician or organisation requesting the pathology test result. (en)">
+            >
+            ["id64"] = <
+                text = <"*Receiver Order Identifier (en)">
+                description = <"*The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS). (en)">
+            >
+            ["id69"] = <
+                text = <"*Laboratory Test Result Identifier (en)">
+                description = <"*The identifier given to the laboratory test result of a pathology investigation. (en)">
+            >
+            ["id111"] = <
+                text = <"*Test Procedure (en)">
+                description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used. (en)">
+            >
+            ["id36"] = <
+                text = <"*Copied Provider (en)">
+                description = <"*Details of the clinician or organisation who will receive a copy of the pathology test result. (en)">
+            >
+            ["at109"] = <
+                text = <"*text/html (en)">
+                description = <"*text/html (en)">
+            >
+            ["at110"] = <
+                text = <"*text/plain (en)">
+                description = <"*text/plain (en)">
+            >
+            ["at111"] = <
+                text = <"*text/rtf (en)">
+                description = <"*text/rtf (en)">
+            >
+            ["at112"] = <
+                text = <"*application/msword (en)">
+                description = <"*application/msword (en)">
+            >
+            ["at113"] = <
+                text = <"*application/pdf (en)">
+                description = <"*application/pdf (en)">
+            >
+            ["at114"] = <
+                text = <"*application/rtf (en)">
+                description = <"*application/rtf (en)">
+            >
+            ["at115"] = <
+                text = <"*application/vnd.oasis.opendocument.text (en)">
+                description = <"*application/vnd.oasis.opendocument.text (en)">
+            >
+            ["at116"] = <
+                text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+                description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+            >
+            ["ac1"] = <
+                text = <"*Overall Test Result Status (synthesised) (en)">
+                description = <"*The publication status of the entire pathology test result. (synthesised) (en)">
+            >
+            ["ac2"] = <
+                text = <"*Result Value Status (synthesised) (en)">
+                description = <"*The status of the result value. (synthesised) (en)">
+            >
+            ["ac3"] = <
+                text = <"*Test Result Representation (synthesised) (en)">
+                description = <"*Rich text representation of the entire result as issued by the diagnostic service. (synthesised) (en)">
+            >
+            ["id1.1.1"] = <
+                text = <"*Blood Glucose Test Result (en)">
+                description = <"*The findings and interpretation of glucose tests performed on plasma, serum or whole blood. (en)">
+            >
+        >
+    >
+
