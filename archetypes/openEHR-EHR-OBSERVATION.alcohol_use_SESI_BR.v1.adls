@@ -81,6 +81,19 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
                     }
+                    CLUSTER[id0.3] occurrences matches {0..1} matches {    -- Consumo
+                        items matches {
+                            use_node ELEMENT /protocol[id25]/items[id27]
+                            use_node ELEMENT /protocol[id25]/items[id26]
+                            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- How often do you take "5 or more doses" at one time
+                                value matches {
+                                    DV_CODED_TEXT[id0.7] matches {
+                                        defining_code matches {[ac0.1]}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
             POINT_EVENT[id24] matches {
@@ -170,6 +183,46 @@ terminology
                 text = <"Mass">
                 description = <"Mass">
             >
+            ["id0.3"] = <
+                text = <"Consumo">
+                description = <"Detalhes sobre a frequência/quantidade  de álcool">
+            >
+            ["id0.4"] = <
+                text = <"How often do you drink alcoholic beverages?">
+                description = <"Frequency of use">
+            >
+            ["id0.5"] = <
+                text = <"At times when you drink, how many doses do you typically consume to the baby?">
+                description = <"Number of doses in a period">
+            >
+            ["id0.6"] = <
+                text = <"How often do you take \"5 or more doses\" at one time">
+                description = <"How often do you take \"5 or more doses\" at one time">
+            >
+            ["at0.1"] = <
+                text = <"Never">
+                description = <"Never">
+            >
+            ["at0.2"] = <
+                text = <"Less than once a month">
+                description = <"Less than once a month">
+            >
+            ["at0.3"] = <
+                text = <"Mensalmente">
+                description = <"Mensalmente">
+            >
+            ["at0.4"] = <
+                text = <"Weekly">
+                description = <"Weekly">
+            >
+            ["at0.5"] = <
+                text = <"All or almost every day">
+                description = <"All or almost every day">
+            >
+            ["ac0.1"] = <
+                text = <"Período">
+                description = <"Período de consumo">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -193,8 +246,8 @@ terminology
                 description = <"Detalhes sobre o consumo de formas específicas de álcool.">
             >
             ["id7"] = <
-                text = <"Formato">
-                description = <"Forma de álcool consumida.">
+                text = <"Com que frequência você toma bebidas alcoólicas?">
+                description = <"Com que frequência você toma bebidas alcoólicas?">
             >
             ["id15"] = <
                 text = <"Bebidas padrão">
@@ -224,6 +277,52 @@ terminology
                 text = <"*Mass (en)">
                 description = <"*Mass (en)">
             >
+            ["id0.3"] = <
+                text = <"Consumo (en)">
+                description = <"Detalhes sobre a frequência/quantidade  de álcool (en)">
+            >
+            ["id0.4"] = <
+                text = <"Com que frequência você toma bebidas alcoólicas">
+                description = <"Frequência de uso">
+            >
+            ["id0.5"] = <
+                text = <"Nas ocasiões em que bebe, quantas doses você consome tipicamente ao bebe?">
+                description = <"Quantidade de doses em um período">
+            >
+            ["id0.6"] = <
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
+                description = <"Frequência de apenas em um período de consumo (en)">
+            >
+            ["at0.1"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at0.2"] = <
+                text = <"Menos que uma vez ao mês">
+                description = <"Menos que uma vez ao mês">
+            >
+            ["at0.3"] = <
+                text = <"Mensalmente (en)">
+                description = <"Mensalmente (en)">
+            >
+            ["at0.4"] = <
+                text = <"Semanalmente">
+                description = <"Semanalmente">
+            >
+            ["at0.5"] = <
+                text = <"Todos ou quase todos os dias">
+                description = <"Todos ou quase todos os dias">
+            >
+            ["ac0.1"] = <
+                text = <"Período (en)">
+                description = <"Período de consumo (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5">
         >
     >
 
