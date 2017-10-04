@@ -6071,22 +6071,38 @@ specialize
     openEHR-EHR-OBSERVATION.utilizacao_servicos_saude.v1.0.0
 
 definition
-    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Utilização Serviços de Saúde
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Utilização de Serviços de Saúde
         /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id6] occurrences matches {1} matches {
-                /value[id7]/defining_code matches {[ac1]}
+            ELEMENT[id6.1] occurrences matches {1} matches {    -- Nos últimos 12 meses, quantas vezes você consultou o médico?
+                value matches {
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id8] occurrences matches {1} matches {
-                /value[id9]/defining_code matches {[ac2]}
+            ELEMENT[id8.1] occurrences matches {1} matches {    -- Quando foi a última vez que você foi ao dentista
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id10] occurrences matches {1} matches {
-                /value[id11]/defining_code matches {[ac1]}
+            ELEMENT[id10.1] occurrences matches {1} matches {    -- Quantas vezes você esteve internado nos últimos 12 meses
+                value matches {
+                    DV_CODED_TEXT[id11.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
             ELEMENT[id12] occurrences matches {1} matches {
                 /value[id13]/defining_code matches {[ac3]}
             }
-            ELEMENT[id14] occurrences matches {1} matches {
-                /value[id15]/defining_code matches {[ac4]}
+            ELEMENT[id14.1] occurrences matches {1} matches {    -- Você possui plano de saúde
+                value matches {
+                    DV_CODED_TEXT[id15.1] matches {
+                        defining_code matches {[ac4]}
+                    }
+                }
             }
         }
     }
@@ -6095,14 +6111,46 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Utilização Serviços de Saúde">
+                text = <"Utilização de Serviços de Saúde">
                 description = <"Utilização Serviços de Saúde">
+            >
+            ["id6.1"] = <
+                text = <"Nos últimos 12 meses, quantas vezes você consultou o médico?">
+                description = <"Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses">
+            >
+            ["id8.1"] = <
+                text = <"Quando foi a última vez que você foi ao dentista">
+                description = <"Quando foi a ultima vez que o trabalhador foi ao dentista">
+            >
+            ["id10.1"] = <
+                text = <"Quantas vezes você esteve internado nos últimos 12 meses">
+                description = <"Quantas vezes o trabalhador esteve internado nos ultimos 12 meses">
+            >
+            ["id14.1"] = <
+                text = <"Você possui plano de saúde">
+                description = <"O trabalhador possui plano de saúde">
             >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Health Services Utilization">
                 description = <"Health Services Utilization">
+            >
+            ["id6.1"] = <
+                text = <"How many times has the worker consulted the doctor in the last 12 months">
+                description = <"How many times has the worker consulted the doctor in the last 12 months">
+            >
+            ["id8.1"] = <
+                text = <"When was the last time the worker went to the dentist">
+                description = <"When was the last time the worker went to the dentist">
+            >
+            ["id10.1"] = <
+                text = <"How many times has the worker been hospitalized in the last 12 months">
+                description = <"How many times has the worker been hospitalized in the last 12 months">
+            >
+            ["id14.1"] = <
+                text = <"The worker has a health plan">
+                description = <"The worker has a health plan">
             >
         >
     >
