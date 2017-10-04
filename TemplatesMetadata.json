@@ -36,9 +36,9 @@
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
     "sha" : "b4a133fdc042ecab749324596dcbae15fc09739c"
   }, {
-    "id" : null,
-    "rmType" : null,
-    "name" : null,
+    "id" : "openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Ficha clínica ocupacional",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
     "sha" : "d626f3e132c9f565461c9d88762848ac8195cc5e"
   } ]
