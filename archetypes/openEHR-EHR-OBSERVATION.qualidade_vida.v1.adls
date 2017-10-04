@@ -128,16 +128,16 @@ definition
                                             }
                                         }
                                     }
-                                    CLUSTER[id36] occurrences matches {0..1} matches {    -- teste
+                                    CLUSTER[id36] occurrences matches {0..1} matches {    -- Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))
                                         items matches {
-                                            ELEMENT[id43] occurrences matches {0..1} matches {    -- teste
+                                            ELEMENT[id43] occurrences matches {0..1} matches {    -- Realizou menos tarefas do que você gostaria
                                                 value matches {
                                                     DV_CODED_TEXT[id44] matches {
                                                         defining_code matches {[ac3]}
                                                     }
                                                 }
                                             }
-                                            ELEMENT[id45] occurrences matches {0..1} matches {    -- teste
+                                            ELEMENT[id45] occurrences matches {0..1} matches {    -- Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz
                                                 value matches {
                                                     DV_CODED_TEXT[id46] matches {
                                                         defining_code matches {[ac3]}
@@ -334,16 +334,16 @@ terminology
                 description = <"NS/NR">
             >
             ["id36"] = <
-                text = <"teste">
-                description = <"teste">
+                text = <"Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))">
+                description = <"Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))">
             >
             ["id43"] = <
-                text = <"teste">
-                description = <"teste">
+                text = <"Realizou menos tarefas do que você gostaria">
+                description = <"Realizou menos tarefas do que você gostaria">
             >
             ["id45"] = <
-                text = <"teste">
-                description = <"teste">
+                text = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
+                description = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
             >
         >
         ["en"] = <
