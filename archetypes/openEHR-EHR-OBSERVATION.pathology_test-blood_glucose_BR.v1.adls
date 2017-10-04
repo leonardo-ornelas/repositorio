@@ -666,8 +666,8 @@ terminology
                 description = <"Detalhes relativos a um único teste de patologia solicitado.">
             >
             ["id63"] = <
-                text = <"*Requester Order Identifier (en)">
-                description = <"*The local ID assigned to the order by the order requester. (en)">
+                text = <"Identificador de pedido do requerente">
+                description = <"A identificação local atribuída à ordem pelo solicitante da ordem.">
             >
             ["id107"] = <
                 text = <"*Test Requested Name (en)">
