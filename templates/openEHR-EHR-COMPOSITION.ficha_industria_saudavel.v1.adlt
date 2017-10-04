@@ -8209,8 +8209,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id7] occurrences matches {0..1} matches {
-                /value[id10]/defining_code matches {[ac2]}
+            ELEMENT[id7.1] occurrences matches {0..1} matches {    -- Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, você consumiu cinco ou mais doses (mostrar o cartão) em uma única ocasião?
+                value matches {
+                    DV_CODED_TEXT[id10.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
             ELEMENT[id8] occurrences matches {0..1} matches {
                 /value[id11]/defining_code matches {[ac3]}
@@ -8241,6 +8245,10 @@ terminology
                 text = <"Quantas doses (mostrar o cartão) de bebidas alcoólicas você toma numa semana normal (típica)">
                 description = <"Doses">
             >
+            ["id7.1"] = <
+                text = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, você consumiu cinco ou mais doses (mostrar o cartão) em uma única ocasião?">
+                description = <"Consumo numa única ocasião">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -8250,6 +8258,10 @@ terminology
             ["id6.1"] = <
                 text = <"Doses">
                 description = <"Doses">
+            >
+            ["id7.1"] = <
+                text = <"Consumo">
+                description = <"Consumo">
             >
         >
     >
