@@ -1032,8 +1032,8 @@ terminology
                 description = <"Tipo de PCMO">
             >
             ["id0.85"] = <
-                text = <"CPF (en)">
-                description = <"CPF (en)">
+                text = <"CPF">
+                description = <"CPF">
             >
             ["at0.20"] = <
                 text = <"NS/NR (en)">
