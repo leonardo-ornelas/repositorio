@@ -530,8 +530,8 @@ terminology
                 description = <"*Measurement taken before a meal. (en)">
             >
             ["id0.7"] = <
-                text = <"*Post-prandial Measurement (en)">
-                description = <"*Measurement taken after a meal. (en)">
+                text = <"Medição pré-prandial">
+                description = <"Medição tomada antes de uma refeição.">
             >
             ["id0.9"] = <
                 text = <"*Fasting State (en)">
