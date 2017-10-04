@@ -459,7 +459,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use.v1.adls",
-    "sha" : "33032eb40ac81a84e33234287db54fc5aeb6f593",
+    "sha" : "7aefc5d461b7e31477559fdf6585779614e447f4",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.body_weight-adjusted.v1.0.0",
@@ -620,7 +620,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Tobacco Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
-    "sha" : "df6492ed1cab5c531b4a49593cc4301b0914156b",
+    "sha" : "055818c1984c5a10f2b48f21d10b8b4dfcda5c9e",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure.v1.0.0",
@@ -641,7 +641,7 @@
     "rmType" : "EVALUATION",
     "name" : "Problem/Diagnosis",
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
-    "sha" : "816415506070c2017f55efb6933096636511d4b9",
+    "sha" : "dc7657448abd7fd532f8bf77087e287cb5b1cf27",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure-SESI_BR.v1.0.0",
@@ -850,7 +850,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Patient admission",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.admission_SESI-BR.v1.adls",
-    "sha" : "3d205ed5a4c05fa9e02ecd4971399ee5acf45ba4",
+    "sha" : "eebce9d645fa9552001360825285d581bec5b533",
     "languages" : [ "en", "ar-sy", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ADMIN_ENTRY.aplicacao_pesquisa.v1.0.0",
@@ -864,7 +864,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Dados socioeconômicos",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.dados_socioeconomicos.v1.adls",
-    "sha" : "df7210b75e71f7dee7bdbdb3e89fd4cd65d8257d",
+    "sha" : "c853f4acadf38c93827087ac61b0363c5b9586dc",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.dados.v1.0.0",
@@ -1076,5 +1076,12 @@
     "path" : "archetypes/openEHR-EHR-SECTION.vital_signs.v1.adls",
     "sha" : "e3badbee42c4f93501d237d7f360a01d9b421394",
     "languages" : [ "en", "de", "ko" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.pathology_test-blood_glucose_BR.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Blood Glucose Test Result",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.pathology_test-blood_glucose_BR.v1.adls",
+    "sha" : "3e5c7640e8743ee88f8a73a5a3320de911cf39d6",
+    "languages" : [ "en", "pt-br" ]
   } ]
 }
