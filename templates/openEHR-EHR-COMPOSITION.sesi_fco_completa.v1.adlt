@@ -4507,7 +4507,36 @@ specialize
 
 definition
     ADMIN_ENTRY[id1.1] occurrences matches {1} matches {    -- Recomendações Educativo Preventivas
-        /data[id2]/items[id3]/value[id4]/defining_code matches {[ac1]}
+        /data[id2]/items matches {
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                /value[id4]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id11.1] occurrences matches {0} matches {    -- Data da conclusão
+                value matches {
+                    DV_TEXT[id12.1] 
+                }
+            }
+            ELEMENT[id13.1] occurrences matches {0} matches {    -- Município
+                value matches {
+                    DV_TEXT[id14.1] 
+                }
+            }
+            ELEMENT[id15.1] occurrences matches {0} matches {    -- Médico examinador
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+            ELEMENT[id18.1] occurrences matches {0..1} matches {    -- Observações
+                value matches {
+                    DV_TEXT[id19.1] 
+                }
+            }
+            ELEMENT[id20.1] occurrences matches {0..1} matches {    -- Recomendações médicas
+                value matches {
+                    DV_TEXT[id21.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -4517,11 +4546,51 @@ terminology
                 text = <"Recomendações Educativo Preventivas">
                 description = <"Recomendações Educativo Preventivas Qualidade de Vida">
             >
+            ["id11.1"] = <
+                text = <"Data da conclusão">
+                description = <"Data da conclusão">
+            >
+            ["id13.1"] = <
+                text = <"Município">
+                description = <"Município">
+            >
+            ["id15.1"] = <
+                text = <"Médico examinador">
+                description = <"Médico examinador">
+            >
+            ["id20.1"] = <
+                text = <"Recomendações médicas">
+                description = <"Recomendações médicas">
+            >
+            ["id18.1"] = <
+                text = <"Observações">
+                description = <"Observações ASO">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Recommendations for Preventive Education Quality of Life">
                 description = <"Recommendations for Preventive Education Quality of Life">
+            >
+            ["id11.1"] = <
+                text = <"Date of conclusion">
+                description = <"Date of conclusion">
+            >
+            ["id13.1"] = <
+                text = <"City">
+                description = <"City">
+            >
+            ["id15.1"] = <
+                text = <"Medical examiner">
+                description = <"Medical examiner">
+            >
+            ["id20.1"] = <
+                text = <"Observations ASO">
+                description = <"Observations ASO">
+            >
+            ["id18.1"] = <
+                text = <"Observations">
+                description = <"Observations">
             >
         >
     >
