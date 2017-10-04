@@ -6276,19 +6276,35 @@ specialize
     openEHR-EHR-EVALUATION.caracteristicas_trabalho.v1.0.0
 
 definition
-    EVALUATION[id1.1] occurrences matches {1} matches {    -- Características trabalho
+    EVALUATION[id1.1] occurrences matches {1} matches {    -- Características do Trabalho
         /data[id2]/items matches {
-            ELEMENT[id3] occurrences matches {1} matches {
-                /value[id4]/defining_code matches {[ac1]}
+            ELEMENT[id3.1] occurrences matches {1} matches {    -- Em geral, quantos dias por semana você trabalha
+                value matches {
+                    DV_CODED_TEXT[id4.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id5] occurrences matches {1} matches {
-                /value[id6]/defining_code matches {[ac2]}
+            ELEMENT[id5.1] occurrences matches {1} matches {    -- Em geral, quantas horas você trabalha por dia
+                value matches {
+                    DV_CODED_TEXT[id6.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id7] occurrences matches {1} matches {
-                /value[id8]/value matches {True, False}
+            ELEMENT[id7.1] occurrences matches {1} matches {    -- Você trabalha no mesmo horário todos os dias
+                value matches {
+                    DV_BOOLEAN[id8.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
-            ELEMENT[id9] occurrences matches {1} matches {
-                /value[id10]/value matches {True, False}
+            ELEMENT[id9.1] occurrences matches {1} matches {    -- Você trabalha à noite pelo menos um dia por semana
+                value matches {
+                    DV_BOOLEAN[id10.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
             ELEMENT[id11] occurrences matches {1} matches {
                 /value[id12]/defining_code matches {[ac3]}
@@ -6306,14 +6322,46 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Características trabalho">
+                text = <"Características do Trabalho">
                 description = <"registre informações sobre características trabalho">
+            >
+            ["id3.1"] = <
+                text = <"Em geral, quantos dias por semana você trabalha">
+                description = <"Em geral, quantos dias da semana o trabalhador trabalha">
+            >
+            ["id5.1"] = <
+                text = <"Em geral, quantas horas você trabalha por dia">
+                description = <"Em geral, quantas horas o trabalhador trabalha por dia">
+            >
+            ["id7.1"] = <
+                text = <"Você trabalha no mesmo horário todos os dias">
+                description = <"Trabalha no mesmo horário todos os dias">
+            >
+            ["id9.1"] = <
+                text = <"Você trabalha à noite pelo menos um dia por semana">
+                description = <"Trabalha a noite pelo menos 1 dia da semana">
             >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"characteristics of work">
                 description = <"characteristics of work">
+            >
+            ["id3.1"] = <
+                text = <"In general, how many days a week does the worker work">
+                description = <"In general, how many days a week does the worker work">
+            >
+            ["id5.1"] = <
+                text = <"In general, how many hours a worker works per day">
+                description = <"In general, how many hours a worker works per day">
+            >
+            ["id7.1"] = <
+                text = <"Works at the same time every day">
+                description = <"Works at the same time every day">
+            >
+            ["id9.1"] = <
+                text = <"Work at night at least 1 day a week">
+                description = <"Work at night at least 1 day a week">
             >
         >
     >
