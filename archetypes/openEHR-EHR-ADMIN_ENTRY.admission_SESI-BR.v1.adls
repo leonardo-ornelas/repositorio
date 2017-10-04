@@ -59,12 +59,12 @@ description
 definition
     ADMIN_ENTRY[id1.1] matches {    -- Patient admission
         /data[id2]/items matches {
-            ELEMENT[id3] matches {
+            ELEMENT[id3] occurrences matches {0} matches {
                 /value[id123]/defining_code matches {[ac3]}
             }
             CLUSTER[id74] occurrences matches {0..1} matches {
                 items matches {
-                    CLUSTER[id105] occurrences matches {0..1} matches {
+                    CLUSTER[id105] occurrences matches {0} matches {
                         /items[id108]/value[id130]/defining_code matches {[ac4]}
                     }
                     CLUSTER[id85] occurrences matches {0..1} matches {
@@ -76,18 +76,20 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id82] occurrences matches {0..1} matches {
+                    ELEMENT[id82] occurrences matches {0} matches {
                         /value[id139]/defining_code matches {[ac5]}
                     }
                 }
             }
-            ELEMENT[id14] occurrences matches {0..1} matches {
+            ELEMENT[id14] occurrences matches {0} matches {
                 /value[id140]/defining_code matches {[ac6]}
             }
-            CLUSTER[id95] occurrences matches {0..1} matches {
+            CLUSTER[id95] occurrences matches {0} matches {
                 items matches {
                     CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
@@ -113,6 +115,10 @@ definition
                     }
                     CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
@@ -210,6 +216,12 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id102]
                     use_node ELEMENT /data[id2]/items[id74]/items[id103]
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
@@ -219,8 +231,10 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
             }
-            CLUSTER[id26] occurrences matches {0..1} matches {
+            CLUSTER[id26] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -244,8 +258,10 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id122] matches {
+            CLUSTER[id122] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -269,8 +285,10 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id52] occurrences matches {0..1} matches {
+            CLUSTER[id52] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -294,105 +312,109 @@ definition
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            ELEMENT[id62] occurrences matches {0..1} matches {
+            ELEMENT[id62] occurrences matches {0} matches {
                 /value[id171]/defining_code matches {[ac7]}
             }
-            ELEMENT[id67] occurrences matches {0..1} matches {
+            ELEMENT[id67] occurrences matches {0} matches {
                 /value[id172]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id72] occurrences matches {0} matches {    -- Admit date time
+                /value[id173]/value matches {*}
             }
             CLUSTER[id0.43] occurrences matches {0..1} matches {    -- Patient identification
                 items matches {
-                    ELEMENT[id0.44] occurrences matches {1} matches {    -- Full name
+                    ELEMENT[id0.44] occurrences matches {0..1} matches {    -- Full name
                         value matches {
                             DV_TEXT[id0.45] 
                         }
                     }
-                    ELEMENT[id0.46] occurrences matches {1} matches {    -- Phone
+                    ELEMENT[id0.46] occurrences matches {0..1} matches {    -- Phone
                         value matches {
                             DV_TEXT[id0.47] 
                         }
                     }
-                    ELEMENT[id0.48] occurrences matches {1} matches {    -- Identity number
+                    ELEMENT[id0.48] occurrences matches {0..1} matches {    -- Identity number
                         value matches {
                             DV_TEXT[id0.49] 
                         }
                     }
-                    ELEMENT[id0.50] occurrences matches {1} matches {    -- Organ
+                    ELEMENT[id0.50] occurrences matches {0..1} matches {    -- Organ
                         value matches {
                             DV_TEXT[id0.51] 
                         }
                     }
-                    ELEMENT[id0.52] occurrences matches {1} matches {    -- NIT
+                    ELEMENT[id0.52] occurrences matches {0..1} matches {    -- NIT
                         value matches {
                             DV_TEXT[id0.53] 
                         }
                     }
-                    ELEMENT[id0.54] occurrences matches {1} matches {    -- Email
+                    ELEMENT[id0.54] occurrences matches {0..1} matches {    -- Email
                         value matches {
                             DV_TEXT[id0.55] 
                         }
                     }
-                    ELEMENT[id0.56] occurrences matches {1} matches {    -- Color Race
+                    ELEMENT[id0.56] occurrences matches {0..1} matches {    -- Color Race
                         value matches {
                             DV_CODED_TEXT[id0.57] matches {
                                 defining_code matches {[ac0.2]}
                             }
                         }
                     }
-                    ELEMENT[id0.58] occurrences matches {1} matches {    -- Sexo
+                    ELEMENT[id0.58] occurrences matches {0..1} matches {    -- Sexo
                         value matches {
                             DV_CODED_TEXT[id0.59] matches {
                                 defining_code matches {[ac0.4]}
                             }
                         }
                     }
-                    ELEMENT[id0.60] occurrences matches {1} matches {    -- Date of birth
+                    ELEMENT[id0.60] occurrences matches {0..1} matches {    -- Date of birth
                         value matches {
-                            DV_DATE[id0.61] matches {
+                            DV_DATE_TIME[id0.61] matches {
                                 value
+                                value matches {*}
                             }
                         }
                     }
-                    ELEMENT[id0.62] occurrences matches {1} matches {    -- Age
+                    ELEMENT[id0.62] occurrences matches {0..1} matches {    -- Age
                         value matches {
                             DV_TEXT[id0.63] 
                         }
                     }
-                    ELEMENT[id0.64] occurrences matches {1} matches {    -- marital status
+                    ELEMENT[id0.64] occurrences matches {0..1} matches {    -- marital status
                         value matches {
                             DV_CODED_TEXT[id0.65] matches {
                                 defining_code matches {[ac0.5]}
                             }
                         }
                     }
-                    ELEMENT[id0.66] occurrences matches {1} matches {    -- Type of Exam
+                    ELEMENT[id0.66] occurrences matches {0..1} matches {    -- Type of Exam
                         value matches {
                             DV_CODED_TEXT[id0.67] matches {
                                 defining_code matches {[ac0.6]}
                             }
                         }
                     }
-                    ELEMENT[id0.77] occurrences matches {1} matches {    -- Company Name
+                    ELEMENT[id0.77] occurrences matches {0..1} matches {    -- Company Name
                         value matches {
                             DV_TEXT[id0.78] 
                         }
                     }
-                    ELEMENT[id0.79] occurrences matches {1} matches {    -- Enrollment in the Company
+                    ELEMENT[id0.79] occurrences matches {0..1} matches {    -- Enrollment in the Company
                         value matches {
                             DV_TEXT[id0.80] 
                         }
                     }
-                    ELEMENT[id0.81] occurrences matches {1} matches {    -- Activity Branch
+                    ELEMENT[id0.81] occurrences matches {0..1} matches {    -- Activity Branch
                         value matches {
                             DV_TEXT[id0.82] 
                         }
                     }
-                    ELEMENT[id0.83] occurrences matches {1} matches {    -- type PCMO
+                    ELEMENT[id0.83] occurrences matches {0..1} matches {    -- type PCMO
                         value matches {
                             DV_TEXT[id0.84] 
                         }
                     }
-                    ELEMENT[id0.85] occurrences matches {1} matches {    -- CPF
+                    ELEMENT[id0.85] occurrences matches {0..1} matches {    -- CPF
                         value matches {
                             DV_TEXT[id0.86] 
                         }
