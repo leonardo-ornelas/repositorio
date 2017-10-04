@@ -5811,7 +5811,7 @@ specialize
     openEHR-EHR-OBSERVATION.comorbidade_referida.v1.0.0
 
 definition
-    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Comorbidade referida
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Algum médico já disse que você tem ou teve:
         /data[id2]/events[id3]/data[id4]/items matches {
             ELEMENT[id7] occurrences matches {1} matches {
                 /value[id8]/value matches {True, False}
@@ -5868,7 +5868,7 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Comorbidade referida">
+                text = <"Algum médico já disse que você tem ou teve:">
                 description = <"Registro de informações de comorbidade referida">
             >
         >
@@ -8216,8 +8216,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id8] occurrences matches {0..1} matches {
-                /value[id11]/defining_code matches {[ac3]}
+            ELEMENT[id8.1] occurrences matches {0..1} matches {    -- Entre as bebidas alcoólicas, qual você prefere
+                value matches {
+                    DV_CODED_TEXT[id11.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
             ELEMENT[id13] occurrences matches {0..1} matches {
                 /value[id14]/value matches {True, False}
@@ -8249,6 +8253,10 @@ terminology
                 text = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, você consumiu cinco ou mais doses (mostrar o cartão) em uma única ocasião?">
                 description = <"Consumo numa única ocasião">
             >
+            ["id8.1"] = <
+                text = <"Entre as bebidas alcoólicas, qual você prefere">
+                description = <"Tipo">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -8262,6 +8270,10 @@ terminology
             ["id7.1"] = <
                 text = <"Consumo">
                 description = <"Consumo">
+            >
+            ["id8.1"] = <
+                text = <"Tipo">
+                description = <"Tipo">
             >
         >
     >
