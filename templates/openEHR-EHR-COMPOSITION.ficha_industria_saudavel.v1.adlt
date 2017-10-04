@@ -6306,14 +6306,26 @@ definition
                     }
                 }
             }
-            ELEMENT[id11] occurrences matches {1} matches {
-                /value[id12]/defining_code matches {[ac3]}
+            ELEMENT[id11.1] occurrences matches {1} matches {    -- Nos últimos 12 meses quantos dias, no total, deixou de trabalhar por motivos relacionados à sua saúde
+                value matches {
+                    DV_CODED_TEXT[id12.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
-            ELEMENT[id13] occurrences matches {0..1} matches {
-                /value[id14]/defining_code matches {[ac3]}
+            ELEMENT[id13.1] occurrences matches {0..1} matches {    -- Do total de dias de ausência ao trabalho indicados na pergunta anterior, você pode dizer quantos dias foram de faltas em decorrência a acidentes de trabalho
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
-            ELEMENT[id15] occurrences matches {0..1} matches {
-                /value[id16]/value matches {True, False}
+            ELEMENT[id15.1] occurrences matches {0..1} matches {    -- Das ausências de trabalho por motivos relacionados à saúde, algum gerou auxílio-doença
+                value matches {
+                    DV_BOOLEAN[id16.1] matches {
+                        value matches {True, False}
+                    }
+                }
             }
         }
     }
@@ -6341,6 +6353,18 @@ terminology
                 text = <"Você trabalha à noite pelo menos um dia por semana">
                 description = <"Trabalha a noite pelo menos 1 dia da semana">
             >
+            ["id11.1"] = <
+                text = <"Nos últimos 12 meses quantos dias, no total, deixou de trabalhar por motivos relacionados à sua saúde">
+                description = <"Nos ultimos 12 meses, quantos dias deixou de trabalhar por motivos relacionados à saúde">
+            >
+            ["id13.1"] = <
+                text = <"Do total de dias de ausência ao trabalho indicados na pergunta anterior, você pode dizer quantos dias foram de faltas em decorrência a acidentes de trabalho">
+                description = <"Do total de dias de ausência ao trabalho, quantos dias foram de faltas em decorrência a acidentes de trabalho">
+            >
+            ["id15.1"] = <
+                text = <"Das ausências de trabalho por motivos relacionados à saúde, algum gerou auxílio-doença">
+                description = <"Nos dias de ausência, algum gerou auxílio doença">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -6362,6 +6386,18 @@ terminology
             ["id9.1"] = <
                 text = <"Work at night at least 1 day a week">
                 description = <"Work at night at least 1 day a week">
+            >
+            ["id11.1"] = <
+                text = <"In the last 12 months, how many days did you stop working for health reasons?">
+                description = <"In the last 12 months, how many days did you stop working for health reasons?">
+            >
+            ["id13.1"] = <
+                text = <"Of the total number of days absent from work, how many days were absent as a result of work-related accidents">
+                description = <"Of the total number of days absent from work, how many days were absent as a result of work-related accidents">
+            >
+            ["id15.1"] = <
+                text = <"In the days of absence, some generated disease aid">
+                description = <"In the days of absence, some generated disease aid">
             >
         >
     >
