@@ -8022,8 +8022,12 @@ specialize
 definition
     OBSERVATION[id1.1] occurrences matches {1} matches {    -- Álcool
         /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id6] occurrences matches {0..1} matches {
-                /value[id9]/defining_code matches {[ac1]}
+            ELEMENT[id6.1] occurrences matches {0..1} matches {    -- Quantas doses (mostrar o cartão) de bebidas alcoólicas você toma numa semana normal (típica)
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
             ELEMENT[id7] occurrences matches {0..1} matches {
                 /value[id10]/defining_code matches {[ac2]}
@@ -8053,11 +8057,19 @@ terminology
                 text = <"Álcool">
                 description = <"Uso de alcool">
             >
+            ["id6.1"] = <
+                text = <"Quantas doses (mostrar o cartão) de bebidas alcoólicas você toma numa semana normal (típica)">
+                description = <"Doses">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"Uso de alcool">
                 description = <"Uso de alcool">
+            >
+            ["id6.1"] = <
+                text = <"Doses">
+                description = <"Doses">
             >
         >
     >
