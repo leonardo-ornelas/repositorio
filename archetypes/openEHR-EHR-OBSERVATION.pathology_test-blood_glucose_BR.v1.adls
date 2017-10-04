@@ -662,8 +662,8 @@ terminology
                 description = <"Dados demográficos do laboratório responsável pelo teste de patologia.">
             >
             ["id95"] = <
-                text = <"*Test Request Details (en)">
-                description = <"*Details concerning a single pathology test requested. (en)">
+                text = <"Detalhes do pedido de teste">
+                description = <"Detalhes relativos a um único teste de patologia solicitado.">
             >
             ["id63"] = <
                 text = <"*Requester Order Identifier (en)">
