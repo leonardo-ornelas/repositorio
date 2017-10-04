@@ -9312,7 +9312,9 @@ definition
             }
             ELEMENT[id21.1] occurrences matches {0..1} matches {    -- Nos dias em que você fez essas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total, você gastou fazendo essas atividades por dia?
                 value matches {
-                    DV_TIME[id22.1] 
+                    DV_TIME[id22.1] matches {
+                        value matches {*}
+                    }
                 }
             }
             ELEMENT[id23.1] occurrences matches {0..1} matches {    -- Em quantos dias da última semana você realizou atividades MODERADAS por pelo menos 10 minutos contínuos, como por exemplo pedalar leve na bicicleta, nadar, dançar... (se necessário dê mais exemplos: fazer ginástica aeróbica leve, jogar vôlei recreativo, carregar pesos leves, fazer serviços domésticos em casa, no quintal ou no jardim como varrer, aspirar, cuidar do jardim) ou qualquer atividade que fez aumentar moderadamente sua respiração ou batimentos do coração (POR FAVOR NÃO INCLUA CAMINHADA)
