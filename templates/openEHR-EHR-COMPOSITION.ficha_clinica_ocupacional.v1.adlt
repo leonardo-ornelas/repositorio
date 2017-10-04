@@ -17,14 +17,14 @@ description
     copyright = <"© openEHR">
     details = <
         ["en"] = <
-            keywords = <"progress", "note", "encounter", "fco">
+            keywords = <"progress", "note", "encounter">
             language = <[ISO_639-1::en]>
             misuse = <"">
             purpose = <"Record of encounter as a progress note.">
             use = <"For use to record when a person and clinician interact.">
         >
         ["pt-br"] = <
-            keywords = <"Progresso", "nota", "encontro", "fco>
+            keywords = <"Progresso", "nota", "encontro">
             language = <[ISO_639-1::pt-br]>
             misuse = <"">
             purpose = <"Registro de encontro como nota de progresso.">
