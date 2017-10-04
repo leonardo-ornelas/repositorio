@@ -38,8 +38,8 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "Ficha clínica ocupacional",
+    "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
-    "sha" : "d626f3e132c9f565461c9d88762848ac8195cc5e"
+    "sha" : "58df28aa98aca67f8e6c48bb2c7387316f4f53ae"
   } ]
 }
