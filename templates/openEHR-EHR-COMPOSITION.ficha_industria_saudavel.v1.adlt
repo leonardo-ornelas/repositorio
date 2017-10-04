@@ -6833,26 +6833,54 @@ definition
             }
             CLUSTER[id18] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id19] occurrences matches {0..1} matches {
-                        /value[id20]/defining_code matches {[ac3]}
+                    ELEMENT[id19.1] occurrences matches {0..1} matches {    -- Quanto tempo você tem se sentido calmo(a) ou tranquilo(a)
+                        value matches {
+                            DV_CODED_TEXT[id20.1] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
                     }
-                    ELEMENT[id21] occurrences matches {0..1} matches {
-                        /value[id22]/defining_code matches {[ac3]}
+                    ELEMENT[id21.1] occurrences matches {0..1} matches {    -- Quanto tempo você tem se sentido com muita energia
+                        value matches {
+                            DV_CODED_TEXT[id22.1] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
                     }
-                    ELEMENT[id23] occurrences matches {0..1} matches {
-                        /value[id24]/defining_code matches {[ac3]}
+                    ELEMENT[id23.1] occurrences matches {0..1} matches {    -- Quanto tempo você tem se sentido desanimado(a) ou abatido(a)
+                        value matches {
+                            DV_CODED_TEXT[id24.1] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
                     }
-                    ELEMENT[id25] occurrences matches {0..1} matches {
-                        /value[id26]/defining_code matches {[ac3]}
+                    ELEMENT[id25.1] occurrences matches {0..1} matches {    -- Durante as últimas 4 semanas, quantas vezes a dor interferiu em seu trabalho normal (incluindo tanto o trabalho fora, quanto dentro de casa)
+                        value matches {
+                            DV_CODED_TEXT[id26.1] matches {
+                                defining_code matches {[ac3]}
+                            }
+                        }
                     }
-                    ELEMENT[id28] occurrences matches {0..1} matches {
-                        /value[id29]/defining_code matches {[ac1]}
+                    ELEMENT[id28.1] occurrences matches {0..1} matches {    -- De uma maneira geral, como você classifica a qualidade dos relacionamentos que mantém com outras pessoas (amigos, colegas de trabalho, chefes)
+                        value matches {
+                            DV_CODED_TEXT[id29.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
                     }
-                    ELEMENT[id30] occurrences matches {0..1} matches {
-                        /value[id31]/defining_code matches {[ac1]}
+                    ELEMENT[id30.1] occurrences matches {0..1} matches {    -- De uma maneira geral, como você se sente em relação à sua vida
+                        value matches {
+                            DV_CODED_TEXT[id31.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
                     }
-                    ELEMENT[id32] occurrences matches {0..1} matches {
-                        /value[id33]/defining_code matches {[ac1]}
+                    ELEMENT[id32.1] occurrences matches {0..1} matches {    -- De uma maneira geral, como você classifica o seu nível pessoal de integração/adaptação ao ambiente que o rodeia
+                        value matches {
+                            DV_CODED_TEXT[id33.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
                     }
                 }
             }
@@ -6924,6 +6952,34 @@ terminology
                 text = <"Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência da sua saúde física">
                 description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
             >
+            ["id21.1"] = <
+                text = <"Quanto tempo você tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id19.1"] = <
+                text = <"Quanto tempo você tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id23.1"] = <
+                text = <"Quanto tempo você tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25.1"] = <
+                text = <"Durante as últimas 4 semanas, quantas vezes a dor interferiu em seu trabalho normal (incluindo tanto o trabalho fora, quanto dentro de casa)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+            >
+            ["id28.1"] = <
+                text = <"De uma maneira geral, como você classifica a qualidade dos relacionamentos que mantém com outras pessoas (amigos, colegas de trabalho, chefes)">
+                description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30.1"] = <
+                text = <"De uma maneira geral, como você se sente em relação à sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32.1"] = <
+                text = <"De uma maneira geral, como você classifica o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+            >
         >
         ["en"] = <
             ["id3"] = <
@@ -6965,6 +7021,34 @@ terminology
             ["id13.1"] = <
                 text = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
                 description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+            >
+            ["id21.1"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id19.1"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id23.1"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25.1"] = <
+                text = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+            >
+            ["id28.1"] = <
+                text = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+                description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30.1"] = <
+                text = <"Como o trabalhador se sente em relação a sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32.1"] = <
+                text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
             >
         >
     >
