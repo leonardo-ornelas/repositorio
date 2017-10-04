@@ -64,7 +64,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.adlt",
-    "sha" : "38986043c3de15a0adb14570df366fb566e24786"
+    "sha" : "e95990d9ae6135720864fca5570d87b3e786baf2"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.sesifco.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -112,7 +112,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
-    "sha" : "3cca6b3368adf47f60f015b42b75d72bfe61be86"
+    "sha" : "d304e246644eb2b72175bf90732c9379ed24cc81"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.identificacao_sesi_fco.v1.0.0",
     "rmType" : "COMPOSITION",
