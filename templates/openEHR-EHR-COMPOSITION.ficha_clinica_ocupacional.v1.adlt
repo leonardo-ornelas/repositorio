@@ -386,12 +386,12 @@ specialize
 definition
     EVALUATION[id1.1.1] matches {    -- Problem/Diagnosis
         /data[id2]/items matches {
-            ELEMENT[id3.0.1] occurrences matches {1} matches {    -- Problem/Diagnosis
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Problem/Diagnosis
                 value matches {
                     DV_TEXT[id84.0.1] 
                 }
             }
-            ELEMENT[id10.0.1] occurrences matches {1} matches {    -- Clinical description
+            ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Clinical description
                 value matches {
                     DV_TEXT[id85.0.1] 
                 }
@@ -483,8 +483,17 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {
-                /value[id0.3]/defining_code matches {[ac0.1]}
+            ELEMENT[id70.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id98.0.1] 
+                }
+            }
+            ELEMENT[id0.2.1] occurrences matches {0} matches {    -- Type
+                value matches {
+                    DV_CODED_TEXT[id0.3.1] matches {
+                        defining_code matches {[ac0.1]}
+                    }
+                }
             }
             CLUSTER[id0.4] occurrences matches {0..1} matches {
                 items matches {
@@ -645,6 +654,14 @@ terminology
                 text = <"Related items">
                 description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
             >
+            ["id70.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+            >
+            ["id0.2.1"] = <
+                text = <"Type">
+                description = <"Record the type of diagnosis">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -718,6 +735,14 @@ terminology
             ["id27.0.1"] = <
                 text = <"Itens relacionados">
                 description = <"Outros problemas, diagnósticos, procedimentos ou eventos relacionados de algum modo a este problema / diagnóstico.">
+            >
+            ["id70.0.1"] = <
+                text = <"Comentário">
+                description = <"Narração adicional sobre o problema ou diagnóstico não capturado em outros campos.">
+            >
+            ["id0.2.1"] = <
+                text = <"Tipo">
+                description = <"Registre o tipo de diagnóstico">
             >
         >
     >
