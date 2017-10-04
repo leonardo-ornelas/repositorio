@@ -1,0 +1,178 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-ACTION.medication-BR.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.medication.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© 2011 NEHTA">
+    details = <
+        ["en"] = <
+            keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply">
+            language = <[ISO_639-1::en]>
+            misuse = <"Use when recording an instruction or order (use INSTRUCTION.medication).">
+            purpose = <"The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
+            use = <"For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
+        >
+        ["pt-br"] = <
+            keywords = <"medication", "prescibe", "dispense", "administration", "cessation", "therapeutic good", "supply">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"*Use when recording an instruction or order (use INSTRUCTION.medication). (en)">
+            purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate. (en)">
+            use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred. (en)">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Sam Heard">
+        ["organisation"] = <"NEHTA">
+        ["email"] = <"sam.heard@oceaninformatics.com">
+        ["date"] = <"9/11/2010">
+    >
+    other_contributors = <"Stephen Chu, NEHTA, Australia (Editor)", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+
+definition
+    ACTION[id1.1] matches {    -- Medication action
+        ism_transition matches {
+            ISM_TRANSITION[id42] occurrences matches {0} matches {
+                /current_state[id43]/defining_code matches {[at41]}
+                /careflow_step[id44]/defining_code matches {[at2]}
+            }
+            ISM_TRANSITION[id45] occurrences matches {0} matches {
+                /current_state[id46]/defining_code matches {[at42]}
+                /careflow_step[id47]/defining_code matches {[at14]}
+            }
+            ISM_TRANSITION[id48] occurrences matches {0} matches {
+                /current_state[id49]/defining_code matches {[at43]}
+                /careflow_step[id50]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id51] occurrences matches {0} matches {
+                /current_state[id52]/defining_code matches {[at44]}
+                /careflow_step[id53]/defining_code matches {[at17]}
+            }
+            ISM_TRANSITION[id54] occurrences matches {0} matches {
+                /current_state[id55]/defining_code matches {[ac3]}
+                /careflow_step[id56]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id57] occurrences matches {0} matches {
+                /current_state[id58]/defining_code matches {[ac4]}
+                /careflow_step[id59]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id60] occurrences matches {0} matches {
+                /current_state[id61]/defining_code matches {[at45]}
+                /careflow_step[id62]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id63] occurrences matches {0} matches {
+                /current_state[id64]/defining_code matches {[at45]}
+                /careflow_step[id65]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id66] occurrences matches {0} matches {
+                /current_state[id67]/defining_code matches {[at45]}
+                /careflow_step[id68]/defining_code matches {[at7]}
+            }
+            ISM_TRANSITION[id69] occurrences matches {0} matches {
+                /current_state[id70]/defining_code matches {[at45]}
+                /careflow_step[id71]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id72] occurrences matches {0} matches {
+                /current_state[id73]/defining_code matches {[at45]}
+                /careflow_step[id74]/defining_code matches {[at19]}
+            }
+            ISM_TRANSITION[id75] occurrences matches {0} matches {
+                /current_state[id76]/defining_code matches {[at45]}
+                /careflow_step[id77]/defining_code matches {[at20]}
+            }
+            ISM_TRANSITION[id78] occurrences matches {0} matches {
+                /current_state[id79]/defining_code matches {[ac5]}
+                /careflow_step[id80]/defining_code matches {[at36]}
+            }
+            ISM_TRANSITION[id81] occurrences matches {0} matches {
+                /current_state[id82]/defining_code matches {[at46]}
+                /careflow_step[id83]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id84] occurrences matches {0} matches {
+                /current_state[id85]/defining_code matches {[at46]}
+                /careflow_step[id86]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id87] occurrences matches {0} matches {
+                /current_state[id88]/defining_code matches {[at46]}
+                /careflow_step[id89]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id90] occurrences matches {0} matches {
+                /current_state[id91]/defining_code matches {[at47]}
+                /careflow_step[id92]/defining_code matches {[at16]}
+            }
+            ISM_TRANSITION[id93] occurrences matches {0} matches {
+                /current_state[id94]/defining_code matches {[at47]}
+                /careflow_step[id95]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id96] occurrences matches {0} matches {
+                /current_state[id97]/defining_code matches {[at47]}
+                /careflow_step[id98]/defining_code matches {[at40]}
+            }
+            ISM_TRANSITION[id99] occurrences matches {0} matches {
+                /current_state[id100]/defining_code matches {[at48]}
+                /careflow_step[id101]/defining_code matches {[at8]}
+            }
+        }
+        /description[id18]/items matches {
+            ELEMENT[id21] matches {
+                /value[id102]/defining_code matches {[ac2]}
+            }
+            allow_archetype CLUSTER[id24] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id23] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
+            }
+            allow_archetype CLUSTER[id28] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id37] occurrences matches {0..1} matches {
+                /value[id107]/value matches {True, False}
+            }
+        }
+        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication action">
+                description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Ação da medicação">
+                description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
+            >
+        >
+    >
+
