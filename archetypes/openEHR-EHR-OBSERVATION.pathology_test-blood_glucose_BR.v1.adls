@@ -622,20 +622,20 @@ terminology
                 description = <"Valor real do resultado.">
             >
             ["id103"] = <
-                text = <"*Result Comment (en)">
-                description = <"*Comment about the Result. (en)">
+                text = <"Comentário do Resultado">
+                description = <"Comentário sobre o Resultado.">
             >
             ["id104"] = <
-                text = <"*Reference Range Guidance (en)">
-                description = <"*Additional advice on the applicability of the reference range. (en)">
+                text = <"Guia de Referência">
+                description = <"Recomendações adicionais sobre a aplicabilidade do intervalo de referência.">
             >
             ["id109"] = <
-                text = <"*Result Value Status (en)">
-                description = <"*The status of the result value. (en)">
+                text = <"Status do Valor  do Resultado">
+                description = <"O status do valor do resultado.">
             >
             ["id98"] = <
-                text = <"*Specimen Detail (en)">
-                description = <"*Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required. (en)">
+                text = <"Detalhe do espécime">
+                description = <"Detalhes sobre o espécime individual ao qual esses resultados do teste \"Grupo de resultados\" se referem, onde o teste de espécimes múltiplos é necessário.">
             >
             ["id99"] = <
                 text = <"*Pathological Diagnosis (en)">
