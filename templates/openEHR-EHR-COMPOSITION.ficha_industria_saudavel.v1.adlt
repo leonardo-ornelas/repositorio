@@ -7780,20 +7780,40 @@ definition
                     }
                 }
             }
-            ELEMENT[id20] occurrences matches {1} matches {
-                /value[id21]/defining_code matches {[ac1]}
+            ELEMENT[id20.1] occurrences matches {1} matches {    -- Você tem sido capaz de enfrentar seus problemas
+                value matches {
+                    DV_CODED_TEXT[id21.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id22] occurrences matches {1} matches {
-                /value[id23]/defining_code matches {[ac2]}
+            ELEMENT[id22.1] occurrences matches {1} matches {    -- Você tem se sentido triste ou deprimido(a)
+                value matches {
+                    DV_CODED_TEXT[id23.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id24] occurrences matches {1} matches {
-                /value[id25]/defining_code matches {[ac2]}
+            ELEMENT[id24.1] occurrences matches {1} matches {    -- Você tem perdido a confiança em você mesmo(a)
+                value matches {
+                    DV_CODED_TEXT[id25.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id26] occurrences matches {1} matches {
-                /value[id27]/defining_code matches {[ac2]}
+            ELEMENT[id26.1] occurrences matches {1} matches {    -- Você tem se achado uma pessoa sem muito valor
+                value matches {
+                    DV_CODED_TEXT[id27.1] matches {
+                        defining_code matches {[ac2]}
+                    }
+                }
             }
-            ELEMENT[id28] occurrences matches {1} matches {
-                /value[id29]/defining_code matches {[ac1]}
+            ELEMENT[id28.1] occurrences matches {1} matches {    -- Você tem se sentido feliz de modo geral
+                value matches {
+                    DV_CODED_TEXT[id29.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
         }
     }
@@ -7837,6 +7857,26 @@ terminology
                 text = <"Você tem sido capaz de desfrutar (fazer agradavelmente) suas atividades normais de cada dia">
                 description = <"É capaz de desfrutar de atividades normais de cada dia">
             >
+            ["id20.1"] = <
+                text = <"Você tem sido capaz de enfrentar seus problemas">
+                description = <"Tem sido capaz de enfrentar seus problemas">
+            >
+            ["id22.1"] = <
+                text = <"Você tem se sentido triste ou deprimido(a)">
+                description = <"Sente-se triste ou deprimido">
+            >
+            ["id24.1"] = <
+                text = <"Você tem perdido a confiança em você mesmo(a)">
+                description = <"Tem perdido a confiança em si">
+            >
+            ["id26.1"] = <
+                text = <"Você tem se achado uma pessoa sem muito valor">
+                description = <"Se acha uma pessoa sem muito valor">
+            >
+            ["id28.1"] = <
+                text = <"Você tem se sentido feliz de modo geral">
+                description = <"Se sente feliz">
+            >
         >
         ["en"] = <
             ["id3"] = <
@@ -7870,6 +7910,26 @@ terminology
             ["id18.1"] = <
                 text = <"É capaz de desfrutar de atividades normais de cada dia">
                 description = <"É capaz de desfrutar de atividades normais de cada dia">
+            >
+            ["id20.1"] = <
+                text = <"Tem sido capaz de enfrentar seus problemas">
+                description = <"Tem sido capaz de enfrentar seus problemas">
+            >
+            ["id22.1"] = <
+                text = <"Sente-se triste ou deprimido">
+                description = <"Sente-se triste ou deprimido">
+            >
+            ["id24.1"] = <
+                text = <"Tem perdido a confiança em si">
+                description = <"Tem perdido a confiança em si">
+            >
+            ["id26.1"] = <
+                text = <"Se acha uma pessoa sem muito valor">
+                description = <"Se acha uma pessoa sem muito valor">
+            >
+            ["id28.1"] = <
+                text = <"Se sente feliz">
+                description = <"Se sente feliz">
             >
         >
     >
