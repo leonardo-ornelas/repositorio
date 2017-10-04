@@ -6114,6 +6114,22 @@ terminology
                 text = <"Utilização de Serviços de Saúde">
                 description = <"Utilização Serviços de Saúde">
             >
+            ["ac1"] = <
+                text = <"Vezes">
+                description = <"Vezes">
+            >
+            ["ac2"] = <
+                text = <"Visita Dentista">
+                description = <"Visita Dentista">
+            >
+            ["ac3"] = <
+                text = <"Pressão">
+                description = <"Pressão">
+            >
+            ["ac4"] = <
+                text = <"Plano de saúde">
+                description = <"Plano de saúde">
+            >
             ["id6.1"] = <
                 text = <"Nos últimos 12 meses, quantas vezes você consultou o médico?">
                 description = <"Quantas vezes o trabalhador consultou o médico nos ultimos 12 meses">
@@ -6136,6 +6152,22 @@ terminology
                 text = <"Health Services Utilization">
                 description = <"Health Services Utilization">
             >
+            ["ac1"] = <
+                text = <"*Vezes (pt-br)">
+                description = <"*Vezes (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Visita Dentista (pt-br)">
+                description = <"*Visita Dentista (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Pressão (pt-br)">
+                description = <"*Pressão (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Plano de saúde (pt-br)">
+                description = <"*Plano de saúde (pt-br)">
+            >
             ["id6.1"] = <
                 text = <"How many times has the worker consulted the doctor in the last 12 months">
                 description = <"How many times has the worker consulted the doctor in the last 12 months">
@@ -6152,6 +6184,24 @@ terminology
                 text = <"The worker has a health plan">
                 description = <"The worker has a health plan">
             >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8", "at9">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at10", "at11", "at12", "at13">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18">
         >
     >
 
@@ -6529,11 +6579,24 @@ specialize
 definition
     OBSERVATION[id1.1] occurrences matches {1} matches {    -- Uso de medicamento
         /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id6] occurrences matches {1} matches {
-                /value[id7]/defining_code matches {[ac1]}
+            ELEMENT[id6.1] occurrences matches {1} matches {    -- Quantos medicamentos você usou nos últimos 15 dias
+                value matches {
+                    DV_CODED_TEXT[id7.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
             }
-            ELEMENT[id8] occurrences matches {0..1} matches {
-                /value[id9]/defining_code matches {[ac1]}
+            ELEMENT[id8.1] occurrences matches {0..1} matches {    -- Quantos dos medicamentos usados nos últimos 15 dias foram receitados por médico
+                value matches {
+                    DV_CODED_TEXT[id9.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id10.1] occurrences matches {0..1} matches {    -- Descreva o nome dos medicamentos usados nos últimos 15 dias
+                value matches {
+                    DV_TEXT[id11.1] 
+                }
             }
         }
     }
@@ -6545,12 +6608,50 @@ terminology
                 text = <"Uso de medicamento">
                 description = <"Registre informações sobre uso de medicamentos">
             >
+            ["ac1"] = <
+                text = <"Uso de medicamento">
+                description = <"Uso de medicamento">
+            >
+            ["id6.1"] = <
+                text = <"Quantos medicamentos você usou nos últimos 15 dias">
+                description = <"Quantos medicamentos o trabalhador usou nos últimos 15 dias">
+            >
+            ["id8.1"] = <
+                text = <"Quantos dos medicamentos usados nos últimos 15 dias foram receitados por médico">
+                description = <"Quantos medicamentos usados pelo trabalhador nos últimos 15 dias foram receitados por médico">
+            >
+            ["id10.1"] = <
+                text = <"Descreva o nome dos medicamentos usados nos últimos 15 dias">
+                description = <"Nome dos medicamentos usados pelo trabalhador nos últimos 15 dias">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
                 text = <"use of medication">
                 description = <"use of medication">
             >
+            ["ac1"] = <
+                text = <"*Uso de medicamento (pt-br)">
+                description = <"*Uso de medicamento (pt-br)">
+            >
+            ["id6.1"] = <
+                text = <"How many drugs did the worker use in the last 15 days">
+                description = <"How many drugs did the worker use in the last 15 days">
+            >
+            ["id8.1"] = <
+                text = <"How many drugs used by the worker in the last 15 days have been prescribed by a physician">
+                description = <"How many drugs used by the worker in the last 15 days have been prescribed by a physician">
+            >
+            ["id10.1"] = <
+                text = <"Name of the medicines used by the worker in the last 15 days">
+                description = <"Name of the medicines used by the worker in the last 15 days">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6">
         >
     >
 
