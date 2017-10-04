@@ -697,7 +697,7 @@
     "rmType" : "ADMIN_ENTRY",
     "name" : "Recomendações Educativo Preventivas",
     "path" : "archetypes/openEHR-EHR-ADMIN_ENTRY.recomendacoes_educativo_preventivas_qualidade_vida.v1.adls",
-    "sha" : "7c03925e126c34dbf56b93642b60006e1b86998b",
+    "sha" : "a672c26a6c8155f253b2d7ed7083fcfbf0c888cd",
     "languages" : [ "pt-br", "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.exame_fisico.v1.0.0",
@@ -990,7 +990,7 @@
     "rmType" : "OBSERVATION",
     "name" : "qualidade_vida",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.qualidade_vida.v1.adls",
-    "sha" : "ebf3c4af8b82a2e45694a70c1cc8e473db449786",
+    "sha" : "39c1639e5965a5d2ff41ccf81d9f4a41ce430486",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.uso_de_alcool.v1.0.0",
