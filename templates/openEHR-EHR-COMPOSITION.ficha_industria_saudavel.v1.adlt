@@ -6900,6 +6900,18 @@ terminology
                 text = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
                 description = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
             >
+            ["id36"] = <
+                text = <"teste">
+                description = <"teste">
+            >
+            ["id43"] = <
+                text = <"teste">
+                description = <"teste">
+            >
+            ["id45"] = <
+                text = <"teste">
+                description = <"teste">
+            >
             ["id6.1"] = <
                 text = <"Em geral, você diria que a sua saúde é">
                 description = <"Classificação da saúde do trabalhador">
@@ -6927,6 +6939,18 @@ terminology
                 description = <"teste (pt-br)">
             >
             ["id45.1"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id36"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id43"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id45"] = <
                 text = <"teste (pt-br)">
                 description = <"teste (pt-br)">
             >
