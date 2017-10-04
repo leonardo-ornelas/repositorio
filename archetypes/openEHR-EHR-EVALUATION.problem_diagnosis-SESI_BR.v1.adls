@@ -103,6 +103,31 @@ definition
                     }
                 }
             }
+            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Problemas/Diagnósticos
+                items matches {
+                    ELEMENT[id0.5] occurrences matches {0..1} matches {    -- D.P da infância
+                        value matches {
+                            DV_BOOLEAN[id0.6] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Tuberculose
+                        value matches {
+                            DV_BOOLEAN[id0.8] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Doença pulmonar obstrutiva crônica
+                        value matches {
+                            DV_BOOLEAN[id0.10] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                }
+            }
         }
         /protocol[id75]/items matches {
             allow_archetype CLUSTER[id77] matches { 
@@ -247,6 +272,22 @@ terminology
                 text = <"Relationship type (synthesised)">
                 description = <"The type of relationship that this problem/diagnosis has to the related item. (synthesised)">
             >
+            ["id0.4"] = <
+                text = <"Problemas/Diagnósticos">
+                description = <"Problemas/Diagnósticos">
+            >
+            ["id0.5"] = <
+                text = <"D.P da infância">
+                description = <"D.P da infância">
+            >
+            ["id0.7"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose">
+            >
+            ["id0.9"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doença pulmonar obstrutiva crônica">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -380,6 +421,22 @@ terminology
             ["ac1"] = <
                 text = <"*Relationship type (synthesised) (en)">
                 description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised) (en)">
+            >
+            ["id0.4"] = <
+                text = <"Problemas/Diagnósticos (en)">
+                description = <"Problemas/Diagnósticos (en)">
+            >
+            ["id0.5"] = <
+                text = <"D.P da infância (en)">
+                description = <"D.P da infância (en)">
+            >
+            ["id0.7"] = <
+                text = <"Tuberculose (en)">
+                description = <"Tuberculose (en)">
+            >
+            ["id0.9"] = <
+                text = <"Doença pulmonar obstrutiva crônica (en)">
+                description = <"Doença pulmonar obstrutiva crônica (en)">
             >
         >
     >
