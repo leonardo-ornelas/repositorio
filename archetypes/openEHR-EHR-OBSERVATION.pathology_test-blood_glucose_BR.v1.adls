@@ -542,8 +542,8 @@ terminology
                 description = <"Os resultados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total.">
             >
             ["id79.1"] = <
-                text = <"*Glucose Result (en)">
-                description = <"*Actual value of the glucose test result. (en)">
+                text = <"Resultado da glicose">
+                description = <"Valor real do resultado do teste de glicose.">
             >
             ["at0.18"] = <
                 text = <"*Concentration (en)">
@@ -562,28 +562,28 @@ terminology
                 description = <"*Route that the glucose was administered. (synthesised) (en)">
             >
             ["id1"] = <
-                text = <"*Pathology Test Result (en)">
-                description = <"*The findings and interpretation of pathology tests performed on patient-related specimens. (en)">
+                text = <"Resultados do teste de patologia">
+                description = <"Os achados e a interpretação de testes de patologia realizados em espécimes relacionados ao paciente.">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event. (en)">
+                text = <"Qualquer evento">
+                description = <"Qualquer evento.">
             >
             ["id6"] = <
-                text = <"*Test Result Name (en)">
-                description = <"*Identification of the pathology test performed, sometimes including specimen type and patient state. (en)">
+                text = <"Nome do resultado do teste">
+                description = <"Identificação do teste de patologia realizado, às vezes incluindo o tipo de amostra e o estado do paciente.">
             >
             ["id78"] = <
-                text = <"*Diagnostic Service (en)">
-                description = <"*The diagnostic service that performs the examination. (en)">
+                text = <"Serviço de diagnóstico">
+                description = <"O serviço de diagnóstico que realiza o exame.">
             >
             ["id66"] = <
-                text = <"*Specimen Detail (en)">
-                description = <"*Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'. (en)">
+                text = <"Detalhe da amostra">
+                description = <"Detalhes sobre o espécime se todos os resultados de teste individuais forem derivados do mesmo espécime. Se o tipo de amostra estiver suficientemente especificado com um código no nome do resultado do teste, esses dados adicionais não são necessários. Se houver vários espécimes, estes podem ser representados por 'Grupo de resultados'.">
             >
             ["id74"] = <
-                text = <"*Overall Test Result Status (en)">
-                description = <"*The publication status of the entire pathology test result. (en)">
+                text = <"Status geral do resultado do teste">
+                description = <"O status da publicação de todo o resultado do teste de patologia.">
             >
             ["at108"] = <
                 text = <"*Registered (en)">
@@ -606,20 +606,20 @@ terminology
                 description = <"*The result is unavailable because the test was not started or not completed. (en)">
             >
             ["id101"] = <
-                text = <"*Clinical Information Provided (en)">
-                description = <"*Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request. (en)">
+                text = <"Informações clínicas fornecidas">
+                description = <"Descrição da informação clínica disponível no momento da interpretação dos resultados, que pode incluir um link para a informação clínica original fornecida no pedido de teste.">
             >
             ["id96"] = <
-                text = <"*Result Group (en)">
-                description = <"*A group of results. (en)">
+                text = <"Grupo de resultados">
+                description = <"Um grupo de resultados.">
             >
             ["id97"] = <
-                text = <"*Result (en)">
-                description = <"*Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation. (en)">
+                text = <"Resultado">
+                description = <"Resultado específico detalhado, incluindo o valor do item de resultado e informações adicionais que podem ser úteis para a interpretação clínica.">
             >
             ["id79"] = <
-                text = <"*Result Value (en)">
-                description = <"*Actual value of the result. (en)">
+                text = <"Valor do Resultado">
+                description = <"Valor real do resultado.">
             >
             ["id103"] = <
                 text = <"*Result Comment (en)">
