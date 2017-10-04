@@ -1,88 +1,16 @@
 {
   "templates" : [ {
-    "id" : "openEHR-EHR-COMPOSITION.template_teste.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "teste composition",
-    "path" : "templates/openEHR-EHR-COMPOSITION.template_teste.v1.adlt",
-    "sha" : "065e3a0fcf5a728c697f8307481265c381492259"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.fco_sesi_v1.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Dados Antropométricos",
-    "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_v1.v1.adlt",
-    "sha" : "7fa37195ac6a2f636711f29cbf55693c52e5559b"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.teste_v2.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encontro",
-    "path" : "templates/openEHR-EHR-COMPOSITION.teste_v2.v1.adlt",
-    "sha" : "67dfbb1f3871ff87f8e33a0317efeb1c4990b915"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.teste_v3.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encontro",
-    "path" : "templates/openEHR-EHR-COMPOSITION.teste_v3.v1.adlt",
-    "sha" : "2e21c0509be382960ba42dcc5d9c20388b7f4b8c"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.testev4.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encontro",
-    "path" : "templates/openEHR-EHR-COMPOSITION.testev4.v1.adlt",
-    "sha" : "8a62d989b5c3612c2571d5d676b2da14dbe5cb3e"
-  }, {
     "id" : "openEHR-EHR-COMPOSITION.admissional.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "*Admission (en)",
     "path" : "templates/openEHR-EHR-COMPOSITION.admissional.v1.adlt",
     "sha" : "1bd55acdb84235f9c9dba9e1664fdffbfe4ad72e"
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.fco_sesi_br.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "*FCO (en)",
-    "path" : "templates/openEHR-EHR-COMPOSITION.fco_sesi_br.v1.adlt",
-    "sha" : "cdcbe5e159d32be5b2bbe4480ea0f393ff6d6199"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.habitos_de_vida_fco_sesi.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.habitos_de_vida_fco_sesi.v1.adlt",
-    "sha" : "1733d58b3f8266b6a8ecbec8b8e54bdb974fea79"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.habitos_vida_sesi_fco.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.habitos_vida_sesi_fco.v1.adlt",
-    "sha" : "ccabe6e53de431d7ef1798ea6a1f8a6fc1e21fff"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.historico_familiar_fco_sesi.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Family History",
-    "path" : "templates/openEHR-EHR-COMPOSITION.historico_familiar_fco_sesi.v1.adlt",
-    "sha" : "f09e33a8ff4a303043543ac8d61272a52616517d"
-  }, {
     "id" : "openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.adlt",
     "sha" : "51a08ff5e6b72c1fa7caac3e852e59d8c6323716"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.sesifco.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.sesifco.v1.adlt",
-    "sha" : "197866c5769eff112a35b5675082a7295e751c97"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.teste15.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.teste15.v1.adlt",
-    "sha" : "5934674fe63d4b5a5dde89135358caf9f3b080f6"
-  }, {
-    "id" : "openEHR-EHR-COMPOSITION.sesi_fco_completa.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.sesi_fco_completa_teste1.v1.adlt",
-    "sha" : "6ce9e65654436f6fbf0363b551eb88b1db4dd4ab"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.triagem.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -102,22 +30,16 @@
     "path" : "templates/openEHR-EHR-COMPOSITION.medicacoes.v1.adlt",
     "sha" : "c98dd2185bbe21f1971566d33be1d18b81b68b07"
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.fco_dados_identificacao.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.fco_dados_identificacao.v1.adlt",
-    "sha" : "23a06ec3f52b7f832be011ae7239cc1aa23f80e9"
-  }, {
     "id" : "openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
     "sha" : "b4a133fdc042ecab749324596dcbae15fc09739c"
   }, {
-    "id" : "openEHR-EHR-COMPOSITION.identificacao_sesi_fco.v1.0.0",
-    "rmType" : "COMPOSITION",
-    "name" : "Encounter",
-    "path" : "templates/openEHR-EHR-COMPOSITION.identificacao_sesi_fco.v1.adlt",
-    "sha" : "0170ee7474be51998cb6a98a59397d8b6ec5d1ef"
+    "id" : null,
+    "rmType" : null,
+    "name" : null,
+    "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
+    "sha" : "d626f3e132c9f565461c9d88762848ac8195cc5e"
   } ]
 }
