@@ -4281,7 +4281,7 @@ definition
                 /value[id0.3]/defining_code matches {[ac0.1]}
             }
         }
-        /protocol[id75]/items matches {
+        /protocol[id75]/items existence matches {0} matches {
             ELEMENT[id76.0.1] occurrences matches {0} matches {    -- Link to supporting clinical evidence
                 value matches {
                     DV_URI[id99.0.1] 
@@ -5064,26 +5064,14 @@ definition
             }
             CLUSTER[id95.0.1] occurrences matches {0} matches {    -- Prior patient location
                 items matches {
-                    CLUSTER[id120.0.1] occurrences matches {0} matches {    -- Facility
+                    CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
@@ -5101,8 +5089,9 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                         }
                     }
-                    CLUSTER[id96.0.1] occurrences matches {0} matches {    -- Adress
+                    CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
@@ -5143,38 +5132,8 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
-                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
                     use_node ELEMENT /data[id2]/items[id74]/items[id80]
@@ -5193,37 +5152,6 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id102]
                     use_node ELEMENT /data[id2]/items[id74]/items[id103]
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
-                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
                     use_node ELEMENT /data[id2]/items[id74]/items[id80]
@@ -5290,24 +5218,12 @@ definition
             }
             CLUSTER[id26.0.1] occurrences matches {0} matches {    -- Referring doctor
                 items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5327,24 +5243,12 @@ definition
             }
             CLUSTER[id122.0.1] occurrences matches {0} matches {    -- Consulting doctor
                 items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5374,24 +5278,12 @@ definition
             }
             CLUSTER[id52.0.1] occurrences matches {0} matches {    -- Admitting doctor
                 items matches {
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
-                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5439,6 +5331,11 @@ definition
                     ELEMENT[id0.66] occurrences matches {1} matches {
                         /value[id0.67]/defining_code matches {[ac0.6]}
                     }
+                    ELEMENT[id0.85.1] occurrences matches {1} matches {    -- CPF
+                        value matches {
+                            DV_TEXT[id0.86.1] 
+                        }
+                    }
                 }
             }
         }
@@ -5467,14 +5364,6 @@ terminology
                 text = <"Attending doctor">
                 description = <"The attending doctor providing services to thepatient">
             >
-            ["id26.0.1"] = <
-                text = <"Referring doctor">
-                description = <"Clinician who referred patient to the consulting doctor">
-            >
-            ["id122.0.1"] = <
-                text = <"Consulting doctor">
-                description = <"Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer">
-            >
             ["id42.0.1"] = <
                 text = <"Hospital service">
                 description = <"For local use, this field hold the type of organizational unit or clinical unit, e.g. CARDO1.">
@@ -5482,10 +5371,6 @@ terminology
             ["id50.0.1"] = <
                 text = <"Admit source">
                 description = <"Refer to NHDD 000385 Mode of admission andNHDD 000150 Source of referral to public psychiatric hospital">
-            >
-            ["id52.0.1"] = <
-                text = <"Admitting doctor">
-                description = <"*">
             >
             ["id62.0.1"] = <
                 text = <"Financial class">
@@ -5498,18 +5383,6 @@ terminology
             ["id72.0.1"] = <
                 text = <"Admit date time">
                 description = <"Date time the patient was admitted.">
-            >
-            ["id95.0.1"] = <
-                text = <"Prior patient location">
-                description = <"The patient location prior admission">
-            >
-            ["id120.0.1"] = <
-                text = <"Facility">
-                description = <"*">
-            >
-            ["id96.0.1"] = <
-                text = <"Adress">
-                description = <"*">
             >
             ["id100.0.1"] = <
                 text = <"ID">
@@ -5587,6 +5460,26 @@ terminology
                 text = <"Universal ID type">
                 description = <"*">
             >
+            ["id95.0.1"] = <
+                text = <"Prior patient location">
+                description = <"The patient location prior admission">
+            >
+            ["id26.0.1"] = <
+                text = <"Referring doctor">
+                description = <"Clinician who referred patient to the consulting doctor">
+            >
+            ["id122.0.1"] = <
+                text = <"Consulting doctor">
+                description = <"Consultant responsible for the care of the patient,including salaried specialist, visiting medical officer">
+            >
+            ["id52.0.1"] = <
+                text = <"Admitting doctor">
+                description = <"*">
+            >
+            ["id0.85.1"] = <
+                text = <"CPF">
+                description = <"CPF">
+            >
         >
         ["ar-sy"] = <
             ["id1.1.1"] = <
@@ -5609,14 +5502,6 @@ terminology
                 text = <"الطبيب الحاضر">
                 description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
             >
-            ["id26.0.1"] = <
-                text = <"الطبيب صاحب الإحالة">
-                description = <"الطبيب الذي قام بإحالة المريض إلى الطبيب الاستشاري">
-            >
-            ["id122.0.1"] = <
-                text = <"الطبيب الاستشاري">
-                description = <"الطبيب الاستشاري المسئول عن تقديم الرعاية للمريض, بنا قي ذلك الأخصائي الذي يعمل بأجر, و المسئول الطبي الزائر">
-            >
             ["id42.0.1"] = <
                 text = <"خدمة المستشفى">
                 description = <"للاستخدام المحلي, و يمثل هذا الحق نو الوحدة التنظيمية أو السريرية, مثل: CARDO1">
@@ -5624,10 +5509,6 @@ terminology
             ["id50.0.1"] = <
                 text = <"مصدر الإدخال">
                 description = <"برجاء الرجوع إلى طريق الإدخال في NHDD 000385 و مصدر الإحالة إلى المستشفى النفسي العامNHDD 000150">
-            >
-            ["id52.0.1"] = <
-                text = <"الطبيب المسئول عن الإدخال">
-                description = <"*">
             >
             ["id62.0.1"] = <
                 text = <"الدرجة الاقتصادية">
@@ -5640,18 +5521,6 @@ terminology
             ["id72.0.1"] = <
                 text = <"وقت/ تاريخ الإدخال">
                 description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
-            >
-            ["id95.0.1"] = <
-                text = <"المكان السابق للمريض">
-                description = <"المكان السابق للمريض">
-            >
-            ["id120.0.1"] = <
-                text = <"المؤسسة">
-                description = <"*">
-            >
-            ["id96.0.1"] = <
-                text = <"العنوان">
-                description = <"*">
             >
             ["id100.0.1"] = <
                 text = <"العتصر التعريفي">
@@ -5729,6 +5598,26 @@ terminology
                 text = <"نوع العنصر التعريفي الشامل">
                 description = <"*">
             >
+            ["id95.0.1"] = <
+                text = <"المكان السابق للمريض">
+                description = <"المكان السابق للمريض">
+            >
+            ["id26.0.1"] = <
+                text = <"الطبيب صاحب الإحالة">
+                description = <"الطبيب الذي قام بإحالة المريض إلى الطبيب الاستشاري">
+            >
+            ["id122.0.1"] = <
+                text = <"الطبيب الاستشاري">
+                description = <"الطبيب الاستشاري المسئول عن تقديم الرعاية للمريض, بنا قي ذلك الأخصائي الذي يعمل بأجر, و المسئول الطبي الزائر">
+            >
+            ["id52.0.1"] = <
+                text = <"الطبيب المسئول عن الإدخال">
+                description = <"*">
+            >
+            ["id0.85.1"] = <
+                text = <"CPF (en)">
+                description = <"CPF (en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -5751,14 +5640,6 @@ terminology
                 text = <"Médico assistente">
                 description = <"O médico assistente que presta serviços ao paciente.">
             >
-            ["id26.0.1"] = <
-                text = <"Referência médica">
-                description = <"Clínico que encaminhou o paciente para o médico.">
-            >
-            ["id122.0.1"] = <
-                text = <"Médico consultor">
-                description = <"Consultor responsável pelo atendimento do paciente, incluindo especialista assalariado e médico visitante.">
-            >
             ["id42.0.1"] = <
                 text = <"Serviço hospitalar">
                 description = <"Para uso local, este campo possui o tipo de unidade organizacional ou unidade clínica, e. CARDO1.">
@@ -5766,10 +5647,6 @@ terminology
             ["id50.0.1"] = <
                 text = <"Origem da admissão">
                 description = <"* Consulte o NHDD 000385 Modo de admissão e HDD 000150. Fonte de referência para o hospital psiquiátrico público.">
-            >
-            ["id52.0.1"] = <
-                text = <"Admissão médica">
-                description = <"*">
             >
             ["id62.0.1"] = <
                 text = <"Classe financeira">
@@ -5782,18 +5659,6 @@ terminology
             ["id72.0.1"] = <
                 text = <"Data hora de admissão">
                 description = <"Data hora que o paciente foi admitido.">
-            >
-            ["id95.0.1"] = <
-                text = <"Localização anterior do paciente">
-                description = <"A localização do paciente antes da admissão.">
-            >
-            ["id120.0.1"] = <
-                text = <"Instalação">
-                description = <"*">
-            >
-            ["id96.0.1"] = <
-                text = <"Endereço">
-                description = <"*">
             >
             ["id100.0.1"] = <
                 text = <"Código de Identificação">
@@ -5870,6 +5735,26 @@ terminology
             ["id108.0.1"] = <
                 text = <"Tipo do Código de Identificação Universal">
                 description = <"*">
+            >
+            ["id95.0.1"] = <
+                text = <"Localização anterior do paciente">
+                description = <"A localização do paciente antes da admissão.">
+            >
+            ["id26.0.1"] = <
+                text = <"Referência médica">
+                description = <"Clínico que encaminhou o paciente para o médico.">
+            >
+            ["id122.0.1"] = <
+                text = <"Médico consultor">
+                description = <"Consultor responsável pelo atendimento do paciente, incluindo especialista assalariado e médico visitante.">
+            >
+            ["id52.0.1"] = <
+                text = <"Admissão médica">
+                description = <"*">
+            >
+            ["id0.85.1"] = <
+                text = <"CPF (en)">
+                description = <"CPF">
             >
         >
     >
