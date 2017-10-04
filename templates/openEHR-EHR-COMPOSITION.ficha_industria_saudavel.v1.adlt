@@ -7078,8 +7078,12 @@ definition
                     }
                 }
             }
-            ELEMENT[id12] occurrences matches {1} matches {
-                /value[id13]/defining_code matches {[ac3]}
+            ELEMENT[id12.1] occurrences matches {1} matches {    -- Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a sua pressão
+                value matches {
+                    DV_CODED_TEXT[id13.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
             ELEMENT[id14.1] occurrences matches {1} matches {    -- Você possui plano de saúde
                 value matches {
@@ -7130,6 +7134,10 @@ terminology
                 text = <"Você possui plano de saúde">
                 description = <"O trabalhador possui plano de saúde">
             >
+            ["id12.1"] = <
+                text = <"Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a sua pressão">
+                description = <"Quando foi a ultima vez que um médico, enfermeiro ou profissional de saúde mediu a pressão do trabalhador">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -7167,6 +7175,10 @@ terminology
             ["id14.1"] = <
                 text = <"The worker has a health plan">
                 description = <"The worker has a health plan">
+            >
+            ["id12.1"] = <
+                text = <"When was the last time a physician, nurse, or health care professional measured worker pressure">
+                description = <"When was the last time a physician, nurse, or health care professional measured worker pressure">
             >
         >
     >
