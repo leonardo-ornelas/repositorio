@@ -72,7 +72,7 @@ definition
                             DV_TEXT[id19] 
                         }
                     }
-                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Observações ASO
+                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Recomendações médicas
                         value matches {
                             DV_TEXT[id21] 
                         }
@@ -94,8 +94,8 @@ terminology
                 description = <"Conclusão">
             >
             ["at1"] = <
-                text = <"Conclusão">
-                description = <"Conclusão">
+                text = <"Apto">
+                description = <"Apto">
             >
             ["at2"] = <
                 text = <"Inapto">
@@ -123,11 +123,11 @@ terminology
             >
             ["id18"] = <
                 text = <"Observações">
-                description = <"Observações">
+                description = <"Observações ASO">
             >
             ["id20"] = <
-                text = <"Observações ASO">
-                description = <"Observações ASO">
+                text = <"Recomendações médicas">
+                description = <"Recomendações médicas">
             >
         >
         ["en"] = <
@@ -172,8 +172,8 @@ terminology
                 description = <"Observations">
             >
             ["id20"] = <
-                text = <"Observations ASO">
-                description = <"Observations ASO">
+                text = <"Medical recommendations">
+                description = <"Medical recommendations">
             >
         >
     >
