@@ -128,6 +128,24 @@ definition
                                             }
                                         }
                                     }
+                                    CLUSTER[id36] occurrences matches {0..1} matches {    -- teste
+                                        items matches {
+                                            ELEMENT[id43] occurrences matches {0..1} matches {    -- teste
+                                                value matches {
+                                                    DV_CODED_TEXT[id44] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id45] occurrences matches {0..1} matches {    -- teste
+                                                value matches {
+                                                    DV_CODED_TEXT[id46] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -315,6 +333,18 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["id36"] = <
+                text = <"teste">
+                description = <"teste">
+            >
+            ["id43"] = <
+                text = <"teste">
+                description = <"teste">
+            >
+            ["id45"] = <
+                text = <"teste">
+                description = <"teste">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -488,6 +518,18 @@ terminology
             ["at22"] = <
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
+            >
+            ["id36"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id43"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id45"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
             >
         >
     >
