@@ -216,6 +216,18 @@ terminology
                 text = <"Sente-se culpado pela maneira como costuma beber.">
                 description = <"Sente-se culpado pela maneira como costuma beber.">
             >
+            ["at19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at21"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -263,8 +275,8 @@ terminology
                 description = <"Acima de 12 vezes">
             >
             ["ac1"] = <
-                text = <"*Doses (pt-br)">
-                description = <"*Doses (pt-br)">
+                text = <"Doses (pt-br)">
+                description = <"Doses (pt-br)">
             >
             ["at7"] = <
                 text = <"Não consome bebida alcoólica">
@@ -275,8 +287,8 @@ terminology
                 description = <"Cerveja">
             >
             ["ac2"] = <
-                text = <"*Consumo (pt-br)">
-                description = <"*Consumo (pt-br)">
+                text = <"Consumo (pt-br)">
+                description = <"Consumo (pt-br)">
             >
             ["at9"] = <
                 text = <"Vinho">
@@ -319,8 +331,8 @@ terminology
                 description = <"15 ou mais doses">
             >
             ["ac3"] = <
-                text = <"*Tipo (pt-br)">
-                description = <"*Tipo (pt-br)">
+                text = <"Tipo (pt-br)">
+                description = <"Tipo (pt-br)">
             >
             ["id13"] = <
                 text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber.">
@@ -338,20 +350,32 @@ terminology
                 text = <"Sente-se culpado pela maneira como costuma beber.">
                 description = <"Sente-se culpado pela maneira como costuma beber.">
             >
+            ["at19"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at20"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at21"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
-            members = <"at15", "at16", "at17", "at18">
+            members = <"at15", "at16", "at17", "at18", "at19">
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at1", "at2", "at3", "at4", "at5", "at6">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at20">
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at7", "at8", "at9", "at10", "at11", "at12", "at13">
+            members = <"at7", "at8", "at9", "at10", "at11", "at12", "at13", "at21">
         >
     >
 
