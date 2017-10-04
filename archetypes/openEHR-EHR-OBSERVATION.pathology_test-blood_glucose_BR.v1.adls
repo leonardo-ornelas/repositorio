@@ -506,12 +506,12 @@ terminology
                 description = <"Via que a glicose foi administrada.">
             >
             ["at0.16"] = <
-                text = <"*Oral (en)">
-                description = <"*Glucose load was administered by mouth. (en)">
+                text = <"Oral">
+                description = <"A carga de glicose foi administrada por via oral.">
             >
             ["at0.17"] = <
-                text = <"*Intravenous (en)">
-                description = <"*Glucose load was administered intravenously. (en)">
+                text = <"Intravenosa">
+                description = <"A carga de glicose foi administrada por via intravenosa.">
             >
             ["id0.2"] = <
                 text = <"Medição de Referência">
@@ -546,16 +546,16 @@ terminology
                 description = <"Valor real do resultado do teste de glicose.">
             >
             ["at0.18"] = <
-                text = <"*Concentration (en)">
-                description = <"*Concentration (en)">
+                text = <"Concentração">
+                description = <"Concentração">
             >
             ["at0.19"] = <
-                text = <"*Mass (en)">
-                description = <"*Mass (en)">
+                text = <"Massa">
+                description = <"Massa">
             >
             ["at0.20"] = <
-                text = <"*Mass (IU) (en)">
-                description = <"*Mass (IU) (en)">
+                text = <"Massa (IU)">
+                description = <"Massa (IU)">
             >
             ["ac0.1"] = <
                 text = <"*Route of Administration (synthesised) (en)">
@@ -586,24 +586,24 @@ terminology
                 description = <"O status da publicação de todo o resultado do teste de patologia.">
             >
             ["at108"] = <
-                text = <"*Registered (en)">
-                description = <"*No result yet available. (en)">
+                text = <"Registrado">
+                description = <"Nenhum resultado ainda disponível">
             >
             ["at38"] = <
-                text = <"*Interim (en)">
-                description = <"*This is an initial or interim result: data may be missing or verification not been performed. (en)">
+                text = <"Intermediário">
+                description = <"Este é um resultado inicial ou provisório: os dados podem estar faltando ou a verificação não foi realizada.">
             >
             ["at39"] = <
-                text = <"*Final (en)">
-                description = <"*The result is complete and verified by the responsible pathologist. (en)">
+                text = <"Final">
+                description = <"O resultado é completo e verificado pelo patologista responsável.">
             >
             ["at41"] = <
-                text = <"*Amended (en)">
-                description = <"*The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist. (en)">
+                text = <"Alterado">
+                description = <"O resultado foi modificado após ser Final e está completo e verificado pelo patologista responsável.">
             >
             ["at75"] = <
-                text = <"*Cancelled/Aborted (en)">
-                description = <"*The result is unavailable because the test was not started or not completed. (en)">
+                text = <"Cancelado/Abortado">
+                description = <"O resultado não está disponível porque o teste não foi iniciado ou não foi concluído.">
             >
             ["id101"] = <
                 text = <"Informações clínicas fornecidas">
