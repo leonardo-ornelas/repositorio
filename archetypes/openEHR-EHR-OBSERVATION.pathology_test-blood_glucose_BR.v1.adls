@@ -40,22 +40,22 @@ This archetype has been designed to enable the health record to:
 Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
         >
         ["pt-br"] = <
-           keywords = <"lab", "pathology", "biochemistry", "laboratory", "test", "specimen">
-            language = <[ISO_639-1::en]>
-            misuse = <"Not to be used to represent an entire cumulative report. This Pathology test result archetype represents only one of the result sets that is usually viewed as a vertical in a cumulative test report. A cumulative report is a view that is constructed from the results represented by multiple OBSERVATION archetypes.
+            keywords = <"lab", "pathology", "biochemistry", "laboratory", "test", "specimen">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"Não deve ser usado para representar um relatório cumulativo completo. Este arquétipo de resultado de teste de patologia representa apenas um dos conjuntos de resultados que geralmente são vistos como verticais em um relatório de teste cumulativo. Um relatório cumulativo é uma visão que é construída a partir dos resultados representados por vários arquétipos de OBSERVAÇÃO.
 
-Not to be used to record urine glucose test results - use OBSERVATION.urinalysis.
+Não deve ser usado para registrar os resultados do teste de glicose de urina - use OBSERVAÇÃO. Análise de avaliação.
 
-Not to be used to record CSF glucose test results - use the generic OBSERVATION.pathology_test with CSF noted as the biological sample.">
-            purpose = <"To record the findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
-            use = <"Use to record any glucose test results performed on plasma, serum or whole blood whether measured in a formal laboratory environment, point of care delivery or home monitoring.
+Não deve ser usado para registrar os resultados do teste de glicose CSF - use o teste genérico OBSERVATION.pathology_test com CSF observado como a amostra biológica. ">
+            purpose = <"Registrar os achados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total. ">
+            use = <"Use para registrar todos os resultados do teste de glicose realizados em plasma, soro ou sangue total, seja medido em um ambiente de laboratório formal, ponto de atendimento ou monitoramento doméstico.
 
-This archetype has been designed to enable the health record to:
-- distinguish between fasting and non-fasting glucose measurements, 
-- distinguish measurements from laboratory, point of care and home-based devices, and;
-- capture the complexity of a sequence of glucose measurements for a Glucose Tolerance Test, Glucose Challenge Test and Insulin Hypoglycaemia StimulationTest via the specific Events and State data elements.
+Este arquétipo foi projetado para habilitar o registro de saúde para:
+- distinguir entre medições de glicose em jejum e não jejum,
+- distinguir medidas de laboratório, ponto de atendimento e dispositivos domésticos, e;
+- capturar a complexidade de uma seqüência de medidas de glicose para um teste de tolerância à glicose, teste de desafio de glicose e teste de estimulação de hipoglicemia de insulina através dos eventos específicos e elementos de dados do estado.
 
-Will normally be reported back to the requesting clinician as one component within the context of an overall COMPOSITION-based report.">
+Normalmente, será relatado de volta ao clínico solicitante como um componente no contexto de um relatório global baseado em COMPOSIÇÃO.">
         >
     >
     lifecycle_state = <"unmanaged">
