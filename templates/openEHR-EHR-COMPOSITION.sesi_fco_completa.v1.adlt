@@ -76,8 +76,8 @@ terminology
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"Encontro">
-                description = <"Encontro genérico ou  composição da nota de progresso.">
+                text = <"Ficha clínica ocupacional">
+                description = <"Ficha clínica ocupacional ou composição da nota de progresso.">
             >
         >
     >
@@ -126,6 +126,21 @@ definition
             ELEMENT[id0.4] occurrences matches {0..1} matches {
                 /value[id0.5]/defining_code matches {[ac0.1]}
             }
+            ELEMENT[id0.10.1] occurrences matches {0} matches {    -- Total time walked a day
+                value matches {
+                    DV_TIME[id0.11.1] 
+                }
+            }
+            ELEMENT[id0.14.1] occurrences matches {0} matches {    -- Total time spent doing moderate activities per day.
+                value matches {
+                    DV_TIME[id0.15.1] 
+                }
+            }
+            ELEMENT[id0.18.1] occurrences matches {0} matches {    -- Total time performing vigorous activities per day
+                value matches {
+                    DV_TIME[id0.20.1] 
+                }
+            }
             ELEMENT[id0.6.1] occurrences matches {0} matches {    -- Do some regular physical activity at your leisure
                 value matches {
                     DV_CODED_TEXT[id0.7.1] matches {
@@ -140,11 +155,6 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.10.1] occurrences matches {0} matches {    -- Total time walked a day
-                value matches {
-                    DV_TIME[id0.11.1] 
-                }
-            }
             ELEMENT[id0.12.1] occurrences matches {0} matches {    -- How many days in the last week did moderate activity
                 value matches {
                     DV_CODED_TEXT[id0.13.1] matches {
@@ -152,21 +162,11 @@ definition
                     }
                 }
             }
-            ELEMENT[id0.14.1] occurrences matches {0} matches {    -- Total time spent doing moderate activities per day.
-                value matches {
-                    DV_TIME[id0.15.1] 
-                }
-            }
             ELEMENT[id0.16.1] occurrences matches {0} matches {    -- How many days in the last week did vigorous activities
                 value matches {
                     DV_CODED_TEXT[id0.17.1] matches {
                         defining_code matches {[ac0.5]}
                     }
-                }
-            }
-            ELEMENT[id0.18.1] occurrences matches {0} matches {    -- Total time performing vigorous activities per day
-                value matches {
-                    DV_TIME[id0.20.1] 
                 }
             }
             ELEMENT[id0.21.1] occurrences matches {0} matches {    -- Main type of physical activity practiced in their leisure time.
@@ -873,7 +873,9 @@ definition
                     }
                     ELEMENT[id19.0.0.1] occurrences matches {0} matches {    -- Method of use
                         value matches {
-                            DV_TEXT[id22.0.0.1] 
+                            DV_TEXT[id22.0.0.1] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
                         }
                     }
                     ELEMENT[id6.0.0.1] occurrences matches {0} matches {    -- Frequency
@@ -897,7 +899,9 @@ definition
                     }
                     ELEMENT[id19.0.0.2] occurrences matches {0} matches {    -- Method of use
                         value matches {
-                            DV_TEXT[id22.0.0.2] 
+                            DV_TEXT[id22.0.0.2] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
                         }
                     }
                     ELEMENT[id6.0.0.2] occurrences matches {0} matches {    -- Frequency
@@ -907,19 +911,19 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -1185,7 +1189,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
             }
-            CLUSTER[id19] occurrences matches {0..1} matches {
+            CLUSTER[id19.0.1] occurrences matches {0} matches {    -- Occurrence summary
                 items matches {
                     ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Number
                         value matches {
@@ -1219,7 +1223,7 @@ definition
                     }
                 }
             }
-            CLUSTER[id27] matches {
+            CLUSTER[id27.0.1] occurrences matches {0} matches {    -- Related items
                 items matches {
                     ELEMENT[id29.0.1] occurrences matches {0} matches {    -- Related item
                         value matches {
@@ -1337,6 +1341,14 @@ terminology
                 text = <"Related item">
                 description = <"Identification of a related problem, diagnosis, procedure, or event as text, coded text or link within the health record. Note: It is desirable that this field should be coded using terminology, wherever possible.">
             >
+            ["id19.0.1"] = <
+                text = <"Occurrence summary">
+                description = <"Summary information about occurrences or exacerbations. Note: Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
+            >
+            ["id27.0.1"] = <
+                text = <"Related items">
+                description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1402,6 +1414,14 @@ terminology
             ["id29.0.1"] = <
                 text = <"Item relacionado">
                 description = <"Identificação de um problema relacionado, diagnóstico, procedimento ou evento como texto, texto codificado ou link dentro do registro de saúde. Nota: É desejável que este campo seja codificado usando terminologia, sempre que possível.">
+            >
+            ["id19.0.1"] = <
+                text = <"Resumo da ocorrência">
+                description = <"Resumo de informações sobre ocorrências ou exacerbações. Observação: informações detalhadas sobre cada ocorrência ou exacerbação provavelmente serão realizadas em outras partes do registro de saúde.">
+            >
+            ["id27.0.1"] = <
+                text = <"Itens relacionados">
+                description = <"Outros problemas, diagnósticos, procedimentos ou eventos relacionados de algum modo a este problema / diagnóstico.">
             >
         >
     >
@@ -1704,7 +1724,7 @@ definition
             }
         }
         /description[id18]/items matches {
-            ELEMENT[id21.1] occurrences matches {0} matches {    -- Medicine
+            ELEMENT[id21.1] matches {    -- Medicine
                 value matches {
                     DV_CODED_TEXT[id102.1] matches {
                         defining_code matches {[ac2]}
@@ -1729,7 +1749,7 @@ definition
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
             }
-            ELEMENT[id25.1] occurrences matches {0..1} matches {    -- Comment
+            ELEMENT[id25.1] occurrences matches {0} matches {    -- Comment
                 value matches {
                     DV_TEXT[id105.1] 
                 }
@@ -2697,12 +2717,12 @@ definition
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
                 }
-                state matches {
+                state existence matches {0} matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/state[id14]
                 }
             }
         }
-        /protocol[id8]/items matches {
+        /protocol[id8]/items existence matches {0} matches {
             allow_archetype CLUSTER[id12] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
@@ -2821,7 +2841,7 @@ definition
                 }
             }
         }
-        /protocol[id6]/items matches {
+        /protocol[id6]/items existence matches {0} matches {
             ELEMENT[id7.1] occurrences matches {0} matches {    -- Method
                 value matches {
                     DV_CODED_TEXT[id14.1] matches {
@@ -2999,8 +3019,12 @@ definition
                     }
                 }
             }
+            POINT_EVENT[id27.0.1] occurrences matches {0} matches {    -- *Any event(en)
+                data
+                state
+            }
         }
-        /protocol[id16]/items matches {
+        /protocol[id16]/items existence matches {0} matches {
             allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
@@ -3044,6 +3068,10 @@ terminology
                 text = <"*New element(en)">
                 description = <"**(en)">
             >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
         >
         ["en"] = <
             ["id1.1.1"] = <
@@ -3074,6 +3102,10 @@ terminology
                 text = <"Weight Estimation Formula">
                 description = <"Formula used to calculate the estimated weight.">
             >
+            ["id27.0.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
         >
         ["de"] = <
             ["id1.1.1"] = <
@@ -3102,6 +3134,10 @@ terminology
             >
             ["id28.0.1"] = <
                 text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
                 description = <"**(en)">
             >
         >
@@ -3134,6 +3170,10 @@ terminology
                 text = <"Novo elemento">
                 description = <"Novo elemento">
             >
+            ["id27.0.1"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
         >
         ["ru"] = <
             ["id1.1.1"] = <
@@ -3162,6 +3202,10 @@ terminology
             >
             ["id28.0.1"] = <
                 text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id27.0.1"] = <
+                text = <"*Any event(en)">
                 description = <"**(en)">
             >
         >
@@ -3276,12 +3320,12 @@ definition
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id7]/data[id4]
                 }
-                state matches {
+                state existence matches {0} matches {
                     use_node ITEM_TREE /data[id2]/events[id7]/state[id8]
                 }
             }
         }
-        /protocol[id12]/items matches {
+        /protocol[id12]/items existence matches {0} matches {
             ELEMENT[id14.1] occurrences matches {0} matches {    -- *Cuff size(en)
                 value matches {
                     DV_CODED_TEXT[id1067.1] matches {
@@ -4488,6 +4532,11 @@ definition
                     }
                 }
             }
+            ELEMENT[id10.1] occurrences matches {0} matches {    -- value of the result
+                value matches {
+                    DV_TEXT[id11.1] 
+                }
+            }
             ELEMENT[id12] occurrences matches {0..1} matches {
                 /value[id13]/defining_code matches {[ac2]}
             }
@@ -4506,6 +4555,11 @@ definition
                     DV_CODED_TEXT[id19.1] matches {
                         defining_code matches {[ac3]}
                     }
+                }
+            }
+            ELEMENT[id20.1] occurrences matches {0} matches {    -- value of the result
+                value matches {
+                    DV_TEXT[id21.1] 
                 }
             }
         }
@@ -4534,6 +4588,14 @@ terminology
                 text = <"Prostate Specific Antigen (PSA)">
                 description = <"Prostate Specific Antigen (PSA)">
             >
+            ["id20.1"] = <
+                text = <"value of the result">
+                description = <"value of the result">
+            >
+            ["id10.1"] = <
+                text = <"value of the result">
+                description = <"value of the result">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -4555,6 +4617,14 @@ terminology
             ["id18.1"] = <
                 text = <"Antígeno Prostático Específico (PSA)">
                 description = <"Antígeno Prostático Específico (PSA)">
+            >
+            ["id20.1"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
+            >
+            ["id10.1"] = <
+                text = <"valor do resultado">
+                description = <"valor do resultado">
             >
         >
     >
@@ -4996,6 +5066,26 @@ definition
                 items matches {
                     CLUSTER[id120.0.1] occurrences matches {0} matches {    -- Facility
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
@@ -5013,6 +5103,46 @@ definition
                     }
                     CLUSTER[id96.0.1] occurrences matches {0} matches {    -- Adress
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
@@ -5040,6 +5170,66 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id75]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
                     use_node ELEMENT /data[id2]/items[id74]/items[id80]
@@ -5100,6 +5290,26 @@ definition
             }
             CLUSTER[id26.0.1] occurrences matches {0} matches {    -- Referring doctor
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5117,6 +5327,26 @@ definition
             }
             CLUSTER[id122.0.1] occurrences matches {0} matches {    -- Consulting doctor
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5144,6 +5374,26 @@ definition
             }
             CLUSTER[id52.0.1] occurrences matches {0} matches {    -- Admitting doctor
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id100]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
@@ -5182,9 +5432,6 @@ definition
                 items matches {
                     ELEMENT[id0.58] occurrences matches {1} matches {
                         /value[id0.59]/defining_code matches {[ac0.4]}
-                    }
-                    ELEMENT[id0.60] occurrences matches {1} matches {
-                        /value[id0.61]/value matches {*}
                     }
                     ELEMENT[id0.64] occurrences matches {1} matches {
                         /value[id0.65]/defining_code matches {[ac0.5]}
