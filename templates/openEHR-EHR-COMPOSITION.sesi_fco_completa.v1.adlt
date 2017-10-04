@@ -927,8 +927,12 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
-                        /value[id0.0.3]/value matches {True, False}
+                    ELEMENT[id0.0.2.1] occurrences matches {0} matches {    -- Ex smoker
+                        value matches {
+                            DV_BOOLEAN[id0.0.3.1] matches {
+                                value matches {True, False}
+                            }
+                        }
                     }
                 }
             }
@@ -999,6 +1003,10 @@ terminology
                 text = <"Grams of tobacco">
                 description = <"Weight of tobacco consumed eg in a pipe">
             >
+            ["id0.0.2.1"] = <
+                text = <"Ex smoker">
+                description = <"Register for ex-smoker">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1.1"] = <
@@ -1044,6 +1052,10 @@ terminology
             ["id13.2.0.1"] = <
                 text = <"Gramas de tabaco">
                 description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex-fumante">
+                description = <"Cadastre-se no caso de ex-fumante.">
             >
         >
     >
