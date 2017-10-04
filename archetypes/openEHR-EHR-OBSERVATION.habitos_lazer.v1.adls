@@ -24,11 +24,11 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- habitos_lazer
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Hábitos Lazer
         data matches {
             HISTORY[id2] matches {
                 events matches {
-                    EVENT[id3] matches {    -- Any event
+                    EVENT[id3] matches {    -- Eventos
                         data matches {
                             ITEM_TREE[id4] matches {
                                 items matches {
@@ -39,18 +39,39 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Tipo de lazer
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- Especificar
                                         value matches {
-                                            DV_CODED_TEXT[id9] matches {
-                                                defining_code matches {[ac2]}
+                                            DV_TEXT[id11] 
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Faz atividade manual (tricô, pintura, etc)
+                                        value matches {
+                                            DV_BOOLEAN[id13] matches {
+                                                value matches {True, False; false}
                                             }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Toca algum instrumento
+                                        value matches {
+                                            DV_BOOLEAN[id15] matches {
+                                                value matches {True, False; false}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Canta (coral, igreja, etc)
+                                        value matches {
+                                            DV_BOOLEAN[id17] matches {
+                                                value matches {True, False; false}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Outros
+                                        value matches {
+                                            DV_TEXT[id19] 
                                         }
                                     }
                                 }
                             }
-                        }
-                        state matches {
-                            ITEM_TREE[id5] 
                         }
                     }
                 }
@@ -62,20 +83,16 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"habitos_lazer">
-                description = <"habitos_lazer">
+                text = <"Hábitos Lazer">
+                description = <"Atividade de lazer">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
+                text = <"Eventos">
+                description = <"Eventos">
             >
             ["id6"] = <
                 text = <"Atividades de lazer">
                 description = <"Atividades de lazer">
-            >
-            ["id8"] = <
-                text = <"Tipo de lazer">
-                description = <"Tipo de lazer">
             >
             ["at1"] = <
                 text = <"Nunca">
@@ -113,6 +130,26 @@ terminology
                 text = <"Tipo de lazer">
                 description = <"Tipo de lazer">
             >
+            ["id10"] = <
+                text = <"Especificar">
+                description = <"nota">
+            >
+            ["id12"] = <
+                text = <"Faz atividade manual (tricô, pintura, etc)">
+                description = <"Faz atividade manual (tricô, pintura, etc)">
+            >
+            ["id14"] = <
+                text = <"Toca algum instrumento">
+                description = <"Toca algum instrumento">
+            >
+            ["id16"] = <
+                text = <"Canta (coral, igreja, etc)">
+                description = <"Canta (coral, igreja, etc)">
+            >
+            ["id18"] = <
+                text = <"Outros">
+                description = <"Outras atividades">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -126,10 +163,6 @@ terminology
             ["id6"] = <
                 text = <"Leisure of activity">
                 description = <"Leisure of activity">
-            >
-            ["id8"] = <
-                text = <"Type of leisure">
-                description = <"Type of leisure">
             >
             ["at1"] = <
                 text = <"*Nunca (pt-br)">
@@ -166,6 +199,26 @@ terminology
             ["ac2"] = <
                 text = <"*Tipo de lazer (pt-br)">
                 description = <"*Tipo de lazer (pt-br)">
+            >
+            ["id10"] = <
+                text = <"Especificar (pt-br)">
+                description = <"nota (pt-br)">
+            >
+            ["id12"] = <
+                text = <"Faz atividade manual (tricô, pintura, etc) (pt-br)">
+                description = <"Faz atividade manual (tricô, pintura, etc) (pt-br)">
+            >
+            ["id14"] = <
+                text = <"Toca algum instrumento (pt-br)">
+                description = <"Toca algum instrumento (pt-br)">
+            >
+            ["id16"] = <
+                text = <"Canta (coral, igreja, etc) (pt-br)">
+                description = <"Canta (coral, igreja, etc) (pt-br)">
+            >
+            ["id18"] = <
+                text = <"Outros (pt-br)">
+                description = <"Outras atividades (pt-br)">
             >
         >
     >
