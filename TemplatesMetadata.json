@@ -34,12 +34,12 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
-    "sha" : "b4a133fdc042ecab749324596dcbae15fc09739c"
+    "sha" : "9dd140f91a82ad8ff4220f17f4056d0a51d352b6"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
-    "sha" : "58df28aa98aca67f8e6c48bb2c7387316f4f53ae"
+    "sha" : "144969155518af18159c1e005f1acefaae16c05c"
   } ]
 }
