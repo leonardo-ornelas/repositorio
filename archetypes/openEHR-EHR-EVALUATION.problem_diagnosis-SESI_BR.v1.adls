@@ -175,6 +175,20 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.25] occurrences matches {0..1} matches {    -- Neoplasia
+                        value matches {
+                            DV_BOOLEAN[id0.26] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.27] occurrences matches {0..1} matches {    -- Hanseníase
+                        value matches {
+                            DV_BOOLEAN[id0.28] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -365,6 +379,14 @@ terminology
                 text = <"Dislipidemia">
                 description = <"Dislipidemia">
             >
+            ["id0.25"] = <
+                text = <"Neoplasia">
+                description = <"Neoplasia">
+            >
+            ["id0.27"] = <
+                text = <"Hanseníase">
+                description = <"Hanseníase">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -528,20 +550,28 @@ terminology
                 description = <"Hipertensão arterial (en)">
             >
             ["id0.17"] = <
-                text = <"Angina (en)">
-                description = <"Angina (en)">
+                text = <"Angina">
+                description = <"Angina pectoris (I20)">
             >
             ["id0.19"] = <
-                text = <"Infarto (en)">
-                description = <"Infarto (en)">
+                text = <"Infarto">
+                description = <"Doenças isquêmicas do coração (I20 - I25)">
             >
             ["id0.21"] = <
-                text = <"Diabetes (en)">
-                description = <"Diabetes (en)">
+                text = <"Diabetes">
+                description = <"Diabetes mellitus (E10 - E14)">
             >
             ["id0.23"] = <
-                text = <"Dislipidemia (en)">
-                description = <"Dislipidemia (en)">
+                text = <"Dislipidemia">
+                description = <"Dislipidemia (CID-E78)">
+            >
+            ["id0.25"] = <
+                text = <"Neoplasia">
+                description = <"Neoplasias [tumores] malignas(os) (C00 - C97)">
+            >
+            ["id0.27"] = <
+                text = <"Hanseníase">
+                description = <"Hanseníase [doença de Hansen] [lepra] (A30)">
             >
         >
     >
