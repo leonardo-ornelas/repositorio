@@ -189,6 +189,13 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id0.30] occurrences matches {0..1} matches {    -- Hepatite
+                        value matches {
+                            DV_BOOLEAN[id0.31] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -387,6 +394,10 @@ terminology
                 text = <"Hanseníase">
                 description = <"Hanseníase">
             >
+            ["id0.30"] = <
+                text = <"Hepatite">
+                description = <"Hepatite">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -572,6 +583,10 @@ terminology
             ["id0.27"] = <
                 text = <"Hanseníase">
                 description = <"Hanseníase [doença de Hansen] [lepra] (A30)">
+            >
+            ["id0.30"] = <
+                text = <"Hepatite">
+                description = <"Hepatite viral (B15 - B19)">
             >
         >
     >
