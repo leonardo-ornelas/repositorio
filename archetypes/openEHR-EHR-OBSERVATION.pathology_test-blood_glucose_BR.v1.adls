@@ -481,265 +481,265 @@ terminology
             >
         >
         ["pt-br"] = <
-            ["id0.10"] = <
-                text = <"Dispositivo de Teste">
-                description = <"Dispositivo usado para examinar o paciente">
+          ["id0.10"] = <
+                text = <"Testing Device">
+                description = <"The device used to test the specimen.">
             >
             ["id0.11"] = <
-                text = <"Duração do jejum">
-                description = <"A duração do jejum realizada pelo paciente antes da amostra ser tomada">
+                text = <"Duration of Fasting">
+                description = <"The duration of fasting completed by the test subject prior to the sample being taken.">
             >
             ["id0.12"] = <
-                text = <"Dispositivo de ponto de atendimento utilizado">
-                description = <"O teste foi realizado usando um dispositivo de ponto de atendimento ou um dispositivo doméstico.">
+                text = <"Point of Care Device Used">
+                description = <"The test was performed using a point of care device or a home-based device.">
             >
             ["id0.13"] = <
-                text = <"Carga de glicose">
-                description = <"A quantidade de glicose administrada ao sujeito do teste.">
+                text = <"Glucose Load">
+                description = <"The amount of glucose administered to the test subject.">
             >
             ["id0.14"] = <
-                text = <"Carga de insulina">
-                description = <"A quantidade de insulina administrada ao sujeito do teste.">
+                text = <"Insulin Load">
+                description = <"The amount of insulin administered to the test subject.">
             >
             ["id0.15"] = <
-                text = <"Rota de administração">
-                description = <"Via que a glicose foi administrada.">
+                text = <"Route of Administration">
+                description = <"Route that the glucose was administered.">
             >
             ["at0.16"] = <
                 text = <"Oral">
-                description = <"A carga de glicose foi administrada por via oral.">
+                description = <"Glucose load was administered by mouth.">
             >
             ["at0.17"] = <
-                text = <"Intravenosa">
-                description = <"A carga de glicose foi administrada por via intravenosa.">
+                text = <"Intravenous">
+                description = <"Glucose load was administered intravenously.">
             >
             ["id0.2"] = <
-                text = <"Medição de Referência">
-                description = <"Medição específica do ponto de tempo que fornece uma leitura de glicose de referência contra a qual as medições subseqüentes podem ser comparadas.">
+                text = <"Baseline Measurement">
+                description = <"Specific point in time measurement which provides a reference glucose reading against which subsequent measurements can be compared.">
             >
             ["id0.3"] = <
-                text = <"Medição de 1 hora">
-                description = <"Medição específica do ponto em tempo, tomada 1 hora após a medição da linha de base e subsequente desafio de glicose / insulina.">
+                text = <"1 Hour Measurement">
+                description = <"Specific point in time measurement taken 1 hour after the Baseline Measurement and subsequent glucose/insulin challenge.">
             >
             ["id0.5"] = <
-                text = <"Medição de 2 horas">
-                description = <"Medição específica do ponto em tempo, tomada 2 horas após a medição da linha de base e subseqüente desafio da glicose / insulina.">
+                text = <"2 Hour Measurement">
+                description = <"Specific point in time measurement taken 2 hours after the Baseline Measurement and subsequent glucose/insulin challenge.">
             >
             ["id0.6"] = <
-                text = <"Medição Pre-prandial">
-                description = <"Medição tomada antes de uma refeição.">
+                text = <"Pre-prandial Measurement">
+                description = <"Measurement taken before a meal.">
             >
             ["id0.7"] = <
-                text = <"Medição pós-prandial">
-                description = <"Medição tomada após uma refeição.">
+                text = <"Post-prandial Measurement">
+                description = <"Measurement taken after a meal.">
             >
             ["id0.9"] = <
-                text = <"Estado de jejum">
-                description = <"Um espécime de jejum foi usado para a medição.">
+                text = <"Fasting State">
+                description = <"A fasting specimen was used for the measurement.">
             >
             ["id1.1"] = <
-                text = <"Resultado do teste de glicose no sangue">
-                description = <"Os resultados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total.">
+                text = <"Blood Glucose Test Result">
+                description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
             >
             ["id79.1"] = <
-                text = <"Resultado da glicose">
-                description = <"Valor real do resultado do teste de glicose.">
+                text = <"Glucose Result">
+                description = <"Actual value of the glucose test result.">
             >
             ["at0.18"] = <
-                text = <"Concentração">
-                description = <"Concentração">
+                text = <"Concentration">
+                description = <"Concentration">
             >
             ["at0.19"] = <
-                text = <"Massa">
-                description = <"Massa">
+                text = <"Mass">
+                description = <"Mass">
             >
             ["at0.20"] = <
-                text = <"Massa (IU)">
-                description = <"Massa (IU)">
+                text = <"Mass (IU)">
+                description = <"Mass (IU)">
             >
             ["ac0.1"] = <
-                text = <"*Route of Administration (synthesised) (en)">
-                description = <"*Route that the glucose was administered. (synthesised) (en)">
+                text = <"Route of Administration (synthesised)">
+                description = <"Route that the glucose was administered. (synthesised)">
             >
             ["id1"] = <
-                text = <"Resultados do teste de patologia">
-                description = <"Os achados e a interpretação de testes de patologia realizados em espécimes relacionados ao paciente.">
+                text = <"Pathology Test Result">
+                description = <"The findings and interpretation of pathology tests performed on patient-related specimens.">
             >
             ["id3"] = <
-                text = <"Qualquer evento">
-                description = <"Qualquer evento.">
+                text = <"Any event">
+                description = <"Any event.">
             >
             ["id6"] = <
-                text = <"Nome do resultado do teste">
-                description = <"Identificação do teste de patologia realizado, às vezes incluindo o tipo de amostra e o estado do paciente.">
+                text = <"Test Result Name">
+                description = <"Identification of the pathology test performed, sometimes including specimen type and patient state.">
             >
             ["id78"] = <
-                text = <"Serviço de diagnóstico">
-                description = <"O serviço de diagnóstico que realiza o exame.">
+                text = <"Diagnostic Service">
+                description = <"The diagnostic service that performs the examination.">
             >
             ["id66"] = <
-                text = <"Detalhe da amostra">
-                description = <"Detalhes sobre o espécime se todos os resultados de teste individuais forem derivados do mesmo espécime. Se o tipo de amostra estiver suficientemente especificado com um código no nome do resultado do teste, esses dados adicionais não são necessários. Se houver vários espécimes, estes podem ser representados por 'Grupo de resultados'.">
+                text = <"Specimen Detail">
+                description = <"Details about the specimen if all individual test results are derived from the same specimen. If the specimen type is sufficiently specified with a code in the Test result name, then this additional data is not required.  If there are multiple specimens, these may be represented per 'Result group'.">
             >
             ["id74"] = <
-                text = <"Status geral do resultado do teste">
-                description = <"O status da publicação de todo o resultado do teste de patologia.">
+                text = <"Overall Test Result Status">
+                description = <"The publication status of the entire pathology test result.">
             >
             ["at108"] = <
-                text = <"Registrado">
-                description = <"Nenhum resultado ainda disponível">
+                text = <"Registered">
+                description = <"No result yet available.">
             >
             ["at38"] = <
-                text = <"Intermediário">
-                description = <"Este é um resultado inicial ou provisório: os dados podem estar faltando ou a verificação não foi realizada.">
+                text = <"Interim">
+                description = <"This is an initial or interim result: data may be missing or verification not been performed.">
             >
             ["at39"] = <
                 text = <"Final">
-                description = <"O resultado é completo e verificado pelo patologista responsável.">
+                description = <"The result is complete and verified by the responsible pathologist.">
             >
             ["at41"] = <
-                text = <"Alterado">
-                description = <"O resultado foi modificado após ser Final e está completo e verificado pelo patologista responsável.">
+                text = <"Amended">
+                description = <"The result has been modified subsequent to being Final, and is complete and verified by the responsible pathologist.">
             >
             ["at75"] = <
-                text = <"Cancelado/Abortado">
-                description = <"O resultado não está disponível porque o teste não foi iniciado ou não foi concluído.">
+                text = <"Cancelled/Aborted">
+                description = <"The result is unavailable because the test was not started or not completed.">
             >
             ["id101"] = <
-                text = <"Informações clínicas fornecidas">
-                description = <"Descrição da informação clínica disponível no momento da interpretação dos resultados, que pode incluir um link para a informação clínica original fornecida no pedido de teste.">
+                text = <"Clinical Information Provided">
+                description = <"Description of clinical information available at the time of interpretation of results, which may include a link to the original clinical information provided in the test request.">
             >
             ["id96"] = <
-                text = <"Grupo de resultados">
-                description = <"Um grupo de resultados.">
+                text = <"Result Group">
+                description = <"A group of results.">
             >
             ["id97"] = <
-                text = <"Resultado">
-                description = <"Resultado específico detalhado, incluindo o valor do item de resultado e informações adicionais que podem ser úteis para a interpretação clínica.">
+                text = <"Result">
+                description = <"Specific detailed result, including both the value of the result item, and additional information that may be useful for clinical interpretation.">
             >
             ["id79"] = <
-                text = <"Valor do Resultado">
-                description = <"Valor real do resultado.">
+                text = <"Result Value">
+                description = <"Actual value of the result.">
             >
             ["id103"] = <
-                text = <"Comentário do Resultado">
-                description = <"Comentário sobre o Resultado.">
+                text = <"Result Comment">
+                description = <"Comment about the Result.">
             >
             ["id104"] = <
-                text = <"Guia de Referência">
-                description = <"Recomendações adicionais sobre a aplicabilidade do intervalo de referência.">
+                text = <"Reference Range Guidance">
+                description = <"Additional advice on the applicability of the reference range.">
             >
             ["id109"] = <
-                text = <"Status do Valor  do Resultado">
-                description = <"O status do valor do resultado.">
+                text = <"Result Value Status">
+                description = <"The status of the result value.">
             >
             ["id98"] = <
-                text = <"Detalhe do espécime">
-                description = <"Detalhes sobre o espécime individual ao qual esses resultados do teste \"Grupo de resultados\" se referem, onde o teste de espécimes múltiplos é necessário.">
+                text = <"Specimen Detail">
+                description = <"Details about the individual specimen to which these ‘Result group’ test results refer, where testing of multiple specimens is required.">
             >
             ["id99"] = <
-                text = <"Diagnóstico patológico">
-                description = <"Palavra única, frase ou breve descrição que representa a narrativa na \"Conclusão\".">
+                text = <"Pathological Diagnosis">
+                description = <"Single word, phrase or brief description representing the narrative in the 'Conclusion'.">
             >
             ["id58"] = <
-                text = <"Conclusão">
-                description = <"Interpretação narrativa concisa e clinicamente contextualizada dos resultados do teste de patologia.">
+                text = <"Conclusion">
+                description = <"Concise and clinically contextualised narrative interpretation of the pathology test results.">
             >
             ["id11"] = <
-                text = <"Representação do resultado do teste">
-                description = <"Representação em texto rico do resultado completo, conforme emitido pelo serviço de diagnóstico.">
+                text = <"Test Result Representation">
+                description = <"Rich text representation of the entire result as issued by the diagnostic service.">
             >
             ["id102"] = <
-                text = <"Comentário de teste">
-                description = <"Narração adicional sobre o teste não capturado em outros campos.">
+                text = <"Test Comment">
+                description = <"Additional narrative about the test not captured in other fields.">
             >
             ["id100"] = <
-                text = <"Date e hora do Resultado emitido">
-                description = <"A data e / ou a hora em que o resultado inteiro foi emitido para o 'Status do resultado do teste geral' registrado.">
+                text = <"DateTime Result Issued">
+                description = <"The date and/or time that the entire result was issued for the recorded ‘Overall Test result status’.">
             >
             ["id18"] = <
-                text = <"Laboratório de Recepção">
-                description = <"Dados demográficos do laboratório responsável pelo teste de patologia.">
+                text = <"Receiving Laboratory">
+                description = <"Demographic details of the laboratory with responsibility for the pathology test.">
             >
             ["id95"] = <
-                text = <"Detalhes do pedido de teste">
-                description = <"Detalhes relativos a um único teste de patologia solicitado.">
+                text = <"Test Request Details">
+                description = <"Details concerning a single pathology test requested.">
             >
             ["id63"] = <
-                text = <"Identificador de pedido do requerente">
-                description = <"A identificação local atribuída à ordem pelo solicitante da ordem.">
+                text = <"Requester Order Identifier">
+                description = <"The local ID assigned to the order by the order requester.">
             >
             ["id107"] = <
-                text = <"Nome do Teste Solicitado">
-                description = <"Identificação do teste de patologia solicitado, onde o teste solicitado difere do teste efetivamente realizado.">
+                text = <"Test Requested Name">
+                description = <"Identification of pathology test requested, where the test requested differs from the test actually performed.">
             >
             ["id91"] = <
-                text = <"Requerente">
-                description = <"Detalhes do clínico ou organização que solicita o resultado do teste de patologia.">
+                text = <"Requester">
+                description = <"Details of the clinician or organisation requesting the pathology test result.">
             >
             ["id64"] = <
-                text = <"Identificador de pedido do receptor">
-                description = <"A ID local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo Sistema de Informações do Laboratório (LIS).">
+                text = <"Receiver Order Identifier">
+                description = <"The local ID assigned to the test order by the order filler, usually by the Laboratory Information System (LIS).">
             >
             ["id69"] = <
-                text = <"Identificador do resultado do teste de laboratório">
-                description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
+                text = <"Laboratory Test Result Identifier">
+                description = <"The identifier given to the laboratory test result of a pathology investigation.">
             >
             ["id111"] = <
-                text = <"Procedimento de teste">
-                description = <"Detalhes estruturados adicionais da metodologia de teste de patologia. Por exemplo, detalhes estruturados sobre o método de laboratório e a interpretação de dados utilizados.">
+                text = <"Test Procedure">
+                description = <"Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used.">
             >
             ["id36"] = <
-                text = <"Fornecedor copiado">
-                description = <"Detalhes do clínico ou organização que receberão uma cópia do resultado do teste de patologia.">
+                text = <"Copied Provider">
+                description = <"Details of the clinician or organisation who will receive a copy of the pathology test result.">
             >
             ["at109"] = <
-                text = <"*text/html (en)">
-                description = <"*text/html (en)">
+                text = <"text/html">
+                description = <"text/html">
             >
             ["at110"] = <
-                text = <"*text/plain (en)">
-                description = <"*text/plain (en)">
+                text = <"text/plain">
+                description = <"text/plain">
             >
             ["at111"] = <
-                text = <"*text/rtf (en)">
-                description = <"*text/rtf (en)">
+                text = <"text/rtf">
+                description = <"text/rtf">
             >
             ["at112"] = <
-                text = <"*application/msword (en)">
-                description = <"*application/msword (en)">
+                text = <"application/msword">
+                description = <"application/msword">
             >
             ["at113"] = <
-                text = <"*application/pdf (en)">
-                description = <"*application/pdf (en)">
+                text = <"application/pdf">
+                description = <"application/pdf">
             >
             ["at114"] = <
-                text = <"*application/rtf (en)">
-                description = <"*application/rtf (en)">
+                text = <"application/rtf">
+                description = <"application/rtf">
             >
             ["at115"] = <
-                text = <"*application/vnd.oasis.opendocument.text (en)">
-                description = <"*application/vnd.oasis.opendocument.text (en)">
+                text = <"application/vnd.oasis.opendocument.text">
+                description = <"application/vnd.oasis.opendocument.text">
             >
             ["at116"] = <
-                text = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
-                description = <"*application/vnd.openxmlformats-officedocument.wordprocessingml.document (en)">
+                text = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                description = <"application/vnd.openxmlformats-officedocument.wordprocessingml.document">
             >
             ["ac1"] = <
-                text = <"*Overall Test Result Status (synthesised) (en)">
-                description = <"*The publication status of the entire pathology test result. (synthesised) (en)">
+                text = <"Overall Test Result Status (synthesised)">
+                description = <"The publication status of the entire pathology test result. (synthesised)">
             >
             ["ac2"] = <
-                text = <"*Result Value Status (synthesised) (en)">
-                description = <"*The status of the result value. (synthesised) (en)">
+                text = <"Result Value Status (synthesised)">
+                description = <"The status of the result value. (synthesised)">
             >
             ["ac3"] = <
-                text = <"*Test Result Representation (synthesised) (en)">
-                description = <"*Rich text representation of the entire result as issued by the diagnostic service. (synthesised) (en)">
+                text = <"Test Result Representation (synthesised)">
+                description = <"Rich text representation of the entire result as issued by the diagnostic service. (synthesised)">
             >
             ["id1.1.1"] = <
-                text = <"Resultado do teste de glicose no sangue">
-                description = <"Os resultados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total.">
+                text = <"Blood Glucose Test Result">
+                description = <"The findings and interpretation of glucose tests performed on plasma, serum or whole blood.">
             >
         >
     >
