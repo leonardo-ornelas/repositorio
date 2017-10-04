@@ -566,7 +566,7 @@ definition
                 }
             }
         }
-        /protocol[id75]/items matches {
+        /protocol[id75]/items existence matches {0} matches {
             ELEMENT[id76.0.1] occurrences matches {0} matches {    -- Link to supporting clinical evidence
                 value matches {
                     DV_URI[id99.0.1] 
