@@ -682,8 +682,8 @@ terminology
                 description = <"A ID local atribuída à ordem de teste pelo preenchimento da ordem, geralmente pelo Sistema de Informações do Laboratório (LIS).">
             >
             ["id69"] = <
-                text = <"*Laboratory Test Result Identifier (en)">
-                description = <"*The identifier given to the laboratory test result of a pathology investigation. (en)">
+                text = <"Identificador do resultado do teste de laboratório">
+                description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
             >
             ["id111"] = <
                 text = <"*Test Procedure (en)">
