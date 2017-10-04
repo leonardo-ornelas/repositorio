@@ -686,12 +686,12 @@ terminology
                 description = <"O identificador dado ao resultado do teste de laboratório de uma investigação de patologia.">
             >
             ["id111"] = <
-                text = <"*Test Procedure (en)">
-                description = <"*Additional structured details of pathology test methodology followed. For example, structured details about the laboratory method and data interpretation used. (en)">
+                text = <"Procedimento de teste">
+                description = <"Detalhes estruturados adicionais da metodologia de teste de patologia. Por exemplo, detalhes estruturados sobre o método de laboratório e a interpretação de dados utilizados.">
             >
             ["id36"] = <
-                text = <"*Copied Provider (en)">
-                description = <"*Details of the clinician or organisation who will receive a copy of the pathology test result. (en)">
+                text = <"Fornecedor copiado">
+                description = <"Detalhes do clínico ou organização que receberão uma cópia do resultado do teste de patologia.">
             >
             ["at109"] = <
                 text = <"*text/html (en)">
@@ -738,8 +738,8 @@ terminology
                 description = <"*Rich text representation of the entire result as issued by the diagnostic service. (synthesised) (en)">
             >
             ["id1.1.1"] = <
-                text = <"*Blood Glucose Test Result (en)">
-                description = <"*The findings and interpretation of glucose tests performed on plasma, serum or whole blood. (en)">
+                text = <"Resultado do teste de glicose no sangue">
+                description = <"Os resultados e a interpretação dos testes de glicose realizados em plasma, soro ou sangue total.">
             >
         >
     >
