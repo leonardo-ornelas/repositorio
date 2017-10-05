@@ -22,37 +22,105 @@ definition
         content matches {
             SECTION[id5] occurrences matches {0..1} matches {
                 items matches {
+                    allow_archetype EVALUATION[id8] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.physical_activity_summary\-SESI_BR\.v1\.0\.0/}
+                    }
                     use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-tobacco\-SESI_BR\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.alcohol_use_SESI_BR\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id11] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-SESI_BR\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id12] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.habitos_lazer\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id12.1, openEHR-EHR-OBSERVATION.ovl-fco_br-habitos_lazer-001.v1.0.0]
                 }
             }
             SECTION[id7] occurrences matches {0..1} matches {
                 items matches {
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
                     use_archetype EVALUATION[id13.1, openEHR-EHR-EVALUATION.ovl-fco_br-problem_diagnosis-SESI_BR-001.v1.0.0]
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
                     use_archetype ACTION[id14.1, openEHR-EHR-ACTION.ovl-fco_br-medication-BR-001.v1.0.0]
                 }
+            }
+            allow_archetype EVALUATION[id15] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
+            }
+            allow_archetype EVALUATION[id16] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.vacinas\.v1\.0\.0/}
             }
             use_archetype EVALUATION[id16.1, openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0]
             SECTION[id17] occurrences matches {0..1} matches {
                 items matches {
                     OBSERVATION[id30] occurrences matches {0..1} matches {
                         /data[id31]/events[id32]/data[id33]/item matches {
+                            allow_archetype ELEMENT[id34] occurrences matches {0..1} matches { 
+                                include
+                                    archetype_id/value matches {/openEHR\-EHR\-ELEMENT\.last_normal_menstrual_period\.v1\.0\.0/}
+                            }
                             use_archetype ELEMENT[id34.1, openEHR-EHR-ELEMENT.ovl-fco_br-last_normal_menstrual_period-001.v1.0.0]
                         }
+                    }
+                    allow_archetype ACTION[id36] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.imaging_exam\-SESI_BR\.v1\.0\.0/}
                     }
                     use_archetype ACTION[id36.1, openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0]
                 }
             }
             SECTION[id37] occurrences matches {0..1} matches {
                 items matches {
+                    allow_archetype OBSERVATION[id38] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_weight\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id38.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0]
+                    allow_archetype OBSERVATION[id39] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.height\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id39.1, openEHR-EHR-OBSERVATION.ovl-fco_br-height-001.v1.0.0]
+                    allow_archetype OBSERVATION[id40] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_mass_index\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id40.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_mass_index-001.v1.0.0]
+                    allow_archetype OBSERVATION[id41] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.heart_rate\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id41.1, openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0]
+                    allow_archetype OBSERVATION[id42] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.waist_hip\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id42.1, openEHR-EHR-OBSERVATION.ovl-fco_br-waist_hip-001.v1.0.0]
+                    allow_archetype OBSERVATION[id43] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
+                    }
                     use_archetype OBSERVATION[id43.1, openEHR-EHR-OBSERVATION.ovl-fco_br-blood_pressure-001.v1.0.0]
                 }
             }
@@ -592,20 +660,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.0.6.1] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.0.6] matches {
@@ -617,6 +671,20 @@ definition
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.0.6.1] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -780,27 +848,12 @@ definition
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {
                         items matches {
-                            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Form
-                                value matches {
-                                    DV_TEXT[id29.0.1] 
-                                }
-                            }
-                            CLUSTER[id16.0.1] occurrences matches {0} matches {    -- Amount
+                            CLUSTER[id16] occurrences matches {0..1} matches {
                                 /items[id17]/value cardinality matches {1; unordered} matches {
                                     DV_QUANTITY[id31] matches {
                                         property matches {[at2]}
                                         units matches {"gm/d", "gm/wk"}
                                     }
-                                }
-                            }
-                            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Triggers
-                                value matches {
-                                    DV_TEXT[id32.0.1] 
-                                }
-                            }
-                            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Context
-                                value matches {
-                                    DV_TEXT[id33.0.1] 
                                 }
                             }
                             ELEMENT[id0.13] occurrences matches {0..1} matches {
@@ -837,7 +890,7 @@ definition
             }
         }
         /protocol[id25]/items matches {
-            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Standard Drink Definition
+            ELEMENT[id26.0.1] occurrences matches {0..1} matches {    -- Standard Drink Definition
                 value matches {
                     DV_QUANTITY[id39.0.1] matches {
                         property matches {[at4]}
@@ -845,7 +898,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id27.0.1] occurrences matches {0} matches {    -- Average Use Frequency
+            ELEMENT[id27.0.1] occurrences matches {0..1} matches {    -- Average Use Frequency
                 value matches {
                     DV_QUANTITY[id40.0.1] matches {
                         property matches {[at1]}
@@ -862,22 +915,6 @@ terminology
             ["id1.1.1"] = <
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
-            >
-            ["id7.0.1"] = <
-                text = <"Form">
-                description = <"Form of alcohol consumed.">
-            >
-            ["id16.0.1"] = <
-                text = <"Amount">
-                description = <"Amount of alcohol consumed.">
-            >
-            ["id18.0.1"] = <
-                text = <"Triggers">
-                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
-            >
-            ["id19.0.1"] = <
-                text = <"Context">
-                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
             >
             ["id20.0.1"] = <
                 text = <"Behavioural Issues">
@@ -908,22 +945,6 @@ terminology
             ["id1.1.1"] = <
                 text = <"Uso de bebida alcoólica">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
-            >
-            ["id7.0.1"] = <
-                text = <"Com que frequência você toma bebidas alcoólicas?">
-                description = <"Com que frequência você toma bebidas alcoólicas?">
-            >
-            ["id16.0.1"] = <
-                text = <"Quantidade">
-                description = <"Quantidade de álcool consumida.">
-            >
-            ["id18.0.1"] = <
-                text = <"Gatilhos">
-                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
-            >
-            ["id19.0.1"] = <
-                text = <"Contexto">
-                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
             >
             ["id20.0.1"] = <
                 text = <"Problemas comportamentais">
@@ -1179,6 +1200,10 @@ definition
                     DV_TEXT[id103.0.1] 
                 }
             }
+            allow_archetype CLUSTER[id24] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
+            }
             ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Reason
                 value matches {
                     DV_TEXT[id104.0.1] 
@@ -1197,6 +1222,10 @@ definition
                 value matches {
                     DV_COUNT[id106.0.1] 
                 }
+            }
+            allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
             }
             ELEMENT[id37] occurrences matches {0} matches {
                 /value[id107]/value matches {True, False}
