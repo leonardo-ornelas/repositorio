@@ -18,7 +18,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    COMPOSITION[id1.1] occurrences matches {1} matches {    -- fco
+    COMPOSITION[id1.1] occurrences matches {1} matches {    -- FCO
         content matches {
             SECTION[id5] occurrences matches {0..1} matches {
                 items matches {
@@ -131,8 +131,8 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"fco">
-                description = <"fco">
+                text = <"FCO">
+                description = <"FCO">
             >
         >
     >
