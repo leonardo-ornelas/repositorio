@@ -86,6 +86,13 @@ definition
                     }
                 }
             }
+            SECTION[id37] occurrences matches {0..1} matches {    -- Dados antropométricos
+                items matches {
+                    allow_archetype OBSERVATION[id38] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id39] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id40] occurrences matches {0..1}
+                }
+            }
         }
     }
 
@@ -183,6 +190,22 @@ terminology
             ["id36"] = <
                 text = <"Exames realizados no último">
                 description = <"Exames realizados no último">
+            >
+            ["id37"] = <
+                text = <"Dados antropométricos">
+                description = <"Dados antropométricos">
+            >
+            ["id38"] = <
+                text = <"Peso corporal">
+                description = <"Peso corporal">
+            >
+            ["id39"] = <
+                text = <"Altura / comprimento">
+                description = <"Altura / comprimento">
+            >
+            ["id40"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice de massa corporal">
             >
         >
     >
