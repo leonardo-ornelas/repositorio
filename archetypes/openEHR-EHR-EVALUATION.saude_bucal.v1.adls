@@ -423,6 +423,10 @@ terminology
                 text = <"48">
                 description = <"48">
             >
+            ["at57"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -558,8 +562,8 @@ terminology
                 description = <"*Não registrado (pt-br)">
             >
             ["ac3"] = <
-                text = <"*Condição protética (pt-br)">
-                description = <"*Condição protética (pt-br)">
+                text = <"Condição protética (pt-br)">
+                description = <"Condição protética (pt-br)">
             >
             ["id75"] = <
                 text = <"Inferior Prosthetic Condition">
@@ -729,6 +733,10 @@ terminology
                 text = <"48 (pt-br)">
                 description = <"48 (pt-br)">
             >
+            ["at57"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -742,7 +750,7 @@ terminology
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at17", "at18", "at19", "at20", "at21", "at22">
+            members = <"at17", "at18", "at19", "at20", "at21", "at22", "at57">
         >
         ["ac4"] = <
             id = <"ac4">
