@@ -105,7 +105,10 @@ definition
                             archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.heart_rate\.v1\.0\.0/}
                     }
                     allow_archetype OBSERVATION[id42] occurrences matches {0..1}
-                    allow_archetype OBSERVATION[id43] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id43] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
+                    }
                 }
             }
         }
