@@ -508,7 +508,7 @@ terminology
                 description = <"Registre os resultados e a interpretação dos testes de patologia realizados nos tecidos e fluidos corporais.">
             >
             ["id3"] = <
-                text = <"Qualquer evento">
+                text = <"Eventos">
                 description = <"Qualquer evento">
             >
             ["id6"] = <
