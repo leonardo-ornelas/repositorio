@@ -41,5 +41,11 @@
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
     "sha" : "cb26c9fb4428d1398239bcf53580db6d06e8ced3"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "fco",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco.v1.adlt",
+    "sha" : "de48e3afad787e0b3b711c61eb7adcf97d7375e4"
   } ]
 }
