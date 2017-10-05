@@ -40,7 +40,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
-    "sha" : "089d6c5f825e198098c87b4aae32ee2fc91a2cd8"
+    "sha" : "724037f02a1a57c62019a267e03a73cbf6596363"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.asasa.v1.0.0",
     "rmType" : "COMPOSITION",
