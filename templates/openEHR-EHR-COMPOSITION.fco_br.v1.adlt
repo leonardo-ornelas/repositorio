@@ -226,7 +226,12 @@ definition
             }
         }
         /protocol[id75]/items matches {
-            allow_archetype CLUSTER[id77] matches { 
+            ELEMENT[id76.0.1] occurrences matches {0} matches {    -- Link to supporting clinical evidence
+                value matches {
+                    DV_URI[id99.0.1]     -- Doença pulmonar obstrutiva crônica
+                }
+            }
+            allow_archetype CLUSTER[id77] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/.*/}
             }
@@ -291,6 +296,14 @@ Note: May be important in situations where approximations of age based on calcul
                 text = <"Tuberculose">
                 description = <"Tuberculose (A15 - A19)">
             >
+            ["id76.0.1"] = <
+                text = <"Link to supporting clinical evidence">
+                description = <"Links to other relevant information, including pathology reports.">
+            >
+            ["id99.0.1"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -344,6 +357,14 @@ Note: May be important in situations where approximations of age based on calcul
             ["id97.0.2"] = <
                 text = <"Tuberculose">
                 description = <"Tuberculose (A15 - A19)">
+            >
+            ["id76.0.1"] = <
+                text = <"Link de suporte de evidência clínica">
+                description = <"Links para outras informações relevantes, incluindo relatórios de patologia.">
+            >
+            ["id99.0.1"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
             >
         >
     >
@@ -571,20 +592,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.0.6] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.0.6.1] matches {
@@ -599,8 +606,26 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
-                        /value[id0.0.3]/value matches {True, False}
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.0.2.1] occurrences matches {0} matches {    -- Ex smoker
+                        value matches {
+                            DV_BOOLEAN[id0.0.3.1] matches {
+                                value matches {True, False}
+                            }
+                        }
                     }
                 }
             }
@@ -679,6 +704,10 @@ terminology
                 text = <"Exposure">
                 description = <"Exposure to smoke">
             >
+            ["id0.0.2.1"] = <
+                text = <"Ex smoker">
+                description = <"Register for ex-smoker">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1.1"] = <
@@ -728,6 +757,10 @@ terminology
             ["id0.0.4.1"] = <
                 text = <"Exposição">
                 description = <"Exposição á fumaça">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex-fumante">
+                description = <"Cadastre-se no caso de ex-fumante.">
             >
         >
     >
@@ -1169,7 +1202,40 @@ definition
                 /value[id107]/value matches {True, False}
             }
         }
-        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
+        /protocol[id31]/items matches {
+            ELEMENT[id27.0.1] occurrences matches {0} matches {    -- BatchID
+                value matches {
+                    DV_TEXT[id108.0.1] 
+                }
+            }
+            ELEMENT[id41.0.1] occurrences matches {0} matches {    -- Expiry date
+                value matches {
+                    DV_DATE[id109.0.1] 
+                }
+            }
+            ELEMENT[id32.0.1] occurrences matches {0} matches {    -- Dispensed to
+                value matches {
+                    DV_TEXT[id110.0.1] 
+                }
+            }
+            ELEMENT[id38.0.1] occurrences matches {0} matches {    -- Number of times dispensed
+                value matches {
+                    DV_COUNT[id111.0.1] 
+                }
+            }
+            ELEMENT[id33.0.1] occurrences matches {0} matches {    -- Remaining repeats
+                value matches {
+                    DV_COUNT[id112.0.1] matches {
+                        magnitude matches {|>=0|}
+                    }
+                }
+            }
+            ELEMENT[id39.0.1] occurrences matches {0} matches {    -- Claim category
+                value matches {
+                    DV_TEXT[id113.0.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -1195,6 +1261,30 @@ terminology
                 text = <"Sequence number">
                 description = <"The sequence number specific to the action being recorded.">
             >
+            ["id27.0.1"] = <
+                text = <"BatchID">
+                description = <"Assigned by the manufacturer to identify the manufacturing batch of the item.">
+            >
+            ["id41.0.1"] = <
+                text = <"Expiry date">
+                description = <"The expiry date of the medicine administered as documented by the manufacturer.">
+            >
+            ["id32.0.1"] = <
+                text = <"Dispensed to">
+                description = <"The name of the person to whom this was dispensed, if not the subject of care.">
+            >
+            ["id38.0.1"] = <
+                text = <"Number of times dispensed">
+                description = <"The number of times this order has been dispensed. The sum of this number minus one and the remaining repeats provides the number of repeats on the original order.">
+            >
+            ["id33.0.1"] = <
+                text = <"Remaining repeats">
+                description = <"The number of times the medicine, vaccine or other therapeutic good may still be dispensed without re-issue of a prescription or order. Note: This is the information required by the subject of care and prescriber.">
+            >
+            ["id39.0.1"] = <
+                text = <"Claim category">
+                description = <"The category of reimbursement or subsidy sought for the item.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -1216,6 +1306,30 @@ terminology
             ["id26.0.1"] = <
                 text = <"Número de sequência">
                 description = <"O número de seqüência específico para a ação que está sendo gravada.">
+            >
+            ["id27.0.1"] = <
+                text = <"ID do lote">
+                description = <"Atribuído pelo fabricante para identificar o lote de fabricação do item.">
+            >
+            ["id41.0.1"] = <
+                text = <"Data de validade">
+                description = <"O prazo de validade do medicamento administrado conforme documentado pelo fabricante.">
+            >
+            ["id32.0.1"] = <
+                text = <"Dispensado para">
+                description = <"O nome da pessoa a quem isso foi dispensado, se não o assunto de cuidados.">
+            >
+            ["id38.0.1"] = <
+                text = <"Número de vezes dispensado">
+                description = <"O número de vezes que este pedido foi dispensado. A soma deste número menos uma e as repetições restantes fornecem o número de repetições na ordem original.">
+            >
+            ["id33.0.1"] = <
+                text = <"Repetições remanescentes">
+                description = <"O número de vezes que o medicamento, vacina ou outro bem terapêutico ainda pode ser dispensado sem re-emissão de uma receita ou pedido. Nota: Esta é a informação exigida pelo assunto do atendimento e prescritor.">
+            >
+            ["id39.0.1"] = <
+                text = <"Categoria de reivindicação">
+                description = <"A categoria de reembolso ou subsídio procurado para o item.">
             >
         >
     >
@@ -1595,10 +1709,15 @@ definition
                 }
             }
         }
-        /protocol[id16]/items existence matches {0} matches {
-            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.1] 
+                }
             }
         }
     }
@@ -1626,6 +1745,10 @@ terminology
                 text = <"Opmerking">
                 description = <"Opmerking over de gewichts meting.">
             >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["en"] = <
             ["id1.1"] = <
@@ -1647,6 +1770,10 @@ terminology
             ["id25.1"] = <
                 text = <"Comment">
                 description = <"Comment about the measurement of weight.">
+            >
+            ["id28.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
             >
         >
         ["de"] = <
@@ -1670,6 +1797,10 @@ terminology
                 text = <"Kommentar">
                 description = <"Kommentar über die Messung des Gewichts.">
             >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -1692,6 +1823,10 @@ terminology
                 text = <"Comentário">
                 description = <"Comentário sobre a medição do peso.">
             >
+            ["id28.1"] = <
+                text = <"Fórmula de estimativa de peso">
+                description = <"Fórmula de estimativa de peso">
+            >
         >
         ["ru"] = <
             ["id1.1"] = <
@@ -1713,6 +1848,10 @@ terminology
             ["id25.1"] = <
                 text = <"Комментарии">
                 description = <"Комментарии к взвешиванию.">
+            >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
             >
         >
     >
@@ -1771,8 +1910,8 @@ definition
                 }
             }
         }
-        /protocol[id8]/items existence matches {0} matches {
-            allow_archetype CLUSTER[id12] occurrences matches {0..1} matches { 
+        /protocol[id8]/items matches {
+            allow_archetype CLUSTER[id12] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
             }
@@ -1890,7 +2029,25 @@ definition
                 }
             }
         }
-        /protocol[id6]/items[id7]/value[id14]/defining_code existence matches {0} matches {[ac1]}
+        /protocol[id6]/items matches {
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Method
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code existence matches {0} matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id11.1] occurrences matches {0} matches {    -- Formula
+                value matches {
+                    DV_TEXT[id15.1] 
+                }
+            }
+            ELEMENT[id12.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+        }
     }
 
 terminology
@@ -1900,11 +2057,35 @@ terminology
                 text = <"Body mass index">
                 description = <"Calculated measurement which compares a person's weight and height.">
             >
+            ["id7.1"] = <
+                text = <"Method">
+                description = <"The method of entering the Body Mass Index.">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula used to derive the Body Mass Index.">
+            >
+            ["id12.1"] = <
+                text = <"Comment">
+                description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
                 text = <"Body mass index">
                 description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+            ["id7.1"] = <
+                text = <"Methode">
+                description = <"De methode om de Body Mass Index in te voeren.">
+            >
+            ["id11.1"] = <
+                text = <"Formule">
+                description = <"De formule die gebruikt wordt om de Body Mass Index te berekenen">
+            >
+            ["id12.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
             >
         >
         ["sl"] = <
@@ -1912,11 +2093,35 @@ terminology
                 text = <"Indeks telesne mase (ITM)">
                 description = <"Indeks telesne mase (ITM)">
             >
+            ["id7.1"] = <
+                text = <"Metoda">
+                description = <"Metoda">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula">
+            >
+            ["id12.1"] = <
+                text = <"Opombe">
+                description = <"Opombe">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Índice de massa corporal">
                 description = <"Índice que descreve a relação entre peso e altura.">
+            >
+            ["id7.1"] = <
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
+            >
+            ["id11.1"] = <
+                text = <"Fórmula">
+                description = <"Fórmula utilizada para derivar o Índice de Massa Corporal.">
+            >
+            ["id12.1"] = <
+                text = <"Comentário">
+                description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
             >
         >
     >
@@ -2148,20 +2353,37 @@ definition
                 }
             }
         }
-        /protocol[id12]/items existence matches {0} matches {
-            ELEMENT[id14] occurrences matches {0..1} matches {
-                /value[id1067]/defining_code matches {[ac3]}
+        /protocol[id12]/items matches {
+            ELEMENT[id14.1] occurrences matches {0} matches {    -- *Cuff size(en)
+                value matches {
+                    DV_CODED_TEXT[id1067.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
             }
-            CLUSTER[id1034] occurrences matches {0..1} matches {
+            CLUSTER[id1034.1] occurrences matches {0} matches {    -- *New cluster(en)
                 /items[id15]/value[id1068]/defining_code matches {[ac4]}
             }
-            ELEMENT[id1036] occurrences matches {0..1} matches {
-                /value[id1070]/defining_code matches {[ac5]}
+            ELEMENT[id1036.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_CODED_TEXT[id1070.1] matches {
+                        defining_code matches {[ac5]}
+                    }
+                }
             }
-            ELEMENT[id1011] occurrences matches {0..1} matches {
-                /value[id1072]/defining_code matches {[ac6]}
+            ELEMENT[id1039.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure Formula(en)
+                value matches {
+                    DV_TEXT[id1071.1] 
+                }
             }
-            allow_archetype CLUSTER[id1026] occurrences matches {0..1} matches { 
+            ELEMENT[id1011.1] occurrences matches {0} matches {    -- *Diastolic endpoint(en)
+                value matches {
+                    DV_CODED_TEXT[id1072.1] matches {
+                        defining_code matches {[ac6]}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id1026] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
             }
@@ -2207,6 +2429,26 @@ terminology
                 text = <"*Mean Arterial Pressure(en)">
                 description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
             >
+            ["id14.1"] = <
+                text = <"*Cuff size(en)">
+                description = <"*The size of the cuff used for blood pressure measurement(en)">
+            >
+            ["id1034.1"] = <
+                text = <"*New cluster(en)">
+                description = <"**(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data)(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en)">
+            >
         >
         ["de"] = <
             ["id1.1"] = <
@@ -2244,6 +2486,26 @@ terminology
             ["id1007.1"] = <
                 text = <"Mittlerer arterieller Druck">
                 description = <"Der mittlerer arterielle Druck über den gesamten Verlauf der Konktraktions- und Entspannungsphase des Herzens.">
+            >
+            ["id14.1"] = <
+                text = <"Manschettengröße">
+                description = <"Die Größe der Manschette, die zur Blutdruckmessung benutzt wurde.">
+            >
+            ["id1034.1"] = <
+                text = <"Körperstelle">
+                description = <"Körperstelle der Blutdruckmessung. 'Körperstelle der Messung' kann für die gewöhnlichen Stellen verwendet werden. 'Spezifische Stelle' wird für die Aufzeichnung spezifischer Details einer Körperstelle, die nicht in den gewöhnlichen Stellen enthalten ist, verwendet, Sie kann auch verwendet werden, um auf eine externe Teminologie zu verweisen.">
+            >
+            ["id1036.1"] = <
+                text = <"Methode">
+                description = <"Methode der Messung des Blutdrucks.">
+            >
+            ["id1039.1"] = <
+                text = <"Formel für mittleren arterieller Druck">
+                description = <"Die Formel die ggf. verwendet wurde, um den mittleren arteriellen Druck zu berechnen.">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolischer Endpunkt">
+                description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen.">
             >
         >
         ["en"] = <
@@ -2283,6 +2545,26 @@ terminology
                 text = <"Mean Arterial Pressure">
                 description = <"The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.">
             >
+            ["id14.1"] = <
+                text = <"Cuff size">
+                description = <"The size of the cuff used for blood pressure measurement.">
+            >
+            ["id1034.1"] = <
+                text = <"Location">
+                description = <"Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.">
+            >
+            ["id1036.1"] = <
+                text = <"Method">
+                description = <"Method of measurement of blood pressure.">
+            >
+            ["id1039.1"] = <
+                text = <"Mean Arterial Pressure Formula">
+                description = <"Formula used to calculate the MAP (if recorded in data).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolic endpoint">
+                description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
+            >
         >
         ["fa"] = <
             ["id1.1"] = <
@@ -2320,6 +2602,26 @@ terminology
             ["id1007.1"] = <
                 text = <"میانگین فشار وریدی">
                 description = <"متوسط فشار خون وریدی که در کل دوره انقباظ و انبساط قلبی رخ می دهد">
+            >
+            ["id14.1"] = <
+                text = <"اندازه کاف">
+                description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*Method(en)">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data).(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
             >
         >
         ["ja"] = <
@@ -2359,6 +2661,26 @@ terminology
                 text = <"平均同脈圧">
                 description = <"縮拡張サイクルのすべての過程における動脈圧の平均値.">
             >
+            ["id14.1"] = <
+                text = <"カフサイズ">
+                description = <"血圧測定のために使われるカフの大きさ.">
+            >
+            ["id1034.1"] = <
+                text = <"部位">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology. (en)">
+            >
+            ["id1036.1"] = <
+                text = <"方法">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"平均同脈圧の計算式">
+                description = <"平均同脈圧を計算するために使われた士気（もしデータに記録されていれば）">
+            >
+            ["id1011.1"] = <
+                text = <"拡張期終末">
+                description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録.">
+            >
         >
         ["nl"] = <
             ["id1.1"] = <
@@ -2396,6 +2718,26 @@ terminology
             ["id1007.1"] = <
                 text = <"Gemiddelde arteriële druk">
                 description = <"De gemiddelde bloeddruk gedurende 1 cyclus van samentrekken en ontspannen van het hart.">
+            >
+            ["id14.1"] = <
+                text = <"Manchet grootte">
+                description = <"De grootte van de manchet gebruikt bij de meting">
+            >
+            ["id1034.1"] = <
+                text = <"Locatie">
+                description = <"Lichaamslocatie waar de bloeddrukmeting is gemeten. Gebruik 'locatie van meting' om gebruikelijke plaatsen te selecteren. Gebruik 'specifieke locatie' om meer specifieke details of locatie te registreren, die niet in de gebruikelijke set staan of om aan een externe terminologie te refereren.">
+            >
+            ["id1036.1"] = <
+                text = <"Methodiek">
+                description = <"De methode van de meting van de bloeddruk">
+            >
+            ["id1039.1"] = <
+                text = <"Gemiddelde arteriële druk formule">
+                description = <"Formule om de MAP (mean arterial pressure=gemiddelde arteriële druk) te berekenen (als deze data opgeslagen wordt).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolisch eindpunt">
+                description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode.">
             >
         >
         ["ru"] = <
@@ -2435,6 +2777,26 @@ terminology
                 text = <"Среднего артериального давления крови">
                 description = <"Среднее артериальное давление на всём протяжении цикла сокращения и релаксации сердца.">
             >
+            ["id14.1"] = <
+                text = <"Размер манжеты(ru)">
+                description = <"Размер манжеты для измерения кровяного давления.">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"Место тела, где измеряется АД. Используйте \"Место измерения\", чтобы выбрать из обобщённых мест. Используйте \"Точное местограсположение\", чтобы записать более конкретную информацию или место, которое не входит в обобщённый список или обратиться к внешней терминологии.">
+            >
+            ["id1036.1"] = <
+                text = <"Метод">
+                description = <"Метод измерения кровяного давления.">
+            >
+            ["id1039.1"] = <
+                text = <"Формула среднего артериального давления">
+                description = <"Формула, используемая для вычисления СрАД (если требуется записывать).">
+            >
+            ["id1011.1"] = <
+                text = <"Диастолическая конечная точка">
+                description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации.">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -2472,6 +2834,26 @@ terminology
             ["id1007.1"] = <
                 text = <"Pressão arterial média">
                 description = <"A pressão arterial média que ocorre durante todo o curso do ciclo de contração e relaxamento cardíaco.">
+            >
+            ["id14.1"] = <
+                text = <"Tamanho do manguito">
+                description = <"O tamanho do manguito usado para a medição da pressão arterial.">
+            >
+            ["id1034.1"] = <
+                text = <"Localização">
+                description = <"Localização do corpo onde a pressão arterial é medida. Use 'Localização da medida' para selecionar locais comuns. Use 'Local específico' para registrar detalhes mais específicos ou um local que não esteja no conjunto comum ou para se referir a uma terminologia externa.">
+            >
+            ["id1036.1"] = <
+                text = <"Método">
+                description = <"Método de medição da pressão sanguínea.">
+            >
+            ["id1039.1"] = <
+                text = <"Fórmula de Pressão Arterial Média">
+                description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
+            >
+            ["id1011.1"] = <
+                text = <"Ponto de extremidade diastólica">
+                description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
             >
         >
     >
