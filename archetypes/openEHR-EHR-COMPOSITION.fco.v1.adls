@@ -91,6 +91,9 @@ definition
                     allow_archetype OBSERVATION[id38] occurrences matches {0..1}
                     allow_archetype OBSERVATION[id39] occurrences matches {0..1}
                     allow_archetype OBSERVATION[id40] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id41] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id42] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id43] occurrences matches {0..1}
                 }
             }
         }
@@ -206,6 +209,18 @@ terminology
             ["id40"] = <
                 text = <"Índice de massa corporal">
                 description = <"Índice de massa corporal">
+            >
+            ["id41"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+            ["id42"] = <
+                text = <"Circunferência abdominal">
+                description = <"Circunferência abdominal">
+            >
+            ["id43"] = <
+                text = <"Pressão sanguínea">
+                description = <"Pressão sanguínea">
             >
         >
     >
