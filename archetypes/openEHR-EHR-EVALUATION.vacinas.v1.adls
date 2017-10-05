@@ -61,6 +61,59 @@ definition
                     }
                 }
             }
+            CLUSTER[id28] occurrences matches {0..1} matches {    -- Vaccines
+                items matches {
+                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Hepatitis B
+                        value matches {
+                            DV_BOOLEAN[id30] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Viral triple
+                        value matches {
+                            DV_BOOLEAN[id32] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {    -- Adult double (diphtheria and tetanus)
+                        value matches {
+                            DV_BOOLEAN[id34] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id35] occurrences matches {0..1} matches {    -- Yellow fever
+                        value matches {
+                            DV_BOOLEAN[id36] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {    -- The flu
+                        value matches {
+                            DV_BOOLEAN[id38] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id39] occurrences matches {0..1} matches {    -- Oriented vaccination schedule
+                        value matches {
+                            DV_BOOLEAN[id40] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id41] occurrences matches {0..1} matches {    -- Others
+                        value matches {
+                            DV_BOOLEAN[id42] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -179,6 +232,38 @@ terminology
                 text = <"Immunisation Summary">
                 description = <"Summary statements about the current immunisation status for an identified infectious disease or agent.">
             >
+            ["id28"] = <
+                text = <"Vaccines">
+                description = <"Vaccines">
+            >
+            ["id29"] = <
+                text = <"Hepatitis B">
+                description = <"Hepatitis B">
+            >
+            ["id31"] = <
+                text = <"Viral triple">
+                description = <"Viral triple">
+            >
+            ["id33"] = <
+                text = <"Adult double (diphtheria and tetanus)">
+                description = <"Adult double (diphtheria and tetanus)">
+            >
+            ["id35"] = <
+                text = <"Yellow fever">
+                description = <"Yellow fever">
+            >
+            ["id37"] = <
+                text = <"The flu">
+                description = <"The flu">
+            >
+            ["id39"] = <
+                text = <"Oriented vaccination schedule">
+                description = <"Oriented vaccination schedule">
+            >
+            ["id41"] = <
+                text = <"Others">
+                description = <"Others">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -292,6 +377,38 @@ terminology
             ["id1.1"] = <
                 text = <"Resumo da imunização">
                 description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            >
+            ["id28"] = <
+                text = <"Vacinas">
+                description = <"Vaccines">
+            >
+            ["id29"] = <
+                text = <"Hepatite B">
+                description = <"Hepatite B">
+            >
+            ["id31"] = <
+                text = <"Tríplice viral">
+                description = <"Tríplice viral">
+            >
+            ["id33"] = <
+                text = <"Dupla adulto (difteria e tétano)">
+                description = <"Dupla adulto (difteria e tétano)">
+            >
+            ["id35"] = <
+                text = <"Febre amarela">
+                description = <"Febre amarela">
+            >
+            ["id37"] = <
+                text = <"Influenza">
+                description = <"Influenza">
+            >
+            ["id39"] = <
+                text = <"Orientado esquema vacinal">
+                description = <"Orientado esquema vacinal">
+            >
+            ["id41"] = <
+                text = <"Outras">
+                description = <"Outras">
             >
         >
     >
