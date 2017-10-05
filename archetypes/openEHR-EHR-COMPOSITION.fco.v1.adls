@@ -53,6 +53,10 @@ definition
                     }
                 }
             }
+            allow_archetype EVALUATION[id15] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
+            }
         }
     }
 
@@ -98,6 +102,10 @@ terminology
             ["id14"] = <
                 text = <"Uso de medicamentos">
                 description = <"Uso de medicamentos">
+            >
+            ["id15"] = <
+                text = <"Histórico Familiar (SIC)">
+                description = <"Histórico Familiar (SIC)">
             >
         >
     >
