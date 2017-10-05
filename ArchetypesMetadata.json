@@ -172,7 +172,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Body Weight",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.body_weight.v1.adls",
-    "sha" : "6cf2ce4e9520fcafc09bc025a36ac01e484ce04b",
+    "sha" : "3b42d5845601690362906597b7898303111f3408",
     "languages" : [ "en", "de", "ru", "nl", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.height.v1.0.0",
@@ -606,7 +606,7 @@
     "rmType" : "ACTION",
     "name" : "Imaging examination",
     "path" : "archetypes/openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.adls",
-    "sha" : "bc3b806eea14309b81d5349e9789b5ff83343bab",
+    "sha" : "65f4e5f8a440a26dcffc777bc0d8e83b74c1947e",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0",
@@ -753,14 +753,14 @@
     "rmType" : "OBSERVATION",
     "name" : "Gynecological / urological antecedents",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.adls",
-    "sha" : "f25e74d442d1928087bdce442be9c96ca4988031",
+    "sha" : "bff0c33a3f1c4395feef13ebaf5c55805be72962",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.heart_rate.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "heart frequency",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.heart_rate.v1.adls",
-    "sha" : "f7ef307167aff28749c9a5fae15f54affdc99611",
+    "sha" : "e4e769dd249d969f61785aaa24f7b46929ed24b0",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.portador_deficiencia.v1.0.0",
@@ -927,7 +927,7 @@
     "rmType" : "EVALUATION",
     "name" : "saude_bucal",
     "path" : "archetypes/openEHR-EHR-EVALUATION.saude_bucal.v1.adls",
-    "sha" : "2c6b6645923af02e0e40035fda1af6ffcb0e038e",
+    "sha" : "2d95a707dca417413954f8aa41c90cabd0740f65",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.alcohol_use_SESI_DSEV.v1.0.0",
@@ -962,7 +962,7 @@
     "rmType" : "OBSERVATION",
     "name" : "ghq12",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.ghq12.v1.adls",
-    "sha" : "8153780809bef582841c9fb8287983114d7b5716",
+    "sha" : "262ba3c194ca4372ffec6ab4921224c67065f328",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.hipertensao.v1.0.0",
@@ -1088,7 +1088,7 @@
     "rmType" : "COMPOSITION",
     "name" : "fco",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
-    "sha" : "62be7cd1fc79646ac0e55d82cc51b28162f2e64a",
+    "sha" : "6a1af581ddc2bb975d8e4c2f27dffd830d9e0a1b",
     "languages" : [ "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
@@ -1097,5 +1097,26 @@
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
     "sha" : "e4d2a82cc730bbd9ac5b0e1c102878027e732dee",
     "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.immunisation_summary.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Immunisation Summary",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.immunisation_summary.v1.adls",
+    "sha" : "c9615937160c4a38fce06dccacd67d11829dbed7",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.lab_test-immunology.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Immunology titres",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.lab_test-immunology.v1.adls",
+    "sha" : "c1e56a6b5cb3d83ac7ce4cdacf3ee99ffadef03e",
+    "languages" : [ "en" ]
+  }, {
+    "id" : "openEHR-EHR-OBSERVATION.waist_hip.v1.0.0",
+    "rmType" : "OBSERVATION",
+    "name" : "Waist and hip circumference",
+    "path" : "archetypes/openEHR-EHR-OBSERVATION.waist_hip.v1.adls",
+    "sha" : "7bbcefb709bb1655ff5452b3578904648ea8da70",
+    "languages" : [ "en", "ar-sy" ]
   } ]
 }
