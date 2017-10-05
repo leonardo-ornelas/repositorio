@@ -24,7 +24,6 @@ definition
                 items matches {
                     use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0]
                     use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
-                    use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0]
                 }
             }
             SECTION[id7] occurrences matches {0..1} matches {
@@ -404,20 +403,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.0.6.1] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.0.6] matches {
@@ -429,6 +414,20 @@ definition
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.0.6.1] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -561,86 +560,6 @@ terminology
             ["id0.0.4.1"] = <
                 text = <"Exposição">
                 description = <"Exposição á fumaça">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.0.0
-
-definition
-    OBSERVATION[id1.1.1] matches {    -- Alcohol Use
-        /data[id2]/events matches {
-            EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items matches {
-                    CLUSTER[id6] matches {
-                        /items[id16]/items[id17]/value matches {
-                            DV_QUANTITY[id31] matches {
-                                property matches {[at2]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
-                    CLUSTER[id0.3] occurrences matches {0..1} matches {
-                        items matches {
-                            use_node ELEMENT /protocol[id25]/items[id27]
-                            use_node ELEMENT /protocol[id25]/items[id26]
-                            ELEMENT[id0.6] occurrences matches {0..1} matches {
-                                /value[id0.7]/defining_code matches {[ac0.1]}
-                            }
-                        }
-                    }
-                }
-            }
-            POINT_EVENT[id24] matches {
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-            INTERVAL_EVENT[id23] matches {
-                /math_function[id37]/defining_code matches {[at3]}
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-        }
-        /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id39] matches {
-                        property matches {[at4]}
-                        units matches {"gm"}
-                    }
-                }
-            }
-            ELEMENT[id27] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id40] matches {
-                        property matches {[at1]}
-                        units matches {"/d", "/wk", "/mo"}
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Alcohol Use">
-                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Uso de bebida alcoólica">
-                description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
             >
         >
     >
