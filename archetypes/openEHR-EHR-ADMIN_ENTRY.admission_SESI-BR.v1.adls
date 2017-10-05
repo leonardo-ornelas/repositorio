@@ -59,26 +59,55 @@ description
 definition
     ADMIN_ENTRY[id1.1] matches {    -- Patient admission
         /data[id2]/items matches {
-            ELEMENT[id3] matches {
+            ELEMENT[id3] occurrences matches {0} matches {
                 /value[id123]/defining_code matches {[ac3]}
             }
             CLUSTER[id74] occurrences matches {0..1} matches {
                 items matches {
-                    CLUSTER[id105] occurrences matches {0..1} matches {
+                    CLUSTER[id105] occurrences matches {0} matches {
                         /items[id108]/value[id130]/defining_code matches {[ac4]}
                     }
-                    ELEMENT[id82] occurrences matches {0..1} matches {
+                    CLUSTER[id85] occurrences matches {0..1} matches {
+                        items matches {
+                            ELEMENT[id0.41] occurrences matches {1} matches {    -- Public place
+                                value matches {
+                                    DV_TEXT[id0.42] 
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id82] occurrences matches {0} matches {
                         /value[id139]/defining_code matches {[ac5]}
                     }
                 }
             }
-            ELEMENT[id14] occurrences matches {0..1} matches {
+            ELEMENT[id14] occurrences matches {0} matches {
                 /value[id140]/defining_code matches {[ac6]}
             }
-            CLUSTER[id95] occurrences matches {0..1} matches {
+            CLUSTER[id95] occurrences matches {0} matches {
                 items matches {
                     CLUSTER[id120] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id106]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id107]
                             use_node ELEMENT /data[id2]/items[id74]/items[id105]/items[id108]
@@ -86,6 +115,46 @@ definition
                     }
                     CLUSTER[id96] occurrences matches {0..1} matches {
                         items matches {
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id89]
+                            use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id86]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id87]
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id88]
@@ -93,6 +162,66 @@ definition
                             use_node ELEMENT /data[id2]/items[id74]/items[id85]/items[id90]
                         }
                     }
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id78]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id79]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id80]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id102]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id103]
+                    use_node ELEMENT /data[id2]/items[id74]/items[id104]
                     use_node ELEMENT /data[id2]/items[id74]/items[id75]
                     use_node ELEMENT /data[id2]/items[id74]/items[id78]
                     use_node ELEMENT /data[id2]/items[id74]/items[id79]
@@ -102,52 +231,192 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
             }
-            CLUSTER[id26] occurrences matches {0..1} matches {
+            CLUSTER[id26] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id122] matches {
+            CLUSTER[id122] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            CLUSTER[id52] occurrences matches {0..1} matches {
+            CLUSTER[id52] occurrences matches {0} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
                 }
             }
-            ELEMENT[id62] occurrences matches {0..1} matches {
+            ELEMENT[id62] occurrences matches {0} matches {
                 /value[id171]/defining_code matches {[ac7]}
             }
-            ELEMENT[id67] occurrences matches {0..1} matches {
+            ELEMENT[id67] occurrences matches {0} matches {
                 /value[id172]/defining_code matches {[ac2]}
             }
-            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Identificação
+            ELEMENT[id72] occurrences matches {0} matches {    -- Admit date time
+                /value[id173]/value matches {*}
+            }
+            CLUSTER[id0.43] occurrences matches {0..1} matches {    -- Patient identification
                 items matches {
-                    ELEMENT[id0.5] occurrences matches {1} matches {    -- Name
+                    ELEMENT[id0.44] occurrences matches {0..1} matches {    -- Full name
                         value matches {
-                            DV_TEXT[id0.6] 
+                            DV_TEXT[id0.45] 
                         }
                     }
-                    ELEMENT[id0.7] occurrences matches {1} matches {    -- Marital status
+                    ELEMENT[id0.46] occurrences matches {0..1} matches {    -- Phone
                         value matches {
-                            DV_CODED_TEXT[id0.8] matches {
-                                defining_code matches {[ac0.1]}
-                            }
+                            DV_TEXT[id0.47] 
                         }
                     }
-                    ELEMENT[id0.9] occurrences matches {1} matches {    -- Raça/Cor
+                    ELEMENT[id0.48] occurrences matches {0..1} matches {    -- Identity number
                         value matches {
-                            DV_CODED_TEXT[id0.10] matches {
+                            DV_TEXT[id0.49] 
+                        }
+                    }
+                    ELEMENT[id0.50] occurrences matches {0..1} matches {    -- Organ
+                        value matches {
+                            DV_TEXT[id0.51] 
+                        }
+                    }
+                    ELEMENT[id0.52] occurrences matches {0..1} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id0.53] 
+                        }
+                    }
+                    ELEMENT[id0.54] occurrences matches {0..1} matches {    -- Email
+                        value matches {
+                            DV_TEXT[id0.55] 
+                        }
+                    }
+                    ELEMENT[id0.56] occurrences matches {0..1} matches {    -- Color Race
+                        value matches {
+                            DV_CODED_TEXT[id0.57] matches {
                                 defining_code matches {[ac0.2]}
                             }
+                        }
+                    }
+                    ELEMENT[id0.58] occurrences matches {0..1} matches {    -- Sexo
+                        value matches {
+                            DV_CODED_TEXT[id0.59] matches {
+                                defining_code matches {[ac0.4]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.60] occurrences matches {0..1} matches {    -- Date of birth
+                        value matches {
+                            DV_DATE_TIME[id0.61] matches {
+                                value
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.62] occurrences matches {0..1} matches {    -- Age
+                        value matches {
+                            DV_TEXT[id0.63] 
+                        }
+                    }
+                    ELEMENT[id0.64] occurrences matches {0..1} matches {    -- marital status
+                        value matches {
+                            DV_CODED_TEXT[id0.65] matches {
+                                defining_code matches {[ac0.5]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.66] occurrences matches {0..1} matches {    -- Type of Exam
+                        value matches {
+                            DV_CODED_TEXT[id0.67] matches {
+                                defining_code matches {[ac0.6]}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.77] occurrences matches {0..1} matches {    -- Company Name
+                        value matches {
+                            DV_TEXT[id0.78] 
+                        }
+                    }
+                    ELEMENT[id0.79] occurrences matches {0..1} matches {    -- Enrollment in the Company
+                        value matches {
+                            DV_TEXT[id0.80] 
+                        }
+                    }
+                    ELEMENT[id0.81] occurrences matches {0..1} matches {    -- Activity Branch
+                        value matches {
+                            DV_TEXT[id0.82] 
+                        }
+                    }
+                    ELEMENT[id0.83] occurrences matches {0..1} matches {    -- type PCMO
+                        value matches {
+                            DV_TEXT[id0.84] 
+                        }
+                    }
+                    ELEMENT[id0.85] occurrences matches {0..1} matches {    -- CPF
+                        value matches {
+                            DV_TEXT[id0.86] 
                         }
                     }
                 }
@@ -162,21 +431,9 @@ terminology
                 text = <"Patient admission">
                 description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
             >
-            ["id0.4"] = <
-                text = <"Identificação">
-                description = <"Identificação">
-            >
-            ["id0.5"] = <
-                text = <"Name">
-                description = <"Register full name">
-            >
-            ["id0.7"] = <
-                text = <"Marital status">
-                description = <"Record the marital status">
-            >
             ["at0.1"] = <
-                text = <"Casado/Vive junto">
-                description = <"Casado/Vive junto">
+                text = <"Casado Vive junto">
+                description = <"Casado Vive junto">
             >
             ["at0.2"] = <
                 text = <"Solteiro">
@@ -193,10 +450,6 @@ terminology
             ["ac0.1"] = <
                 text = <"Estado civil">
                 description = <"Estado civil">
-            >
-            ["id0.9"] = <
-                text = <"Raça/Cor">
-                description = <"Raça/Cor">
             >
             ["at0.5"] = <
                 text = <"Branco">
@@ -219,8 +472,164 @@ terminology
                 description = <"Indígena">
             >
             ["ac0.2"] = <
-                text = <"Raça/Cor">
-                description = <"Raça/Cor">
+                text = <"Raça Cor">
+                description = <"Raça Cor">
+            >
+            ["at0.10"] = <
+                text = <"Pré  admissional">
+                description = <"Pré  admissional">
+            >
+            ["at0.11"] = <
+                text = <"Periódico">
+                description = <"Periódico">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho">
+                description = <"Retorno ao trabalho">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função">
+                description = <"Mudança de função">
+            >
+            ["at0.14"] = <
+                text = <"Demissional">
+                description = <"Demissional">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar">
+                description = <"Especial complementar">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame">
+                description = <"Tipo de exame">
+            >
+            ["id104"] = <
+                text = <"Location description">
+                description = <"Location description">
+            >
+            ["id72"] = <
+                text = <"Admit date time">
+                description = <"Date time the patient was admitted.">
+            >
+            ["id88"] = <
+                text = <"State province">
+                description = <"State province">
+            >
+            ["id142"] = <
+                text = <"(added by post-parse processor)">
+                description = <"(added by post-parse processor)">
+            >
+            ["id0.41"] = <
+                text = <"Public place">
+                description = <"Public place">
+            >
+            ["id0.43"] = <
+                text = <"Patient identification">
+                description = <"Patient identification">
+            >
+            ["id0.44"] = <
+                text = <"Full name">
+                description = <"Full name">
+            >
+            ["id0.46"] = <
+                text = <"Phone">
+                description = <"Phone">
+            >
+            ["id0.48"] = <
+                text = <"Identity number">
+                description = <"Identity number">
+            >
+            ["id0.50"] = <
+                text = <"Organ">
+                description = <"Organ">
+            >
+            ["id0.52"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id0.54"] = <
+                text = <"Email">
+                description = <"Email">
+            >
+            ["id0.56"] = <
+                text = <"Color Race">
+                description = <"Color Race">
+            >
+            ["id0.58"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["at0.16"] = <
+                text = <"Feminino">
+                description = <"Feminino">
+            >
+            ["at0.17"] = <
+                text = <"Masculino">
+                description = <"Masculino">
+            >
+            ["ac0.4"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["id0.60"] = <
+                text = <"Date of birth">
+                description = <"Date of birth">
+            >
+            ["id0.62"] = <
+                text = <"Age">
+                description = <"Age">
+            >
+            ["id0.64"] = <
+                text = <"marital status">
+                description = <"marital status">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
+            >
+            ["at0.18"] = <
+                text = <"Separado">
+                description = <"Separado">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto">
+                description = <"Casado ou vive junto">
+            >
+            ["id0.66"] = <
+                text = <"Type of Exam">
+                description = <"Type of Exam">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
+            >
+            ["id0.77"] = <
+                text = <"Company Name">
+                description = <"Company Name">
+            >
+            ["id0.79"] = <
+                text = <"Enrollment in the Company">
+                description = <"Enrollment in the Company">
+            >
+            ["id0.81"] = <
+                text = <"Activity Branch">
+                description = <"Activity Branch">
+            >
+            ["id0.83"] = <
+                text = <"type PCMO">
+                description = <"type PCMO">
+            >
+            ["id0.85"] = <
+                text = <"CPF">
+                description = <"CPF">
+            >
+            ["at0.20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at0.21"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
             >
         >
         ["ar-sy"] = <
@@ -228,21 +637,9 @@ terminology
                 text = <"إدخال المريض">
                 description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
             >
-            ["id0.4"] = <
-                text = <"Identificação (en)">
-                description = <"Identificação (en)">
-            >
-            ["id0.5"] = <
-                text = <"Nome (en)">
-                description = <"Registre o nome completo (en)">
-            >
-            ["id0.7"] = <
-                text = <"Estado civil">
-                description = <"Registre o estado civil">
-            >
             ["at0.1"] = <
-                text = <"Casado/Vive junto (en)">
-                description = <"Casado/Vive junto (en)">
+                text = <"Casado Vive junto (en)">
+                description = <"Casado Vive junto (en)">
             >
             ["at0.2"] = <
                 text = <"Solteiro (en)">
@@ -259,10 +656,6 @@ terminology
             ["ac0.1"] = <
                 text = <"Estado civil (en)">
                 description = <"Estado civil (en)">
-            >
-            ["id0.9"] = <
-                text = <"Raça/Cor (en)">
-                description = <"Raça/Cor (en)">
             >
             ["at0.5"] = <
                 text = <"Branco (en)">
@@ -285,8 +678,164 @@ terminology
                 description = <"Indígena (en)">
             >
             ["ac0.2"] = <
-                text = <"Raça/Cor (en)">
-                description = <"Raça/Cor (en)">
+                text = <"Raça Cor (en)">
+                description = <"Raça Cor (en)">
+            >
+            ["at0.10"] = <
+                text = <"Pré - admissional (en)">
+                description = <"Pré - admissional (en)">
+            >
+            ["at0.11"] = <
+                text = <"Periódico (en)">
+                description = <"Periódico (en)">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho (en)">
+                description = <"Retorno ao trabalho (en)">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função (en)">
+                description = <"Mudança de função (en)">
+            >
+            ["at0.14"] = <
+                text = <"Demissional (en)">
+                description = <"Demissional (en)">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar (en)">
+                description = <"Especial complementar (en)">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame (en)">
+                description = <"Tipo de exame (en)">
+            >
+            ["id104"] = <
+                text = <"وصف الموقع">
+                description = <"">
+            >
+            ["id72"] = <
+                text = <"وقت/ تاريخ الإدخال">
+                description = <"الوقت و التاريخ الذين تم فيهما إدخال المريض">
+            >
+            ["id88"] = <
+                text = <"الولاية/المقاطعة">
+                description = <"*">
+            >
+            ["id142"] = <
+                text = <"(added by post-parse processor)(en)">
+                description = <"*(added by post-parse processor)(en)">
+            >
+            ["id0.41"] = <
+                text = <"Logradouro (en)">
+                description = <"Logradouro (en)">
+            >
+            ["id0.43"] = <
+                text = <"Identificação do paciente (en)">
+                description = <"Identificação do paciente (en)">
+            >
+            ["id0.44"] = <
+                text = <"Nome completo (en)">
+                description = <"Nome completo (en)">
+            >
+            ["id0.46"] = <
+                text = <"Telefone (en)">
+                description = <"Telefone (en)">
+            >
+            ["id0.48"] = <
+                text = <"Número da identidade (en)">
+                description = <"Número da identidade (en)">
+            >
+            ["id0.50"] = <
+                text = <"Orgão (en)">
+                description = <"Orgão (en)">
+            >
+            ["id0.52"] = <
+                text = <"NIT (en)">
+                description = <"NIT (en)">
+            >
+            ["id0.54"] = <
+                text = <"Email (en)">
+                description = <"Email (en)">
+            >
+            ["id0.56"] = <
+                text = <"Raça Cor (en)">
+                description = <"Raça Cor (en)">
+            >
+            ["id0.58"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
+            >
+            ["at0.16"] = <
+                text = <"Feminino (en)">
+                description = <"Feminino (en)">
+            >
+            ["at0.17"] = <
+                text = <"Masculino (en)">
+                description = <"Masculino (en)">
+            >
+            ["ac0.4"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
+            >
+            ["id0.60"] = <
+                text = <"Data de Nascimento (en)">
+                description = <"Data de Nascimento (en)">
+            >
+            ["id0.62"] = <
+                text = <"Idade (en)">
+                description = <"Idade (en)">
+            >
+            ["id0.64"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["at0.18"] = <
+                text = <"Separado (en)">
+                description = <"Separado (en)">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto (en)">
+                description = <"Casado ou vive junto (en)">
+            >
+            ["id0.66"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["id0.77"] = <
+                text = <"Nome da Empresa (en)">
+                description = <"Nome da Empresa (en)">
+            >
+            ["id0.79"] = <
+                text = <"Matrícula na Empresa (en)">
+                description = <"Matrícula na Empresa (en)">
+            >
+            ["id0.81"] = <
+                text = <"Ramo da Atividade (en)">
+                description = <"Ramo da Atividade (en)">
+            >
+            ["id0.83"] = <
+                text = <"Tipo de PCMO (en)">
+                description = <"Tipo de PCMO (en)">
+            >
+            ["id0.85"] = <
+                text = <"CPF (en)">
+                description = <"CPF (en)">
+            >
+            ["at0.20"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
+            >
+            ["at0.21"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
             >
         >
         ["pt-br"] = <
@@ -294,65 +843,205 @@ terminology
                 text = <"Admissão do paciente">
                 description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
             >
-            ["id0.4"] = <
-                text = <"Identificação (en)">
-                description = <"Identificação (en)">
-            >
-            ["id0.5"] = <
-                text = <"Nome">
-                description = <"Registre o nome completo">
-            >
-            ["id0.7"] = <
-                text = <"Estado civil">
-                description = <"Registre o estado civil">
-            >
             ["at0.1"] = <
-                text = <"Casado/Vive junto (en)">
-                description = <"Casado/Vive junto (en)">
+                text = <"Casado Vive junto">
+                description = <"Casado Vive junto">
             >
             ["at0.2"] = <
-                text = <"Solteiro (en)">
-                description = <"Solteiro (en)">
+                text = <"Solteiro">
+                description = <"Solteiro">
             >
             ["at0.3"] = <
-                text = <"Divorciado (en)">
-                description = <"Divorciado (en)">
+                text = <"Divorciado">
+                description = <"Divorciado">
             >
             ["at0.4"] = <
-                text = <"Viúvo (en)">
-                description = <"Viúvo (en)">
+                text = <"Viúvo">
+                description = <"Viúvo">
             >
             ["ac0.1"] = <
                 text = <"Estado civil (en)">
                 description = <"Estado civil (en)">
             >
-            ["id0.9"] = <
-                text = <"Raça/Cor (en)">
-                description = <"Raça/Cor (en)">
-            >
             ["at0.5"] = <
-                text = <"Branco (en)">
-                description = <"Branco (en)">
+                text = <"Branco">
+                description = <"Branco">
             >
             ["at0.6"] = <
-                text = <"Preto (en)">
-                description = <"Preto (en)">
+                text = <"Preto">
+                description = <"Preto">
             >
             ["at0.7"] = <
-                text = <"Amarelo (en)">
-                description = <"Amarelo (en)">
+                text = <"Amarelo">
+                description = <"Amarelo">
             >
             ["at0.8"] = <
-                text = <"Pardo (en)">
-                description = <"Pardo (en)">
+                text = <"Pardo">
+                description = <"Pardo">
             >
             ["at0.9"] = <
-                text = <"Indígena (en)">
-                description = <"Indígena (en)">
+                text = <"Indígena">
+                description = <"Indígena">
             >
             ["ac0.2"] = <
-                text = <"Raça/Cor (en)">
-                description = <"Raça/Cor (en)">
+                text = <"Raça Cor (en)">
+                description = <"Raça Cor (en)">
+            >
+            ["at0.10"] = <
+                text = <"Pré  admissional">
+                description = <"Pré  admissional">
+            >
+            ["at0.11"] = <
+                text = <"Periódico">
+                description = <"Periódico">
+            >
+            ["at0.12"] = <
+                text = <"Retorno ao trabalho">
+                description = <"Retorno ao trabalho">
+            >
+            ["at0.13"] = <
+                text = <"Mudança de função">
+                description = <"Mudança de função">
+            >
+            ["at0.14"] = <
+                text = <"Demissional">
+                description = <"Demissional">
+            >
+            ["at0.15"] = <
+                text = <"Especial complementar">
+                description = <"Especial complementar">
+            >
+            ["ac0.3"] = <
+                text = <"Tipo de exame (en)">
+                description = <"Tipo de exame (en)">
+            >
+            ["id104"] = <
+                text = <"Descrição da localização">
+                description = <"Localização">
+            >
+            ["id72"] = <
+                text = <"Data hora de admissão">
+                description = <"Data hora que o paciente foi admitido.">
+            >
+            ["id88"] = <
+                text = <"Estado">
+                description = <"*">
+            >
+            ["id142"] = <
+                text = <"(adicionado por processador pós-análise)">
+                description = <"(adicionado por processador pós-análise)">
+            >
+            ["id0.41"] = <
+                text = <"Logradouro">
+                description = <"Logradouro">
+            >
+            ["id0.43"] = <
+                text = <"Identificação do paciente">
+                description = <"Identificação do paciente">
+            >
+            ["id0.44"] = <
+                text = <"Nome completo">
+                description = <"Nome completo">
+            >
+            ["id0.46"] = <
+                text = <"Telefone">
+                description = <"Telefone">
+            >
+            ["id0.48"] = <
+                text = <"Número da identidade">
+                description = <"Número da identidade">
+            >
+            ["id0.50"] = <
+                text = <"Orgão">
+                description = <"Orgão">
+            >
+            ["id0.52"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id0.54"] = <
+                text = <"Email">
+                description = <"Email">
+            >
+            ["id0.56"] = <
+                text = <"Raça Cor">
+                description = <"Raça Cor">
+            >
+            ["id0.58"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["at0.16"] = <
+                text = <"Feminino (en)">
+                description = <"Feminino (en)">
+            >
+            ["at0.17"] = <
+                text = <"Masculino (en)">
+                description = <"Masculino (en)">
+            >
+            ["ac0.4"] = <
+                text = <"Sexo (en)">
+                description = <"Sexo (en)">
+            >
+            ["id0.60"] = <
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
+            >
+            ["id0.62"] = <
+                text = <"Idade">
+                description = <"Idade">
+            >
+            ["id0.64"] = <
+                text = <"Estado civil">
+                description = <"Estado civil">
+            >
+            ["ac0.5"] = <
+                text = <"Estado civil (en)">
+                description = <"Estado civil (en)">
+            >
+            ["at0.18"] = <
+                text = <"Separado (en)">
+                description = <"Separado (en)">
+            >
+            ["at0.19"] = <
+                text = <"Casado ou vive junto (en)">
+                description = <"Casado ou vive junto (en)">
+            >
+            ["id0.66"] = <
+                text = <"Tipo de Exame">
+                description = <"Tipo de Exame">
+            >
+            ["ac0.6"] = <
+                text = <"Tipo de Exame (en)">
+                description = <"Tipo de Exame (en)">
+            >
+            ["id0.77"] = <
+                text = <"Nome da Empresa">
+                description = <"Nome da Empresa">
+            >
+            ["id0.79"] = <
+                text = <"Matrícula na Empresa">
+                description = <"Matrícula na Empresa">
+            >
+            ["id0.81"] = <
+                text = <"Ramo da Atividade">
+                description = <"Ramo da Atividade">
+            >
+            ["id0.83"] = <
+                text = <"Tipo de PCMO">
+                description = <"Tipo de PCMO">
+            >
+            ["id0.85"] = <
+                text = <"CPF">
+                description = <"CPF">
+            >
+            ["at0.20"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
+            >
+            ["at0.21"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
             >
         >
     >
@@ -363,7 +1052,23 @@ terminology
         >
         ["ac0.2"] = <
             id = <"ac0.2">
-            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.20">
+        >
+        ["ac0.3"] = <
+            id = <"ac0.3">
+            members = <"at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
+        >
+        ["ac0.4"] = <
+            id = <"ac0.4">
+            members = <"at0.16", "at0.17">
+        >
+        ["ac0.5"] = <
+            id = <"ac0.5">
+            members = <"at0.2", "at0.3", "at0.4", "at0.18", "at0.19", "at0.21">
+        >
+        ["ac0.6"] = <
+            id = <"ac0.6">
+            members = <"at0.10", "at0.11", "at0.12", "at0.13", "at0.14", "at0.15">
         >
     >
 

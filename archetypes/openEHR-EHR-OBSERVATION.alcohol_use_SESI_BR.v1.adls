@@ -81,14 +81,27 @@ definition
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
                     }
+                    CLUSTER[id0.3] occurrences matches {0..1} matches {    -- Consumo
+                        items matches {
+                            use_node ELEMENT /protocol[id25]/items[id27]
+                            use_node ELEMENT /protocol[id25]/items[id26]
+                            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- How often do you take "5 or more doses" at one time
+                                value matches {
+                                    DV_CODED_TEXT[id0.7] matches {
+                                        defining_code matches {[ac0.1]}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
-            POINT_EVENT[id24] matches {    -- Specified Day
+            POINT_EVENT[id24] matches {
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
                 }
             }
-            INTERVAL_EVENT[id23] matches {    -- Average Consumption Interval
+            INTERVAL_EVENT[id23] matches {
                 /math_function[id37]/defining_code matches {[at3]}
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
@@ -96,7 +109,7 @@ definition
             }
         }
         /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {    -- Standard Drink Definition
+            ELEMENT[id26] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id39] matches {
                         property matches {[at4]}
@@ -104,7 +117,7 @@ definition
                     }
                 }
             }
-            ELEMENT[id27] occurrences matches {0..1} matches {    -- Average Use Frequency
+            ELEMENT[id27] occurrences matches {0..1} matches {
                 value matches {
                     DV_QUANTITY[id40] matches {
                         property matches {[at1]}
@@ -154,42 +167,6 @@ terminology
                 text = <"Grams Consumed">
                 description = <"Grams of alcohol consumed.">
             >
-            ["id18"] = <
-                text = <"Triggers">
-                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
-            >
-            ["id19"] = <
-                text = <"Context">
-                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
-            >
-            ["id20"] = <
-                text = <"Behavioural Issues">
-                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
-            >
-            ["id22"] = <
-                text = <"Comment">
-                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
-            >
-            ["id23"] = <
-                text = <"Average Consumption Interval">
-                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
-            >
-            ["id24"] = <
-                text = <"Specified Day">
-                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
-            >
-            ["id26"] = <
-                text = <"Standard Drink Definition">
-                description = <"Amount of alcohol defining a standard drink.">
-            >
-            ["id27"] = <
-                text = <"Average Use Frequency">
-                description = <"Frequency of 'Average Use' per time interval.">
-            >
-            ["id28"] = <
-                text = <"Readiness for Change">
-                description = <"Details about readiness to change use or consumption of alcohol.">
-            >
             ["at1"] = <
                 text = <"Frequency">
                 description = <"Frequency">
@@ -206,79 +183,83 @@ terminology
                 text = <"Mass">
                 description = <"Mass">
             >
+            ["id0.3"] = <
+                text = <"Consumo">
+                description = <"Detalhes sobre a frequência/quantidade  de álcool">
+            >
+            ["id0.4"] = <
+                text = <"How often do you drink alcoholic beverages?">
+                description = <"Frequency of use">
+            >
+            ["id0.5"] = <
+                text = <"At times when you drink, how many doses do you typically consume to the baby?">
+                description = <"Number of doses in a period">
+            >
+            ["id0.6"] = <
+                text = <"How often do you take \"5 or more doses\" at one time">
+                description = <"How often do you take \"5 or more doses\" at one time">
+            >
+            ["at0.1"] = <
+                text = <"Never">
+                description = <"Never">
+            >
+            ["at0.2"] = <
+                text = <"Less than once a month">
+                description = <"Less than once a month">
+            >
+            ["at0.3"] = <
+                text = <"Mensalmente">
+                description = <"Mensalmente">
+            >
+            ["at0.4"] = <
+                text = <"Weekly">
+                description = <"Weekly">
+            >
+            ["at0.5"] = <
+                text = <"All or almost every day">
+                description = <"All or almost every day">
+            >
+            ["ac0.1"] = <
+                text = <"Período">
+                description = <"Período de consumo">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
-                text = <"*Alcohol Use (en)">
-                description = <"*Details about use of all forms of alcohol at a specified point in time or over a specified period of time. (en)">
+                text = <"Uso de bebida alcoólica">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
             >
             ["id0.2"] = <
-                text = <"*Problemas comportamentais (en)">
-                description = <"*Problemas comportamentais (en)">
+                text = <"Problemas comportamentais">
+                description = <"Problemas comportamentais">
             >
             ["id1"] = <
-                text = <"*Alcohol Use (en)">
-                description = <"*Details about use of all forms of alcohol at a specified point in time or over a specified period of time. (en)">
+                text = <"Uso de bebida alcoólica">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*An unspecified event. (en)">
+                text = <"Eventos">
+                description = <"Eventos">
             >
             ["id6"] = <
-                text = <"*Consumption Details (en)">
-                description = <"*Details about the consumption of specific forms of alcohol. (en)">
+                text = <"Detalhes do Consumo">
+                description = <"Detalhes sobre o consumo de formas específicas de álcool.">
             >
             ["id7"] = <
-                text = <"*Form (en)">
-                description = <"*Form of alcohol consumed. (en)">
+                text = <"Com que frequência você toma bebidas alcoólicas?">
+                description = <"Com que frequência você toma bebidas alcoólicas?">
             >
             ["id15"] = <
-                text = <"*Standard Drinks (en)">
-                description = <"*Number of standard drinks of alcohol consumed. (en)">
+                text = <"Bebidas padrão">
+                description = <"Número de bebidas padrão de álcool consumidas.">
             >
             ["id16"] = <
-                text = <"*Amount (en)">
-                description = <"*Amount of alcohol consumed. (en)">
+                text = <"Quantidade">
+                description = <"Quantidade de álcool consumida.">
             >
             ["id17"] = <
-                text = <"*Grams Consumed (en)">
-                description = <"*Grams of alcohol consumed. (en)">
-            >
-            ["id18"] = <
-                text = <"*Triggers (en)">
-                description = <"*Identified triggers which stimulate or cause consumption of this form of alcohol. (en)">
-            >
-            ["id19"] = <
-                text = <"*Context (en)">
-                description = <"*Description about the social or cultural context that contributed to the consumption of this form of alcohol. (en)">
-            >
-            ["id20"] = <
-                text = <"*Behavioural Issues (en)">
-                description = <"*Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence. (en)">
-            >
-            ["id22"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about the alcohol consumption not captured in other fields. (en)">
-            >
-            ["id23"] = <
-                text = <"*Average Consumption Interval (en)">
-                description = <"*Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years. (en)">
-            >
-            ["id24"] = <
-                text = <"*Specified Day (en)">
-                description = <"*Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary. (en)">
-            >
-            ["id26"] = <
-                text = <"*Standard Drink Definition (en)">
-                description = <"*Amount of alcohol defining a standard drink. (en)">
-            >
-            ["id27"] = <
-                text = <"*Average Use Frequency (en)">
-                description = <"*Frequency of 'Average Use' per time interval. (en)">
-            >
-            ["id28"] = <
-                text = <"*Readiness for Change (en)">
-                description = <"*Details about readiness to change use or consumption of alcohol. (en)">
+                text = <"Gramas consumidas">
+                description = <"Gramas de álcool consumidas.">
             >
             ["at1"] = <
                 text = <"*Frequency (en)">
@@ -296,6 +277,52 @@ terminology
                 text = <"*Mass (en)">
                 description = <"*Mass (en)">
             >
+            ["id0.3"] = <
+                text = <"Consumo (en)">
+                description = <"Detalhes sobre a frequência/quantidade  de álcool (en)">
+            >
+            ["id0.4"] = <
+                text = <"Com que frequência você toma bebidas alcoólicas">
+                description = <"Frequência de uso">
+            >
+            ["id0.5"] = <
+                text = <"Nas ocasiões em que bebe, quantas doses você consome tipicamente ao bebe?">
+                description = <"Quantidade de doses em um período">
+            >
+            ["id0.6"] = <
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
+                description = <"Frequência de apenas em um período de consumo (en)">
+            >
+            ["at0.1"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["at0.2"] = <
+                text = <"Menos que uma vez ao mês">
+                description = <"Menos que uma vez ao mês">
+            >
+            ["at0.3"] = <
+                text = <"Mensalmente (en)">
+                description = <"Mensalmente (en)">
+            >
+            ["at0.4"] = <
+                text = <"Semanalmente">
+                description = <"Semanalmente">
+            >
+            ["at0.5"] = <
+                text = <"Todos ou quase todos os dias">
+                description = <"Todos ou quase todos os dias">
+            >
+            ["ac0.1"] = <
+                text = <"Período (en)">
+                description = <"Período de consumo (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac0.1"] = <
+            id = <"ac0.1">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.5">
         >
     >
 

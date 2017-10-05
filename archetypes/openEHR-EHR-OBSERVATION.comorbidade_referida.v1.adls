@@ -1,0 +1,320 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.comorbidade_referida.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Grupo iHealth">
+        ["organization"] = <"Grupo iHealth">
+        ["email"] = <"contato@ihealthgroup.com.br">
+    >
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Comorbidade referida
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Qualquer evento
+                        data matches {
+                            ITEM_TREE[id4] occurrences matches {0..1} matches {
+                                items matches {
+                                    ELEMENT[id7] occurrences matches {1} matches {    -- Bronquite ou asma
+                                        value matches {
+                                            DV_BOOLEAN[id8] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {1} matches {    -- Enfisema pulmonar
+                                        value matches {
+                                            DV_BOOLEAN[id10] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {1} matches {    -- Angina
+                                        value matches {
+                                            DV_BOOLEAN[id12] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {1} matches {    -- Infarto
+                                        value matches {
+                                            DV_BOOLEAN[id14] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {1} matches {    -- Acidente vascular cerebral ou derrame
+                                        value matches {
+                                            DV_BOOLEAN[id16] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {1} matches {    -- Colesterol alterado
+                                        value matches {
+                                            DV_BOOLEAN[id18] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {1} matches {    -- Problemas auditivos
+                                        value matches {
+                                            DV_BOOLEAN[id20] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {1} matches {    -- Depressão
+                                        value matches {
+                                            DV_BOOLEAN[id22] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id23] occurrences matches {1} matches {    -- Insuficiência cardíaca
+                                        value matches {
+                                            DV_BOOLEAN[id24] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {1} matches {    -- Outra doença do coração
+                                        value matches {
+                                            DV_BOOLEAN[id26] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {1} matches {    -- Doença renal crônica
+                                        value matches {
+                                            DV_BOOLEAN[id28] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {1} matches {    -- Câncer
+                                        value matches {
+                                            DV_BOOLEAN[id30] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id31] occurrences matches {1} matches {    -- Cirrose
+                                        value matches {
+                                            DV_BOOLEAN[id32] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id33] occurrences matches {1} matches {    -- Problema de coluna/costas
+                                        value matches {
+                                            DV_BOOLEAN[id34] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id35] occurrences matches {1} matches {    -- Tendinite ou LER/DORT
+                                        value matches {
+                                            DV_BOOLEAN[id36] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id37] occurrences matches {1} matches {    -- Artrite, reumatismo ou gota
+                                        value matches {
+                                            DV_BOOLEAN[id38] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Comorbidade referida">
+                description = <"Comorbidade referida">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id7"] = <
+                text = <"Bronquite ou asma">
+                description = <"Bronquite ou asma">
+            >
+            ["id9"] = <
+                text = <"Enfisema pulmonar">
+                description = <"Enfisema pulmonar">
+            >
+            ["id11"] = <
+                text = <"Angina">
+                description = <"Angina">
+            >
+            ["id13"] = <
+                text = <"Infarto">
+                description = <"Infarto">
+            >
+            ["id15"] = <
+                text = <"Acidente vascular cerebral ou derrame">
+                description = <"Acidente vascular cerebral ou derrame">
+            >
+            ["id17"] = <
+                text = <"Colesterol alterado">
+                description = <"Colesterol alterado">
+            >
+            ["id19"] = <
+                text = <"Problemas auditivos">
+                description = <"Problemas auditivos">
+            >
+            ["id21"] = <
+                text = <"Depressão">
+                description = <"Depressão">
+            >
+            ["id23"] = <
+                text = <"Insuficiência cardíaca">
+                description = <"Insuficiência cardíaca">
+            >
+            ["id25"] = <
+                text = <"Outra doença do coração">
+                description = <"Outra doença do coração">
+            >
+            ["id27"] = <
+                text = <"Doença renal crônica">
+                description = <"Doença renal crônica">
+            >
+            ["id29"] = <
+                text = <"Câncer">
+                description = <"Câncer">
+            >
+            ["id31"] = <
+                text = <"Cirrose">
+                description = <"Cirrose">
+            >
+            ["id33"] = <
+                text = <"Problema de coluna/costas">
+                description = <"Problema de coluna/costas">
+            >
+            ["id35"] = <
+                text = <"Tendinite ou LER/DORT">
+                description = <"Tendinite ou LER/DORT">
+            >
+            ["id37"] = <
+                text = <"Artrite, reumatismo ou gota">
+                description = <"Artrite, reumatismo ou gota">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Referred comorbidity">
+                description = <"Referred comorbidity">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id7"] = <
+                text = <"Bronchitis or asthma">
+                description = <"Bronchitis or asthma">
+            >
+            ["id9"] = <
+                text = <"Pulmonary emphysema">
+                description = <"Pulmonary emphysema">
+            >
+            ["id11"] = <
+                text = <"Angina">
+                description = <"Angina">
+            >
+            ["id13"] = <
+                text = <"Infarct">
+                description = <"Infarct">
+            >
+            ["id15"] = <
+                text = <"Cerebral vascular accident or leakage">
+                description = <"Cerebral vascular accident or leakage">
+            >
+            ["id17"] = <
+                text = <"Cholesterol Altered">
+                description = <"Cholesterol Altered">
+            >
+            ["id19"] = <
+                text = <"Hearing problems">
+                description = <"Hearing problems">
+            >
+            ["id21"] = <
+                text = <"Depression">
+                description = <"Depression">
+            >
+            ["id23"] = <
+                text = <"Cardiac insufficiency">
+                description = <"Cardiac insufficiency">
+            >
+            ["id25"] = <
+                text = <"Another heart disease">
+                description = <"Another heart disease">
+            >
+            ["id27"] = <
+                text = <"Chronic Kidney Disease">
+                description = <"Chronic Kidney Disease">
+            >
+            ["id29"] = <
+                text = <"Cancer">
+                description = <"Cancer">
+            >
+            ["id31"] = <
+                text = <"Cirrhosis">
+                description = <"Cirrhosis">
+            >
+            ["id33"] = <
+                text = <"Column problem">
+                description = <"Column problem">
+            >
+            ["id35"] = <
+                text = <"Tendonitis or LER/DORT">
+                description = <"Tendonitis or LER/DORT">
+            >
+            ["id37"] = <
+                text = <"Arthritis, rheumatism or gout">
+                description = <"Arthritis, rheumatism or gout">
+            >
+        >
+    >
+

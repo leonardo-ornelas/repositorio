@@ -60,8 +60,21 @@ definition
                     ELEMENT[id12] occurrences matches {0..1} matches {    -- Form
                         /value[id21.1]/defining_code matches {[ac0.1]}
                     }
+                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Method of use
+                        /value[id22]/defining_code matches {[ac0.0.1]}
+                    }
                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Amount
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                        }
                     }
                     ELEMENT[id0.0.2] occurrences matches {0..1} matches {    -- Ex smoker
                         value matches {
@@ -76,7 +89,7 @@ definition
                         /value[id21.1]/defining_code matches {[ac0.1]}
                     }
                     ELEMENT[id19] occurrences matches {1} matches {    -- Method of use
-                        /value[id22]/defining_code matches {[ac0.0.1]}
+                        /value[id22]/defining_code matches {[ac0.0.2]}
                     }
                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Frequency
                         /value[id23]/defining_code matches {[ac1]}
@@ -114,6 +127,12 @@ definition
     }
 
 terminology
+    term_bindings = <
+        ["openehr"] = <
+            ["at0.0.14"] = <http://openehr.org/id/124>
+        
+        >
+    >
     term_definitions = <
         ["en"] = <
             ["id1.1.1"] = <
@@ -264,6 +283,42 @@ terminology
                 text = <"Exposure">
                 description = <"Exposure to smoke">
             >
+            ["at0.0.7"] = <
+                text = <"Nunca fumou">
+                description = <"Nunca fumou">
+            >
+            ["at0.0.8"] = <
+                text = <"Parou de fumar há mais de 2 anos">
+                description = <"Parou de fumar há mais de 2 anos">
+            >
+            ["at0.0.9"] = <
+                text = <"Parou de fumar há menos de 2 anos">
+                description = <"Parou de fumar há menos de 2 anos">
+            >
+            ["at0.0.10"] = <
+                text = <"Fuma menos de 10 cigarros por dia">
+                description = <"Fuma menos de 10 cigarros por dia">
+            >
+            ["at0.0.11"] = <
+                text = <"Fuma de 10 a 20 cigarros por dia">
+                description = <"Fuma de 10 a 20 cigarros por dia">
+            >
+            ["at0.0.12"] = <
+                text = <"Fuma mais de 20 cigarros por dia">
+                description = <"Fuma mais de 20 cigarros por dia">
+            >
+            ["at0.0.13"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["ac0.0.2"] = <
+                text = <"Tabagismo">
+                description = <"Histórico de Tabagismo">
+            >
+            ["at0.0.14"] = <
+                text = <"Mass">
+                description = <"Mass">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -343,7 +398,7 @@ terminology
                 description = <"Usado pelo menos semanalmente">
             >
             ["at9"] = <
-                text = <"Uso irregular">
+                text = <"Uso eventual">
                 description = <"Usado irregularmente">
             >
             ["at10"] = <
@@ -414,12 +469,52 @@ terminology
                 text = <"Exposição">
                 description = <"Exposição á fumaça">
             >
+            ["at0.0.7"] = <
+                text = <"Nunca fumou (en)">
+                description = <"Nunca fumou (en)">
+            >
+            ["at0.0.8"] = <
+                text = <"Parou de fumar há mais de 2 anos (en)">
+                description = <"Parou de fumar há mais de 2 anos (en)">
+            >
+            ["at0.0.9"] = <
+                text = <"Parou de fumar há menos de 2 anos (en)">
+                description = <"Parou de fumar há menos de 2 anos (en)">
+            >
+            ["at0.0.10"] = <
+                text = <"Fuma menos de 10 cigarros por dia (en)">
+                description = <"Fuma menos de 10 cigarros por dia (en)">
+            >
+            ["at0.0.11"] = <
+                text = <"Fuma de 10 a 20 cigarros por dia (en)">
+                description = <"Fuma de 10 a 20 cigarros por dia (en)">
+            >
+            ["at0.0.12"] = <
+                text = <"Fuma mais de 20 cigarros por dia (en)">
+                description = <"Fuma mais de 20 cigarros por dia (en)">
+            >
+            ["at0.0.13"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
+            >
+            ["ac0.0.2"] = <
+                text = <"Tabagismo (en)">
+                description = <"Histórico de Tabagismo (en)">
+            >
+            ["at0.0.14"] = <
+                text = <"Mass (en)">
+                description = <"Mass (en)">
+            >
         >
     >
     value_sets = <
         ["ac0.0.1"] = <
             id = <"ac0.0.1">
             members = <"at0.0.1", "at0.0.2", "at0.0.3", "at0.0.4", "at0.0.5", "at0.0.6">
+        >
+        ["ac0.0.2"] = <
+            id = <"ac0.0.2">
+            members = <"at0.0.7", "at0.0.8", "at0.0.9", "at0.0.10", "at0.0.11", "at0.0.12", "at0.0.13">
         >
     >
 

@@ -3,6 +3,15 @@ archetype (adl_version=2.0.4; rm_release=1.0.2)
 
 language
     original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
     
 description
     copyright = <"">
@@ -11,29 +20,32 @@ description
             language = <[ISO_639-1::pt-br]>
             purpose = <"">
         >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
     >
     lifecycle_state = <"unmanaged">
 
 definition
-    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- dados socioeconomicos
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- Dados socioeconômicos
         data matches {
             ITEM_TREE[id2] occurrences matches {0..1} matches {
                 items matches {
-                    ELEMENT[id3] occurrences matches {1} matches {    -- Nível de escolaridade
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Nível de escolaridade
                         value matches {
                             DV_CODED_TEXT[id4] matches {
                                 defining_code matches {[ac1]}
                             }
                         }
                     }
-                    ELEMENT[id5] occurrences matches {1} matches {    -- Atualmente frequenta escola
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Atualmente frequenta escola
                         value matches {
                             DV_BOOLEAN[id6] matches {
                                 value matches {True, False}
                             }
                         }
                     }
-                    ELEMENT[id7] occurrences matches {1} matches {    -- Faixa de renda mensal
+                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Faixa de renda mensal
                         value matches {
                             DV_CODED_TEXT[id8] matches {
                                 defining_code matches {[ac2]}
@@ -42,21 +54,21 @@ definition
                     }
                     CLUSTER[id10] occurrences matches {0..1} matches {    -- Dados do domicílio e da família
                         items matches {
-                            ELEMENT[id14] occurrences matches {1} matches {    -- Tipo de residência
+                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Tipo de residência
                                 value matches {
                                     DV_CODED_TEXT[id15] matches {
                                         defining_code matches {[ac3]}
                                     }
                                 }
                             }
-                            ELEMENT[id16] occurrences matches {1} matches {    -- Quantas pessoas vivem na casa
+                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Quantas pessoas vivem na casa
                                 value matches {
                                     DV_CODED_TEXT[id17] matches {
                                         defining_code matches {[ac4]}
                                     }
                                 }
                             }
-                            ELEMENT[id18] occurrences matches {1} matches {    -- Chefe de família
+                            ELEMENT[id18] occurrences matches {0..1} matches {    -- Chefe de família
                                 value matches {
                                     DV_BOOLEAN[id19] matches {
                                         value matches {True, False}
@@ -86,7 +98,7 @@ definition
                                             }
                                         }
                                     }
-                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Rádio
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Radio
                                         value matches {
                                             DV_BOOLEAN[id28] matches {
                                                 value matches {True, False}
@@ -148,8 +160,8 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"dados socioeconomicos">
-                description = <"dados socioeconomicos">
+                text = <"Dados socioeconômicos">
+                description = <"">
             >
             ["id3"] = <
                 text = <"Nível de escolaridade">
@@ -225,7 +237,7 @@ terminology
             >
             ["id7"] = <
                 text = <"Faixa de renda mensal">
-                description = <"Informe a renda mensal">
+                description = <"Faixa de renda mensal">
             >
             ["at16"] = <
                 text = <"Menos de 1 SM">
@@ -336,8 +348,8 @@ terminology
                 description = <"Fogão">
             >
             ["id27"] = <
-                text = <"Rádio">
-                description = <"Rádio">
+                text = <"Radio">
+                description = <"Radio">
             >
             ["id30"] = <
                 text = <"Televisão colorida">
@@ -363,24 +375,346 @@ terminology
                 text = <"Acesso à internet">
                 description = <"Acesso à internet">
             >
+            ["at32"] = <
+                text = <">10">
+                description = <">10">
+            >
+            ["at33"] = <
+                text = <"<10">
+                description = <"<10">
+            >
+            ["at34"] = <
+                text = <"<1 SM">
+                description = <"<1 SM">
+            >
+            ["at35"] = <
+                text = <">10 SM">
+                description = <">10 SM">
+            >
+            ["at36"] = <
+                text = <"<10 SM">
+                description = <"<10 SM">
+            >
+            ["at37"] = <
+                text = <"De 3 a 5 SM">
+                description = <"De 3 a 5 SM">
+            >
+            ["at38"] = <
+                text = <"5 a 10 SM">
+                description = <"5 a 10 SM">
+            >
+            ["at39"] = <
+                text = <"De 5 a 10 SM">
+                description = <"De 5 a 10 SM">
+            >
+            ["at40"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at41"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at42"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at43"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at44"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"socioeconomic data">
+                description = <"">
+            >
+            ["id3"] = <
+                text = <"Level of schooling">
+                description = <"Please state the level of education">
+            >
+            ["at1"] = <
+                text = <"Nunca estudou">
+                description = <"Nunca estudou">
+            >
+            ["at2"] = <
+                text = <"1ª série do ensino fundamental">
+                description = <"1ª série do ensino fundamental">
+            >
+            ["at3"] = <
+                text = <"*2ª série do ensino fundamental (pt-br)">
+                description = <"*2ª série do ensino fundamental (pt-br)">
+            >
+            ["at4"] = <
+                text = <"3ª série do ensino fundamental">
+                description = <"3ª série do ensino fundamental">
+            >
+            ["at5"] = <
+                text = <"4ª série do ensino fundamental">
+                description = <"4ª série do ensino fundamental">
+            >
+            ["at6"] = <
+                text = <"5ª série do ensino fundamental">
+                description = <"5ª série do ensino fundamental">
+            >
+            ["at7"] = <
+                text = <"6ª série do ensino fundamental">
+                description = <"6ª série do ensino fundamental">
+            >
+            ["at8"] = <
+                text = <"7ª série do ensino fundamental">
+                description = <"7ª série do ensino fundamental">
+            >
+            ["at9"] = <
+                text = <"8ª série do ensino fundamental">
+                description = <"8ª série do ensino fundamental">
+            >
+            ["at10"] = <
+                text = <"1ª série do ensino médio">
+                description = <"1ª série do ensino médio">
+            >
+            ["at11"] = <
+                text = <"2ª série do ensino médio">
+                description = <"2ª série do ensino médio">
+            >
+            ["at12"] = <
+                text = <"3ª série do ensino médio">
+                description = <"3ª série do ensino médio">
+            >
+            ["at13"] = <
+                text = <"Superior incompleto">
+                description = <"Superior incompleto">
+            >
+            ["at14"] = <
+                text = <"Superior completo">
+                description = <"Superior completo">
+            >
+            ["at15"] = <
+                text = <"Pós-graduação">
+                description = <"Pós-graduação">
+            >
+            ["ac1"] = <
+                text = <"Nível de escolaridade (pt-br)">
+                description = <"Nível de escolaridade (pt-br)">
+            >
+            ["id5"] = <
+                text = <"Currently attending school">
+                description = <"Please tell us if you currently attend school">
+            >
+            ["id7"] = <
+                text = <"Monthly income range">
+                description = <"Monthly income range">
+            >
+            ["at16"] = <
+                text = <"*Menos de 1 SM (pt-br)">
+                description = <"*Menos de 1 SM (pt-br)">
+            >
+            ["at17"] = <
+                text = <"*De 1 SM  a 3 SM (pt-br)">
+                description = <"*De 1 SM  a 3 SM (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Maior que  3 SM a 5 SM (pt-br)">
+                description = <"*Maior que  3 SM a 5 SM (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Maior que 5 SM até 10 SM (pt-br)">
+                description = <"*Maior que 5 SM até 10 SM (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Maior que 10 SM (pt-br)">
+                description = <"*Maior que 10 SM (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"Faixa de renda mensal (pt-br)">
+                description = <"Faixa de renda mensal (pt-br)">
+            >
+            ["id10"] = <
+                text = <"Domicile and family data">
+                description = <"Domicile and family data">
+            >
+            ["id14"] = <
+                text = <"Type of residence">
+                description = <"Type of residence">
+            >
+            ["at21"] = <
+                text = <"*Própria (pt-br)">
+                description = <"*Própria (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Alugada (pt-br)">
+                description = <"*Alugada (pt-br)">
+            >
+            ["at23"] = <
+                text = <"*Emprestada (pt-br)">
+                description = <"*Emprestada (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"Tipo de residência (pt-br)">
+                description = <"Tipo de residência (pt-br)">
+            >
+            ["id16"] = <
+                text = <"How many people live in the house">
+                description = <"How many people live in the house">
+            >
+            ["at24"] = <
+                text = <"*Mora sozinho (a) (pt-br)">
+                description = <"*Mora sozinho (a) (pt-br)">
+            >
+            ["at25"] = <
+                text = <"*2 (pt-br)">
+                description = <"*2 (pt-br)">
+            >
+            ["at26"] = <
+                text = <"*3 (pt-br)">
+                description = <"*3 (pt-br)">
+            >
+            ["at27"] = <
+                text = <"*4 (pt-br)">
+                description = <"*4 (pt-br)">
+            >
+            ["at28"] = <
+                text = <"*5 (pt-br)">
+                description = <"*5 (pt-br)">
+            >
+            ["at29"] = <
+                text = <"*6 (pt-br)">
+                description = <"*6 (pt-br)">
+            >
+            ["at30"] = <
+                text = <"*7 (pt-br)">
+                description = <"*7 (pt-br)">
+            >
+            ["at31"] = <
+                text = <"*8 ou mais pessoas (pt-br)">
+                description = <"*8 ou mais pessoas (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"Quantas pessoas vivem na casa (pt-br)">
+                description = <"Quantas pessoas vivem na casa (pt-br)">
+            >
+            ["id18"] = <
+                text = <"Householder">
+                description = <"Householder">
+            >
+            ["id20"] = <
+                text = <"Items present at the residence">
+                description = <"Items present at the residence">
+            >
+            ["id21"] = <
+                text = <"Phone">
+                description = <"Phone">
+            >
+            ["id23"] = <
+                text = <"Cellphone">
+                description = <"Cellphone">
+            >
+            ["id25"] = <
+                text = <"Cooker">
+                description = <"Cooker">
+            >
+            ["id27"] = <
+                text = <"Rádio">
+                description = <"Rádio">
+            >
+            ["id30"] = <
+                text = <"TV">
+                description = <"TV">
+            >
+            ["id32"] = <
+                text = <"Refrigerator">
+                description = <"Refrigerator">
+            >
+            ["id34"] = <
+                text = <"Washing machine">
+                description = <"Washing machine">
+            >
+            ["id36"] = <
+                text = <"Freezer">
+                description = <"Freezer">
+            >
+            ["id38"] = <
+                text = <"Computer">
+                description = <"Computer">
+            >
+            ["id40"] = <
+                text = <"Internet access">
+                description = <"Internet access">
+            >
+            ["at32"] = <
+                text = <">10 (pt-br)">
+                description = <">10 (pt-br)">
+            >
+            ["at33"] = <
+                text = <"<10 (pt-br)">
+                description = <"<10 (pt-br)">
+            >
+            ["at34"] = <
+                text = <"<1 SM (pt-br)">
+                description = <"<1 SM (pt-br)">
+            >
+            ["at35"] = <
+                text = <">10 SM (pt-br)">
+                description = <">10 SM (pt-br)">
+            >
+            ["at36"] = <
+                text = <"<10 SM (pt-br)">
+                description = <"<10 SM (pt-br)">
+            >
+            ["at37"] = <
+                text = <"De 3 a 5 SM (pt-br)">
+                description = <"De 3 a 5 SM (pt-br)">
+            >
+            ["at38"] = <
+                text = <"5 a 10 SM (pt-br)">
+                description = <"5 a 10 SM (pt-br)">
+            >
+            ["at39"] = <
+                text = <"De 5 a 10 SM (pt-br)">
+                description = <"De 5 a 10 SM (pt-br)">
+            >
+            ["at40"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at41"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at42"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at43"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at44"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
         ["ac1"] = <
             id = <"ac1">
-            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14", "at15">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12", "at13", "at14", "at15", "at41">
         >
         ["ac2"] = <
             id = <"ac2">
-            members = <"at16", "at17", "at18", "at19", "at20">
+            members = <"at16", "at17", "at35", "at36", "at37", "at39", "at42">
         >
         ["ac3"] = <
             id = <"ac3">
-            members = <"at21", "at22", "at23">
+            members = <"at21", "at22", "at23", "at43">
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at24", "at25", "at26", "at27", "at28", "at29", "at30", "at31">
+            members = <"at24", "at25", "at26", "at27", "at28", "at29", "at30", "at31", "at44">
         >
     >
 

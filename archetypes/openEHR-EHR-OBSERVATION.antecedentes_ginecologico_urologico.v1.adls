@@ -34,7 +34,9 @@ definition
                                 items matches {
                                     ELEMENT[id6] occurrences matches {1} matches {    -- Date of last menstruation - DUM
                                         value matches {
-                                            DV_TEXT[id7] 
+                                            DV_DATE[id22] matches {
+                                                value matches {*}
+                                            }
                                         }
                                     }
                                     ELEMENT[id8] occurrences matches {1} matches {    -- Gynecological Preventive
@@ -204,8 +206,8 @@ terminology
                 description = <"Antecedentes ginecologico urologico">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Any event (en)">
+                text = <"Any event">
+                description = <"Any event">
             >
             ["id6"] = <
                 text = <"Data da última menstruação">

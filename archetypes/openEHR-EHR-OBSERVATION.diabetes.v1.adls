@@ -1,0 +1,125 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.diabetes.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Grupo iHealth">
+        ["organization"] = <"Grupo iHealth">
+        ["email"] = <"contato@ihealthgroup.com.br">
+    >
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Diabetes
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Qualquer evento
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Algum médico já disse que o trabalhador tem ou teve diabetes?
+                                        value matches {
+                                            DV_BOOLEAN[id7] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?
+                                        value matches {
+                                            DV_BOOLEAN[id9] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- O trabalhador usa atualmente algum medicamento para tratar de diabetes?
+                                        value matches {
+                                            DV_BOOLEAN[id11] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Diabetes">
+                description = <"Diabetes">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id6"] = <
+                text = <"Algum médico já disse que o trabalhador tem ou teve diabetes?">
+                description = <"Algum médico já disse que o trabalhador tem ou teve diabetes?">
+            >
+            ["id8"] = <
+                text = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?">
+                description = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar diabetes?">
+            >
+            ["id10"] = <
+                text = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
+                description = <"O trabalhador usa atualmente algum medicamento para tratar de diabetes?">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Diabetes">
+                description = <"Diabetes">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Has any doctor ever said that the worker has or had diabetes?">
+                description = <"Has any doctor ever said that the worker has or had diabetes?">
+            >
+            ["id8"] = <
+                text = <"Has the worker ever used any medication to treat diabetes at any time in his life?">
+                description = <"Has the worker ever used any medication to treat diabetes at any time in his life?">
+            >
+            ["id10"] = <
+                text = <"Does the worker currently use any medication to treat diabetes?">
+                description = <"Does the worker currently use any medication to treat diabetes?">
+            >
+        >
+    >
+

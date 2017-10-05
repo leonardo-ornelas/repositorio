@@ -1,0 +1,87 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.dados_avaliador.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- dados_avaliador
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Dados Avaliador
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Nome do avaliador
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Data da avaliação
+                        value matches {
+                            DV_DATE[id7] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"dados_avaliador">
+                description = <"dados_avaliador">
+            >
+            ["id2"] = <
+                text = <"Dados Avaliador">
+                description = <"Dados Avaliador">
+            >
+            ["id3"] = <
+                text = <"Nome do avaliador">
+                description = <"Nome do avaliador">
+            >
+            ["id5"] = <
+                text = <"Data da avaliação">
+                description = <"Data da avaliação">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"data_appreciator">
+                description = <"data_appreciator">
+            >
+            ["id2"] = <
+                text = <"Data Appraiser">
+                description = <"Data Appraiser">
+            >
+            ["id3"] = <
+                text = <"Name of the evaluator">
+                description = <"Name of the evaluator">
+            >
+            ["id5"] = <
+                text = <"Date of evaluation">
+                description = <"Date of evaluation">
+            >
+        >
+    >
+

@@ -1,5 +1,5 @@
 archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
-    openEHR-EHR-OBSERVATION.alcohol_useSESI_BR.v1.0.0
+    openEHR-EHR-OBSERVATION.alcohol_use_SESI_DSEV.v1.0.0
 
 specialize
     openEHR-EHR-OBSERVATION.alcohol_use.v1.0.0
@@ -96,45 +96,17 @@ definition
                                     }
                                 }
                             }
-                            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Consumption
+                            ELEMENT[id0.4] occurrences matches {0..1} matches {    -- Consumo
                                 value matches {
-                                    DV_CODED_TEXT[id0.6] matches {
+                                    DV_CODED_TEXT[id0.5] matches {
                                         defining_code matches {[ac0.2]}
                                     }
                                 }
                             }
-                            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Type
+                            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Tipo
                                 value matches {
                                     DV_CODED_TEXT[id0.8] matches {
                                         defining_code matches {[ac0.3]}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber
-                                value matches {
-                                    DV_BOOLEAN[id0.10] matches {
-                                        value matches {True, False}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.11] occurrences matches {0..1} matches {    -- As pessoas o(a) aborrecem por seu modo de beber
-                                value matches {
-                                    DV_BOOLEAN[id0.12] matches {
-                                        value matches {True, False}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Costuma beber pela manhã para diminuir o nervosismo ou ressaca
-                                value matches {
-                                    DV_BOOLEAN[id0.14] matches {
-                                        value matches {True, False}
-                                    }
-                                }
-                            }
-                            ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Sente culpado pela maneira como costuma beber
-                                value matches {
-                                    DV_BOOLEAN[id0.16] matches {
-                                        value matches {True, False}
                                     }
                                 }
                             }
@@ -181,6 +153,10 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
+            ["at2"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
             ["id1.1"] = <
                 text = <"Alcohol Use">
                 description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
@@ -209,9 +185,9 @@ terminology
                 text = <"Doses">
                 description = <"Doses">
             >
-            ["id0.5"] = <
-                text = <"Consumption">
-                description = <"Taking into account all types of alcoholic beverage, how many times in the last 30 days, consumed five or more doses on a single occasion.">
+            ["id0.4"] = <
+                text = <"Consumo">
+                description = <"Consumo">
             >
             ["at0.5"] = <
                 text = <"Nenhuma">
@@ -240,10 +216,6 @@ terminology
             ["ac0.2"] = <
                 text = <"Consumo">
                 description = <"Consumo">
-            >
-            ["id0.7"] = <
-                text = <"Type">
-                description = <"Type">
             >
             ["at0.11"] = <
                 text = <"Não consome bebida alcoólica">
@@ -277,40 +249,28 @@ terminology
                 text = <"Tipo">
                 description = <"Tipo">
             >
+            ["id0.7"] = <
+                text = <"Tipo">
+                description = <"Tipo">
+            >
+            ["at0.18"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at0.19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at0.20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+        >
+        ["pt-br"] = <
             ["at2"] = <
                 text = <"Fluxo, massa">
                 description = <"Fluxo, massa">
             >
-            ["at1"] = <
-                text = <"Frequência">
-                description = <"Frequência">
-            >
-            ["at3"] = <
-                text = <"intenção">
-                description = <"intenção">
-            >
-            ["at4"] = <
-                text = <"massa">
-                description = <"massa">
-            >
-            ["id0.9"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
-            >
-            ["id0.11"] = <
-                text = <"As pessoas o(a) aborrecem por seu modo de beber">
-                description = <"As pessoas o(a) aborrecem por seu modo de beber">
-            >
-            ["id0.13"] = <
-                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
-                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
-            >
-            ["id0.15"] = <
-                text = <"Sente culpado pela maneira como costuma beber">
-                description = <"Sente culpado pela maneira como costuma beber">
-            >
-        >
-        ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Uso de álcool">
                 description = <"Detalhes sobre o uso de todas as formas de álcool em um momento determinado ou durante um período específico de tempo">
@@ -339,9 +299,9 @@ terminology
                 text = <"Doses (en)">
                 description = <"Doses (en)">
             >
-            ["id0.5"] = <
+            ["id0.4"] = <
                 text = <"Consumo">
-                description = <"Levando em consideração todos os tipos de bebida alcoólica, quantas vezes nos últimos 30 dias, consumiu cinco ou mais doses em uma única ocasião.">
+                description = <"Consumo">
             >
             ["at0.5"] = <
                 text = <"Nenhuma">
@@ -370,10 +330,6 @@ terminology
             ["ac0.2"] = <
                 text = <"Consumo (en)">
                 description = <"Consumo (en)">
-            >
-            ["id0.7"] = <
-                text = <"Tipo">
-                description = <"Tipo">
             >
             ["at0.11"] = <
                 text = <"Não consome bebida alcoólica">
@@ -407,52 +363,36 @@ terminology
                 text = <"Tipo (en)">
                 description = <"Tipo (en)">
             >
-            ["at2"] = <
-                text = <"Fluxo, massa">
-                description = <"Fluxo, massa">
+            ["id0.7"] = <
+                text = <"Tipo">
+                description = <"Tipo">
             >
-            ["at1"] = <
-                text = <"Frequência">
-                description = <"Frequência">
+            ["at0.18"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
             >
-            ["at3"] = <
-                text = <"intenção">
-                description = <"intenção">
+            ["at0.19"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
             >
-            ["at4"] = <
-                text = <"massa">
-                description = <"massa">
-            >
-            ["id0.9"] = <
-                text = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
-                description = <"Alguma vez sentiu que deveria diminuir a quantidade de bebida ou parar de beber">
-            >
-            ["id0.11"] = <
-                text = <"As pessoas o(a) aborrecem por seu modo de beber">
-                description = <"As pessoas o(a) aborrecem por seu modo de beber">
-            >
-            ["id0.13"] = <
-                text = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
-                description = <"Costuma beber pela manhã para diminuir o nervosismo ou ressaca">
-            >
-            ["id0.15"] = <
-                text = <"Sente culpado pela maneira como costuma beber">
-                description = <"Sente culpado pela maneira como costuma beber">
+            ["at0.20"] = <
+                text = <"NS/NR (en)">
+                description = <"NS/NR (en)">
             >
         >
     >
     value_sets = <
         ["ac0.1"] = <
             id = <"ac0.1">
-            members = <"at0.1", "at0.2", "at0.3", "at0.4">
+            members = <"at0.1", "at0.2", "at0.3", "at0.4", "at0.18">
         >
         ["ac0.2"] = <
             id = <"ac0.2">
-            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10">
+            members = <"at0.5", "at0.6", "at0.7", "at0.8", "at0.9", "at0.10", "at0.19">
         >
         ["ac0.3"] = <
             id = <"ac0.3">
-            members = <"at0.11", "at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17">
+            members = <"at0.11", "at0.12", "at0.13", "at0.14", "at0.15", "at0.16", "at0.17", "at0.20">
         >
     >
 

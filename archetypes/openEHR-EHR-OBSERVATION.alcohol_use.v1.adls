@@ -80,8 +80,13 @@ definition
                                                     ELEMENT[id15] occurrences matches {0..1} matches {    -- Standard Drinks
                                                         value matches {
                                                             DV_QUANTITY[id30] matches {
-                                                                property matches {[at1]}
-                                                                units matches {"/h", "/d", "/wk", "/mo"}
+                                                                [units, magnitude, precision] matches {
+                                                                    [{"h"}, {|>0.0..<1.0|}, {|>=0|}], 
+                                                                    [{"d"}, {|>0.0..<1.0|}, {|>=0|}], 
+                                                                    [{"wk"}, {|>0.0..<1.0|}, {|>=0|}], 
+                                                                    [{"mo"}, {|>0.0..<1.0|}, {|>=0|}], 
+                                                                    [{"yr"}, {|>0.0..<1.0|}, {|>=0|}]
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -174,6 +179,7 @@ terminology
             ["at2"] = <http://openehr.org/id/347>
             ["at3"] = <http://openehr.org/id/146>
             ["at4"] = <http://openehr.org/id/124>
+            ["at5"] = <http://openehr.org/id/128>
         
         >
     >
@@ -259,6 +265,10 @@ terminology
                 text = <"Mass">
                 description = <"Mass">
             >
+            ["at5"] = <
+                text = <"Time">
+                description = <"Time">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -340,6 +350,10 @@ terminology
             ["at4"] = <
                 text = <"massa">
                 description = <"massa">
+            >
+            ["at5"] = <
+                text = <"Time (en)">
+                description = <"Time (en)">
             >
         >
     >

@@ -50,12 +50,20 @@ description
 
 definition
     COMPOSITION[id1.1] matches {    -- *Admission (en)
-        /category[id3]/defining_code matches {[at1]}
+        category matches {
+            DV_CODED_TEXT[id3.1] occurrences matches {0} matches {
+                defining_code matches {[at1]}
+            }
+        }
         content matches {
             use_archetype ADMIN_ENTRY[id0.2, openEHR-EHR-ADMIN_ENTRY.ovl-admissional-admission-001.v1.0.0]
             use_archetype OBSERVATION[id0.3, openEHR-EHR-OBSERVATION.ovl-admissional-blood_pressure-001.v1.0.0]
             use_archetype EVALUATION[id0.4, openEHR-EHR-EVALUATION.ovl-admissional-allergy-001.v1.0.0]
-            use_archetype ACTION[id0.6, openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0]
+            use_archetype OBSERVATION[id0.7, openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0]
+            use_archetype OBSERVATION[id0.9, openEHR-EHR-OBSERVATION.ovl-admissional-body_temperature-001.v1.0.0]
+            use_archetype OBSERVATION[id0.10, openEHR-EHR-OBSERVATION.ovl-admissional-body_mass_index-001.v1.0.0]
+            use_archetype OBSERVATION[id0.11, openEHR-EHR-OBSERVATION.ovl-admissional-indirect_oximetry-001.v1.0.0]
+            use_archetype ACTION[id0.12, openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0]
         }
     }
 
@@ -145,6 +153,7 @@ definition
                     use_node ELEMENT /data[id2]/items[id74]/items[id104]
                 }
             }
+            CLUSTER[id99.1] occurrences matches {0}     -- Attending doctor
             CLUSTER[id26] occurrences matches {0..1} matches {
                 items matches {
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
@@ -161,6 +170,8 @@ definition
             }
             CLUSTER[id52] occurrences matches {0..1} matches {
                 items matches {
+                    use_node ELEMENT /data[id2]/items[id99]/items[id101]
+                    use_node ELEMENT /data[id2]/items[id99]/items[id121]
                     use_node ELEMENT /data[id2]/items[id99]/items[id100]
                     use_node ELEMENT /data[id2]/items[id99]/items[id101]
                     use_node ELEMENT /data[id2]/items[id99]/items[id121]
@@ -182,17 +193,29 @@ terminology
                 text = <"Patient admission">
                 description = <"Used for admitted patient only. It signals the beginning of a patient's stay in a health care facility.">
             >
+            ["id99.1"] = <
+                text = <"Attending doctor">
+                description = <"The attending doctor providing services to thepatient">
+            >
         >
         ["ar-sy"] = <
             ["id1.1"] = <
                 text = <"إدخال المريض">
                 description = <"يستخدم فقط للمرضى الذين تم إدخالهم. و ذلك يشير إلى بداية بقاء المريض في مؤسسة الرعاية الصحية">
             >
+            ["id99.1"] = <
+                text = <"الطبيب الحاضر">
+                description = <"الطبيب الحاضر الذي يقدم الخدمات للمريض">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
                 text = <"Admissão do paciente">
                 description = <"Usado apenas para pacientes admitidos. Significa o início da permanência de um paciente em um centro de saúde.">
+            >
+            ["id99.1"] = <
+                text = <"Médico assistente">
+                description = <"O médico assistente que presta serviços ao paciente.">
             >
         >
     >
@@ -465,6 +488,1160 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-body_weight-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id30] matches {
+                        property matches {[at19]}
+                        [magnitude, units] matches {
+                            [{|0.0..1000.0|}, {"kg"}], 
+                            [{|0.0..2000.0|}, {"lb"}]
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10] occurrences matches {0..1} matches {
+                        /value[id32]/defining_code matches {[ac1; at12]}
+                    }
+                    ELEMENT[id29] occurrences matches {0..1} matches {
+                        /value[id33]/value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id21.1, openEHR-EHR-CLUSTER.ovl-admissional-device-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-device-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.device.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Device
+        items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0]
+            allow_archetype ITEM[id10] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Device">
+                description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Naprava">
+                description = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dispositivo">
+                description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-dimensions-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.dimensions.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Ausmaße
+        items matches {
+            ELEMENT[id2] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id8] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id9] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id4] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id10] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id11] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "in", "ft"}
+                    }
+                }
+            }
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id12] matches {
+                        property matches {[at2]}
+                        units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
+                    }
+                }
+            }
+            ELEMENT[id7] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id13] matches {
+                        property matches {[at3]}
+                        units matches {"mm3", "ml", "in3", "cc", "ft3"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Ausmaße">
+                description = <"Die Ausmaße eines betrachteten Teils.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Dimensions">
+                description = <"The physical dimensions of a part examined.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-body_temperature-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_temperature.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body temperature
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items[id5]/value matches {
+                    DV_QUANTITY[id61] matches {
+                        property matches {[at57]}
+                        [units, precision] matches {
+                            [{"°C"}, {|1|}], 
+                            [{"°F"}, {|1|}]
+                        }
+                    }
+                }
+                /state[id30]/items matches {
+                    ELEMENT[id31] occurrences matches {1} matches {
+                        /value[id62]/defining_code matches {[ac1; at34]}
+                    }
+                    allow_archetype CLUSTER[id57] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.environmental_conditions\.v1/}
+                    }
+                    use_archetype CLUSTER[id57.1, openEHR-EHR-CLUSTER.ovl-admissional-environmental_conditions-001.v1.0.0]
+                    allow_archetype CLUSTER[id58] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion\.v1/}
+                    }
+                    use_archetype CLUSTER[id58.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-002.v1.0.0]
+                    allow_archetype ELEMENT[id59] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-ELEMENT\.last_normal_menstrual_period\.v1|openEHR-EHR-ELEMENT\.menstrual_cycle_day\.v1/}
+                    }
+                    use_archetype ELEMENT[id59.1, openEHR-EHR-ELEMENT.ovl-admissional-last_normal_menstrual_period-001.v1.0.0]
+                }
+            }
+        }
+        /protocol[id21]/items matches {
+            ELEMENT[id22] occurrences matches {0..1} matches {
+                /value[id64]/defining_code matches {[ac2]}
+            }
+            allow_archetype CLUSTER[id60] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device\.v1/}
+            }
+            use_archetype CLUSTER[id60.1, openEHR-EHR-CLUSTER.ovl-admissional-device-002.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body temperature">
+                description = <"A measurement of the body temperature, which is a surrogate for the whole body temperature of the person.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpertemperatur">
+                description = <"Eine Messung der Körpertemperatur an einer bestimmten Stelle als Surrogat für den gesamten Körper der Person.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"O valor para a temperatura corporal, com valor médio equivalente para o corpo inteiro.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Температура тела">
+                description = <"Измерение температуры тела, которая является суррогатом температуры тела человека в целом.">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+        >
+        ["nb"] = <
+            ["id1.1"] = <
+                text = <"Kroppstemperatur">
+                description = <"Måling av kroppstemperatur som skal gjenspeile den faktiske kroppstemperaturen">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"درجة حرارة الجسم">
+                description = <"قياس لدرجة حرارة الجسم, و التي تحل كبديل لدرجة الحرارة الكلية لجسم الشخص">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"دمای بدن">
+                description = <"اندازه گیری دمای بدن که جایگزینی برای دمای کل بدن فرد است">
+            >
+        >
+        ["es"] = <
+            ["id1.1"] = <
+                text = <"Temperatura Corporal">
+                description = <"La medición de la temperatura corporal, que deriva en la temperatura de todo el cuerpo de una persona.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-device-002.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.device.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Device
+        items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-002.v1.0.0]
+            allow_archetype ITEM[id10] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Device">
+                description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Naprava">
+                description = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dispositivo">
+                description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-dimensions-002.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.dimensions.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Ausmaße
+        items matches {
+            ELEMENT[id2] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id8] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id9] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id4] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id10] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id11] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "in", "ft"}
+                    }
+                }
+            }
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id12] matches {
+                        property matches {[at2]}
+                        units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
+                    }
+                }
+            }
+            ELEMENT[id7] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id13] matches {
+                        property matches {[at3]}
+                        units matches {"mm3", "ml", "in3", "cc", "ft3"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Ausmaße">
+                description = <"Die Ausmaße eines betrachteten Teils.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Dimensions">
+                description = <"The physical dimensions of a part examined.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-environmental_conditions-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.environmental_conditions.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Environmental conditions
+        items matches {
+            ELEMENT[id2] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id12] matches {
+                        property matches {[at1]}
+                        units matches {"°C", "°F"}
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id13] matches {
+                        property matches {[at2]}
+                        precision matches {|1|}
+                        units matches {"%"}
+                    }
+                }
+            }
+            ELEMENT[id4] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id14] matches {
+                        property matches {[at3]}
+                        units matches {"km/h", "m/h"}
+                    }
+                }
+            }
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id15] matches {
+                        property matches {[at1]}
+                        [units, precision] matches {
+                            [{"°C"}, {|1|}], 
+                            [{"°F"}, {|1|}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id11] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id16] matches {
+                        property matches {[at1]}
+                        [units, precision] matches {
+                            [{"°C"}, {|>=0|}], 
+                            [{"°F"}, {|1|}]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Environmental conditions">
+                description = <"Record environmental conditions to which the patient is exposed.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-002.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Level of exertion
+        items matches {
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id19]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id20] matches {
+                                property matches {[at17]}
+                                magnitude matches {|0.0..1000.0|}
+                                units matches {"J/min"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id10] occurrences matches {0..1} matches {
+                /value[id21]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Level of exertion">
+                description = <"Record information about level of exertion.">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"مستوى المجهود">
+                description = <"لتسجيل معلومات حول مستوى المجهود">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ELEMENT.ovl-admissional-last_normal_menstrual_period-001.v1.0.0
+
+specialize
+    openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
+
+definition
+    ELEMENT[id1.1] matches {    -- *Last Normal Menstrual Period (en)
+        /value[id2]/value matches {yyyy-??-??T??:??:??}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Last Normal Menstrual Period (en)">
+                description = <"*Record of the date of 1st day of last normal menstrual period (en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Último Período menstrual normal">
+                description = <"Registro da data do 1º dia do último período menstrual normal">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items[id7]/value[id14]/defining_code matches {[ac1]}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-admissional-indirect_oximetry-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.indirect_oximetry.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Oximetry(en)
+        /data[id2]/events matches {
+            POINT_EVENT[id3.1] occurrences matches {0..1} matches {    -- *Any event(en)
+                /data[id4]/items matches {
+                    ELEMENT[id7.1] occurrences matches {0..1} matches {    -- *spO2(en)
+                        value matches {
+                            DV_PROPORTION[id60.1] 
+                        }
+                    }
+                    ELEMENT[id59.1] matches {    -- *Location of measurement SaO2(en)
+                        value matches {
+                            DV_CODED_TEXT[id61.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id45.1] occurrences matches {0..1} matches {    -- *spOC(en)
+                        value matches {
+                            DV_QUANTITY[id62.1] matches {
+                                property matches {[at71]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"ml/ml"}
+                            }
+                        }
+                    }
+                    ELEMENT[id46.1] occurrences matches {0..1} matches {    -- *spCO(en)
+                        value matches {
+                            DV_PROPORTION[id63.1] 
+                        }
+                    }
+                    ELEMENT[id47.1] occurrences matches {0..1} matches {    -- *spMet(en)
+                        value matches {
+                            DV_PROPORTION[id64.1] 
+                        }
+                    }
+                    ELEMENT[id40.1] occurrences matches {0..1} matches {    -- *ptcO2(en)
+                        value matches {
+                            DV_PROPORTION[id65.1] 
+                            DV_QUANTITY[id66.1] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    ELEMENT[id41.1] occurrences matches {0..1} matches {    -- *ptcCO2(en)
+                        value matches {
+                            DV_PROPORTION[id67.1] 
+                            DV_QUANTITY[id68.1] matches {
+                                property matches {[at72]}
+                                magnitude matches {|>=0.0|}
+                                units matches {"kPa"}
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id55] matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.waveform(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    use_archetype CLUSTER[id55.1, openEHR-EHR-CLUSTER.ovl-admissional-waveform-001.v1.0.0]
+                }
+                /state[id15]/items matches {
+                    allow_archetype CLUSTER[id35] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    use_archetype CLUSTER[id35.1, openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-003.v1.0.0]
+                    allow_archetype CLUSTER[id16] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.ambient_oxygen(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    use_archetype CLUSTER[id16.1, openEHR-EHR-CLUSTER.ovl-admissional-ambient_oxygen-001.v1.0.0]
+                }
+            }
+        }
+        /protocol[id8]/items matches {
+            ELEMENT[id21] occurrences matches {0..1} matches {
+                /value[id73]/defining_code matches {[ac2]}
+            }
+            ELEMENT[id38] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id75] matches {
+                        property matches {[at73]}
+                        magnitude matches {|0.0..100.0|}
+                        precision matches {|1|}
+                        units matches {"°C"}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id19] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id19.1, openEHR-EHR-CLUSTER.ovl-admissional-device-003.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Oximetry(en)">
+                description = <"*Method of monitoring blood gas measurements such as Spo2 and pTCO2 by indirect, currently non-invasive, means.(en)">
+            >
+            ["id7.1"] = <
+                text = <"*spO2(en)">
+                description = <"*Measured via pulse oximetry, the saturation of oxygen in the peripheral blood.(en)">
+            >
+            ["id59.1"] = <
+                text = <"*Location of measurement SaO2(en)">
+                description = <"*Location of measurement SaO2(en)">
+            >
+            ["id45.1"] = <
+                text = <"*spOC(en)">
+                description = <"*Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.(en)">
+            >
+            ["id46.1"] = <
+                text = <"*spCO(en)">
+                description = <"*Measured via pulse CO-oximetry, the saturation of carboxyhaemoglobin in the perpiheral blood.(en)">
+            >
+            ["id47.1"] = <
+                text = <"*spMet(en)">
+                description = <"*Measured via pulse CO-oximetry, the saturation of methoxyhaemoglobin in the peripheral blood.(en)">
+            >
+            ["id40.1"] = <
+                text = <"*ptcO2(en)">
+                description = <"*Measured via transcutaneous electrode oximetry, the partial pressure of oxygen in the peripheral blood.(en)">
+            >
+            ["id41.1"] = <
+                text = <"*ptcCO2(en)">
+                description = <"*Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.(en)">
+            >
+            ["id3.1"] = <
+                text = <"*Any event(en)">
+                description = <"*Timing event.(en)">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Posredna oksimetrija">
+                description = <"Metoda merjenja prisotnosti plnov kot so Spo2 in TCO2 na indirekten, posreden n-invazivni način">
+            >
+            ["id7.1"] = <
+                text = <"SpO2">
+                description = <"Saturacija kisika v krvi izmerjena s pulzno oksimetrijo.">
+            >
+            ["id59.1"] = <
+                text = <"Lokacija meritve SaO2">
+                description = <"Lokacija meritve SaO2">
+            >
+            ["id45.1"] = <
+                text = <"spOC">
+                description = <"Izmerjeno s puzlno CO-oksimetrijo, vsebnost kisika v periferni krvi. ">
+            >
+            ["id46.1"] = <
+                text = <"spCO">
+                description = <"Merjeno s pulzno CO-oksimetrijo, zasičenost carboxyhaemoglobin v perpiherni krvi.">
+            >
+            ["id47.1"] = <
+                text = <"spMet">
+                description = <"Merjeno s pulzno CO-oksimetrijo, zasičenost methoxyhaemoglobin v periferni krvi.">
+            >
+            ["id40.1"] = <
+                text = <"tcpO2">
+                description = <"Transkutani parcialni pritisk kisika v kapilarah.">
+            >
+            ["id41.1"] = <
+                text = <"tcpCO2">
+                description = <"Transkutani parcialni pritisk ogljikovega dioksida v kapilarah.">
+            >
+            ["id3.1"] = <
+                text = <"*Any event(en)">
+                description = <"*Timing event.(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Indirect oximetry">
+                description = <"Method of monitoring blood gas measurements such as pulse oximetry (Spo2) and transcutaneous oximetry (TCO2) by indirect, currently non-invasive, means.">
+            >
+            ["id7.1"] = <
+                text = <"Arterial saturation of pulse oximeter (SpO2)">
+                description = <"Measured via pulse oximetry, the saturation of oxygen in the peripheral blood. ">
+            >
+            ["id59.1"] = <
+                text = <"Location of measurement SaO2">
+                description = <"Location of measurement (SaO2)">
+            >
+            ["id45.1"] = <
+                text = <"Arterial Oxygen Content (spOC)">
+                description = <"Measured via pulse CO-oximetry, the oxygen content of the peripheral blood.">
+            >
+            ["id46.1"] = <
+                text = <"Carbon monoxide (spCO)">
+                description = <"Measured via pulse CO-oximetry, the saturation of carboxyhaemoglobin in the perpiheral blood.">
+            >
+            ["id47.1"] = <
+                text = <"Methemoglobin (spMet)">
+                description = <"Measured via pulse CO-oximetry, the saturation of methoxyhaemoglobin in the peripheral blood.">
+            >
+            ["id40.1"] = <
+                text = <"Partial pressure of oxygen (ptcO2)">
+                description = <"Measured via transcutaneous electrode oximetry, the partial pressure of oxygen in the peripheral blood.">
+            >
+            ["id41.1"] = <
+                text = <"Partial pressure of carbon dioxide (ptcCO2)">
+                description = <"Measured via transcutaneous electrode oximetry, the partial pressure of carbon dioxide in the peripheral blood.">
+            >
+            ["id3.1"] = <
+                text = <"Measuring ranges">
+                description = <"Timing event.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-waveform-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.waveform.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Waveform
+        items matches {
+            ELEMENT[id11] occurrences matches {0..1} matches {
+                /value[id14]/value matches {|>=PT0S|}
+            }
+            CLUSTER[id7] matches {
+                items matches {
+                    ELEMENT[id8] occurrences matches {0..1} matches {
+                        /value[id15]/property matches {[at1]}
+                    }
+                    ELEMENT[id10] occurrences matches {0..1} matches {
+                        /value[id16]/property matches {[at1]}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Waveform">
+                description = <"A waveform of an equidistant series of time spaced measurements e.g. from a pulse oximeter.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-level_of_exertion-003.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.level_of_exertion.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Level of exertion
+        items matches {
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12] occurrences matches {0..1} matches {
+                        /value[id19]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id20] matches {
+                                property matches {[at17]}
+                                magnitude matches {|0.0..1000.0|}
+                                units matches {"J/min"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id10] occurrences matches {0..1} matches {
+                /value[id21]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Level of exertion">
+                description = <"Record information about level of exertion.">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"مستوى المجهود">
+                description = <"لتسجيل معلومات حول مستوى المجهود">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-ambient_oxygen-001.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.ambient_oxygen.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- *Ambient oxygen(en)
+        items matches {
+            ELEMENT[id52] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id55] matches {
+                        property matches {[at1]}
+                        [magnitude, units, precision] matches {
+                            [{|0.0..50.0|}, {"l/m"}, {|1|}], 
+                            [{|0.0..50000.0|}, {"ml/min"}, {|1|}]
+                        }
+                    }
+                }
+            }
+            ELEMENT[id53.1] occurrences matches {0..1} matches {    -- *FiO2(en)
+                value matches {
+                    DV_PROPORTION[id56.1] matches {
+                        numerator matches {|0.0..1.0|; 0.21}
+                        is_integral matches {False}
+                        type matches {|1|}
+                    }
+                }
+            }
+            ELEMENT[id54.1] occurrences matches {0..1} matches {    -- *Percent O2(en)
+                value matches {
+                    DV_PROPORTION[id57.1] matches {
+                        numerator matches {|0.0..100.0|; 21.0}
+                        is_integral matches {False}
+                        type matches {|2|}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"*Ambient oxygen(en)">
+                description = <"*The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.(en)">
+            >
+            ["id53.1"] = <
+                text = <"*FiO2(en)">
+                description = <"*Fraction of inspired oxygen.(en)">
+            >
+            ["id54.1"] = <
+                text = <"*Percent O2(en)">
+                description = <"*Percentage of inspired oxygen.(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Ambient oxygen">
+                description = <"The amount of oxygen being delivered to the subject at the time of observation.  Assumed values of 21% O2, Fi02 of 0.21 and Oxygen flow rate of zero.">
+            >
+            ["id53.1"] = <
+                text = <"Fraction of inspired oxygen (FiO2)">
+                description = <"Fraction of inspired oxygen.">
+            >
+            ["id54.1"] = <
+                text = <"Percent O2">
+                description = <"Percentage of inspired oxygen.">
+            >
+        >
+        ["es-ar"] = <
+            ["id1.1"] = <
+                text = <"Oxígeno ambiental">
+                description = <"La cantidad de oxígeno siendo administrada al sujeto en el momento de la observación. Se asumen valores de 21% de O2, FiO2 de 0,21 y velocidad de flujo de oxígeno de cero.">
+            >
+            ["id53.1"] = <
+                text = <"FiO2">
+                description = <"Fracción inspiratoria de oxígeno.">
+            >
+            ["id54.1"] = <
+                text = <"Porcentaje de 02">
+                description = <"Porcentaje de oxígeno inspirado.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-device-003.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.device.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Device
+        items matches {
+            allow_archetype CLUSTER[id18] matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.dimensions(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            use_archetype CLUSTER[id18.1, openEHR-EHR-CLUSTER.ovl-admissional-dimensions-003.v1.0.0]
+            allow_archetype ITEM[id10] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device_details(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Device">
+                description = <"Any physical object, product, instrument, apparatus, appliance, material or other item used directly or indirectly in the provision of healthcare, but is not used primarily through therapeutic or metabolic means.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Naprava">
+                description = <"Uporablja se za zapisovanje podatkov o napravi, ki se lahko uporablja neposredno v terapevtske ali diagnostične namene; ali neposredno v zagotavljanju zdravstvene oskrbe.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Dispositivo">
+                description = <"Qualquer objeto físico, produto, instrumento, aparelho, utensílio, material ou outro item usado direta ou indiretamente na prestação de cuidados de saúde, mas não é usado principalmente por meio de meios terapêuticos ou metabólicos.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-dimensions-003.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.dimensions.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Ausmaße
+        items matches {
+            ELEMENT[id2] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id8] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id9] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id4] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id10] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "ft", "in", "yd"}
+                    }
+                }
+            }
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id11] matches {
+                        property matches {[at1]}
+                        units matches {"µm", "mm", "cm", "m", "in", "ft"}
+                    }
+                }
+            }
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id12] matches {
+                        property matches {[at2]}
+                        units matches {"mm2", "cm2", "% body", "% head, neck", "% lower limb", "% trunk", "% upper limb", "m2", "in2", "ft2"}
+                    }
+                }
+            }
+            ELEMENT[id7] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id13] matches {
+                        property matches {[at3]}
+                        units matches {"mm3", "ml", "in3", "cc", "ft3"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Ausmaße">
+                description = <"Die Ausmaße eines betrachteten Teils.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Dimensions">
+                description = <"The physical dimensions of a part examined.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
     openEHR-EHR-ACTION.ovl-admissional-medication-001.v1.0.0
 
 specialize
@@ -562,20 +1739,20 @@ definition
                 include
                     archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_ingredients\.v1\.0\.0/}
             }
+            use_archetype CLUSTER[id24.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0]
             allow_archetype CLUSTER[id23] occurrences matches {0..1} matches { 
                 include
                     archetype_id/value matches {/openEHR\-EHR\-CLUSTER\.medication_amount\.v1\.0\.0/}
             }
+            use_archetype CLUSTER[id23.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-003.v1.0.0]
             allow_archetype CLUSTER[id28] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id28.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0]
             ELEMENT[id37] occurrences matches {0..1} matches {
                 /value[id107]/value matches {True, False}
             }
-            use_archetype CLUSTER[id24.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_ingredients-001.v1.0.0]
-            use_archetype CLUSTER[id23.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-002.v1.0.0]
-            use_archetype CLUSTER[id28.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0]
         }
         /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
     }
@@ -610,13 +1787,14 @@ definition
             ELEMENT[id6] occurrences matches {0..1} matches {
                 /value[id36]/defining_code matches {[ac1]}
             }
-            allow_archetype CLUSTER[id31] occurrences matches {0} matches { 
+            allow_archetype CLUSTER[id31] matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
             }
+            use_archetype CLUSTER[id31.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-002.v1.0.0]
             CLUSTER[id2] matches {
                 items matches {
-                    allow_archetype CLUSTER[id34] occurrences matches {0} matches { 
+                    allow_archetype CLUSTER[id34] occurrences matches {0..1} matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
                     }
@@ -625,6 +1803,7 @@ definition
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_amount(-[a-zA-Z0-9_]+)*\.v1/}
                     }
                     use_archetype CLUSTER[id25.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-001.v1.0.0]
+                    use_archetype CLUSTER[id34.1, openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-004.v1.0.0]
                 }
             }
         }
@@ -769,6 +1948,66 @@ terminology
 
 ---------------------------------------------------------------------------------
 template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-003.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.medication_amount.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Medication amount
+        items matches {
+            ELEMENT[id2.1] occurrences matches {0..1} matches {    -- Amount
+                value matches {
+                    DV_QUANTITY[id10.1] matches {
+                        property matches {[at1]}
+                        magnitude matches {|>=0.0|}
+                    }
+                    DV_INTERVAL<DV_QUANTITY>[id11.1] matches {
+                        upper matches {
+                            DV_QUANTITY[id12.1] 
+                        }
+                        lower matches {
+                            DV_QUANTITY[id13.1] matches {
+                                property matches {[at1]}
+                                magnitude matches {|>=0.0|}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                /value[id14]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication amount">
+                description = <"The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.">
+            >
+            ["id2.1"] = <
+                text = <"Amount">
+                description = <"The value of the amount of medication as a real number e.g 1, 1.5, 0.125. ">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Medication amount(en)">
+                description = <"*The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.(en)">
+            >
+            ["id2.1"] = <
+                text = <"*Amount(en)">
+                description = <"*The value of the amount of medication as a real number e.g 1, 1.5, 0.125. (en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
     openEHR-EHR-CLUSTER.ovl-admissional-medication_admin-001.v1.0.0
 
 specialize
@@ -793,6 +2032,66 @@ terminology
             ["id1.1"] = <
                 text = <"Medication administration">
                 description = <"Information about the future or actual administration of medication.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-CLUSTER.ovl-admissional-medication_amount-004.v1.0.0
+
+specialize
+    openEHR-EHR-CLUSTER.medication_amount.v1.0.0
+
+definition
+    CLUSTER[id1.1] matches {    -- Medication amount
+        items matches {
+            ELEMENT[id2.1] occurrences matches {0..1} matches {    -- Amount
+                value matches {
+                    DV_QUANTITY[id10.1] matches {
+                        property matches {[at1]}
+                        magnitude matches {|>=0.0|}
+                    }
+                    DV_INTERVAL<DV_QUANTITY>[id11.1] matches {
+                        upper matches {
+                            DV_QUANTITY[id12.1] 
+                        }
+                        lower matches {
+                            DV_QUANTITY[id13.1] matches {
+                                property matches {[at1]}
+                                magnitude matches {|>=0.0|}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id3] occurrences matches {0..1} matches {
+                /value[id14]/defining_code matches {[ac2]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Medication amount">
+                description = <"The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.">
+            >
+            ["id2.1"] = <
+                text = <"Amount">
+                description = <"The value of the amount of medication as a real number e.g 1, 1.5, 0.125. ">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Medication amount(en)">
+                description = <"*The amount or strength of a medication or substance for medication orders, administrations, dispensing etc.(en)">
+            >
+            ["id2.1"] = <
+                text = <"*Amount(en)">
+                description = <"*The value of the amount of medication as a real number e.g 1, 1.5, 0.125. (en)">
             >
         >
     >

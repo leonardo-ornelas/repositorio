@@ -1,0 +1,199 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-ADMIN_ENTRY.etiqueta__dados_cadastrais_termo_consentimento.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    ADMIN_ENTRY[id1] occurrences matches {1} matches {    -- etiqueta_ dados_cadastrais_termo_consentimento
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- NIT
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Nome do funcionário
+                        value matches {
+                            DV_TEXT[id6] 
+                        }
+                    }
+                    ELEMENT[id7] occurrences matches {1} matches {    -- Data de Nascimento
+                        value matches {
+                            DV_DATE[id8] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id9] occurrences matches {1} matches {    -- Sexo
+                        value matches {
+                            DV_CODED_TEXT[id10] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id11] occurrences matches {1} matches {    -- Data de Admissão
+                        value matches {
+                            DV_DATE[id12] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {1} matches {    -- Telefone
+                        value matches {
+                            DV_TEXT[id14] 
+                        }
+                    }
+                    ELEMENT[id15] occurrences matches {1} matches {    -- Setor de Trabalho
+                        value matches {
+                            DV_TEXT[id16] 
+                        }
+                    }
+                    ELEMENT[id17] occurrences matches {1} matches {    -- Função de Trabalho
+                        value matches {
+                            DV_TEXT[id18] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"etiqueta_ dados_cadastrais_termo_consentimento">
+                description = <"etiqueta_ dados_cadastrais_termo_consentimento">
+            >
+            ["id2"] = <
+                text = <"ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO">
+                description = <"ETIQUETA 1. COM DADOS CADASTRAIS PARA O TERMO DE CONSENTIMENTO">
+            >
+            ["id3"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id5"] = <
+                text = <"Nome do funcionário">
+                description = <"Nome do funcionário">
+            >
+            ["id7"] = <
+                text = <"Data de Nascimento">
+                description = <"Data de Nascimento">
+            >
+            ["id9"] = <
+                text = <"Sexo">
+                description = <"Sexo">
+            >
+            ["at1"] = <
+                text = <"Feminino">
+                description = <"Feminino">
+            >
+            ["at2"] = <
+                text = <"Masculino">
+                description = <"Masculino">
+            >
+            ["ac1"] = <
+                text = <"sexo">
+                description = <"sexo">
+            >
+            ["id11"] = <
+                text = <"Data de Admissão">
+                description = <"Data de Admissão">
+            >
+            ["id13"] = <
+                text = <"Telefone">
+                description = <"Telefone">
+            >
+            ["id15"] = <
+                text = <"Setor de Trabalho">
+                description = <"Setor de Trabalho">
+            >
+            ["id17"] = <
+                text = <"Função de Trabalho">
+                description = <"Função de Trabalho">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"label_data_database_concept_concept">
+                description = <"label_data_database_concept_concept">
+            >
+            ["id2"] = <
+                text = <"TAG 1. WITH DATA FOR THE CONSENT">
+                description = <"TAG 1. WITH DATA FOR THE CONSENT">
+            >
+            ["id3"] = <
+                text = <"NIT">
+                description = <"NIT">
+            >
+            ["id5"] = <
+                text = <"Name of employee">
+                description = <"Name of employee">
+            >
+            ["id7"] = <
+                text = <"Date of Birth">
+                description = <"Date of Birth">
+            >
+            ["id9"] = <
+                text = <"Sex">
+                description = <"Sex">
+            >
+            ["at1"] = <
+                text = <"*Feminino (pt-br)">
+                description = <"*Feminino (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Masculino (pt-br)">
+                description = <"*Masculino (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*sexo (pt-br)">
+                description = <"*sexo (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Date of Admission">
+                description = <"Date of Admission">
+            >
+            ["id13"] = <
+                text = <"Phone">
+                description = <"Phone">
+            >
+            ["id15"] = <
+                text = <"Workspace">
+                description = <"Workspace">
+            >
+            ["id17"] = <
+                text = <"Job Function">
+                description = <"Job Function">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2">
+        >
+    >
+

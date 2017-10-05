@@ -1,0 +1,1660 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.exame_fisico_sesi.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"iHealth Group">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Exame fisico SESI
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id6] occurrences matches {0..1} matches {    -- Detalhamento do exame físico
+                                items matches {
+                                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Mucosas
+                                        value matches {
+                                            DV_CODED_TEXT[id8] matches {
+                                                defining_code matches {[ac2]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- Pelos e Fâneros
+                                        value matches {
+                                            DV_CODED_TEXT[id10] matches {
+                                                defining_code matches {[ac3]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Gânglios
+                                        value matches {
+                                            DV_CODED_TEXT[id14] matches {
+                                                defining_code matches {[ac5]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Marcha
+                                        value matches {
+                                            DV_CODED_TEXT[id16] matches {
+                                                defining_code matches {[ac6]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Especificar
+                                        value matches {
+                                            DV_TEXT[id18] 
+                                        }
+                                    }
+                                    CLUSTER[id19] occurrences matches {0..1} matches {    -- Cabeça e pescoço
+                                        items matches {
+                                            ELEMENT[id20] occurrences matches {0..1} matches {    -- Audição
+                                                value matches {
+                                                    DV_CODED_TEXT[id21] matches {
+                                                        defining_code matches {[ac8]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id22] occurrences matches {0..1} matches {    -- Orofaringe
+                                                value matches {
+                                                    DV_CODED_TEXT[id23] matches {
+                                                        defining_code matches {[ac9]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id24] occurrences matches {0..1} matches {    -- Boca e dentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id25] matches {
+                                                        defining_code matches {[ac10]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id26] occurrences matches {0..1} matches {    -- Visão
+                                                value matches {
+                                                    DV_CODED_TEXT[id27] matches {
+                                                        defining_code matches {[ac11]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id28] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id29] 
+                                                }
+                                            }
+                                            ELEMENT[id33] occurrences matches {0..1} matches {    -- Uso obrigatório de lentes corretivas
+                                                value matches {
+                                                    DV_BOOLEAN[id34] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id35] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id36] 
+                                                }
+                                            }
+                                            ELEMENT[id37] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id38] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id39] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id40] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id41] occurrences matches {0..1} matches {    -- Tórax
+                                        items matches {
+                                            ELEMENT[id42] occurrences matches {0..1} matches {    -- Simetria
+                                                value matches {
+                                                    DV_CODED_TEXT[id43] matches {
+                                                        defining_code matches {[ac12]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id44] occurrences matches {0..1} matches {    -- Expansibilidade
+                                                value matches {
+                                                    DV_CODED_TEXT[id45] matches {
+                                                        defining_code matches {[ac13]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id46] occurrences matches {0..1} matches {    -- Ritmo cardíaco
+                                                value matches {
+                                                    DV_CODED_TEXT[id47] matches {
+                                                        defining_code matches {[ac14]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id48] occurrences matches {0..1} matches {    -- Ausculta pulmonar
+                                                value matches {
+                                                    DV_CODED_TEXT[id49] matches {
+                                                        defining_code matches {[ac15]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id50] occurrences matches {0..1} matches {    -- Ausculta respiratória
+                                                value matches {
+                                                    DV_CODED_TEXT[id51] matches {
+                                                        defining_code matches {[ac16]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id52] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id53] 
+                                                }
+                                            }
+                                            ELEMENT[id54] occurrences matches {0..1} matches {    -- Outras deformidades
+                                                value matches {
+                                                    DV_BOOLEAN[id55] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id56] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id57] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id58] occurrences matches {0..1} matches {    -- Abdômen
+                                        items matches {
+                                            ELEMENT[id59] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id60] matches {
+                                                        defining_code matches {[ac17]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id61] occurrences matches {0..1} matches {    -- Palpação
+                                                value matches {
+                                                    DV_CODED_TEXT[id62] matches {
+                                                        defining_code matches {[ac18]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id63] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id64] 
+                                                }
+                                            }
+                                            ELEMENT[id65] occurrences matches {0..1} matches {    -- Hérnia umbilical
+                                                value matches {
+                                                    DV_CODED_TEXT[id66] matches {
+                                                        defining_code matches {[ac19]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id67] occurrences matches {0..1} matches {    -- Hérnia ignal
+                                                value matches {
+                                                    DV_CODED_TEXT[id68] matches {
+                                                        defining_code matches {[ac20]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id69] occurrences matches {0..1} matches {    -- Hérnia epigástrica
+                                                value matches {
+                                                    DV_CODED_TEXT[id70] matches {
+                                                        defining_code matches {[ac21]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id71] occurrences matches {0..1} matches {    -- Hérnia incisional
+                                                value matches {
+                                                    DV_CODED_TEXT[id72] matches {
+                                                        defining_code matches {[ac22]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id73] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id74] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id75] occurrences matches {0..1} matches {    -- Coluna
+                                        items matches {
+                                            ELEMENT[id76] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id77] matches {
+                                                        defining_code matches {[ac23]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id79] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id80] 
+                                                }
+                                            }
+                                            ELEMENT[id81] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id82] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id83] occurrences matches {0..1} matches {    -- Dor aos esforços
+                                                value matches {
+                                                    DV_CODED_TEXT[id84] matches {
+                                                        defining_code matches {[ac24]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id85] occurrences matches {0..1} matches {    -- Dor espontânea
+                                                value matches {
+                                                    DV_CODED_TEXT[id86] matches {
+                                                        defining_code matches {[ac25]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id87] occurrences matches {0..1} matches {    -- Localização da dor
+                                                value matches {
+                                                    DV_TEXT[id88] 
+                                                }
+                                            }
+                                            ELEMENT[id89] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id90] 
+                                                }
+                                            }
+                                            ELEMENT[id91] occurrences matches {0..1} matches {    -- Irradiação escapular
+                                                value matches {
+                                                    DV_CODED_TEXT[id92] matches {
+                                                        defining_code matches {[ac26]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id93] occurrences matches {0..1} matches {    -- Irradiação membro superior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id94] matches {
+                                                        defining_code matches {[ac27]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id95] occurrences matches {0..1} matches {    -- Irradiação membro superior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id96] matches {
+                                                        defining_code matches {[ac28]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id97] occurrences matches {0..1} matches {    -- Irradiação membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id98] matches {
+                                                        defining_code matches {[ac29]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id99] occurrences matches {0..1} matches {    -- Irradiação membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id100] matches {
+                                                        defining_code matches {[ac30]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id101] occurrences matches {0..1} matches {    -- Irradiação ausente
+                                                value matches {
+                                                    DV_CODED_TEXT[id102] matches {
+                                                        defining_code matches {[ac31]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id104] occurrences matches {0..1} matches {    -- Outras irradiações
+                                                value matches {
+                                                    DV_TEXT[id105] 
+                                                }
+                                            }
+                                            ELEMENT[id106] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id107] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id109] occurrences matches {0..1} matches {    -- Membros
+                                        items matches {
+                                            ELEMENT[id110] occurrences matches {0..1} matches {    -- Inspeção
+                                                value matches {
+                                                    DV_CODED_TEXT[id111] matches {
+                                                        defining_code matches {[ac32]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id112] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_CODED_TEXT[id113] matches {
+                                                        defining_code matches {[ac33]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id114] occurrences matches {0..1} matches {    -- Palpação
+                                                value matches {
+                                                    DV_CODED_TEXT[id115] matches {
+                                                        defining_code matches {[ac34]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id116] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_CODED_TEXT[id117] matches {
+                                                        defining_code matches {[ac35]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id118] occurrences matches {0..1} matches {    -- Força
+                                                value matches {
+                                                    DV_CODED_TEXT[id119] matches {
+                                                        defining_code matches {[ac36]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id120] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id121] 
+                                                }
+                                            }
+                                            ELEMENT[id122] occurrences matches {0..1} matches {    -- Deformidade
+                                                value matches {
+                                                    DV_BOOLEAN[id123] matches {
+                                                        value matches {True, False}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id125] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id126] 
+                                                }
+                                            }
+                                            ELEMENT[id127] occurrences matches {0..1} matches {    -- Prótese/órtese
+                                                value matches {
+                                                    DV_CODED_TEXT[id128] matches {
+                                                        defining_code matches {[ac38]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id129] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id130] 
+                                                }
+                                            }
+                                            ELEMENT[id131] occurrences matches {0..1} matches {    -- Varizes em membro inferior direito
+                                                value matches {
+                                                    DV_CODED_TEXT[id132] matches {
+                                                        defining_code matches {[ac39]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id133] occurrences matches {0..1} matches {    -- Varizes em membro inferior esquerdo
+                                                value matches {
+                                                    DV_CODED_TEXT[id134] matches {
+                                                        defining_code matches {[ac40]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id135] occurrences matches {0..1} matches {    -- Varizes ausentes
+                                                value matches {
+                                                    DV_CODED_TEXT[id136] matches {
+                                                        defining_code matches {[ac41]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id137] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id138] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id139] occurrences matches {0..1} matches {    -- Psiquismo
+                                        items matches {
+                                            ELEMENT[id140] occurrences matches {0..1} matches {    -- Orientação tempo / espaço
+                                                value matches {
+                                                    DV_CODED_TEXT[id141] matches {
+                                                        defining_code matches {[ac42]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id142] occurrences matches {0..1} matches {    -- Humor
+                                                value matches {
+                                                    DV_CODED_TEXT[id143] matches {
+                                                        defining_code matches {[ac43]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id144] occurrences matches {0..1} matches {    -- Especificar
+                                                value matches {
+                                                    DV_TEXT[id145] 
+                                                }
+                                            }
+                                            ELEMENT[id146] occurrences matches {0..1} matches {    -- Resultado do SRQ 20
+                                                value matches {
+                                                    DV_COUNT[id147] matches {
+                                                        magnitude matches {*}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Exame fisico SESI">
+                description = <"Exame fisico SESI">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Detalhamento do exame físico">
+                description = <"Detalhamento do exame físico">
+            >
+            ["id7"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["at1"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at2"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at3"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac1"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["at4"] = <
+                text = <"Normal">
+                description = <"Normal">
+            >
+            ["at5"] = <
+                text = <"Alterado">
+                description = <"Alterado">
+            >
+            ["at6"] = <
+                text = <"Não examinado">
+                description = <"Não examinado">
+            >
+            ["ac2"] = <
+                text = <"Mucosas">
+                description = <"Mucosas">
+            >
+            ["id9"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["ac3"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["ac4"] = <
+                text = <"Pelos e Fâneros">
+                description = <"Pelos e Fâneros">
+            >
+            ["id13"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["ac5"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["id15"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["ac6"] = <
+                text = <"Marcha">
+                description = <"Marcha">
+            >
+            ["id17"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id19"] = <
+                text = <"Cabeça e pescoço">
+                description = <"Cabeça e pescoço">
+            >
+            ["id20"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["ac7"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["ac8"] = <
+                text = <"Audição">
+                description = <"Audição">
+            >
+            ["id22"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["ac9"] = <
+                text = <"Orofaringe">
+                description = <"Orofaringe">
+            >
+            ["id24"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+            ["ac10"] = <
+                text = <"Boca e dentes">
+                description = <"Boca e dentes">
+            >
+            ["id26"] = <
+                text = <"Visão">
+                description = <"Visão">
+            >
+            ["ac11"] = <
+                text = <"Visão">
+                description = <"Visão">
+            >
+            ["id28"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id33"] = <
+                text = <"Uso obrigatório de lentes corretivas">
+                description = <"Uso obrigatório de lentes corretivas">
+            >
+            ["id35"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id37"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id39"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id41"] = <
+                text = <"Tórax">
+                description = <"Tórax">
+            >
+            ["id42"] = <
+                text = <"Simetria">
+                description = <"Simetria">
+            >
+            ["ac12"] = <
+                text = <"Simetria">
+                description = <"Simetria">
+            >
+            ["id44"] = <
+                text = <"Expansibilidade">
+                description = <"Expansibilidade">
+            >
+            ["ac13"] = <
+                text = <"Expansibilidade">
+                description = <"Expansibilidade">
+            >
+            ["id46"] = <
+                text = <"Ritmo cardíaco">
+                description = <"Ritmo cardíaco">
+            >
+            ["ac14"] = <
+                text = <"Ritmo cardíaco">
+                description = <"Ritmo cardíaco">
+            >
+            ["id48"] = <
+                text = <"Ausculta pulmonar">
+                description = <"Ausculta pulmonar">
+            >
+            ["ac15"] = <
+                text = <"Ausculta pulmonar">
+                description = <"Ausculta pulmonar">
+            >
+            ["id50"] = <
+                text = <"Ausculta respiratória">
+                description = <"Ausculta respiratória">
+            >
+            ["ac16"] = <
+                text = <"Ausculta respiratória">
+                description = <"Ausculta respiratória">
+            >
+            ["id52"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id54"] = <
+                text = <"Outras deformidades">
+                description = <"Outras deformidades">
+            >
+            ["id56"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id58"] = <
+                text = <"Abdômen">
+                description = <"Abdômen">
+            >
+            ["id59"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac17"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id61"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
+            ["ac18"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
+            ["id63"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id65"] = <
+                text = <"Hérnia umbilical">
+                description = <"Hérnia umbilical">
+            >
+            ["ac19"] = <
+                text = <"Hérnia umbilical">
+                description = <"Hérnia umbilical">
+            >
+            ["id67"] = <
+                text = <"Hérnia ignal">
+                description = <"Hérnia ignal">
+            >
+            ["ac20"] = <
+                text = <"Hérnia ignal">
+                description = <"Hérnia ignal">
+            >
+            ["id69"] = <
+                text = <"Hérnia epigástrica">
+                description = <"Hérnia epigástrica">
+            >
+            ["ac21"] = <
+                text = <"Hérnia epigástrica">
+                description = <"Hérnia epigástrica">
+            >
+            ["id71"] = <
+                text = <"Hérnia incisional">
+                description = <"Hérnia incisional">
+            >
+            ["ac22"] = <
+                text = <"Hérnia incisional">
+                description = <"Hérnia incisional">
+            >
+            ["id73"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id75"] = <
+                text = <"Coluna">
+                description = <"Coluna">
+            >
+            ["id76"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac23"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id79"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id81"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id83"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["ac24"] = <
+                text = <"Dor aos esforços">
+                description = <"Dor aos esforços">
+            >
+            ["id85"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["ac25"] = <
+                text = <"Dor espontânea">
+                description = <"Dor espontânea">
+            >
+            ["id87"] = <
+                text = <"Localização da dor">
+                description = <"Localização da dor">
+            >
+            ["id89"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id91"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["ac26"] = <
+                text = <"Irradiação escapular">
+                description = <"Irradiação escapular">
+            >
+            ["id93"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
+            ["ac27"] = <
+                text = <"Irradiação membro superior direito">
+                description = <"Irradiação membro superior direito">
+            >
+            ["id95"] = <
+                text = <"Irradiação membro superior esquerdo">
+                description = <"Irradiação membro superior esquerdo">
+            >
+            ["ac28"] = <
+                text = <"Irradiação membro superior esquerdo">
+                description = <"Irradiação membro superior esquerdo">
+            >
+            ["id97"] = <
+                text = <"Irradiação membro inferior direito">
+                description = <"Irradiação membro inferior direito">
+            >
+            ["ac29"] = <
+                text = <"Irradiação membro inferior direito">
+                description = <"Irradiação membro inferior direito">
+            >
+            ["id99"] = <
+                text = <"Irradiação membro inferior esquerdo">
+                description = <"Irradiação membro inferior esquerdo">
+            >
+            ["ac30"] = <
+                text = <"Irradiação membro inferior esquerdo">
+                description = <"Irradiação membro inferior esquerdo">
+            >
+            ["id101"] = <
+                text = <"Irradiação ausente">
+                description = <"Irradiação ausente">
+            >
+            ["ac31"] = <
+                text = <"Irradiação ausente">
+                description = <"Irradiação ausente">
+            >
+            ["id104"] = <
+                text = <"Outras irradiações">
+                description = <"Outras irradiações">
+            >
+            ["id106"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id109"] = <
+                text = <"Membros">
+                description = <"Membros">
+            >
+            ["id110"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["ac32"] = <
+                text = <"Inspeção">
+                description = <"Inspeção">
+            >
+            ["id112"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["ac33"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id114"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
+            ["ac34"] = <
+                text = <"Palpação">
+                description = <"Palpação">
+            >
+            ["id116"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["ac35"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id118"] = <
+                text = <"Força">
+                description = <"Força">
+            >
+            ["ac36"] = <
+                text = <"Força">
+                description = <"Força">
+            >
+            ["id120"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id122"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["ac37"] = <
+                text = <"Deformidade">
+                description = <"Deformidade">
+            >
+            ["id125"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id127"] = <
+                text = <"Prótese/órtese">
+                description = <"Prótese/órtese">
+            >
+            ["ac38"] = <
+                text = <"Prótese/órtese">
+                description = <"Prótese/órtese">
+            >
+            ["id129"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id131"] = <
+                text = <"Varizes em membro inferior direito">
+                description = <"Varizes em membro inferior direito">
+            >
+            ["ac39"] = <
+                text = <"Varizes em membro inferior direito">
+                description = <"Varizes em membro inferior direito">
+            >
+            ["id133"] = <
+                text = <"Varizes em membro inferior esquerdo">
+                description = <"Varizes em membro inferior esquerdo">
+            >
+            ["ac40"] = <
+                text = <"Varizes em membro inferior esquerdo">
+                description = <"Varizes em membro inferior esquerdo">
+            >
+            ["id135"] = <
+                text = <"Varizes ausentes">
+                description = <"Varizes ausentes">
+            >
+            ["ac41"] = <
+                text = <"Varizes ausentes">
+                description = <"Varizes ausentes">
+            >
+            ["id137"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id139"] = <
+                text = <"Psiquismo">
+                description = <"Psiquismo">
+            >
+            ["id140"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["ac42"] = <
+                text = <"Orientação tempo / espaço">
+                description = <"Orientação tempo / espaço">
+            >
+            ["id142"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["at7"] = <
+                text = <"Estável">
+                description = <"Estável">
+            >
+            ["at8"] = <
+                text = <"Ansioso">
+                description = <"Ansioso">
+            >
+            ["at9"] = <
+                text = <"Irritável">
+                description = <"Irritável">
+            >
+            ["at10"] = <
+                text = <"Deprimido">
+                description = <"Deprimido">
+            >
+            ["ac43"] = <
+                text = <"Humor">
+                description = <"Humor">
+            >
+            ["id144"] = <
+                text = <"Especificar">
+                description = <"Especificar">
+            >
+            ["id146"] = <
+                text = <"Resultado do SRQ 20">
+                description = <"Resultado do SRQ 20">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Physical Exam SESI">
+                description = <"Physical Exam SESI">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Detail of physical examination">
+                description = <"Detail of physical examination">
+            >
+            ["id7"] = <
+                text = <"Mucous">
+                description = <"Mucous">
+            >
+            ["at1"] = <
+                text = <"*Normal (pt-br)">
+                description = <"*Normal (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Alterado (pt-br)">
+                description = <"*Alterado (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Não examinado (pt-br)">
+                description = <"*Não examinado (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Mucosas (pt-br)">
+                description = <"*Mucosas (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Normal (pt-br)">
+                description = <"*Normal (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Alterado (pt-br)">
+                description = <"*Alterado (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Não examinado (pt-br)">
+                description = <"*Não examinado (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Mucosas (pt-br)">
+                description = <"*Mucosas (pt-br)">
+            >
+            ["id9"] = <
+                text = <"hair and faneros">
+                description = <"hair and faneros">
+            >
+            ["ac3"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Pelos e Fâneros (pt-br)">
+                description = <"*Pelos e Fâneros (pt-br)">
+            >
+            ["id13"] = <
+                text = <"Gânglios">
+                description = <"Gânglios">
+            >
+            ["ac5"] = <
+                text = <"*Gânglios (pt-br)">
+                description = <"*Gânglios (pt-br)">
+            >
+            ["id15"] = <
+                text = <"March">
+                description = <"March">
+            >
+            ["ac6"] = <
+                text = <"*Marcha (pt-br)">
+                description = <"*Marcha (pt-br)">
+            >
+            ["id17"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id19"] = <
+                text = <"Head and neck">
+                description = <"Head and neck">
+            >
+            ["id20"] = <
+                text = <"Hearing">
+                description = <"Hearing">
+            >
+            ["ac7"] = <
+                text = <"*Audição (pt-br)">
+                description = <"*Audição (pt-br)">
+            >
+            ["ac8"] = <
+                text = <"*Audição (pt-br)">
+                description = <"*Audição (pt-br)">
+            >
+            ["id22"] = <
+                text = <"Oropharynx">
+                description = <"Oropharynx">
+            >
+            ["ac9"] = <
+                text = <"*Orofaringe (pt-br)">
+                description = <"*Orofaringe (pt-br)">
+            >
+            ["id24"] = <
+                text = <"Mouth and teeth">
+                description = <"Mouth and teeth">
+            >
+            ["ac10"] = <
+                text = <"*Boca e dentes (pt-br)">
+                description = <"*Boca e dentes (pt-br)">
+            >
+            ["id26"] = <
+                text = <"Vision">
+                description = <"Vision">
+            >
+            ["ac11"] = <
+                text = <"*Visão (pt-br)">
+                description = <"*Visão (pt-br)">
+            >
+            ["id28"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id33"] = <
+                text = <"Mandatory use of corrective lenses">
+                description = <"Mandatory use of corrective lenses">
+            >
+            ["id35"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id37"] = <
+                text = <"Deformity">
+                description = <"Deformity">
+            >
+            ["id39"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id41"] = <
+                text = <"Chest">
+                description = <"Chest">
+            >
+            ["id42"] = <
+                text = <"Symmetry">
+                description = <"Symmetry">
+            >
+            ["ac12"] = <
+                text = <"*Simetria (pt-br)">
+                description = <"*Simetria (pt-br)">
+            >
+            ["id44"] = <
+                text = <"Expansibilidade">
+                description = <"Expansibilidade">
+            >
+            ["ac13"] = <
+                text = <"*Expansibilidade (pt-br)">
+                description = <"*Expansibilidade (pt-br)">
+            >
+            ["id46"] = <
+                text = <"Heart rate">
+                description = <"Heart rate">
+            >
+            ["ac14"] = <
+                text = <"*Ritmo cardíaco (pt-br)">
+                description = <"*Ritmo cardíaco (pt-br)">
+            >
+            ["id48"] = <
+                text = <"Pulmonary auscultation">
+                description = <"Pulmonary auscultation">
+            >
+            ["ac15"] = <
+                text = <"*Ausculta pulmonar (pt-br)">
+                description = <"*Ausculta pulmonar (pt-br)">
+            >
+            ["id50"] = <
+                text = <"Respiratory auscultation">
+                description = <"Respiratory auscultation">
+            >
+            ["ac16"] = <
+                text = <"*Ausculta respiratória (pt-br)">
+                description = <"*Ausculta respiratória (pt-br)">
+            >
+            ["id52"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id54"] = <
+                text = <"Other deformities">
+                description = <"Other deformities">
+            >
+            ["id56"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id58"] = <
+                text = <"Abdomen">
+                description = <"Abdomen">
+            >
+            ["id59"] = <
+                text = <"Inspection">
+                description = <"Inspection">
+            >
+            ["ac17"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id61"] = <
+                text = <"Palpation">
+                description = <"Palpation">
+            >
+            ["ac18"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["id63"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id65"] = <
+                text = <"Umbilical hernia">
+                description = <"Umbilical hernia">
+            >
+            ["ac19"] = <
+                text = <"*Hérnia umbilical (pt-br)">
+                description = <"*Hérnia umbilical (pt-br)">
+            >
+            ["id67"] = <
+                text = <"Inguinal hernia">
+                description = <"Inguinal hernia">
+            >
+            ["ac20"] = <
+                text = <"*Hérnia ignal (pt-br)">
+                description = <"*Hérnia ignal (pt-br)">
+            >
+            ["id69"] = <
+                text = <"Epigastric hernia">
+                description = <"Epigastric hernia">
+            >
+            ["ac21"] = <
+                text = <"*Hérnia epigástrica (pt-br)">
+                description = <"*Hérnia epigástrica (pt-br)">
+            >
+            ["id71"] = <
+                text = <"Incisional Hernia">
+                description = <"Incisional Hernia">
+            >
+            ["ac22"] = <
+                text = <"*Hérnia incisional (pt-br)">
+                description = <"*Hérnia incisional (pt-br)">
+            >
+            ["id73"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id75"] = <
+                text = <"Column">
+                description = <"Column">
+            >
+            ["id76"] = <
+                text = <"Inspection">
+                description = <"Inspection">
+            >
+            ["ac23"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id79"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id81"] = <
+                text = <"Deformity">
+                description = <"Deformity">
+            >
+            ["id83"] = <
+                text = <"Pain to the efforts">
+                description = <"Pain to the efforts">
+            >
+            ["ac24"] = <
+                text = <"*Dor aos esforços (pt-br)">
+                description = <"*Dor aos esforços (pt-br)">
+            >
+            ["id85"] = <
+                text = <"Spontaneous pain">
+                description = <"Spontaneous pain">
+            >
+            ["ac25"] = <
+                text = <"*Dor espontânea (pt-br)">
+                description = <"*Dor espontânea (pt-br)">
+            >
+            ["id87"] = <
+                text = <"Location of pain">
+                description = <"Location of pain">
+            >
+            ["id89"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id91"] = <
+                text = <"Scapular irradiation">
+                description = <"Scapular irradiation">
+            >
+            ["ac26"] = <
+                text = <"*Irradiação escapular (pt-br)">
+                description = <"*Irradiação escapular (pt-br)">
+            >
+            ["id93"] = <
+                text = <"Right upper limb irradiation">
+                description = <"Right upper limb irradiation">
+            >
+            ["ac27"] = <
+                text = <"*Irradiação membro superior direito (pt-br)">
+                description = <"*Irradiação membro superior direito (pt-br)">
+            >
+            ["id95"] = <
+                text = <"Left upper limb irradiation">
+                description = <"Left upper limb irradiation">
+            >
+            ["ac28"] = <
+                text = <"*Irradiação membro superior esquerdo (pt-br)">
+                description = <"*Irradiação membro superior esquerdo (pt-br)">
+            >
+            ["id97"] = <
+                text = <"Right lower limb irradiation">
+                description = <"Right lower limb irradiation">
+            >
+            ["ac29"] = <
+                text = <"*Irradiação membro inferior direito (pt-br)">
+                description = <"*Irradiação membro inferior direito (pt-br)">
+            >
+            ["id99"] = <
+                text = <"Left lower limb irradiation">
+                description = <"Left lower limb irradiation">
+            >
+            ["ac30"] = <
+                text = <"*Irradiação membro inferior esquerdo (pt-br)">
+                description = <"*Irradiação membro inferior esquerdo (pt-br)">
+            >
+            ["id101"] = <
+                text = <"Missing irradiation">
+                description = <"Missing irradiation">
+            >
+            ["ac31"] = <
+                text = <"*Irradiação ausente (pt-br)">
+                description = <"*Irradiação ausente (pt-br)">
+            >
+            ["id104"] = <
+                text = <"Other irradiations">
+                description = <"Other irradiations">
+            >
+            ["id106"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id109"] = <
+                text = <"View Profile">
+                description = <"View Profile">
+            >
+            ["id110"] = <
+                text = <"Inspection">
+                description = <"Inspection">
+            >
+            ["ac32"] = <
+                text = <"*Inspeção (pt-br)">
+                description = <"*Inspeção (pt-br)">
+            >
+            ["id112"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["ac33"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id114"] = <
+                text = <"Palpation">
+                description = <"Palpation">
+            >
+            ["ac34"] = <
+                text = <"*Palpação (pt-br)">
+                description = <"*Palpação (pt-br)">
+            >
+            ["id116"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["ac35"] = <
+                text = <"*Especificar (pt-br)">
+                description = <"*Especificar (pt-br)">
+            >
+            ["id118"] = <
+                text = <"Force">
+                description = <"Force">
+            >
+            ["ac36"] = <
+                text = <"*Força (pt-br)">
+                description = <"*Força (pt-br)">
+            >
+            ["id120"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id122"] = <
+                text = <"Deformity">
+                description = <"Deformity">
+            >
+            ["ac37"] = <
+                text = <"*Deformidade (pt-br)">
+                description = <"*Deformidade (pt-br)">
+            >
+            ["id125"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id127"] = <
+                text = <"Prosthesis / bracing">
+                description = <"Prosthesis / bracing">
+            >
+            ["ac38"] = <
+                text = <"*Prótese/órtese (pt-br)">
+                description = <"*Prótese/órtese (pt-br)">
+            >
+            ["id129"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id131"] = <
+                text = <"Varicose veins in lower right limb">
+                description = <"Varicose veins in lower right limb">
+            >
+            ["ac39"] = <
+                text = <"*Varizes em membro inferior direito (pt-br)">
+                description = <"*Varizes em membro inferior direito (pt-br)">
+            >
+            ["id133"] = <
+                text = <"Varicose veins in lower left limb">
+                description = <"Varicose veins in lower left limb">
+            >
+            ["ac40"] = <
+                text = <"*Varizes em membro inferior esquerdo (pt-br)">
+                description = <"*Varizes em membro inferior esquerdo (pt-br)">
+            >
+            ["id135"] = <
+                text = <"Absent varices">
+                description = <"Absent varices">
+            >
+            ["ac41"] = <
+                text = <"*Varizes ausentes (pt-br)">
+                description = <"*Varizes ausentes (pt-br)">
+            >
+            ["id137"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id139"] = <
+                text = <"Psyche">
+                description = <"Psyche">
+            >
+            ["id140"] = <
+                text = <"Time / Space Guidance">
+                description = <"Time / Space Guidance">
+            >
+            ["ac42"] = <
+                text = <"*Orientação tempo / espaço (pt-br)">
+                description = <"*Orientação tempo / espaço (pt-br)">
+            >
+            ["id142"] = <
+                text = <"humor">
+                description = <"humor">
+            >
+            ["at7"] = <
+                text = <"*Estável (pt-br)">
+                description = <"*Estável (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Ansioso (pt-br)">
+                description = <"*Ansioso (pt-br)">
+            >
+            ["at9"] = <
+                text = <"*Irritável (pt-br)">
+                description = <"*Irritável (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Deprimido (pt-br)">
+                description = <"*Deprimido (pt-br)">
+            >
+            ["ac43"] = <
+                text = <"*Humor (pt-br)">
+                description = <"*Humor (pt-br)">
+            >
+            ["id144"] = <
+                text = <"To specify">
+                description = <"To specify">
+            >
+            ["id146"] = <
+                text = <"SRQ result 20">
+                description = <"SRQ result 20">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac6"] = <
+            id = <"ac6">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac7"] = <
+            id = <"ac7">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac8"] = <
+            id = <"ac8">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac9"] = <
+            id = <"ac9">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac10"] = <
+            id = <"ac10">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac11"] = <
+            id = <"ac11">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac12"] = <
+            id = <"ac12">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac13"] = <
+            id = <"ac13">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac14"] = <
+            id = <"ac14">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac15"] = <
+            id = <"ac15">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac16"] = <
+            id = <"ac16">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac17"] = <
+            id = <"ac17">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac18"] = <
+            id = <"ac18">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac19"] = <
+            id = <"ac19">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac20"] = <
+            id = <"ac20">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac21"] = <
+            id = <"ac21">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac22"] = <
+            id = <"ac22">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac23"] = <
+            id = <"ac23">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac24"] = <
+            id = <"ac24">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac25"] = <
+            id = <"ac25">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac26"] = <
+            id = <"ac26">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac27"] = <
+            id = <"ac27">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac28"] = <
+            id = <"ac28">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac29"] = <
+            id = <"ac29">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac30"] = <
+            id = <"ac30">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac31"] = <
+            id = <"ac31">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac32"] = <
+            id = <"ac32">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac33"] = <
+            id = <"ac33">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac34"] = <
+            id = <"ac34">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac35"] = <
+            id = <"ac35">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac36"] = <
+            id = <"ac36">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac37"] = <
+            id = <"ac37">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac38"] = <
+            id = <"ac38">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac39"] = <
+            id = <"ac39">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac40"] = <
+            id = <"ac40">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac41"] = <
+            id = <"ac41">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac42"] = <
+            id = <"ac42">
+            members = <"at4", "at5", "at6">
+        >
+        ["ac43"] = <
+            id = <"ac43">
+            members = <"at6", "at7", "at8", "at9", "at10">
+        >
+    >
+

@@ -1,0 +1,554 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.qualidade_vida.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- qualidade_vida
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Qualquer evento
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Classificação da saúde do trabalhador
+                                        value matches {
+                                            DV_CODED_TEXT[id7] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id8] occurrences matches {0..1} matches {    -- Dificuldades do trabalhador na execução de atividades
+                                        items matches {
+                                            ELEMENT[id9] occurrences matches {0..1} matches {    -- Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa
+                                                value matches {
+                                                    DV_CODED_TEXT[id10] matches {
+                                                        defining_code matches {[ac2]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id11] occurrences matches {0..1} matches {    -- Subir vários lances de escada
+                                                value matches {
+                                                    DV_CODED_TEXT[id12] matches {
+                                                        defining_code matches {[ac2]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id13] occurrences matches {0..1} matches {    -- Problemas obtidos pelo trabalhador como consequência de sua saúde física
+                                        items matches {
+                                            ELEMENT[id14] occurrences matches {0..1} matches {    -- Realizou menos tarefas do que gostaria
+                                                value matches {
+                                                    DV_CODED_TEXT[id15] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id16] occurrences matches {0..1} matches {    -- Quantas vezes a dor interferiu no trabalho
+                                                value matches {
+                                                    DV_CODED_TEXT[id17] matches {
+                                                        defining_code matches {[ac4]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id18] occurrences matches {0..1} matches {    -- Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.
+                                        items matches {
+                                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)
+                                                value matches {
+                                                    DV_CODED_TEXT[id20] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id21] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia
+                                                value matches {
+                                                    DV_CODED_TEXT[id22] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id23] occurrences matches {0..1} matches {    -- Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)
+                                                value matches {
+                                                    DV_CODED_TEXT[id24] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id25] occurrences matches {0..1} matches {    -- Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)
+                                                value matches {
+                                                    DV_CODED_TEXT[id26] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id28] occurrences matches {0..1} matches {    -- Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas
+                                                value matches {
+                                                    DV_CODED_TEXT[id29] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id30] occurrences matches {0..1} matches {    -- Como o trabalhador se sente em relação a sua vida
+                                                value matches {
+                                                    DV_CODED_TEXT[id31] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id32] occurrences matches {0..1} matches {    -- Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia
+                                                value matches {
+                                                    DV_CODED_TEXT[id33] matches {
+                                                        defining_code matches {[ac1]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id36] occurrences matches {0..1} matches {    -- Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))
+                                        items matches {
+                                            ELEMENT[id43] occurrences matches {0..1} matches {    -- Realizou menos tarefas do que você gostaria
+                                                value matches {
+                                                    DV_CODED_TEXT[id44] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id45] occurrences matches {0..1} matches {    -- Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz
+                                                value matches {
+                                                    DV_CODED_TEXT[id46] matches {
+                                                        defining_code matches {[ac3]}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"qualidade_vida">
+                description = <"qualidade_vida">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id6"] = <
+                text = <"Classificação da saúde do trabalhador">
+                description = <"Classificação da saúde do trabalhador">
+            >
+            ["at1"] = <
+                text = <"Excelente">
+                description = <"Excelente">
+            >
+            ["at2"] = <
+                text = <"Muito boa">
+                description = <"Muito boa">
+            >
+            ["at3"] = <
+                text = <"Boa">
+                description = <"Boa">
+            >
+            ["at4"] = <
+                text = <"Ruim">
+                description = <"Ruim">
+            >
+            ["at5"] = <
+                text = <"Muito ruim">
+                description = <"Muito ruim">
+            >
+            ["ac1"] = <
+                text = <"Qualidade de vida">
+                description = <"Qualidade de vida">
+            >
+            ["id8"] = <
+                text = <"Dificuldades do trabalhador na execução de atividades">
+                description = <"Dificuldades do trabalhador na execução de atividades">
+            >
+            ["id9"] = <
+                text = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+                description = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+            >
+            ["at6"] = <
+                text = <"SIM Dificulta muito">
+                description = <"SIM Dificulta muito">
+            >
+            ["at7"] = <
+                text = <"SIM Dificulta um pouco">
+                description = <"SIM Dificulta um pouco">
+            >
+            ["at8"] = <
+                text = <"NÃO Não dificulta de modo algum">
+                description = <"NÃO Não dificulta de modo algum">
+            >
+            ["ac2"] = <
+                text = <"Dificuldade na execução de atividades">
+                description = <"Dificuldade na execução de atividades">
+            >
+            ["id11"] = <
+                text = <"Subir vários lances de escada">
+                description = <"Subir vários lances de escada">
+            >
+            ["id13"] = <
+                text = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+                description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+            >
+            ["id14"] = <
+                text = <"Realizou menos tarefas do que gostaria">
+                description = <"Realizou menos tarefas do que gostaria">
+            >
+            ["at9"] = <
+                text = <"Todo tempo">
+                description = <"Todo tempo">
+            >
+            ["at10"] = <
+                text = <"A maior parte do tempo">
+                description = <"A maior parte do tempo">
+            >
+            ["at11"] = <
+                text = <"Alguma parte do tempo">
+                description = <"Alguma parte do tempo">
+            >
+            ["at12"] = <
+                text = <"Uma pequena parte do tempo">
+                description = <"Uma pequena parte do tempo">
+            >
+            ["at13"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["ac3"] = <
+                text = <"Tarefas">
+                description = <"Tarefas">
+            >
+            ["id16"] = <
+                text = <"Quantas vezes a dor interferiu no trabalho">
+                description = <"Quantas vezes a dor interferiu no trabalho">
+            >
+            ["at14"] = <
+                text = <"De maneira nenhuma">
+                description = <"De maneira nenhuma">
+            >
+            ["at15"] = <
+                text = <"Um pouco">
+                description = <"Um pouco">
+            >
+            ["at16"] = <
+                text = <"Moderadamente">
+                description = <"Moderadamente">
+            >
+            ["at17"] = <
+                text = <"Bastante">
+                description = <"Bastante">
+            >
+            ["at18"] = <
+                text = <"Extremamente">
+                description = <"Extremamente">
+            >
+            ["ac4"] = <
+                text = <"Interferiu no trabalho">
+                description = <"Interferiu no trabalho">
+            >
+            ["id18"] = <
+                text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+                description = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+            >
+            ["id19"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id21"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id23"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25"] = <
+                text = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+            >
+            ["id28"] = <
+                text = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+                description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30"] = <
+                text = <"Como o trabalhador se sente em relação a sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32"] = <
+                text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+            >
+            ["at19"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at20"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at21"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["at22"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
+            ["id36"] = <
+                text = <"Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))">
+                description = <"Nas últimas 4 semanas, você teve algum dos seguintes problemas com o seu trabalho ou com alguma atividade diária regular, como conseqüência de algum problema emocional (como sentir-se deprimido(a) ou ansioso(a))">
+            >
+            ["id43"] = <
+                text = <"Realizou menos tarefas do que você gostaria">
+                description = <"Realizou menos tarefas do que você gostaria">
+            >
+            ["id45"] = <
+                text = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
+                description = <"Não trabalhou ou não fez qualquer das atividades com tanto cuidado como geralmente faz">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"qualidade_vida">
+                description = <"qualidade_vida">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Classificação da saúde do trabalhador">
+                description = <"Classificação da saúde do trabalhador">
+            >
+            ["at1"] = <
+                text = <"Excelente">
+                description = <"Excelente">
+            >
+            ["at2"] = <
+                text = <"Muito boa">
+                description = <"Muito boa">
+            >
+            ["at3"] = <
+                text = <"Boa">
+                description = <"Boa">
+            >
+            ["at4"] = <
+                text = <"Ruim">
+                description = <"Ruim">
+            >
+            ["at5"] = <
+                text = <"Muito ruim">
+                description = <"Muito ruim">
+            >
+            ["ac1"] = <
+                text = <"Qualidade de vida (pt-br)">
+                description = <"Qualidade de vida (pt-br)">
+            >
+            ["id8"] = <
+                text = <"Dificuldades do trabalhador na execução de atividades">
+                description = <"Dificuldades do trabalhador na execução de atividades">
+            >
+            ["id9"] = <
+                text = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+                description = <"Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola, varrer a casa">
+            >
+            ["at6"] = <
+                text = <"SIM Dificulta muito">
+                description = <"SIM Dificulta muito">
+            >
+            ["at7"] = <
+                text = <"SIM Dificulta um pouco">
+                description = <"SIM Dificulta um pouco">
+            >
+            ["at8"] = <
+                text = <"NÃO Não dificulta de modo algum">
+                description = <"NÃO Não dificulta de modo algum">
+            >
+            ["ac2"] = <
+                text = <"Dificuldade na execução de atividades (pt-br)">
+                description = <"Dificuldade na execução de atividades (pt-br)">
+            >
+            ["id11"] = <
+                text = <"Subir vários lances de escada">
+                description = <"Subir vários lances de escada">
+            >
+            ["id13"] = <
+                text = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+                description = <"Problemas obtidos pelo trabalhador como consequência de sua saúde física">
+            >
+            ["id14"] = <
+                text = <"Realizou menos tarefas do que gostaria">
+                description = <"Realizou menos tarefas do que gostaria">
+            >
+            ["at9"] = <
+                text = <"Todo tempo">
+                description = <"Todo tempo">
+            >
+            ["at10"] = <
+                text = <"A maior parte do tempo">
+                description = <"A maior parte do tempo">
+            >
+            ["at11"] = <
+                text = <"Alguma parte do tempo">
+                description = <"Alguma parte do tempo">
+            >
+            ["at12"] = <
+                text = <"Uma pequena parte do tempo">
+                description = <"Uma pequena parte do tempo">
+            >
+            ["at13"] = <
+                text = <"Nunca">
+                description = <"Nunca">
+            >
+            ["ac3"] = <
+                text = <"Tarefas (pt-br)">
+                description = <"Tarefas (pt-br)">
+            >
+            ["id16"] = <
+                text = <"Quantas vezes a dor interferiu no trabalho">
+                description = <"Quantas vezes a dor interferiu no trabalho">
+            >
+            ["at14"] = <
+                text = <"De maneira nenhuma">
+                description = <"De maneira nenhuma">
+            >
+            ["at15"] = <
+                text = <"Um pouco">
+                description = <"Um pouco">
+            >
+            ["at16"] = <
+                text = <"Moderadamente">
+                description = <"Moderadamente">
+            >
+            ["at17"] = <
+                text = <"Bastante">
+                description = <"Bastante">
+            >
+            ["at18"] = <
+                text = <"Extremamente">
+                description = <"Extremamente">
+            >
+            ["ac4"] = <
+                text = <"Interferiu no trabalho (pt-br)">
+                description = <"Interferiu no trabalho (pt-br)">
+            >
+            ["id18"] = <
+                text = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+                description = <"Como o trabalhador se sente e como tudo acontece com ele durante as últimas 4 semanas.">
+            >
+            ["id19"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido calmo(a) ou tranquilo(a)">
+            >
+            ["id21"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido com muita energia">
+            >
+            ["id23"] = <
+                text = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+                description = <"Quanto tempo o(a) trabalhador(a) tem se sentido desanimado(a) ou abatido(a)">
+            >
+            ["id25"] = <
+                text = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+                description = <"Quanto tempo o trabalhador, nas utlimas 4 semanas, percebeu que sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc.)">
+            >
+            ["id28"] = <
+                text = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+                description = <"Como o trabalhador classifica a qualidade dos relacionamentos que mantém com outras pessoas">
+            >
+            ["id30"] = <
+                text = <"Como o trabalhador se sente em relação a sua vida">
+                description = <"Como o trabalhador se sente em relação a sua vida">
+            >
+            ["id32"] = <
+                text = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+                description = <"Como o trabalhador classifica  o seu nível pessoal de integração/adaptação ao ambiente que o rodeia">
+            >
+            ["at19"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at20"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at21"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["at22"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
+            ["id36"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id43"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+            ["id45"] = <
+                text = <"teste (pt-br)">
+                description = <"teste (pt-br)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at19">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at6", "at7", "at8", "at20">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at9", "at10", "at11", "at12", "at13", "at21">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at14", "at15", "at16", "at17", "at18", "at22">
+        >
+    >
+

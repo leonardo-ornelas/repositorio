@@ -1,0 +1,301 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-OBSERVATION.hipertensao.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Grupo iHealth">
+                ["organization"] = <"Grupo iHealth">
+                ["email"] = <"contato@ihealthgroup.com.br">
+            >
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Grupo iHealth">
+        ["organization"] = <"Grupo iHealth">
+        ["email"] = <"contato@ihealthgroup.com.br">
+    >
+
+definition
+    OBSERVATION[id1] occurrences matches {1} matches {    -- hipertensao
+        data matches {
+            HISTORY[id2] matches {
+                events matches {
+                    EVENT[id3] matches {    -- Qualquer evento
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items matches {
+                                    ELEMENT[id6] occurrences matches {1} matches {    -- Algum médico já disse que o trabalhador tem ou teve hipertensão?
+                                        value matches {
+                                            DV_BOOLEAN[id7] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?
+                                        value matches {
+                                            DV_BOOLEAN[id9] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- O trabalhador usa atualmente algum medicamento para tratar de hipertensão?
+                                        value matches {
+                                            DV_BOOLEAN[id11] matches {
+                                                value matches {True, False}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Hipertensão ou pressão alta?
+                                        value matches {
+                                            DV_CODED_TEXT[id13] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Acidente vascular cerebral ou derrame?
+                                        value matches {
+                                            DV_CODED_TEXT[id15] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Diabetes
+                                        value matches {
+                                            DV_CODED_TEXT[id17] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Infarto
+                                        value matches {
+                                            DV_CODED_TEXT[id20] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Câncer
+                                        value matches {
+                                            DV_CODED_TEXT[id22] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Depressão
+                                        value matches {
+                                            DV_CODED_TEXT[id24] matches {
+                                                defining_code matches {[ac1]}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id5] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"hipertensao">
+                description = <"hipertensao">
+            >
+            ["id3"] = <
+                text = <"Qualquer evento">
+                description = <"Qualquer evento">
+            >
+            ["id6"] = <
+                text = <"Algum médico já disse que o trabalhador tem ou teve hipertensão?">
+                description = <"Algum médico já disse que o trabalhador tem ou teve hipertensão?">
+            >
+            ["id8"] = <
+                text = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?">
+                description = <"O trabalhador já usou em qualquer época da vida algum medicamento para tratar hipertensão?">
+            >
+            ["id10"] = <
+                text = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
+                description = <"O trabalhador usa atualmente algum medicamento para tratar de hipertensão?">
+            >
+            ["id12"] = <
+                text = <"Hipertensão ou pressão alta?">
+                description = <"Hipertensão ou pressão alta?">
+            >
+            ["at1"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at2"] = <
+                text = <"Pai">
+                description = <"Pai">
+            >
+            ["at3"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at4"] = <
+                text = <"Pai">
+                description = <"Pai">
+            >
+            ["at5"] = <
+                text = <"Mãe">
+                description = <"Mãe">
+            >
+            ["at6"] = <
+                text = <"Avô paterno">
+                description = <"Avô paterno">
+            >
+            ["at7"] = <
+                text = <"Avô materno">
+                description = <"Avô materno">
+            >
+            ["at8"] = <
+                text = <"Avó materna">
+                description = <"Avó materna">
+            >
+            ["at9"] = <
+                text = <"Avó paterna">
+                description = <"Avó paterna">
+            >
+            ["ac1"] = <
+                text = <"Historia Familiar">
+                description = <"Historia Familiar">
+            >
+            ["id14"] = <
+                text = <"Acidente vascular cerebral ou derrame?">
+                description = <"Acidente vascular cerebral ou derrame?">
+            >
+            ["id16"] = <
+                text = <"Diabetes">
+                description = <"Diabetes">
+            >
+            ["id19"] = <
+                text = <"Infarto">
+                description = <"Infarto">
+            >
+            ["id21"] = <
+                text = <"Câncer">
+                description = <"Câncer">
+            >
+            ["id23"] = <
+                text = <"Depressão">
+                description = <"Depressão">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"Hypertension">
+                description = <"Hypertension">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Any event">
+            >
+            ["id6"] = <
+                text = <"Has any doctor ever said that the worker has or had hypertension?">
+                description = <"Has any doctor ever said that the worker has or had hypertension?">
+            >
+            ["id8"] = <
+                text = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
+                description = <"Has the worker ever used any medication to treat hypertension at any time in his life?">
+            >
+            ["id10"] = <
+                text = <"Does the worker currently use any medication to treat hypertension?">
+                description = <"Does the worker currently use any medication to treat hypertension?">
+            >
+            ["id12"] = <
+                text = <"Hypertension or high blood pressure?">
+                description = <"Hypertension or high blood pressure?">
+            >
+            ["at1"] = <
+                text = <"None">
+                description = <"None">
+            >
+            ["at2"] = <
+                text = <"Father">
+                description = <"Father">
+            >
+            ["at3"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Pai (pt-br)">
+                description = <"*Pai (pt-br)">
+            >
+            ["at5"] = <
+                text = <"Mother">
+                description = <"Mother">
+            >
+            ["at6"] = <
+                text = <"Paternal grandfather">
+                description = <"Paternal grandfather">
+            >
+            ["at7"] = <
+                text = <"Maternal grandfather">
+                description = <"Maternal grandfather">
+            >
+            ["at8"] = <
+                text = <"Maternal grandmother">
+                description = <"Maternal grandmother">
+            >
+            ["at9"] = <
+                text = <"Paternal grandmother">
+                description = <"Paternal grandmother">
+            >
+            ["ac1"] = <
+                text = <"*Historia Familiar (pt-br)">
+                description = <"*Historia Familiar (pt-br)">
+            >
+            ["id14"] = <
+                text = <"Cerebral vascular accident or leakage?">
+                description = <"Cerebral vascular accident or leakage?">
+            >
+            ["id16"] = <
+                text = <"Diabetes">
+                description = <"Diabetes">
+            >
+            ["id19"] = <
+                text = <"Infarct">
+                description = <"Infarct">
+            >
+            ["id21"] = <
+                text = <"Cancer">
+                description = <"Cancer">
+            >
+            ["id23"] = <
+                text = <"Depression">
+                description = <"Depression">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at3", "at4", "at5", "at6", "at7", "at8", "at9">
+        >
+    >
+

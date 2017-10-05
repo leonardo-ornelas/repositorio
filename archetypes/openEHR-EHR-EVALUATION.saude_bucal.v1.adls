@@ -1,0 +1,923 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-EVALUATION.saude_bucal.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    translations = <
+        ["en"] = <
+            accreditation = <"">
+            language = <[ISO_639-1::en]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    EVALUATION[id1] occurrences matches {1} matches {    -- saude_bucal
+        data matches {
+            ITEM_TREE[id2] occurrences matches {0..1} matches {    -- Avaliação
+                items matches {
+                    ELEMENT[id3] occurrences matches {1} matches {    -- Nome do avaliador
+                        value matches {
+                            DV_TEXT[id4] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {1} matches {    -- Data da avaliação
+                        value matches {
+                            DV_DATE[id6] matches {
+                                value matches {*}
+                            }
+                        }
+                    }
+                    CLUSTER[id7] occurrences matches {0..1} matches {    -- CPOD inovado
+                        items matches {
+                            ELEMENT[id8] occurrences matches {1} matches {    -- Condição Dental - 18
+                                value matches {
+                                    DV_CODED_TEXT[id9] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id10] occurrences matches {1} matches {    -- Tratamento - 18
+                                value matches {
+                                    DV_CODED_TEXT[id11] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id12] occurrences matches {1} matches {    -- Condição Dental-17
+                                value matches {
+                                    DV_CODED_TEXT[id13] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id14] occurrences matches {1} matches {    -- Tratamento- 17
+                                value matches {
+                                    DV_CODED_TEXT[id15] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id16] occurrences matches {1} matches {    -- Condição Dental- 16
+                                value matches {
+                                    DV_CODED_TEXT[id17] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id18] occurrences matches {1} matches {    -- Tratamento- 16
+                                value matches {
+                                    DV_CODED_TEXT[id19] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id20] occurrences matches {1} matches {    -- Condição Dental- 15
+                                value matches {
+                                    DV_CODED_TEXT[id21] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id22] occurrences matches {1} matches {    -- Tratamento- 15
+                                value matches {
+                                    DV_CODED_TEXT[id23] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id24] occurrences matches {1} matches {    -- Condição Dental- 14
+                                value matches {
+                                    DV_CODED_TEXT[id25] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id26] occurrences matches {1} matches {    -- Tratamento- 14
+                                value matches {
+                                    DV_CODED_TEXT[id27] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id28] occurrences matches {1} matches {    -- Condição Dental- 13
+                                value matches {
+                                    DV_CODED_TEXT[id29] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id30] occurrences matches {1} matches {    -- Tratamento- 13
+                                value matches {
+                                    DV_CODED_TEXT[id31] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id32] occurrences matches {1} matches {    -- Condição Dental- 12
+                                value matches {
+                                    DV_CODED_TEXT[id33] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id34] occurrences matches {1} matches {    -- Tratamento- 12
+                                value matches {
+                                    DV_CODED_TEXT[id35] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id36] occurrences matches {1} matches {    -- Condição Dental- 11
+                                value matches {
+                                    DV_CODED_TEXT[id37] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id38] occurrences matches {1} matches {    -- Tratamento- 11
+                                value matches {
+                                    DV_CODED_TEXT[id39] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id40] occurrences matches {1} matches {    -- Condição Dental- 21
+                                value matches {
+                                    DV_CODED_TEXT[id41] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id42] occurrences matches {1} matches {    -- Tratamento- 21
+                                value matches {
+                                    DV_CODED_TEXT[id43] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id44] occurrences matches {1} matches {    -- Condição Dental- 22
+                                value matches {
+                                    DV_CODED_TEXT[id45] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id46] occurrences matches {1} matches {    -- Tratamento- 22
+                                value matches {
+                                    DV_CODED_TEXT[id47] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id48] occurrences matches {1} matches {    -- Condição Dental- 23
+                                value matches {
+                                    DV_CODED_TEXT[id49] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id50] occurrences matches {1} matches {    -- Tratamento- 23
+                                value matches {
+                                    DV_CODED_TEXT[id51] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id52] occurrences matches {1} matches {    -- Condição Dental- 24
+                                value matches {
+                                    DV_CODED_TEXT[id53] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id54] occurrences matches {1} matches {    -- Tratamento- 24
+                                value matches {
+                                    DV_CODED_TEXT[id55] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id56] occurrences matches {1} matches {    -- Condição Dental- 25
+                                value matches {
+                                    DV_CODED_TEXT[id57] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id58] occurrences matches {1} matches {    -- Tratamento- 25
+                                value matches {
+                                    DV_CODED_TEXT[id59] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id60] occurrences matches {1} matches {    -- Condição Dental- 26
+                                value matches {
+                                    DV_CODED_TEXT[id61] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id62] occurrences matches {1} matches {    -- Tratamento- 26
+                                value matches {
+                                    DV_CODED_TEXT[id63] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id64] occurrences matches {1} matches {    -- Condição Dental- 27
+                                value matches {
+                                    DV_CODED_TEXT[id65] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id66] occurrences matches {1} matches {    -- Tratamento- 27
+                                value matches {
+                                    DV_CODED_TEXT[id67] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id68] occurrences matches {1} matches {    -- Condição Dental- 28
+                                value matches {
+                                    DV_CODED_TEXT[id69] matches {
+                                        defining_code matches {[ac1]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id70] occurrences matches {1} matches {    -- Tratamento- 28
+                                value matches {
+                                    DV_CODED_TEXT[id71] matches {
+                                        defining_code matches {[ac2]}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[id72] occurrences matches {0..1} matches {    -- Condições Protéticas
+                        items matches {
+                            ELEMENT[id73] occurrences matches {1} matches {    -- Condição Protética Superior
+                                value matches {
+                                    DV_CODED_TEXT[id74] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id75] occurrences matches {1} matches {    -- Condição Protética Inferior
+                                value matches {
+                                    DV_CODED_TEXT[id76] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id77] occurrences matches {1} matches {    -- Necessidade de Prótese Superior
+                                value matches {
+                                    DV_CODED_TEXT[id78] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id79] occurrences matches {1} matches {    -- Necessidade de Prótese Inferior
+                                value matches {
+                                    DV_CODED_TEXT[id80] matches {
+                                        defining_code matches {[ac3]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id81] occurrences matches {1} matches {    -- Lesões de mucosa bucal
+                                value matches {
+                                    DV_CODED_TEXT[id82] matches {
+                                        defining_code matches {[ac4]}
+                                    }
+                                }
+                            }
+                            ELEMENT[id83] occurrences matches {1} matches {    -- Necessidade de consulta odontológica
+                                value matches {
+                                    DV_BOOLEAN[id84] matches {
+                                        value matches {True, False}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"saude_bucal">
+                description = <"saude_bucal">
+            >
+            ["id2"] = <
+                text = <"Avaliação">
+                description = <"Avaliação">
+            >
+            ["id3"] = <
+                text = <"Nome do avaliador">
+                description = <"Nome do avaliador">
+            >
+            ["id5"] = <
+                text = <"Data da avaliação">
+                description = <"Data da avaliação">
+            >
+            ["id7"] = <
+                text = <"CPOD inovado">
+                description = <"CPOD inovado">
+            >
+            ["id8"] = <
+                text = <"Condição Dental - 18">
+                description = <"Condição Dental - 18">
+            >
+            ["at1"] = <
+                text = <"Não erupcionado">
+                description = <"Não erupcionado">
+            >
+            ["at2"] = <
+                text = <"Cárie de esmalte/ dentina">
+                description = <"Cárie de esmalte/ dentina">
+            >
+            ["at3"] = <
+                text = <"Cárie c/ envolvimento pulpar">
+                description = <"Cárie c/ envolvimento pulpar">
+            >
+            ["at4"] = <
+                text = <"Restaurado">
+                description = <"Restaurado">
+            >
+            ["at5"] = <
+                text = <"Extraído">
+                description = <"Extraído">
+            >
+            ["at6"] = <
+                text = <"Hígido">
+                description = <"Hígido">
+            >
+            ["at7"] = <
+                text = <"Traumatismo">
+                description = <"Traumatismo">
+            >
+            ["at8"] = <
+                text = <"Sem diagnóstico">
+                description = <"Sem diagnóstico">
+            >
+            ["ac1"] = <
+                text = <"Condição dental">
+                description = <"Condição dental">
+            >
+            ["id10"] = <
+                text = <"Tratamento - 18">
+                description = <"Tratamento - 18">
+            >
+            ["at9"] = <
+                text = <"Nenhum">
+                description = <"Nenhum">
+            >
+            ["at10"] = <
+                text = <"Selante">
+                description = <"Selante">
+            >
+            ["at11"] = <
+                text = <"Restaurações diretas">
+                description = <"Restaurações diretas">
+            >
+            ["at12"] = <
+                text = <"Restaurações indiretas">
+                description = <"Restaurações indiretas">
+            >
+            ["at13"] = <
+                text = <"Tratamento endodôntico">
+                description = <"Tratamento endodôntico">
+            >
+            ["at14"] = <
+                text = <"Extração indicada">
+                description = <"Extração indicada">
+            >
+            ["at15"] = <
+                text = <"Outros procedimentos">
+                description = <"Outros procedimentos">
+            >
+            ["at16"] = <
+                text = <"Sem diagnóstico">
+                description = <"Sem diagnóstico">
+            >
+            ["ac2"] = <
+                text = <"Tratamento">
+                description = <"Tratamento">
+            >
+            ["id12"] = <
+                text = <"Condição Dental-17">
+                description = <"Condição Dental-17">
+            >
+            ["id14"] = <
+                text = <"Tratamento- 17">
+                description = <"Tratamento- 17">
+            >
+            ["id16"] = <
+                text = <"Condição Dental- 16">
+                description = <"Condição Dental- 16">
+            >
+            ["id18"] = <
+                text = <"Tratamento- 16">
+                description = <"Tratamento- 16">
+            >
+            ["id20"] = <
+                text = <"Condição Dental- 15">
+                description = <"Condição Dental- 15">
+            >
+            ["id22"] = <
+                text = <"Tratamento- 15">
+                description = <"Tratamento- 15">
+            >
+            ["id24"] = <
+                text = <"Condição Dental- 14">
+                description = <"Condição Dental- 14">
+            >
+            ["id26"] = <
+                text = <"Tratamento- 14">
+                description = <"Tratamento- 14">
+            >
+            ["id28"] = <
+                text = <"Condição Dental- 13">
+                description = <"Condição Dental- 13">
+            >
+            ["id30"] = <
+                text = <"Tratamento- 13">
+                description = <"Tratamento- 13">
+            >
+            ["id32"] = <
+                text = <"Condição Dental- 12">
+                description = <"Condição Dental- 12">
+            >
+            ["id34"] = <
+                text = <"Tratamento- 12">
+                description = <"Tratamento- 12">
+            >
+            ["id36"] = <
+                text = <"Condição Dental- 11">
+                description = <"Condição Dental- 11">
+            >
+            ["id38"] = <
+                text = <"Tratamento- 11">
+                description = <"Tratamento- 11">
+            >
+            ["id40"] = <
+                text = <"Condição Dental- 21">
+                description = <"Condição Dental- 21">
+            >
+            ["id42"] = <
+                text = <"Tratamento- 21">
+                description = <"Tratamento- 21">
+            >
+            ["id44"] = <
+                text = <"Condição Dental- 22">
+                description = <"Condição Dental- 22">
+            >
+            ["id46"] = <
+                text = <"Tratamento- 22">
+                description = <"Tratamento- 22">
+            >
+            ["id48"] = <
+                text = <"Condição Dental- 23">
+                description = <"Condição Dental- 23">
+            >
+            ["id50"] = <
+                text = <"Tratamento- 23">
+                description = <"Tratamento- 23">
+            >
+            ["id52"] = <
+                text = <"Condição Dental- 24">
+                description = <"Condição Dental- 24">
+            >
+            ["id54"] = <
+                text = <"Tratamento- 24">
+                description = <"Tratamento- 24">
+            >
+            ["id56"] = <
+                text = <"Condição Dental- 25">
+                description = <"Condição Dental- 25">
+            >
+            ["id58"] = <
+                text = <"Tratamento- 25">
+                description = <"Tratamento- 25">
+            >
+            ["id60"] = <
+                text = <"Condição Dental- 26">
+                description = <"Condição Dental- 26">
+            >
+            ["id62"] = <
+                text = <"Tratamento- 26">
+                description = <"Tratamento- 26">
+            >
+            ["id64"] = <
+                text = <"Condição Dental- 27">
+                description = <"Condição Dental- 27">
+            >
+            ["id66"] = <
+                text = <"Tratamento- 27">
+                description = <"Tratamento- 27">
+            >
+            ["id68"] = <
+                text = <"Condição Dental- 28">
+                description = <"Condição Dental- 28">
+            >
+            ["id70"] = <
+                text = <"Tratamento- 28">
+                description = <"Tratamento- 28">
+            >
+            ["id72"] = <
+                text = <"Condições Protéticas">
+                description = <"Condições Protéticas">
+            >
+            ["id73"] = <
+                text = <"Condição Protética Superior">
+                description = <"Condição Protética Superior">
+            >
+            ["at17"] = <
+                text = <"Sem prótese">
+                description = <"Sem prótese">
+            >
+            ["at18"] = <
+                text = <"Prótese fixa">
+                description = <"Prótese fixa">
+            >
+            ["at19"] = <
+                text = <"Prótese parcial removível">
+                description = <"Prótese parcial removível">
+            >
+            ["at20"] = <
+                text = <"Próteses fixas e removíveis">
+                description = <"Próteses fixas e removíveis">
+            >
+            ["at21"] = <
+                text = <"Prótese total">
+                description = <"Prótese total">
+            >
+            ["at22"] = <
+                text = <"Não registrado">
+                description = <"Não registrado">
+            >
+            ["ac3"] = <
+                text = <"Condição protética">
+                description = <"Condição protética">
+            >
+            ["id75"] = <
+                text = <"Condição Protética Inferior">
+                description = <"Condição Protética Inferior">
+            >
+            ["id77"] = <
+                text = <"Necessidade de Prótese Superior">
+                description = <"Necessidade de Prótese Superior">
+            >
+            ["id79"] = <
+                text = <"Necessidade de Prótese Inferior">
+                description = <"Necessidade de Prótese Inferior">
+            >
+            ["id81"] = <
+                text = <"Lesões de mucosa bucal">
+                description = <"Lesões de mucosa bucal">
+            >
+            ["at23"] = <
+                text = <"Presença">
+                description = <"Presença">
+            >
+            ["at24"] = <
+                text = <"Ausência">
+                description = <"Ausência">
+            >
+            ["ac4"] = <
+                text = <"Lesão">
+                description = <"Lesão">
+            >
+            ["id83"] = <
+                text = <"Necessidade de consulta odontológica">
+                description = <"Necessidade de consulta odontológica">
+            >
+        >
+        ["en"] = <
+            ["id1"] = <
+                text = <"oral health">
+                description = <"oral health">
+            >
+            ["id2"] = <
+                text = <"evaluation">
+                description = <"evaluation">
+            >
+            ["id3"] = <
+                text = <"Evaluator's name">
+                description = <"Evaluator's name">
+            >
+            ["id5"] = <
+                text = <"Date of evaluation">
+                description = <"Date of evaluation">
+            >
+            ["id7"] = <
+                text = <"innovated CPOD">
+                description = <"innovated CPOD">
+            >
+            ["id8"] = <
+                text = <"Dental Condition - 18">
+                description = <"Dental Condition - 18">
+            >
+            ["at1"] = <
+                text = <"*Não erupcionado (pt-br)">
+                description = <"*Não erupcionado (pt-br)">
+            >
+            ["at2"] = <
+                text = <"*Cárie de esmalte/ dentina (pt-br)">
+                description = <"*Cárie de esmalte/ dentina (pt-br)">
+            >
+            ["at3"] = <
+                text = <"*Cárie c/ envolvimento pulpar (pt-br)">
+                description = <"*Cárie c/ envolvimento pulpar (pt-br)">
+            >
+            ["at4"] = <
+                text = <"*Restaurado (pt-br)">
+                description = <"*Restaurado (pt-br)">
+            >
+            ["at5"] = <
+                text = <"*Extraído (pt-br)">
+                description = <"*Extraído (pt-br)">
+            >
+            ["at6"] = <
+                text = <"*Hígido (pt-br)">
+                description = <"*Hígido (pt-br)">
+            >
+            ["at7"] = <
+                text = <"*Traumatismo (pt-br)">
+                description = <"*Traumatismo (pt-br)">
+            >
+            ["at8"] = <
+                text = <"*Sem diagnóstico (pt-br)">
+                description = <"*Sem diagnóstico (pt-br)">
+            >
+            ["ac1"] = <
+                text = <"*Condição dental (pt-br)">
+                description = <"*Condição dental (pt-br)">
+            >
+            ["id10"] = <
+                text = <"Treatment - 18">
+                description = <"Treatment - 18">
+            >
+            ["at9"] = <
+                text = <"*Nenhum (pt-br)">
+                description = <"*Nenhum (pt-br)">
+            >
+            ["at10"] = <
+                text = <"*Selante (pt-br)">
+                description = <"*Selante (pt-br)">
+            >
+            ["at11"] = <
+                text = <"*Restaurações diretas (pt-br)">
+                description = <"*Restaurações diretas (pt-br)">
+            >
+            ["at12"] = <
+                text = <"*Restaurações indiretas (pt-br)">
+                description = <"*Restaurações indiretas (pt-br)">
+            >
+            ["at13"] = <
+                text = <"*Tratamento endodôntico (pt-br)">
+                description = <"*Tratamento endodôntico (pt-br)">
+            >
+            ["at14"] = <
+                text = <"*Extração indicada (pt-br)">
+                description = <"*Extração indicada (pt-br)">
+            >
+            ["at15"] = <
+                text = <"*Outros procedimentos (pt-br)">
+                description = <"*Outros procedimentos (pt-br)">
+            >
+            ["at16"] = <
+                text = <"*Sem diagnóstico (pt-br)">
+                description = <"*Sem diagnóstico (pt-br)">
+            >
+            ["ac2"] = <
+                text = <"*Tratamento (pt-br)">
+                description = <"*Tratamento (pt-br)">
+            >
+            ["id12"] = <
+                text = <"Dental Condition-17">
+                description = <"Dental Condition-17">
+            >
+            ["id14"] = <
+                text = <"Tratament- 17">
+                description = <"Tratament- 17">
+            >
+            ["id16"] = <
+                text = <"Dental Condition-16">
+                description = <"Dental Condition-16">
+            >
+            ["id18"] = <
+                text = <"Tratamento- 16">
+                description = <"Tratamento- 16">
+            >
+            ["id20"] = <
+                text = <"Dental Condition- 15">
+                description = <"Dental Condition- 15">
+            >
+            ["id22"] = <
+                text = <"Tratament- 15">
+                description = <"Tratament- 15">
+            >
+            ["id24"] = <
+                text = <"Dental Condition- 14">
+                description = <"Dental Condition- 14">
+            >
+            ["id26"] = <
+                text = <"Tratament- 14">
+                description = <"Tratament- 14">
+            >
+            ["id28"] = <
+                text = <"Dental Condition- 13">
+                description = <"Dental Condition- 13">
+            >
+            ["id30"] = <
+                text = <"Tratament- 13">
+                description = <"Tratament- 13">
+            >
+            ["id32"] = <
+                text = <"Dental Condition- 12">
+                description = <"Dental Condition- 12">
+            >
+            ["id34"] = <
+                text = <"Tratament- 12">
+                description = <"Tratament- 12">
+            >
+            ["id36"] = <
+                text = <"Dental Condition- 11">
+                description = <"Dental Condition- 11">
+            >
+            ["id38"] = <
+                text = <"Tratament- 11">
+                description = <"Tratament- 11">
+            >
+            ["id40"] = <
+                text = <"*Condição Dental- 21 (pt-br)">
+                description = <"*Condição Dental- 21 (pt-br)">
+            >
+            ["id42"] = <
+                text = <"Tratament- 21">
+                description = <"Tratament- 21">
+            >
+            ["id44"] = <
+                text = <"Dental Condition- 22">
+                description = <"Dental Condition- 22">
+            >
+            ["id46"] = <
+                text = <"Tratament- 22">
+                description = <"Tratament- 22">
+            >
+            ["id48"] = <
+                text = <"Dental Condition- 23">
+                description = <"Dental Condition- 23">
+            >
+            ["id50"] = <
+                text = <"Tratament- 23">
+                description = <"Tratament- 23">
+            >
+            ["id52"] = <
+                text = <"Dental Condition-24">
+                description = <"Dental Condition-24">
+            >
+            ["id54"] = <
+                text = <"Tratament- 24">
+                description = <"Tratament- 24">
+            >
+            ["id56"] = <
+                text = <"Dental Condition-25">
+                description = <"Dental Condition-25">
+            >
+            ["id58"] = <
+                text = <"Tratament- 25">
+                description = <"Tratament- 25">
+            >
+            ["id60"] = <
+                text = <"Dental Condition-26">
+                description = <"Dental Condition-26">
+            >
+            ["id62"] = <
+                text = <"Tratament- 26">
+                description = <"Tratament- 26">
+            >
+            ["id64"] = <
+                text = <"Dental Condition-27">
+                description = <"Dental Condition-27">
+            >
+            ["id66"] = <
+                text = <"Tratament- 27">
+                description = <"Tratament- 27">
+            >
+            ["id68"] = <
+                text = <"Dental Condition-28">
+                description = <"Dental Condition-28">
+            >
+            ["id70"] = <
+                text = <"Tratament- 28">
+                description = <"Tratament- 28">
+            >
+            ["id72"] = <
+                text = <"Prosthetic Conditions">
+                description = <"Prosthetic Conditions">
+            >
+            ["id73"] = <
+                text = <"Superior Prosthetic Condition">
+                description = <"Superior Prosthetic Condition">
+            >
+            ["at17"] = <
+                text = <"*Sem prótese (pt-br)">
+                description = <"*Sem prótese (pt-br)">
+            >
+            ["at18"] = <
+                text = <"*Prótese fixa (pt-br)">
+                description = <"*Prótese fixa (pt-br)">
+            >
+            ["at19"] = <
+                text = <"*Prótese parcial removível (pt-br)">
+                description = <"*Prótese parcial removível (pt-br)">
+            >
+            ["at20"] = <
+                text = <"*Próteses fixas e removíveis (pt-br)">
+                description = <"*Próteses fixas e removíveis (pt-br)">
+            >
+            ["at21"] = <
+                text = <"*Prótese total (pt-br)">
+                description = <"*Prótese total (pt-br)">
+            >
+            ["at22"] = <
+                text = <"*Não registrado (pt-br)">
+                description = <"*Não registrado (pt-br)">
+            >
+            ["ac3"] = <
+                text = <"*Condição protética (pt-br)">
+                description = <"*Condição protética (pt-br)">
+            >
+            ["id75"] = <
+                text = <"Inferior Prosthetic Condition">
+                description = <"Inferior Prosthetic Condition">
+            >
+            ["id77"] = <
+                text = <"Need for Higher Prosthesis">
+                description = <"Need for Higher Prosthesis">
+            >
+            ["id79"] = <
+                text = <"Inferior Prosthesis Needed">
+                description = <"Inferior Prosthesis Needed">
+            >
+            ["id81"] = <
+                text = <"Mucosal lesions">
+                description = <"Mucosal lesions">
+            >
+            ["at23"] = <
+                text = <"*Presença (pt-br)">
+                description = <"*Presença (pt-br)">
+            >
+            ["at24"] = <
+                text = <"*Ausência (pt-br)">
+                description = <"*Ausência (pt-br)">
+            >
+            ["ac4"] = <
+                text = <"*Lesão (pt-br)">
+                description = <"*Lesão (pt-br)">
+            >
+            ["id83"] = <
+                text = <"Need for dental consultation">
+                description = <"Need for dental consultation">
+            >
+        >
+    >
+    value_sets = <
+        ["ac1"] = <
+            id = <"ac1">
+            members = <"at1", "at2", "at3", "at4", "at5", "at6", "at7", "at8">
+        >
+        ["ac2"] = <
+            id = <"ac2">
+            members = <"at9", "at10", "at11", "at12", "at13", "at14", "at15", "at16">
+        >
+        ["ac3"] = <
+            id = <"ac3">
+            members = <"at17", "at18", "at19", "at20", "at21", "at22">
+        >
+        ["ac4"] = <
+            id = <"ac4">
+            members = <"at23", "at24">
+        >
+    >
+
