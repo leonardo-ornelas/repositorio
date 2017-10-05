@@ -23,6 +23,7 @@ definition
             SECTION[id5] occurrences matches {0..1} matches {
                 items matches {
                     use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0]
+                    use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
                 }
             }
             SECTION[id7] occurrences matches {0..1} matches {
@@ -325,6 +326,225 @@ terminology
             ["id0.18.1"] = <
                 text = <"Tempo total gasto com a prática de atividades vigorosas por dia">
                 description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1.1] matches {    -- Tobacco Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.0.0.1] occurrences matches {0} matches {    -- Substance
+                value matches {
+                    DV_CODED_TEXT[id20.1.0.1] matches {
+                        defining_code matches {[at0.2]}
+                    }
+                }
+            }
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12.0.0.1] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.1] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.1] occurrences matches {0} matches {    -- Method of use
+                        value matches {
+                            DV_TEXT[id22.0.0.1] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
+                        /value[id0.0.3]/value matches {True, False}
+                    }
+                }
+                items matches {
+                    ELEMENT[id12.0.0.2] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.2] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.2] occurrences matches {0} matches {    -- Method of use
+                        value matches {
+                            DV_TEXT[id22.0.0.2] matches {
+                                defining_code matches {[ac0.0.2]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6.0.0.1] occurrences matches {0} matches {    -- Frequency
+                        value matches {
+                            DV_CODED_TEXT[id23.0.0.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id14.0.0.1] occurrences matches {0} matches {    -- Triggers
+                value matches {
+                    DV_TEXT[id24.0.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id15] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+            ELEMENT[id17.0.0.1] occurrences matches {0} matches {    -- Evidence of dependence
+                value matches {
+                    DV_TEXT[id25.0.0.1] 
+                }
+            }
+            ELEMENT[id0.0.4.1] occurrences matches {0} matches {    -- Exposure
+                value matches {
+                    DV_BOOLEAN[id0.0.5.1] matches {
+                        value matches {True, False}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substance">
+                description = <"Identification of substance">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequency">
+                description = <"Frequency of use of substance">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Number smoked">
+                description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Grams of tobacco">
+                description = <"Weight of tobacco consumed eg in a pipe">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause use">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidence of dependence">
+                description = <"Description of any evidence of dependence on the substance">
+            >
+            ["id0.0.4.1"] = <
+                text = <"Exposure">
+                description = <"Exposure to smoke">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1.1"] = <
+                text = <"Uso de tabaco">
+                description = <"Arquétipo para registrar o uso ou o consumo real de um tabaco no momento presente, um tempo específico ou durante um período de tempo.">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substância">
+                description = <"Identificação da substância">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequência">
+                description = <"Frequência do uso da substância.">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Número de unidades de tabaco">
+                description = <"Número de unidades contendo tabaco consumido, por exemplo, cigarros ou charutos.">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Gramas de tabaco">
+                description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificadores de gatilhos que estimulam ou causam uso.">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
+            >
+            ["id0.0.4.1"] = <
+                text = <"Exposição">
+                description = <"Exposição á fumaça">
             >
         >
     >
