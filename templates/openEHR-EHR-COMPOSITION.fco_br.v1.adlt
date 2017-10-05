@@ -51,7 +51,6 @@ definition
                     use_archetype OBSERVATION[id39.1, openEHR-EHR-OBSERVATION.ovl-fco_br-height-001.v1.0.0]
                     use_archetype OBSERVATION[id40.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_mass_index-001.v1.0.0]
                     use_archetype OBSERVATION[id41.1, openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0]
-                    use_archetype OBSERVATION[id42.1, openEHR-EHR-OBSERVATION.ovl-fco_br-waist_hip-001.v1.0.0]
                     use_archetype OBSERVATION[id43.1, openEHR-EHR-OBSERVATION.ovl-fco_br-blood_pressure-001.v1.0.0]
                 }
             }
@@ -1917,91 +1916,6 @@ terminology
             ["id1.1"] = <
                 text = <"Frequência cardíaca">
                 description = <"Frequência cardíaca">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-fco_br-waist_hip-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.waist_hip.v1.0.0
-
-definition
-    OBSERVATION[id1.1] matches {    -- Waist and hip circumference
-        /data[id2]/events[id3]/data[id4]/items matches {
-            ELEMENT[id5] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id8] matches {
-                        property matches {[at1]}
-                        units matches {"cm", "in"}
-                    }
-                }
-            }
-            ELEMENT[id6.1] occurrences matches {0} matches {    -- Hip circumference
-                value matches {
-                    DV_QUANTITY[id9.1] matches {
-                        property matches {[at1]}
-                        magnitude matches {|>=0.0|}
-                        precision matches {|1|}
-                        units matches {"cm"}
-                    }
-                }
-            }
-            ELEMENT[id7.1] occurrences matches {0} matches {    -- Waist:hip ratio
-                value matches {
-                    DV_PROPORTION[id10.1] matches {
-                        type matches {|1|}
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"Waist and hip circumference">
-                description = <"The waist (or girth) and hip circumference">
-            >
-            ["id7.1"] = <
-                text = <"Waist:hip ratio">
-                description = <"Ratio with unitary denominator">
-            >
-            ["id6.1"] = <
-                text = <"Hip circumference">
-                description = <"Measurement of body circumference at the widest point of the buttocks">
-            >
-        >
-        ["ar-sy"] = <
-            ["id1.1"] = <
-                text = <"كفاف الوِرك و الخصر">
-                description = <"كفاف الخصر (الحزام) و الورك">
-            >
-            ["id7.1"] = <
-                text = <"نسبة الخصر إلى الوِرك">
-                description = <"*Ratio with unitary denominator(en)">
-            >
-            ["id6.1"] = <
-                text = <"كِفاف الوِرك">
-                description = <"قياس كِفاف الجسم عند أعرض نقطة من الألية">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Circunferência da cintura e do quadril">
-                description = <"A cintura (ou circunferência) e circunferência do quadril">
-            >
-            ["id7.1"] = <
-                text = <"Relação cintura quadril">
-                description = <"Ratio com denominador unitário">
-            >
-            ["id6.1"] = <
-                text = <"Circunferência do quadril">
-                description = <"Medição da circunferência corporal no ponto mais largo das nádegas">
             >
         >
     >
