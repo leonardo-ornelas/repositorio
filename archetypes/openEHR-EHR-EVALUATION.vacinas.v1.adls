@@ -218,8 +218,8 @@ terminology
                 description = <"A data ou a data parcial, quando o último servo de vacinação foi administrado.">
             >
             ["id11"] = <
-                text = <"*Vaccination Status (en)">
-                description = <"*The vaccination status for the specific infectious disease or agent. (en)">
+                text = <"Status de vacinação">
+                description = <"O estado da vacinação para doenças ou agentes infecciosos específicos.">
             >
             ["at12"] = <
                 text = <"*Vaccination Not Required (en)">
@@ -230,16 +230,16 @@ terminology
                 description = <"*Vaccination is required. (en)">
             >
             ["id15"] = <
-                text = <"*Next Review Due (en)">
-                description = <"*The date when a review of the immunisation summary is next due. (en)">
+                text = <"Próxima revisão devida">
+                description = <"A data em que uma revisão do resumo da vacinação é devida.">
             >
             ["id16"] = <
-                text = <"*Last Updated (en)">
-                description = <"*The date when the immunisation summary was last updated. (en)">
+                text = <"Ultima atualização">
+                description = <"A data em que o resumo da imunização foi atualizado pela última vez.">
             >
             ["id17"] = <
-                text = <"*Specific Vaccine (en)">
-                description = <"*Details about the vaccination status for a specified vaccine. (en)">
+                text = <"Vacina específica">
+                description = <"Detalhes sobre o status de vacinação para uma vacina especificada.">
             >
             ["at18"] = <
                 text = <"*Vaccination Not Indicated (en)">
@@ -250,12 +250,12 @@ terminology
                 description = <"*Vaccination for this infectious disease or agent has been declined by the subject or carer. (en)">
             >
             ["id20"] = <
-                text = <"*Overall Vaccination Status (en)">
-                description = <"*Statement about the status for all vaccines. (en)">
+                text = <"Status geral de vacinação">
+                description = <"Declaração sobre o status de todas as vacinas.">
             >
             ["id21"] = <
-                text = <"*Next Due (en)">
-                description = <"*Date when the next vaccination is due. (en)">
+                text = <"Próxima vacina">
+                description = <"Data em que a próxima vacinação é obrigatória.">
             >
             ["at22"] = <
                 text = <"*No Vaccinations Required (en)">
@@ -270,12 +270,12 @@ terminology
                 description = <"*The subject, or carer, has declined all vaccination administration. (en)">
             >
             ["id25"] = <
-                text = <"*Comment (en)">
-                description = <"*Additional narrative about a specific vaccine that is not captured in structured fields. (en)">
+                text = <"Comentário">
+                description = <"Narração adicional sobre uma vacina específica que não é capturada em campos estruturados.">
             >
             ["id26"] = <
-                text = <"*Description (en)">
-                description = <"*Narrative description about the vaccination status. (en)">
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre o status de vacinação">
             >
             ["ac1"] = <
                 text = <"*Overall Vaccination Status (synthesised) (en)">
@@ -290,8 +290,8 @@ terminology
                 description = <"*Status of the primary course of immunisation. (synthesised) (en)">
             >
             ["id1.1"] = <
-                text = <"*Immunisation Summary (en)">
-                description = <"*Summary statements about the current immunisation status for an identified infectious disease or agent. (en)">
+                text = <"Resumo da imunização">
+                description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
             >
         >
     >
