@@ -36,11 +36,11 @@
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
     "sha" : "9dd140f91a82ad8ff4220f17f4056d0a51d352b6"
   }, {
-    "id" : null,
+    "id" : "openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
-    "sha" : "724037f02a1a57c62019a267e03a73cbf6596363"
+    "sha" : "098010e96e84787191be986ecc98415b2aea6250"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.asasa.v1.0.0",
     "rmType" : "COMPOSITION",
