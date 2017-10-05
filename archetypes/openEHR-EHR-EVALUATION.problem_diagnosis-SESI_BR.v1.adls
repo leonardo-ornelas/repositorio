@@ -632,8 +632,8 @@ terminology
                 description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised) (en)">
             >
             ["id0.4"] = <
-                text = <"Problemas/Diagnósticos (en)">
-                description = <"Problemas/Diagnósticos (en)">
+                text = <"Problemas/Diagnósticos">
+                description = <"Problemas/Diagnósticos">
             >
             ["id0.5"] = <
                 text = <"D.P da infância">
