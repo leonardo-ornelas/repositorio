@@ -102,10 +102,24 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Mammography
+            ELEMENT[id0.5] occurrences matches {0..1} matches {    -- Preventivo ginecológico
                 value matches {
-                    DV_CODED_TEXT[id0.3] matches {
-                        defining_code matches {[ac0.7]}
+                    DV_BOOLEAN[id0.6] matches {
+                        value matches {True, False; false}
+                    }
+                }
+            }
+            ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Mamografia
+                value matches {
+                    DV_BOOLEAN[id0.8] matches {
+                        value matches {True, False; false}
+                    }
+                }
+            }
+            ELEMENT[id0.9] occurrences matches {0..1} matches {    -- PSA
+                value matches {
+                    DV_BOOLEAN[id0.10] matches {
+                        value matches {True, False; false}
                     }
                 }
             }
@@ -275,10 +289,6 @@ terminology
                 text = <"Main type of physical activity practiced in their leisure time.">
                 description = <"Main type of physical activity practiced in their leisure time.">
             >
-            ["id0.2"] = <
-                text = <"Mammography">
-                description = <"Record if you have had a mammogram in the last year">
-            >
             ["at0.34"] = <
                 text = <"Yes">
                 description = <"Yes">
@@ -406,6 +416,18 @@ terminology
             ["at23"] = <
                 text = <"complete">
                 description = <"complete">
+            >
+            ["id0.5"] = <
+                text = <"Preventivo ginecológico">
+                description = <"Preventivo ginecológico">
+            >
+            ["id0.7"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["id0.9"] = <
+                text = <"PSA">
+                description = <"PSA">
             >
         >
         ["pt-br"] = <
@@ -569,10 +591,6 @@ terminology
                 text = <"*Main type of physical activity practiced in their leisure time. (en)">
                 description = <"*Main type of physical activity practiced in their leisure time. (en)">
             >
-            ["id0.2"] = <
-                text = <"Mamografia">
-                description = <"Grave se você fez uma mamografia no último ano">
-            >
             ["at0.34"] = <
                 text = <"Sim">
                 description = <"Sim">
@@ -700,6 +718,18 @@ terminology
             ["at23"] = <
                 text = <"completo">
                 description = <"completo">
+            >
+            ["id0.5"] = <
+                text = <"Preventivo ginecológico">
+                description = <"Preventivo ginecológico">
+            >
+            ["id0.7"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["id0.9"] = <
+                text = <"PSA">
+                description = <"PSA">
             >
         >
     >
