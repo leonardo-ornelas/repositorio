@@ -404,20 +404,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.0.6] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.0.6.1] matches {
@@ -429,6 +415,20 @@ definition
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -624,12 +624,12 @@ definition
                     }
                 }
             }
-            POINT_EVENT[id24] matches {
+            POINT_EVENT[id24.0.1] occurrences matches {0} matches {    -- Specified Day
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
                 }
             }
-            INTERVAL_EVENT[id23] matches {
+            INTERVAL_EVENT[id23.0.1] occurrences matches {0} matches {    -- Average Consumption Interval
                 /math_function[id37]/defining_code matches {[at3]}
                 data matches {
                     use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
@@ -637,17 +637,17 @@ definition
             }
         }
         /protocol[id25]/items matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
+            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Standard Drink Definition
                 value matches {
-                    DV_QUANTITY[id39] matches {
+                    DV_QUANTITY[id39.0.1] matches {
                         property matches {[at4]}
                         units matches {"gm"}
                     }
                 }
             }
-            ELEMENT[id27] occurrences matches {0..1} matches {
+            ELEMENT[id27.0.1] occurrences matches {0} matches {    -- Average Use Frequency
                 value matches {
-                    DV_QUANTITY[id40] matches {
+                    DV_QUANTITY[id40.0.1] matches {
                         property matches {[at1]}
                         units matches {"/d", "/wk", "/mo"}
                     }
@@ -687,6 +687,22 @@ terminology
                 text = <"Comment">
                 description = <"Additional narrative about the alcohol consumption not captured in other fields.">
             >
+            ["id24.0.1"] = <
+                text = <"Specified Day">
+                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
+            >
+            ["id23.0.1"] = <
+                text = <"Average Consumption Interval">
+                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
+            >
+            ["id26.0.1"] = <
+                text = <"Standard Drink Definition">
+                description = <"Amount of alcohol defining a standard drink.">
+            >
+            ["id27.0.1"] = <
+                text = <"Average Use Frequency">
+                description = <"Frequency of 'Average Use' per time interval.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -716,6 +732,22 @@ terminology
             ["id22.0.1"] = <
                 text = <"Comentário">
                 description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
+            >
+            ["id24.0.1"] = <
+                text = <"Dia específico">
+                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
+            >
+            ["id23.0.1"] = <
+                text = <"Intervalo médio consumido">
+                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
+            >
+            ["id26.0.1"] = <
+                text = <"Definição de dose padrão">
+                description = <"Definição da quantidade de álcool na dose padrão">
+            >
+            ["id27.0.1"] = <
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
         >
     >
