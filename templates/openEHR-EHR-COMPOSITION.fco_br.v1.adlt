@@ -24,7 +24,6 @@ definition
                 items matches {
                     use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0]
                     use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
-                    use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0]
                 }
             }
             SECTION[id7] occurrences matches {0..1} matches {
@@ -404,21 +403,36 @@ definition
                             }
                         }
                     }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
+                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
+                        /value[id0.0.3]/value matches {True, False}
                     }
                 }
             }
@@ -546,140 +560,6 @@ terminology
             ["id0.0.4.1"] = <
                 text = <"Exposição">
                 description = <"Exposição á fumaça">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.0.0
-
-definition
-    OBSERVATION[id1.1.1] matches {    -- Alcohol Use
-        /data[id2]/events matches {
-            EVENT[id3] occurrences matches {0..1} matches {
-                /data[id4]/items matches {
-                    CLUSTER[id6.0.1] occurrences matches {0} matches {    -- Consumption Details
-                        /items[id16]/items[id17]/value matches {
-                            DV_QUANTITY[id31] matches {
-                                property matches {[at2]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
-                    ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Behavioural Issues
-                        value matches {
-                            DV_TEXT[id34.0.1] 
-                        }
-                    }
-                    allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
-                        include
-                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
-                    }
-                    ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Comment
-                        value matches {
-                            DV_TEXT[id35.0.1] 
-                        }
-                    }
-                    CLUSTER[id0.3] occurrences matches {0..1} matches {
-                        items matches {
-                            use_node ELEMENT /protocol[id25]/items[id27]
-                            use_node ELEMENT /protocol[id25]/items[id26]
-                            ELEMENT[id0.6] occurrences matches {0..1} matches {
-                                /value[id0.7]/defining_code matches {[ac0.1]}
-                            }
-                        }
-                    }
-                }
-            }
-            POINT_EVENT[id24.0.1] occurrences matches {0} matches {    -- Specified Day
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-            INTERVAL_EVENT[id23.0.1] occurrences matches {0} matches {    -- Average Consumption Interval
-                /math_function[id37]/defining_code matches {[at3]}
-                data matches {
-                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
-                }
-            }
-        }
-        /protocol[id25]/items existence matches {0} matches {
-            ELEMENT[id26] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id39] matches {
-                        property matches {[at4]}
-                        units matches {"gm"}
-                    }
-                }
-            }
-            ELEMENT[id27] occurrences matches {0..1} matches {
-                value matches {
-                    DV_QUANTITY[id40] matches {
-                        property matches {[at1]}
-                        units matches {"/d", "/wk", "/mo"}
-                    }
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Alcohol Use">
-                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
-            >
-            ["id23.0.1"] = <
-                text = <"Average Consumption Interval">
-                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
-            >
-            ["id24.0.1"] = <
-                text = <"Specified Day">
-                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
-            >
-            ["id6.0.1"] = <
-                text = <"Consumption Details">
-                description = <"Details about the consumption of specific forms of alcohol.">
-            >
-            ["id20.0.1"] = <
-                text = <"Behavioural Issues">
-                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
-            >
-            ["id22.0.1"] = <
-                text = <"Comment">
-                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Uso de bebida alcoólica">
-                description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
-            >
-            ["id23.0.1"] = <
-                text = <"Intervalo médio consumido">
-                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
-            >
-            ["id24.0.1"] = <
-                text = <"Dia específico">
-                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
-            >
-            ["id6.0.1"] = <
-                text = <"Detalhes do Consumo">
-                description = <"Detalhes sobre o consumo de formas específicas de álcool.">
-            >
-            ["id20.0.1"] = <
-                text = <"Problemas comportamentais">
-                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
-            >
-            ["id22.0.1"] = <
-                text = <"Comentário">
-                description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
             >
         >
     >
