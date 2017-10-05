@@ -637,13 +637,6 @@
     "sha" : "fcb3fb5b0294736bcbf84712ebef58806c51e6c4",
     "languages" : [ "en", "pt-br" ]
   }, {
-    "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
-    "rmType" : "EVALUATION",
-    "name" : "Problem/Diagnosis",
-    "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
-    "sha" : "6d79402431bb24a9ee4696a89646c13457621bda",
-    "languages" : [ "en", "pt-br" ]
-  }, {
     "id" : "openEHR-EHR-ACTION.procedure-SESI_BR.v1.0.0",
     "rmType" : "ACTION",
     "name" : "Procedure",
