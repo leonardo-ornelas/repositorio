@@ -620,7 +620,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Tobacco Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.adls",
-    "sha" : "055818c1984c5a10f2b48f21d10b8b4dfcda5c9e",
+    "sha" : "5e1120335b4ff48b3f068cdab319640ce94e46fa",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure.v1.0.0",
@@ -641,7 +641,7 @@
     "rmType" : "EVALUATION",
     "name" : "Problem/Diagnosis",
     "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
-    "sha" : "dc7657448abd7fd532f8bf77087e287cb5b1cf27",
+    "sha" : "6d79402431bb24a9ee4696a89646c13457621bda",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-ACTION.procedure-SESI_BR.v1.0.0",
@@ -718,14 +718,14 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.adls",
-    "sha" : "6d496f971a9a36bff1ee72bf040c75e82665b3b9",
+    "sha" : "7f5d512ea2af69cccd3f9ea4f06be9cf2a1e04d6",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0",
     "rmType" : "OBSERVATION",
-    "name" : "habitos_lazer",
+    "name" : "Hábitos Lazer",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.habitos_lazer.v1.adls",
-    "sha" : "6bd251c1dfaf6c723b54578289d853b9d221477d",
+    "sha" : "b00bec9acbc4ad74baabe976378d4b2721482faa",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.historia_clinica_atual.v1.0.0",
@@ -1081,7 +1081,14 @@
     "rmType" : "OBSERVATION",
     "name" : "Blood Glucose Test Result",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.pathology_test-blood_glucose_BR.v1.adls",
-    "sha" : "6041f1ceb1eb9a7a0510e0d724c23ae28e1530ee",
+    "sha" : "67bcc1540a4282058925e8263e22da4f543f9bc3",
+    "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-ACTION.medication-BR.v1.0.0",
+    "rmType" : "ACTION",
+    "name" : "Medication action",
+    "path" : "archetypes/openEHR-EHR-ACTION.medication-BR.v1.adls",
+    "sha" : "72c51558d7fe00b3c74c1aecd97b59621097f527",
     "languages" : [ "en", "pt-br" ]
   } ]
 }
