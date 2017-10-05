@@ -1088,7 +1088,7 @@
     "rmType" : "COMPOSITION",
     "name" : "fco",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
-    "sha" : "caaadf5de225512e6485546893ce737c5751c57a",
+    "sha" : "86f34835fab90f83eaa5d4c962eb267413bf5113",
     "languages" : [ "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
