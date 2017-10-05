@@ -404,7 +404,7 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0..1} matches {    -- Grams of tobacco
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.0.6.1] matches {
                                 property matches {[at0.0.14]}
