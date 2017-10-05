@@ -15,7 +15,7 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    COMPOSITION[id1] occurrences matches {1} matches {    -- fco
+    COMPOSITION[id1] occurrences matches {1} matches {    -- Ficha clínica ocupacional
         content matches {
             SECTION[id5] occurrences matches {0..1} matches {    -- Hábitos de vida
                 items matches {
@@ -104,7 +104,10 @@ definition
                         include
                             archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.heart_rate\.v1\.0\.0/}
                     }
-                    allow_archetype OBSERVATION[id42] occurrences matches {0..1}
+                    allow_archetype OBSERVATION[id42] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.waist_hip\.v1\.0\.0/}
+                    }
                     allow_archetype OBSERVATION[id43] occurrences matches {0..1} matches { 
                         include
                             archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
@@ -118,8 +121,8 @@ terminology
     term_definitions = <
         ["pt-br"] = <
             ["id1"] = <
-                text = <"fco">
-                description = <"fco">
+                text = <"Ficha clínica ocupacional">
+                description = <"Ficha clínica ocupacional">
             >
             ["id5"] = <
                 text = <"Hábitos de vida">
