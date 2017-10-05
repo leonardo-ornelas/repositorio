@@ -35,6 +35,7 @@ definition
                     use_archetype ACTION[id14.1, openEHR-EHR-ACTION.ovl-fco_br-medication-BR-001.v1.0.0]
                 }
             }
+            use_archetype EVALUATION[id16.1, openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0]
             SECTION[id17] occurrences matches {0..1} matches {
                 items matches {
                     OBSERVATION[id30] occurrences matches {0..1} matches {
@@ -45,7 +46,11 @@ definition
                     use_archetype ACTION[id36.1, openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0]
                 }
             }
-            use_archetype EVALUATION[id16.1, openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0]
+            SECTION[id37] occurrences matches {0..1} matches {
+                items matches {
+                    use_archetype OBSERVATION[id38.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0]
+                }
+            }
         }
     }
 
@@ -561,20 +566,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
-                        value matches {
-                            DV_QUANTITY[id0.0.6] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.1.0.1] matches {
-                                property matches {[at0.7]}
-                                units matches {"/h", "/d", "/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
                         value matches {
                             DV_QUANTITY[id0.0.6.1] matches {
@@ -586,6 +577,20 @@ definition
                             DV_QUANTITY[id0.2.0.1] matches {
                                 property matches {[at0.8]}
                                 units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
                             }
                         }
                     }
@@ -1159,7 +1164,7 @@ definition
                 /value[id107]/value matches {True, False}
             }
         }
-        /protocol[id31]/items[id33]/value[id112]/magnitude existence matches {0} matches {|>=0|}
+        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
     }
 
 terminology
@@ -1527,6 +1532,182 @@ terminology
             ["id0.9.1"] = <
                 text = <"PSA">
                 description = <"PSA">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id30] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.1] 
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id27.1] occurrences matches {0} matches {    -- *Any event(en)
+                data matches {
+                    use_node ITEM_TREE /data[id3]/events[id4]/data[id2]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id3]/events[id4]/state[id9]
+                }
+            }
+        }
+        /protocol[id16]/items existence matches {0} matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id26.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id25.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+            ["id27.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
+            ["id10.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id26.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id25.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id26.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id25.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id27.1"] = <
+                text = <"Nascimento">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id26.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id25.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id26.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id25.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
             >
         >
     >
