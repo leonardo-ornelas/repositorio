@@ -1,0 +1,186 @@
+template (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.fco_sessi.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.fco.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1.1] occurrences matches {1} matches {    -- Ficha clínica ocupacional
+        /content[id5]/items matches {
+            use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_sessi-physical_activity_summary-SESI_BR-001.v1.0.0]
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Ficha clínica ocupacional">
+                description = <"Ficha clínica ocupacional">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-fco_sessi-physical_activity_summary-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Physical activity status
+                value matches {
+                    DV_TEXT[id10.0.1] 
+                }
+            }
+            ELEMENT[id4.0.1] occurrences matches {0} matches {    -- Physical activity note
+                value matches {
+                    DV_TEXT[id11.0.1] 
+                }
+            }
+            ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Barriers to activity
+                value matches {
+                    DV_TEXT[id12.0.1] 
+                }
+            }
+            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Enabling factors
+                value matches {
+                    DV_TEXT[id13.0.1] 
+                }
+            }
+            ELEMENT[id9.0.1] occurrences matches {0} matches {    -- Moderate exercise/week
+                value matches {
+                    DV_COUNT[id14.0.1] 
+                }
+            }
+            ELEMENT[id8.0.1] occurrences matches {0} matches {    -- Vigorous exercise/week
+                value matches {
+                    DV_COUNT[id15.0.1] 
+                }
+            }
+            ELEMENT[id0.4] occurrences matches {0..1} matches {
+                /value[id0.5]/defining_code matches {[ac0.1]}
+            }
+            ELEMENT[id0.10.1] occurrences matches {0} matches {    -- Total time walked a day
+                value matches {
+                    DV_DATE[id0.11.1] 
+                }
+            }
+            ELEMENT[id0.14.1] occurrences matches {0} matches {    -- Total time spent doing moderate activities per day.
+                value matches {
+                    DV_DATE[id0.15.1] 
+                }
+            }
+            ELEMENT[id0.18.1] occurrences matches {0} matches {    -- Total time performing vigorous activities per day
+                value matches {
+                    DV_DATE[id0.20.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id3.0.1"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id4.0.1"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id7.0.1"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
+            ["id9.0.1"] = <
+                text = <"Moderate exercise/week">
+                description = <"Number of times per week of 30 min moderate exercise.">
+            >
+            ["id8.0.1"] = <
+                text = <"Vigorous exercise/week">
+                description = <"Number of times per week of 20 min vigorous exercise.">
+            >
+            ["id0.10.1"] = <
+                text = <"Total time walked a day">
+                description = <"On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day.">
+            >
+            ["id0.14.1"] = <
+                text = <"Total time spent doing moderate activities per day.">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
+            >
+            ["id0.18.1"] = <
+                text = <"Total time performing vigorous activities per day">
+                description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
+            >
+            ["id3.0.1"] = <
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["id4.0.1"] = <
+                text = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
+            >
+            ["id7.0.1"] = <
+                text = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
+            >
+            ["id9.0.1"] = <
+                text = <"Exercício moderado por semana">
+                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
+            >
+            ["id8.0.1"] = <
+                text = <"Exercício vigoroso por semana">
+                description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
+            >
+            ["id0.10.1"] = <
+                text = <"Tempo total gasto com caminhada por dia.">
+                description = <"Nos dias em que foram realizadas caminhadas por pelo menos 10 minutos contínuos, quanto tempo no total, foram gastos caminhando por dia.">
+            >
+            ["id0.14.1"] = <
+                text = <"Tempo total gasto com a prática de atividades moderadas por dia">
+                description = <"Nos dias em que foram realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+            ["id0.18.1"] = <
+                text = <"Tempo total gasto com a prática de atividades vigorosas por dia">
+                description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+        >
+    >
+
