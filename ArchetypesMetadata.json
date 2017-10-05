@@ -1086,9 +1086,9 @@
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco.v1.0.0",
     "rmType" : "COMPOSITION",
-    "name" : "fco",
+    "name" : "Ficha clínica ocupacional",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
-    "sha" : "6a1af581ddc2bb975d8e4c2f27dffd830d9e0a1b",
+    "sha" : "d3dc1dce8dea865d12badfea177f73d31adc590c",
     "languages" : [ "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
@@ -1116,7 +1116,14 @@
     "rmType" : "OBSERVATION",
     "name" : "Waist and hip circumference",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.waist_hip.v1.adls",
-    "sha" : "7bbcefb709bb1655ff5452b3578904648ea8da70",
-    "languages" : [ "en", "ar-sy" ]
+    "sha" : "bdfa29b9ef43a8b2bd1b3c681555936b78e3a04f",
+    "languages" : [ "en", "ar-sy", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.vacinas.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Immunisation Summary",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.vacinas.v1.adls",
+    "sha" : "fbe08f98af6a91e41cb948754ffdcbb1ca7172ce",
+    "languages" : [ "en", "pt-br" ]
   } ]
 }
