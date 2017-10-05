@@ -41,5 +41,23 @@
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
     "sha" : "cb26c9fb4428d1398239bcf53580db6d06e8ced3"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.asasa.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.asasa.v1.adlt",
+    "sha" : "da57b76015cb5b55dcac7597a4a826327724a832"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.blood.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.blood.v1.adlt",
+    "sha" : "ef15b264de29a84dd4de6c832337aa04ab981b17"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.pressao_altura.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.pressao_altura.v1.adlt",
+    "sha" : "604c339d10df3ea186d868b99f084d2296135694"
   } ]
 }
