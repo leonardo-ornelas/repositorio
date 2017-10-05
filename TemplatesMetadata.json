@@ -52,6 +52,12 @@
     "rmType" : "COMPOSITION",
     "name" : "fco",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_br.v1.adlt",
-    "sha" : "89af8a9f8469378a4e1575ead3e08f89d5eba467"
+    "sha" : "5804426f7d1b7d25de300204de250292b21dc818"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco_sessi.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Ficha clínica ocupacional",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco_sessi.v1.adlt",
+    "sha" : "9d1850f706da507ce7428c23759cd21a4f637790"
   } ]
 }
