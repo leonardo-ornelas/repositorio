@@ -57,7 +57,10 @@ definition
                 include
                     archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
             }
-            allow_archetype EVALUATION[id16] occurrences matches {0..1}
+            allow_archetype EVALUATION[id16] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.vacinas\.v1\.0\.0/}
+            }
             SECTION[id17] occurrences matches {0..1} matches {    -- Antecedentes ginecológico / urológico
                 items matches {
                     OBSERVATION[id30] occurrences matches {0..1} matches {    -- Data da última menstruação
