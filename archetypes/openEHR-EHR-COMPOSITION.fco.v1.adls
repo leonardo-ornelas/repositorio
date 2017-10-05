@@ -173,8 +173,8 @@ terminology
                 description = <"Antecedentes ginecológico / urológico">
             >
             ["id19"] = <
-                text = <"a">
-                description = <"a">
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
             >
             ["id21"] = <
                 text = <"Data da última menstruação">
