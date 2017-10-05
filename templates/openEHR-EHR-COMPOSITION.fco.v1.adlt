@@ -19,8 +19,43 @@ description
 
 definition
     COMPOSITION[id1.1] occurrences matches {1} matches {    -- fco
-        /content[id7]/items matches {
-            use_archetype EVALUATION[id13.1, openEHR-EHR-EVALUATION.ovl-fco-problem_diagnosis-SESI_BR-001.v1.0.0]
+        content matches {
+            SECTION[id5] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id8] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.physical_activity_summary\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-tobacco\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.alcohol_use_SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id11] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id12] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.habitos_lazer\.v1\.0\.0/}
+                    }
+                }
+            }
+            SECTION[id7] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
+                }
+            }
         }
     }
 
@@ -30,142 +65,6 @@ terminology
             ["id1.1"] = <
                 text = <"fco">
                 description = <"fco">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-EVALUATION.ovl-fco-problem_diagnosis-SESI_BR-001.v1.0.0
-
-specialize
-    openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0
-
-definition
-    EVALUATION[id1.1.1] matches {    -- Problem/Diagnosis
-        /data[id2]/items matches {
-            allow_archetype CLUSTER[id45] matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
-            }
-            CLUSTER[id19] occurrences matches {0..1} matches {
-                items matches {
-                    ELEMENT[id26] occurrences matches {0..1} matches {
-                        /value[id89]/magnitude matches {|>=1|}
-                    }
-                    ELEMENT[id20] occurrences matches {0..1} matches {
-                        value matches {
-                            DV_QUANTITY[id90] matches {
-                                property matches {[at83]}
-                                units matches {"/min", "/h", "/d", "/wk", "/mo", "/yr"}
-                            }
-                        }
-                    }
-                }
-            }
-            CLUSTER[id27] matches {
-                /items[id57]/value[id95]/defining_code matches {[ac1]}
-            }
-            allow_archetype CLUSTER[id55] matches { 
-                include
-                    archetype_id/value matches {/.*/}
-            }
-            allow_archetype CLUSTER[id56] matches { 
-                include
-                    archetype_id/value matches {/.*/}
-            }
-            CLUSTER[id94] occurrences matches {0..1} matches {
-                items matches {
-                    ELEMENT[id95] occurrences matches {0..1} matches {
-                        /value[id96]/value matches {True, False; false}
-                    }
-                    ELEMENT[id97] occurrences matches {0..1} matches {
-                        /value[id98]/value matches {True, False; false}
-                    }
-                    ELEMENT[id99] occurrences matches {0..1} matches {
-                        /value[id100]/value matches {True, False; false}
-                    }
-                    ELEMENT[id101] occurrences matches {0..1} matches {
-                        /value[id102]/value matches {True, False; false}
-                    }
-                    ELEMENT[id103] occurrences matches {0..1} matches {
-                        /value[id104]/value matches {True, False; false}
-                    }
-                    ELEMENT[id105] occurrences matches {0..1} matches {
-                        /value[id106]/value matches {True, False; false}
-                    }
-                    ELEMENT[id107] occurrences matches {0..1} matches {
-                        /value[id108]/value matches {True, False; false}
-                    }
-                    ELEMENT[id109] occurrences matches {0..1} matches {
-                        /value[id110]/value matches {True, False; false}
-                    }
-                    ELEMENT[id111] occurrences matches {0..1} matches {
-                        /value[id112]/value matches {True, False; false}
-                    }
-                    ELEMENT[id113] occurrences matches {0..1} matches {
-                        /value[id114]/value matches {True, False; false}
-                    }
-                    ELEMENT[id115] occurrences matches {0..1} matches {
-                        /value[id116]/value matches {True, False; false}
-                    }
-                    ELEMENT[id117] occurrences matches {0..1} matches {
-                        /value[id118]/value matches {True, False; false}
-                    }
-                    ELEMENT[id120] occurrences matches {0..1} matches {
-                        /value[id121]/value matches {True, False; false}
-                    }
-                    ELEMENT[id122] occurrences matches {0..1} matches {
-                        /value[id123]/value matches {True, False; false}
-                    }
-                    ELEMENT[id124] occurrences matches {0..1} matches {
-                        /value[id125]/value matches {True, False; false}
-                    }
-                    ELEMENT[id126] occurrences matches {0..1} matches {
-                        /value[id127]/value matches {True, False; false}
-                    }
-                    ELEMENT[id128] occurrences matches {0..1} matches {
-                        /value[id129]/value matches {True, False; false}
-                    }
-                    ELEMENT[id130] occurrences matches {0..1} matches {
-                        /value[id131]/value matches {True, False; false}
-                    }
-                    ELEMENT[id132] occurrences matches {0..1} matches {
-                        /value[id133]/value matches {True, False; false}
-                    }
-                    ELEMENT[id134] occurrences matches {0..1} matches {
-                        /value[id135]/value matches {True, False; false}
-                    }
-                    ELEMENT[id136] occurrences matches {0..1} matches {
-                        /value[id137]/value matches {True, False; false}
-                    }
-                    ELEMENT[id138] occurrences matches {0..1} matches {
-                        /value[id139]/value matches {True, False; false}
-                    }
-                }
-            }
-        }
-        /protocol[id75]/items matches {
-            allow_archetype CLUSTER[id77] matches { 
-                include
-                    archetype_id/value matches {/.*/}
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1.1"] = <
-                text = <"Problem/Diagnosis">
-                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1.1"] = <
-                text = <"Problema/Diagnóstico">
-                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
             >
         >
     >
