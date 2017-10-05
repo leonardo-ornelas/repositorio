@@ -34,7 +34,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_industria_saudavel.v1.adlt",
-    "sha" : "9dd140f91a82ad8ff4220f17f4056d0a51d352b6"
+    "sha" : "f65da7f2109059333290a4697eb7022fb89d6285"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.0.0",
     "rmType" : "COMPOSITION",
