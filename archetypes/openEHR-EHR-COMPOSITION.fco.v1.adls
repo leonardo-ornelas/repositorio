@@ -80,6 +80,10 @@ definition
                             }
                         }
                     }
+                    allow_archetype ACTION[id36] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.imaging_exam\-SESI_BR\.v1\.0\.0/}
+                    }
                 }
             }
         }
@@ -175,6 +179,10 @@ terminology
             ["id34"] = <
                 text = <"Data da última menstruação">
                 description = <"Data da última menstruação">
+            >
+            ["id36"] = <
+                text = <"Exames realizados no último">
+                description = <"Exames realizados no último">
             >
         >
     >
