@@ -751,9 +751,9 @@
   }, {
     "id" : "openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0",
     "rmType" : "OBSERVATION",
-    "name" : "Antecedentes_ginecologico_urologico",
+    "name" : "Gynecological / urological antecedents",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.adls",
-    "sha" : "2dd1ebcb827224d782b660cc08fe5d91ee88af81",
+    "sha" : "f25e74d442d1928087bdce442be9c96ca4988031",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.heart_rate.v1.0.0",
@@ -927,7 +927,7 @@
     "rmType" : "EVALUATION",
     "name" : "saude_bucal",
     "path" : "archetypes/openEHR-EHR-EVALUATION.saude_bucal.v1.adls",
-    "sha" : "8bf1d9f515463c24cbc00032eef123f7678bb19b",
+    "sha" : "2c6b6645923af02e0e40035fda1af6ffcb0e038e",
     "languages" : [ "pt-br", "en" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.alcohol_use_SESI_DSEV.v1.0.0",
@@ -1088,7 +1088,7 @@
     "rmType" : "COMPOSITION",
     "name" : "fco",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
-    "sha" : "86f34835fab90f83eaa5d4c962eb267413bf5113",
+    "sha" : "62be7cd1fc79646ac0e55d82cc51b28162f2e64a",
     "languages" : [ "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
