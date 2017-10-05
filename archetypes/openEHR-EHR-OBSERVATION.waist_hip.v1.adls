@@ -159,24 +159,24 @@ terminology
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"*Waist and hip circumference (en)">
-                description = <"*The waist (or girth) and hip circumference (en)">
+                text = <"Circunferência da cintura e do quadril">
+                description = <"A cintura (ou circunferência) e circunferência do quadril">
             >
             ["id3"] = <
-                text = <"*Any event (en)">
-                description = <"*Timing event (en)">
+                text = <"Eventos">
+                description = <"Evento de sincronização">
             >
             ["id5"] = <
-                text = <"*Waist circumference (en)">
-                description = <"*The waist circumference measured at or above the umbilicus (en)">
+                text = <"Circunferência da cintura">
+                description = <"A circunferência da cintura medida em ou acima do umbigo">
             >
             ["id6"] = <
-                text = <"*Hip circumference (en)">
-                description = <"*Measurement of body circumference at the widest point of the buttocks (en)">
+                text = <"Circunferência do quadril">
+                description = <"Medição da circunferência corporal no ponto mais largo das nádegas">
             >
             ["id7"] = <
-                text = <"*Waist:hip ratio (en)">
-                description = <"*Ratio with unitary denominator (en)">
+                text = <"Relação cintura quadril">
+                description = <"Ratio com denominador unitário">
             >
             ["at1"] = <
                 text = <"*Length (en)">
