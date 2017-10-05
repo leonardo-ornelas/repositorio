@@ -278,8 +278,8 @@ terminology
                 description = <"*Mass (en)">
             >
             ["id0.3"] = <
-                text = <"Consumo (en)">
-                description = <"Detalhes sobre a frequência/quantidade  de álcool (en)">
+                text = <"Consumo">
+                description = <"Detalhes sobre a frequência/quantidade  de álcool">
             >
             ["id0.4"] = <
                 text = <"Com que frequência você toma bebidas alcoólicas">
