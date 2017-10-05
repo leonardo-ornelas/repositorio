@@ -194,20 +194,20 @@ terminology
                 description = <"Status do curso primário da imunização.">
             >
             ["at5"] = <
-                text = <"*Not commenced (en)">
-                description = <"*The primary course has not yet commenced. (en)">
+                text = <"Não iniciado">
+                description = <"O curso primário ainda não começou.">
             >
             ["at6"] = <
-                text = <"*Incomplete (en)">
-                description = <"*The primary course was not completed. (en)">
+                text = <"Incompleto">
+                description = <"O curso primário não foi concluído.">
             >
             ["at7"] = <
-                text = <"*Complete (en)">
-                description = <"*The primary course was completed. (en)">
+                text = <"Completo">
+                description = <"O curso primário foi concluído.">
             >
             ["at8"] = <
-                text = <"*Indeterminate (en)">
-                description = <"*It is not known if the primary course was completed. (en)">
+                text = <"Indeterminado">
+                description = <"Não se sabe se o curso primário foi concluído.">
             >
             ["id9"] = <
                 text = <"Data do curso primário completado">
@@ -222,12 +222,12 @@ terminology
                 description = <"O estado da vacinação para doenças ou agentes infecciosos específicos.">
             >
             ["at12"] = <
-                text = <"*Vaccination Not Required (en)">
-                description = <"*Vaccination is not required. (en)">
+                text = <"Não é necessária vacinação">
+                description = <"A vacinação não é necessária.">
             >
             ["at13"] = <
-                text = <"*Vaccination Required (en)">
-                description = <"*Vaccination is required. (en)">
+                text = <"É necessária vacinação">
+                description = <"A vacinação é necessária.">
             >
             ["id15"] = <
                 text = <"Próxima revisão devida">
@@ -242,12 +242,12 @@ terminology
                 description = <"Detalhes sobre o status de vacinação para uma vacina especificada.">
             >
             ["at18"] = <
-                text = <"*Vaccination Not Indicated (en)">
-                description = <"*Vaccination is not indicated. (en)">
+                text = <"Vacinação não indicada">
+                description = <"A vacinação não está indicada.">
             >
             ["at19"] = <
-                text = <"*Vaccination Declined (en)">
-                description = <"*Vaccination for this infectious disease or agent has been declined by the subject or carer. (en)">
+                text = <"Vacina recusada">
+                description = <"A vacinação para esta doença infecciosa ou agente foi diminuída pelo sujeito ou pelo cuidador.">
             >
             ["id20"] = <
                 text = <"Status geral de vacinação">
@@ -258,16 +258,16 @@ terminology
                 description = <"Data em que a próxima vacinação é obrigatória.">
             >
             ["at22"] = <
-                text = <"*No Vaccinations Required (en)">
-                description = <"*No vaccinations have been identified that require administration. (en)">
+                text = <"Não são necessárias vacinas">
+                description = <"Não foram identificadas vacinas que exigem administração.">
             >
             ["at23"] = <
-                text = <"*Vaccinations Required (en)">
-                description = <"*Vaccinations have been identified that need to be administered. (en)">
+                text = <"Vacinas necessárias">
+                description = <"Foram identificadas vacinas que precisam ser administradas.">
             >
             ["at24"] = <
-                text = <"*All Vaccinations Declined (en)">
-                description = <"*The subject, or carer, has declined all vaccination administration. (en)">
+                text = <"Todas as vacinas recusadas">
+                description = <"O assunto, ou cuidador, declinou toda a administração de vacinação.">
             >
             ["id25"] = <
                 text = <"Comentário">
