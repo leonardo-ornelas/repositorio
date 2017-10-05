@@ -11,7 +11,7 @@
     "rmType" : "ACTION",
     "name" : "Medication action",
     "path" : "archetypes/openEHR-EHR-ACTION.medication.v1.adls",
-    "sha" : "01e452464303b50d32271a31cdfa6476e93788e6",
+    "sha" : "831aa9702450b9b87610e5009acf3fbaa18cc98d",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-CLUSTER.anatomical_location.v1.0.0",
@@ -655,7 +655,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Laboratory test result",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.lab_test-result-SESI_BR.v1.adls",
-    "sha" : "ddff136e70032909e94cb50418535d56ebae7c41",
+    "sha" : "fe2e71ee5fbb5f1a5d731976d9a09b1c06379108",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.menstruation-SESI_BR.v1.0.0",
@@ -711,7 +711,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.adls",
-    "sha" : "7f5d512ea2af69cccd3f9ea4f06be9cf2a1e04d6",
+    "sha" : "a583ad37564ff1f92f7db7c0738348a4ae2ccd0a",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0",
@@ -1081,14 +1081,14 @@
     "rmType" : "ACTION",
     "name" : "Medication action",
     "path" : "archetypes/openEHR-EHR-ACTION.medication-BR.v1.adls",
-    "sha" : "72c51558d7fe00b3c74c1aecd97b59621097f527",
+    "sha" : "01da98ee2e1e193f7c878ee49d21d54316de3feb",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Ficha clínica ocupacional",
     "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
-    "sha" : "d3dc1dce8dea865d12badfea177f73d31adc590c",
+    "sha" : "6150c84bbc23a7202c761d6055e13ce751555c70",
     "languages" : [ "pt-br" ]
   }, {
     "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
