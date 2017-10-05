@@ -1595,7 +1595,7 @@ definition
                 }
             }
         }
-        /protocol[id16]/items matches {
+        /protocol[id16]/items existence matches {0} matches {
             allow_archetype CLUSTER[id21] occurrences matches {0..1} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
@@ -1771,7 +1771,7 @@ definition
                 }
             }
         }
-        /protocol[id8]/items matches {
+        /protocol[id8]/items existence matches {0} matches {
             allow_archetype CLUSTER[id12] occurrences matches {0..1} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
