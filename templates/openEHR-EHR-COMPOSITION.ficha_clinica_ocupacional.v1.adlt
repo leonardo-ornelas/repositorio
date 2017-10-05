@@ -2642,8 +2642,6 @@ specialize
 
 definition
     SECTION[id1.1] matches {    -- Adhoc Heading
-        items matches {
-        }
     }
 
 terminology
