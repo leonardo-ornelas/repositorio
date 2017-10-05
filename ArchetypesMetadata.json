@@ -1083,5 +1083,19 @@
     "path" : "archetypes/openEHR-EHR-ACTION.medication-BR.v1.adls",
     "sha" : "72c51558d7fe00b3c74c1aecd97b59621097f527",
     "languages" : [ "en", "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "fco",
+    "path" : "archetypes/openEHR-EHR-COMPOSITION.fco.v1.adls",
+    "sha" : "caaadf5de225512e6485546893ce737c5751c57a",
+    "languages" : [ "pt-br" ]
+  }, {
+    "id" : "openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0",
+    "rmType" : "EVALUATION",
+    "name" : "Problem/Diagnosis",
+    "path" : "archetypes/openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.adls",
+    "sha" : "dd3f5257b44a8fa71765fc8904e8b69da15f8974",
+    "languages" : [ "en", "pt-br" ]
   } ]
 }
