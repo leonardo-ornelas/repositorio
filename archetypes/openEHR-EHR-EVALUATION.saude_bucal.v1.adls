@@ -427,6 +427,10 @@ terminology
                 text = <"NS/NR">
                 description = <"NS/NR">
             >
+            ["at58"] = <
+                text = <"NS/NR">
+                description = <"NS/NR">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -590,8 +594,8 @@ terminology
                 description = <"*Ausência (pt-br)">
             >
             ["ac4"] = <
-                text = <"*Lesão (pt-br)">
-                description = <"*Lesão (pt-br)">
+                text = <"Lesão (pt-br)">
+                description = <"Lesão (pt-br)">
             >
             ["id83"] = <
                 text = <"Need for dental consultation">
@@ -737,6 +741,10 @@ terminology
                 text = <"NS/NR (pt-br)">
                 description = <"NS/NR (pt-br)">
             >
+            ["at58"] = <
+                text = <"NS/NR (pt-br)">
+                description = <"NS/NR (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -754,7 +762,7 @@ terminology
         >
         ["ac4"] = <
             id = <"ac4">
-            members = <"at23", "at24">
+            members = <"at23", "at24", "at58">
         >
         ["ac5"] = <
             id = <"ac5">
