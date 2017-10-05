@@ -2641,8 +2641,7 @@ specialize
     openEHR-EHR-SECTION.adhoc.v1.0.0
 
 definition
-    SECTION[id1.1] matches {    -- Adhoc Heading
-    }
+    SECTION[id1.1]
 
 terminology
     term_definitions = <
