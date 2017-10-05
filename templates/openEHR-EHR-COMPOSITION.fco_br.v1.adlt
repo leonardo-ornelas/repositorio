@@ -35,6 +35,17 @@ definition
                     use_archetype ACTION[id14.1, openEHR-EHR-ACTION.ovl-fco_br-medication-BR-001.v1.0.0]
                 }
             }
+            SECTION[id17] occurrences matches {0..1} matches {
+                items matches {
+                    OBSERVATION[id30] occurrences matches {0..1} matches {
+                        /data[id31]/events[id32]/data[id33]/item matches {
+                            use_archetype ELEMENT[id34.1, openEHR-EHR-ELEMENT.ovl-fco_br-last_normal_menstrual_period-001.v1.0.0]
+                        }
+                    }
+                    use_archetype ACTION[id36.1, openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0]
+                }
+            }
+            use_archetype EVALUATION[id16.1, openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0]
         }
     }
 
@@ -134,8 +145,12 @@ definition
                     ELEMENT[id95] occurrences matches {0..1} matches {
                         /value[id96]/value matches {True, False; false}
                     }
-                    ELEMENT[id97] occurrences matches {0..1} matches {
-                        /value[id98]/value matches {True, False; false}
+                    ELEMENT[id97.0.2] occurrences matches {0..1} matches {    -- Tuberculose
+                        value matches {
+                            DV_BOOLEAN[id98.0.2] matches {
+                                value matches {True, False; false}
+                            }
+                        }
                     }
                     ELEMENT[id99] occurrences matches {0..1} matches {
                         /value[id100]/value matches {True, False; false}
@@ -200,7 +215,7 @@ definition
                 }
             }
         }
-        /protocol[id75]/items existence matches {0} matches {
+        /protocol[id75]/items matches {
             allow_archetype CLUSTER[id77] matches { 
                 include
                     archetype_id/value matches {/.*/}
@@ -262,6 +277,10 @@ Note: May be important in situations where approximations of age based on calcul
                 text = <"Comment">
                 description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
             >
+            ["id97.0.2"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
@@ -311,6 +330,10 @@ Note: May be important in situations where approximations of age based on calcul
             ["id70.0.1"] = <
                 text = <"Comentário">
                 description = <"Narração adicional sobre o problema ou diagnóstico não capturado em outros campos.">
+            >
+            ["id97.0.2"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
             >
         >
     >
@@ -538,20 +561,6 @@ definition
                             }
                         }
                     }
-                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
-                        value matches {
-                            DV_QUANTITY[id0.0.6.1] matches {
-                                property matches {[at0.0.14]}
-                                [units, magnitude, precision] matches {
-                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
-                                }
-                            }
-                            DV_QUANTITY[id0.2.0.1] matches {
-                                property matches {[at0.8]}
-                                units matches {"gm/d", "gm/wk"}
-                            }
-                        }
-                    }
                     ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
                         value matches {
                             DV_QUANTITY[id0.0.6] matches {
@@ -563,6 +572,20 @@ definition
                             DV_QUANTITY[id0.1.0.1] matches {
                                 property matches {[at0.7]}
                                 units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.0.6.1] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
                             }
                         }
                     }
@@ -1108,26 +1131,35 @@ definition
             }
         }
         /description[id18]/items matches {
-            ELEMENT[id21] matches {
-                /value[id102]/defining_code matches {[ac2]}
+            ELEMENT[id34.0.1] occurrences matches {0} matches {    -- Instructions
+                value matches {
+                    DV_TEXT[id103.0.1] 
+                }
             }
-            allow_archetype CLUSTER[id24] occurrences matches {0} matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
+            ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Reason
+                value matches {
+                    DV_TEXT[id104.0.1] 
+                }
             }
-            allow_archetype CLUSTER[id23] occurrences matches {0..1} matches { 
+            allow_archetype CLUSTER[id23] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
             }
-            allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
-                include
-                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+            ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id105.0.1] 
+                }
+            }
+            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Sequence number
+                value matches {
+                    DV_COUNT[id106.0.1] 
+                }
             }
             ELEMENT[id37] occurrences matches {0} matches {
                 /value[id107]/value matches {True, False}
             }
         }
-        /protocol[id31]/items[id33]/value[id112]/magnitude matches {|>=0|}
+        /protocol[id31]/items[id33]/value[id112]/magnitude existence matches {0} matches {|>=0|}
     }
 
 terminology
@@ -1137,11 +1169,328 @@ terminology
                 text = <"Medication action">
                 description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
             >
+            ["id34.0.1"] = <
+                text = <"Instructions">
+                description = <"Any instructions given to the subject of care or carer at the time of the action.">
+            >
+            ["id22.0.1"] = <
+                text = <"Reason">
+                description = <"The reason(s) the specific action or step was carried out. Note: This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"A comment on the action taken.">
+            >
+            ["id26.0.1"] = <
+                text = <"Sequence number">
+                description = <"The sequence number specific to the action being recorded.">
+            >
         >
         ["pt-br"] = <
             ["id1.1.1"] = <
                 text = <"Ação da medicação">
                 description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
+            >
+            ["id34.0.1"] = <
+                text = <"Instruções">
+                description = <"Todas as instruções dadas ao sujeito de cuidado ou cuidador no momento da ação.">
+            >
+            ["id22.0.1"] = <
+                text = <"Razão">
+                description = <"O (s) motivo (s) a ação ou etapa específica foi realizada. Nota: Este não é o motivo da instrução de medicação, em vez da razão específica, e. para administração ou para cessar a medicação.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Um comentário sobre as ações tomadas.">
+            >
+            ["id26.0.1"] = <
+                text = <"Número de sequência">
+                description = <"O número de seqüência específico para a ação que está sendo gravada.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.vacinas.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Immunisation Summary
+        /data[id2]/items matches {
+            ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Overall Vaccination Status
+                value matches {
+                    DV_CODED_TEXT[id27.0.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Description
+                value matches {
+                    DV_TEXT[id28.0.1]     -- Vaccines
+                }
+            }
+            CLUSTER[id17.0.1] occurrences matches {0} matches {    -- Specific Vaccine
+                items matches {
+                    ELEMENT[id11] occurrences matches {0..1} matches {
+                        /value[id30]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id4] occurrences matches {0..1} matches {
+                        /value[id31]/defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id28] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id29] occurrences matches {0..1} matches {
+                        /value[id30]/value matches {True, False; false}
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {
+                        /value[id32]/value matches {True, False; false}
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {
+                        /value[id34]/value matches {True, False; false}
+                    }
+                    ELEMENT[id35] occurrences matches {0..1} matches {
+                        /value[id36]/value matches {True, False; false}
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {
+                        /value[id38]/value matches {True, False; false}
+                    }
+                    ELEMENT[id39] occurrences matches {0..1} matches {
+                        /value[id40]/value matches {True, False; false}
+                    }
+                    ELEMENT[id41] occurrences matches {0..1} matches {
+                        /value[id42]/value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        protocol existence matches {0}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Immunisation Summary">
+                description = <"Summary statements about the current immunisation status for an identified infectious disease or agent.">
+            >
+            ["id20.0.1"] = <
+                text = <"Overall Vaccination Status">
+                description = <"Statement about the status for all vaccines.">
+            >
+            ["id26.0.1"] = <
+                text = <"Description">
+                description = <"Narrative description about the vaccination status.">
+            >
+            ["id28.0.1"] = <
+                text = <"Vaccines">
+                description = <"Vaccines">
+            >
+            ["id17.0.1"] = <
+                text = <"Specific Vaccine">
+                description = <"Details about the vaccination status for a specified vaccine.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Resumo da imunização">
+                description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            >
+            ["id20.0.1"] = <
+                text = <"Status geral de vacinação">
+                description = <"Declaração sobre o status de todas as vacinas.">
+            >
+            ["id26.0.1"] = <
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre o status de vacinação">
+            >
+            ["id28.0.1"] = <
+                text = <"Vacinas">
+                description = <"Vaccines">
+            >
+            ["id17.0.1"] = <
+                text = <"Vacina específica">
+                description = <"Detalhes sobre o status de vacinação para uma vacina especificada.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ELEMENT.ovl-fco_br-last_normal_menstrual_period-001.v1.0.0
+
+specialize
+    openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
+
+definition
+    ELEMENT[id1.1] matches {    -- *Last Normal Menstrual Period (en)
+        /value[id2]/value matches {yyyy-??-??T??:??:??}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Last Normal Menstrual Period (en)">
+                description = <"*Record of the date of 1st day of last normal menstrual period (en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Último Período menstrual normal">
+                description = <"Registro da data do 1º dia do último período menstrual normal">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.0.0
+
+definition
+    ACTION[id1.1.1] matches {    -- Imaging examination
+        ism_transition matches {
+            ISM_TRANSITION[id24.0.1] occurrences matches {0} matches {
+                /current_state[id25]/defining_code matches {[at16]}
+                /careflow_step[id26]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id27.0.1] occurrences matches {0} matches {
+                /current_state[id28]/defining_code matches {[at16]}
+                /careflow_step[id29]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id30.0.1] occurrences matches {0} matches {
+                /current_state[id31]/defining_code matches {[at17]}
+                /careflow_step[id32]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id33.0.1] occurrences matches {0} matches {
+                /current_state[id34]/defining_code matches {[at18]}
+                /careflow_step[id35]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id36.0.1] occurrences matches {0} matches {
+                /current_state[id37]/defining_code matches {[at19]}
+                /careflow_step[id38]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id39.0.1] occurrences matches {0} matches {
+                /current_state[id40]/defining_code matches {[at19]}
+                /careflow_step[id41]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id42.0.1] occurrences matches {0} matches {
+                /current_state[id43]/defining_code matches {[at20]}
+                /careflow_step[id44]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id45.0.1] occurrences matches {0} matches {
+                /current_state[id46]/defining_code matches {[at20]}
+                /careflow_step[id47]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id48.0.1] occurrences matches {0} matches {
+                /current_state[id49]/defining_code matches {[at21]}
+                /careflow_step[id50]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id51.0.1] occurrences matches {0} matches {
+                /current_state[id52]/defining_code matches {[at22]}
+                /careflow_step[id53]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id54.0.1] occurrences matches {0} matches {
+                /current_state[id55]/defining_code matches {[at23]}
+                /careflow_step[id56]/defining_code matches {[at8]}
+            }
+        }
+        /description[id2]/items matches {
+            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Examination name
+                value matches {
+                    DV_TEXT[id57.0.1] 
+                }
+            }
+            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Description
+                value matches {
+                    DV_TEXT[id58.0.1] 
+                }
+            }
+            ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Reason
+                value matches {
+                    DV_TEXT[id59.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id23] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id22] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id21.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id60.0.1] 
+                }
+            }
+            ELEMENT[id0.5] occurrences matches {0..1} matches {
+                /value[id0.6]/value matches {True, False; false}
+            }
+            ELEMENT[id0.7] occurrences matches {0..1} matches {
+                /value[id0.8]/value matches {True, False; false}
+            }
+            ELEMENT[id0.9] occurrences matches {0..1} matches {
+                /value[id0.10]/value matches {True, False; false}
+            }
+        }
+        protocol existence matches {0}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Imaging examination">
+                description = <"Clinical activity about performing an imaging examination.">
+            >
+            ["id18.0.1"] = <
+                text = <"Examination name">
+                description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+            >
+            ["id19.0.1"] = <
+                text = <"Description">
+                description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
+            >
+            ["id20.0.1"] = <
+                text = <"Reason">
+                description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
+            >
+            ["id21.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Exame de imagem">
+                description = <"Atividade clínica sobre a realização de um exame de imagem.">
+            >
+            ["id18.0.1"] = <
+                text = <"Nome do exame">
+                description = <"O nome do exame (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id19.0.1"] = <
+                text = <"Descrição">
+                description = <"* Descrição narrativa sobre o passo da atividade ou do caminho de atenção para o exame identificado, por exemplo, descrição sobre o desempenho e os resultados do exame, a tentativa falha ou o cancelamento do exame. (pt)">
+            >
+            ["id20.0.1"] = <
+                text = <"Razão">
+                description = <"Razão de que o passo da atividade ou do caminho de cuidado para o exame identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do exame.">
+            >
+            ["id21.0.1"] = <
+                text = <"Comentário">
+                description = <"Uma narrativa adicional sobre a etapa de atividade ou caminho de cuidado não capturada em outros campos.">
             >
         >
     >
