@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.4; rm_release=1.0.2)
+archetype (adl_version=2.0.5; rm_release=1.0.2)
     openEHR-EHR-OBSERVATION.antecedentes_ginecologico_urologico.v1.0.0
 
 language
@@ -50,71 +50,7 @@ terminology
             ["id3"] = <
                 text = <"Any event">
                 description = <"Any event">
-            >
-            ["at1"] = <
-                text = <"yes">
-                description = <"yes">
-            >
-            ["at2"] = <
-                text = <"No">
-                description = <"No">
-            >
-            ["at3"] = <
-                text = <"ignored">
-                description = <"ignored">
-            >
-            ["at4"] = <
-                text = <"not applicable">
-                description = <"not applicable">
-            >
-            ["ac1"] = <
-                text = <"Gynecological Preventive">
-                description = <"Gynecological Preventive">
-            >
-            ["at5"] = <
-                text = <"Yes">
-                description = <"Yes">
-            >
-            ["at6"] = <
-                text = <"No">
-                description = <"No">
-            >
-            ["at7"] = <
-                text = <"not applicable">
-                description = <"not applicable">
-            >
-            ["at8"] = <
-                text = <"ignorado">
-                description = <"ignorado">
-            >
-            ["at9"] = <
-                text = <"ignored">
-                description = <"ignored">
-            >
-            ["ac2"] = <
-                text = <"Mammography">
-                description = <"Mammography">
-            >
-            ["at10"] = <
-                text = <"Yes">
-                description = <"Yes">
-            >
-            ["at11"] = <
-                text = <"No">
-                description = <"No">
-            >
-            ["at12"] = <
-                text = <"Ignored">
-                description = <"Ignored">
-            >
-            ["at13"] = <
-                text = <"not applicable">
-                description = <"not applicable">
-            >
-            ["ac3"] = <
-                text = <"PSA">
-                description = <"PSA">
-            >
+            >    
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -125,84 +61,5 @@ terminology
                 text = <"Eventos">
                 description = <"Eventos">
             >
-            ["at1"] = <
-                text = <"*yes (en)">
-                description = <"*yes (en)">
-            >
-            ["at2"] = <
-                text = <"*No (en)">
-                description = <"*No (en)">
-            >
-            ["at3"] = <
-                text = <"*ignored (en)">
-                description = <"*ignored (en)">
-            >
-            ["at4"] = <
-                text = <"*not applicable (en)">
-                description = <"*not applicable (en)">
-            >
-            ["ac1"] = <
-                text = <"*Gynecological Preventive (en)">
-                description = <"*Gynecological Preventive (en)">
-            >
-            ["at5"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
-            >
-            ["at6"] = <
-                text = <"*No (en)">
-                description = <"*No (en)">
-            >
-            ["at7"] = <
-                text = <"*not applicable (en)">
-                description = <"*not applicable (en)">
-            >
-            ["at8"] = <
-                text = <"*ignorado (en)">
-                description = <"*ignorado (en)">
-            >
-            ["at9"] = <
-                text = <"*ignored (en)">
-                description = <"*ignored (en)">
-            >
-            ["ac2"] = <
-                text = <"*Mammography (en)">
-                description = <"*Mammography (en)">
-            >
-            ["at10"] = <
-                text = <"*Yes (en)">
-                description = <"*Yes (en)">
-            >
-            ["at11"] = <
-                text = <"*No (en)">
-                description = <"*No (en)">
-            >
-            ["at12"] = <
-                text = <"*Ignored (en)">
-                description = <"*Ignored (en)">
-            >
-            ["at13"] = <
-                text = <"*not applicable (en)">
-                description = <"*not applicable (en)">
-            >
-            ["ac3"] = <
-                text = <"*PSA (en)">
-                description = <"*PSA (en)">
-            >
         >
-    >
-    value_sets = <
-        ["ac1"] = <
-            id = <"ac1">
-            members = <"at1", "at2", "at3", "at4">
-        >
-        ["ac2"] = <
-            id = <"ac2">
-            members = <"at5", "at6", "at7", "at9">
-        >
-        ["ac3"] = <
-            id = <"ac3">
-            members = <"at10", "at11", "at12", "at13">
-        >
-    >
-
+    >    
