@@ -46,6 +46,12 @@
     "rmType" : "COMPOSITION",
     "name" : "fco",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco.v1.adlt",
-    "sha" : "de48e3afad787e0b3b711c61eb7adcf97d7375e4"
+    "sha" : "7e7b97194ee2047b515f2212a79332208f243cc5"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.fco_br.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "fco",
+    "path" : "templates/openEHR-EHR-COMPOSITION.fco_br.v1.adlt",
+    "sha" : "89af8a9f8469378a4e1575ead3e08f89d5eba467"
   } ]
 }
