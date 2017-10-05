@@ -58,6 +58,30 @@ definition
                     archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
             }
             allow_archetype EVALUATION[id16] occurrences matches {0..1}
+            SECTION[id17] occurrences matches {0..1} matches {    -- Antecedentes ginecológico / urológico
+                items matches {
+                    OBSERVATION[id30] occurrences matches {0..1} matches {    -- Data da última menstruação
+                        data matches {
+                            HISTORY[id31] occurrences matches {0..1} matches {    -- Histórico
+                                events matches {
+                                    EVENT[id32] occurrences matches {0..1} matches {    -- Último ciclo menstrual normal
+                                        data matches {
+                                            ITEM_SINGLE[id33] occurrences matches {0..1} matches {    -- Ciclo menstrual normal
+                                                item matches {
+                                                    allow_archetype ELEMENT[id34] occurrences matches {0..1} matches { 
+                                                        include
+                                                            archetype_id/value matches {/openEHR\-EHR\-ELEMENT\.last_normal_menstrual_period\.v1\.0\.0/}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -111,6 +135,46 @@ terminology
             ["id16"] = <
                 text = <"Imunizações (SIC)">
                 description = <"Vacinas disponibilizadas pelo Programa Nacional de Imunizações (PNI).">
+            >
+            ["id17"] = <
+                text = <"Antecedentes ginecológico / urológico">
+                description = <"Antecedentes ginecológico / urológico">
+            >
+            ["id19"] = <
+                text = <"a">
+                description = <"a">
+            >
+            ["id21"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id22"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id29"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id30"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id31"] = <
+                text = <"Histórico">
+                description = <"Histórico">
+            >
+            ["id32"] = <
+                text = <"Último ciclo menstrual normal">
+                description = <"Último ciclo menstrual normal">
+            >
+            ["id33"] = <
+                text = <"Ciclo menstrual normal">
+                description = <"Ciclo menstrual normal">
+            >
+            ["id34"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
             >
         >
     >
