@@ -343,16 +343,16 @@ terminology
                 description = <"Período de consumo (en)">
             >
             ["id0.10"] = <
-                text = <"Definição de dose padrão (en)">
-                description = <"Definição de dose padrão (en)">
+                text = <"Definição de dose padrão">
+                description = <"Definição de dose padrão">
             >
             ["id0.11"] = <
-                text = <"Frequência de uso médio (en)">
-                description = <"Frequência de \"uso médio\" em um intervalo de tempo (en)">
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
             ["id0.13"] = <
-                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
-                description = <"Frequência de apenas em um período de consumo (en)">
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
+                description = <"Frequência de apenas em um período de consumo">
             >
         >
     >
