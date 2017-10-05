@@ -24,67 +24,15 @@ description
     lifecycle_state = <"unmanaged">
 
 definition
-    OBSERVATION[id1] occurrences matches {1} matches {    -- Antecedentes_ginecologico_urologico
+    OBSERVATION[id1] occurrences matches {1} matches {    -- Gynecological / urological antecedents
         data matches {
             HISTORY[id2] matches {
                 events matches {
                     EVENT[id3] matches {    -- Any event
                         data matches {
                             ITEM_TREE[id4] matches {
-                                items matches {
-                                    ELEMENT[id6] occurrences matches {1} matches {    -- Date of last menstruation - DUM
-                                        value matches {
-                                            DV_DATE[id22] matches {
-                                                value matches {*}
-                                            }
-                                        }
-                                    }
-                                    ELEMENT[id8] occurrences matches {1} matches {    -- Gynecological Preventive
-                                        value matches {
-                                            DV_CODED_TEXT[id9] matches {
-                                                defining_code matches {[ac1]}
-                                            }
-                                        }
-                                    }
-                                    ELEMENT[id10] occurrences matches {1} matches {    -- value of the result
-                                        value matches {
-                                            DV_TEXT[id11] 
-                                        }
-                                    }
-                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Mammography
-                                        value matches {
-                                            DV_CODED_TEXT[id13] matches {
-                                                defining_code matches {[ac2]}
-                                            }
-                                        }
-                                    }
-                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- description
-                                        value matches {
-                                            DV_TEXT[id15] 
-                                        }
-                                    }
-                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- comment
-                                        value matches {
-                                            DV_TEXT[id17] 
-                                        }
-                                    }
-                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Prostate Specific Antigen (PSA)
-                                        value matches {
-                                            DV_CODED_TEXT[id19] matches {
-                                                defining_code matches {[ac3]}
-                                            }
-                                        }
-                                    }
-                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- value of the result
-                                        value matches {
-                                            DV_TEXT[id21] 
-                                        }
-                                    }
-                                }
+                                items
                             }
-                        }
-                        state matches {
-                            ITEM_TREE[id5] 
                         }
                     }
                 }
@@ -96,20 +44,12 @@ terminology
     term_definitions = <
         ["en"] = <
             ["id1"] = <
-                text = <"Antecedentes_ginecologico_urologico">
-                description = <"Antecedentes_ginecologico_urologico">
+                text = <"Gynecological / urological antecedents">
+                description = <"Gynecological / urological antecedents">
             >
             ["id3"] = <
                 text = <"Any event">
                 description = <"Any event">
-            >
-            ["id6"] = <
-                text = <"Date of last menstruation - DUM">
-                description = <"Date of last menstruation - DUM">
-            >
-            ["id8"] = <
-                text = <"Gynecological Preventive">
-                description = <"Gynecological Preventive">
             >
             ["at1"] = <
                 text = <"yes">
@@ -130,14 +70,6 @@ terminology
             ["ac1"] = <
                 text = <"Gynecological Preventive">
                 description = <"Gynecological Preventive">
-            >
-            ["id10"] = <
-                text = <"value of the result">
-                description = <"value of the result">
-            >
-            ["id12"] = <
-                text = <"Mammography">
-                description = <"Mammography">
             >
             ["at5"] = <
                 text = <"Yes">
@@ -163,18 +95,6 @@ terminology
                 text = <"Mammography">
                 description = <"Mammography">
             >
-            ["id14"] = <
-                text = <"description">
-                description = <"description">
-            >
-            ["id16"] = <
-                text = <"comment">
-                description = <"comment">
-            >
-            ["id18"] = <
-                text = <"Prostate Specific Antigen (PSA)">
-                description = <"Prostate Specific Antigen (PSA)">
-            >
             ["at10"] = <
                 text = <"Yes">
                 description = <"Yes">
@@ -195,27 +115,15 @@ terminology
                 text = <"PSA">
                 description = <"PSA">
             >
-            ["id20"] = <
-                text = <"value of the result">
-                description = <"value of the result">
-            >
         >
         ["pt-br"] = <
             ["id1"] = <
-                text = <"Antecedentes ginecologico urologico">
-                description = <"Antecedentes ginecologico urologico">
+                text = <"Antecedentes ginecológico / urológico">
+                description = <"Antecedentes ginecológico / urológico">
             >
             ["id3"] = <
-                text = <"Any event">
-                description = <"Any event">
-            >
-            ["id6"] = <
-                text = <"Data da última menstruação">
-                description = <"Data da última menstruação">
-            >
-            ["id8"] = <
-                text = <"Preventivo ginecologico">
-                description = <"Preventivo ginecologico">
+                text = <"Eventos">
+                description = <"Eventos">
             >
             ["at1"] = <
                 text = <"*yes (en)">
@@ -236,14 +144,6 @@ terminology
             ["ac1"] = <
                 text = <"*Gynecological Preventive (en)">
                 description = <"*Gynecological Preventive (en)">
-            >
-            ["id10"] = <
-                text = <"valor do resultado">
-                description = <"valor do resultado">
-            >
-            ["id12"] = <
-                text = <"Mamografia">
-                description = <"Mamografia">
             >
             ["at5"] = <
                 text = <"*Yes (en)">
@@ -269,18 +169,6 @@ terminology
                 text = <"*Mammography (en)">
                 description = <"*Mammography (en)">
             >
-            ["id14"] = <
-                text = <"descrição">
-                description = <"descrição">
-            >
-            ["id16"] = <
-                text = <"comentário">
-                description = <"comentário">
-            >
-            ["id18"] = <
-                text = <"Antígeno Prostático Específico (PSA)">
-                description = <"Antígeno Prostático Específico (PSA)">
-            >
             ["at10"] = <
                 text = <"*Yes (en)">
                 description = <"*Yes (en)">
@@ -300,10 +188,6 @@ terminology
             ["ac3"] = <
                 text = <"*PSA (en)">
                 description = <"*PSA (en)">
-            >
-            ["id20"] = <
-                text = <"valor do resultado">
-                description = <"valor do resultado">
             >
         >
     >
