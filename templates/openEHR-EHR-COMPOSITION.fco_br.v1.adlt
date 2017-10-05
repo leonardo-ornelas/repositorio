@@ -50,7 +50,6 @@ definition
                     use_archetype OBSERVATION[id38.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0]
                     use_archetype OBSERVATION[id39.1, openEHR-EHR-OBSERVATION.ovl-fco_br-height-001.v1.0.0]
                     use_archetype OBSERVATION[id40.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_mass_index-001.v1.0.0]
-                    use_archetype OBSERVATION[id41.1, openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0]
                     use_archetype OBSERVATION[id43.1, openEHR-EHR-OBSERVATION.ovl-fco_br-blood_pressure-001.v1.0.0]
                 }
             }
@@ -1880,42 +1879,6 @@ terminology
             ["id1.1"] = <
                 text = <"Índice de massa corporal">
                 description = <"Índice que descreve a relação entre peso e altura.">
-            >
-        >
-    >
-
-
----------------------------------------------------------------------------------
-template_overlay
-    openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0
-
-specialize
-    openEHR-EHR-OBSERVATION.heart_rate.v1.0.0
-
-definition
-    OBSERVATION[id1.1] occurrences matches {1} matches {    -- heart frequency
-        /data[id2]/events[id3]/data[id4]/items[id6]/value matches {
-            DV_QUANTITY[id7] matches {
-                property matches {[at2]}
-                [units, magnitude, precision] matches {
-                    [{"min"}, {|>0.0..<1000.0|}, {|>=0|}]
-                }
-            }
-        }
-    }
-
-terminology
-    term_definitions = <
-        ["en"] = <
-            ["id1.1"] = <
-                text = <"heart frequency">
-                description = <"heart frequency">
-            >
-        >
-        ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Frequência cardíaca">
-                description = <"Frequência cardíaca">
             >
         >
     >
