@@ -31,7 +31,12 @@ definition
                     EVENT[id3] matches {    -- Any event
                         data matches {
                             ITEM_TREE[id4] matches {
-                                items
+                                items matches {
+                                    allow_archetype ELEMENT[id5] occurrences matches {0..1} matches { 
+                                        include
+                                            archetype_id/value matches {/openEHR\-EHR\-ELEMENT\.last_normal_menstrual_period\.v1\.0\.0/}
+                                    }
+                                }
                             }
                         }
                     }
@@ -50,7 +55,11 @@ terminology
             ["id3"] = <
                 text = <"Any event">
                 description = <"Any event">
-            >    
+            >
+            ["id5"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -61,5 +70,10 @@ terminology
                 text = <"Eventos">
                 description = <"Eventos">
             >
+            ["id5"] = <
+                text = <"Data da última menstruação (en)">
+                description = <"Data da última menstruação (en)">
+            >
         >
-    >    
+    >
+
