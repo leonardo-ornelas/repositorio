@@ -26,6 +26,7 @@ definition
                     use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
                     use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0]
                     use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-SESI_BR-001.v1.0.0]
+                    use_archetype OBSERVATION[id12.1, openEHR-EHR-OBSERVATION.ovl-fco_br-habitos_lazer-001.v1.0.0]
                 }
             }
             SECTION[id7] occurrences matches {0..1} matches {
@@ -836,6 +837,48 @@ terminology
             ["id5.0.1"] = <
                 text = <"Substância">
                 description = <"Identificação da substância">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-habitos_lazer-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Hábitos Lazer
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id12] occurrences matches {0..1} matches {
+                /value[id13]/value matches {True, False; false}
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id15]/value matches {True, False; false}
+            }
+            ELEMENT[id16] occurrences matches {0..1} matches {
+                /value[id17]/value matches {True, False; false}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hábitos Lazer">
+                description = <"Atividade de lazer">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Leisure habits">
+                description = <"Leisure habits">
             >
         >
     >
