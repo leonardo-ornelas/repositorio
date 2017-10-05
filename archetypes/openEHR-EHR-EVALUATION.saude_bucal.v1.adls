@@ -56,6 +56,13 @@ definition
                                     }
                                 }
                             }
+                            ELEMENT[id86] occurrences matches {0..1} matches {    -- Codigo
+                                value matches {
+                                    DV_CODED_TEXT[id87] matches {
+                                        defining_code matches {[ac5]}
+                                    }
+                                }
+                            }
                         }
                     }
                     CLUSTER[id72] occurrences matches {0..1} matches {    -- Condições Protéticas
@@ -280,6 +287,142 @@ terminology
                 text = <"Necessidade de consulta odontológica">
                 description = <"Necessidade de consulta odontológica">
             >
+            ["id86"] = <
+                text = <"Codigo">
+                description = <"Codigo">
+            >
+            ["at25"] = <
+                text = <"18">
+                description = <"18">
+            >
+            ["at26"] = <
+                text = <"17">
+                description = <"17">
+            >
+            ["at27"] = <
+                text = <"16">
+                description = <"16">
+            >
+            ["ac5"] = <
+                text = <"Codigo Dental">
+                description = <"Codigo Dental">
+            >
+            ["at28"] = <
+                text = <"15">
+                description = <"15">
+            >
+            ["at29"] = <
+                text = <"14">
+                description = <"14">
+            >
+            ["at30"] = <
+                text = <"13">
+                description = <"13">
+            >
+            ["at31"] = <
+                text = <"12">
+                description = <"12">
+            >
+            ["at32"] = <
+                text = <"11">
+                description = <"11">
+            >
+            ["at33"] = <
+                text = <"21">
+                description = <"21">
+            >
+            ["at34"] = <
+                text = <"22">
+                description = <"22">
+            >
+            ["at35"] = <
+                text = <"23">
+                description = <"23">
+            >
+            ["at36"] = <
+                text = <"24">
+                description = <"24">
+            >
+            ["at37"] = <
+                text = <"25">
+                description = <"25">
+            >
+            ["at38"] = <
+                text = <"26">
+                description = <"26">
+            >
+            ["at39"] = <
+                text = <"27">
+                description = <"27">
+            >
+            ["at40"] = <
+                text = <"28">
+                description = <"28">
+            >
+            ["at41"] = <
+                text = <"31">
+                description = <"31">
+            >
+            ["at42"] = <
+                text = <"32">
+                description = <"32">
+            >
+            ["at43"] = <
+                text = <"33">
+                description = <"33">
+            >
+            ["at44"] = <
+                text = <"34">
+                description = <"34">
+            >
+            ["at45"] = <
+                text = <"35">
+                description = <"35">
+            >
+            ["at46"] = <
+                text = <"36">
+                description = <"36">
+            >
+            ["at47"] = <
+                text = <"37">
+                description = <"37">
+            >
+            ["at48"] = <
+                text = <"38">
+                description = <"38">
+            >
+            ["at49"] = <
+                text = <"41">
+                description = <"41">
+            >
+            ["at50"] = <
+                text = <"42">
+                description = <"42">
+            >
+            ["at51"] = <
+                text = <"43">
+                description = <"43">
+            >
+            ["at52"] = <
+                text = <"44">
+                description = <"44">
+            >
+            ["at53"] = <
+                text = <"45">
+                description = <"45">
+            >
+            ["at54"] = <
+                text = <"46">
+                description = <"46">
+            >
+            ["at55"] = <
+                text = <"47">
+                description = <"47">
+            >
+            ["at56"] = <
+                text = <"48">
+                description = <"48">
+            >
         >
         ["en"] = <
             ["id1"] = <
@@ -450,6 +593,142 @@ terminology
                 text = <"Need for dental consultation">
                 description = <"Need for dental consultation">
             >
+            ["id86"] = <
+                text = <"Codigo (pt-br)">
+                description = <"Codigo (pt-br)">
+            >
+            ["at25"] = <
+                text = <"18 (pt-br)">
+                description = <"18 (pt-br)">
+            >
+            ["at26"] = <
+                text = <"17 (pt-br)">
+                description = <"17 (pt-br)">
+            >
+            ["at27"] = <
+                text = <"16 (pt-br)">
+                description = <"16 (pt-br)">
+            >
+            ["ac5"] = <
+                text = <"Codigo Dental (pt-br)">
+                description = <"Codigo Dental (pt-br)">
+            >
+            ["at28"] = <
+                text = <"15 (pt-br)">
+                description = <"15 (pt-br)">
+            >
+            ["at29"] = <
+                text = <"14 (pt-br)">
+                description = <"14 (pt-br)">
+            >
+            ["at30"] = <
+                text = <"13 (pt-br)">
+                description = <"13 (pt-br)">
+            >
+            ["at31"] = <
+                text = <"12 (pt-br)">
+                description = <"12 (pt-br)">
+            >
+            ["at32"] = <
+                text = <"11 (pt-br)">
+                description = <"11 (pt-br)">
+            >
+            ["at33"] = <
+                text = <"21 (pt-br)">
+                description = <"21 (pt-br)">
+            >
+            ["at34"] = <
+                text = <"22 (pt-br)">
+                description = <"22 (pt-br)">
+            >
+            ["at35"] = <
+                text = <"23 (pt-br)">
+                description = <"23 (pt-br)">
+            >
+            ["at36"] = <
+                text = <"24 (pt-br)">
+                description = <"24 (pt-br)">
+            >
+            ["at37"] = <
+                text = <"25 (pt-br)">
+                description = <"25 (pt-br)">
+            >
+            ["at38"] = <
+                text = <"26 (pt-br)">
+                description = <"26 (pt-br)">
+            >
+            ["at39"] = <
+                text = <"27 (pt-br)">
+                description = <"27 (pt-br)">
+            >
+            ["at40"] = <
+                text = <"28 (pt-br)">
+                description = <"28 (pt-br)">
+            >
+            ["at41"] = <
+                text = <"31 (pt-br)">
+                description = <"31 (pt-br)">
+            >
+            ["at42"] = <
+                text = <"32 (pt-br)">
+                description = <"32 (pt-br)">
+            >
+            ["at43"] = <
+                text = <"33 (pt-br)">
+                description = <"33 (pt-br)">
+            >
+            ["at44"] = <
+                text = <"34 (pt-br)">
+                description = <"34 (pt-br)">
+            >
+            ["at45"] = <
+                text = <"35 (pt-br)">
+                description = <"35 (pt-br)">
+            >
+            ["at46"] = <
+                text = <"36 (pt-br)">
+                description = <"36 (pt-br)">
+            >
+            ["at47"] = <
+                text = <"37 (pt-br)">
+                description = <"37 (pt-br)">
+            >
+            ["at48"] = <
+                text = <"38 (pt-br)">
+                description = <"38 (pt-br)">
+            >
+            ["at49"] = <
+                text = <"41 (pt-br)">
+                description = <"41 (pt-br)">
+            >
+            ["at50"] = <
+                text = <"42 (pt-br)">
+                description = <"42 (pt-br)">
+            >
+            ["at51"] = <
+                text = <"43 (pt-br)">
+                description = <"43 (pt-br)">
+            >
+            ["at52"] = <
+                text = <"44 (pt-br)">
+                description = <"44 (pt-br)">
+            >
+            ["at53"] = <
+                text = <"45 (pt-br)">
+                description = <"45 (pt-br)">
+            >
+            ["at54"] = <
+                text = <"46 (pt-br)">
+                description = <"46 (pt-br)">
+            >
+            ["at55"] = <
+                text = <"47 (pt-br)">
+                description = <"47 (pt-br)">
+            >
+            ["at56"] = <
+                text = <"48 (pt-br)">
+                description = <"48 (pt-br)">
+            >
         >
     >
     value_sets = <
@@ -468,6 +747,10 @@ terminology
         ["ac4"] = <
             id = <"ac4">
             members = <"at23", "at24">
+        >
+        ["ac5"] = <
+            id = <"ac5">
+            members = <"at25", "at26", "at27", "at28", "at29", "at30", "at31", "at32", "at33", "at34", "at35", "at36", "at37", "at38", "at39", "at40", "at41", "at42", "at43", "at44", "at45", "at46", "at47", "at48", "at49", "at50", "at51", "at52", "at53", "at54", "at55", "at56">
         >
     >
 
