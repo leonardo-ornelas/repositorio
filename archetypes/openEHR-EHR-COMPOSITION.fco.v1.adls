@@ -43,8 +43,14 @@ definition
             }
             SECTION[id7] occurrences matches {0..1} matches {    -- Antecedentes mórbidos
                 items matches {
-                    allow_archetype EVALUATION[id13] occurrences matches {0..1}
-                    allow_archetype ACTION[id14] occurrences matches {0..1}
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
                 }
             }
         }
