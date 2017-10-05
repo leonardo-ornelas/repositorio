@@ -70,11 +70,16 @@ definition
             EVENT[id3] occurrences matches {0..1} matches {    -- Any event
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {    -- Consumption Details
-                        /items[id16]/items[id17]/value matches {
-                            DV_QUANTITY[id31] matches {
-                                property matches {[at2]}
-                                units matches {"gm/d", "gm/wk"}
+                        items matches {
+                            CLUSTER[id16] occurrences matches {0..1} matches {    -- Amount
+                                /items[id17]/value cardinality matches {1; unordered} matches {
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
+                                    }
+                                }
                             }
+                            use_node ELEMENT /protocol[id25]/items[id26]
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
@@ -223,6 +228,10 @@ terminology
                 text = <"Período">
                 description = <"Período de consumo">
             >
+            ["id0.9"] = <
+                text = <"Definição de dose padrão">
+                description = <"Definição de dose padrão">
+            >
         >
         ["pt-br"] = <
             ["id1.1"] = <
@@ -316,6 +325,10 @@ terminology
             ["ac0.1"] = <
                 text = <"Período (en)">
                 description = <"Período de consumo (en)">
+            >
+            ["id0.9"] = <
+                text = <"Definição de dose padrão (en)">
+                description = <"Definição de dose padrão (en)">
             >
         >
     >
