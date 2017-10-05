@@ -433,12 +433,12 @@ terminology
                 description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
             >
             ["id27"] = <
-                text = <"*Any event(en)">
+                text = <"Nascimento">
                 description = <"**(en)">
             >
             ["id28"] = <
-                text = <"*New element(en)">
-                description = <"**(en)">
+                text = <"Fórmula de estimativa de peso">
+                description = <"Fórmula de estimativa de peso">
             >
             ["at19"] = <
                 text = <"*Mass (en)">
