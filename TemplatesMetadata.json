@@ -40,7 +40,7 @@
     "rmType" : "COMPOSITION",
     "name" : "Encounter",
     "path" : "templates/openEHR-EHR-COMPOSITION.ficha_clinica_ocupacional.v1.adlt",
-    "sha" : "cb26c9fb4428d1398239bcf53580db6d06e8ced3"
+    "sha" : "32319d6babce8848a32ef705000114b4a5ee9713"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco.v1.0.0",
     "rmType" : "COMPOSITION",
@@ -52,12 +52,30 @@
     "rmType" : "COMPOSITION",
     "name" : "FCO",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_br.v1.adlt",
-    "sha" : "61a0fed1fc60c73739d707271912b67546a43820"
+    "sha" : "6d3e03f1df04aaf72988a7ecab7e2cc0018f5be1"
   }, {
     "id" : "openEHR-EHR-COMPOSITION.fco_sessi.v1.0.0",
     "rmType" : "COMPOSITION",
     "name" : "Ficha clínica ocupacional",
     "path" : "templates/openEHR-EHR-COMPOSITION.fco_sessi.v1.adlt",
     "sha" : "9d1850f706da507ce7428c23759cd21a4f637790"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.asasa.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.asasa.v1.adlt",
+    "sha" : "da57b76015cb5b55dcac7597a4a826327724a832"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.blood.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.blood.v1.adlt",
+    "sha" : "ef15b264de29a84dd4de6c832337aa04ab981b17"
+  }, {
+    "id" : "openEHR-EHR-COMPOSITION.pressao_altura.v1.0.0",
+    "rmType" : "COMPOSITION",
+    "name" : "Encontro",
+    "path" : "templates/openEHR-EHR-COMPOSITION.pressao_altura.v1.adlt",
+    "sha" : "604c339d10df3ea186d868b99f084d2296135694"
   } ]
 }
