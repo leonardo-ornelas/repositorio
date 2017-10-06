@@ -80,10 +80,9 @@ definition
                                 }
                             }
                             use_node ELEMENT /protocol[id25]/items[id27]
-                            use_node ELEMENT /protocol[id25]/items[id26]
-                            ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Com que frequência você toma "5 ou mais doses" em uma vez
+                            ELEMENT[id0.16] occurrences matches {0..1} matches {    -- Com que frequência você toma "5 ou mais doses" em uma vez
                                 value matches {
-                                    DV_CODED_TEXT[id0.14] matches {
+                                    DV_CODED_TEXT[id0.17] matches {
                                         defining_code matches {[ac0.1]}
                                     }
                                 }
@@ -223,9 +222,13 @@ terminology
                 text = <"Frequência de uso médio">
                 description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
-            ["id0.13"] = <
+            ["id0.15"] = <
+                text = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+                description = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+            >
+            ["id0.16"] = <
                 text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
-                description = <"Frequência de apenas em um período de consumo">
+                description = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
             >
         >
         ["pt-br"] = <
@@ -321,9 +324,13 @@ terminology
                 text = <"Frequência de uso médio">
                 description = <"Frequência de \"uso médio\" em um intervalo de tempo">
             >
-            ["id0.13"] = <
-                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
-                description = <"Frequência de apenas em um período de consumo">
+            ["id0.15"] = <
+                text = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+                description = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+            >
+            ["id0.16"] = <
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
+                description = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
             >
         >
     >
