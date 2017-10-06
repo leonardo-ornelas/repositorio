@@ -711,7 +711,7 @@
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.adls",
-    "sha" : "79d62d5dafc36d99f69143f209cb9086584b7a41",
+    "sha" : "d2c634d785604ea12714d7929a3ed6f1703925cb",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0",
