@@ -79,8 +79,8 @@ definition
                                     }
                                 }
                             }
-			    use_node ELEMENT[id0.14] /protocol[id25]/items[id26]    -- Com que frequência você toma "5 ou mais doses" em uma vez
-                            use_node ELEMENT[id0.15] /protocol[id25]/items[id27]    -- Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?
+                            use_node ELEMENT /protocol[id25]/items[id26]
+                            use_node ELEMENT /protocol[id25]/items[id27]
                             ELEMENT[id0.16] occurrences matches {0..1} matches {    -- Com que frequência você toma "5 ou mais doses" em uma vez
                                 value matches {
                                     DV_CODED_TEXT[id0.17] matches {
