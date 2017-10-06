@@ -70,29 +70,29 @@ definition
             EVENT[id3] occurrences matches {0..1} matches {    -- Any event
                 /data[id4]/items matches {
                     CLUSTER[id6] matches {    -- Consumption Details
-                        /items[id16]/items[id17]/value matches {
-                            DV_QUANTITY[id31] matches {
-                                property matches {[at2]}
-                                units matches {"gm/d", "gm/wk"}
+                        items matches {
+                            CLUSTER[id16] occurrences matches {0..1} matches {    -- Amount
+                                /items[id17]/value cardinality matches {1; unordered} matches {
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
+                                    }
+                                }
+                            }
+			    use_node ELEMENT[id0.14] /protocol[id25]/items[id26]    -- Com que frequência você toma "5 ou mais doses" em uma vez
+                            use_node ELEMENT[id0.15] /protocol[id25]/items[id27]    -- Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?
+                            ELEMENT[id0.16] occurrences matches {0..1} matches {    -- Com que frequência você toma "5 ou mais doses" em uma vez
+                                value matches {
+                                    DV_CODED_TEXT[id0.17] matches {
+                                        defining_code matches {[ac0.1]}
+                                    }
+                                }
                             }
                         }
                     }
                     allow_archetype CLUSTER[id28] matches { 
                         include
                             archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
-                    }
-                    CLUSTER[id0.3] occurrences matches {0..1} matches {    -- Consumo
-                        items matches {
-                            use_node ELEMENT /protocol[id25]/items[id27]
-                            use_node ELEMENT /protocol[id25]/items[id26]
-                            ELEMENT[id0.6] occurrences matches {0..1} matches {    -- How often do you take "5 or more doses" at one time
-                                value matches {
-                                    DV_CODED_TEXT[id0.7] matches {
-                                        defining_code matches {[ac0.1]}
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -183,10 +183,6 @@ terminology
                 text = <"Mass">
                 description = <"Mass">
             >
-            ["id0.3"] = <
-                text = <"Consumo">
-                description = <"Detalhes sobre a frequência/quantidade  de álcool">
-            >
             ["id0.4"] = <
                 text = <"How often do you drink alcoholic beverages?">
                 description = <"Frequency of use">
@@ -194,10 +190,6 @@ terminology
             ["id0.5"] = <
                 text = <"At times when you drink, how many doses do you typically consume to the baby?">
                 description = <"Number of doses in a period">
-            >
-            ["id0.6"] = <
-                text = <"How often do you take \"5 or more doses\" at one time">
-                description = <"How often do you take \"5 or more doses\" at one time">
             >
             ["at0.1"] = <
                 text = <"Never">
@@ -222,6 +214,26 @@ terminology
             ["ac0.1"] = <
                 text = <"Período">
                 description = <"Período de consumo">
+            >
+            ["id0.10"] = <
+                text = <"Definição de dose padrão">
+                description = <"Definição de dose padrão">
+            >
+            ["id0.11"] = <
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+            ["id0.14"] = <
+                text = <"Com que frequência você toma bebidas alcoólicas">
+                description = <"Com que frequência você toma bebidas alcoólicas">
+            >
+            ["id0.15"] = <
+                text = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+                description = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+            >
+            ["id0.16"] = <
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
+                description = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
             >
         >
         ["pt-br"] = <
@@ -277,10 +289,6 @@ terminology
                 text = <"*Mass (en)">
                 description = <"*Mass (en)">
             >
-            ["id0.3"] = <
-                text = <"Consumo (en)">
-                description = <"Detalhes sobre a frequência/quantidade  de álcool (en)">
-            >
             ["id0.4"] = <
                 text = <"Com que frequência você toma bebidas alcoólicas">
                 description = <"Frequência de uso">
@@ -288,10 +296,6 @@ terminology
             ["id0.5"] = <
                 text = <"Nas ocasiões em que bebe, quantas doses você consome tipicamente ao bebe?">
                 description = <"Quantidade de doses em um período">
-            >
-            ["id0.6"] = <
-                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez (en)">
-                description = <"Frequência de apenas em um período de consumo (en)">
             >
             ["at0.1"] = <
                 text = <"Nunca">
@@ -316,6 +320,22 @@ terminology
             ["ac0.1"] = <
                 text = <"Período (en)">
                 description = <"Período de consumo (en)">
+            >
+            ["id0.11"] = <
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+            ["id0.14"] = <
+                text = <"Com que frequência você toma bebidas alcoólicas">
+                description = <"Com que frequência você toma bebidas alcoólicas">
+            >
+            ["id0.15"] = <
+                text = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+                description = <"Nas ocasiões em que bebe, quantas dose você consome tipicamente ao bebe?">
+            >
+            ["id0.16"] = <
+                text = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
+                description = <"Com que frequência você toma \"5 ou mais doses\" em uma vez">
             >
         >
     >

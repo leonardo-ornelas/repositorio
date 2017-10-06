@@ -10,16 +10,16 @@ language
         ["pt-br"] = <
             accreditation = <"">
             author = <
-                ["name"] = <"Grupo iHealth">
-                ["organization"] = <"Grupo iHealth">
-                ["email"] = <"contato@ihealthgroup.com.br">
+                ["name"] = <"Ismael Queiroz">
+                ["organisation"] = <"Solutis Tecnologias">
+                ["email"] = <"ismael.queiroz@solutis.com.br">
             >
             language = <[ISO_639-1::pt-br]>
         >
     >
     
 description
-    copyright = <"© 2011 NEHTA">
+    copyright = <"© 2017 EZVIDA">
     details = <
         ["en"] = <
             keywords = <"issue", "condition", "problem", "concern", "diagnosis", "criteria", "illness", "disease", "disorder">
@@ -96,165 +96,158 @@ definition
                 include
                     archetype_id/value matches {/.*/}
             }
-            ELEMENT[id0.2] occurrences matches {0..1} matches {    -- Type
-                value matches {
-                    DV_CODED_TEXT[id0.3] matches {
-                        defining_code matches {[ac0.1]}
-                    }
-                }
-            }
-            CLUSTER[id0.4] occurrences matches {0..1} matches {    -- Problemas/Diagnósticos
+            CLUSTER[id94] occurrences matches {0..1} matches {    -- Problemas/Diagnósticos
                 items matches {
-                    ELEMENT[id0.5] occurrences matches {0..1} matches {    -- D.P da infância
+                    ELEMENT[id95] occurrences matches {0..1} matches {    -- D.P da infância
                         value matches {
-                            DV_BOOLEAN[id0.6] matches {
+                            DV_BOOLEAN[id96] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.7] occurrences matches {0..1} matches {    -- Tuberculose
+                    ELEMENT[id97] occurrences matches {0..1} matches {    -- Tuberculose
                         value matches {
-                            DV_BOOLEAN[id0.8] matches {
+                            DV_BOOLEAN[id98] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.9] occurrences matches {0..1} matches {    -- Doença pulmonar obstrutiva crônica
+                    ELEMENT[id99] occurrences matches {0..1} matches {    -- Doença pulmonar obstrutiva crônica
                         value matches {
-                            DV_BOOLEAN[id0.10] matches {
+                            DV_BOOLEAN[id100] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.11] occurrences matches {0..1} matches {    -- Pneumonia
+                    ELEMENT[id101] occurrences matches {0..1} matches {    -- Pneumonia
                         value matches {
-                            DV_BOOLEAN[id0.12] matches {
+                            DV_BOOLEAN[id102] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.13] occurrences matches {0..1} matches {    -- Doença sexualmente transmissível
+                    ELEMENT[id103] occurrences matches {0..1} matches {    -- Doença sexualmente transmissível
                         value matches {
-                            DV_BOOLEAN[id0.14] matches {
+                            DV_BOOLEAN[id104] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.15] occurrences matches {0..1} matches {    -- Hipertensão arterial
+                    ELEMENT[id105] occurrences matches {0..1} matches {    -- Hipertensão arterial
                         value matches {
-                            DV_BOOLEAN[id0.16] matches {
+                            DV_BOOLEAN[id106] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.17] occurrences matches {0..1} matches {    -- Angina
+                    ELEMENT[id107] occurrences matches {0..1} matches {    -- Angina
                         value matches {
-                            DV_BOOLEAN[id0.18] matches {
+                            DV_BOOLEAN[id108] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.19] occurrences matches {0..1} matches {    -- Infarto
+                    ELEMENT[id109] occurrences matches {0..1} matches {    -- Infarto
                         value matches {
-                            DV_BOOLEAN[id0.20] matches {
+                            DV_BOOLEAN[id110] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.21] occurrences matches {0..1} matches {    -- Diabetes
+                    ELEMENT[id111] occurrences matches {0..1} matches {    -- Diabetes
                         value matches {
-                            DV_BOOLEAN[id0.22] matches {
+                            DV_BOOLEAN[id112] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.23] occurrences matches {0..1} matches {    -- Dislipidemia
+                    ELEMENT[id113] occurrences matches {0..1} matches {    -- Dislipidemia
                         value matches {
-                            DV_BOOLEAN[id0.24] matches {
+                            DV_BOOLEAN[id114] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.25] occurrences matches {0..1} matches {    -- Neoplasia
+                    ELEMENT[id115] occurrences matches {0..1} matches {    -- Neoplasia
                         value matches {
-                            DV_BOOLEAN[id0.26] matches {
+                            DV_BOOLEAN[id116] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.27] occurrences matches {0..1} matches {    -- Hanseníase
+                    ELEMENT[id117] occurrences matches {0..1} matches {    -- Hanseníase
                         value matches {
-                            DV_BOOLEAN[id0.28] matches {
+                            DV_BOOLEAN[id118] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.30] occurrences matches {0..1} matches {    -- Hepatite
+                    ELEMENT[id120] occurrences matches {0..1} matches {    -- Hepatite
                         value matches {
-                            DV_BOOLEAN[id0.31] matches {
+                            DV_BOOLEAN[id121] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.32] occurrences matches {0..1} matches {    -- Atopia
+                    ELEMENT[id122] occurrences matches {0..1} matches {    -- Atopia
                         value matches {
-                            DV_BOOLEAN[id0.33] matches {
+                            DV_BOOLEAN[id123] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.34] occurrences matches {0..1} matches {    -- Doença hematológica
+                    ELEMENT[id124] occurrences matches {0..1} matches {    -- Doença hematológica
                         value matches {
-                            DV_BOOLEAN[id0.35] matches {
+                            DV_BOOLEAN[id125] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.36] occurrences matches {0..1} matches {    -- Doença osteomuscular
+                    ELEMENT[id126] occurrences matches {0..1} matches {    -- Doença osteomuscular
                         value matches {
-                            DV_BOOLEAN[id0.37] matches {
+                            DV_BOOLEAN[id127] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.38] occurrences matches {0..1} matches {    -- Doença reumatológica
+                    ELEMENT[id128] occurrences matches {0..1} matches {    -- Doença reumatológica
                         value matches {
-                            DV_BOOLEAN[id0.39] matches {
+                            DV_BOOLEAN[id129] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.40] occurrences matches {0..1} matches {    -- Doença neurolǵica
+                    ELEMENT[id130] occurrences matches {0..1} matches {    -- Doença neurolǵica
                         value matches {
-                            DV_BOOLEAN[id0.41] matches {
+                            DV_BOOLEAN[id131] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.42] occurrences matches {0..1} matches {    -- Distúrbio psiquiátrico
+                    ELEMENT[id132] occurrences matches {0..1} matches {    -- Distúrbio psiquiátrico
                         value matches {
-                            DV_BOOLEAN[id0.43] matches {
+                            DV_BOOLEAN[id133] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.44] occurrences matches {0..1} matches {    -- Transfusão de sangue
+                    ELEMENT[id134] occurrences matches {0..1} matches {    -- Transfusão de sangue
                         value matches {
-                            DV_BOOLEAN[id0.45] matches {
+                            DV_BOOLEAN[id135] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.46] occurrences matches {0..1} matches {    -- Fratura
+                    ELEMENT[id136] occurrences matches {0..1} matches {    -- Fratura
                         value matches {
-                            DV_BOOLEAN[id0.47] matches {
+                            DV_BOOLEAN[id137] matches {
                                 value matches {True, False; false}
                             }
                         }
                     }
-                    ELEMENT[id0.48] occurrences matches {0..1} matches {    -- Transtorno do sono
+                    ELEMENT[id138] occurrences matches {0..1} matches {    -- Transtorno do sono
                         value matches {
-                            DV_BOOLEAN[id0.49] matches {
+                            DV_BOOLEAN[id139] matches {
                                 value matches {True, False; false}
                             }
                         }
@@ -273,30 +266,6 @@ definition
 terminology
     term_definitions = <
         ["en"] = <
-            ["id1.1"] = <
-                text = <"Problem/Diagnosis">
-                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
-            >
-            ["id0.2"] = <
-                text = <"Type">
-                description = <"Record the type of diagnosis">
-            >
-            ["at0.1"] = <
-                text = <"Main">
-                description = <"Main">
-            >
-            ["at0.2"] = <
-                text = <"Secondary">
-                description = <"Secondary">
-            >
-            ["at0.3"] = <
-                text = <"associated cause">
-                description = <"associated cause">
-            >
-            ["ac0.1"] = <
-                text = <"Type">
-                description = <"Type">
-            >
             ["id1"] = <
                 text = <"Problem/Diagnosis">
                 description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
@@ -315,7 +284,8 @@ terminology
             >
             ["id19"] = <
                 text = <"Occurrence summary">
-                description = <"Summary information about occurrences or exacerbations. Note: Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
+                description = <"Summary information about occurrences or exacerbations. 
+Note: Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
             >
             ["id20"] = <
                 text = <"Frequency">
@@ -343,11 +313,13 @@ terminology
             >
             ["id32"] = <
                 text = <"Age at resolution/remission">
-                description = <"The age of the person at the time of resolution or remission of the problem/diagnosis. Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+                description = <"The age of the person at the time of resolution or remission of the problem/diagnosis. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
             >
             ["id38"] = <
                 text = <"Age at onset">
-                description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began. Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+                description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
             >
             ["id45"] = <
                 text = <"Anatomical location">
@@ -359,7 +331,8 @@ terminology
             >
             ["id56"] = <
                 text = <"Clinical stage/grade">
-                description = <"Clinical stage or grade of a problem/diagnosis.   Note: May include formal severity assessments.">
+                description = <"Clinical stage or grade of a problem/diagnosis.   
+Note: May include formal severity assessments.">
             >
             ["id57"] = <
                 text = <"Relationship type">
@@ -397,6 +370,98 @@ terminology
                 text = <"Severity">
                 description = <"A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician. Coding of the severity with a terminology is preferred, where possible.">
             >
+            ["id94"] = <
+                text = <"Problemas/Diagnósticos">
+                description = <"Problemas/Diagnósticos">
+            >
+            ["id95"] = <
+                text = <"D.P da infância">
+                description = <"D.P da infância">
+            >
+            ["id97"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id99"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
+            >
+            ["id101"] = <
+                text = <"Pneumonia">
+                description = <"Pneumonia bacteriana não classificada em outra parte (J15)">
+            >
+            ["id103"] = <
+                text = <"Doença sexualmente transmissível">
+                description = <"Doenças sexualmente transmitidas (A64)">
+            >
+            ["id105"] = <
+                text = <"Hipertensão arterial">
+                description = <"Doenças hipertensivas (I10 - I15)">
+            >
+            ["id107"] = <
+                text = <"Angina">
+                description = <"Angina pectoris (I20)">
+            >
+            ["id109"] = <
+                text = <"Infarto">
+                description = <"Doenças isquêmicas do coração (I20 - I25)">
+            >
+            ["id111"] = <
+                text = <"Diabetes">
+                description = <"Diabetes mellitus (E10 - E14)">
+            >
+            ["id113"] = <
+                text = <"Dislipidemia">
+                description = <"Dislipidemia (CID-E78)">
+            >
+            ["id115"] = <
+                text = <"Neoplasia">
+                description = <"Neoplasias [tumores] malignas(os) (C00 - C97)">
+            >
+            ["id117"] = <
+                text = <"Hanseníase">
+                description = <"Hanseníase [doença de Hansen] [lepra] (A30)">
+            >
+            ["id120"] = <
+                text = <"Hepatite">
+                description = <"Hepatite viral (B15 - B19)">
+            >
+            ["id122"] = <
+                text = <"Atopia">
+                description = <"Dermatite atópica (L20)">
+            >
+            ["id124"] = <
+                text = <"Doença hematológica">
+                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
+            >
+            ["id126"] = <
+                text = <"Doença osteomuscular">
+                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
+            >
+            ["id128"] = <
+                text = <"Doença reumatológica">
+                description = <"Febre reumática aguda (I00 - I02)">
+            >
+            ["id130"] = <
+                text = <"Doença neurolǵica">
+                description = <"Doenças do aparelho circulatório (I00 - I99)">
+            >
+            ["id132"] = <
+                text = <"Distúrbio psiquiátrico">
+                description = <"Transtornos mentais e comportamentais (F00 - F99)">
+            >
+            ["id134"] = <
+                text = <"Transfusão de sangue">
+                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
+            >
+            ["id136"] = <
+                text = <"Fratura">
+                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
+            >
+            ["id138"] = <
+                text = <"Transtorno do sono">
+                description = <"Distúrbios do sono (G47)">
+            >
             ["at83"] = <
                 text = <"Frequency">
                 description = <"Frequency">
@@ -405,124 +470,12 @@ terminology
                 text = <"Relationship type (synthesised)">
                 description = <"The type of relationship that this problem/diagnosis has to the related item. (synthesised)">
             >
-            ["id0.4"] = <
-                text = <"Problemas/Diagnósticos">
-                description = <"Problemas/Diagnósticos">
-            >
-            ["id0.5"] = <
-                text = <"D.P da infância">
-                description = <"D.P da infância">
-            >
-            ["id0.7"] = <
-                text = <"Tuberculose">
-                description = <"Tuberculose">
-            >
-            ["id0.9"] = <
-                text = <"Doença pulmonar obstrutiva crônica">
-                description = <"Doença pulmonar obstrutiva crônica">
-            >
-            ["id0.11"] = <
-                text = <"Pneumonia">
-                description = <"Pneumonia">
-            >
-            ["id0.13"] = <
-                text = <"Doença sexualmente transmissível">
-                description = <"Doença sexualmente transmissível">
-            >
-            ["id0.15"] = <
-                text = <"Hipertensão arterial">
-                description = <"Hipertensão arterial">
-            >
-            ["id0.17"] = <
-                text = <"Angina">
-                description = <"Angina">
-            >
-            ["id0.19"] = <
-                text = <"Infarto">
-                description = <"Infarto">
-            >
-            ["id0.21"] = <
-                text = <"Diabetes">
-                description = <"Diabetes">
-            >
-            ["id0.23"] = <
-                text = <"Dislipidemia">
-                description = <"Dislipidemia">
-            >
-            ["id0.25"] = <
-                text = <"Neoplasia">
-                description = <"Neoplasia">
-            >
-            ["id0.27"] = <
-                text = <"Hanseníase">
-                description = <"Hanseníase">
-            >
-            ["id0.30"] = <
-                text = <"Hepatite">
-                description = <"Hepatite">
-            >
-            ["id0.32"] = <
-                text = <"Atopia">
-                description = <"Dermatite atópica (L20)">
-            >
-            ["id0.34"] = <
-                text = <"Doença hematológica">
-                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
-            >
-            ["id0.36"] = <
-                text = <"Doença osteomuscular">
-                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
-            >
-            ["id0.38"] = <
-                text = <"Doença reumatológica">
-                description = <"Febre reumática aguda (I00 - I02)">
-            >
-            ["id0.40"] = <
-                text = <"Doença neurolǵica">
-                description = <"Doenças do aparelho circulatório (I00 - I99)">
-            >
-            ["id0.42"] = <
-                text = <"Distúrbio psiquiátrico">
-                description = <"Transtornos mentais e comportamentais (F00 - F99)">
-            >
-            ["id0.44"] = <
-                text = <"Transfusão de sangue">
-                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
-            >
-            ["id0.46"] = <
-                text = <"Fratura">
-                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
-            >
-            ["id0.48"] = <
-                text = <"Transtorno do sono">
-                description = <"Distúrbios do sono (G47)">
+            ["id1.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
             >
         >
         ["pt-br"] = <
-            ["id1.1"] = <
-                text = <"Problema/Diagnóstico">
-                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
-            >
-            ["id0.2"] = <
-                text = <"Tipo">
-                description = <"Registre o tipo de diagnóstico">
-            >
-            ["at0.1"] = <
-                text = <"Principal">
-                description = <"Principal">
-            >
-            ["at0.2"] = <
-                text = <"Secundário">
-                description = <"Secundário">
-            >
-            ["at0.3"] = <
-                text = <"Causa associada">
-                description = <"Causa associada">
-            >
-            ["ac0.1"] = <
-                text = <"*Type (en)">
-                description = <"*Type (en)">
-            >
             ["id1"] = <
                 text = <"Problema/Diagnóstico">
                 description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
@@ -623,6 +576,98 @@ terminology
                 text = <"Gravidade">
                 description = <"Uma avaliação subjetiva da gravidade do Problema / Diagnóstico conforme avaliado pelo clínico. A codificação da gravidade com uma terminologia é preferida, sempre que possível.">
             >
+            ["id94"] = <
+                text = <"Problemas/Diagnósticos">
+                description = <"Problemas/Diagnósticos">
+            >
+            ["id95"] = <
+                text = <"D.P da infância">
+                description = <"D.P da infância">
+            >
+            ["id97"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id99"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
+            >
+            ["id101"] = <
+                text = <"Pneumonia">
+                description = <"Pneumonia bacteriana não classificada em outra parte (J15)">
+            >
+            ["id103"] = <
+                text = <"Doença sexualmente transmissível">
+                description = <"Doenças sexualmente transmitidas (A64)">
+            >
+            ["id105"] = <
+                text = <"Hipertensão arterial">
+                description = <"Doenças hipertensivas (I10 - I15)">
+            >
+            ["id107"] = <
+                text = <"Angina">
+                description = <"Angina pectoris (I20)">
+            >
+            ["id109"] = <
+                text = <"Infarto">
+                description = <"Doenças isquêmicas do coração (I20 - I25)">
+            >
+            ["id111"] = <
+                text = <"Diabetes">
+                description = <"Diabetes mellitus (E10 - E14)">
+            >
+            ["id113"] = <
+                text = <"Dislipidemia">
+                description = <"Dislipidemia (CID-E78)">
+            >
+            ["id115"] = <
+                text = <"Neoplasia">
+                description = <"Neoplasias [tumores] malignas(os) (C00 - C97)">
+            >
+            ["id117"] = <
+                text = <"Hanseníase">
+                description = <"Hanseníase [doença de Hansen] [lepra] (A30)">
+            >
+            ["id120"] = <
+                text = <"Hepatite">
+                description = <"Hepatite viral (B15 - B19)">
+            >
+            ["id122"] = <
+                text = <"Atopia">
+                description = <"Dermatite atópica (L20)">
+            >
+            ["id124"] = <
+                text = <"Doença hematológica">
+                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
+            >
+            ["id126"] = <
+                text = <"Doença osteomuscular">
+                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
+            >
+            ["id128"] = <
+                text = <"Doença reumatológica">
+                description = <"Febre reumática aguda (I00 - I02)">
+            >
+            ["id130"] = <
+                text = <"Doença neurolǵica">
+                description = <"Doenças do aparelho circulatório (I00 - I99)">
+            >
+            ["id132"] = <
+                text = <"Distúrbio psiquiátrico">
+                description = <"Transtornos mentais e comportamentais (F00 - F99)">
+            >
+            ["id134"] = <
+                text = <"Transfusão de sangue">
+                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
+            >
+            ["id136"] = <
+                text = <"Fratura">
+                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
+            >
+            ["id138"] = <
+                text = <"Transtorno do sono">
+                description = <"Distúrbios do sono (G47)">
+            >
             ["at83"] = <
                 text = <"Frequência">
                 description = <"Frequência">
@@ -631,104 +676,10 @@ terminology
                 text = <"*Relationship type (synthesised) (en)">
                 description = <"*The type of relationship that this problem/diagnosis has to the related item. (synthesised) (en)">
             >
-            ["id0.4"] = <
-                text = <"Problemas/Diagnósticos">
-                description = <"Problemas/Diagnósticos">
+            ["id1.1"] = <
+                text = <"Problema/Diagnóstico">
+                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
             >
-            ["id0.5"] = <
-                text = <"D.P da infância">
-                description = <"D.P da infância">
-            >
-            ["id0.7"] = <
-                text = <"Tuberculose">
-                description = <"Tuberculose (A15 - A19)">
-            >
-            ["id0.9"] = <
-                text = <"Doença pulmonar obstrutiva crônica">
-                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
-            >
-            ["id0.11"] = <
-                text = <"Pneumonia">
-                description = <"Pneumonia bacteriana não classificada em outra parte (J15)">
-            >
-            ["id0.13"] = <
-                text = <"Doença sexualmente transmissível">
-                description = <"Doenças sexualmente transmitidas (A64)">
-            >
-            ["id0.15"] = <
-                text = <"Hipertensão arterial">
-                description = <"Doenças hipertensivas (I10 - I15)">
-            >
-            ["id0.17"] = <
-                text = <"Angina">
-                description = <"Angina pectoris (I20)">
-            >
-            ["id0.19"] = <
-                text = <"Infarto">
-                description = <"Doenças isquêmicas do coração (I20 - I25)">
-            >
-            ["id0.21"] = <
-                text = <"Diabetes">
-                description = <"Diabetes mellitus (E10 - E14)">
-            >
-            ["id0.23"] = <
-                text = <"Dislipidemia">
-                description = <"Dislipidemia (CID-E78)">
-            >
-            ["id0.25"] = <
-                text = <"Neoplasia">
-                description = <"Neoplasias [tumores] malignas(os) (C00 - C97)">
-            >
-            ["id0.27"] = <
-                text = <"Hanseníase">
-                description = <"Hanseníase [doença de Hansen] [lepra] (A30)">
-            >
-            ["id0.30"] = <
-                text = <"Hepatite">
-                description = <"Hepatite viral (B15 - B19)">
-            >
-            ["id0.32"] = <
-                text = <"Atopia">
-                description = <"Dermatite atópica (L20)">
-            >
-            ["id0.34"] = <
-                text = <"Doença hematológica">
-                description = <"Transtornos hemorrágicos e hematológicos do feto e do recém-nascido (P50 - P61)">
-            >
-            ["id0.36"] = <
-                text = <"Doença osteomuscular">
-                description = <"Doenças do sistema osteomuscular e do tecido conjuntivo (M00 - M99)">
-            >
-            ["id0.38"] = <
-                text = <"Doença reumatológica">
-                description = <"Febre reumática aguda (I00 - I02)">
-            >
-            ["id0.40"] = <
-                text = <"Doença neurolǵica">
-                description = <"Doenças do aparelho circulatório (I00 - I99)">
-            >
-            ["id0.42"] = <
-                text = <"Distúrbio psiquiátrico">
-                description = <"Transtornos mentais e comportamentais (F00 - F99)">
-            >
-            ["id0.44"] = <
-                text = <"Transfusão de sangue">
-                description = <"Transfusão de sangue, sem diagnóstico registrado (Z513)">
-            >
-            ["id0.46"] = <
-                text = <"Fratura">
-                description = <"Traumatismos de localização não especificada do tronco, membro ou outra região do corpo (T08 - T14)">
-            >
-            ["id0.48"] = <
-                text = <"Transtorno do sono">
-                description = <"Distúrbios do sono (G47)">
-            >
-        >
-    >
-    value_sets = <
-        ["ac0.1"] = <
-            id = <"ac0.1">
-            members = <"at0.1", "at0.2", "at0.3">
         >
     >
 

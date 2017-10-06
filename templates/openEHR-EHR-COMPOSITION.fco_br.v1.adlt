@@ -1,0 +1,2936 @@
+template (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.fco_br.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.fco.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1.1] occurrences matches {1} matches {    -- FCO
+        content matches {
+            SECTION[id5] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id8] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.physical_activity_summary\-SESI_BR\.v1\.0\.0/}
+                    }
+                    use_archetype EVALUATION[id8.1, openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-tobacco\-SESI_BR\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id9.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.alcohol_use_SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id11] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-SESI_BR\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id11.1, openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-SESI_BR-001.v1.0.0]
+                    allow_archetype OBSERVATION[id12] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.habitos_lazer\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id12.1, openEHR-EHR-OBSERVATION.ovl-fco_br-habitos_lazer-001.v1.0.0]
+                    use_archetype OBSERVATION[id10.1, openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0]
+                }
+            }
+            SECTION[id7] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
+                    use_archetype EVALUATION[id13.1, openEHR-EHR-EVALUATION.ovl-fco_br-problem_diagnosis-SESI_BR-001.v1.0.0]
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
+                    use_archetype ACTION[id14.1, openEHR-EHR-ACTION.ovl-fco_br-medication-BR-001.v1.0.0]
+                }
+            }
+            allow_archetype EVALUATION[id15] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
+            }
+            allow_archetype EVALUATION[id16] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.vacinas\.v1\.0\.0/}
+            }
+            use_archetype EVALUATION[id16.1, openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0]
+            SECTION[id17] occurrences matches {0..1} matches {
+                items matches {
+                    OBSERVATION[id30] occurrences matches {0..1} matches {
+                        /data[id31]/events[id32]/data[id33]/item matches {
+                            allow_archetype ELEMENT[id34] occurrences matches {0..1} matches { 
+                                include
+                                    archetype_id/value matches {/openEHR\-EHR\-ELEMENT\.last_normal_menstrual_period\.v1\.0\.0/}
+                            }
+                            use_archetype ELEMENT[id34.1, openEHR-EHR-ELEMENT.ovl-fco_br-last_normal_menstrual_period-001.v1.0.0]
+                        }
+                    }
+                    allow_archetype ACTION[id36] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.imaging_exam\-SESI_BR\.v1\.0\.0/}
+                    }
+                    use_archetype ACTION[id36.1, openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0]
+                }
+            }
+            SECTION[id37] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype OBSERVATION[id38] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_weight\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id38.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0]
+                    allow_archetype OBSERVATION[id39] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.height\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id39.1, openEHR-EHR-OBSERVATION.ovl-fco_br-height-001.v1.0.0]
+                    allow_archetype OBSERVATION[id40] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_mass_index\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id40.1, openEHR-EHR-OBSERVATION.ovl-fco_br-body_mass_index-001.v1.0.0]
+                    allow_archetype OBSERVATION[id41] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.heart_rate\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id41.1, openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0]
+                    allow_archetype OBSERVATION[id42] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.waist_hip\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id42.1, openEHR-EHR-OBSERVATION.ovl-fco_br-waist_hip-001.v1.0.0]
+                    allow_archetype OBSERVATION[id43] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
+                    }
+                    use_archetype OBSERVATION[id43.1, openEHR-EHR-OBSERVATION.ovl-fco_br-blood_pressure-001.v1.0.0]
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"FCO">
+                description = <"FCO">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-fco_br-problem_diagnosis-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.problem_diagnosis-SESI_BR.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Problem/Diagnosis
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Problem/Diagnosis
+                value matches {
+                    DV_TEXT[id84.0.1] 
+                }
+            }
+            ELEMENT[id10.0.1] occurrences matches {0} matches {    -- Clinical description
+                value matches {
+                    DV_TEXT[id85.0.1] 
+                }
+            }
+            ELEMENT[id83.0.1] occurrences matches {0} matches {    -- Severity
+                value matches {
+                    DV_TEXT[id86.0.1] 
+                }
+            }
+            ELEMENT[id11.0.1] occurrences matches {0} matches {    -- Date of onset
+                value matches {
+                    DV_DATE_TIME[id87.0.1] 
+                }
+            }
+            ELEMENT[id38.0.1] occurrences matches {0} matches {    -- Age at onset
+                value matches {
+                    DV_DURATION[id88.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id45] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            CLUSTER[id19.0.1] occurrences matches {0} matches {    -- Occurrence summary
+                items matches {
+                    ELEMENT[id26] occurrences matches {0..1} matches {
+                        /value[id89]/magnitude matches {|>=1|}
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id90] matches {
+                                property matches {[at83]}
+                                units matches {"/min", "/h", "/d", "/wk", "/mo", "/yr"}
+                            }
+                        }
+                    }
+                }
+            }
+            CLUSTER[id27.0.1] occurrences matches {0} matches {    -- Related items
+                /items[id57]/value[id95]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id31.0.1] occurrences matches {0} matches {    -- Date of resolution/remission
+                value matches {
+                    DV_DATE[id96.0.1] 
+                }
+            }
+            ELEMENT[id32.0.1] occurrences matches {0} matches {    -- Age at resolution/remission
+                value matches {
+                    DV_DURATION[id97.0.1]     -- Tuberculose
+                }
+            }
+            allow_archetype CLUSTER[id55] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            allow_archetype CLUSTER[id56] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id70.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id98.0.1] 
+                }
+            }
+            CLUSTER[id94] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id95] occurrences matches {0..1} matches {
+                        /value[id96]/value matches {True, False; false}
+                    }
+                    ELEMENT[id97.0.2] occurrences matches {0..1} matches {    -- Tuberculose
+                        value matches {
+                            DV_BOOLEAN[id98.0.2] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id99] occurrences matches {0..1} matches {
+                        /value[id100]/value matches {True, False; false}
+                    }
+                    ELEMENT[id101] occurrences matches {0..1} matches {
+                        /value[id102]/value matches {True, False; false}
+                    }
+                    ELEMENT[id103] occurrences matches {0..1} matches {
+                        /value[id104]/value matches {True, False; false}
+                    }
+                    ELEMENT[id105] occurrences matches {0..1} matches {
+                        /value[id106]/value matches {True, False; false}
+                    }
+                    ELEMENT[id107] occurrences matches {0..1} matches {
+                        /value[id108]/value matches {True, False; false}
+                    }
+                    ELEMENT[id109] occurrences matches {0..1} matches {
+                        /value[id110]/value matches {True, False; false}
+                    }
+                    ELEMENT[id111] occurrences matches {0..1} matches {
+                        /value[id112]/value matches {True, False; false}
+                    }
+                    ELEMENT[id113] occurrences matches {0..1} matches {
+                        /value[id114]/value matches {True, False; false}
+                    }
+                    ELEMENT[id115] occurrences matches {0..1} matches {
+                        /value[id116]/value matches {True, False; false}
+                    }
+                    ELEMENT[id117] occurrences matches {0..1} matches {
+                        /value[id118]/value matches {True, False; false}
+                    }
+                    ELEMENT[id120] occurrences matches {0..1} matches {
+                        /value[id121]/value matches {True, False; false}
+                    }
+                    ELEMENT[id122] occurrences matches {0..1} matches {
+                        /value[id123]/value matches {True, False; false}
+                    }
+                    ELEMENT[id124] occurrences matches {0..1} matches {
+                        /value[id125]/value matches {True, False; false}
+                    }
+                    ELEMENT[id126] occurrences matches {0..1} matches {
+                        /value[id127]/value matches {True, False; false}
+                    }
+                    ELEMENT[id128] occurrences matches {0..1} matches {
+                        /value[id129]/value matches {True, False; false}
+                    }
+                    ELEMENT[id130] occurrences matches {0..1} matches {
+                        /value[id131]/value matches {True, False; false}
+                    }
+                    ELEMENT[id132] occurrences matches {0..1} matches {
+                        /value[id133]/value matches {True, False; false}
+                    }
+                    ELEMENT[id134] occurrences matches {0..1} matches {
+                        /value[id135]/value matches {True, False; false}
+                    }
+                    ELEMENT[id136] occurrences matches {0..1} matches {
+                        /value[id137]/value matches {True, False; false}
+                    }
+                    ELEMENT[id138] occurrences matches {0..1} matches {
+                        /value[id139]/value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        /protocol[id75]/items matches {
+            ELEMENT[id76.0.1] occurrences matches {0} matches {    -- Link to supporting clinical evidence
+                value matches {
+                    DV_URI[id99.0.1]     -- Doença pulmonar obstrutiva crônica
+                }
+            }
+            allow_archetype CLUSTER[id77] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Any health care condition which may impact on the physical, mental and/or social well-being of an individual, that may require diagnostic, therapeutic or educational action, and which has been determined by a clinician. A diagnosis is based on scientific evaluation of physical signs, symptoms, history, laboratory tests results, and procedures.">
+            >
+            ["id3.0.1"] = <
+                text = <"Problem/Diagnosis">
+                description = <"Identification of the problem or diagnosis. Coding of the problem or diagnosis with a terminology is preferred, where possible.">
+            >
+            ["id10.0.1"] = <
+                text = <"Clinical description">
+                description = <"Narrative description or comments about clinical aspects of the problem/diagnosis.">
+            >
+            ["id83.0.1"] = <
+                text = <"Severity">
+                description = <"A subjective assessment of the severity of the Problem/Diagnosis as evaluated by the clinician. Coding of the severity with a terminology is preferred, where possible.">
+            >
+            ["id11.0.1"] = <
+                text = <"Date of onset">
+                description = <"Estimated or actual date the problem/diagnosis began, in the opinion of the clinician.">
+            >
+            ["id38.0.1"] = <
+                text = <"Age at onset">
+                description = <"The estimated or actual age of the individual when the clinician assesses that the problem/diagnosis began. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+            >
+            ["id19.0.1"] = <
+                text = <"Occurrence summary">
+                description = <"Summary information about occurrences or exacerbations. 
+Note: Detailed information about each occurrence or exacerbation is likely to be held in other parts of the health record.">
+            >
+            ["id27.0.1"] = <
+                text = <"Related items">
+                description = <"Further problems, diagnoses, procedures or events that are related in some way to this problem/diagnosis.">
+            >
+            ["id31.0.1"] = <
+                text = <"Date of resolution/remission">
+                description = <"The date or estimated date that the problem/diagnosis resolved or went into remission.">
+            >
+            ["id32.0.1"] = <
+                text = <"Age at resolution/remission">
+                description = <"The age of the person at the time of resolution or remission of the problem/diagnosis. 
+Note: May be important in situations where approximations of age based on calculations are not accurate enough, eg in infants under one year.">
+            >
+            ["id97.0.1"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id70.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the problem or diagnosis not captured in other fields.">
+            >
+            ["id97.0.2"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id76.0.1"] = <
+                text = <"Link to supporting clinical evidence">
+                description = <"Links to other relevant information, including pathology reports.">
+            >
+            ["id99.0.1"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Problema/Diagnóstico">
+                description = <"Qualquer condição de cuidados de saúde que possa afetar o bem-estar físico, mental e/ou social de um indivíduo, que pode exigir ação diagnóstica, terapêutica ou educacional e que tenha sido determinada por um clínico. O diagnóstico é baseado na avaliação científica de sinais físicos, sintomas, história, resultados de testes laboratoriais e procedimentos.">
+            >
+            ["id3.0.1"] = <
+                text = <"Problema/Diagnóstico">
+                description = <"Identificação do problema ou diagnóstico. A codificação do problema ou diagnóstico com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id10.0.1"] = <
+                text = <"Descrição clínica">
+                description = <"Descrição narrativa ou comentários sobre aspectos clínicos do problema/diagnóstico.">
+            >
+            ["id83.0.1"] = <
+                text = <"Gravidade">
+                description = <"Uma avaliação subjetiva da gravidade do Problema / Diagnóstico conforme avaliado pelo clínico. A codificação da gravidade com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id11.0.1"] = <
+                text = <"Data do início">
+                description = <"Data estimada ou atual, qunado o problema/diagnóstico começou, na opinião do clínico.">
+            >
+            ["id38.0.1"] = <
+                text = <"Idade no ínicio">
+                description = <"A idade estimada ou real do indivíduo quando o clínico avalia que o problema / diagnóstico começou. Nota: Pode ser importante em situações em que as aproximações de idade com base nos cálculos não são suficientemente precisas, por exemplo, em lactentes com menos de um ano.">
+            >
+            ["id19.0.1"] = <
+                text = <"Resumo da ocorrência">
+                description = <"Resumo de informações sobre ocorrências ou exacerbações. Observação: informações detalhadas sobre cada ocorrência ou exacerbação provavelmente serão realizadas em outras partes do registro de saúde.">
+            >
+            ["id27.0.1"] = <
+                text = <"Itens relacionados">
+                description = <"Outros problemas, diagnósticos, procedimentos ou eventos relacionados de algum modo a este problema / diagnóstico.">
+            >
+            ["id31.0.1"] = <
+                text = <"Data da resolução / remissão">
+                description = <"A data ou a data estimada em que o problema / diagnóstico foi resolvido ou entrou em remissão.">
+            >
+            ["id32.0.1"] = <
+                text = <"Idade no momento da resolução/remissão">
+                description = <"A idade da pessoa no momento da resolução ou remissão do problema / diagnóstico. Nota: Pode ser importante em situações em que as aproximações de idade com base nos cálculos não são suficientemente precisas, por exemplo, em lactentes com menos de um ano.">
+            >
+            ["id97.0.1"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id70.0.1"] = <
+                text = <"Comentário">
+                description = <"Narração adicional sobre o problema ou diagnóstico não capturado em outros campos.">
+            >
+            ["id97.0.2"] = <
+                text = <"Tuberculose">
+                description = <"Tuberculose (A15 - A19)">
+            >
+            ["id76.0.1"] = <
+                text = <"Link de suporte de evidência clínica">
+                description = <"Links para outras informações relevantes, incluindo relatórios de patologia.">
+            >
+            ["id99.0.1"] = <
+                text = <"Doença pulmonar obstrutiva crônica">
+                description = <"Doenças crônicas das vias aéreas inferiores (J40-J47)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-fco_br-physical_activity_summary-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.physical_activity_summary-SESI_BR.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Physical Activity Summary
+        /data[id2]/items matches {
+            ELEMENT[id3.0.1] occurrences matches {0} matches {    -- Physical activity status
+                value matches {
+                    DV_TEXT[id10.0.1] 
+                }
+            }
+            ELEMENT[id4.0.1] occurrences matches {0} matches {    -- Physical activity note
+                value matches {
+                    DV_TEXT[id11.0.1] 
+                }
+            }
+            ELEMENT[id6.0.1] occurrences matches {0} matches {    -- Barriers to activity
+                value matches {
+                    DV_TEXT[id12.0.1] 
+                }
+            }
+            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Enabling factors
+                value matches {
+                    DV_TEXT[id13.0.1] 
+                }
+            }
+            ELEMENT[id9.0.1] occurrences matches {0} matches {    -- Moderate exercise/week
+                value matches {
+                    DV_COUNT[id14.0.1] 
+                }
+            }
+            ELEMENT[id8.0.1] occurrences matches {0} matches {    -- Vigorous exercise/week
+                value matches {
+                    DV_COUNT[id15.0.1] 
+                }
+            }
+            ELEMENT[id0.4] occurrences matches {0..1} matches {
+                /value[id0.5]/defining_code matches {[ac0.1]}
+            }
+            ELEMENT[id0.10.1] occurrences matches {0} matches {    -- Total time walked a day
+                value matches {
+                    DV_DATE[id0.11.1] 
+                }
+            }
+            ELEMENT[id0.14.1] occurrences matches {0} matches {    -- Total time spent doing moderate activities per day.
+                value matches {
+                    DV_DATE[id0.15.1] 
+                }
+            }
+            ELEMENT[id0.18.1] occurrences matches {0} matches {    -- Total time performing vigorous activities per day
+                value matches {
+                    DV_DATE[id0.20.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Physical Activity Summary">
+                description = <"A record of the level of physical activity undertaken by the individual as assessed by a clinician.">
+            >
+            ["id3.0.1"] = <
+                text = <"Physical activity status">
+                description = <"A short description of the general level of physical activity undertaken by the individual as described by a clinician.  Coding with a terminology is desirable, where possible.">
+            >
+            ["id4.0.1"] = <
+                text = <"Physical activity note">
+                description = <"A more detailed description of the physical activity status of the individual.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barriers to activity">
+                description = <"Identified barriers to the individual being involved in physical activity.">
+            >
+            ["id7.0.1"] = <
+                text = <"Enabling factors">
+                description = <"Identified enabling factors to the individual being involved in physical activity, for example, lives close to a swimming pool or previously an elite athlete.">
+            >
+            ["id9.0.1"] = <
+                text = <"Moderate exercise/week">
+                description = <"Number of times per week of 30 min moderate exercise.">
+            >
+            ["id8.0.1"] = <
+                text = <"Vigorous exercise/week">
+                description = <"Number of times per week of 20 min vigorous exercise.">
+            >
+            ["id0.10.1"] = <
+                text = <"Total time walked a day">
+                description = <"On days when he walked for at least 10 continuous minutes, how much time in total, he spent walking a day.">
+            >
+            ["id0.14.1"] = <
+                text = <"Total time spent doing moderate activities per day.">
+                description = <"On days when you did moderate activities for at least 10 continuous minutes, how much time in total you spend on activities per day.">
+            >
+            ["id0.18.1"] = <
+                text = <"Total time performing vigorous activities per day">
+                description = <"On days when you did vigorous activities for at least 10 continuous minutes, how much time in total, you spent doing these activities per day.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Resumo da atividade física">
+                description = <"Um registro do nível de atividade física realizado pelo indivíduo como avaliado por um clínico.">
+            >
+            ["id3.0.1"] = <
+                text = <"Status da atividade física">
+                description = <"Uma breve descrição do nível geral de atividade física realizada pelo indivíduo conforme descrito por um clínico. A codificação com uma terminologia é desejável, sempre que possível.">
+            >
+            ["id4.0.1"] = <
+                text = <"Notas">
+                description = <"Uma descrição mais detalhada do status da atividade física do indivíduo.">
+            >
+            ["id6.0.1"] = <
+                text = <"Barreiras identificadas">
+                description = <"Identificou barreiras para que o indivíduo esteja envolvido na atividade física.">
+            >
+            ["id7.0.1"] = <
+                text = <"Fatores de habilitadores">
+                description = <"Identificar fatores habilitadores para o indivíduo envolvido em atividade física, por exemplo, vive perto de uma piscina ou anteriormente um atleta de elite.">
+            >
+            ["id9.0.1"] = <
+                text = <"Exercício moderado por semana">
+                description = <"Número de vezes por semana de 30 minutos de exercício moderado.">
+            >
+            ["id8.0.1"] = <
+                text = <"Exercício vigoroso por semana">
+                description = <"Número de vezes por semana de 20 minutos de exercício vigoroso.">
+            >
+            ["id0.10.1"] = <
+                text = <"Tempo total gasto com caminhada por dia.">
+                description = <"Nos dias em que foram realizadas caminhadas por pelo menos 10 minutos contínuos, quanto tempo no total, foram gastos caminhando por dia.">
+            >
+            ["id0.14.1"] = <
+                text = <"Tempo total gasto com a prática de atividades moderadas por dia">
+                description = <"Nos dias em que foram realizadas atividades moderadas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+            ["id0.18.1"] = <
+                text = <"Tempo total gasto com a prática de atividades vigorosas por dia">
+                description = <"Nos dias em que foram realizadas atividades vigorosas por pelo menos 10 minutos contínuos, quanto tempo no total foi gasto fazendo essas atividades por dia.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-tobacco-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-tobacco-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1.1] matches {    -- Tobacco Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.0.0.1] occurrences matches {0} matches {    -- Substance
+                value matches {
+                    DV_CODED_TEXT[id20.1.0.1] matches {
+                        defining_code matches {[at0.2]}
+                    }
+                }
+            }
+            CLUSTER[id11] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id12.0.0.1] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.1] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.1] occurrences matches {0} matches {    -- Method of use
+                        value matches {
+                            DV_TEXT[id22.0.0.1] matches {
+                                defining_code matches {[ac0.0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        /value[id23]/defining_code matches {[ac1]}
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id0.0.2] occurrences matches {0..1} matches {
+                        /value[id0.0.3]/value matches {True, False}
+                    }
+                }
+                items matches {
+                    ELEMENT[id12.0.0.2] occurrences matches {0} matches {    -- Form
+                        value matches {
+                            DV_CODED_TEXT[id21.1.0.2] matches {
+                                defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id19.0.0.2] occurrences matches {0} matches {    -- Method of use
+                        value matches {
+                            DV_TEXT[id22.0.0.2] matches {
+                                defining_code matches {[ac0.0.2]}
+                            }
+                        }
+                    }
+                    ELEMENT[id6.0.0.1] occurrences matches {0} matches {    -- Frequency
+                        value matches {
+                            DV_CODED_TEXT[id23.0.0.1] matches {
+                                defining_code matches {[ac1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.1.0.1] occurrences matches {0} matches {    -- Number smoked
+                        value matches {
+                            DV_QUANTITY[id0.0.6] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.1.0.1] matches {
+                                property matches {[at0.7]}
+                                units matches {"/h", "/d", "/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id13.2.0.1] occurrences matches {0} matches {    -- Grams of tobacco
+                        value matches {
+                            DV_QUANTITY[id0.0.6.1] matches {
+                                property matches {[at0.0.14]}
+                                [units, magnitude, precision] matches {
+                                    [{"kg"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                }
+                            }
+                            DV_QUANTITY[id0.2.0.1] matches {
+                                property matches {[at0.8]}
+                                units matches {"gm/d", "gm/wk"}
+                            }
+                        }
+                    }
+                    ELEMENT[id0.0.2.1] occurrences matches {0} matches {    -- Ex smoker
+                        value matches {
+                            DV_BOOLEAN[id0.0.3.1] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+            ELEMENT[id14.0.0.1] occurrences matches {0} matches {    -- Triggers
+                value matches {
+                    DV_TEXT[id24.0.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id15] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+            ELEMENT[id17.0.0.1] occurrences matches {0} matches {    -- Evidence of dependence
+                value matches {
+                    DV_TEXT[id25.0.0.1] 
+                }
+            }
+            ELEMENT[id0.0.4.1] occurrences matches {0} matches {    -- Exposure
+                value matches {
+                    DV_BOOLEAN[id0.0.5.1] matches {
+                        value matches {True, False}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1.1"] = <
+                text = <"Tobacco Use">
+                description = <"Archetype to record the actual use or consumption of a tobacco at the present time, a specific time or over a period of time.">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substance">
+                description = <"Identification of substance">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Form">
+                description = <"Form of the substance used">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Method of use">
+                description = <"Method of use or consumption of the substance">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequency">
+                description = <"Frequency of use of substance">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Number smoked">
+                description = <"Number of units containing tobacco consumed eg cigarettes or cigars">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Grams of tobacco">
+                description = <"Weight of tobacco consumed eg in a pipe">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause use">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidence of dependence">
+                description = <"Description of any evidence of dependence on the substance">
+            >
+            ["id0.0.4.1"] = <
+                text = <"Exposure">
+                description = <"Exposure to smoke">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex smoker">
+                description = <"Register for ex-smoker">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1.1"] = <
+                text = <"Uso de tabaco">
+                description = <"Arquétipo para registrar o uso ou o consumo real de um tabaco no momento presente, um tempo específico ou durante um período de tempo.">
+            >
+            ["id5.0.0.1"] = <
+                text = <"Substância">
+                description = <"Identificação da substância">
+            >
+            ["id12.0.0.1"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id19.0.0.1"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id12.0.0.2"] = <
+                text = <"Forma">
+                description = <"Forma de consumo da substância.">
+            >
+            ["id19.0.0.2"] = <
+                text = <"Modo de uso">
+                description = <"Modo de uso ou consumo da substância.">
+            >
+            ["id6.0.0.1"] = <
+                text = <"Frequência">
+                description = <"Frequência do uso da substância.">
+            >
+            ["id13.1.0.1"] = <
+                text = <"Número de unidades de tabaco">
+                description = <"Número de unidades contendo tabaco consumido, por exemplo, cigarros ou charutos.">
+            >
+            ["id13.2.0.1"] = <
+                text = <"Gramas de tabaco">
+                description = <"Peso do tabaco consumido, por exemplo, em um tubo.">
+            >
+            ["id14.0.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificadores de gatilhos que estimulam ou causam uso.">
+            >
+            ["id17.0.0.1"] = <
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
+            >
+            ["id0.0.4.1"] = <
+                text = <"Exposição">
+                description = <"Exposição á fumaça">
+            >
+            ["id0.0.2.1"] = <
+                text = <"Ex-fumante">
+                description = <"Cadastre-se no caso de ex-fumante.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-substance_use-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.substance_use-SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Substance Use
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5.0.1] occurrences matches {0} matches {    -- Substance
+                value matches {
+                    DV_TEXT[id20.0.1] 
+                }
+            }
+            CLUSTER[id11.0.1] occurrences matches {0} matches {    -- Consumption details
+                /items[id6]/value[id23]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id14.0.1] occurrences matches {0} matches {    -- Triggers
+                value matches {
+                    DV_TEXT[id24.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id15] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.change\.v1/}
+            }
+            ELEMENT[id17.0.1] occurrences matches {0} matches {    -- Evidence of dependence
+                value matches {
+                    DV_TEXT[id25.0.1] 
+                }
+            }
+            ELEMENT[id0.7] occurrences matches {0..1} matches {
+                /value[id0.9]/defining_code matches {[ac0.1]}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Substance Use">
+                description = <"Generic archetype to record the actual use or consumption of a defined substance at the present time, a specific time or over a period of time.">
+            >
+            ["id11.0.1"] = <
+                text = <"Consumption details">
+                description = <"Details about the consumption of the substance">
+            >
+            ["id14.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause use">
+            >
+            ["id17.0.1"] = <
+                text = <"Evidence of dependence">
+                description = <"Description of any evidence of dependence on the substance">
+            >
+            ["id5.0.1"] = <
+                text = <"Substance">
+                description = <"Identification of substance">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Uso de Substâncias">
+                description = <"Arquétipo genérico para registrar o uso ou consumo real de uma substância definida no momento atual, um tempo específico ou durante um período de tempo.">
+            >
+            ["id11.0.1"] = <
+                text = <"Detalhes do consumo">
+                description = <"Detalhes sobre o consumo da substância.">
+            >
+            ["id14.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Gatilhos identificados que estimulam ou causam o uso">
+            >
+            ["id17.0.1"] = <
+                text = <"Evidência de dependência">
+                description = <"Descrição de qualquer evidência de dependência da substância.">
+            >
+            ["id5.0.1"] = <
+                text = <"Substância">
+                description = <"Identificação da substância">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-habitos_lazer-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- Hábitos Lazer
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id6] occurrences matches {0..1} matches {
+                /value[id7]/defining_code matches {[ac1]}
+            }
+            ELEMENT[id12] occurrences matches {0..1} matches {
+                /value[id13]/value matches {True, False; false}
+            }
+            ELEMENT[id14] occurrences matches {0..1} matches {
+                /value[id15]/value matches {True, False; false}
+            }
+            ELEMENT[id16] occurrences matches {0..1} matches {
+                /value[id17]/value matches {True, False; false}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Hábitos Lazer">
+                description = <"Atividade de lazer">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Leisure habits">
+                description = <"Leisure habits">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ACTION.ovl-fco_br-medication-BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.medication-BR.v1.0.0
+
+definition
+    ACTION[id1.1.1] matches {    -- Medication action
+        ism_transition matches {
+            ISM_TRANSITION[id42] occurrences matches {0} matches {
+                /current_state[id43]/defining_code matches {[at41]}
+                /careflow_step[id44]/defining_code matches {[at2]}
+            }
+            ISM_TRANSITION[id45] occurrences matches {0} matches {
+                /current_state[id46]/defining_code matches {[at42]}
+                /careflow_step[id47]/defining_code matches {[at14]}
+            }
+            ISM_TRANSITION[id48] occurrences matches {0} matches {
+                /current_state[id49]/defining_code matches {[at43]}
+                /careflow_step[id50]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id51] occurrences matches {0} matches {
+                /current_state[id52]/defining_code matches {[at44]}
+                /careflow_step[id53]/defining_code matches {[at17]}
+            }
+            ISM_TRANSITION[id54] occurrences matches {0} matches {
+                /current_state[id55]/defining_code matches {[ac3]}
+                /careflow_step[id56]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id57] occurrences matches {0} matches {
+                /current_state[id58]/defining_code matches {[ac4]}
+                /careflow_step[id59]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id60] occurrences matches {0} matches {
+                /current_state[id61]/defining_code matches {[at45]}
+                /careflow_step[id62]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id63] occurrences matches {0} matches {
+                /current_state[id64]/defining_code matches {[at45]}
+                /careflow_step[id65]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id66] occurrences matches {0} matches {
+                /current_state[id67]/defining_code matches {[at45]}
+                /careflow_step[id68]/defining_code matches {[at7]}
+            }
+            ISM_TRANSITION[id69] occurrences matches {0} matches {
+                /current_state[id70]/defining_code matches {[at45]}
+                /careflow_step[id71]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id72] occurrences matches {0} matches {
+                /current_state[id73]/defining_code matches {[at45]}
+                /careflow_step[id74]/defining_code matches {[at19]}
+            }
+            ISM_TRANSITION[id75] occurrences matches {0} matches {
+                /current_state[id76]/defining_code matches {[at45]}
+                /careflow_step[id77]/defining_code matches {[at20]}
+            }
+            ISM_TRANSITION[id78] occurrences matches {0} matches {
+                /current_state[id79]/defining_code matches {[ac5]}
+                /careflow_step[id80]/defining_code matches {[at36]}
+            }
+            ISM_TRANSITION[id81] occurrences matches {0} matches {
+                /current_state[id82]/defining_code matches {[at46]}
+                /careflow_step[id83]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id84] occurrences matches {0} matches {
+                /current_state[id85]/defining_code matches {[at46]}
+                /careflow_step[id86]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id87] occurrences matches {0} matches {
+                /current_state[id88]/defining_code matches {[at46]}
+                /careflow_step[id89]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id90] occurrences matches {0} matches {
+                /current_state[id91]/defining_code matches {[at47]}
+                /careflow_step[id92]/defining_code matches {[at16]}
+            }
+            ISM_TRANSITION[id93] occurrences matches {0} matches {
+                /current_state[id94]/defining_code matches {[at47]}
+                /careflow_step[id95]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id96] occurrences matches {0} matches {
+                /current_state[id97]/defining_code matches {[at47]}
+                /careflow_step[id98]/defining_code matches {[at40]}
+            }
+            ISM_TRANSITION[id99] occurrences matches {0} matches {
+                /current_state[id100]/defining_code matches {[at48]}
+                /careflow_step[id101]/defining_code matches {[at8]}
+            }
+        }
+        /description[id18]/items matches {
+            ELEMENT[id34.0.1] occurrences matches {0} matches {    -- Instructions
+                value matches {
+                    DV_TEXT[id103.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id24] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Reason
+                value matches {
+                    DV_TEXT[id104.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id23] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
+            }
+            ELEMENT[id25.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id105.0.1] 
+                }
+            }
+            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Sequence number
+                value matches {
+                    DV_COUNT[id106.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_admin(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id37] occurrences matches {0} matches {
+                /value[id107]/value matches {True, False}
+            }
+        }
+        /protocol[id31]/items matches {
+            ELEMENT[id27.0.1] occurrences matches {0} matches {    -- BatchID
+                value matches {
+                    DV_TEXT[id108.0.1] 
+                }
+            }
+            ELEMENT[id41.0.1] occurrences matches {0} matches {    -- Expiry date
+                value matches {
+                    DV_DATE[id109.0.1] 
+                }
+            }
+            ELEMENT[id32.0.1] occurrences matches {0} matches {    -- Dispensed to
+                value matches {
+                    DV_TEXT[id110.0.1] 
+                }
+            }
+            ELEMENT[id38.0.1] occurrences matches {0} matches {    -- Number of times dispensed
+                value matches {
+                    DV_COUNT[id111.0.1] 
+                }
+            }
+            ELEMENT[id33.0.1] occurrences matches {0} matches {    -- Remaining repeats
+                value matches {
+                    DV_COUNT[id112.0.1] matches {
+                        magnitude matches {|>=0|}
+                    }
+                }
+            }
+            ELEMENT[id39.0.1] occurrences matches {0} matches {    -- Claim category
+                value matches {
+                    DV_TEXT[id113.0.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Medication action">
+                description = <"Details of use, administration, dispensing or other care step relating to a medicine, vaccine or other therapeutic good which may arise from an instruction from a clinician.">
+            >
+            ["id34.0.1"] = <
+                text = <"Instructions">
+                description = <"Any instructions given to the subject of care or carer at the time of the action.">
+            >
+            ["id22.0.1"] = <
+                text = <"Reason">
+                description = <"The reason(s) the specific action or step was carried out. Note: This is not the reason for the medication instruction, rather the specific reason e.g. for administration or for ceasing the medication.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comment">
+                description = <"A comment on the action taken.">
+            >
+            ["id26.0.1"] = <
+                text = <"Sequence number">
+                description = <"The sequence number specific to the action being recorded.">
+            >
+            ["id27.0.1"] = <
+                text = <"BatchID">
+                description = <"Assigned by the manufacturer to identify the manufacturing batch of the item.">
+            >
+            ["id41.0.1"] = <
+                text = <"Expiry date">
+                description = <"The expiry date of the medicine administered as documented by the manufacturer.">
+            >
+            ["id32.0.1"] = <
+                text = <"Dispensed to">
+                description = <"The name of the person to whom this was dispensed, if not the subject of care.">
+            >
+            ["id38.0.1"] = <
+                text = <"Number of times dispensed">
+                description = <"The number of times this order has been dispensed. The sum of this number minus one and the remaining repeats provides the number of repeats on the original order.">
+            >
+            ["id33.0.1"] = <
+                text = <"Remaining repeats">
+                description = <"The number of times the medicine, vaccine or other therapeutic good may still be dispensed without re-issue of a prescription or order. Note: This is the information required by the subject of care and prescriber.">
+            >
+            ["id39.0.1"] = <
+                text = <"Claim category">
+                description = <"The category of reimbursement or subsidy sought for the item.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Ação da medicação">
+                description = <"Detalhes de uso, administração, dispensação ou outro passo de cuidados relacionados a um remédio, vacina ou outro bem terapêutico que pode resultar de uma instrução de um clínico.">
+            >
+            ["id34.0.1"] = <
+                text = <"Instruções">
+                description = <"Todas as instruções dadas ao sujeito de cuidado ou cuidador no momento da ação.">
+            >
+            ["id22.0.1"] = <
+                text = <"Razão">
+                description = <"O (s) motivo (s) a ação ou etapa específica foi realizada. Nota: Este não é o motivo da instrução de medicação, em vez da razão específica, e. para administração ou para cessar a medicação.">
+            >
+            ["id25.0.1"] = <
+                text = <"Comentário">
+                description = <"Um comentário sobre as ações tomadas.">
+            >
+            ["id26.0.1"] = <
+                text = <"Número de sequência">
+                description = <"O número de seqüência específico para a ação que está sendo gravada.">
+            >
+            ["id27.0.1"] = <
+                text = <"ID do lote">
+                description = <"Atribuído pelo fabricante para identificar o lote de fabricação do item.">
+            >
+            ["id41.0.1"] = <
+                text = <"Data de validade">
+                description = <"O prazo de validade do medicamento administrado conforme documentado pelo fabricante.">
+            >
+            ["id32.0.1"] = <
+                text = <"Dispensado para">
+                description = <"O nome da pessoa a quem isso foi dispensado, se não o assunto de cuidados.">
+            >
+            ["id38.0.1"] = <
+                text = <"Número de vezes dispensado">
+                description = <"O número de vezes que este pedido foi dispensado. A soma deste número menos uma e as repetições restantes fornecem o número de repetições na ordem original.">
+            >
+            ["id33.0.1"] = <
+                text = <"Repetições remanescentes">
+                description = <"O número de vezes que o medicamento, vacina ou outro bem terapêutico ainda pode ser dispensado sem re-emissão de uma receita ou pedido. Nota: Esta é a informação exigida pelo assunto do atendimento e prescritor.">
+            >
+            ["id39.0.1"] = <
+                text = <"Categoria de reivindicação">
+                description = <"A categoria de reembolso ou subsídio procurado para o item.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-EVALUATION.ovl-fco_br-vacinas-001.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.vacinas.v1.0.0
+
+definition
+    EVALUATION[id1.1.1] matches {    -- Immunisation Summary
+        /data[id2]/items matches {
+            ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Overall Vaccination Status
+                value matches {
+                    DV_CODED_TEXT[id27.0.1] matches {
+                        defining_code matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id26.0.1] occurrences matches {0} matches {    -- Description
+                value matches {
+                    DV_TEXT[id28.0.1]     -- Vaccines
+                }
+            }
+            CLUSTER[id17.0.1] occurrences matches {0} matches {    -- Specific Vaccine
+                items matches {
+                    ELEMENT[id11] occurrences matches {0..1} matches {
+                        /value[id30]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id4] occurrences matches {0..1} matches {
+                        /value[id31]/defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id28] occurrences matches {0..1} matches {
+                items matches {
+                    ELEMENT[id29] occurrences matches {0..1} matches {
+                        /value[id30]/value matches {True, False; false}
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {
+                        /value[id32]/value matches {True, False; false}
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {
+                        /value[id34]/value matches {True, False; false}
+                    }
+                    ELEMENT[id35] occurrences matches {0..1} matches {
+                        /value[id36]/value matches {True, False; false}
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {
+                        /value[id38]/value matches {True, False; false}
+                    }
+                    ELEMENT[id39] occurrences matches {0..1} matches {
+                        /value[id40]/value matches {True, False; false}
+                    }
+                    ELEMENT[id41] occurrences matches {0..1} matches {
+                        /value[id42]/value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        protocol existence matches {0}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Immunisation Summary">
+                description = <"Summary statements about the current immunisation status for an identified infectious disease or agent.">
+            >
+            ["id20.0.1"] = <
+                text = <"Overall Vaccination Status">
+                description = <"Statement about the status for all vaccines.">
+            >
+            ["id26.0.1"] = <
+                text = <"Description">
+                description = <"Narrative description about the vaccination status.">
+            >
+            ["id28.0.1"] = <
+                text = <"Vaccines">
+                description = <"Vaccines">
+            >
+            ["id17.0.1"] = <
+                text = <"Specific Vaccine">
+                description = <"Details about the vaccination status for a specified vaccine.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Resumo da imunização">
+                description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            >
+            ["id20.0.1"] = <
+                text = <"Status geral de vacinação">
+                description = <"Declaração sobre o status de todas as vacinas.">
+            >
+            ["id26.0.1"] = <
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre o status de vacinação">
+            >
+            ["id28.0.1"] = <
+                text = <"Vacinas">
+                description = <"Vaccines">
+            >
+            ["id17.0.1"] = <
+                text = <"Vacina específica">
+                description = <"Detalhes sobre o status de vacinação para uma vacina especificada.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ELEMENT.ovl-fco_br-last_normal_menstrual_period-001.v1.0.0
+
+specialize
+    openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1.0.0
+
+definition
+    ELEMENT[id1.1] matches {    -- *Last Normal Menstrual Period (en)
+        /value[id2]/value matches {yyyy-??-??T??:??:??}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"*Last Normal Menstrual Period (en)">
+                description = <"*Record of the date of 1st day of last normal menstrual period (en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Último Período menstrual normal">
+                description = <"Registro da data do 1º dia do último período menstrual normal">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-ACTION.ovl-fco_br-imaging_exam-SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-ACTION.imaging_exam-SESI_BR.v1.0.0
+
+definition
+    ACTION[id1.1.1] matches {    -- Imaging examination
+        ism_transition matches {
+            ISM_TRANSITION[id24.0.1] occurrences matches {0} matches {
+                /current_state[id25]/defining_code matches {[at16]}
+                /careflow_step[id26]/defining_code matches {[at3]}
+            }
+            ISM_TRANSITION[id27.0.1] occurrences matches {0} matches {
+                /current_state[id28]/defining_code matches {[at16]}
+                /careflow_step[id29]/defining_code matches {[at4]}
+            }
+            ISM_TRANSITION[id30.0.1] occurrences matches {0} matches {
+                /current_state[id31]/defining_code matches {[at17]}
+                /careflow_step[id32]/defining_code matches {[at10]}
+            }
+            ISM_TRANSITION[id33.0.1] occurrences matches {0} matches {
+                /current_state[id34]/defining_code matches {[at18]}
+                /careflow_step[id35]/defining_code matches {[at12]}
+            }
+            ISM_TRANSITION[id36.0.1] occurrences matches {0} matches {
+                /current_state[id37]/defining_code matches {[at19]}
+                /careflow_step[id38]/defining_code matches {[at5]}
+            }
+            ISM_TRANSITION[id39.0.1] occurrences matches {0} matches {
+                /current_state[id40]/defining_code matches {[at19]}
+                /careflow_step[id41]/defining_code matches {[at6]}
+            }
+            ISM_TRANSITION[id42.0.1] occurrences matches {0} matches {
+                /current_state[id43]/defining_code matches {[at20]}
+                /careflow_step[id44]/defining_code matches {[at9]}
+            }
+            ISM_TRANSITION[id45.0.1] occurrences matches {0} matches {
+                /current_state[id46]/defining_code matches {[at20]}
+                /careflow_step[id47]/defining_code matches {[at15]}
+            }
+            ISM_TRANSITION[id48.0.1] occurrences matches {0} matches {
+                /current_state[id49]/defining_code matches {[at21]}
+                /careflow_step[id50]/defining_code matches {[at11]}
+            }
+            ISM_TRANSITION[id51.0.1] occurrences matches {0} matches {
+                /current_state[id52]/defining_code matches {[at22]}
+                /careflow_step[id53]/defining_code matches {[at13]}
+            }
+            ISM_TRANSITION[id54.0.1] occurrences matches {0} matches {
+                /current_state[id55]/defining_code matches {[at23]}
+                /careflow_step[id56]/defining_code matches {[at8]}
+            }
+        }
+        /description[id2]/items matches {
+            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Examination name
+                value matches {
+                    DV_TEXT[id57.0.1] 
+                }
+            }
+            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Description
+                value matches {
+                    DV_TEXT[id58.0.1] 
+                }
+            }
+            ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Reason
+                value matches {
+                    DV_TEXT[id59.0.1] 
+                }
+            }
+            allow_archetype CLUSTER[id23] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            allow_archetype CLUSTER[id22] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/.*/}
+            }
+            ELEMENT[id21.0.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id60.0.1] 
+                }
+            }
+            ELEMENT[id0.5.1] occurrences matches {0} matches {    -- Preventivo ginecológico
+                value matches {
+                    DV_BOOLEAN[id0.6.1] matches {
+                        value matches {True, False; false}
+                    }
+                }
+            }
+            ELEMENT[id0.7.1] occurrences matches {0} matches {    -- Mamografia
+                value matches {
+                    DV_BOOLEAN[id0.8.1] matches {
+                        value matches {True, False; false}
+                    }
+                }
+            }
+            ELEMENT[id0.9.1] occurrences matches {0} matches {    -- PSA
+                value matches {
+                    DV_BOOLEAN[id0.10.1] matches {
+                        value matches {True, False; false}
+                    }
+                }
+            }
+        }
+        protocol existence matches {0}
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Imaging examination">
+                description = <"Clinical activity about performing an imaging examination.">
+            >
+            ["id18.0.1"] = <
+                text = <"Examination name">
+                description = <"The name of the examination (to be) performed. Coding of the specific procedure with a terminology is preferred, where possible.">
+            >
+            ["id19.0.1"] = <
+                text = <"Description">
+                description = <"Narrative description about the activity or care pathway step for the identified examination, for example description about the performance and findings from the the examination, the failed attempt or the cancellation of the examination.">
+            >
+            ["id20.0.1"] = <
+                text = <"Reason">
+                description = <"Reason that the activity or care pathway step for the identified examination was carried out, for example, the reason for the cancellation or suspension of the examination.">
+            >
+            ["id21.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the activity or care pathway step not captured in other fields.">
+            >
+            ["id0.5.1"] = <
+                text = <"Preventivo ginecológico">
+                description = <"Preventivo ginecológico">
+            >
+            ["id0.7.1"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["id0.9.1"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Exame de imagem">
+                description = <"Atividade clínica sobre a realização de um exame de imagem.">
+            >
+            ["id18.0.1"] = <
+                text = <"Nome do exame">
+                description = <"O nome do exame (a ser) realizado. A codificação do procedimento específico com uma terminologia é preferida, sempre que possível.">
+            >
+            ["id19.0.1"] = <
+                text = <"Descrição">
+                description = <"* Descrição narrativa sobre o passo da atividade ou do caminho de atenção para o exame identificado, por exemplo, descrição sobre o desempenho e os resultados do exame, a tentativa falha ou o cancelamento do exame. (pt)">
+            >
+            ["id20.0.1"] = <
+                text = <"Razão">
+                description = <"Razão de que o passo da atividade ou do caminho de cuidado para o exame identificado foi realizado, por exemplo, o motivo do cancelamento ou suspensão do exame.">
+            >
+            ["id21.0.1"] = <
+                text = <"Comentário">
+                description = <"Uma narrativa adicional sobre a etapa de atividade ou caminho de cuidado não capturada em outros campos.">
+            >
+            ["id0.5.1"] = <
+                text = <"Preventivo ginecológico">
+                description = <"Preventivo ginecológico">
+            >
+            ["id0.7.1"] = <
+                text = <"Mamografia">
+                description = <"Mamografia">
+            >
+            ["id0.9.1"] = <
+                text = <"PSA">
+                description = <"PSA">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-body_weight-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_weight.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lichaamsgewicht
+        /data[id3]/events matches {
+            EVENT[id4] matches {
+                /data[id2]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id30] matches {
+                                property matches {[at19]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"kg"}], 
+                                    [{|0.0..2000.0|}, {"lb"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id25.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id31.1] 
+                        }
+                    }
+                }
+                /state[id9]/items matches {
+                    ELEMENT[id10.1] occurrences matches {0} matches {    -- Hoeveelheid kleding
+                        value matches {
+                            DV_CODED_TEXT[id32.1] matches {
+                                defining_code matches {[ac1; at12]}
+                            }
+                        }
+                    }
+                    ELEMENT[id26.1] occurrences matches {0} matches {    -- BeÏnvloedende factoren
+                        value matches {
+                            DV_TEXT[id34.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id27.1] occurrences matches {0} matches {    -- *Any event(en)
+                data matches {
+                    use_node ITEM_TREE /data[id3]/events[id4]/data[id2]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id3]/events[id4]/state[id9]
+                }
+            }
+        }
+        /protocol[id16]/items matches {
+            allow_archetype CLUSTER[id21] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+            ELEMENT[id28.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_TEXT[id37.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lichaamsgewicht">
+                description = <"Meting van het lichaamsgewicht van een individu.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Hoeveelheid kleding">
+                description = <"Beschrijving van de hoeveelheid kleding van de persoon, op het moment van wegen.">
+            >
+            ["id26.1"] = <
+                text = <"BeÏnvloedende factoren">
+                description = <"Registreer eventuele problemen of factoren die van invloed kunnen zijn op de meting van het lichaamsgewicht bijvoorbeeld timing in de menstruele cyclus, timing van de recente stoelgang of het noteren van een amputatie.">
+            >
+            ["id25.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gewichts meting.">
+            >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body Weight">
+                description = <"Measurement of the body weight of an individual.">
+            >
+            ["id27.1"] = <
+                text = <"Birth">
+                description = <"First weight recorded after birth.">
+            >
+            ["id10.1"] = <
+                text = <"State of Dress">
+                description = <"Description of the state of dress of the person at the time of weighing.">
+            >
+            ["id26.1"] = <
+                text = <"Confounding Factors">
+                description = <"Record any issues or factors that may impact on the measurement of body weight eg timing in menstrual cycle, timing of recent bowel motion or noting of amputation.">
+            >
+            ["id25.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of weight.">
+            >
+            ["id28.1"] = <
+                text = <"Weight Estimation Formula">
+                description = <"Formula used to calculate the estimated weight.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Körpergewicht">
+                description = <"Messung des Körpergewichts eines Individuums.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Bekleidung">
+                description = <"Beschreibung der Bekleidung zum Zeitpunkt der Messung.">
+            >
+            ["id26.1"] = <
+                text = <"Störfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die einen Einfluss auf die Messung des Körpergewichts haben können, z.B. Zeitpunkt in der Menstruationsperiode, Zeitpunkt des letzten Stuhlgangs, durchgeführte Amputationen.">
+            >
+            ["id25.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung des Gewichts.">
+            >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Peso corporal">
+                description = <"A medição do peso corporal de um indivíduo.">
+            >
+            ["id27.1"] = <
+                text = <"Nascimento">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Vestuário">
+                description = <"Descrição do vestuário da pessoa na hora da pesagem.">
+            >
+            ["id26.1"] = <
+                text = <"Fatores de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição de peso corporal, por exemplo, no momento do ciclo menstrual, o ciclo intestinal ou anotando amputação.">
+            >
+            ["id25.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição do peso.">
+            >
+            ["id28.1"] = <
+                text = <"Fórmula de estimativa de peso">
+                description = <"Fórmula de estimativa de peso">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"Масса тела">
+                description = <"Взвешивание пациента.">
+            >
+            ["id27.1"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id10.1"] = <
+                text = <"Наличие и характер одежды">
+                description = <"Описание наличия и характера одежды пациента во время взвешивания.">
+            >
+            ["id26.1"] = <
+                text = <"Стохастическая погрешность">
+                description = <"Фиксация любых фактов, могущих повлиять на результат взвешивания: фаза менструального цикла, давность опорожнения кишечника, сведения об ампутации и др.">
+            >
+            ["id25.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к взвешиванию.">
+            >
+            ["id28.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-height-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.height.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Lengte
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {1..*} matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] matches {
+                        value matches {
+                            DV_QUANTITY[id23] matches {
+                                property matches {[at22]}
+                                [magnitude, units] matches {
+                                    [{|0.0..1000.0|}, {"cm"}], 
+                                    [{|0.0..250.0|}, {"in"}]
+                                }
+                            }
+                        }
+                    }
+                    ELEMENT[id19.1] occurrences matches {0} matches {    -- Opmerking
+                        value matches {
+                            DV_TEXT[id24.1] 
+                        }
+                    }
+                }
+                /state[id14]/items matches {
+                    ELEMENT[id15.1] occurrences matches {0} matches {    -- Positie
+                        value matches {
+                            DV_CODED_TEXT[id25.1] matches {
+                                defining_code matches {[ac1; at17]}
+                            }
+                        }
+                    }
+                    ELEMENT[id20.1] occurrences matches {0} matches {    -- Beïnvloedende factoren
+                        value matches {
+                            DV_TEXT[id26.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id22.1] occurrences matches {0} matches {    -- *Birth(en)
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/state[id14]
+                }
+            }
+        }
+        /protocol[id8]/items matches {
+            allow_archetype CLUSTER[id12] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Lengte">
+                description = <"De lichaamslengte wordt gemeten vanaf de kruin van het hoofd tot en met de voetzool. In het engelse taaldomein wordt er verschil gemaakt tussen hoogte (height) en lengte (length), waarbij hoogte staande gemeten wordt en lengte liggend.">
+            >
+            ["id22.1"] = <
+                text = <"*Birth(en)">
+                description = <"*First body length measured at, or soon after, birth.(en)">
+            >
+            ["id15.1"] = <
+                text = <"Positie">
+                description = <"Positie tijdens de meting, van de gemeten persoon.">
+            >
+            ["id20.1"] = <
+                text = <"Beïnvloedende factoren">
+                description = <"Vermeld ieder probleem of feit die de meting van de lengte beïnvloedt, b.v. notitie maken van een amputatie.">
+            >
+            ["id19.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de meting van de lichaamslengte.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body Height/Length">
+                description = <"Body height, or length, is measured from crown of head to sole of foot.  Body height is measured with the individual in a standing position and body length in a recumbent position.">
+            >
+            ["id22.1"] = <
+                text = <"Birth">
+                description = <"First body length measured at, or soon after, birth.">
+            >
+            ["id15.1"] = <
+                text = <"Position">
+                description = <"Position of individual when measured.">
+            >
+            ["id20.1"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the measurement of body height or length.">
+            >
+            ["id19.1"] = <
+                text = <"Comment">
+                description = <"Comment about the measurement of body height/length.">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Größe/Länge">
+                description = <"Größe bzw. Körperlänge wird vom Scheitel bis zur Fußsohle gemessen. Größe wird in einer stehenden Position gemessen, Körperlänge in einer liegenden Position.">
+            >
+            ["id22.1"] = <
+                text = <"*Birth(en)">
+                description = <"*First body length measured at, or soon after, birth.(en)">
+            >
+            ["id15.1"] = <
+                text = <"Position">
+                description = <"Position des Individiums bei der Messung.">
+            >
+            ["id20.1"] = <
+                text = <"Einflussfaktoren">
+                description = <"Zur Dokumentation von Faktoren, die sich auf die Messung der Körpergröße/-länge auswirken können, z.B. einer Amputation.">
+            >
+            ["id19.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar über die Messung der Körpergröße/-länge.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Altura / comprimento">
+                description = <"Altura ou comprimento do corpo, é medida a partir da coroa da cabeça a sola do pé.A altura é medida com o indivíduo na posição de pé e comprimento do corpo na posição decúbito dorsal.">
+            >
+            ["id22.1"] = <
+                text = <"Nascimento">
+                description = <"Primeiro comprimento do corpo medido em, ou logo após, nascimento.">
+            >
+            ["id15.1"] = <
+                text = <"Posição">
+                description = <"Posição individual quando medido.">
+            >
+            ["id20.1"] = <
+                text = <"Fatore de erro">
+                description = <"Registrar quaisquer problemas ou fatores que possam ter impacto sobre a medição da altura/comprimento do corpo, por exemplo, observação de amputação.">
+            >
+            ["id19.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição da altura/comprimento do corpo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-body_mass_index-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.body_mass_index.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Body mass index
+        /data[id2]/events[id3]/data[id4]/items[id5]/value matches {
+            DV_QUANTITY[id13] matches {
+                property matches {[at10]}
+                [magnitude, units, precision] matches {
+                    [{|0.0..<1000.0|}, {"kg/m2"}, {|1|}], 
+                    [{|0.0..<1000.0|}, {"lb/in2"}, {|1|}]
+                }
+            }
+        }
+        /protocol[id6]/items matches {
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Method
+                value matches {
+                    DV_CODED_TEXT[id14.1] matches {
+                        defining_code existence matches {0} matches {[ac1]}
+                    }
+                }
+            }
+            ELEMENT[id11.1] occurrences matches {0} matches {    -- Formula
+                value matches {
+                    DV_TEXT[id15.1] 
+                }
+            }
+            ELEMENT[id12.1] occurrences matches {0} matches {    -- Comment
+                value matches {
+                    DV_TEXT[id16.1] 
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Calculated measurement which compares a person's weight and height.">
+            >
+            ["id7.1"] = <
+                text = <"Method">
+                description = <"The method of entering the Body Mass Index.">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula used to derive the Body Mass Index.">
+            >
+            ["id12.1"] = <
+                text = <"Comment">
+                description = <"Comment about the Body Mass Index measurement eg noting that the measurements used were adjusted weight/height.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Body mass index">
+                description = <"Berekende meting welke gewicht en lengte van een persoon vergelijkt.">
+            >
+            ["id7.1"] = <
+                text = <"Methode">
+                description = <"De methode om de Body Mass Index in te voeren.">
+            >
+            ["id11.1"] = <
+                text = <"Formule">
+                description = <"De formule die gebruikt wordt om de Body Mass Index te berekenen">
+            >
+            ["id12.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de Body Mass Index meting, b.v. dat de metingen die gebruikt werden voor de berekening, aangepaste lengte/gewicht zijn.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"Indeks telesne mase (ITM)">
+                description = <"Indeks telesne mase (ITM)">
+            >
+            ["id7.1"] = <
+                text = <"Metoda">
+                description = <"Metoda">
+            >
+            ["id11.1"] = <
+                text = <"Formula">
+                description = <"Formula">
+            >
+            ["id12.1"] = <
+                text = <"Opombe">
+                description = <"Opombe">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice que descreve a relação entre peso e altura.">
+            >
+            ["id7.1"] = <
+                text = <"Método">
+                description = <"O método de entrada no Índice de Massa Corporal.">
+            >
+            ["id11.1"] = <
+                text = <"Fórmula">
+                description = <"Fórmula utilizada para derivar o Índice de Massa Corporal.">
+            >
+            ["id12.1"] = <
+                text = <"Comentário">
+                description = <"Comente sobre a medida do Índice de Massa Corporal, por exemplo, observando que as medidas utilizadas foram ajustadas em peso / altura.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-heart_rate-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.heart_rate.v1.0.0
+
+definition
+    OBSERVATION[id1.1] occurrences matches {1} matches {    -- heart frequency
+        /data[id2]/events[id3]/data[id4]/items[id6]/value matches {
+            DV_QUANTITY[id7] matches {
+                property matches {[at2]}
+                [units, magnitude, precision] matches {
+                    [{"min"}, {|>0.0..<1000.0|}, {|>=0|}]
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"heart frequency">
+                description = <"heart frequency">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-waist_hip-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.waist_hip.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- Waist and hip circumference
+        /data[id2]/events[id3]/data[id4]/items matches {
+            ELEMENT[id5] occurrences matches {0..1} matches {
+                value matches {
+                    DV_QUANTITY[id8] matches {
+                        property matches {[at1]}
+                        units matches {"cm", "in"}
+                    }
+                }
+            }
+            ELEMENT[id6.1] occurrences matches {0} matches {    -- Hip circumference
+                value matches {
+                    DV_QUANTITY[id9.1] matches {
+                        property matches {[at1]}
+                        magnitude matches {|>=0.0|}
+                        precision matches {|1|}
+                        units matches {"cm"}
+                    }
+                }
+            }
+            ELEMENT[id7.1] occurrences matches {0} matches {    -- Waist:hip ratio
+                value matches {
+                    DV_PROPORTION[id10.1] matches {
+                        type matches {|1|}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Waist and hip circumference">
+                description = <"The waist (or girth) and hip circumference">
+            >
+            ["id7.1"] = <
+                text = <"Waist:hip ratio">
+                description = <"Ratio with unitary denominator">
+            >
+            ["id6.1"] = <
+                text = <"Hip circumference">
+                description = <"Measurement of body circumference at the widest point of the buttocks">
+            >
+        >
+        ["ar-sy"] = <
+            ["id1.1"] = <
+                text = <"كفاف الوِرك و الخصر">
+                description = <"كفاف الخصر (الحزام) و الورك">
+            >
+            ["id7.1"] = <
+                text = <"نسبة الخصر إلى الوِرك">
+                description = <"*Ratio with unitary denominator(en)">
+            >
+            ["id6.1"] = <
+                text = <"كِفاف الوِرك">
+                description = <"قياس كِفاف الجسم عند أعرض نقطة من الألية">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Circunferência da cintura e do quadril">
+                description = <"A cintura (ou circunferência) e circunferência do quadril">
+            >
+            ["id7.1"] = <
+                text = <"Relação cintura quadril">
+                description = <"Ratio com denominador unitário">
+            >
+            ["id6.1"] = <
+                text = <"Circunferência do quadril">
+                description = <"Medição da circunferência corporal no ponto mais largo das nádegas">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-blood_pressure-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.blood_pressure.v1.0.0
+
+definition
+    OBSERVATION[id1.1] matches {    -- *Blood Pressure(en)
+        /data[id2]/events matches {
+            EVENT[id7] matches {
+                /data[id4]/items matches {
+                    ELEMENT[id5] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id1054] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id6] occurrences matches {0..1} matches {
+                        value matches {
+                            DV_QUANTITY[id1055] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1007.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure(en)
+                        value matches {
+                            DV_QUANTITY[id1056.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id1008.1] occurrences matches {0} matches {    -- 脉压
+                        value matches {
+                            DV_QUANTITY[id1057.1] matches {
+                                property matches {[at1055]}
+                                magnitude matches {|0.0..<1000.0|}
+                                precision matches {|0|}
+                                units matches {"mm[Hg]"}
+                            }
+                        }
+                    }
+                    ELEMENT[id34.1] occurrences matches {0} matches {    -- 注释
+                        value matches {
+                            DV_TEXT[id1058.1] 
+                        }
+                    }
+                }
+                /state[id8]/items matches {
+                    ELEMENT[id9.1] occurrences matches {0} matches {    -- *Position(en)
+                        value matches {
+                            DV_CODED_TEXT[id1059.1] matches {
+                                defining_code matches {[ac1; at1002]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1053.1] occurrences matches {0} matches {    -- *Confounding factors(en)
+                        value matches {
+                            DV_TEXT[id1060.1] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id1031] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.level_of_exertion(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id1044.1] occurrences matches {0} matches {    -- *Sleep status(en)
+                        value matches {
+                            DV_CODED_TEXT[id1061.1] matches {
+                                defining_code matches {[ac2; at1045]}
+                            }
+                        }
+                    }
+                    ELEMENT[id1006.1] occurrences matches {0} matches {    -- *Tilt(en)
+                        value matches {
+                            DV_QUANTITY[id1062.1] matches {
+                                property matches {[at1056]}
+                                magnitude matches {|-90.0..90.0|}
+                                precision matches {|0|}
+                                units matches {"°"}
+                            }
+                        }
+                    }
+                }
+            }
+            INTERVAL_EVENT[id1043.1] occurrences matches {0} matches {    -- *24 hour average (en)
+                /math_function[id1063]/defining_code matches {[at1057]}
+                /width[id1064]/value matches {PT24H}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/data[id4]
+                }
+                state matches {
+                    use_node ITEM_TREE /data[id2]/events[id7]/state[id8]
+                }
+            }
+        }
+        /protocol[id12]/items matches {
+            ELEMENT[id14.1] occurrences matches {0} matches {    -- *Cuff size(en)
+                value matches {
+                    DV_CODED_TEXT[id1067.1] matches {
+                        defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id1034.1] occurrences matches {0} matches {    -- *New cluster(en)
+                /items[id15]/value[id1068]/defining_code matches {[ac4]}
+            }
+            ELEMENT[id1036.1] occurrences matches {0} matches {    -- *New element(en)
+                value matches {
+                    DV_CODED_TEXT[id1070.1] matches {
+                        defining_code matches {[ac5]}
+                    }
+                }
+            }
+            ELEMENT[id1039.1] occurrences matches {0} matches {    -- *Mean Arterial Pressure Formula(en)
+                value matches {
+                    DV_TEXT[id1071.1] 
+                }
+            }
+            ELEMENT[id1011.1] occurrences matches {0} matches {    -- *Diastolic endpoint(en)
+                value matches {
+                    DV_CODED_TEXT[id1072.1] matches {
+                        defining_code matches {[ac6]}
+                    }
+                }
+            }
+            allow_archetype CLUSTER[id1026] occurrences matches {0} matches { 
+                include
+                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.device(-a-zA-Z0-9_]+)*\.v1/}
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["zh-cn"] = <
+            ["id1.1"] = <
+                text = <"*Blood Pressure(en)">
+                description = <"*The local measurement of arterial blood pressure which is a surrogate for arterial pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.(en)">
+            >
+            ["id1043.1"] = <
+                text = <"*24 hour average (en)">
+                description = <"*Estimate of the average blood pressure over a 24 hour period(en)">
+            >
+            ["id9.1"] = <
+                text = <"*Position(en)">
+                description = <"*The position of the subject at the time of measurement(en)">
+            >
+            ["id1053.1"] = <
+                text = <"*Confounding factors(en)">
+                description = <"*Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.(en)">
+            >
+            ["id1044.1"] = <
+                text = <"*Sleep status(en)">
+                description = <"*Sleep status - supports interpretation of 24 hour ambulatory blood pressure records. (en)">
+            >
+            ["id1006.1"] = <
+                text = <"*Tilt(en)">
+                description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
+            >
+            ["id34.1"] = <
+                text = <"注释">
+                description = <"有关血压值的注释">
+            >
+            ["id1008.1"] = <
+                text = <"脉压">
+                description = <"*The variation in pressure over one contraction cycle(en)">
+            >
+            ["id1007.1"] = <
+                text = <"*Mean Arterial Pressure(en)">
+                description = <"*The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.   (en)">
+            >
+            ["id14.1"] = <
+                text = <"*Cuff size(en)">
+                description = <"*The size of the cuff used for blood pressure measurement(en)">
+            >
+            ["id1034.1"] = <
+                text = <"*New cluster(en)">
+                description = <"**(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*New element(en)">
+                description = <"**(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data)(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method(en)">
+            >
+        >
+        ["de"] = <
+            ["id1.1"] = <
+                text = <"Blutdruck">
+                description = <"Die lokale Messung des arteriellen Blutdrucks als Surrogat für den arteriellen Druck in der systemischen Zirkulation. Häufig wird der Ausdruck 'Blutdruck' zur Bezeichung der Messung des brachialen Ateriendrucks im Oberarm verwendet.">
+            >
+            ["id1043.1"] = <
+                text = <"24 Stunden Durchschnitt">
+                description = <"Schätzung des durchschnittlichen Blutdrucks über eine 24-stündigen Zeitraum.">
+            >
+            ["id9.1"] = <
+                text = <"Position">
+                description = <"Die Position der untersuchten Person während der Messung.">
+            >
+            ["id1053.1"] = <
+                text = <"Einflussfaktoren">
+                description = <"Kommentar und Aufzeichung anderer Faktoren die ggf. zu dem Ergebnis der Blutdruckmessung beitragen können. Die kann z.B. bei belastenden Situationen der Fall sein (z.B. sog. Weißkittelhypertonie, Schmerzen, Fieber, Änderungen im atmosphärischen Druck).">
+            >
+            ["id1044.1"] = <
+                text = <"Schlafzustand">
+                description = <"Schlafzustand  - unterstützt die Auswertung von 24-stündigen ambulanten Aufzeichnungen des Blutdrucks.">
+            >
+            ["id1006.1"] = <
+                text = <"Neigung">
+                description = <"Die cranio-kaudale Neigung der Oberfläche auf der die Person zum Zeitpunkt der Messung liegt.">
+            >
+            ["id34.1"] = <
+                text = <"Kommentar">
+                description = <"Kommentar zur Blutdruckmessung.">
+            >
+            ["id1008.1"] = <
+                text = <"Pulsdruck">
+                description = <"Der Abstand zwischen dem systolischen und dem diastolischen Blutdruckwert.">
+            >
+            ["id1007.1"] = <
+                text = <"Mittlerer arterieller Druck">
+                description = <"Der mittlerer arterielle Druck über den gesamten Verlauf der Konktraktions- und Entspannungsphase des Herzens.">
+            >
+            ["id14.1"] = <
+                text = <"Manschettengröße">
+                description = <"Die Größe der Manschette, die zur Blutdruckmessung benutzt wurde.">
+            >
+            ["id1034.1"] = <
+                text = <"Körperstelle">
+                description = <"Körperstelle der Blutdruckmessung. 'Körperstelle der Messung' kann für die gewöhnlichen Stellen verwendet werden. 'Spezifische Stelle' wird für die Aufzeichnung spezifischer Details einer Körperstelle, die nicht in den gewöhnlichen Stellen enthalten ist, verwendet, Sie kann auch verwendet werden, um auf eine externe Teminologie zu verweisen.">
+            >
+            ["id1036.1"] = <
+                text = <"Methode">
+                description = <"Methode der Messung des Blutdrucks.">
+            >
+            ["id1039.1"] = <
+                text = <"Formel für mittleren arterieller Druck">
+                description = <"Die Formel die ggf. verwendet wurde, um den mittleren arteriellen Druck zu berechnen.">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolischer Endpunkt">
+                description = <"Dient der Dokumentation des Korotkoff-Geräusches, das verwendet wird, um bei auskultarischer Messung den diastolischen Blutdruck zu bestimmen.">
+            >
+        >
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Blood Pressure">
+                description = <"The local measurement of arterial blood pressure which is a surrogate for arterial. pressure in the systemic circulation.  Most commonly, use of the term 'blood pressure' refers to measurement of brachial artery pressure in the upper arm.">
+            >
+            ["id1043.1"] = <
+                text = <"24 hour average">
+                description = <"Estimate of the average blood pressure over a 24 hour period.">
+            >
+            ["id9.1"] = <
+                text = <"Position">
+                description = <"The position of the subject at the time of measurement.">
+            >
+            ["id1053.1"] = <
+                text = <"Confounding factors">
+                description = <"Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Sleep status">
+                description = <"Sleep status - supports interpretation of 24 hour ambulatory blood pressure records.">
+            >
+            ["id1006.1"] = <
+                text = <"Tilt">
+                description = <"The craniocaudal tilt of the surface on which the person is lying at the time of measurement.">
+            >
+            ["id34.1"] = <
+                text = <"Comment">
+                description = <"Comment on blood pressure measurement.">
+            >
+            ["id1008.1"] = <
+                text = <"Pulse Pressure">
+                description = <"The difference between the systolic and diastolic pressure.">
+            >
+            ["id1007.1"] = <
+                text = <"Mean Arterial Pressure">
+                description = <"The average arterial pressure that occurs over the entire course of the heart contraction and relaxation cycle.">
+            >
+            ["id14.1"] = <
+                text = <"Cuff size">
+                description = <"The size of the cuff used for blood pressure measurement.">
+            >
+            ["id1034.1"] = <
+                text = <"Location">
+                description = <"Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.">
+            >
+            ["id1036.1"] = <
+                text = <"Method">
+                description = <"Method of measurement of blood pressure.">
+            >
+            ["id1039.1"] = <
+                text = <"Mean Arterial Pressure Formula">
+                description = <"Formula used to calculate the MAP (if recorded in data).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolic endpoint">
+                description = <"Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.">
+            >
+        >
+        ["fa"] = <
+            ["id1.1"] = <
+                text = <"فشار خون">
+                description = <"اندازه گیری موضعی فشار خون وریدی، که جایگزینی برای فشار وریدی در گردش خون کلی است.معمولا واژه \"فشار خون\" به اندازه گیری فشار ورید بازویی در روی بازو گفته می شود">
+            >
+            ["id1043.1"] = <
+                text = <"میانگین 24 ساعته">
+                description = <"برآورد میانگین فشار خون در دوره زمانی 24 ساعته">
+            >
+            ["id9.1"] = <
+                text = <"موقعیت">
+                description = <"موقعیت فرد در زمان اندازه گیری">
+            >
+            ["id1053.1"] = <
+                text = <"عوامل مبهم">
+                description = <"نظردهی و ثبت سایر عوامل ضمنی که ممکن است به اندازه گیری فشار خون کمک کنند . به عنوان مثال سطح اضطراب یا \"سندرم روپوش سفید\"، درد یا تب ، تغییرات فشار جوی و غیره">
+            >
+            ["id1044.1"] = <
+                text = <"وضعیت خواب">
+                description = <"وضعیت خواب- به تفسیر ثبتهای صورت گرفته از فشار خون در خانه در طول 24 ساعت کمک می کند">
+            >
+            ["id1006.1"] = <
+                text = <"شیب">
+                description = <"شیب طولی سطحی که فرد در حین اندازه گیری رون آن دراز کشیده است">
+            >
+            ["id34.1"] = <
+                text = <"نظر">
+                description = <"نظر در مورد اندازه گیری فشار خون">
+            >
+            ["id1008.1"] = <
+                text = <"فشار نبضی">
+                description = <"تفاوت بین فشار سیستولیک و دیاستولیک">
+            >
+            ["id1007.1"] = <
+                text = <"میانگین فشار وریدی">
+                description = <"متوسط فشار خون وریدی که در کل دوره انقباظ و انبساط قلبی رخ می دهد">
+            >
+            ["id14.1"] = <
+                text = <"اندازه کاف">
+                description = <"اندازه کاف استفاده شده برای اندازه گیری فشار خون">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology.(en)">
+            >
+            ["id1036.1"] = <
+                text = <"*Method(en)">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"*Mean Arterial Pressure Formula(en)">
+                description = <"*Formula used to calculate the MAP (if recorded in data).(en)">
+            >
+            ["id1011.1"] = <
+                text = <"*Diastolic endpoint(en)">
+                description = <"*Record which Korotkoff sound is used for determining diastolic pressure using auscultative method.(en)">
+            >
+        >
+        ["ja"] = <
+            ["id1.1"] = <
+                text = <"血圧">
+                description = <"全身の循環での動脈圧の代用として，局所で測定される血圧。一般的には「血圧」とは上腕で上腕動脈を測定したものをさすことが多い。">
+            >
+            ["id1043.1"] = <
+                text = <"24時間平均">
+                description = <"24時間にわたる推定平均血圧">
+            >
+            ["id9.1"] = <
+                text = <"体位">
+                description = <"計測のときの対象者の体位">
+            >
+            ["id1053.1"] = <
+                text = <"交絡因子">
+                description = <"*Comment on and record other incidental factors that may be contributing to the blood pressure measurement.  For example, level of anxiety or 'white coat syndrome'; pain or fever; changes in atmospheric pressure etc.(en)">
+            >
+            ["id1044.1"] = <
+                text = <"睡眠状況">
+                description = <"睡眠状況 24時間外来血圧記録の解釈を助けるため">
+            >
+            ["id1006.1"] = <
+                text = <"ティルト">
+                description = <"*The craniocaudal tilt of the surface on which the person is lying at the time of measurement(en)">
+            >
+            ["id34.1"] = <
+                text = <"コメント">
+                description = <"血圧測定のコメント">
+            >
+            ["id1008.1"] = <
+                text = <"脈圧">
+                description = <"1回の収縮サイクルでの血圧の変動">
+            >
+            ["id1007.1"] = <
+                text = <"平均同脈圧">
+                description = <"縮拡張サイクルのすべての過程における動脈圧の平均値.">
+            >
+            ["id14.1"] = <
+                text = <"カフサイズ">
+                description = <"血圧測定のために使われるカフの大きさ.">
+            >
+            ["id1034.1"] = <
+                text = <"部位">
+                description = <"*Body location where blood pressure is measured.  Use 'Location of measurement' to select from common sites.  Use 'Specific location' to record more specific details or a site that is not in the common set or to refer to an external terminology. (en)">
+            >
+            ["id1036.1"] = <
+                text = <"方法">
+                description = <"*Method of measurement of blood pressure.(en)">
+            >
+            ["id1039.1"] = <
+                text = <"平均同脈圧の計算式">
+                description = <"平均同脈圧を計算するために使われた士気（もしデータに記録されていれば）">
+            >
+            ["id1011.1"] = <
+                text = <"拡張期終末">
+                description = <"拡張期圧を決めるためにどのコロトコフ音が使用されたかというを記録.">
+            >
+        >
+        ["nl"] = <
+            ["id1.1"] = <
+                text = <"Bloeddruk">
+                description = <"De lokale meting van de arteriële bloeddruk, welke surrogaat is voor de arteriële druk in de systemische circulatie. Meest gebruikelijk is dat de term 'bloeddruk'  refereert aan de meting van de bloeddruk van de arterie brachialis in de bovenarm.">
+            >
+            ["id1043.1"] = <
+                text = <"24 uur gemiddelde">
+                description = <"Inschatting van de gemiddelde bloeddruk over een periode van 24 uur">
+            >
+            ["id9.1"] = <
+                text = <"Houding">
+                description = <"De houding van het individu op het moment van de meting">
+            >
+            ["id1053.1"] = <
+                text = <"Beïnvloedende factoren">
+                description = <"Opmerking over en vastleggen van andere incidentele factoren die de bloeddrukmeting zouden kunnen beïnvloeden. Bijvoorbeeld, mate van angst, of 'witte jas syndroom'; pijn of koorts; veranderingen in atmosferische druk etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Slaap/waak toestand">
+                description = <"Slaap/waak toestand, ondersteunt de interpretatie van de 24-uurs bloeddrukmeting.">
+            >
+            ["id1006.1"] = <
+                text = <"Schuinte">
+                description = <"De craniocaudale schuinte van het oppervlak waarop het individu ligt op het moment van de meting">
+            >
+            ["id34.1"] = <
+                text = <"Opmerking">
+                description = <"Opmerking over de gemeten bloeddruk">
+            >
+            ["id1008.1"] = <
+                text = <"Polsdruk">
+                description = <"Het verschil tussen de systolische en diastolische bloeddruk">
+            >
+            ["id1007.1"] = <
+                text = <"Gemiddelde arteriële druk">
+                description = <"De gemiddelde bloeddruk gedurende 1 cyclus van samentrekken en ontspannen van het hart.">
+            >
+            ["id14.1"] = <
+                text = <"Manchet grootte">
+                description = <"De grootte van de manchet gebruikt bij de meting">
+            >
+            ["id1034.1"] = <
+                text = <"Locatie">
+                description = <"Lichaamslocatie waar de bloeddrukmeting is gemeten. Gebruik 'locatie van meting' om gebruikelijke plaatsen te selecteren. Gebruik 'specifieke locatie' om meer specifieke details of locatie te registreren, die niet in de gebruikelijke set staan of om aan een externe terminologie te refereren.">
+            >
+            ["id1036.1"] = <
+                text = <"Methodiek">
+                description = <"De methode van de meting van de bloeddruk">
+            >
+            ["id1039.1"] = <
+                text = <"Gemiddelde arteriële druk formule">
+                description = <"Formule om de MAP (mean arterial pressure=gemiddelde arteriële druk) te berekenen (als deze data opgeslagen wordt).">
+            >
+            ["id1011.1"] = <
+                text = <"Diastolisch eindpunt">
+                description = <"Om te registreren welk Korotkoff geluid gebruikt is om de diastolische druk te meten door de auscultatieve methode.">
+            >
+        >
+        ["ru"] = <
+            ["id1.1"] = <
+                text = <"АД">
+                description = <"Локальное измерение артериального давления, которое является суррогатом артериального давления в системном кровотоке. Как правило, термин относится к давления плечевой артерии на предплечье.">
+            >
+            ["id1043.1"] = <
+                text = <"Среднее за 24 часа">
+                description = <"Оценка среднего АД за период в 24 часа.">
+            >
+            ["id9.1"] = <
+                text = <"Поза">
+                description = <"Поза пациента во время измерения давления.">
+            >
+            ["id1053.1"] = <
+                text = <"Стохастические факторы(ru)">
+                description = <"Комментарий и записи других случайных факторов, которые могут способствовать измерению артериального давления. Например,\"боязнь белого халата\" или боль и жар, изменения атмосферного давления т.д.">
+            >
+            ["id1044.1"] = <
+                text = <"Стадия сна(ru)">
+                description = <"Стадия сна - для интерпретации записи амбулаторного измерения АД в течение 42 часов.">
+            >
+            ["id1006.1"] = <
+                text = <"Наклонная поверхность">
+                description = <"краниокаудальный наклон поверхности, на которой лежит пациент во время измерения АД.">
+            >
+            ["id34.1"] = <
+                text = <"Комментарии">
+                description = <"Комментарии к измерению кровяного давления.">
+            >
+            ["id1008.1"] = <
+                text = <"Пульсовое давление">
+                description = <"Разница между систолическим и диастолическим давлением.">
+            >
+            ["id1007.1"] = <
+                text = <"Среднего артериального давления крови">
+                description = <"Среднее артериальное давление на всём протяжении цикла сокращения и релаксации сердца.">
+            >
+            ["id14.1"] = <
+                text = <"Размер манжеты(ru)">
+                description = <"Размер манжеты для измерения кровяного давления.">
+            >
+            ["id1034.1"] = <
+                text = <"*Location(en)">
+                description = <"Место тела, где измеряется АД. Используйте \"Место измерения\", чтобы выбрать из обобщённых мест. Используйте \"Точное местограсположение\", чтобы записать более конкретную информацию или место, которое не входит в обобщённый список или обратиться к внешней терминологии.">
+            >
+            ["id1036.1"] = <
+                text = <"Метод">
+                description = <"Метод измерения кровяного давления.">
+            >
+            ["id1039.1"] = <
+                text = <"Формула среднего артериального давления">
+                description = <"Формула, используемая для вычисления СрАД (если требуется записывать).">
+            >
+            ["id1011.1"] = <
+                text = <"Диастолическая конечная точка">
+                description = <"Запись звука Короткова который используют для определения диастолического давления с помощью метода аускультации.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"Pressão sanguínea">
+                description = <"A medida local da pressão arterial que é um substituto para a arterial, pressão na circulação sistêmica. Mais comumente, o uso do termo \"pressão sanguínea\" refere-se à medida da pressão da artéria braquial na parte superior do braço.">
+            >
+            ["id1043.1"] = <
+                text = <"Média de 24 horas">
+                description = <"Estimativa da pressão arterial média durante um período de 24 horas.">
+            >
+            ["id9.1"] = <
+                text = <"Posição">
+                description = <"A posição do sujeito no momento da medição.">
+            >
+            ["id1053.1"] = <
+                text = <"Fatores de complicação">
+                description = <"Comente e registre outros fatores incidentais que podem estar contribuindo para a medição da pressão arterial. Por exemplo, nível de ansiedade ou \"síndrome do casaco branco\"; dor ou febre; mudanças na pressão atmosférica, etc.">
+            >
+            ["id1044.1"] = <
+                text = <"Status do sono">
+                description = <"Status do sono - suporta a interpretação dos registros de pressão arterial ambulatorial de 24 horas.">
+            >
+            ["id1006.1"] = <
+                text = <"Inclinação">
+                description = <"A inclinação craniocaudal da superfície em que a pessoa está no momento da medição.">
+            >
+            ["id34.1"] = <
+                text = <"Comentário">
+                description = <"Comentário sobre a medição da pressão arterial.">
+            >
+            ["id1008.1"] = <
+                text = <"Diferença de pressão">
+                description = <"A diferença entre a pressão sistólica e diastólica.">
+            >
+            ["id1007.1"] = <
+                text = <"Pressão arterial média">
+                description = <"A pressão arterial média que ocorre durante todo o curso do ciclo de contração e relaxamento cardíaco.">
+            >
+            ["id14.1"] = <
+                text = <"Tamanho do manguito">
+                description = <"O tamanho do manguito usado para a medição da pressão arterial.">
+            >
+            ["id1034.1"] = <
+                text = <"Localização">
+                description = <"Localização do corpo onde a pressão arterial é medida. Use 'Localização da medida' para selecionar locais comuns. Use 'Local específico' para registrar detalhes mais específicos ou um local que não esteja no conjunto comum ou para se referir a uma terminologia externa.">
+            >
+            ["id1036.1"] = <
+                text = <"Método">
+                description = <"Método de medição da pressão sanguínea.">
+            >
+            ["id1039.1"] = <
+                text = <"Fórmula de Pressão Arterial Média">
+                description = <"Fórmula usada para calcular o MAP (se registrado em dados).">
+            >
+            ["id1011.1"] = <
+                text = <"Ponto de extremidade diastólica">
+                description = <"Grave qual som de Korotkoff é usado para determinar a pressão diastólica usando o método auscultivo.">
+            >
+        >
+    >
+
+
+---------------------------------------------------------------------------------
+template_overlay
+    openEHR-EHR-OBSERVATION.ovl-fco_br-alcohol_use_SESI_BR-001.v1.0.0
+
+specialize
+    openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.0.0
+
+definition
+    OBSERVATION[id1.1.1] matches {    -- Alcohol Use
+        /data[id2]/events matches {
+            EVENT[id3] occurrences matches {0..1} matches {
+                /data[id4]/items matches {
+                    CLUSTER[id6] matches {
+                        items matches {
+                            ELEMENT[id7.0.1] occurrences matches {0} matches {    -- Form
+                                value matches {
+                                    DV_TEXT[id29.0.1] 
+                                }
+                            }
+                            CLUSTER[id16.0.1] occurrences matches {0} matches {    -- Amount
+                                /items[id17]/value cardinality matches {1; unordered} matches {
+                                    DV_QUANTITY[id31] matches {
+                                        property matches {[at2]}
+                                        units matches {"gm/d", "gm/wk"}
+                                    }
+                                }
+                            }
+                            ELEMENT[id18.0.1] occurrences matches {0} matches {    -- Triggers
+                                value matches {
+                                    DV_TEXT[id32.0.1] 
+                                }
+                            }
+                            ELEMENT[id19.0.1] occurrences matches {0} matches {    -- Context
+                                value matches {
+                                    DV_TEXT[id33.0.1] 
+                                }
+                            }
+                            ELEMENT[id0.16] occurrences matches {0..1} matches {
+                                /value[id0.17]/defining_code matches {[ac0.1]}
+                            }
+                        }
+                    }
+                    ELEMENT[id20.0.1] occurrences matches {0} matches {    -- Behavioural Issues
+                        value matches {
+                            DV_TEXT[id34.0.1] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-a-zA-Z0-9_]+)*\.v1/}
+                    }
+                    ELEMENT[id22.0.1] occurrences matches {0} matches {    -- Comment
+                        value matches {
+                            DV_TEXT[id35.0.1] 
+                        }
+                    }
+                }
+            }
+            POINT_EVENT[id24.0.1] occurrences matches {0} matches {    -- Specified Day
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+            INTERVAL_EVENT[id23.0.1] occurrences matches {0} matches {    -- Average Consumption Interval
+                /math_function[id37]/defining_code matches {[at3]}
+                data matches {
+                    use_node ITEM_TREE /data[id2]/events[id3]/data[id4]
+                }
+            }
+        }
+        /protocol[id25]/items matches {
+            ELEMENT[id26.0.1] occurrences matches {0..1} matches {    -- Standard Drink Definition
+                value matches {
+                    DV_QUANTITY[id39.0.1] matches {
+                        property matches {[at4]}
+                        units matches {"gm"}
+                    }
+                }
+            }
+            ELEMENT[id27.0.1] occurrences matches {0..1} matches {    -- Average Use Frequency
+                value matches {
+                    DV_QUANTITY[id40.0.1] matches {
+                        property matches {[at1]}
+                        units matches {"/d", "/wk", "/mo"}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1.1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+            ["id20.0.1"] = <
+                text = <"Behavioural Issues">
+                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
+            >
+            ["id22.0.1"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
+            >
+            ["id24.0.1"] = <
+                text = <"Specified Day">
+                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
+            >
+            ["id23.0.1"] = <
+                text = <"Average Consumption Interval">
+                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
+            >
+            ["id19.0.1"] = <
+                text = <"Context">
+                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
+            >
+            ["id18.0.1"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
+            >
+            ["id16.0.1"] = <
+                text = <"Amount">
+                description = <"Amount of alcohol consumed.">
+            >
+            ["id7.0.1"] = <
+                text = <"Form">
+                description = <"Form of alcohol consumed.">
+            >
+            ["id26.0.1"] = <
+                text = <"Standard Drink Definition">
+                description = <"Amount of alcohol defining a standard drink.">
+            >
+            ["id27.0.1"] = <
+                text = <"Average Use Frequency">
+                description = <"Frequency of 'Average Use' per time interval.">
+            >
+        >
+        ["pt-br"] = <
+            ["id1.1.1"] = <
+                text = <"Uso de bebida alcoólica">
+                description = <"Detalhes sobre o uso de todas as formas de álcool em um ponto específico no tempo ou durante um período de tempo especificado.">
+            >
+            ["id20.0.1"] = <
+                text = <"Problemas comportamentais">
+                description = <"Descrição narrativa de qualquer problema comportamental que pode indicar o abuso ou dependência de álcool">
+            >
+            ["id22.0.1"] = <
+                text = <"Comentário">
+                description = <"Narrativa adicional sobre o consumo de álcool não capturado em outros campos">
+            >
+            ["id24.0.1"] = <
+                text = <"Dia específico">
+                description = <"Consumo real de álcool em um dia específico. Suporta a gravação de consumo em um diário de álcool">
+            >
+            ["id23.0.1"] = <
+                text = <"Intervalo médio consumido">
+                description = <"Consumo médio, ou típico durante um intervalo de tempo especificado. p.e: permite registrar o número médio de doses padrão consumidas por semana nos últimos 10 anos">
+            >
+            ["id19.0.1"] = <
+                text = <"Contexto">
+                description = <"Descrição sobre o contexto social ou cultural que contribuem para o consumo desta forma de álcool">
+            >
+            ["id18.0.1"] = <
+                text = <"Gatilhos">
+                description = <"Identificação de gatilhos que causam ou estimulam o consumo desta forma de álcool">
+            >
+            ["id16.0.1"] = <
+                text = <"Quantidade">
+                description = <"Quantidade de álcool consumida.">
+            >
+            ["id7.0.1"] = <
+                text = <"Com que frequência você toma bebidas alcoólicas?">
+                description = <"Com que frequência você toma bebidas alcoólicas?">
+            >
+            ["id26.0.1"] = <
+                text = <"Definição de dose padrão">
+                description = <"Definição da quantidade de álcool na dose padrão">
+            >
+            ["id27.0.1"] = <
+                text = <"Frequência de uso médio">
+                description = <"Frequência de \"uso médio\" em um intervalo de tempo">
+            >
+        >
+    >
+

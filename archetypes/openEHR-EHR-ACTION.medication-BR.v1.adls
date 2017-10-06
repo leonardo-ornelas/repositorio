@@ -138,9 +138,6 @@ definition
             }
         }
         /description[id18]/items matches {
-            ELEMENT[id21] matches {
-                /value[id102]/defining_code matches {[ac2]}
-            }
             allow_archetype CLUSTER[id24] occurrences matches {0} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.chemical_description(-a-zA-Z0-9_]+)*\.v1/}
@@ -148,9 +145,6 @@ definition
             allow_archetype CLUSTER[id23] occurrences matches {0..1} matches { 
                 include
                     archetype_id/value matches {/openEHR-EHR-CLUSTER\.amount\.v1/}
-            }
-            ELEMENT[id26] occurrences matches {0} matches {
-                /value[id106]/magnitude matches {*}
             }
             allow_archetype CLUSTER[id28] occurrences matches {0} matches { 
                 include

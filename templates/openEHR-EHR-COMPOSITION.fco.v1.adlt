@@ -1,0 +1,71 @@
+template (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.fco.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.fco.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1.1] occurrences matches {1} matches {    -- fco
+        content matches {
+            SECTION[id5] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id8] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.physical_activity_summary\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-tobacco\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.alcohol_use_SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id11] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id12] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.habitos_lazer\.v1\.0\.0/}
+                    }
+                }
+            }
+            SECTION[id7] occurrences matches {0..1} matches {
+                items matches {
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1.1"] = <
+                text = <"fco">
+                description = <"fco">
+            >
+        >
+    >
+

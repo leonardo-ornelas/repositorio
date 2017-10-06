@@ -1,0 +1,415 @@
+archetype (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-EVALUATION.vacinas.v1.0.0
+
+specialize
+    openEHR-EHR-EVALUATION.immunisation_summary.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["pt-br"] = <
+            accreditation = <"">
+            author = <
+                ["name"] = <"Ismael Queiroz">
+                ["organisation"] = <"Solutis Tecnologias Ltda.">
+                ["email"] = <"ismael.queiroz@solutis.com.br">
+            >
+            language = <[ISO_639-1::pt-br]>
+        >
+    >
+    
+description
+    copyright = <"© National E-Health Transition Authority">
+    details = <
+        ["en"] = <
+            keywords = <"immunisation", "immunization", "vaccination", "vaccine", "infectious", "disease">
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"To record summary statements about the current immunisation status for an identified infectious disease or agent.">
+            use = <"Use to record summary statements about the current immunisation status for an identified infectious disease or agent.">
+        >
+        ["pt-br"] = <
+            keywords = <"immunisation", "immunization", "vaccination", "vaccine", "infectious", "disease", "vacinas">
+            language = <[ISO_639-1::pt-br]>
+            misuse = <"">
+            purpose = <"Para registrar declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            use = <"Use para registrar declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2012-11-23">
+    >
+    other_contributors = <"Merrilyn Curtis, AnalyzeIT, Australia", "Sistine Barretto-Daniels, Ocean Informatics, Australia", "Sam Heard, Ocean Informatics, Australia">
+
+definition
+    EVALUATION[id1.1] matches {    -- Immunisation Summary
+        /data[id2]/items matches {
+            ELEMENT[id20] occurrences matches {0..1} matches {    -- Overall Vaccination Status
+                /value[id27]/defining_code matches {[ac1]}
+            }
+            CLUSTER[id17] matches {    -- Specific Vaccine
+                items matches {
+                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Vaccination Status
+                        /value[id30]/defining_code matches {[ac2]}
+                    }
+                    ELEMENT[id4] occurrences matches {0..1} matches {    -- Primary Course Status
+                        /value[id31]/defining_code matches {[ac3]}
+                    }
+                }
+            }
+            CLUSTER[id28] occurrences matches {0..1} matches {    -- Vaccines
+                items matches {
+                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Hepatitis B
+                        value matches {
+                            DV_BOOLEAN[id30] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Viral triple
+                        value matches {
+                            DV_BOOLEAN[id32] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id33] occurrences matches {0..1} matches {    -- Adult double (diphtheria and tetanus)
+                        value matches {
+                            DV_BOOLEAN[id34] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id35] occurrences matches {0..1} matches {    -- Yellow fever
+                        value matches {
+                            DV_BOOLEAN[id36] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {    -- The flu
+                        value matches {
+                            DV_BOOLEAN[id38] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id39] occurrences matches {0..1} matches {    -- Oriented vaccination schedule
+                        value matches {
+                            DV_BOOLEAN[id40] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                    ELEMENT[id41] occurrences matches {0..1} matches {    -- Others
+                        value matches {
+                            DV_BOOLEAN[id42] matches {
+                                value matches {True, False; false}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1"] = <
+                text = <"Immunisation Summary">
+                description = <"Summary statements about the current immunisation status for an identified infectious disease or agent.">
+            >
+            ["id3"] = <
+                text = <"Infectious Disease or Agent">
+                description = <"Identification of the infectious disease or agent.">
+            >
+            ["id4"] = <
+                text = <"Primary Course Status">
+                description = <"Status of the primary course of immunisation.">
+            >
+            ["at5"] = <
+                text = <"Not commenced">
+                description = <"The primary course has not yet commenced.">
+            >
+            ["at6"] = <
+                text = <"Incomplete">
+                description = <"The primary course was not completed.">
+            >
+            ["at7"] = <
+                text = <"Complete">
+                description = <"The primary course was completed.">
+            >
+            ["at8"] = <
+                text = <"Indeterminate">
+                description = <"It is not known if the primary course was completed.">
+            >
+            ["id9"] = <
+                text = <"Date Primary Course Completed">
+                description = <"The date, or partial date, when the primary course of vaccination was completed.">
+            >
+            ["id10"] = <
+                text = <"Date of Last Booster">
+                description = <"The date, or partial date, when the last vaccination booster was administered.">
+            >
+            ["id11"] = <
+                text = <"Vaccination Status">
+                description = <"The vaccination status for the specific infectious disease or agent.">
+            >
+            ["at12"] = <
+                text = <"Vaccination Not Required">
+                description = <"Vaccination is not required.">
+            >
+            ["at13"] = <
+                text = <"Vaccination Required">
+                description = <"Vaccination is required.">
+            >
+            ["id15"] = <
+                text = <"Next Review Due">
+                description = <"The date when a review of the immunisation summary is next due.">
+            >
+            ["id16"] = <
+                text = <"Last Updated">
+                description = <"The date when the immunisation summary was last updated.">
+            >
+            ["id17"] = <
+                text = <"Specific Vaccine">
+                description = <"Details about the vaccination status for a specified vaccine.">
+            >
+            ["at18"] = <
+                text = <"Vaccination Not Indicated">
+                description = <"Vaccination is not indicated.">
+            >
+            ["at19"] = <
+                text = <"Vaccination Declined">
+                description = <"Vaccination for this infectious disease or agent has been declined by the subject or carer.">
+            >
+            ["id20"] = <
+                text = <"Overall Vaccination Status">
+                description = <"Statement about the status for all vaccines.">
+            >
+            ["id21"] = <
+                text = <"Next Due">
+                description = <"Date when the next vaccination is due.">
+            >
+            ["at22"] = <
+                text = <"No Vaccinations Required">
+                description = <"No vaccinations have been identified that require administration.">
+            >
+            ["at23"] = <
+                text = <"Vaccinations Required">
+                description = <"Vaccinations have been identified that need to be administered.">
+            >
+            ["at24"] = <
+                text = <"All Vaccinations Declined">
+                description = <"The subject, or carer, has declined all vaccination administration.">
+            >
+            ["id25"] = <
+                text = <"Comment">
+                description = <"Additional narrative about a specific vaccine that is not captured in structured fields.">
+            >
+            ["id26"] = <
+                text = <"Description">
+                description = <"Narrative description about the vaccination status.">
+            >
+            ["ac1"] = <
+                text = <"Overall Vaccination Status (synthesised)">
+                description = <"Statement about the status for all vaccines. (synthesised)">
+            >
+            ["ac2"] = <
+                text = <"Vaccination Status (synthesised)">
+                description = <"The vaccination status for the specific infectious disease or agent. (synthesised)">
+            >
+            ["ac3"] = <
+                text = <"Primary Course Status (synthesised)">
+                description = <"Status of the primary course of immunisation. (synthesised)">
+            >
+            ["id1.1"] = <
+                text = <"Immunisation Summary">
+                description = <"Summary statements about the current immunisation status for an identified infectious disease or agent.">
+            >
+            ["id28"] = <
+                text = <"Vaccines">
+                description = <"Vaccines">
+            >
+            ["id29"] = <
+                text = <"Hepatitis B">
+                description = <"Hepatitis B">
+            >
+            ["id31"] = <
+                text = <"Viral triple">
+                description = <"Viral triple">
+            >
+            ["id33"] = <
+                text = <"Adult double (diphtheria and tetanus)">
+                description = <"Adult double (diphtheria and tetanus)">
+            >
+            ["id35"] = <
+                text = <"Yellow fever">
+                description = <"Yellow fever">
+            >
+            ["id37"] = <
+                text = <"The flu">
+                description = <"The flu">
+            >
+            ["id39"] = <
+                text = <"Oriented vaccination schedule">
+                description = <"Oriented vaccination schedule">
+            >
+            ["id41"] = <
+                text = <"Others">
+                description = <"Others">
+            >
+        >
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Resumo da imunização">
+                description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            >
+            ["id3"] = <
+                text = <"Doença Infecciosa ou Agente">
+                description = <"Identificação da doença infecciosa ou agente.">
+            >
+            ["id4"] = <
+                text = <"Status do curso primário">
+                description = <"Status do curso primário da imunização.">
+            >
+            ["at5"] = <
+                text = <"Não iniciado">
+                description = <"O curso primário ainda não começou.">
+            >
+            ["at6"] = <
+                text = <"Incompleto">
+                description = <"O curso primário não foi concluído.">
+            >
+            ["at7"] = <
+                text = <"Completo">
+                description = <"O curso primário foi concluído.">
+            >
+            ["at8"] = <
+                text = <"Indeterminado">
+                description = <"Não se sabe se o curso primário foi concluído.">
+            >
+            ["id9"] = <
+                text = <"Data do curso primário completado">
+                description = <"A data ou a data parcial, quando o curso primário de vacinação foi concluído.">
+            >
+            ["id10"] = <
+                text = <"Data do último impulsionador">
+                description = <"A data ou a data parcial, quando o último servo de vacinação foi administrado.">
+            >
+            ["id11"] = <
+                text = <"Status de vacinação">
+                description = <"O estado da vacinação para doenças ou agentes infecciosos específicos.">
+            >
+            ["at12"] = <
+                text = <"Não é necessária vacinação">
+                description = <"A vacinação não é necessária.">
+            >
+            ["at13"] = <
+                text = <"É necessária vacinação">
+                description = <"A vacinação é necessária.">
+            >
+            ["id15"] = <
+                text = <"Próxima revisão devida">
+                description = <"A data em que uma revisão do resumo da vacinação é devida.">
+            >
+            ["id16"] = <
+                text = <"Ultima atualização">
+                description = <"A data em que o resumo da imunização foi atualizado pela última vez.">
+            >
+            ["id17"] = <
+                text = <"Vacina específica">
+                description = <"Detalhes sobre o status de vacinação para uma vacina especificada.">
+            >
+            ["at18"] = <
+                text = <"Vacinação não indicada">
+                description = <"A vacinação não está indicada.">
+            >
+            ["at19"] = <
+                text = <"Vacina recusada">
+                description = <"A vacinação para esta doença infecciosa ou agente foi diminuída pelo sujeito ou pelo cuidador.">
+            >
+            ["id20"] = <
+                text = <"Status geral de vacinação">
+                description = <"Declaração sobre o status de todas as vacinas.">
+            >
+            ["id21"] = <
+                text = <"Próxima vacina">
+                description = <"Data em que a próxima vacinação é obrigatória.">
+            >
+            ["at22"] = <
+                text = <"Não são necessárias vacinas">
+                description = <"Não foram identificadas vacinas que exigem administração.">
+            >
+            ["at23"] = <
+                text = <"Vacinas necessárias">
+                description = <"Foram identificadas vacinas que precisam ser administradas.">
+            >
+            ["at24"] = <
+                text = <"Todas as vacinas recusadas">
+                description = <"O assunto, ou cuidador, declinou toda a administração de vacinação.">
+            >
+            ["id25"] = <
+                text = <"Comentário">
+                description = <"Narração adicional sobre uma vacina específica que não é capturada em campos estruturados.">
+            >
+            ["id26"] = <
+                text = <"Descrição">
+                description = <"Descrição narrativa sobre o status de vacinação">
+            >
+            ["ac1"] = <
+                text = <"*Overall Vaccination Status (synthesised) (en)">
+                description = <"*Statement about the status for all vaccines. (synthesised) (en)">
+            >
+            ["ac2"] = <
+                text = <"*Vaccination Status (synthesised) (en)">
+                description = <"*The vaccination status for the specific infectious disease or agent. (synthesised) (en)">
+            >
+            ["ac3"] = <
+                text = <"*Primary Course Status (synthesised) (en)">
+                description = <"*Status of the primary course of immunisation. (synthesised) (en)">
+            >
+            ["id1.1"] = <
+                text = <"Resumo da imunização">
+                description = <"Declarações resumidas sobre o atual estado de imunização para uma doença ou agente infeccioso identificado.">
+            >
+            ["id28"] = <
+                text = <"Vacinas">
+                description = <"Vaccines">
+            >
+            ["id29"] = <
+                text = <"Hepatite B">
+                description = <"Hepatite B">
+            >
+            ["id31"] = <
+                text = <"Tríplice viral">
+                description = <"Tríplice viral">
+            >
+            ["id33"] = <
+                text = <"Dupla adulto (difteria e tétano)">
+                description = <"Dupla adulto (difteria e tétano)">
+            >
+            ["id35"] = <
+                text = <"Febre amarela">
+                description = <"Febre amarela">
+            >
+            ["id37"] = <
+                text = <"Influenza">
+                description = <"Influenza">
+            >
+            ["id39"] = <
+                text = <"Orientado esquema vacinal">
+                description = <"Orientado esquema vacinal">
+            >
+            ["id41"] = <
+                text = <"Outras">
+                description = <"Outras">
+            >
+        >
+    >
+

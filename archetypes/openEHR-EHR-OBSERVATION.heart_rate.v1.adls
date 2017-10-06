@@ -40,7 +40,10 @@ definition
                                     ELEMENT[id6] occurrences matches {0..1} matches {    -- Heart frequency
                                         value matches {
                                             DV_QUANTITY[id7] matches {
-                                                property matches {[at1]}
+                                                property matches {[at2]}
+                                                [units, magnitude, precision] matches {
+                                                    [{"min"}, {|>0.0..<1000.0|}, {|>=0|}]
+                                                }
                                             }
                                         }
                                     }
@@ -60,6 +63,7 @@ terminology
     term_bindings = <
         ["openehr"] = <
             ["at1"] = <http://openehr.org/id/382>
+            ["at2"] = <http://openehr.org/id/128>
         
         >
     >
@@ -81,6 +85,10 @@ terminology
                 text = <"Frequency">
                 description = <"Frequency">
             >
+            ["at2"] = <
+                text = <"Time">
+                description = <"Time">
+            >
         >
         ["pt-br"] = <
             ["id1"] = <
@@ -98,6 +106,10 @@ terminology
             ["at1"] = <
                 text = <"*Frequency (en)">
                 description = <"*Frequency (en)">
+            >
+            ["at2"] = <
+                text = <"Time (en)">
+                description = <"Time (en)">
             >
         >
     >

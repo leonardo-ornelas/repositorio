@@ -1,0 +1,248 @@
+archetype (adl_version=2.0.4; rm_release=1.0.2)
+    openEHR-EHR-COMPOSITION.fco.v1.0.0
+
+language
+    original_language = <[ISO_639-1::pt-br]>
+    
+description
+    copyright = <"">
+    details = <
+        ["pt-br"] = <
+            language = <[ISO_639-1::pt-br]>
+            purpose = <"">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+
+definition
+    COMPOSITION[id1] occurrences matches {1} matches {    -- Ficha clínica ocupacional
+        content matches {
+            SECTION[id5] occurrences matches {0..1} matches {    -- Hábitos de vida
+                items matches {
+                    allow_archetype EVALUATION[id8] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.physical_activity_summary\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id9] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-tobacco\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id10] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.alcohol_use_SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id11] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.substance_use\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id12] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.habitos_lazer\.v1\.0\.0/}
+                    }
+                }
+            }
+            SECTION[id7] occurrences matches {0..1} matches {    -- Antecedentes mórbidos
+                items matches {
+                    allow_archetype EVALUATION[id13] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.problem_diagnosis\-SESI_BR\.v1\.0\.0/}
+                    }
+                    allow_archetype ACTION[id14] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.medication\-BR\.v1\.0\.0/}
+                    }
+                }
+            }
+            allow_archetype EVALUATION[id15] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.family_history\-SESI\-BR\.v1\.0\.0/}
+            }
+            allow_archetype EVALUATION[id16] occurrences matches {0..1} matches { 
+                include
+                    archetype_id/value matches {/openEHR\-EHR\-EVALUATION\.vacinas\.v1\.0\.0/}
+            }
+            SECTION[id17] occurrences matches {0..1} matches {    -- Antecedentes ginecológico / urológico
+                items matches {
+                    OBSERVATION[id30] occurrences matches {0..1} matches {    -- Data da última menstruação
+                        data matches {
+                            HISTORY[id31] occurrences matches {0..1} matches {    -- Histórico
+                                events matches {
+                                    EVENT[id32] occurrences matches {0..1} matches {    -- Último ciclo menstrual normal
+                                        data matches {
+                                            ITEM_SINGLE[id33] occurrences matches {0..1} matches {    -- Ciclo menstrual normal
+                                                item matches {
+                                                    allow_archetype ELEMENT[id34] occurrences matches {0..1} matches { 
+                                                        include
+                                                            archetype_id/value matches {/openEHR\-EHR\-ELEMENT\.last_normal_menstrual_period\.v1\.0\.0/}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype ACTION[id36] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-ACTION\.imaging_exam\-SESI_BR\.v1\.0\.0/}
+                    }
+                }
+            }
+            SECTION[id37] occurrences matches {0..1} matches {    -- Dados antropométricos
+                items matches {
+                    allow_archetype OBSERVATION[id38] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_weight\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id39] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.height\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id40] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.body_mass_index\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id41] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.heart_rate\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id42] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.waist_hip\.v1\.0\.0/}
+                    }
+                    allow_archetype OBSERVATION[id43] occurrences matches {0..1} matches { 
+                        include
+                            archetype_id/value matches {/openEHR\-EHR\-OBSERVATION\.blood_pressure\.v1\.0\.0/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["pt-br"] = <
+            ["id1"] = <
+                text = <"Ficha clínica ocupacional">
+                description = <"Ficha clínica ocupacional">
+            >
+            ["id5"] = <
+                text = <"Hábitos de vida">
+                description = <"Hábitos de vida">
+            >
+            ["id7"] = <
+                text = <"Antecedentes mórbidos">
+                description = <"Antecedentes mórbidos">
+            >
+            ["id8"] = <
+                text = <"Atividades físicas">
+                description = <"Atividades físicas">
+            >
+            ["id9"] = <
+                text = <"Tabagismo">
+                description = <"Tabagismo">
+            >
+            ["id10"] = <
+                text = <"Uso bebida alcoólica">
+                description = <"Uso bebida alcoólica">
+            >
+            ["id11"] = <
+                text = <"Exposição à substâncias">
+                description = <"Exposição à substâncias - Uso de fitoterápicos, suplementos ou vitaminas">
+            >
+            ["id12"] = <
+                text = <"Hábitos de lazer">
+                description = <"Hábitos de lazer">
+            >
+            ["id13"] = <
+                text = <"Problemas/Diagnósticos">
+                description = <"Problemas/Diagnósticos">
+            >
+            ["id14"] = <
+                text = <"Uso de medicamentos">
+                description = <"Uso de medicamentos">
+            >
+            ["id15"] = <
+                text = <"Histórico Familiar (SIC)">
+                description = <"Histórico Familiar (SIC)">
+            >
+            ["id16"] = <
+                text = <"Imunizações (SIC)">
+                description = <"Vacinas disponibilizadas pelo Programa Nacional de Imunizações (PNI).">
+            >
+            ["id17"] = <
+                text = <"Antecedentes ginecológico / urológico">
+                description = <"Antecedentes ginecológico / urológico">
+            >
+            ["id19"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id21"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id22"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id29"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id30"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id31"] = <
+                text = <"Histórico">
+                description = <"Histórico">
+            >
+            ["id32"] = <
+                text = <"Último ciclo menstrual normal">
+                description = <"Último ciclo menstrual normal">
+            >
+            ["id33"] = <
+                text = <"Ciclo menstrual normal">
+                description = <"Ciclo menstrual normal">
+            >
+            ["id34"] = <
+                text = <"Data da última menstruação">
+                description = <"Data da última menstruação">
+            >
+            ["id36"] = <
+                text = <"Exames realizados no último">
+                description = <"Exames realizados no último">
+            >
+            ["id37"] = <
+                text = <"Dados antropométricos">
+                description = <"Dados antropométricos">
+            >
+            ["id38"] = <
+                text = <"Peso corporal">
+                description = <"Peso corporal">
+            >
+            ["id39"] = <
+                text = <"Altura / comprimento">
+                description = <"Altura / comprimento">
+            >
+            ["id40"] = <
+                text = <"Índice de massa corporal">
+                description = <"Índice de massa corporal">
+            >
+            ["id41"] = <
+                text = <"Frequência cardíaca">
+                description = <"Frequência cardíaca">
+            >
+            ["id42"] = <
+                text = <"Circunferência abdominal">
+                description = <"Circunferência abdominal">
+            >
+            ["id43"] = <
+                text = <"Pressão sanguínea">
+                description = <"Pressão sanguínea">
+            >
+        >
+    >
+

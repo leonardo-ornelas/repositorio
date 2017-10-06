@@ -297,11 +297,9 @@ definition
         description matches {
             ITEM_TREE[id18] matches {
                 items cardinality matches {2..*; unordered} matches {
-                    ELEMENT[id21] matches {    -- Medicine
+                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Medicine
                         value matches {
-                            DV_CODED_TEXT[id102] matches {
-                                defining_code matches {[ac2]}
-                            }
+                            DV_TEXT[id102] 
                         }
                     }
                     ELEMENT[id34] matches {    -- Instructions
