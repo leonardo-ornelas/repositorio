@@ -707,11 +707,10 @@
     "sha" : "56f7e40ca42f1275f204d5de0b39c94d5753ee36",
     "languages" : [ "pt-br", "en" ]
   }, {
-    "id" : "openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.0.0",
     "rmType" : "OBSERVATION",
     "name" : "Alcohol Use",
     "path" : "archetypes/openEHR-EHR-OBSERVATION.alcohol_use_SESI_BR.v1.adls",
-    "sha" : "a583ad37564ff1f92f7db7c0738348a4ae2ccd0a",
+    "sha" : "2a7318ef90b8804cc172844cadaaee6878542f14",
     "languages" : [ "en", "pt-br" ]
   }, {
     "id" : "openEHR-EHR-OBSERVATION.habitos_lazer.v1.0.0",
